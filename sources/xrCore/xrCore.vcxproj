@@ -79,6 +79,7 @@
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\SDK\dxsdk\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -90,6 +91,7 @@
       <LargeAddressAware>true</LargeAddressAware>
       <ImportLibrary>$(SolutionDir)..\$(Configuration)-$(Platform)\libraries\$(ProjectName).lib</ImportLibrary>
       <TargetMachine>NotSet</TargetMachine>
+      <AdditionalLibraryDirectories>..\SDK\dxsdk\lib\x86</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -120,6 +122,7 @@
       <BrowseInformation />
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\SDK\dxsdk\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -133,6 +136,7 @@
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <ImportLibrary>$(SolutionDir)..\$(Configuration)-$(Platform)\libraries\$(ProjectName).lib</ImportLibrary>
       <TargetMachine>NotSet</TargetMachine>
+      <AdditionalLibraryDirectories>..\SDK\dxsdk\lib\x86</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -213,17 +217,12 @@
     <ClCompile Include="cpuid.cpp" />
     <ClCompile Include="crc32.cpp" />
     <ClCompile Include="FileSystem.cpp" />
-    <ClCompile Include="FileSystem_borland.cpp" />
     <ClCompile Include="file_stream_reader.cpp" />
     <ClCompile Include="FS.cpp" />
     <ClCompile Include="FTimer.cpp" />
     <ClCompile Include="LocatorAPI.cpp" />
     <ClCompile Include="LocatorAPI_auth.cpp" />
     <ClCompile Include="LocatorAPI_defs.cpp" />
-    <ClCompile Include="LocatorAPI_Notifications.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="log.cpp" />
     <ClCompile Include="LzHuf.cpp" />
     <ClCompile Include="memory_allocation_stats.cpp" />
@@ -237,7 +236,7 @@
       </PrecompiledHeader>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
     </ClCompile>
-    <ClCompile Include="ppmd_compressor.cpp" />
+    <ClCompile Include="PPMd_compressor.cpp" />
     <ClCompile Include="rt_compressor.cpp" />
     <ClCompile Include="rt_compressor9.cpp" />
     <ClCompile Include="rt_lzo1x_1.cpp" />
@@ -252,10 +251,6 @@
     </ClCompile>
     <ClCompile Include="stream_reader.cpp" />
     <ClCompile Include="xrCore.cpp" />
-    <ClCompile Include="xrDebug.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="xrDebugNew.cpp" />
     <ClCompile Include="xrMemory.cpp" />
     <ClCompile Include="xrMemory_align.cpp" />
@@ -270,12 +265,11 @@
     <ClCompile Include="xrMemory_pso_Fill32.cpp">
       <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AssemblyAndSourceCode</AssemblerOutput>
     </ClCompile>
-    <ClCompile Include="xrMemory_subst_borland.cpp" />
     <ClCompile Include="xrMemory_subst_msvc.cpp" />
     <ClCompile Include="xrsharedmem.cpp" />
     <ClCompile Include="xrstring.cpp" />
     <ClCompile Include="xrSyncronize.cpp" />
-    <ClCompile Include="Xr_ini.cpp" />
+    <ClCompile Include="xr_ini.cpp" />
     <ClCompile Include="xr_shared.cpp" />
     <ClCompile Include="xr_trims.cpp" />
     <ClCompile Include="_compressed_normal.cpp" />
@@ -294,14 +288,13 @@
     <ClInclude Include="blackbox\WarningsOn.h" />
     <ClInclude Include="clsid.h" />
     <ClInclude Include="Coder.hpp" />
-    <ClInclude Include="compression_ppmd_stream.h" />
-    <ClInclude Include="compression_ppmd_stream_inline.h" />
+    <ClInclude Include="compression_PPMd_stream.h" />
+    <ClInclude Include="compression_PPMd_stream_inline.h" />
     <ClInclude Include="cpuid.h" />
-    <ClInclude Include="fastdelegate.h" />
+    <ClInclude Include="FastDelegate.h" />
     <CustomBuild Include="FileSystem.h" />
     <ClInclude Include="file_stream_reader.h" />
     <ClInclude Include="FixedMap.h" />
-    <ClInclude Include="FixedSet.h" />
     <ClInclude Include="FixedVector.h" />
     <ClInclude Include="FS.h" />
     <ClInclude Include="FS_internal.h" />
@@ -310,24 +303,18 @@
     <ClInclude Include="intrusive_ptr_inline.h" />
     <ClInclude Include="LocatorAPI.h" />
     <ClInclude Include="LocatorAPI_defs.h" />
-    <CustomBuild Include="LocatorAPI_Notifications.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </CustomBuild>
     <ClInclude Include="log.h" />
-    <ClInclude Include="lzhuf.h" />
+    <ClInclude Include="LzHuf.h" />
     <ClInclude Include="memory_monitor.h" />
     <ClInclude Include="PPMd.h" />
     <ClInclude Include="PPMdType.h" />
-    <ClInclude Include="ppmd_compressor.h" />
-    <ClInclude Include="resource.h" />
+    <ClInclude Include="PPMd_compressor.h" />
     <ClInclude Include="rt_compressor.h" />
     <ClInclude Include="rt_config1x.h" />
     <ClInclude Include="rt_lzo1x.h" />
     <ClInclude Include="rt_lzoconf.h" />
     <ClInclude Include="rt_lzodefs.h" />
     <ClInclude Include="rt_lzo_conf.h" />
-    <ClInclude Include="rt_lzo_config.h" />
     <ClInclude Include="rt_lzo_dict.h" />
     <ClInclude Include="rt_lzo_ptr.h" />
     <ClInclude Include="rt_miniacc.h" />
@@ -342,10 +329,9 @@
     <ClInclude Include="xrDebug_macros.h" />
     <ClInclude Include="xrMemory.h" />
     <ClInclude Include="xrMemory_align.h" />
-    <ClInclude Include="xrMEMORY_POOL.h" />
+    <ClInclude Include="xrMemory_POOL.h" />
     <ClInclude Include="xrMemory_pso.h" />
     <ClInclude Include="xrMemory_pure.h" />
-    <ClInclude Include="xrMemory_subst_borland.h" />
     <ClInclude Include="xrMemory_subst_msvc.h" />
     <ClInclude Include="xrPool.h" />
     <ClInclude Include="xrsharedmem.h" />
@@ -381,7 +367,12 @@
     <ClInclude Include="_vector4.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="xrCore.rc" />
+    <None Include="rt_lzo1x_c.ch" />
+    <None Include="rt_lzo1x_d.ch" />
+    <None Include="rt_lzo1_d.ch" />
+    <None Include="rt_lzo_dll.ch" />
+    <None Include="rt_lzo_mchw.ch" />
+    <None Include="rt_lzo_swd.ch" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

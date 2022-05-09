@@ -74,5 +74,5 @@ extern ENGINE_API CInifile *pGameIni;
 #endif
 #define LUABIND_DONT_COPY_STRINGS
 
-#endif // !M_BORLAND
+#endif // _EDITOR
 #endif // !defined STDAFX_3DA

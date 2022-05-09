@@ -99,15 +99,6 @@ void _os_support(int feature, int& res)
 }
 #endif
 
-#ifdef M_BORLAND
-// borland doesn't understand MMX/3DNow!/SSE/SSE2 asm opcodes
-void _os_support(int feature, int& res)
-{
-	res |= feature;
-}
-#endif
-
-
 /***
 *
 * void map_mname(int, int, const char *, char *) maps family and model to processor name

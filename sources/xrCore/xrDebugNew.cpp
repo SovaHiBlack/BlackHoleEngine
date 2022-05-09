@@ -3,7 +3,7 @@
 
 #include "xrdebug.h"
 
-#include "dxerr9.h"
+#include <DxErr.h>
 
 #pragma warning(push)
 #pragma warning(disable:4995)
@@ -13,37 +13,14 @@
 
 extern bool shared_str_initialized;
 
-#ifdef __BORLANDC__
-    #	include "d3d9.h"
-    #	include "d3dx9.h"
-    #	include "D3DX_Wrapper.h"
-    #	pragma comment(lib,"EToolsB.lib")
-    #	define DEBUG_INVOKE	DebugBreak()
-        static BOOL			bException	= TRUE;
-    #   define USE_BUG_TRAP
-#else
-    #   define USE_BUG_TRAP
-    #	define DEBUG_INVOKE	__asm int 3
-        static BOOL			bException	= FALSE;
-#endif
+#define DEBUG_INVOKE	__asm int 3
+static BOOL			bException	= FALSE;
 
 #ifndef _M_AMD64
-#	ifndef __BORLANDC__
-#		pragma comment(lib,"dxerr9.lib")
-#	endif
+#	pragma comment(lib, "DxErr.lib")
 #endif
 
 #include <dbghelp.h>						// MiniDump flags
-
-#ifdef USE_BUG_TRAP
-#	include "../bugtrap/bugtrap.h"						// for BugTrap functionality
-    #ifndef __BORLANDC__
-        #	pragma comment(lib,"BugTrap.lib")		// Link to ANSI DLL
-    #else
-        #	pragma comment(lib,"BugTrapB.lib")		// Link to ANSI DLL
-    #endif
-#endif // USE_BUG_TRAP
-
 #include <new.h>							// for _set_new_mode
 #include <signal.h>							// for signals
 
@@ -272,9 +249,6 @@ void xrDebug::backend	(const char *expression, const char *description, const ch
 			default : NODEFAULT;
 		}
 #	else // USE_OWN_ERROR_MESSAGE_WINDOW
-#		ifdef USE_BUG_TRAP
-			BT_SetUserMessage	(assertion_info);
-#		endif // USE_BUG_TRAP
 		DEBUG_INVOKE;
 #	endif // USE_OWN_ERROR_MESSAGE_WINDOW
 #endif
@@ -292,7 +266,7 @@ LPCSTR xrDebug::error2string	(long code)
 
 #ifdef _M_AMD64
 #else
-	result				= DXGetErrorDescription9	(code);
+	result				= DXGetErrorDescription	(code);
 #endif
 	if (0==result) 
 	{
@@ -372,81 +346,8 @@ extern LPCSTR log_name();
 
 void CALLBACK PreErrorHandler	(INT_PTR)
 {
-#ifdef USE_BUG_TRAP
-	if (!xr_FS || !FS.m_Flags.test(CLocatorAPI::flReady))
-		return;
 
-	string_path				log_folder;
-
-	__try {
-		FS.update_path		(log_folder,"$logs$","");
-		if ((log_folder[0] != '\\') && (log_folder[1] != ':')) {
-			string256		current_folder;
-			_getcwd			(current_folder,sizeof(current_folder));
-			
-			string256		relative_path;
-			strcpy			(relative_path,log_folder);
-			strconcat		(sizeof(log_folder),log_folder,current_folder,"\\",relative_path);
-		}
-	}
-	__except(EXCEPTION_EXECUTE_HANDLER) {
-		strcpy				(log_folder,"logs");
-	}
-
-	BT_AddLogFile			(log_name());
-#endif // USE_BUG_TRAP
 }
-
-#ifdef USE_BUG_TRAP
-void SetupExceptionHandler	(const bool &dedicated)
-{
-	BT_InstallSehFilter		();
-#ifndef USE_OWN_ERROR_MESSAGE_WINDOW
-	if (!dedicated && !strstr(GetCommandLine(),"-silent_error_mode"))
-		BT_SetActivityType	(BTA_SHOWUI);
-	else
-		BT_SetActivityType	(BTA_SAVEREPORT);
-#else // USE_OWN_ERROR_MESSAGE_WINDOW
-	BT_SetActivityType		(BTA_SAVEREPORT);
-#endif // USE_OWN_ERROR_MESSAGE_WINDOW
-
-	BT_SetDialogMessage				(
-		BTDM_INTRO2,
-		"\
-This is XRay Engine crash reporting client. \
-To help the development process, \
-please Submit Bug or save report and email it manually (button More...).\
-\r\nMany thanks in advance and sorry for the inconvenience."
-	);
-
-	BT_SetPreErrHandler		(PreErrorHandler,0);
-	BT_SetAppName			("XRay Engine");
-	BT_SetReportFormat		(BTRF_TEXT);
-	BT_SetFlags				(BTF_DETAILEDMODE | /**BTF_EDIETMAIL | /**/BTF_ATTACHREPORT /**| BTF_LISTPROCESSES /**| BTF_SHOWADVANCEDUI /**| BTF_SCREENCAPTURE/**/);
-	BT_SetDumpType			(
-		MiniDumpWithDataSegs |
-//		MiniDumpWithFullMemory |
-//		MiniDumpWithHandleData |
-//		MiniDumpFilterMemory |
-//		MiniDumpScanMemory |
-//		MiniDumpWithUnloadedModules |
-#ifndef _EDITOR
-		MiniDumpWithIndirectlyReferencedMemory |
-#endif // _EDITOR
-//		MiniDumpFilterModulePaths |
-//		MiniDumpWithProcessThreadData |
-//		MiniDumpWithPrivateReadWriteMemory |
-//		MiniDumpWithoutOptionalData |
-//		MiniDumpWithFullMemoryInfo |
-//		MiniDumpWithThreadInfo |
-//		MiniDumpWithCodeSegs |
-		0
-	);
-	BT_SetSupportEMail		("crash-report@stalker-game.com");
-//	BT_SetSupportServer		("localhost", 9999);
-//	BT_SetSupportURL		("www.gsc-game.com");
-}
-#endif // USE_BUG_TRAP
 
 #if 1
 extern void BuildStackTrace(struct _EXCEPTION_POINTERS *pExceptionInfo);
@@ -667,29 +568,10 @@ LONG WINAPI UnhandledFilter	(_EXCEPTION_POINTERS *pExceptionInfo)
 #endif
 
 //////////////////////////////////////////////////////////////////////
-#ifdef M_BORLAND
-	namespace std{
-		extern new_handler _RTLENTRY _EXPFUNC set_new_handler( new_handler new_p );
-	};
-
-	static void __cdecl def_new_handler() 
-    {
-		FATAL		("Out of memory.");
-    }
-
-    void	xrDebug::_initialize		(const bool &dedicated)
-    {
-		handler							= 0;
-		m_on_dialog						= 0;
-        std::set_new_handler			(def_new_handler);	// exception-handler for 'out of memory' condition
-//		::SetUnhandledExceptionFilter	(UnhandledFilter);	// exception handler to all "unhandled" exceptions
-    }
-#else
     typedef int		(__cdecl * _PNH)( size_t );
     _CRTIMP int		__cdecl _set_new_mode( int );
     _CRTIMP _PNH	__cdecl _set_new_handler( _PNH );
 
-#ifndef USE_BUG_TRAP
 	void _terminate		()
 	{
 		if (strstr(GetCommandLine(),"-silent_error_mode"))
@@ -731,15 +613,10 @@ LONG WINAPI UnhandledFilter	(_EXCEPTION_POINTERS *pExceptionInfo)
 		exit					(-1);
 	//	FATAL					("Unexpected application termination");
 	}
-#endif // USE_BUG_TRAP
 
 	void debug_on_thread_spawn			()
 	{
-#ifdef USE_BUG_TRAP
-		BT_SetTerminate					();
-#else // USE_BUG_TRAP
 		std::set_terminate				(_terminate);
-#endif // USE_BUG_TRAP
 	}
 
 	static void handler_base				(LPCSTR reason_string)
@@ -884,9 +761,6 @@ LONG WINAPI UnhandledFilter	(_EXCEPTION_POINTERS *pExceptionInfo)
 		std::set_unexpected				(_terminate);
 #endif
 
-#ifdef USE_BUG_TRAP
-		SetupExceptionHandler			(dedicated);
-#endif // USE_BUG_TRAP
 		previous_filter					= ::SetUnhandledExceptionFilter(UnhandledFilter);	// exception handler to all "unhandled" exceptions
 
 #if 0
@@ -902,4 +776,3 @@ LONG WINAPI UnhandledFilter	(_EXCEPTION_POINTERS *pExceptionInfo)
 		std::terminate		();
 #endif // 0
 	}
-#endif

@@ -2,7 +2,7 @@
 #define FS_internalH
 #pragma once
 
-#include "lzhuf.h"
+#include "LzHuf.h"
 #include <io.h>
 #include <fcntl.h>
 #include <sys\stat.h>

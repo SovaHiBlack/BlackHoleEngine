@@ -8,11 +8,9 @@
 #	define DEBUG_MEMORY_NAME
 #endif // USE_MEMORY_MONITOR
 
-#ifndef M_BORLAND
 #	if 0//def DEBUG
 #		define DEBUG_MEMORY_MANAGER
 #	endif // DEBUG
-#endif // M_BORLAND
 
 #ifdef DEBUG_MEMORY_MANAGER
 	XRCORE_API	extern BOOL	g_bMEMO;
@@ -88,11 +86,7 @@ extern XRCORE_API	xrMemory	Memory;
 #define FillMemory(a,b,c)	Memory.mem_fill(a,c,b)
 
 // delete
-#ifdef __BORLANDC__
-	#include "xrMemory_subst_borland.h"
-#else
-	#include "xrMemory_subst_msvc.h"
-#endif
+#include "xrMemory_subst_msvc.h"
 
 // generic "C"-like allocations/deallocations
 #ifdef DEBUG_MEMORY_NAME
@@ -115,19 +109,15 @@ XRCORE_API	char* 	xr_strdup	(const char* string);
 
 #ifdef DEBUG_MEMORY_NAME
 // Global new/delete override
-#	if !(defined(__BORLANDC__) || defined(NO_XRNEW))
 	IC void*	operator new		(size_t size)		{	return Memory.mem_alloc(size?size:1, "C++ NEW");	}
 	IC void		operator delete		(void *p)			{	xr_free(p);											}
 	IC void*	operator new[]		(size_t size)		{	return Memory.mem_alloc(size?size:1, "C++ NEW");	}
 	IC void		operator delete[]	(void* p)			{	xr_free(p);											}
-#	endif
 #else // DEBUG_MEMORY_NAME
-#	if !(defined(__BORLANDC__) || defined(NO_XRNEW))
 	IC void*	operator new		(size_t size)		{	return Memory.mem_alloc(size?size:1);				}
 	IC void		operator delete		(void *p)			{	xr_free(p);											}
 	IC void*	operator new[]		(size_t size)		{	return Memory.mem_alloc(size?size:1);				}
 	IC void		operator delete[]	(void* p)			{	xr_free(p);											}
-#	endif
 #endif // DEBUG_MEMORY_MANAGER
 
 

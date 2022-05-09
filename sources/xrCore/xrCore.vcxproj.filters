@@ -46,21 +46,6 @@
     <Filter Include="Compression">
       <UniqueIdentifier>{bbd04c7a-1b0c-46e8-b67d-bfb55f04ef02}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Compression\ppmd">
-      <UniqueIdentifier>{8ef45101-804b-4b3e-a075-f6c9ab9a47cb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Compression\ppmd\common">
-      <UniqueIdentifier>{41b956b9-c562-4a3a-a595-b0235473089e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Compression\ppmd\core">
-      <UniqueIdentifier>{1b396ef0-0ddd-4e89-89ec-bdbcae1ebdf0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Compression\ppmd\core\allocator">
-      <UniqueIdentifier>{e2463968-32a8-48a5-82df-9ef9e19b3233}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Compression\ppmd\stream">
-      <UniqueIdentifier>{faf4b88f-246a-46f7-a427-3a215df467b7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Compression\rt">
       <UniqueIdentifier>{d65b3937-39c3-4c16-93d9-1c21125b59af}</UniqueIdentifier>
     </Filter>
@@ -69,6 +54,21 @@
     </Filter>
     <Filter Include="Compression\lzo">
       <UniqueIdentifier>{f03efa20-de34-40f9-82a0-d41c32c2bd5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compression\PPMd">
+      <UniqueIdentifier>{8ef45101-804b-4b3e-a075-f6c9ab9a47cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compression\PPMd\common">
+      <UniqueIdentifier>{41b956b9-c562-4a3a-a595-b0235473089e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compression\PPMd\core">
+      <UniqueIdentifier>{1b396ef0-0ddd-4e89-89ec-bdbcae1ebdf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compression\PPMd\core\allocator">
+      <UniqueIdentifier>{e2463968-32a8-48a5-82df-9ef9e19b3233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compression\PPMd\stream">
+      <UniqueIdentifier>{faf4b88f-246a-46f7-a427-3a215df467b7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -105,9 +105,6 @@
     <ClCompile Include="FileSystem.cpp">
       <Filter>FS</Filter>
     </ClCompile>
-    <ClCompile Include="FileSystem_borland.cpp">
-      <Filter>FS</Filter>
-    </ClCompile>
     <ClCompile Include="FS.cpp">
       <Filter>FS</Filter>
     </ClCompile>
@@ -120,13 +117,10 @@
     <ClCompile Include="LocatorAPI_defs.cpp">
       <Filter>FS</Filter>
     </ClCompile>
-    <ClCompile Include="LocatorAPI_Notifications.cpp">
-      <Filter>FS</Filter>
-    </ClCompile>
     <ClCompile Include="log.cpp">
       <Filter>FS</Filter>
     </ClCompile>
-    <ClCompile Include="Xr_ini.cpp">
+    <ClCompile Include="xr_ini.cpp">
       <Filter>FS</Filter>
     </ClCompile>
     <ClCompile Include="stream_reader.cpp">
@@ -162,14 +156,8 @@
     <ClCompile Include="xrMemory_pso_Fill32.cpp">
       <Filter>Memory manager</Filter>
     </ClCompile>
-    <ClCompile Include="xrMemory_subst_borland.cpp">
-      <Filter>Memory manager</Filter>
-    </ClCompile>
     <ClCompile Include="xrMemory_subst_msvc.cpp">
       <Filter>Memory manager</Filter>
-    </ClCompile>
-    <ClCompile Include="xrDebug.cpp">
-      <Filter>Debug core</Filter>
     </ClCompile>
     <ClCompile Include="xrDebugNew.cpp">
       <Filter>Debug core</Filter>
@@ -216,11 +204,11 @@
     <ClCompile Include="memory_monitor.cpp">
       <Filter>memory_monitor</Filter>
     </ClCompile>
-    <ClCompile Include="ppmd_compressor.cpp">
-      <Filter>Compression\ppmd</Filter>
+    <ClCompile Include="PPMd_compressor.cpp">
+      <Filter>Compression\PPMd</Filter>
     </ClCompile>
     <ClCompile Include="Model.cpp">
-      <Filter>Compression\ppmd\core</Filter>
+      <Filter>Compression\PPMd\core</Filter>
     </ClCompile>
     <ClCompile Include="rt_compressor.cpp">
       <Filter>Compression\rt</Filter>
@@ -253,9 +241,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FTimer.h">
-      <Filter>Kernel</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
       <Filter>Kernel</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
@@ -339,9 +324,6 @@
     <ClInclude Include="FixedMap.h">
       <Filter>Math\STLext</Filter>
     </ClInclude>
-    <ClInclude Include="FixedSet.h">
-      <Filter>Math\STLext</Filter>
-    </ClInclude>
     <ClInclude Include="FixedVector.h">
       <Filter>Math\STLext</Filter>
     </ClInclude>
@@ -360,7 +342,7 @@
     <ClInclude Include="clsid.h">
       <Filter>Math\Extensions</Filter>
     </ClInclude>
-    <ClInclude Include="fastdelegate.h">
+    <ClInclude Include="FastDelegate.h">
       <Filter>Math\Extensions</Filter>
     </ClInclude>
     <ClInclude Include="xr_trims.h">
@@ -399,16 +381,13 @@
     <ClInclude Include="xrMemory_align.h">
       <Filter>Memory manager</Filter>
     </ClInclude>
-    <ClInclude Include="xrMEMORY_POOL.h">
+    <ClInclude Include="xrMemory_POOL.h">
       <Filter>Memory manager</Filter>
     </ClInclude>
     <ClInclude Include="xrMemory_pso.h">
       <Filter>Memory manager</Filter>
     </ClInclude>
     <ClInclude Include="xrMemory_pure.h">
-      <Filter>Memory manager</Filter>
-    </ClInclude>
-    <ClInclude Include="xrMemory_subst_borland.h">
       <Filter>Memory manager</Filter>
     </ClInclude>
     <ClInclude Include="xrMemory_subst_msvc.h">
@@ -465,31 +444,31 @@
     <ClInclude Include="memory_monitor.h">
       <Filter>memory_monitor</Filter>
     </ClInclude>
-    <ClInclude Include="ppmd_compressor.h">
-      <Filter>Compression\ppmd</Filter>
+    <ClInclude Include="PPMd_compressor.h">
+      <Filter>Compression\PPMd</Filter>
     </ClInclude>
     <ClInclude Include="PPMd.h">
-      <Filter>Compression\ppmd\common</Filter>
+      <Filter>Compression\PPMd\common</Filter>
     </ClInclude>
     <ClInclude Include="PPMdType.h">
-      <Filter>Compression\ppmd\common</Filter>
+      <Filter>Compression\PPMd\common</Filter>
     </ClInclude>
     <ClInclude Include="Coder.hpp">
-      <Filter>Compression\ppmd\core</Filter>
+      <Filter>Compression\PPMd\core</Filter>
     </ClInclude>
     <ClInclude Include="SubAlloc.hpp">
-      <Filter>Compression\ppmd\core\allocator</Filter>
+      <Filter>Compression\PPMd\core\allocator</Filter>
     </ClInclude>
-    <ClInclude Include="compression_ppmd_stream.h">
-      <Filter>Compression\ppmd\stream</Filter>
+    <ClInclude Include="compression_PPMd_stream.h">
+      <Filter>Compression\PPMd\stream</Filter>
     </ClInclude>
-    <ClInclude Include="compression_ppmd_stream_inline.h">
-      <Filter>Compression\ppmd\stream</Filter>
+    <ClInclude Include="compression_PPMd_stream_inline.h">
+      <Filter>Compression\PPMd\stream</Filter>
     </ClInclude>
     <ClInclude Include="rt_compressor.h">
       <Filter>Compression\rt</Filter>
     </ClInclude>
-    <ClInclude Include="lzhuf.h">
+    <ClInclude Include="LzHuf.h">
       <Filter>Compression\lz</Filter>
     </ClInclude>
     <ClInclude Include="rt_config1x.h">
@@ -499,9 +478,6 @@
       <Filter>Compression\lzo</Filter>
     </ClInclude>
     <ClInclude Include="rt_lzo_conf.h">
-      <Filter>Compression\lzo</Filter>
-    </ClInclude>
-    <ClInclude Include="rt_lzo_config.h">
       <Filter>Compression\lzo</Filter>
     </ClInclude>
     <ClInclude Include="rt_lzo_dict.h">
@@ -522,16 +498,28 @@
     <ClInclude Include="xrSyncronize.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="xrCore.rc">
-      <Filter>Kernel</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="FileSystem.h">
       <Filter>FS</Filter>
     </CustomBuild>
-    <CustomBuild Include="LocatorAPI_Notifications.h">
-      <Filter>FS</Filter>
-    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rt_lzo1x_d.ch">
+      <Filter>Compression\lzo</Filter>
+    </None>
+    <None Include="rt_lzo1x_c.ch">
+      <Filter>Compression\lzo</Filter>
+    </None>
+    <None Include="rt_lzo1_d.ch">
+      <Filter>Compression\lzo</Filter>
+    </None>
+    <None Include="rt_lzo_swd.ch">
+      <Filter>Compression\lzo</Filter>
+    </None>
+    <None Include="rt_lzo_mchw.ch">
+      <Filter>Compression\lzo</Filter>
+    </None>
+    <None Include="rt_lzo_dll.ch">
+      <Filter>Compression\lzo</Filter>
+    </None>
   </ItemGroup>
 </Project>

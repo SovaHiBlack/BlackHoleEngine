@@ -44,13 +44,13 @@
     <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>x:\binaries\</OutDir>
-    <IntDir>x:\intermediate\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)..\$(Configuration)-$(Platform)\binaries\</OutDir>
+    <IntDir>$(SolutionDir)..\$(Configuration)-$(Platform)\intermediate\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>x:\binaries\</OutDir>
-    <IntDir>x:\intermediate\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)..\$(Configuration)-$(Platform)\binaries\</OutDir>
+    <IntDir>$(SolutionDir)..\$(Configuration)-$(Platform)\intermediate\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -86,12 +86,12 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>version.lib;winmm.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)OpenAL32.dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)OpenAL32.pdb</ProgramDatabaseFile>
       <LargeAddressAware>true</LargeAddressAware>
-      <ImportLibrary>x:\libraries\OpenAL32.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)..\$(Configuration)-$(Platform)\libraries\$(ProjectName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
@@ -136,12 +136,12 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>version.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)OpenAL32.dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <ProgramDatabaseFile>$(OutDir)OpenAL32.pdb</ProgramDatabaseFile>
       <LargeAddressAware>true</LargeAddressAware>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <ImportLibrary>x:\libraries\OpenAL32.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)..\$(Configuration)-$(Platform)\libraries\$(ProjectName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>

@@ -21,14 +21,24 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>Utility</ConfigurationType>
     <PlatformToolset>v120</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>
+    </CharacterSet>
+    <UseOfMfc />
+    <CLRSupport />
+    <WholeProgramOptimization />
+    <WindowsAppContainer />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <PlatformToolset>v120</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>
+    </CharacterSet>
+    <UseOfMfc />
+    <CLRSupport />
+    <WholeProgramOptimization />
+    <WindowsAppContainer />
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -44,14 +54,31 @@
     <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>Debug\</OutDir>
-    <IntDir>Debug\</IntDir>
-    <ExtensionsToDeleteOnClean>*.idb%3b*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat%3b$(TargetPath)</ExtensionsToDeleteOnClean>
+    <OutDir>
+    </OutDir>
+    <IntDir>
+    </IntDir>
+    <ExtensionsToDeleteOnClean>
+    </ExtensionsToDeleteOnClean>
+    <TargetName />
+    <EnableManagedIncrementalBuild />
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>Release\</OutDir>
-    <IntDir>Release\</IntDir>
+    <OutDir>
+    </OutDir>
+    <IntDir>
+    </IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName />
+    <TargetExt />
+    <ExtensionsToDeleteOnClean />
+    <EnableManagedIncrementalBuild />
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -69,6 +96,14 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
+    <BuildLog>
+      <Path />
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <BuildLog>
+      <Path />
+    </BuildLog>
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="Config\alife.ltx" />

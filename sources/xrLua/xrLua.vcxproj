@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>xrLUA</ProjectName>
+    <ProjectName>xrLua</ProjectName>
     <ProjectGuid>{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}</ProjectGuid>
     <RootNamespace>xrLUA_JIT</RootNamespace>
     <Keyword>Win32Proj</Keyword>

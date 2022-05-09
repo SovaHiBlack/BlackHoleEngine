@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>openal32</ProjectName>
+    <ProjectName>OpenAL32</ProjectName>
     <ProjectGuid>{566551F4-4EF1-4CB4-A131-F982E7606907}</ProjectGuid>
     <RootNamespace>openal32</RootNamespace>
   </PropertyGroup>

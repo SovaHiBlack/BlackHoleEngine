@@ -1,2 +1,5 @@
 ## Ignore Visual Studio temporary files
 /.vs
+/gamedata/levels
+/gamedata/sounds
+/gamedata/textures

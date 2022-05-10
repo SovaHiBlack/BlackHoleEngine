@@ -9,10 +9,6 @@
       <UniqueIdentifier>{38eb4a99-53f4-4b6b-929d-51bc95d4e188}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{7a67201f-20f6-466a-96ac-88a0236a5215}</UniqueIdentifier>
-      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="al.cpp">
@@ -29,18 +25,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="OpenAL32.rc">
-      <Filter>Source Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="alList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OpenAL32.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

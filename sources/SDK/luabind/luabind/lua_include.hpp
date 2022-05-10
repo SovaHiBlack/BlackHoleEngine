@@ -25,8 +25,8 @@
 
 extern "C"
 {
-#include <lua.h>
-#include <lauxlib.h>
+#include <src\lua.h>
+#include <src\lauxlib.h>
 };
 
 #endif

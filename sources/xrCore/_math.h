@@ -55,3 +55,4 @@ extern XRCORE_API	void	thread_spawn			(
 	void*		arglist 
 	);
 
+#endif //

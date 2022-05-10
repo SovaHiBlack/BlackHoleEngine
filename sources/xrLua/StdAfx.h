@@ -9,14 +9,14 @@
 
 #pragma once
 
-#include "../xrCore/xrCore.h"
+#include "..\xrCore\xrCore.h"
 
 //#include <errno.h>
 #include <locale.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+//#include <time.h>
 
 //#include "xr_LuaAllocator.h"
 
@@ -26,7 +26,7 @@
 #include "src\lualib.h"
 */
 
-#pragma comment( lib, "xrCore.lib"	)
+#pragma comment(lib, "xrCore.lib")
 
 #if !defined(DEBUG) || defined(FORCE_NO_EXCEPTIONS)
 	// release: no error checking, no exceptions

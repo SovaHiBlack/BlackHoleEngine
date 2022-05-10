@@ -6,7 +6,7 @@
 #define stdafxH
 #pragma once
 
-#include "../xrCore/xrCore.h"
+#include "..\xrCore\xrCore.h"
 
 // mmsystem.h
 #define MMNOSOUND
@@ -32,7 +32,7 @@
 
 #define ENGINE_API
 
-#include "xr_resource.h"
+//#include "xr_resource.h"
 
 // TODO: reference additional headers your program requires here
 #endif

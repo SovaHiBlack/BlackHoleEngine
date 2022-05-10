@@ -1,4 +1,7 @@
 #include "pch_script.h"
+
+#include <xfunctional>
+
 #include "../fdemorecord.h"
 #include "../fdemoplay.h"
 #include "../environment.h"

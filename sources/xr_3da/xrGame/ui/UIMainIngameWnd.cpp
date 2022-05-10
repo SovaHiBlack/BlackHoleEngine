@@ -1,5 +1,7 @@
 #include "stdafx.h"
 
+#include <xfunctional>
+
 #include "UIMainIngameWnd.h"
 #include "UIMessagesWindow.h"
 #include "../UIZoneMap.h"

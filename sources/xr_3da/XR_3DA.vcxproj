@@ -91,7 +91,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
-      <AdditionalIncludeDirectories>..\SDK\dxsdk\include;..\SDK\luabind;..\SDK\boost;..\;..\xrLua;..\libtheora\include;..\libogg\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\;..\SDK\dxsdk\include;..\SDK\luabind;..\SDK\boost;..\xrLua;..\libtheora\include;..\libogg\include</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -152,7 +152,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
-      <AdditionalIncludeDirectories>..\SDK\dxsdk\include;..\SDK\luabind;..\SDK\boost;..\;..\xrLua;..\libtheora\include;..\libogg\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\;..\SDK\dxsdk\include;..\SDK\luabind;..\SDK\boost;..\xrLua;..\libtheora\include;..\libogg\include</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>

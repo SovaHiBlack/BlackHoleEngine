@@ -2,7 +2,7 @@
 #define PH_DEBUG_H
 #ifdef DEBUG
 struct dContact;
-//#include "FastDelegate.h"
+
 #include "../StatGraph.h"
 #define DRAW_CONTACTS
 

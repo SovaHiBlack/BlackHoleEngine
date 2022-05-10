@@ -13,7 +13,7 @@
 #include "SkeletonX.h"
 #include "SkeletonCustom.h"
 #include "fmesh.h"
-#include "xrCPU_Pipe.h"
+#include "xrCPU_Pipe\xrCPU_Pipe.h"
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -412,7 +412,7 @@ BOOL	CSkeletonX::has_visible_bones		()
 //-----------------------------------------------------------------------------------------------------
 // Wallmarks
 //-----------------------------------------------------------------------------------------------------
-#include "cl_intersect.h"
+#include "..\xrCDB\cl_intersect.h"
 BOOL	CSkeletonX::_PickBoneSoft1W	(Fvector& normal, float& dist, const Fvector& S, const Fvector& D, u16* indices, CBoneData::FacesVec& faces)
 {
 	VERIFY				(*Vertices1W);

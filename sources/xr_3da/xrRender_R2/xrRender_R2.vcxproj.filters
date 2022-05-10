@@ -19,9 +19,6 @@
     <Filter Include="Lights">
       <UniqueIdentifier>{048d4a89-aec4-4b96-b5e5-95019fcf10af}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Glows">
-      <UniqueIdentifier>{9fce7050-633d-41e2-8a84-69ba5e376611}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Wallmarks">
       <UniqueIdentifier>{46f0f7e8-f18c-41c4-bf03-2802b6fa3504}</UniqueIdentifier>
     </Filter>
@@ -51,9 +48,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cl_intersect.h">
-      <Filter>Kernel</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>Kernel</Filter>
     </ClInclude>
@@ -539,8 +533,5 @@
     <ClCompile Include="r2_rendertarget_phase_smap_S.cpp">
       <Filter>Core_Target</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="todo.txt" />
   </ItemGroup>
 </Project>

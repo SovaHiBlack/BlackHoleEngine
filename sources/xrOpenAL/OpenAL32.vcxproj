@@ -192,7 +192,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="al.h" />
+    <ClInclude Include="alc.h" />
     <ClInclude Include="alList.h" />
+    <ClInclude Include="alut.h" />
     <ClInclude Include="OpenAL32.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -44,7 +44,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrGameSpy", "XR_3DA\xrGame\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrLua", "xrLua\xrLua.vcxproj", "{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenAL32", "xrOpenAL\OpenAL-Windows\Router\Router.vcxproj", "{566551F4-4EF1-4CB4-A131-F982E7606907}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenAL32", "xrOpenAL\OpenAL32.vcxproj", "{566551F4-4EF1-4CB4-A131-F982E7606907}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libogg", "libogg\win32\VS2003\libogg\libogg.vcxproj", "{15CBFEFF-7965-41F5-B4E2-21E8795C9159}"
 EndProject

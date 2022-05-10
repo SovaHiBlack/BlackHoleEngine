@@ -17,7 +17,7 @@
 #include "IGame_Level.h"
 
 #include "D3DUtils.h"
-#include "xrCore.h"
+//#include "xrCore.h"
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction

@@ -11,7 +11,7 @@
 
 #pragma warning(disable:4995)
 #include <d3d9.h>
-#include <dplay8.h>
+#include <depr/dplay8.h>
 #pragma warning(default:4995)
 
 // you must define ENGINE_BUILD then building the engine itself
@@ -35,10 +35,10 @@
 #include "engine.h"
 #include "defines.h"
 #ifndef NO_XRLOG
-#include "log.h"
+//#include "log.h"
 #endif
 #include "device.h"
-#include "fs.h"
+//#include "fs.h"
 
 #include "xrXRC.h"
 
@@ -46,16 +46,16 @@
 
 extern ENGINE_API CInifile *pGameIni;
 
-#pragma comment( lib, "xrCore.lib"	)
-#pragma comment( lib, "xrCDB.lib"	)
-#pragma comment( lib, "xrSound.lib"	)
-#pragma comment( lib, "xrLUA.lib"	)
+#pragma comment( lib, "xrCore.lib")
+#pragma comment( lib, "xrCDB.lib")
+#pragma comment( lib, "xrSound.lib")
+#pragma comment( lib, "xrLUA.lib")
 
-#pragma comment( lib, "winmm.lib"		)
+#pragma comment( lib, "winmm.lib")
 
-#pragma comment( lib, "d3d9.lib"		)
-#pragma comment( lib, "dinput8.lib"		)
-#pragma comment( lib, "dxguid.lib"		)
+#pragma comment( lib, "d3d9.lib")
+#pragma comment( lib, "dinput8.lib")
+#pragma comment( lib, "dxguid.lib")
 
 #ifndef DEBUG
 #	define LUABIND_NO_ERROR_CHECKING

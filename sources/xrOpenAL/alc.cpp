@@ -26,8 +26,7 @@
 #include <stdlib.h>
 #include <memory.h>
 #define AL_BUILD_LIBRARY
-//.#include <al/alc.h>
-#include "..\..\include\al\alc.h"
+#include "alc.h"
 #include <stdio.h>
 #include <tchar.h>
 #include <assert.h>

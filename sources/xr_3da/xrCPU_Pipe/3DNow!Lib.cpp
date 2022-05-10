@@ -53,7 +53,11 @@ static const __int32 one        =       0x3F800000;
 static const __int32 half       =       0x3F000000;
 static const __int32 two        =       0x40000000;
 static const __int32 oob        =       0x00000000;
+#if _MSC_VER<1800
 static const __int32 nan        =       0x7fffffff;
+#else
+static const __int32 A3DN_nan   =       0x7fffffff;
+#endif
 static const __int32 pnan       =       0x7fc00000;
 static const __int32 n0         =       0x40A008EF;
 static const __int32 n1         =       0x3DAA7B3D;

@@ -227,5 +227,8 @@
     <ClInclude Include="Opcode.h">
       <Filter>Opcode</Filter>
     </ClInclude>
+    <ClInclude Include="cl_intersect.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

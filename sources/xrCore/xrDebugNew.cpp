@@ -220,9 +220,6 @@ void xrDebug::backend	(const char *expression, const char *description, const ch
 	if (get_on_dialog())
 		get_on_dialog()	(true);
 
-#ifdef XRCORE_STATIC
-	MessageBox			(NULL,assertion_info,"X-Ray error",MB_OK|MB_ICONERROR|MB_SYSTEMMODAL);
-#else
 #	ifdef USE_OWN_ERROR_MESSAGE_WINDOW
 		int					result = 
 			MessageBox(
@@ -251,7 +248,6 @@ void xrDebug::backend	(const char *expression, const char *description, const ch
 #	else // USE_OWN_ERROR_MESSAGE_WINDOW
 		DEBUG_INVOKE;
 #	endif // USE_OWN_ERROR_MESSAGE_WINDOW
-#endif
 
 	if (get_on_dialog())
 		get_on_dialog()	(false);
@@ -328,11 +324,7 @@ void __cdecl xrDebug::fatal(const char *file, int line, const char *function, co
 int out_of_memory_handler	(size_t size)
 {
 	Memory.mem_compact		();
-#ifndef _EDITOR
 	u32						crt_heap		= mem_usage_impl((HANDLE)_get_heap_handle(),0,0);
-#else // _EDITOR
-	u32						crt_heap		= 0;
-#endif // _EDITOR
 	u32						process_heap	= mem_usage_impl(GetProcessHeap(),0,0);
 	int						eco_strings		= (int)g_pStringContainer->stat_economy			();
 	int						eco_smem		= (int)g_pSharedMemoryContainer->stat_economy	();
@@ -591,11 +583,7 @@ LONG WINAPI UnhandledFilter	(_EXCEPTION_POINTERS *pExceptionInfo)
 			__FILE__,
 			__LINE__,
 	#endif
-	#ifndef _EDITOR
 			__FUNCTION__,
-	#else // _EDITOR
-			"",
-	#endif // _EDITOR
 			assertion_info
 		);
 		

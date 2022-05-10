@@ -2,11 +2,6 @@
 #ifndef BoneH
 #define BoneH
 
-#ifdef _LW_EXPORT
-#include <lwrender.h>
-#include <lwhost.h>
-#endif
-
 // refs
 class CBone;
 
@@ -225,33 +220,10 @@ public:
 	void			    Load_0			(IReader& F);
 	void			    Load_1			(IReader& F);
 
-#ifdef _LW_EXPORT
-	void			    ParseBone		(LWItemID bone);
-#endif
-
 	void			    SaveData		(IWriter& F);
 	void			    LoadData		(IReader& F);
     void			    ResetData		();
     void			    CopyData		(CBone* bone);
-    
-#ifdef _EDITOR
-	void			    ShapeScale		(const Fvector& amount);
-	void			    ShapeRotate		(const Fvector& amount);
-	void			    ShapeMove		(const Fvector& amount);
-	void			    BindRotate		(const Fvector& amount);
-	void			    BindMove		(const Fvector& amount);
-	void			    BoneMove		(const Fvector& amount);
-	void			    BoneRotate		(const Fvector& axis, float angle);
-
-	bool 			    Pick			(float& dist, const Fvector& S, const Fvector& D, const Fmatrix& parent);
-
-    void			    Select			(BOOL flag)	{ flags.set(flSelected,flag); }
-    bool			    Selected		(){return flags.is(flSelected);}
-
-    void			    ClampByLimits	();
-
-    bool 			    ExportOGF		(IWriter& F);
-#endif
 };
 
 #endif

@@ -3,10 +3,8 @@
 
 #include "ResourceManager.h"
 
-#ifndef _EDITOR
-    #include "render.h"
-#endif
-    
+#include "render.h"
+
 #include "tntQAVI.h"
 #include "xrTheora_Surface.h"
 

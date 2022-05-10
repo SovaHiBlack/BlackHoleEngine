@@ -44,13 +44,7 @@ void*	xrMemory::mem_alloc		(size_t size
 	static bool g_use_pure_alloc_initialized = false;
 	if (!g_use_pure_alloc_initialized) {
 		g_use_pure_alloc_initialized	= true;
-		g_use_pure_alloc				= 
-#	ifdef XRCORE_STATIC
-			true
-#	else // XRCORE_STATIC
-			!!strstr(GetCommandLine(),"-pure_alloc")
-#	endif // XRCORE_STATIC
-			;
+		g_use_pure_alloc				= !!strstr(GetCommandLine(),"-pure_alloc");
 	}
 
 	if (g_use_pure_alloc) {

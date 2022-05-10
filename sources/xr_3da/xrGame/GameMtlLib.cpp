@@ -90,7 +90,6 @@ void CGameMtlLibrary::Load()
         OBJ->close		();
     }
 
-#ifndef _EDITOR
 	material_count		= (u32)materials.size();
     material_pairs_rt.resize(material_count*material_count,0);
     for (GameMtlPairIt p_it=material_pairs.begin(); material_pairs.end() != p_it; ++p_it){
@@ -100,7 +99,6 @@ void CGameMtlLibrary::Load()
 	    material_pairs_rt[idx0]=S;
 	    material_pairs_rt[idx1]=S;
     }
-#endif
 
 /*
 	for (GameMtlPairIt p_it=material_pairs.begin(); material_pairs.end() != p_it; ++p_it){
@@ -112,36 +110,6 @@ void CGameMtlLibrary::Load()
 */
 	FS.r_close		(F);
 }
-
-#ifdef GM_NON_GAME
-SGameMtlPair::~SGameMtlPair		()
-{
-}                
-void SGameMtlPair::Load(IReader& fs)
-{
-	shared_str				buf;
-
-	R_ASSERT(fs.find_chunk(GAMEMTLPAIR_CHUNK_PAIR));
-	mtl0				= fs.r_u32();
-	mtl1				= fs.r_u32();
-	ID					= fs.r_u32();
-	ID_parent			= fs.r_u32();
-    u32 own_mask		= fs.r_u32(); 
-    if (GAMEMTL_NONE_ID==ID_parent) OwnProps.one	();
-    else							OwnProps.assign	(own_mask);
-
-	R_ASSERT(fs.find_chunk(GAMEMTLPAIR_CHUNK_BREAKING));
-	fs.r_stringZ		(buf); 	BreakingSounds	= buf.size()?*buf:"";
-
-	R_ASSERT(fs.find_chunk(GAMEMTLPAIR_CHUNK_STEP));
-	fs.r_stringZ		(buf);	StepSounds		= buf.size()?*buf:"";
-
-	R_ASSERT(fs.find_chunk(GAMEMTLPAIR_CHUNK_COLLIDE));
-	fs.r_stringZ		(buf);	CollideSounds	= buf.size()?*buf:"";
-	fs.r_stringZ		(buf);	CollideParticles= buf.size()?*buf:"";
-	fs.r_stringZ		(buf);	CollideMarks	= buf.size()?*buf:"";
-}
-#endif
 
 #ifdef DEBUG
 LPCSTR SGameMtlPair::dbg_Name()

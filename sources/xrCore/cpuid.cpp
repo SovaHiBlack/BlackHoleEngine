@@ -20,9 +20,7 @@ int _cpuid (_processor_info *pinfo)
 
 #else
 
-#ifdef	M_VISUAL
-#include "mmintrin.h"
-#endif
+#include <mmintrin.h>
 
 // These are the bit flags that get set on calling cpuid
 // with register eax set to 1
@@ -54,7 +52,6 @@ int IsCPUID()
 *   - Checks if OS Supports the capablity or not
 ****************************************************************/
 
-#ifdef M_VISUAL
 void _os_support(int feature, int& res)
 {
 
@@ -97,8 +94,6 @@ void _os_support(int feature, int& res)
 	_mm_empty	();
 	res |= feature;
 }
-#endif
-
 /***
 *
 * void map_mname(int, int, const char *, char *) maps family and model to processor name
@@ -323,4 +318,3 @@ notamd:
    return feature;
 }
 
-#endif

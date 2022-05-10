@@ -26,11 +26,7 @@ namespace GameGraph {
 		LOCATION_COUNT		= (u32(1) << (8*sizeof(_LOCATION_ID))),
 	};
 
-#ifdef AI_COMPILER
-	struct
-#else
 	class
-#endif
 		SLevel {
 		shared_str				m_name;
 		Fvector					m_offset;
@@ -73,11 +69,7 @@ namespace GameGraph {
 	typedef associative_vector<_LEVEL_ID,SLevel>		LEVEL_MAP;
 
 #pragma pack(push,1)
-#ifdef AI_COMPILER
-	struct
-#else
 	class
-#endif
 		CEdge {
 		_GRAPH_ID					m_vertex_id;
 		float						m_path_distance;
@@ -86,11 +78,7 @@ namespace GameGraph {
 		IC	const float				&distance			() const;
 	};
 
-#ifdef AI_COMPILER
-	struct
-#else
 	class
-#endif
 		CVertex {
 		Fvector						tLocalPoint;
 		Fvector						tGlobalPoint;
@@ -114,11 +102,7 @@ namespace GameGraph {
 		friend class CGameGraph;
 	};
 
-#ifdef AI_COMPILER
-	struct
-#else
 	class
-#endif
 		CHeader {
 		u8							m_version;
 		_GRAPH_ID					m_vertex_count;
@@ -144,11 +128,7 @@ namespace GameGraph {
 	};
 #pragma pack(pop)
 
-#ifdef AI_COMPILER
-	struct
-#else
 	class
-#endif
 		CLevelPoint  {
 		Fvector		tPoint;
 		u32			tNodeID;

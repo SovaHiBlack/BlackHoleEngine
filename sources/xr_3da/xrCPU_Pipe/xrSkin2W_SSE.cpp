@@ -1,13 +1,8 @@
 #include "stdafx.h"
 #pragma hdrstop
 
-#ifdef _EDITOR
-#include "skeletonX.h"
-#include "skeletoncustom.h"
-#else
 #include "..\skeletonX.h"
 #include "..\skeletoncustom.h"
-#endif
 
 // -- offsets -------------------------------------------------------
 #define M11 0

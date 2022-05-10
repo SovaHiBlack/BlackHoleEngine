@@ -21,10 +21,8 @@
 class NET_Packet;
 class CDUInterface;
 
-#ifndef _EDITOR
-    #ifndef XRGAME_EXPORTS
-        #include "Sound.h"
-    #endif
+#ifndef XRGAME_EXPORTS
+#	include "Sound.h"
 #endif
 
 #include "xrEProps.h"

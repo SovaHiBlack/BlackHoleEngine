@@ -496,6 +496,12 @@
       <Filter>Compression\lzo</Filter>
     </ClInclude>
     <ClInclude Include="xrSyncronize.h" />
+    <ClInclude Include="_constants.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="_limits.h">
+      <Filter>Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="FileSystem.h">

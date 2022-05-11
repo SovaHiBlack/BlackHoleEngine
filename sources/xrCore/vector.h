@@ -1,40 +1,7 @@
 #ifndef _vector_included
 #define _vector_included
 
-// Undef some macros
-#ifdef M_PI
-#undef M_PI
-#endif
-
-#ifdef PI
-#undef PI
-#endif
-
-#ifdef FLT_MAX
-#undef FLT_MAX
-#undef FLT_MIN
-#endif
-
-// Constants
-const	float		EPS_S		= 0.0000001f;
-const	float		EPS			= 0.0000100f;
-const	float		EPS_L		= 0.0010000f;
-
-const	float		M_PI		= 3.1415926535897932384626433832795f;
-const	float		PI			= 3.1415926535897932384626433832795f;
-const	float		PI_MUL_2	= 6.2831853071795864769252867665590f;
-const	float		PI_MUL_3	= 9.4247779607693797153879301498385f;
-const	float		PI_MUL_4	= 12.566370614359172953850573533118f;
-const	float		PI_MUL_6	= 18.849555921538759430775860299677f;
-const	float		PI_MUL_8	= 25.132741228718345907701147066236f;
-const	float		PI_DIV_2	= 1.5707963267948966192313216916398f;
-const	float		PI_DIV_3	= 1.0471975511965977461542144610932f;
-const	float		PI_DIV_4	= 0.7853981633974483096156608458199f;
-const	float		PI_DIV_6	= 0.5235987755982988730771072305466f;
-const	float		PI_DIV_8	= 0.3926990816987241548078304229099f;
-
-// Define types and namespaces (CPU & FPU)
-#include	"_types.h"
+// Define namespaces (CPU & FPU)
 #include	"_math.h"
 #include	"_bitwise.h"
 #include	"_std_extensions.h"
@@ -77,7 +44,6 @@ template <class T> struct _quaternion;
 
 #pragma pack(push)
 #pragma pack(1)
-
 #include "_random.h"
 
 #include "_color.h"
@@ -97,7 +63,6 @@ template <class T> struct _quaternion;
 #include "_plane.h"
 #include "_plane2.h"
 #include "_flags.h"
-
 #pragma pack(pop)
 
 

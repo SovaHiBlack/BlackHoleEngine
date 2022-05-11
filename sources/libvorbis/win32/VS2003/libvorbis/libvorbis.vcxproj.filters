@@ -9,6 +9,9 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="def">
+      <UniqueIdentifier>{9c2c53a5-c8db-4523-b51d-012f31564ebd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\lib\analysis.c">
@@ -74,11 +77,6 @@
     <ClCompile Include="..\..\..\lib\window.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\vorbis.def">
-      <Filter>Source Files</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\lib\backends.h">
@@ -207,5 +205,10 @@
     <ClInclude Include="..\..\..\lib\window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\vorbis.def">
+      <Filter>def</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -1,11 +1,12 @@
-// stdafx.cpp : source file that includes just the standard includes
-// xrCore.pch will be the pre-compiled header
-// stdafx.obj will contain the pre-compiled type information
+//==================================== BlackHoleEngine ========================================
+// Projekt		: Core
+// Module		: stdafx.cpp
+// Created		: 
+// Modified		: 
+// Author		: Anahoret
+// Description	: исходный файл, который включает только стандартные includes
+//				  Core.pch будет предварительно скомпилированным заголовком
+//				  stdafx.obj будет содержать предварительно скомпилированную информацию о типе
+//================================== SovaHiBlack© - 2022 ======================================
 
 #include "stdafx.h"
-
-// TODO: reference any additional headers you need in STDAFX.H
-// and not in this file
-
-
- 

@@ -184,15 +184,6 @@
     <Filter Include="config\scripts\sarcofag">
       <UniqueIdentifier>{d433b56d-a159-41e3-972a-8ea2ab7d7bf9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="config\Zones">
-      <UniqueIdentifier>{5ec9bbf7-8982-4efd-ba18-be3fc910ceb3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="config\Zones\old_and_unused">
-      <UniqueIdentifier>{72672856-b330-4114-b864-33eadfeb0650}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="config\Prefetch">
-      <UniqueIdentifier>{57a876be-cc91-43be-a44c-9f05bf1737a0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="config\models">
       <UniqueIdentifier>{6ebffa1d-bd37-4f8c-939c-b75ad8530bb2}</UniqueIdentifier>
     </Filter>
@@ -348,6 +339,15 @@
     </Filter>
     <Filter Include="scripts\Test\tasks">
       <UniqueIdentifier>{22600d59-37b2-4217-950f-6db125eaf424}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\prefetch">
+      <UniqueIdentifier>{57a876be-cc91-43be-a44c-9f05bf1737a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\zones">
+      <UniqueIdentifier>{5ec9bbf7-8982-4efd-ba18-be3fc910ceb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\zones\old_and_unused">
+      <UniqueIdentifier>{72672856-b330-4114-b864-33eadfeb0650}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1372,67 +1372,67 @@
       <Filter>config\scripts\sarcofag</Filter>
     </None>
     <None Include="Config\misc\zone_burningfuzz.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_buzz.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_gravi.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_kampfire.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_mincer.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_minefield.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_monolith.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_mosquitobald.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_nogravity.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_radioactive.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_teleport.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_torrid.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_witchesgalantine.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_zharka_static.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zones.ltx">
-      <Filter>config\Zones</Filter>
+      <Filter>config\zones</Filter>
     </None>
     <None Include="Config\misc\zone_ameba.ltx">
-      <Filter>config\Zones\old_and_unused</Filter>
+      <Filter>config\zones\old_and_unused</Filter>
     </None>
     <None Include="Config\misc\zone_rustyhair.ltx">
-      <Filter>config\Zones\old_and_unused</Filter>
+      <Filter>config\zones\old_and_unused</Filter>
     </None>
     <None Include="config\prefetch\prefetch.ltx">
-      <Filter>config\Prefetch</Filter>
+      <Filter>config\prefetch</Filter>
     </None>
     <None Include="config\prefetch\prefetch_globals.ltx">
-      <Filter>config\Prefetch</Filter>
+      <Filter>config\prefetch</Filter>
     </None>
     <None Include="config\prefetch\prefetch_mp.ltx">
-      <Filter>config\Prefetch</Filter>
+      <Filter>config\prefetch</Filter>
     </None>
     <None Include="config\prefetch\prefetch_single.ltx">
-      <Filter>config\Prefetch</Filter>
+      <Filter>config\prefetch</Filter>
     </None>
     <None Include="Config\models\objects\aes_zabor.ltx">
       <Filter>config\models\objects</Filter>

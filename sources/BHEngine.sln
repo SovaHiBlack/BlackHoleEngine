@@ -49,6 +49,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libogg", "libogg\win32\VS2003\libogg\libogg.vcxproj", "{15CBFEFF-7965-41F5-B4E2-21E8795C9159}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtheora", "libtheora\win32\VS2003\libtheora\libtheora.vcxproj", "{653F3841-3F26-49B9-AFCF-091DB4B67031}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CEBDE98B-A6AA-46E6-BC79-FAAF823DB9EC} = {CEBDE98B-A6AA-46E6-BC79-FAAF823DB9EC}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libvorbis", "libvorbis\win32\VS2003\libvorbis\libvorbis.vcxproj", "{3A214E06-B95E-4D61-A291-1F8DF2EC10FD}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -81,6 +84,31 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrStalker", "resources\xrstalker.vcxproj", "{90F938A1-176A-4379-A3D1-DD516E8A6DC1}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gamedata", "..\gamedata\resources.vcxproj", "{E8012F45-D3C4-414C-B675-7A229A90C035}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doki", "doki", "{3AD53CB1-422F-4A35-AFC2-2896D5F7CCF2}"
+	ProjectSection(SolutionItems) = preProject
+		..\Doki\Advanced - Effective Modern C++ 11 & 14, 2016 (перевод, на русском).pdf = ..\Doki\Advanced - Effective Modern C++ 11 & 14, 2016 (перевод, на русском).pdf
+		..\Doki\Advanced - Principles and Practice Using C++ 11 & 14, 2nd Edition 2016 (перевод, на русском).pdf = ..\Doki\Advanced - Principles and Practice Using C++ 11 & 14, 2nd Edition 2016 (перевод, на русском).pdf
+		..\Doki\Beginner - Beginning C++ 11 Through Game Programming, 4rd Edition 2015 (перевод, на русском).pdf = ..\Doki\Beginner - Beginning C++ 11 Through Game Programming, 4rd Edition 2015 (перевод, на русском).pdf
+		..\Doki\Beginner - C++ and Algorithmic Thinking Part 1 of 5, 2015.pdf = ..\Doki\Beginner - C++ and Algorithmic Thinking Part 1 of 5, 2015.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Именование", "Именование", "{3DA396C7-0C05-4545-BD12-43C3DF49B58B}"
+	ProjectSection(SolutionItems) = preProject
+		..\Doki\Именование\Изменения в именовании.txt = ..\Doki\Именование\Изменения в именовании.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Стандарт кодирования", "Стандарт кодирования", "{D6D64186-84EE-4E57-897B-F2770E0E1729}"
+	ProjectSection(SolutionItems) = preProject
+		..\Doki\Стандарт кодирования\90 рекомендаций по стилю написания программ на C++.docx = ..\Doki\Стандарт кодирования\90 рекомендаций по стилю написания программ на C++.docx
+		..\Doki\Стандарт кодирования\C++ Coding Standard v1.02.docx = ..\Doki\Стандарт кодирования\C++ Coding Standard v1.02.docx
+		..\Doki\Стандарт кодирования\CppCodingStandards_RU.chm = ..\Doki\Стандарт кодирования\CppCodingStandards_RU.chm
+		..\Doki\Стандарт кодирования\RUS - Sutter - CPP Coding Standards..pdf = ..\Doki\Стандарт кодирования\RUS - Sutter - CPP Coding Standards..pdf
+		..\Doki\Стандарт кодирования\SHB Coding Standart.docx = ..\Doki\Стандарт кодирования\SHB Coding Standart.docx
+		..\Doki\Стандарт кодирования\Гайд по оформлению кода на С++ от Стэнфордского университета.docx = ..\Doki\Стандарт кодирования\Гайд по оформлению кода на С++ от Стэнфордского университета.docx
+		..\Doki\Стандарт кодирования\Рекомендации по написанию кода в C++.docx = ..\Doki\Стандарт кодирования\Рекомендации по написанию кода в C++.docx
+		..\Doki\Стандарт кодирования\рекомендации по написанию программ на С++.pdf = ..\Doki\Стандарт кодирования\рекомендации по написанию программ на С++.pdf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -199,6 +227,9 @@ Global
 		{EF4C42AD-7BA8-45A5-A09F-D373CD74A6C8} = {2BFC806B-CE92-4EA4-8FE8-5F2EA54BA348}
 		{90F938A1-176A-4379-A3D1-DD516E8A6DC1} = {BD145148-FA82-4E77-BCDC-781F551E0B99}
 		{E8012F45-D3C4-414C-B675-7A229A90C035} = {BD145148-FA82-4E77-BCDC-781F551E0B99}
+		{3AD53CB1-422F-4A35-AFC2-2896D5F7CCF2} = {2BFC806B-CE92-4EA4-8FE8-5F2EA54BA348}
+		{3DA396C7-0C05-4545-BD12-43C3DF49B58B} = {3AD53CB1-422F-4A35-AFC2-2896D5F7CCF2}
+		{D6D64186-84EE-4E57-897B-F2770E0E1729} = {3AD53CB1-422F-4A35-AFC2-2896D5F7CCF2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0118F522-9240-4077-9B08-D9AC78174301}

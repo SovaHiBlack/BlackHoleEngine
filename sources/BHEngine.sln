@@ -81,7 +81,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vorbis", "vorbis", "{EF4C42
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{BD145148-FA82-4E77-BCDC-781F551E0B99}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrStalker", "resources\xrstalker.vcxproj", "{90F938A1-176A-4379-A3D1-DD516E8A6DC1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrStalker", "..\resources\xrstalker.vcxproj", "{90F938A1-176A-4379-A3D1-DD516E8A6DC1}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gamedata", "..\gamedata\resources.vcxproj", "{E8012F45-D3C4-414C-B675-7A229A90C035}"
 EndProject

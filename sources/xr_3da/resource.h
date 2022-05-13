@@ -15,6 +15,10 @@
 #define RC_VIRT_MEM_ERROR               2071
 #define RC_VIRT_MEM_TEXT                2072
 
+#ifndef IDC_STATIC
+#define IDC_STATIC  -1
+#endif
+
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
@@ -25,3 +29,4 @@
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
+

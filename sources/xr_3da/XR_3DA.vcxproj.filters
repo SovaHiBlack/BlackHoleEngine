@@ -342,9 +342,6 @@
     <ClInclude Include="xr_effgamma.h">
       <Filter>Render\Execution &amp; 3D\Gamma</Filter>
     </ClInclude>
-    <ClInclude Include="Shader_xrLC.h">
-      <Filter>Render\Execution &amp; 3D\Shaders</Filter>
-    </ClInclude>
     <ClInclude Include="WaveForm.h">
       <Filter>Render\Execution &amp; 3D\Shaders</Filter>
     </ClInclude>

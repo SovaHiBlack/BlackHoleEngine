@@ -47,7 +47,7 @@ namespace PS
 		}
 	};
 
-	class ECORE_API CPEDef
+	class  CPEDef
 	{
 	public:
 		enum{

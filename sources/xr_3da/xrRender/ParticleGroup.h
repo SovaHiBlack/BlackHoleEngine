@@ -8,7 +8,7 @@ namespace PS
 {
 	class CParticleEffect;
 
-	class ECORE_API CPGDef
+	class  CPGDef
 	{
 	public:
 		shared_str			m_Name;
@@ -45,7 +45,7 @@ namespace PS
 	};
 	DEFINE_VECTOR(CPGDef*,PGDVec,PGDIt);
 
-	class ECORE_API CParticleGroup: public IParticleCustom
+	class  CParticleGroup: public IParticleCustom
 	{
 		const CPGDef*		m_Def;
 		float				m_CurrentTime;

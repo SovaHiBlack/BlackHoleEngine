@@ -7,7 +7,7 @@
 #include "blender_clsid.h"
 IC bool		p_sort			(IBlender* A, IBlender* B)
 {
-	return stricmp(A->getComment(),B->getComment())<0;
+	return _stricmp(A->getComment(),B->getComment())<0;
 }
 
 #define TYPES_EQUAL(A,B) (typeid(A).raw_name() == typeid(B).raw_name())

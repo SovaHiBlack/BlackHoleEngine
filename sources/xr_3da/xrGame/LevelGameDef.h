@@ -33,8 +33,8 @@ enum ERPGameType{		// [0..255]
 	rpgtGameTeamDeathmatch				= 2,
 	rpgtGameArtefactHunt				= 3,
 };
-extern ECORE_API xr_token rpoint_type[];
-extern ECORE_API xr_token rpoint_game_type[];
+extern  xr_token rpoint_type[];
+extern  xr_token rpoint_game_type[];
 
 // BASE offset
 #define WAY_BASE					0x1000

@@ -166,7 +166,7 @@ void CDetailManager::Unload		()
 	FS.r_close			(dtFS);
 }
 
-extern ECORE_API float r_ssaDISCARD;
+extern  float r_ssaDISCARD;
 
 void CDetailManager::UpdateVisibleM()
 {

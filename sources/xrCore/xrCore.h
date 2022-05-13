@@ -34,7 +34,7 @@
 #		error Please disable exceptions...
 #	endif // def _CPPUNWIND
 
-//#	pragma warning(disable:4530)		// C++ exception handler used, but unwind semantics are not enabled
+#	pragma warning(disable:4530)		// C++ exception handler used, but unwind semantics are not enabled
 
 //#	define _HAS_EXCEPTIONS			1	// STL
 #	define XRAY_EXCEPTIONS			0	// XRAY
@@ -67,7 +67,6 @@
 
 #include <typeinfo>
 
-
 // inline control - redefine to use compiler's heuristics ONLY
 // it seems "IC" is misused in many places which cause code-bloat
 // ...and VC7.1 really don't miss opportunities for inline :)
@@ -85,15 +84,15 @@
 #endif // ndef DEBUG
 
 // Warnings
-//#pragma warning(disable:4251)		// object needs DLL interface
-//#pragma warning(disable:4201)		// nonstandard extension used : nameless struct/union
-//#pragma warning(disable:4100)		// unreferenced formal parameter
-//#pragma warning(disable:4127)		// conditional expression is constant
-//#pragma warning(disable:4345)
-//#pragma warning(disable:4714)		// __forceinline not inlined
+#pragma warning(disable:4251)		// object needs DLL interface
+#pragma warning(disable:4201)		// nonstandard extension used : nameless struct/union
+#pragma warning(disable:4100)		// unreferenced formal parameter
+#pragma warning(disable:4127)		// conditional expression is constant
+#pragma warning(disable:4345)
+#pragma warning(disable:4714)		// __forceinline not inlined
 
 #ifndef DEBUG
-//#	pragma warning(disable:4189)		//  local variable is initialized but not refenced
+#	pragma warning(disable:4189)		//  local variable is initialized but not refenced
 #endif									//	frequently in release code due to large amount of VERIFY
 
 #ifdef _M_AMD64
@@ -102,7 +101,7 @@
 
 // stl
 #pragma warning(push)
-//#pragma warning(disable:4702)
+#pragma warning(disable:4702)
 #include <algorithm>
 #include <limits>
 #include <vector>
@@ -112,7 +111,7 @@
 #include <map>
 #include <string>
 #pragma warning(pop)
-//#pragma warning(disable:4100 )		// unreferenced formal parameter
+#pragma warning(disable:4100 )		// unreferenced formal parameter
 
 // Our headers
 #define ALIGN(a)			__declspec(align(a))

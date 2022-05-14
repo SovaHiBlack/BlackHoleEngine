@@ -336,9 +336,9 @@ void	OpenPack			(LPCSTR tgt_folder, int num)
 	string_path		fname;
 	string128		s_num;
 #ifdef MOD_COMPRESS
-	strconcat		(sizeof(fname),fname,tgt_folder,".xdb",itoa(num,s_num,10));
+	strconcat		(sizeof(fname),fname,tgt_folder,".xdb",_itoa(num,s_num,10));
 #else
-	strconcat		(sizeof(fname),fname,tgt_folder,".pack_#",itoa(num,s_num,10));
+	strconcat		(sizeof(fname),fname,tgt_folder,".pack_#",_itoa(num,s_num,10));
 #endif
 	unlink			(fname);
 	fs				= FS.w_open	(fname);

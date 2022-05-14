@@ -4395,9 +4395,6 @@
     <ClInclude Include="script_export_space.h">
       <Filter>AI\AScript</Filter>
     </ClInclude>
-    <ClInclude Include="script_space.h">
-      <Filter>AI\AScript</Filter>
-    </ClInclude>
     <ClInclude Include="script_space_forward.h">
       <Filter>AI\AScript</Filter>
     </ClInclude>

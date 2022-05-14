@@ -49,7 +49,7 @@ private:
 	void				static_wm_render		(static_wallmark*	W, FVF::LIT* &V);
 	void				static_wm_destroy		(static_wallmark*	W	);
 
-	void				skeleton_wm_render		(intrusive_ptr<CSkeletonWallmark>, FVF::LIT* &V);
+//(not use)	void				skeleton_wm_render		(intrusive_ptr<CSkeletonWallmark>, FVF::LIT* &V);
 public:
 						CWallmarksEngine		();
 						~CWallmarksEngine		();

@@ -150,7 +150,7 @@ public:
 #ifndef SEVERAL_ALLOCATORS
 		Msg		("* [x-ray]: process heap[%d K]",_process_heap/1024);
 #else // SEVERAL_ALLOCATORS
-		Msg		("* [x-ray]: crt heap[%d K], process heap[%d K], game lua[%d K], engine lua[%d K], render[%d K]",_crt_heap/1024,_process_heap/1024,_game_lua/1024,_engine_lua/1024,_render/1024);
+		Msg		("* [x-ray]: process heap[%d K], game lua[%d K], engine lua[%d K], render[%d K]", _process_heap/1024,_game_lua/1024,_engine_lua/1024,_render/1024);
 #endif // SEVERAL_ALLOCATORS
 
 		Msg		("* [x-ray]: economy: strings[%d K], smem[%d K]",_eco_strings/1024,_eco_smem);

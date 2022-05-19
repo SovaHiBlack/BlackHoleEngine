@@ -71,219 +71,260 @@ CCustomZone::~CCustomZone(void)
 	xr_delete					(m_effector);
 }
 
-void CCustomZone::Load(LPCSTR section) 
+void CCustomZone::Load(pcstr section)
 {
 	inherited::Load(section);
 
-	m_iDisableHitTime		= pSettings->r_s32(section,				"disable_time");	
-	m_iDisableHitTimeSmall	= pSettings->r_s32(section,				"disable_time_small");	
-	m_iDisableIdleTime		= pSettings->r_s32(section,				"disable_idle_time");	
-	m_fHitImpulseScale		= pSettings->r_float(section,			"hit_impulse_scale");
-	m_fEffectiveRadius		= pSettings->r_float(section,			"effective_radius");
-	m_eHitTypeBlowout		= ALife::g_tfString2HitType(pSettings->r_string(section, "hit_type"));
+	m_iDisableHitTime = pSettings->r_s32(section, "disable_time");
+	m_iDisableHitTimeSmall = pSettings->r_s32(section, "disable_time_small");
+	m_iDisableIdleTime = pSettings->r_s32(section, "disable_idle_time");
+	m_fHitImpulseScale = pSettings->r_float(section, "hit_impulse_scale");
+	m_fEffectiveRadius = pSettings->r_float(section, "effective_radius");
+	m_eHitTypeBlowout = ALife::g_tfString2HitType(pSettings->r_string(section, "hit_type"));
 
-	m_zone_flags.set(eIgnoreNonAlive,	pSettings->r_bool(section,	"ignore_nonalive"));
-	m_zone_flags.set(eIgnoreSmall,		pSettings->r_bool(section,	"ignore_small"));
-	m_zone_flags.set(eIgnoreArtefact,	pSettings->r_bool(section,	"ignore_artefacts"));
-	m_zone_flags.set(eVisibleByDetector,pSettings->r_bool(section,	"visible_by_detector"));
-	
-
-
+	m_zone_flags.set(eIgnoreNonAlive, pSettings->r_bool(section, "ignore_nonalive"));
+	m_zone_flags.set(eIgnoreSmall, pSettings->r_bool(section, "ignore_small"));
+	m_zone_flags.set(eIgnoreArtefact, pSettings->r_bool(section, "ignore_artefacts"));
+	m_zone_flags.set(eVisibleByDetector, pSettings->r_bool(section, "visible_by_detector"));
 
 	//загрузить времена для зоны
-	m_StateTime[eZoneStateIdle]			= -1;
-	m_StateTime[eZoneStateAwaking]		= pSettings->r_s32(section, "awaking_time");
-	m_StateTime[eZoneStateBlowout]		= pSettings->r_s32(section, "blowout_time");
-	m_StateTime[eZoneStateAccumulate]	= pSettings->r_s32(section, "accamulate_time");
-	
-//////////////////////////////////////////////////////////////////////////
-	ISpatial*		self				=	smart_cast<ISpatial*> (this);
-	if (self)		self->spatial.type	|=	(STYPE_COLLIDEABLE|STYPE_SHAPE);
-//////////////////////////////////////////////////////////////////////////
+	m_StateTime[eZoneStateIdle] = -1;
+	m_StateTime[eZoneStateAwaking] = pSettings->r_s32(section, "awaking_time");
+	m_StateTime[eZoneStateBlowout] = pSettings->r_s32(section, "blowout_time");
+	m_StateTime[eZoneStateAccumulate] = pSettings->r_s32(section, "accamulate_time");
 
-	LPCSTR sound_str = NULL;
-	
-	if(pSettings->line_exist(section,"idle_sound")) 
+	//////////////////////////////////////////////////////////////////////////
+	ISpatial* self = smart_cast<ISpatial*> (this);
+	if (self)
 	{
-		sound_str = pSettings->r_string(section,"idle_sound");
-		m_idle_sound.create(sound_str, st_Effect,sg_SourceType);
+		self->spatial.type |= (STYPE_COLLIDEABLE | STYPE_SHAPE);
 	}
-	
-	if(pSettings->line_exist(section,"accum_sound")) 
+	//////////////////////////////////////////////////////////////////////////
+
+	pcstr sound_str = NULL;
+
+	if (pSettings->line_exist(section, "idle_sound"))
 	{
-		sound_str = pSettings->r_string(section,"accum_sound");
-		m_accum_sound.create(sound_str, st_Effect,sg_SourceType);
-	}
-	if(pSettings->line_exist(section,"awake_sound")) 
-	{
-		sound_str = pSettings->r_string(section,"awake_sound");
-		m_awaking_sound.create(sound_str, st_Effect,sg_SourceType);
-	}
-	
-	if(pSettings->line_exist(section,"blowout_sound")) 
-	{
-		sound_str = pSettings->r_string(section,"blowout_sound");
-		m_blowout_sound.create(sound_str, st_Effect,sg_SourceType);
-	}
-	
-	
-	if(pSettings->line_exist(section,"hit_sound")) 
-	{
-		sound_str = pSettings->r_string(section,"hit_sound");
-		m_hit_sound.create(sound_str, st_Effect,sg_SourceType);
+		sound_str = pSettings->r_string(section, "idle_sound");
+		m_idle_sound.create(sound_str, st_Effect, sg_SourceType);
 	}
 
-	if(pSettings->line_exist(section,"entrance_sound")) 
+	if (pSettings->line_exist(section, "accum_sound"))
 	{
-		sound_str = pSettings->r_string(section,"entrance_sound");
-		m_entrance_sound.create(sound_str, st_Effect,sg_SourceType);
+		sound_str = pSettings->r_string(section, "accum_sound");
+		m_accum_sound.create(sound_str, st_Effect, sg_SourceType);
 	}
 
-
-	if(pSettings->line_exist(section,"idle_particles")) 
-		m_sIdleParticles	= pSettings->r_string(section,"idle_particles");
-	if(pSettings->line_exist(section,"blowout_particles")) 
-		m_sBlowoutParticles = pSettings->r_string(section,"blowout_particles");
-
-	if(pSettings->line_exist(section,"accum_particles")) 
-		m_sAccumParticles = pSettings->r_string(section,"accum_particles");
-
-	if(pSettings->line_exist(section,"awake_particles")) 
-		m_sAwakingParticles = pSettings->r_string(section,"awake_particles");
-	
-
-	if(pSettings->line_exist(section,"entrance_small_particles")) 
-		m_sEntranceParticlesSmall = pSettings->r_string(section,"entrance_small_particles");
-	if(pSettings->line_exist(section,"entrance_big_particles")) 
-		m_sEntranceParticlesBig = pSettings->r_string(section,"entrance_big_particles");
-
-	if(pSettings->line_exist(section,"hit_small_particles")) 
-		m_sHitParticlesSmall = pSettings->r_string(section,"hit_small_particles");
-	if(pSettings->line_exist(section,"hit_big_particles")) 
-		m_sHitParticlesBig = pSettings->r_string(section,"hit_big_particles");
-
-	if(pSettings->line_exist(section,"idle_small_particles")) 
-		m_sIdleObjectParticlesBig = pSettings->r_string(section,"idle_big_particles");
-	if(pSettings->line_exist(section,"idle_big_particles")) 
-		m_sIdleObjectParticlesSmall = pSettings->r_string(section,"idle_small_particles");
-	if(pSettings->line_exist(section,"idle_particles_dont_stop"))
-		m_bIdleObjectParticlesDontStop=pSettings->r_bool(section,"idle_particles_dont_stop");
-
-	if(pSettings->line_exist(section,"postprocess")) 
+	if (pSettings->line_exist(section, "awake_sound"))
 	{
-		m_effector					= xr_new<CZoneEffector>();
-		m_effector->Load			(pSettings->r_string(section,"postprocess"));
-	};
+		sound_str = pSettings->r_string(section, "awake_sound");
+		m_awaking_sound.create(sound_str, st_Effect, sg_SourceType);
+	}
 
-
-
-	if(pSettings->line_exist(section,"blowout_particles_time")) 
+	if (pSettings->line_exist(section, "blowout_sound"))
 	{
-		m_dwBlowoutParticlesTime = pSettings->r_u32(section,"blowout_particles_time");
-		if (s32(m_dwBlowoutParticlesTime)>m_StateTime[eZoneStateBlowout])	{
-			m_dwBlowoutParticlesTime=m_StateTime[eZoneStateBlowout];
-			Msg("! ERROR: invalid 'blowout_particles_time' in '%s'",section);
+		sound_str = pSettings->r_string(section, "blowout_sound");
+		m_blowout_sound.create(sound_str, st_Effect, sg_SourceType);
+	}
+
+	if (pSettings->line_exist(section, "hit_sound"))
+	{
+		sound_str = pSettings->r_string(section, "hit_sound");
+		m_hit_sound.create(sound_str, st_Effect, sg_SourceType);
+	}
+
+	if (pSettings->line_exist(section, "entrance_sound"))
+	{
+		sound_str = pSettings->r_string(section, "entrance_sound");
+		m_entrance_sound.create(sound_str, st_Effect, sg_SourceType);
+	}
+
+	if (pSettings->line_exist(section, "idle_particles"))
+	{
+		m_sIdleParticles = pSettings->r_string(section, "idle_particles");
+	}
+
+	if (pSettings->line_exist(section, "blowout_particles"))
+	{
+		m_sBlowoutParticles = pSettings->r_string(section, "blowout_particles");
+	}
+
+	if (pSettings->line_exist(section, "accum_particles"))
+	{
+		m_sAccumParticles = pSettings->r_string(section, "accum_particles");
+	}
+
+	if (pSettings->line_exist(section, "awake_particles"))
+	{
+		m_sAwakingParticles = pSettings->r_string(section, "awake_particles");
+	}
+
+	if (pSettings->line_exist(section, "entrance_small_particles"))
+	{
+		m_sEntranceParticlesSmall = pSettings->r_string(section, "entrance_small_particles");
+	}
+
+	if (pSettings->line_exist(section, "entrance_big_particles"))
+	{
+		m_sEntranceParticlesBig = pSettings->r_string(section, "entrance_big_particles");
+	}
+
+	if (pSettings->line_exist(section, "hit_small_particles"))
+	{
+		m_sHitParticlesSmall = pSettings->r_string(section, "hit_small_particles");
+	}
+
+	if (pSettings->line_exist(section, "hit_big_particles"))
+	{
+		m_sHitParticlesBig = pSettings->r_string(section, "hit_big_particles");
+	}
+
+	if (pSettings->line_exist(section, "idle_small_particles"))
+	{
+		m_sIdleObjectParticlesBig = pSettings->r_string(section, "idle_big_particles");
+	}
+
+	if (pSettings->line_exist(section, "idle_big_particles"))
+	{
+		m_sIdleObjectParticlesSmall = pSettings->r_string(section, "idle_small_particles");
+	}
+
+	if (pSettings->line_exist(section, "idle_particles_dont_stop"))
+	{
+		m_bIdleObjectParticlesDontStop = pSettings->r_bool(section, "idle_particles_dont_stop");
+	}
+
+	if (pSettings->line_exist(section, "postprocess"))
+	{
+		m_effector = xr_new<CZoneEffector>();
+		m_effector->Load(pSettings->r_string(section, "postprocess"));
+	}
+
+	if (pSettings->line_exist(section, "blowout_particles_time"))
+	{
+		m_dwBlowoutParticlesTime = pSettings->r_u32(section, "blowout_particles_time");
+		if (s32(m_dwBlowoutParticlesTime) > m_StateTime[eZoneStateBlowout])
+		{
+			m_dwBlowoutParticlesTime = m_StateTime[eZoneStateBlowout];
+			Msg("! ERROR: invalid 'blowout_particles_time' in '%s'", section);
 		}
 	}
 	else
+	{
 		m_dwBlowoutParticlesTime = 0;
+	}
 
-	if(pSettings->line_exist(section,"blowout_light_time")) 
+	if (pSettings->line_exist(section, "blowout_light_time"))
 	{
-		m_dwBlowoutLightTime = pSettings->r_u32(section,"blowout_light_time");
-		if (s32(m_dwBlowoutLightTime)>m_StateTime[eZoneStateBlowout])	{
-			m_dwBlowoutLightTime=m_StateTime[eZoneStateBlowout];
-			Msg("! ERROR: invalid 'blowout_light_time' in '%s'",section);
+		m_dwBlowoutLightTime = pSettings->r_u32(section, "blowout_light_time");
+		if (s32(m_dwBlowoutLightTime) > m_StateTime[eZoneStateBlowout])
+		{
+			m_dwBlowoutLightTime = m_StateTime[eZoneStateBlowout];
+			Msg("! ERROR: invalid 'blowout_light_time' in '%s'", section);
 		}
 	}
 	else
+	{
 		m_dwBlowoutLightTime = 0;
+	}
 
-	if(pSettings->line_exist(section,"blowout_sound_time")) 
+	if (pSettings->line_exist(section, "blowout_sound_time"))
 	{
-		m_dwBlowoutSoundTime = pSettings->r_u32(section,"blowout_sound_time");
-		if (s32(m_dwBlowoutSoundTime)>m_StateTime[eZoneStateBlowout])	{
-			m_dwBlowoutSoundTime=m_StateTime[eZoneStateBlowout];
-			Msg("! ERROR: invalid 'blowout_sound_time' in '%s'",section);
+		m_dwBlowoutSoundTime = pSettings->r_u32(section, "blowout_sound_time");
+		if (s32(m_dwBlowoutSoundTime) > m_StateTime[eZoneStateBlowout])
+		{
+			m_dwBlowoutSoundTime = m_StateTime[eZoneStateBlowout];
+			Msg("! ERROR: invalid 'blowout_sound_time' in '%s'", section);
 		}
 	}
 	else
+	{
 		m_dwBlowoutSoundTime = 0;
+	}
 
-	if(pSettings->line_exist(section,"blowout_explosion_time"))	{
-		m_dwBlowoutExplosionTime = pSettings->r_u32(section,"blowout_explosion_time"); 
-		if (s32(m_dwBlowoutExplosionTime)>m_StateTime[eZoneStateBlowout])	{
-			m_dwBlowoutExplosionTime=m_StateTime[eZoneStateBlowout];
-			Msg("! ERROR: invalid 'blowout_explosion_time' in '%s'",section);
+	if (pSettings->line_exist(section, "blowout_explosion_time"))
+	{
+		m_dwBlowoutExplosionTime = pSettings->r_u32(section, "blowout_explosion_time");
+		if (s32(m_dwBlowoutExplosionTime) > m_StateTime[eZoneStateBlowout])
+		{
+			m_dwBlowoutExplosionTime = m_StateTime[eZoneStateBlowout];
+			Msg("! ERROR: invalid 'blowout_explosion_time' in '%s'", section);
 		}
 	}
 	else
+	{
 		m_dwBlowoutExplosionTime = 0;
+	}
 
-	m_zone_flags.set(eBlowoutWind,  pSettings->r_bool(section,"blowout_wind"));
-	if( m_zone_flags.test(eBlowoutWind) ){
-		m_dwBlowoutWindTimeStart = pSettings->r_u32(section,"blowout_wind_time_start"); 
-		m_dwBlowoutWindTimePeak = pSettings->r_u32(section,"blowout_wind_time_peak"); 
-		m_dwBlowoutWindTimeEnd = pSettings->r_u32(section,"blowout_wind_time_end"); 
+	m_zone_flags.set(eBlowoutWind, pSettings->r_bool(section, "blowout_wind"));
+	if (m_zone_flags.test(eBlowoutWind))
+	{
+		m_dwBlowoutWindTimeStart = pSettings->r_u32(section, "blowout_wind_time_start");
+		m_dwBlowoutWindTimePeak = pSettings->r_u32(section, "blowout_wind_time_peak");
+		m_dwBlowoutWindTimeEnd = pSettings->r_u32(section, "blowout_wind_time_end");
 		R_ASSERT(m_dwBlowoutWindTimeStart < m_dwBlowoutWindTimePeak);
 		R_ASSERT(m_dwBlowoutWindTimePeak < m_dwBlowoutWindTimeEnd);
 
-		if((s32)m_dwBlowoutWindTimeEnd < m_StateTime[eZoneStateBlowout]){
-			m_dwBlowoutWindTimeEnd =u32( m_StateTime[eZoneStateBlowout]-1);
-			Msg("! ERROR: invalid 'blowout_wind_time_end' in '%s'",section);
+		if ((s32)m_dwBlowoutWindTimeEnd < m_StateTime[eZoneStateBlowout])
+		{
+			m_dwBlowoutWindTimeEnd = u32(m_StateTime[eZoneStateBlowout] - 1);
+			Msg("! ERROR: invalid 'blowout_wind_time_end' in '%s'", section);
 		}
 
-		
-		m_fBlowoutWindPowerMax = pSettings->r_float(section,"blowout_wind_power");
+		m_fBlowoutWindPowerMax = pSettings->r_float(section, "blowout_wind_power");
 	}
 
 	//загрузить параметры световой вспышки от взрыва
-	m_zone_flags.set(eBlowoutLight, pSettings->r_bool (section, "blowout_light"));
+	m_zone_flags.set(eBlowoutLight, pSettings->r_bool(section, "blowout_light"));
 
-	if(m_zone_flags.test(eBlowoutLight) ){
-		sscanf(pSettings->r_string(section,"light_color"), "%f,%f,%f", &m_LightColor.r, &m_LightColor.g, &m_LightColor.b);
-		m_fLightRange			= pSettings->r_float(section,"light_range");
-		m_fLightTime			= pSettings->r_float(section,"light_time");
-		m_fLightTimeLeft		= 0;
+	if (m_zone_flags.test(eBlowoutLight))
+	{
+		sscanf(pSettings->r_string(section, "light_color"), "%f,%f,%f", &m_LightColor.r, &m_LightColor.g, &m_LightColor.b);
+		m_fLightRange = pSettings->r_float(section, "light_range");
+		m_fLightTime = pSettings->r_float(section, "light_time");
+		m_fLightTimeLeft = 0;
 
-		m_fLightHeight		= pSettings->r_float(section,"light_height");
+		m_fLightHeight = pSettings->r_float(section, "light_height");
 	}
 
 	//загрузить параметры idle подсветки
-	m_zone_flags.set(eIdleLight,	pSettings->r_bool (section, "idle_light"));
-	if( m_zone_flags.test(eIdleLight) )
+	m_zone_flags.set(eIdleLight, pSettings->r_bool(section, "idle_light"));
+	if (m_zone_flags.test(eIdleLight))
 	{
-		m_fIdleLightRange = pSettings->r_float(section,"idle_light_range");
-		m_fIdleLightRangeDelta = pSettings->r_float(section,"idle_light_range_delta");
-		LPCSTR light_anim = pSettings->r_string(section,"idle_light_anim");
-		m_pIdleLAnim	 = LALib.FindItem(light_anim);
-		m_fIdleLightHeight = pSettings->r_float(section,"idle_light_height");
+		m_fIdleLightRange = pSettings->r_float(section, "idle_light_range");
+		m_fIdleLightRangeDelta = pSettings->r_float(section, "idle_light_range_delta");
+		pcstr light_anim = pSettings->r_string(section, "idle_light_anim");
+		m_pIdleLAnim = LALib.FindItem(light_anim);
+		m_fIdleLightHeight = pSettings->r_float(section, "idle_light_height");
 	}
 
-
 	//загрузить параметры для разбрасывания артефактов
-	m_zone_flags.set(eSpawnBlowoutArtefacts,	pSettings->r_bool(section,"spawn_blowout_artefacts"));
-	if( m_zone_flags.test(eSpawnBlowoutArtefacts) )
+	m_zone_flags.set(eSpawnBlowoutArtefacts, pSettings->r_bool(section, "spawn_blowout_artefacts"));
+	if (m_zone_flags.test(eSpawnBlowoutArtefacts))
 	{
-		m_fArtefactSpawnProbability	= pSettings->r_float (section,"artefact_spawn_probability");
-		if(pSettings->line_exist(section,"artefact_spawn_particles")) 
-			m_sArtefactSpawnParticles = pSettings->r_string(section,"artefact_spawn_particles");
-		else
-			m_sArtefactSpawnParticles = NULL;
-
-		if(pSettings->line_exist(section,"artefact_born_sound"))
+		m_fArtefactSpawnProbability = pSettings->r_float(section, "artefact_spawn_probability");
+		if (pSettings->line_exist(section, "artefact_spawn_particles"))
 		{
-			sound_str = pSettings->r_string(section,"artefact_born_sound");
-			m_ArtefactBornSound.create(sound_str, st_Effect,sg_SourceType);
+			m_sArtefactSpawnParticles = pSettings->r_string(section, "artefact_spawn_particles");
+		}
+		else
+		{
+			m_sArtefactSpawnParticles = NULL;
 		}
 
-		m_fThrowOutPower = pSettings->r_float (section,			"throw_out_power");
-		m_fArtefactSpawnHeight = pSettings->r_float (section,	"artefact_spawn_height");
+		if (pSettings->line_exist(section, "artefact_born_sound"))
+		{
+			sound_str = pSettings->r_string(section, "artefact_born_sound");
+			m_ArtefactBornSound.create(sound_str, st_Effect, sg_SourceType);
+		}
 
-		LPCSTR						l_caParameters = pSettings->r_string(section, "artefacts");
-		u16 m_wItemCount			= (u16)_GetItemCount(l_caParameters);
-		R_ASSERT2					(!(m_wItemCount & 1),"Invalid number of parameters in string 'artefacts' in the 'system.ltx'!");
-		m_wItemCount				>>= 1;
+		m_fThrowOutPower = pSettings->r_float(section, "throw_out_power");
+		m_fArtefactSpawnHeight = pSettings->r_float(section, "artefact_spawn_height");
+
+		pcstr l_caParameters = pSettings->r_string(section, "artefacts");
+		u16 m_wItemCount = (u16)_GetItemCount(l_caParameters);
+		R_ASSERT2(!(m_wItemCount & 1), "Invalid number of parameters in string 'artefacts' in the 'system.ltx'!");
+		m_wItemCount >>= 1;
 
 		m_ArtefactSpawn.clear();
 		string512 l_caBuffer;
@@ -291,24 +332,24 @@ void CCustomZone::Load(LPCSTR section)
 		float total_probability = 0.f;
 
 		m_ArtefactSpawn.resize(m_wItemCount);
-		for (u16 i=0; i<m_wItemCount; ++i) 
+		for (u16 i = 0; i < m_wItemCount; ++i)
 		{
 			ARTEFACT_SPAWN& artefact_spawn = m_ArtefactSpawn[i];
-			artefact_spawn.section = _GetItem(l_caParameters,i << 1,l_caBuffer);
-			artefact_spawn.probability = (float)atof(_GetItem(l_caParameters,(i << 1) | 1,l_caBuffer));
+			artefact_spawn.section = _GetItem(l_caParameters, i << 1, l_caBuffer);
+			artefact_spawn.probability = (float)atof(_GetItem(l_caParameters, (i << 1) | 1, l_caBuffer));
 			total_probability += artefact_spawn.probability;
 		}
 
-		R_ASSERT3(!fis_zero(total_probability), "The probability of artefact spawn is zero!",*cName());
+		R_ASSERT3(!fis_zero(total_probability), "The probability of artefact spawn is zero!", *cName());
 		//нормализировать вероятности
-		for(i=0; i<m_ArtefactSpawn.size(); ++i)
+		for (i = 0; i < m_ArtefactSpawn.size(); ++i)
 		{
-			m_ArtefactSpawn[i].probability = m_ArtefactSpawn[i].probability/total_probability;
+			m_ArtefactSpawn[i].probability = m_ArtefactSpawn[i].probability / total_probability;
 		}
 	}
 
-	m_ef_anomaly_type			= pSettings->r_u32(section,"ef_anomaly_type");
-	m_ef_weapon_type			= pSettings->r_u32(section,"ef_weapon_type");
+	m_ef_anomaly_type = pSettings->r_u32(section, "ef_anomaly_type");
+	m_ef_weapon_type = pSettings->r_u32(section, "ef_weapon_type");
 }
 
 BOOL CCustomZone::net_Spawn(CSE_Abstract* DC) 

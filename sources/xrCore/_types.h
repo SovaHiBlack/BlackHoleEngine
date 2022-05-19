@@ -29,9 +29,6 @@ typedef double					f64;
 typedef char*					pstr;
 typedef const char*				pcstr;
 
-typedef char*					pstr;
-typedef char const*				pcstr;
-
 typedef unsigned char*			pbyte;
 typedef unsigned const char*	pcbyte;
 

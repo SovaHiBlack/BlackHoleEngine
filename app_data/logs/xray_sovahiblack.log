@@ -1,0 +1,205 @@
+* Detected CPU: GenuineIntel P3 family, F6/M10/S7, 1996.00 mhz, 29-clk 'rdtsc'
+* CPU Features: RDTSC, MMX, SSE, SSE2
+
+Initializing File System...
+using fs-ltx fsgame.ltx
+FS: 28784 files cached, 4918Kb memory used.
+Init FileSystem 2.237058 sec
+'BlackHole© Core' build 8506, May 22 2022
+
+Initializing Engine...
+Executing config-script "user.ltx"...
+! Cannot open script file [user.ltx]
+Starting INPUT device...
+Loading DLL: xrRender_R1.dll
+Loading DLL: xrGame.dll
+! Unable to find Software\GSC Game World\STALKER-SHOC\ in registry
+* [win32]: free[4059028 K], reserved[43732 K], committed[91480 K]
+* [ D3D ]: textures[0 K]
+* [x-ray]: process heap[8600 K], game lua[0 K], engine lua[0 K], render[0 K]
+* [x-ray]: economy: strings[1032 K], smem[0 K]
+Executing config-script "c:\engine\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx"...
+! cant convert dik_name for dik[144], prop=[
+[c:\engine\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx] successfully loaded.
+Executing config-script "user.ltx"...
+! Cannot open script file [user.ltx]
+SOUND: OpenAL: enumerate devices...
+SOUND: OpenAL: EnumerationExtension Present
+devices Generic Software
+SOUND: OpenAL: system  default SndDevice name is Generic Software
+SOUND: OpenAL: All available devices:
+1. Generic Software, Spec Version 1.1 (default)
+SOUND: OpenAL: SelectBestDevice is Generic Software 1.1
+SOUND: OpenAL: Required device: Generic Software. Created device: Generic Software.
+* sound: EAX 2.0 extension: absent
+* sound: EAX 2.0 deferred: absent
+* sound : cache: 32773 kb, 3805 lines, 8820 bpl
+Starting RENDER device...
+* GPU [vendor:10DE]-[device:1050]: NVIDIA GeForce GT 520M
+* GPU driver: 23.21.13.9135
+* CREATE: DeviceREF: 1
+* Vertex Processor: PURE HARDWARE
+*     Texture memory: 4087 M
+*          DDI-level: 9.0
+* GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+* GPU vertex cache: recognized, 24
+* DVB created: 1536K
+* DIB created: 512K
+count of .thm files=1
+load time=56 ms
+* distortion: used, dev(30),need(14)
+* SSample: 1024x768
+* SSample: enabled
+- r__tf_aniso 4
+- r1_tf_mipbias 0.
+Starting engine...
+Loading DLL: xrGameSpy.dll
+* DVB created: 1536K
+* DIB created: 512K
+- r__tf_aniso 4
+- r1_tf_mipbias 0.
+* SSample: 1024x768
+* SSample: enabled
+* GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+* GPU vertex cache: recognized, 24
+*** RESET [44 ms]
+"c:\engine\blackholeengine\release-win32\binaries\xr_3da.exe" 
+* phase time: 0 ms
+* phase cmem: 85597 K
+Кэширование объектов...
+Loading objects...
+Loading models...
+* [prefetch] time:    6376 ms
+* [prefetch] memory:  298031Kb
+* phase time: 6427 ms
+* phase cmem: 370538 K
+Сервер: Старт...
+* phase time: 75 ms
+* phase cmem: 370791 K
+Сервер: Загрузка симуляции жизни...
+* phase time: 23 ms
+* phase cmem: 370779 K
+Создание новой игры...
+* Creating new game...
+* Loading spawn registry...
+* 8641 spawn points are successfully loaded
+* Saving spawns...
+* Saving objects...
+* 16758 objects are successfully saved
+* Game all.sav is successfully saved to file 'c:\engine\blackholeengine\release-win32\..\app_data\savedgames\all.sav'
+* New game is successfully created!
+* phase time: 4490 ms
+* phase cmem: 400703 K
+Сервер: Соединяемся...
+MaxPlayers = 32
+* phase time: 39 ms
+* phase cmem: 400793 K
+Клиент: Соединение с localhost...
+# Player not found. New player created.
+* client : connection accepted - <>
+* phase time: 30 ms
+* phase cmem: 400818 K
+Открытие потока...
+* phase time: 25 ms
+* phase cmem: 400818 K
+Загрузка формы объектов...
+* phase time: 4267 ms
+* phase cmem: 473487 K
+Загрузка шейдеров...
+* phase time: 416 ms
+* phase cmem: 474931 K
+Загрузка геометрии...
+* [Loading VB] 65532 verts, 2047 Kb
+* [Loading VB] 65525 verts, 2047 Kb
+* [Loading VB] 65535 verts, 2047 Kb
+* [Loading VB] 65466 verts, 2045 Kb
+* [Loading VB] 17208 verts, 537 Kb
+* [Loading VB] 65533 verts, 2047 Kb
+* [Loading VB] 65534 verts, 2047 Kb
+* [Loading VB] 65534 verts, 2047 Kb
+* [Loading VB] 65531 verts, 2047 Kb
+* [Loading VB] 65535 verts, 2047 Kb
+* [Loading VB] 65535 verts, 2047 Kb
+* [Loading VB] 46595 verts, 1456 Kb
+* [Loading VB] 65534 verts, 2047 Kb
+* [Loading VB] 65533 verts, 2047 Kb
+* [Loading VB] 65535 verts, 2047 Kb
+* [Loading VB] 65532 verts, 2047 Kb
+* [Loading VB] 65533 verts, 2047 Kb
+* [Loading VB] 65533 verts, 2047 Kb
+* [Loading VB] 53181 verts, 1661 Kb
+* [Loading IB] 1048575 indices, 2047 Kb
+* [Loading IB] 1048572 indices, 2047 Kb
+* [Loading IB] 1048572 indices, 2047 Kb
+* [Loading IB] 1048572 indices, 2047 Kb
+* [Loading IB] 1048572 indices, 2047 Kb
+* [Loading IB] 1048572 indices, 2047 Kb
+* [Loading IB] 1048575 indices, 2047 Kb
+* [Loading IB] 1048572 indices, 2047 Kb
+* [Loading IB] 1048575 indices, 2047 Kb
+* [Loading IB] 228285 indices, 445 Kb
+* phase time: 406 ms
+* phase cmem: 531691 K
+Загрузка базы пространств...
+* phase time: 1653 ms
+* phase cmem: 535627 K
+Загрузка детальных объектов...
+* [DETAILS] VertexConsts(256), Batch(61)
+* [DETAILS] 40687 v(20), 26352 p
+* [DETAILS] Batch(61), VB(794K), IB(154K)
+* phase time: 74 ms
+* phase cmem: 536614 K
+Загрузка секторов и порталов...
+* Loading HOM: c:\engine\blackholeengine\release-win32\..\gamedata\levels\l01_escape\level.hom
+* phase time: 32 ms
+* phase cmem: 536771 K
+Загрузка ИИ объектов...
+- Loading music tracks from 'l01_escape_musics'...
+* phase time: 44 ms
+* phase cmem: 536811 K
+Клиент: Создание...
+- Game configuring : Started 
+- Game configuring : Finished 
+* phase time: 351 ms
+* phase cmem: 544620 K
+Загрузка текстур...
+* t-report - base: 865, 249805 K
+* t-report - lmap: 10, 10241 K
+***FATAL***: Too many lmap-textures (limit: 8 textures or 32M).
+        Reduce pixel density (worse) or use more vertex lighting (better).
+* phase time: 1389 ms
+* phase cmem: 686681 K
+Клиент: Синхронизация...
+* phase time: 42 ms
+* phase cmem: 686681 K
+* [win32]: free[3084516 K], reserved[200324 K], committed[909400 K]
+* [ D3D ]: textures[260046 K]
+* [x-ray]: process heap[686681 K], game lua[25992 K], engine lua[241 K], render[0 K]
+* [x-ray]: economy: strings[3713 K], smem[28221 K]
+Intro start 3641
+* MEMORY USAGE: 733325 K
+- Disconnect
+- Destroying level
+DestroySingleton::RefCounter: 0
+DestroySingleton::RefCounter: 0
+DestroySingleton::RefCounter: 0
+DestroySingleton::RefCounter: 0
+Input:  1
+Config-file [c:\engine\blackholeengine\release-win32\..\app_data\user.ltx] saved successfully
+Destroying Direct3D...
+* RM_Dump: textures  : 0
+* RM_Dump: rtargets  : 0
+* RM_Dump: rtargetsc : 0
+* RM_Dump: vs        : 0
+* RM_Dump: ps        : 0
+* RM_Dump: dcl       : 0
+* RM_Dump: states    : 0
+* RM_Dump: tex_list  : 0
+* RM_Dump: matrices  : 0
+* RM_Dump: lst_constants: 0
+* RM_Dump: v_passes  : 0
+* RM_Dump: v_elements: 0
+* RM_Dump: v_shaders : 0
+refCount:pBaseZB 1
+refCount:pBaseRT 1
+DeviceREF: 1

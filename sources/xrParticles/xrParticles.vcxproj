@@ -69,7 +69,7 @@
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <AdditionalIncludeDirectories>
       </AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;XR_PARTICLES_EXPORTS;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;PARTICLES_EXPORTS;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -123,7 +123,7 @@
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <AdditionalIncludeDirectories>
       </AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>DEBUG;WIN32;_WINDOWS;XR_PARTICLES_EXPORTS;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>DEBUG;WIN32;_WINDOWS;PARTICLES_EXPORTS;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>false</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -161,22 +161,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="noise.h" />
-    <ClInclude Include="particle_actions.h" />
-    <ClInclude Include="particle_actions_collection.h" />
-    <ClInclude Include="particle_core.h" />
-    <ClInclude Include="particle_effect.h" />
-    <ClInclude Include="particle_manager.h" />
+    <ClInclude Include="ParticleActions.h" />
+    <ClInclude Include="ParticleActions_collection.h" />
+    <ClInclude Include="ParticleDomain.h" />
+    <ClInclude Include="ParticleEffect.h" />
+    <ClInclude Include="ParticleManager.h" />
     <ClInclude Include="psystem.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="noise.cpp" />
-    <ClCompile Include="particle_actions.cpp" />
-    <ClCompile Include="particle_actions_collection.cpp" />
-    <ClCompile Include="particle_actions_collection_io.cpp" />
-    <ClCompile Include="particle_core.cpp" />
-    <ClCompile Include="particle_effect.cpp" />
-    <ClCompile Include="particle_manager.cpp" />
+    <ClCompile Include="ParticleActions.cpp" />
+    <ClCompile Include="ParticleActions_collection.cpp" />
+    <ClCompile Include="ParticleActions_collection_io.cpp" />
+    <ClCompile Include="ParticleDomain.cpp" />
+    <ClCompile Include="ParticleEffect.cpp" />
+    <ClCompile Include="ParticleManager.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

@@ -2,7 +2,7 @@
 #include "stdafx.h"
 #pragma hdrstop
 
-#include "..\..\xrParticles\psystem.h"
+//#include "..\..\xrParticles\psystem.h"
 #include "ParticleGroup.h"
 #include "PSLibrary.h"
 
@@ -121,7 +121,7 @@ void CParticleGroup::SItem::Clear()
     for (VisualVecIt it=visuals.begin(); it!=visuals.end(); it++)
 	    ::Render->model_Delete(*it);
 }
-void CParticleGroup::SItem::StartRelatedChild(CParticleEffect* emitter, LPCSTR eff_name, PAPI::Particle& m)
+void CParticleGroup::SItem::StartRelatedChild(CParticleEffect* emitter, LPCSTR eff_name, PAPI::SParticle& m)
 {
     CParticleEffect*C		= static_cast<CParticleEffect*>(RImplementation.model_CreatePE(eff_name));
     Fmatrix M; 				M.identity();
@@ -146,7 +146,7 @@ void CParticleGroup::SItem::StopRelatedChild(u32 idx)
     _children_related[idx]		= _children_related.back();
     _children_related.pop_back	();
 }
-void CParticleGroup::SItem::StartFreeChild(CParticleEffect* emitter, LPCSTR nm, PAPI::Particle& m)
+void CParticleGroup::SItem::StartFreeChild(CParticleEffect* emitter, LPCSTR nm, PAPI::SParticle& m)
 {
     CParticleEffect*C			= static_cast<CParticleEffect*>(RImplementation.model_CreatePE(nm));
     if(!C->IsLooped()){
@@ -200,7 +200,7 @@ void CParticleGroup::SItem::UpdateParent(const Fmatrix& m, const Fvector& veloci
     if (E) E->UpdateParent(m,velocity,bXFORM);
 }
 //------------------------------------------------------------------------------
-void OnGroupParticleBirth(void* owner, u32 param, PAPI::Particle& m, u32 idx)
+void OnGroupParticleBirth(void* owner, u32 param, PAPI::SParticle& m, u32 idx)
 {
 	CParticleGroup* PG 	= static_cast<CParticleGroup*>(owner); 	VERIFY(PG);
     CParticleEffect*PE	= static_cast<CParticleEffect*>(PG->items[param]._effect);
@@ -213,7 +213,7 @@ void OnGroupParticleBirth(void* owner, u32 param, PAPI::Particle& m, u32 idx)
     if (eff->m_Flags.is(CPGDef::SEffect::flOnPlayChild))
     	PG->items[param].StartRelatedChild		(PE,*eff->m_OnPlayChildName,m);
 }
-void OnGroupParticleDead(void* owner, u32 param, PAPI::Particle& m, u32 idx)
+void OnGroupParticleDead(void* owner, u32 param, PAPI::SParticle& m, u32 idx)
 {
 	CParticleGroup* PG 	= static_cast<CParticleGroup*>(owner); VERIFY(PG);
     CParticleEffect*PE	= static_cast<CParticleEffect*>(PG->items[param]._effect);
@@ -240,13 +240,13 @@ void CParticleGroup::SItem::OnFrame(u32 u_dt, const CPGDef::SEffect& def, Fbox& 
             bPlaying		= true;
             if (E->vis.box.is_valid())     box.merge	(E->vis.box);
             if (def.m_Flags.is(CPGDef::SEffect::flOnPlayChild)&&def.m_OnPlayChildName.size()){
-                PAPI::Particle* particles;
+                PAPI::SParticle* particles;
                 u32 p_cnt;
                 PAPI::ParticleManager()->GetParticles(E->GetHandleEffect(),particles,p_cnt);
                 VERIFY(p_cnt==_children_related.size());
                 if (p_cnt){
                     for(u32 i = 0; i < p_cnt; i++){
-                        PAPI::Particle &m	= particles[i]; 
+                        PAPI::SParticle& m	= particles[i];
                         CParticleEffect* C 	= static_cast<CParticleEffect*>(_children_related[i]);
                         Fmatrix M; 			M.translate(m.pos);
                         Fvector vel; 		vel.sub(m.pos,m.posB); vel.div(fDT_STEP);

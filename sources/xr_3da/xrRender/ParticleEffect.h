@@ -74,8 +74,8 @@ namespace PS
 	    virtual u32			ParticlesCount		();
 	};
 	DEFINE_VECTOR				(PS::CPEDef*,PEDVec,PEDIt);
-    void OnEffectParticleBirth	(void* owner, u32 param, PAPI::Particle& m, u32 idx);
-    void OnEffectParticleDead	(void* owner, u32 param, PAPI::Particle& m, u32 idx);
+    void OnEffectParticleBirth	(void* owner, u32 param, PAPI::SParticle& m, u32 idx);
+    void OnEffectParticleDead	(void* owner, u32 param, PAPI::SParticle& m, u32 idx);
 
     extern const u32		uDT_STEP;
 	extern const float		fDT_STEP;

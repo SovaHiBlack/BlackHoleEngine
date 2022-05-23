@@ -1,6 +1,6 @@
 ## Ignore Visual Studio temporary files
 
-/sources/.vs/BHEngine/v16
+/sources/.vs/BHEngine
 
 /gamedata/levels
 /gamedata/sounds

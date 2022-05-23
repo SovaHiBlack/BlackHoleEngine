@@ -1,11 +1,11 @@
 //==================================== BlackHoleEngine ============================================
 // Projekt		: Particles
-// Module		: stdafx.cpp
+// Module		: ParticleEffect.cpp
 // Author		: Anahoret
-// Description	: исходный файл, который включает только стандартные includes
-//				  Particles.pch будет предварительно скомпилированным заголовком
-//				  stdafx.obj будет содержать предварительно скомпилированную информацию о типе
+// Description	: 
 //================================== SovaHiBlack© - 2022 ==========================================
 
 #include "stdafx.h"
 #pragma hdrstop
+
+#include "ParticleEffect.h"

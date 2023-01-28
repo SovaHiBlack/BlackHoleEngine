@@ -3,7 +3,10 @@
 ################################################################################
 
 /sources/.vs
+
 /gamedata/levels
 /gamedata/meshes
 /gamedata/sounds
 /gamedata/textures
+
+/Release-Win32

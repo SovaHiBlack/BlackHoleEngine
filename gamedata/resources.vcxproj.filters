@@ -22,9 +22,6 @@
     <Filter Include="config\misc\gulags">
       <UniqueIdentifier>{bec0afb1-179d-4f65-bdc9-8f6832fb630e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="config\misc\gulags\Military">
-      <UniqueIdentifier>{ef057ffa-92e1-4632-9c4d-34fe6c90b40b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="config\misc\trade">
       <UniqueIdentifier>{25eeecab-0d9f-4357-8a5f-6c413aa63485}</UniqueIdentifier>
     </Filter>
@@ -394,6 +391,12 @@
     <Filter Include="spawns\unpack">
       <UniqueIdentifier>{ce81332c-ab63-4c75-af51-cb0aaf6b029d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="config\scripts\aem">
+      <UniqueIdentifier>{c384dc85-7fed-4726-b2d0-3106e4ce0f26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\misc\gulags\military">
+      <UniqueIdentifier>{ef057ffa-92e1-4632-9c4d-34fe6c90b40b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="config\defines.ltx">
@@ -450,7 +453,7 @@
     <None Include="Config\script.ltx">
       <Filter>config</Filter>
     </None>
-    <None Include="Config\System.ltx">
+    <None Include="Config\system.ltx">
       <Filter>config</Filter>
     </None>
     <None Include="Config\creatures\actor.ltx">
@@ -670,37 +673,37 @@
       <Filter>config\misc\gulags</Filter>
     </None>
     <None Include="config\misc\gulag_mil_dolg.ltx">
-      <Filter>config\misc\gulags\Military</Filter>
+      <Filter>config\misc\gulags\military</Filter>
     </None>
     <None Include="config\misc\gulag_mil_fblockpost.ltx">
-      <Filter>config\misc\gulags\Military</Filter>
+      <Filter>config\misc\gulags\military</Filter>
     </None>
     <None Include="config\misc\gulag_mil_freedom1.ltx">
-      <Filter>config\misc\gulags\Military</Filter>
+      <Filter>config\misc\gulags\military</Filter>
     </None>
     <None Include="config\misc\gulag_mil_freedom2.ltx">
-      <Filter>config\misc\gulags\Military</Filter>
+      <Filter>config\misc\gulags\military</Filter>
     </None>
     <None Include="config\misc\gulag_mil_freedom3.ltx">
-      <Filter>config\misc\gulags\Military</Filter>
+      <Filter>config\misc\gulags\military</Filter>
     </None>
     <None Include="config\misc\gulag_mil_freedom4.ltx">
-      <Filter>config\misc\gulags\Military</Filter>
+      <Filter>config\misc\gulags\military</Filter>
     </None>
     <None Include="config\misc\gulag_mil_monolith.ltx">
-      <Filter>config\misc\gulags\Military</Filter>
+      <Filter>config\misc\gulags\military</Filter>
     </None>
     <None Include="config\misc\gulag_mil_mutants.ltx">
-      <Filter>config\misc\gulags\Military</Filter>
+      <Filter>config\misc\gulags\military</Filter>
     </None>
     <None Include="config\misc\gulag_mil_nblockpost.ltx">
-      <Filter>config\misc\gulags\Military</Filter>
+      <Filter>config\misc\gulags\military</Filter>
     </None>
     <None Include="config\misc\gulag_mil_village.ltx">
-      <Filter>config\misc\gulags\Military</Filter>
+      <Filter>config\misc\gulags\military</Filter>
     </None>
     <None Include="config\misc\gulag_military.ltx">
-      <Filter>config\misc\gulags\Military</Filter>
+      <Filter>config\misc\gulags\military</Filter>
     </None>
     <None Include="Config\misc\trade_barman.ltx">
       <Filter>config\misc\trade</Filter>
@@ -4668,6 +4671,356 @@
     <None Include="spawns\all.spawn">
       <Filter>spawns</Filter>
     </None>
+    <None Include="game.graph" />
+    <None Include="gamemtl.xr" />
+    <None Include="lanims.xr" />
+    <None Include="particles.xr" />
+    <None Include="senvironment.xr" />
+    <None Include="shaders.xr" />
+    <None Include="shaders_xrlc.xr" />
+    <None Include="stalkergame.inf" />
+    <None Include="anims\agr_u_fade.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="anims\arg_u_fade.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="anims\dead_zone.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="anims\deadcity_wake1.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="anims\duality_circle.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="anims\fire_hit.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="anims\nightvision.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="anims\proba.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="anims\psy_antenna.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="anims\radar_psi.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="anims\radar_stop.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="anims\snd_shock.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="anims\teleport.bak">
+      <Filter>anims</Filter>
+    </None>
+    <None Include="config\creatures\aem_monsters.ltx">
+      <Filter>config\creatures</Filter>
+    </None>
+    <None Include="config\creatures\aem_stalkers.ltx">
+      <Filter>config\creatures</Filter>
+    </None>
+    <None Include="config\creatures\vssver.scc">
+      <Filter>config\creatures</Filter>
+    </None>
+    <None Include="config\misc\aem_manager.ltx">
+      <Filter>config\misc</Filter>
+    </None>
+    <None Include="config\misc\trade_povar.ltx">
+      <Filter>config\misc</Filter>
+    </None>
+    <None Include="config\misc\trade_pri.ltx">
+      <Filter>config\misc</Filter>
+    </None>
+    <None Include="config\misc\ui_rad.ltx">
+      <Filter>config\misc</Filter>
+    </None>
+    <None Include="config\misc\vssver.scc">
+      <Filter>config\misc</Filter>
+    </None>
+    <None Include="config\models\capture\fix_captures.ltx">
+      <Filter>config\models\capture</Filter>
+    </None>
+    <None Include="config\models\capture\mk1_fixx.ltx">
+      <Filter>config\models\capture</Filter>
+    </None>
+    <None Include="config\mp\weapons_mp\w_knife_mp.ltx">
+      <Filter>config\mp\weapons_mp</Filter>
+    </None>
+    <None Include="config\scripts\aem\mob_1.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\mob_2.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\mob_3.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\mob_4.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\mob_5.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\mob_6.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\mob_7.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\mob_8.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\mob_9.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\mob_10.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\mob_11.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\mob_12.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t1_1.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t1_2.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t1_3.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t1_4.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t1_5.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t1_6.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t1_7.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t1_8.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t1_9.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t1_10.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t1_11.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t1_12.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t2_1.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t2_2.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t2_3.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t2_4.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t2_5.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\npc_t2_6.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\sound.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\aem\timer.ltx">
+      <Filter>config\scripts\aem</Filter>
+    </None>
+    <None Include="config\scripts\actorsleep.ltx">
+      <Filter>config\scripts</Filter>
+    </None>
+    <None Include="config\scripts\aem_admin.ltx">
+      <Filter>config\scripts</Filter>
+    </None>
+    <None Include="config\scripts\esc_electrochimera.ltx">
+      <Filter>config\scripts</Filter>
+    </None>
+    <None Include="config\scripts\pri_electrochimera.ltx">
+      <Filter>config\scripts</Filter>
+    </None>
+    <None Include="config\scripts\pri_trader.ltx">
+      <Filter>config\scripts</Filter>
+    </None>
+    <None Include="config\scripts\ros_electrochimera.ltx">
+      <Filter>config\scripts</Filter>
+    </None>
+    <None Include="config\scripts\stories.ltx">
+      <Filter>config\scripts</Filter>
+    </None>
+    <None Include="config\scripts\zombie_plague.ltx">
+      <Filter>config\scripts</Filter>
+    </None>
+    <None Include="config\weapons\grenadier.ltx">
+      <Filter>config\weapons</Filter>
+    </None>
+    <None Include="config\weathers\ogsm_surge.ltx">
+      <Filter>config\weathers</Filter>
+    </None>
+    <None Include="config\weathers\weather_dark.ltx">
+      <Filter>config\weathers</Filter>
+    </None>
+    <None Include="config\weathers\weather_ogsm.ltx">
+      <Filter>config\weathers</Filter>
+    </None>
+    <None Include="config\weathers\weather_stancia2.ltx">
+      <Filter>config\weathers</Filter>
+    </None>
+    <None Include="config\medic.ltx">
+      <Filter>config</Filter>
+    </None>
+    <None Include="scripts\aem_bind.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\aem_grenade.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\aem_lights.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\aem_manager.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\amk.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\amk_particle.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\anomaly_evader.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\anomaly_holder.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ar_sleep.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\dunin_ammo.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\fake_net_packet.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\m_net_utils.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_anomaly.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_debug.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_effector.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_freeplay.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_hideout.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_marauder.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_music.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_mutants.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_options.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_psyzones.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_quests.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_repair.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_respawn.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ogsm_surge.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\remove_weapons.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\sleep_manager.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\sound_for_eat.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ui_cheat.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\ui_rad.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\xrs_ai.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\xrs_grenade.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\xrs_medic.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\xrs_utils.script">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="shaders\r1\p.bat">
+      <Filter>shaders\r1</Filter>
+    </None>
+    <None Include="shaders\r1\p14.bat">
+      <Filter>shaders\r1</Filter>
+    </None>
+    <None Include="shaders\r1\v.bat">
+      <Filter>shaders\r1</Filter>
+    </None>
+    <None Include="shaders\r2\c.cmd">
+      <Filter>shaders\r2</Filter>
+    </None>
+    <None Include="shaders\r2\p.bat">
+      <Filter>shaders\r2</Filter>
+    </None>
+    <None Include="shaders\r2\p1.bat">
+      <Filter>shaders\r2</Filter>
+    </None>
+    <None Include="shaders\r2\p3.bat">
+      <Filter>shaders\r2</Filter>
+    </None>
+    <None Include="shaders\r2\t.bat">
+      <Filter>shaders\r2</Filter>
+    </None>
+    <None Include="shaders\r2\v.bat">
+      <Filter>shaders\r2</Filter>
+    </None>
     <None Include="spawns\unpack\alife_l01_escape.ltx">
       <Filter>spawns\unpack</Filter>
     </None>
@@ -4839,14 +5192,6 @@
     <None Include="spawns\unpack\way_l12u_sarcofag.ltx">
       <Filter>spawns\unpack</Filter>
     </None>
-    <None Include="game.graph" />
-    <None Include="gamemtl.xr" />
-    <None Include="lanims.xr" />
-    <None Include="particles.xr" />
-    <None Include="senvironment.xr" />
-    <None Include="shaders.xr" />
-    <None Include="shaders_xrlc.xr" />
-    <None Include="stalkergame.inf" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="config\gameplay\character_criticals_1.xml">
@@ -6373,6 +6718,42 @@
     <Xml Include="config\character_desc_general.xml">
       <Filter>config</Filter>
     </Xml>
+    <Xml Include="config\gameplay\aem_characters.xml">
+      <Filter>config\gameplay</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\aem_info.xml">
+      <Filter>config\gameplay</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\aem_profile.xml">
+      <Filter>config\gameplay</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\dialogs_repair.xml">
+      <Filter>config\gameplay</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\info_ogsm.xml">
+      <Filter>config\gameplay</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\tasks_pripyat.xml">
+      <Filter>config\gameplay</Filter>
+    </Xml>
+    <Xml Include="config\text\rus\aem_strings.xml">
+      <Filter>config\text\rus</Filter>
+    </Xml>
+    <Xml Include="config\text\rus\stable_repair_dialogs.xml">
+      <Filter>config\text\rus</Filter>
+    </Xml>
+    <Xml Include="config\ui\aem_ui_npc.xml">
+      <Filter>config\ui</Filter>
+    </Xml>
+    <Xml Include="config\ui\game_tutorials_16.xml">
+      <Filter>config\ui</Filter>
+    </Xml>
+    <Xml Include="config\ui\pda_16.xml">
+      <Filter>config\ui</Filter>
+    </Xml>
+    <Xml Include="config\ui\ui_cheat_wnd.xml">
+      <Filter>config\ui</Filter>
+    </Xml>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaders\shared\cloudconfig.h">
@@ -6453,5 +6834,23 @@
     <ClInclude Include="shaders\r1\skin.h">
       <Filter>shaders\r1</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="anims\postprocess editor_stohe.log">
+      <Filter>anims</Filter>
+    </Text>
+    <Text Include="shaders\r2\test\p2b_accum_sun_far.ps.log">
+      <Filter>shaders\r2\test</Filter>
+    </Text>
+    <Text Include="shaders\r2\test\p2b_yuv2rgb.ps.log">
+      <Filter>shaders\r2\test</Filter>
+    </Text>
+    <Text Include="shaders\r2\test\p30_accum_sun_far.ps.log">
+      <Filter>shaders\r2\test</Filter>
+    </Text>
+    <Text Include="shaders\r2\test\p30_yuv2rgb.ps.log">
+      <Filter>shaders\r2\test</Filter>
+    </Text>
   </ItemGroup>
 </Project>

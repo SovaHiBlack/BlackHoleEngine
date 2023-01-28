@@ -9,10 +9,6 @@
       <UniqueIdentifier>{cd2862a1-95b7-4911-afe9-da022dd85450}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{143cc11e-09cd-4f51-9aa0-b8622da64e2a}</UniqueIdentifier>
-      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="al.cpp">

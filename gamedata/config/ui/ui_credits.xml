@@ -1,0 +1,138 @@
+
+	<credits_seq>
+		<global_wnd x="0" y="0" width="1024" height="768">
+
+			<auto_static x="0" y="0" width="728" height="660" stretch = "1">
+						<texture x="0" y="0" width="728" height="660">ui\ui_mm_credits_back</texture>
+			</auto_static>
+
+
+			<auto_static x="0" y="0" width="1024" height="768">
+				<texture x="0" y="0" width="1024" height="768">ui\ui_static_mm_back_06</texture>
+			</auto_static>
+			<auto_static x="524" y="641" width="256" height="128">
+				<texture>ui\ui_mm_coal</texture>
+			</auto_static>
+
+
+		</global_wnd>
+
+		<play_each_item>1</play_each_item>
+
+		<item>
+			<length_sec>128</length_sec>
+			<pause_state>on</pause_state>
+			<function_on_stop>ogsm_freeplay.set_lc</function_on_stop>
+			<guard_key/>
+			<pause_sound>on</pause_sound>
+			<sound>Music\credits</sound>
+			<cursor_pos/>
+			<pda_section/>
+			<grab_input>1</grab_input>
+			<main_wnd>
+
+
+				<auto_static start_time="0" length_sec="122" x="186" y="40" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti50" color="white">ogsm_stuff</text>
+				</auto_static>
+
+				<auto_static start_time="2" length_sec="5" x="185" y="250" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="letterica25" color="ui_clr_1">ogsm_lead</text>
+				</auto_static>
+				<auto_static start_time="2" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_dexxx</text>
+				</auto_static>
+
+				<auto_static start_time="7" length_sec="5" x="185" y="250" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="letterica25" color="ui_clr_1">ogsm_testers</text>
+				</auto_static>
+				<auto_static start_time="7" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_testers_list</text>
+				</auto_static>
+
+				<auto_static start_time="12" length_sec="15" x="185" y="250" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="letterica25" color="ui_clr_1">ogsm_assist</text>
+				</auto_static>
+				<auto_static start_time="12" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_assist_list</text>
+				</auto_static>
+				<auto_static start_time="17" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_assist_list2</text>
+				</auto_static>
+				<auto_static start_time="22" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_assist_list3</text>
+				</auto_static>
+
+				<auto_static start_time="27" length_sec="80" x="185" y="250" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="letterica25" color="ui_clr_1">ogsm_modders</text>
+				</auto_static>
+				<auto_static start_time="27" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_1</text>
+				</auto_static>
+				<auto_static start_time="32" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_2</text>
+				</auto_static>
+				<auto_static start_time="37" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_3</text>
+				</auto_static>
+				<auto_static start_time="42" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_4</text>
+				</auto_static>
+				<auto_static start_time="47" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_5</text>
+				</auto_static>
+				<auto_static start_time="52" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_6</text>
+				</auto_static>
+				<auto_static start_time="57" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_7</text>
+				</auto_static>
+				<auto_static start_time="62" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_8</text>
+				</auto_static>
+				<auto_static start_time="67" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_9</text>
+				</auto_static>
+				<auto_static start_time="72" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_10</text>
+				</auto_static>
+				<auto_static start_time="77" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_11</text>
+				</auto_static>
+				<auto_static start_time="82" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_12</text>
+				</auto_static>
+				<auto_static start_time="87" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_13</text>
+				</auto_static>
+				<auto_static start_time="92" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_14</text>
+				</auto_static>
+				<auto_static start_time="97" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_15</text>
+				</auto_static>
+				<auto_static start_time="102" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_modders_16</text>
+				</auto_static>
+
+				<auto_static start_time="107" length_sec="5" x="185" y="250" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="letterica25" color="ui_clr_1">ogsm_forum</text>
+				</auto_static>
+				<auto_static start_time="107" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_link</text>
+				</auto_static>
+
+				<auto_static start_time="112" length_sec="10" x="185" y="250" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="letterica25" color="ui_clr_1">ogsm_thanx</text>
+				</auto_static>
+				<auto_static start_time="117" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="white">ogsm_freeplay</text>
+				</auto_static>
+
+				<auto_static start_time="122" length_sec="5" x="185" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="letterica25" color="ui_clr_1">ogsm_barnaul</text>
+				</auto_static>
+			</main_wnd>
+		</item>
+
+	</credits_seq>

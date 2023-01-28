@@ -1,0 +1,76 @@
+------------------ Спавнер динамических пси-зон для OGSM 2.4 ------------------
+
+-------------------------- Copyright 2007-2018 DEXXX --------------------------
+
+
+local level_vertexes={
+	l01_escape = {lvid=595580, gvid=44},
+	l02_garbage = {lvid=384039, gvid=265},
+	l03_agroprom = {lvid=438379, gvid=693},
+	l04_darkvalley = {lvid=392517, gvid=813},
+	l06_rostok = {lvid=69283, gvid=1311},
+	l07_military = {lvid=915663, gvid=1546},
+	l10_radar = {lvid=796328, gvid=1868},
+	l11_pripyat = {lvid=295965, gvid=2269}
+}
+
+
+-- Выбор случайных параметров пси-зоны
+function rand_psy()
+	local lv
+	if level.name() == "l07_military" then lv = 200000 + math.random(-100000,100000)
+	else lv = math.random(level_vertexes[level.name()]["lvid"]) end
+	local gv = level_vertexes[level.name()]["gvid"]
+	local rad = math.random(15,20)
+	if not ogsm_anomaly.bad_sector(level.vertex_position(lv)) then
+		local obj = ogsm_respawn.spawn_restrictor(level.name(), level.vertex_position(lv), lv, gv, "pp", rad)
+		table.insert(ogsm_respawn.psy_list, obj)
+		--level.map_add_object_spot(obj.id, "red_location", obj:name())
+	else
+		rand_psy()
+	end
+end
+
+
+-- Спавн пси-зоны
+function spawn_psy()
+	if level.name() == "l03u_agr_underground" or
+		level.name() == "l04u_labx18" or
+		level.name() == "l05_bar" or
+		(level.name() == "l06_rostok" and not has_alife_info("bar_rescue_research_done") and not has_alife_info("bar_rescue_research_fail")) or
+		level.name() == "l08_yantar" or
+		level.name() == "l08u_brainlab" or
+		level.name() == "l10_radar" or
+		level.name() == "l10u_bunker" or
+		level.name() == "l12_stancia" or 
+		level.name() == "l12u_sarcofag" or
+		level.name() == "l12u_control_monolith" or
+		level.name() == "l12_stancia_2" then
+		return
+	end
+	
+	local j 
+	if level.name() == "l06_rostok" then j = 2
+	else j = math.random(4,5) end
+	
+	for k, v in pairs(ogsm_respawn.psy_list) do
+		alife():release(v, true)
+		--level.map_remove_object_spot(ogsm_respawn.psy_list[k], "red_location")
+		ogsm_respawn.psy_list[k] = nil
+	end
+	for i = 1, j do
+		rand_psy()
+	end
+end
+
+
+-- Проверка при загрузке уровня нужно ли спавнить пси-зоны
+function spawn_on_load()
+	if table.getn(ogsm_respawn.psy_list) == 0 then
+		spawn_psy()
+	end
+end
+
+------------------ Спавнер динамических пси-зон для OGSM 2.4 ------------------
+
+-------------------------- Copyright 2007-2018 DEXXX --------------------------

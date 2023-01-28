@@ -1,0 +1,170 @@
+---------------------- Сюжетный саундтрек для OGSM 2.4 ------------------------
+
+------------------------- Copyright 2007-2018 DEXXX ---------------------------
+
+local snd_obj
+
+function s_stop()
+	if snd_obj and snd_obj:playing()==true then 
+		snd_obj:stop() 
+	end
+end
+
+function s_play(path)
+	s_stop()
+	snd_obj = xr_sound.get_safe_sound_object(path)
+	if snd_obj then 
+		snd_obj:play_at_pos(db.actor, vector ():set (0, 0, 0), 0, sound_object.s2d) 
+	end
+end
+
+function proceed_info(info_id)
+
+	local array = 	{
+
+			-- Кордон
+			esc_bandits_assault = "soundtrack\\escape_bandits_assault",
+			esc_kill_bandits_quest_kill = "soundtrack\\task_complete",
+			tutorial_wounded_give_info = "soundtrack\\useful_info",
+			esc_tutorial_dead_novice = "soundtrack\\tension",
+			garbage_meetstalker_start = "soundtrack\\escape_fox_dogs_attack",
+			esc_fox_thanks = "soundtrack\\useful_info",
+			escape_blockpost_case_have = "soundtrack\\darkvalley_x18_open",
+			esc_open_killer_fire = "soundtrack\\escape_killer_raid",
+			escape_lager_killers_die = "soundtrack\\task_complete",
+			esc_find_doctor_start = "soundtrack\\useful_info",
+
+			-- Свалка
+			gar_dm_novice_asked_for_help = "soundtrack\\garbage_help_novice",
+			gar_hellcar_help = "soundtrack\\garbage_help_bes",
+			gar_bandits_killed = "soundtrack\\task_complete",
+			gar_seryi_actor_enter = "soundtrack\\garbage_help_seryi",
+			gar_seriy_bandits_killed = "soundtrack\\task_complete",
+			garbage_meetstalker_end = "soundtrack\\useful_info",
+
+			-- Агропром
+			agr_factory_heli_start = "soundtrack\\agroprom_ambush",
+			agr_krot_met = "soundtrack\\agroprom_following_krot",
+			agr_nii_alarm = "soundtrack\\agroprom_alarm",
+			agroprom_military_case_have = "soundtrack\\agroprom_alarm",
+
+			-- Подземелье Агропрома
+			agr_u_bloodsucker_start = "soundtrack\\agro_u_bloodsucker_meet",
+			agr_find_gunslinger_cache_found = "soundtrack\\agro_u_cache_enter",
+			agr_u_controller_start = "soundtrack\\agro_u_controller_meet",
+
+			-- Бар
+			bar_dolg_base_rules_finish = "soundtrack\\useful_info",
+			bar_arena_fight_1 = "soundtrack\\bar_arena_battle",
+			bar_arena_fight_2 = "soundtrack\\escape_bandits_assault",
+			bar_arena_fight_3 = "soundtrack\\bar_arena_battle",
+			bar_arena_fight_4 = "soundtrack\\escape_bandits_assault",
+			bar_arena_fight_5 = "soundtrack\\bar_arena_battle",
+			bar_arena_fight_6 = "soundtrack\\escape_bandits_assault",
+			bar_arena_fight_7 = "soundtrack\\bar_arena_battle2",
+			bar_arena_fight_8 = "soundtrack\\bar_arena_battle3",
+			bar_arena_fight_1_done = "soundtrack\\task_complete",
+			bar_arena_fight_2_done = "soundtrack\\task_complete",
+			bar_arena_fight_3_done = "soundtrack\\task_complete",
+			bar_arena_fight_4_done = "soundtrack\\task_complete",
+			bar_arena_fight_5_done = "soundtrack\\task_complete",
+			bar_arena_fight_6_done = "soundtrack\\task_complete",
+			bar_arena_fight_7_done = "soundtrack\\task_complete",
+			bar_arena_fight_8_done = "soundtrack\\task_complete",
+
+			-- Дикая территория
+			bar_ecolog_crush_heli_start = "soundtrack\\x18_docs_done",
+			bar_rescue_research_start = "soundtrack\\rostok_action",
+			bar_kruglov_follow_actor = "soundtrack\\task_complete",
+			bar_rescue_research_chasing_start = "soundtrack\\rostok_action",
+			bar_go_through_anomaly = "soundtrack\\tension",
+			rostok_tunel_gordon_diary = "soundtrack\\rostok_gordon",
+
+			-- Темная долина
+			val_escort_combat = "soundtrack\\garbage_help_novice",
+			val_sos_actor_near_wounded = "soundtrack\\darkvalley_bloodsucker_meet",
+			val_actor_has_borov_key = "soundtrack\\agroprom_following_krot",
+			val_x18_door_open = "soundtrack\\darkvalley_x18_open",
+			val_rob_actor_enter = "soundtrack\\tension",
+
+			-- X18
+			dar_password_info1 = "soundtrack\\x18_code1",
+			dar_password_info2 = "soundtrack\\x18_code2",
+			dar_document5 = "soundtrack\\x18_docs_done",
+			dar_open_door1 = "soundtrack\\darkvalley_x18_open",
+			dar_open_door2 = "soundtrack\\x18_laugh",
+
+			-- Янтарь
+			yan_find_scientist_task_start = "soundtrack\\yantar_help_scientist",
+			yan_find_vasilyev_end = "soundtrack\\yantar_vasiliev_found",
+			yan_scientist_return_to_bunker = "soundtrack\\agroprom_following_krot",
+			yantar_tunnel_finish = "soundtrack\\agroprom_following_krot",
+			yan_giant_spawner_01 = "soundtrack\\x16_giant_meet",
+
+			-- X16
+			yan_labx16_switcher_3_end = "soundtrack\\x16_timer_start",
+			yan_controller_respawn_01 = "soundtrack\\x16_ghost_found",
+
+			-- Армейские склады
+			mil_patrol_kill_continue = "soundtrack\\garbage_help_novice",
+			mil_dolg_final_task = "soundtrack\\mil_dolg_prepare",
+			mil_dolg_after_explode = "soundtrack\\mil_dolg_attack",
+			mil_dolg_mission_complete = "soundtrack\\task_complete",
+			mil_svoboda_rg6_gain = "soundtrack\\mil_notice",
+			mil_sniper_get_job = "soundtrack\\tension",
+			mil_sniper_final = "soundtrack\\task_complete",
+			mil_dolg_dead = "soundtrack\\agroprom_following_krot",
+			mil_dolg_task_complete = "soundtrack\\agroprom_following_krot",
+			mil_max_job = "soundtrack\\mil_notice",
+			mil_max_flash_get = "soundtrack\\darkvalley_x18_open",
+			mil_courier_in_khutor_zone = "soundtrack\\mil_courier_quest",
+			mil_lukash_dolg_task_complete = "soundtrack\\task_complete",
+			mil_freedom_attack = "soundtrack\\mil_dolg_prepare",
+			mil_freedom_attack_continue3 = "soundtrack\\mil_freedom_attack",
+			mil_freedom_cook_drink_1 = "soundtrack\\tension",
+			mil_fblockpost_rush_wave1 = "soundtrack\\mil_barrier_rush",
+			mil_fblockpost_quest_complete = "soundtrack\\agroprom_following_krot",
+			mil_hunt_ready = "soundtrack\\mil_blood_village",
+			mil_hunt_end = "soundtrack\\darkvalley_x18_open",
+
+			-- Радар
+			rad_start_ambush_after_valley = "music\\old_amb_rad_l",
+			rad_start_far_road_ambush = "music\\old_amb_rad_l",
+			rad_antennas_reached = "music\\old_amb_rad_l",
+			rad_bun_found = "soundtrack\\x16_ghost_found",
+			rad_code_door_unlocked = "soundtrack\\mil_notice",
+			rad_lab_door_unlocked = "soundtrack\\mil_notice",
+			rad_start_svoboda_vs_dolg = "soundtrack\\x18_docs_done",
+			rad_start_monolith_vs_military = "soundtrack\\radar_monolith",
+
+			-- Припять
+			pri_followers_mission_accept = "music\\old_amb_pri_l",
+			pri_actor_in_hiding_place = "soundtrack\\agro_u_cache_enter",
+			pri_stadium_scene_start = "music\\old_amb_darkval_l",
+
+			-- Саркофаг
+			sar_access_decoding = "soundtrack\\mil_blood_village",
+			sar_monolith_generator_find = "soundtrack\\agro_u_controller_meet",
+			sar_monolith_find = "soundtrack\\garbage_help_bes",
+			oso_init_dialog = "stop",
+
+			-- Финальный бой
+			aes2_monolit_teleport_ready4 = "soundtrack\\mil_barrier_rush",
+			freeplay = "stop"
+
+			}
+
+	--ogsm_debug.dbglog(info_id)
+
+	if array[info_id]~=nil and array[info_id]~="stop" then 
+		s_play(array[info_id])
+	elseif array[info_id]=="stop" then
+		s_stop()
+	end
+
+end
+
+
+---------------------- Сюжетный саундтрек для OGSM 2.4 ------------------------
+
+------------------------- Copyright 2007-2018 DEXXX ---------------------------

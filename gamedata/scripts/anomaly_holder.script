@@ -1,0 +1,213 @@
+---------------------- Stalkers are not blind ---------------------
+------------------------- Copyright Red75 -------------------------
+
+local anom_list=nil
+local cur_level=nil
+
+local radius_anom = {
+    zone_ameba=4,
+    zone_burning_fuzz=3,
+    zone_burning_fuzz1=3,
+    zone_burning_fuzz_weak=3,
+    zone_burning_fuzz_average=3,
+    zone_burning_fuzz_strong=3,
+    zone_burning_fuzz_bottom_weak=3,
+    zone_burning_fuzz_bottom_average=3,
+    zone_burning_fuzz_bottom_strong=3,
+    zone_buzz=2,
+    zone_buzz_weak=2,
+    zone_buzz_average=2,
+    zone_buzz_strong=2,
+    zone_gravi_zone=7,
+    zone_gravi_zone_weak=7,
+    zone_gravi_zone_weak_noart=7,
+    zone_gravi_zone_average=8,
+    zone_gravi_zone_strong=8,
+    zone_gravi_zone_killing=8,
+    zone_mincer=7,
+    zone_mincer_weak=7,
+    zone_mincer_weak_noart=7,
+    zone_mincer_average=8,
+    zone_mincer_strong=8,
+    zone_mosquito_bald=7,
+    zone_mosquito_bald_weak=7,
+    zone_mosquito_bald_weak_noart=7,
+    zone_mosquito_bald_average=8,
+    zone_mosquito_bald_strong=8,
+    zone_mosquito_bald_strong_noart=8,
+    zone_sarcofag=5,
+    zone_witches_galantine=7,
+    zone_witches_galantine_weak=7,
+    zone_witches_galantine_average=8,
+    zone_witches_galantine_strong=8,
+    zone_zharka_static=5,
+    zone_zharka_static_weak=5,
+    zone_zharka_static_average=5,
+    zone_zharka_static_strong=5,
+    zone_mine_field=2,
+    zone_death=2,
+    noartf_buzz_weak=2,
+    noartf_buzz_average=2,
+    noartf_buzz_strong=2,
+    noartf_gravi_zone_weak=7,
+    noartf_gravi_zone_average=8,
+    noartf_gravi_zone_strong=8,
+    noartf_mincer_weak=7,
+    noartf_mincer_average=8,
+    noartf_mincer_strong=8,
+    noartf_mosquito_bald_weak=7,
+    noartf_mosquito_bald_average=8,
+    noartf_mosquito_bald_strong=8,
+    noartf_witches_galantine_weak=7,
+    noartf_witches_galantine_average=8,
+    noartf_witches_galantine_strong=8,
+    noartf_zharka_static_weak=5,
+    noartf_zharka_static_average=5,
+    noartf_zharka_static_strong=5
+  }
+
+function get_radius_for_section(sect)
+  if radius_anom[sect] then
+    return radius_anom[sect]
+  else
+    return 4
+  end
+end
+
+function add_anomaly(id,cls,sect,rad_a)
+  if anom_list == nil then
+    anom_list={}
+  end
+  if cur_level ~= level.name() then
+    anom_list = {}
+    cur_level = level.name()
+  end
+
+  if rad_a == 0 or rad_a == nil then 
+	rad_a = get_radius_for_section(sect) 
+  end
+  
+  if string.find(sect, "mincer") or string.find(sect, "gravi") or string.find(sect, "mosquito") then
+	rad_a = rad_a + 2
+  end
+  
+  local status = ogsm_anomaly.get_anomaly_mode(id)
+  if status == "anom_off" then return end
+
+  anom_list[id] = {pos = 0, clsid = cls, radius = rad_a, section = sect}
+end
+
+function remove_anomaly(id)
+  if anom_list then
+    anom_list[id]=nil
+  end
+end
+
+
+function enumerate_anoms()
+	if cur_level ~= level.name() then
+		anom_list = nil
+		cur_level = level.name()
+	end
+	local actor_vid = game_graph():vertex(alife():actor().m_game_vertex_id):level_id()
+	if not anom_list then
+		anom_list={}
+		for id=1,65535, 1 do
+			local anomaly = alife():object(id)
+			if anomaly then
+				local anomaly_vid = game_graph():vertex(anomaly.m_game_vertex_id):level_id()	
+				if actor_vid == anomaly_vid then
+					local sect = anomaly:section_name()
+					if sect and radius_anom[sect] then
+						local packet = m_net_utils.get_anomaly_data(anomaly)
+						local status = ogsm_anomaly.get_anomaly_mode(id)
+						if status ~= "anom_off" then
+							anom_list[id] = {pos = anomaly.position, clsid = anomaly:clsid(), radius = (packet.radius or radius_anom[sect]), section = sect}
+						end
+					end
+				end
+			end
+		end
+	else	
+		for id=1,65535, 1 do
+			local anomaly = alife():object(id)
+			if anomaly and not anom_list[id] then
+				local anomaly_vid = game_graph():vertex(anomaly.m_game_vertex_id):level_id()	
+				if actor_vid == anomaly_vid then
+					local sect = anomaly:section_name()
+					if sect and radius_anom[sect] then
+						local packet = m_net_utils.get_anomaly_data(anomaly)
+						local status = ogsm_anomaly.get_anomaly_mode(id)
+						if status ~= "anom_off" then
+							anom_list[id] = {pos = anomaly.position, clsid = anomaly:clsid(), radius = (packet.radius or radius_anom[sect]), section = sect}
+						end
+					end
+				end
+			elseif anomaly and anom_list[id] then	
+				local anomaly_vid = game_graph():vertex(anomaly.m_game_vertex_id):level_id()
+				if actor_vid == anomaly_vid then
+					local status = ogsm_anomaly.get_anomaly_mode(id)
+					if status == "anom_off" then
+						anom_list[id] = nil
+					end
+				end
+			end
+		end		
+	end
+end
+
+function get_nearest_anomaly(npc,dirp)
+  local posn=npc:position()
+  local dir
+  local anomid=nil
+  local mindist=10000000
+  local pos1=nil
+  local cls=0
+  local cnt=0
+  local anomdesc={}
+  if dirp then
+    dir=dirp
+  else
+    dir=npc:direction()
+  end
+  for id,o in pairs(anom_list) do
+    if o then
+      if o.pos == 0 then
+        local obj=level.object_by_id(id)
+        if obj then
+          o.pos = obj:position()
+        end
+      end
+      if o.pos~=0 then
+        cnt=cnt+1
+        local delta=vector():set(o.pos):sub(posn)
+        local scalarmul=(delta.x*dir.x+delta.z*dir.z)/math.sqrt(delta.x*delta.x+delta.z*delta.z) 
+    -- если скал€рное произведени€ текущего направлени€ движени€ NPC
+    -- и относительного радиус вектора аномалии меньше 0, то NPC удал€етс€ от аномалии
+        if scalarmul>-0.4 then
+          local dist=posn:distance_to(o.pos)-o.radius
+          if dist<mindist then
+            mindist=dist
+            anomid=id
+            pos1=o.pos
+            cls=o.clsid
+            anomdesc=o
+          end
+        end
+      end
+    end
+  end
+  if anomid then
+    return true,anomid,pos1,cls,mindist+anomdesc.radius,anomdesc.radius,anomdesc.section
+  else
+    return false
+  end
+end
+
+--[[
+
+≈сли вы собираетесь использовать данный скрипт целиком или частично в своих 
+разработках по игре S.T.A.L.K.E.R., пожалуйста не удал€йте копирайты, указывайте насто€щего 
+автора(ов) и не выдавайте чужие идеи и их реализацию за свои. —пасибо за понимание.
+
+]]--

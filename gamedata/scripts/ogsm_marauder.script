@@ -1,0 +1,328 @@
+---------------- Спавн бронекостюмов в трупах для OGSM 2.4 --------------------
+
+------------------------- Copyright 2007-2018 DEXXX ---------------------------
+
+local packet = net_packet()
+
+-- Вызывается из колбэка на смерть, считывает визуал и запускает таймер на спаун
+function main(npc)
+
+	local otf
+	local sect
+	local t
+	local vis1
+	local vis
+	
+	local obj = alife():object(npc:id())
+	
+	if obj then 
+		t = get_stalker_visual(obj) 
+	end
+	
+	if t ~= nil then
+		vis1 = amk.str_explode("\\", t)
+	end
+	
+	if vis1 ~= nil then
+	
+		vis = vis1[3]
+	
+		-- Нейтралы
+		if vis == "green_stalker_2" or
+		   vis == "green_stalker_3" or
+		   vis == "green_stalker_4" or
+		   vis == "green_stalker_6" or
+		   vis == "green_stalker_7" or
+		   vis == "green_stalker_8" or
+		   vis == "green_stalker_9" then
+			sect = "novice_outfit"
+		end
+		if string.find(vis,"stalker_neytral_balon") or
+		   string.find(vis,"stalker_neytral_hood") or
+		   string.find(vis,"stalker_neytral_rukzak") then
+			sect = "stalker_outfit"
+		end
+		if vis == "stalker_neytral_nauchniy" then
+			sect = "scientific_outfit"
+		end
+		if vis == "stalker_neytral_exoskeleton" then
+			sect = "exo_outfit"
+		end
+	
+		-- Бандиты
+		if vis == "stalker_bandit_1" or
+		   vis == "stalker_bandit_2" or
+		   vis == "stalker_bandit_3" or
+		   vis == "stalker_bandit_4" or
+		   vis == "stalker_bandit_5" or
+		   vis == "stalker_bandit_6" or
+		   vis == "stalker_bandit_7" or
+		   vis == "stalker_bandit_8" or
+		   vis == "stalker_bandit_9" or
+		   vis == "stalker_bandit_drunk" then 
+			sect = "bandit_outfit" 
+		end
+		if vis == "stalker_bandit_veteran" then 
+			sect = "bandit_veteran_outfit" 
+		end 
+		if vis == "stalker_bandit_master" then 
+			sect = "bandit_master_outfit" 
+		end
+	
+		-- Свобода
+		if vis == "stalker_sv_hood_91" or
+		   vis == "stalker_sv_rukzak_1_1" or 
+		   vis == "stalker_sv_rukzak_3" then 
+		   	sect = "svoboda_light_outfit" 
+		end
+		if vis == "stalker_sv_balon_1" or
+		   vis == "stalker_sv_balon_10" or 
+		   vis == "stalker_sv_cook" or 
+		   vis == "stalker_sv_hood_9" or
+		   vis == "stalker_sv_leader" or
+		   vis == "stalker_sv_max" or
+		   vis == "stalker_sv_rukzak_1" or
+		   vis == "stalker_sv_rukzak_2" or
+		   vis == "stalker_sv_rukzak_3_1" then 
+			sect = "svoboda_heavy_outfit" 
+		end
+		if vis == "stalker_sv_nauchniy" then 
+			sect = "freedom_scientific_outfit" 
+		end
+		if vis == "stalker_sv_exoskeleton" then 
+			sect = "svoboda_exoskeleton" 
+		end
+	
+		-- Долг
+		if vis == "stalker_do_antigas" or
+		   string.find(vis,"stalker_do_balon") or
+		   vis == "stalker_do_komandir" or 
+		   string.find(vis,"stalker_do_mask") then 
+			sect = "dolg_outfit" 
+		end
+		if vis == "stalker_do_nauchniy" then 
+			sect = "dolg_scientific_outfit" 
+		end
+		if vis == "stalker_do_exoskeleton" then 
+			sect = "dolg_black_exoskeleton" 
+		end
+	
+		-- Наёмники
+		if vis == "stalker_ki_antigas" or
+		   vis == "stalker_ki_hero" or
+		   vis == "stalker_ki_informator" or
+		   vis == "stalker_ki_mask" or
+		   string.find(vis,"stalker_ki_head") then 
+			sect = "killer_outfit" 
+		end
+		if vis == "stalker_ki_nauchniy" then 
+			sect = "merc_scientific_outfit" 
+		end
+		if vis == "stalker_ki_exoskeleton" then 
+			sect = "killer_blue_exoskeleton" 
+		end
+	
+		-- Монолит
+		if vis == "stalker_mo_komandir" or
+		   vis == "stalker_mo_mask" or 
+		   string.find(vis,"stalker_mo_head") or
+		   string.find(vis,"stalker_mo_hood") then 
+			sect = "monolit_outfit" 
+		end
+		if vis == "stalker_mo_nauchniy" then 
+			sect = "monolit_scientific_outfit" 
+		end
+		if vis == "stalker_mo_exo" then 
+			sect = "monolit_exoskeleton" 
+		end
+	
+		-- Армия
+		if string.find(vis,"soldier_bandana") or
+		   string.find(vis,"soldier_beret") or
+		   vis == "soldier_obichniy" then 
+			sect = "soldier_outfit" 
+		end
+		if vis == "soldier_antigas" or
+		   vis == "soldier_mask" or
+		   vis == "soldier_spetsnaz" then  
+			sect = "specops_outfit" 
+		end
+		if vis == "stalker_military_green" or
+		   vis == "stalker_militari_1" or
+		   vis == "stalker_militari_antigas_1" then
+			sect = "military_outfit" 
+		end
+		if vis == "stalker_military_black" or
+		   vis == "stalker_militari_2" or
+		   vis == "stalker_militari_antigas_2" then
+			sect = "military_stalker_commander_outfit" 
+		end
+	
+		-- Учёные
+		if vis == "stalker_ecolog" or
+		   vis == "nauchniy_1" or 
+		   vis == "protect_suit2" then  
+			sect = "ecolog_outfit" 
+		end
+		if vis == "stalker_ecolog_military" or 
+		   vis == "nauchniy_0" or
+		   vis == "protect_suit1" then
+			sect = "protection_outfit" 
+		end
+	
+	end
+	
+	if sect and sect~="" and sect~=nil and 
+		not string.find(npc:section(),"arena") and 
+		not string.find(npc:section(),"aem") and 
+		npc:character_community()~="zombied" and
+		npc:character_community()~="arena_enemy" and 
+		npc:name()~="esc_novice_attacker1" and
+		npc:name()~="esc_blokpost_commander" and
+		npc:name()~="agr_ratcatcher" and
+		npc:name()~="val_lager_bandits_borov" and
+		not string.find(npc:name(),"gar_dm_bandit") and
+		npc:name()~="gar_wounded_bandit" and
+		npc:name()~="bar_dolg_leader" and
+		npc:name()~="bar_dolg_petrenko" and
+		npc:name()~="mil_freedom_member0012" and
+		npc:name()~="mil_freedom_member0018" and
+		npc:name()~="mil_stalker0012" and
+		npc:name()~="mil_stalker0023" and
+		npc:name()~="mil_ara" and
+		npc:name()~="mil_blockpost_freedomstalker001" and
+		npc:name()~="bar_ecolog_professor" and
+		npc:name()~="yan_scientist_help" and
+		npc:name()~="yan_specnaz_dead" and
+		npc:name()~="x16_stalker_ghost" and
+		npc:name()~="yantar_semenov" then 
+			if math.random(100) <= ogsm_options.marauder then
+				otf = alife():create(sect, npc:position(), npc:level_vertex_id(), npc:game_vertex_id(), npc:id())
+			end
+			if otf ~= nil then 
+				amk.start_timer("otf", 1, otf.id) 
+			end
+	end
+
+end
+
+
+-- Получение визуала сталкера
+function get_stalker_visual(pobj)
+
+packet:w_begin(0)
+packet:r_seek(2)
+
+pobj:STATE_Write(packet)
+
+-- Свойства cse_trader
+local money = packet:r_s32()
+local specific_character = packet:r_stringZ()
+local trader_flags = packet:r_s32()
+local character_profile = packet:r_stringZ()
+local community_index = packet:r_s32()
+local rank = packet:r_s32()
+local reputation = packet:r_s32()
+local character_name = packet:r_stringZ()
+
+-- Свойства cse_alife_object
+local game_vertex_id = packet:r_u16()
+local distance = packet:r_float()
+local direct_control = packet:r_s32()
+local level_vertex_id = packet:r_s32()
+local object_flags = packet:r_s32()
+local custom_data = packet:r_stringZ()
+local story_id = packet:r_s32()
+local spawn_story_id = packet:r_s32()
+
+-- Свойства cse_visual
+local visual_name = packet:r_stringZ()
+
+return visual_name
+
+end
+
+----
+
+function spawn_outfit(npc)
+
+	local sect
+
+	if npc:character_community()=="stalker" then
+		if npc:character_rank()>=0 and npc:character_rank()<300 then sect = "novice_outfit" end
+		if npc:character_rank()>=300 and npc:character_rank()<900 then sect = "stalker_outfit" end
+		if npc:character_rank()>=900 then sect = "exo_outfit" end
+	end
+	
+	if npc:character_community()=="bandit" then
+		if npc:character_rank()>=0 and npc:character_rank()<600 then sect = "bandit_outfit" end
+		if npc:character_rank()>=600 and npc:character_rank()<900 then sect = "bandit_veteran_outfit" end
+		if npc:character_rank()>=900 then sect = "bandit_master_outfit" end
+	end
+	
+	if npc:character_community()=="military" then
+		if npc:character_rank()>=0 and npc:character_rank()<600 then sect = "soldier_outfit" end
+		if npc:character_rank()>=600 and npc:character_rank()<900 then sect = "specops_outfit" end
+		if npc:character_rank()>=900 then sect = "military_outfit" end
+	end
+	
+	if npc:character_community()=="killer" then
+		if npc:character_rank()>=0 and npc:character_rank()<900 then sect = "killer_outfit" end
+		if npc:character_rank()>=900 then sect = "killer_blue_exoskeleton" end
+	end
+	
+	if npc:character_community()=="dolg" then
+		if npc:character_rank()>=0 and npc:character_rank()<900 then sect = "dolg_outfit" end
+		if npc:character_rank()>=900 then sect = "dolg_black_exoskeleton" end
+	end
+	
+	if npc:character_community()=="freedom" then
+		if npc:character_rank()>=0 and npc:character_rank()<300 then sect = "svoboda_light_outfit" end
+		if npc:character_rank()>=300 and npc:character_rank()<900 then sect = "svoboda_heavy_outfit" end
+		if npc:character_rank()>=900 then sect = "svoboda_exoskeleton" end
+	end
+	
+	if npc:character_community()=="monolith" then
+		if npc:character_rank()>=0 and npc:character_rank()<600 then sect = "monolit_outfit" end
+		if npc:character_rank()>=600 and npc:character_rank()<900 then sect = "monolit_scientific_outfit" end
+		if npc:character_rank()>=900 then sect = "monolit_exoskeleton" end
+	end
+	
+	if npc:character_community()=="ecolog" then
+		if npc:character_rank()>=0 and npc:character_rank()<900 then sect = "ecolog_outfit" end
+		if npc:character_rank()>=900 then sect = "protection_outfit" end
+	end
+	
+	if sect~=nil and not string.find(npc:section(),"arena") and 
+	not string.find(npc:section(),"aem") and 
+	npc:character_community()~="arena_enemy" and 
+	npc:name()~="esc_novice_attacker1" and
+	npc:name()~="esc_blokpost_commander" and
+	npc:name()~="agr_ratcatcher" and
+	npc:name()~="val_lager_bandits_borov" and
+	not string.find(npc:name(),"gar_dm_bandit") and
+	npc:name()~="gar_wounded_bandit" and
+	npc:name()~="bar_dolg_leader" and
+	npc:name()~="bar_dolg_petrenko" and
+	npc:name()~="mil_freedom_member0012" and
+	npc:name()~="mil_freedom_member0018" and
+	npc:name()~="mil_stalker0012" and
+	npc:name()~="mil_stalker0023" and
+	npc:name()~="mil_ara" and
+	npc:name()~="mil_blockpost_freedomstalker001" and
+	npc:name()~="bar_ecolog_professor" and
+	npc:name()~="yan_scientist_help" and
+	npc:name()~="yan_specnaz_dead" and
+	npc:name()~="x16_stalker_ghost" and
+	npc:name()~="yantar_semenov" then 
+		local otf = death_manager.create_items(npc, sect, 1, ogsm_options.marauder)
+		if otf~= nil then 
+			amk.start_timer("otf", 1, otf.id) 
+		end
+	end
+
+end
+
+---------------- Спавн бронекостюмов в трупах для OGSM 2.4 --------------------
+
+------------------------- Copyright 2007-2018 DEXXX ---------------------------

@@ -18,7 +18,7 @@ end
 
 function printf(fmt,...)
 --	get_console():execute("ERROR:" .. fmt)
---	log(string.format(fmt,...))
+	log(string.format(fmt,...))
 end
 
 local bufferedmessages={}

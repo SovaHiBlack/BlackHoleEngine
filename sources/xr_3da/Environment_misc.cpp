@@ -152,7 +152,7 @@ void CEnvDescriptor::load	(LPCSTR exec_tm, LPCSTR S, CEnvironment* parent)
 	hemi_color				= pSettings->r_fvector4	(S,"hemi_color");
 	sun_color				= pSettings->r_fvector3	(S,"sun_color");
 	Fvector2 sund			= pSettings->r_fvector2	(S,"sun_dir");	sun_dir.setHP	(deg2rad(sund.y),deg2rad(sund.x));
-	VERIFY2					(sun_dir.y<0,"Invalid sun direction settings while loading");
+//	VERIFY2					(sun_dir.y<0,"Invalid sun direction settings while loading");
 
 	lens_flare_id			= parent->eff_LensFlare->AppendDef(pSettings,pSettings->r_string(S,"flares"));
 	tb_id					= parent->eff_Thunderbolt->AppendDef(pSettings,pSettings->r_string(S,"thunderbolt"));

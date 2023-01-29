@@ -8,22 +8,7 @@
 #	define DEBUG_MEMORY_NAME
 #endif // USE_MEMORY_MONITOR
 
-#ifndef M_BORLAND
-#	if 0//def DEBUG
-#		define DEBUG_MEMORY_MANAGER
-#	endif // DEBUG
-#endif // M_BORLAND
-
-#ifdef DEBUG_MEMORY_MANAGER
-	XRCORE_API	extern BOOL	g_bMEMO;
-#	ifndef DEBUG_MEMORY_NAME
-#		define DEBUG_MEMORY_NAME
-#	endif // DEBUG_MEMORY_NAME
-	extern XRCORE_API	void dump_phase	();
-#	define DUMP_PHASE	do {dump_phase();} while (0)
-#else // DEBUG_MEMORY_MANAGER
-#	define DUMP_PHASE	do {} while (0)
-#endif // DEBUG_MEMORY_MANAGER
+#define DUMP_PHASE	do {} while (0)
 
 #include "xrMemory_pso.h"
 #include "xrMemory_POOL.h"
@@ -41,15 +26,6 @@ public:
 	xrMemory			();
 	void				_initialize		(BOOL _debug_mode=FALSE);
 	void				_destroy		();
-
-#ifdef DEBUG_MEMORY_MANAGER
-	BOOL				debug_mode;
-	xrCriticalSection	debug_cs;
-	std::vector<mdbg>	debug_info;
-	u32					debug_info_update;
-	u32					stat_strcmp		;
-	u32					stat_strdock	;
-#endif // DEBUG_MEMORY_MANAGER
 
 	u32					stat_calls;
 	s32					stat_counter;
@@ -87,12 +63,7 @@ extern XRCORE_API	xrMemory	Memory;
 #define CopyMemory(a,b,c)	memcpy(a,b,c)			//. CopyMemory(a,b,c)
 #define FillMemory(a,b,c)	Memory.mem_fill(a,c,b)
 
-// delete
-#ifdef __BORLANDC__
-	#include "xrMemory_subst_borland.h"
-#else
-	#include "xrMemory_subst_msvc.h"
-#endif
+#include "xrMemory_subst_msvc.h"
 
 // generic "C"-like allocations/deallocations
 #ifdef DEBUG_MEMORY_NAME
@@ -113,23 +84,18 @@ extern XRCORE_API	xrMemory	Memory;
 
 XRCORE_API	char* 	xr_strdup	(const char* string);
 
-#ifdef DEBUG_MEMORY_NAME
 // Global new/delete override
-#	if !(defined(__BORLANDC__) || defined(NO_XRNEW))
+#ifdef DEBUG_MEMORY_NAME
 	IC void*	operator new		(size_t size)		{	return Memory.mem_alloc(size?size:1, "C++ NEW");	}
 	IC void		operator delete		(void *p)			{	xr_free(p);											}
 	IC void*	operator new[]		(size_t size)		{	return Memory.mem_alloc(size?size:1, "C++ NEW");	}
 	IC void		operator delete[]	(void* p)			{	xr_free(p);											}
-#	endif
 #else // DEBUG_MEMORY_NAME
-#	if !(defined(__BORLANDC__) || defined(NO_XRNEW))
 	IC void*	operator new		(size_t size)		{	return Memory.mem_alloc(size?size:1);				}
 	IC void		operator delete		(void *p)			{	xr_free(p);											}
 	IC void*	operator new[]		(size_t size)		{	return Memory.mem_alloc(size?size:1);				}
 	IC void		operator delete[]	(void* p)			{	xr_free(p);											}
-#	endif
-#endif // DEBUG_MEMORY_MANAGER
-
+#endif // DEBUG_MEMORY_NAME
 
 // POOL-ing
 const		u32			mem_pools_count			=	54;
@@ -142,6 +108,5 @@ XRCORE_API void vminfo			(size_t *_free, size_t *reserved, size_t *committed);
 XRCORE_API void log_vminfo		();
 
 XRCORE_API u32	mem_usage_impl(u32* pBlocksUsed, u32* pBlocksFree);
-//XRCORE_API u32	mem_usage_impl	(HANDLE heap_handle, u32* pBlocksUsed, u32* pBlocksFree);
 
 #endif // xrMemoryH

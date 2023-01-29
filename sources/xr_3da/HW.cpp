@@ -10,13 +10,8 @@
 #include "HW.h"
 #include "xr_IOconsole.h"
 
-#ifndef _EDITOR
 	void	fill_vid_mode_list			(CHW* _hw);
 	void	free_vid_mode_list			();
-#else
-	void	fill_vid_mode_list			(CHW* _hw)	{};
-	void	free_vid_mode_list			()			{};
-#endif
 
 	void	free_vid_mode_list			();
 
@@ -34,12 +29,7 @@ void CHW::Reset		(HWND hwnd)
 	_RELEASE			(pBaseZB);
 	_RELEASE			(pBaseRT);
 
-#ifndef _EDITOR
-#ifndef DEDICATED_SERVER
 	BOOL	bWindowed		= !psDeviceFlags.is	(rsFullscreen);
-#else
-	BOOL	bWindowed		= TRUE;
-#endif
 
 	selectResolution		(DevPP.BackBufferWidth, DevPP.BackBufferHeight, bWindowed);
 	// Windoze
@@ -48,7 +38,6 @@ void CHW::Reset		(HWND hwnd)
 	DevPP.PresentationInterval	= D3DPRESENT_INTERVAL_IMMEDIATE;
 	if( !bWindowed )		DevPP.FullScreen_RefreshRateInHz	= selectRefresh	(DevPP.BackBufferWidth,DevPP.BackBufferHeight,Caps.fTarget);
 	else					DevPP.FullScreen_RefreshRateInHz	= D3DPRESENT_RATE_DEFAULT;
-#endif
 
 	while	(TRUE)	{
 		HRESULT _hr							= HW.pDevice->Reset	(&DevPP);
@@ -61,20 +50,15 @@ void CHW::Reset		(HWND hwnd)
 #ifdef DEBUG
 	R_CHK				(pDevice->CreateStateBlock			(D3DSBT_ALL,&dwDebugSB));
 #endif
-#ifndef _EDITOR
+
 	updateWindowProps	(hwnd);
-#endif
 }
 
 xr_token*				vid_mode_token = NULL;
 
 void CHW::CreateD3D	()
 {
-#ifndef DEDICATED_SERVER
 	LPCSTR		_name			= "d3d9.dll";
-#else
-	LPCSTR		_name			= "xrd3d9-null.dll";
-#endif
 
 	hD3D9            			= LoadLibrary(_name);
 	R_ASSERT2	           	 	(hD3D9,"Can't find 'd3d9.dll'\nPlease install latest version of DirectX before running this program");
@@ -133,32 +117,25 @@ void	CHW::DestroyDevice	()
 	_SHOW_REF				("refCount:dwDebugSB",dwDebugSB);
 	_RELEASE				(dwDebugSB);
 #endif
-#ifdef _EDITOR
-	_RELEASE				(HW.pDevice);
-#else
+
 	_SHOW_REF				("DeviceREF:",HW.pDevice);
 	_RELEASE				(HW.pDevice);
-#endif    
+
 	DestroyD3D				();
 	
-#ifndef _EDITOR
 	free_vid_mode_list		();
-#endif
 }
+
 void	CHW::selectResolution	(u32 &dwWidth, u32 &dwHeight, BOOL bWindowed)
 {
 	fill_vid_mode_list			(this);
-#ifdef DEDICATED_SERVER
-	dwWidth		= 640;
-	dwHeight	= 480;
-#else
+
 	if(bWindowed)
 	{
 		dwWidth		= psCurrentVidMode[0];
 		dwHeight	= psCurrentVidMode[1];
 	}else //check
 	{
-#ifndef _EDITOR
 		string64					buff;
 		sprintf_s					(buff,sizeof(buff),"%dx%d",psCurrentVidMode[0],psCurrentVidMode[1]);
 		
@@ -170,9 +147,7 @@ void	CHW::selectResolution	(u32 &dwWidth, u32 &dwHeight, BOOL bWindowed)
 
 		dwWidth						= psCurrentVidMode[0];
 		dwHeight					= psCurrentVidMode[1];
-#endif
 	}
-#endif
 
 }
 
@@ -181,11 +156,7 @@ void		CHW::CreateDevice		(HWND m_hWnd)
 	CreateD3D				();
 
 	// General - select adapter and device
-#ifdef DEDICATED_SERVER
-	BOOL  bWindowed			= TRUE;
-#else
 	BOOL  bWindowed			= !psDeviceFlags.is(rsFullscreen);
-#endif
 
 	DevAdapter				= D3DADAPTER_DEFAULT;
 	DevT					= Caps.bForceGPU_REF?D3DDEVTYPE_REF:D3DDEVTYPE_HAL;
@@ -275,10 +246,9 @@ void		CHW::CreateDevice		(HWND m_hWnd)
 	D3DPRESENT_PARAMETERS&	P	= DevPP;
     ZeroMemory				( &P, sizeof(P) );
 
-#ifndef _EDITOR
 	selectResolution	(P.BackBufferWidth, P.BackBufferHeight, bWindowed);
-#endif
-// Back buffer
+
+	// Back buffer
 //.	P.BackBufferWidth		= dwWidth;
 //. P.BackBufferHeight		= dwHeight;
 	P.BackBufferFormat		= fTarget;
@@ -355,10 +325,9 @@ void		CHW::CreateDevice		(HWND m_hWnd)
 	u32	memory									= pDevice->GetAvailableTextureMem	();
 	Msg		("*     Texture memory: %d M",		memory/(1024*1024));
 	Msg		("*          DDI-level: %2.1f",		float(D3DXGetDriverLevel(pDevice))/100.f);
-#ifndef _EDITOR
+
 	updateWindowProps							(m_hWnd);
 	fill_vid_mode_list							(this);
-#endif
 }
 
 u32	CHW::selectPresentInterval	()
@@ -423,12 +392,7 @@ BOOL	CHW::support	(D3DFORMAT fmt, DWORD type, DWORD usage)
 
 void	CHW::updateWindowProps	(HWND m_hWnd)
 {
-//	BOOL	bWindowed				= strstr(Core.Params,"-dedicated") ? TRUE : !psDeviceFlags.is	(rsFullscreen);
-#ifndef DEDICATED_SERVER
 	BOOL	bWindowed				= !psDeviceFlags.is	(rsFullscreen);
-#else
-	BOOL	bWindowed				= TRUE;
-#endif
 	
 	u32		dwWindowStyle			= 0;
 	// Set window properties depending on what mode were in.
@@ -446,10 +410,6 @@ void	CHW::updateWindowProps	(HWND m_hWnd)
 		RECT			m_rcWindowBounds;
 		BOOL			bCenter = FALSE;
 		if (strstr(Core.Params, "-center_screen"))	bCenter = TRUE;
-
-#ifdef DEDICATED_SERVER
-		bCenter			= TRUE;
-#endif
 
 		if(bCenter){
 			RECT				DesktopRect;
@@ -484,12 +444,9 @@ void	CHW::updateWindowProps	(HWND m_hWnd)
 		SetWindowLong			( m_hWnd, GWL_STYLE, dwWindowStyle=(WS_POPUP|WS_VISIBLE) );
 	}
 
-#ifndef DEDICATED_SERVER
 		ShowCursor	(FALSE);
 		SetForegroundWindow( m_hWnd );
-#endif
 }
-
 
 struct _uniq_mode
 {
@@ -498,7 +455,6 @@ struct _uniq_mode
 	bool operator() (LPCSTR _other) {return !stricmp(_val,_other);}
 };
 
-#ifndef _EDITOR
 void free_vid_mode_list()
 {
 	for( int i=0; vid_mode_token[i].name; i++ )
@@ -552,5 +508,3 @@ void	fill_vid_mode_list			(CHW* _hw)
 #endif // DEBUG
 	}
 }
-#endif
-

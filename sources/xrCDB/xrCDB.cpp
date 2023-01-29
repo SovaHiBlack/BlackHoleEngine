@@ -27,9 +27,6 @@ BOOL APIENTRY DllMain( HANDLE hModule,
 
 // Model building
 MODEL::MODEL	()
-#ifdef PROFILE_CRITICAL_SECTIONS
-	:cs(MUTEX_PROFILE_ID(MODEL))
-#endif // PROFILE_CRITICAL_SECTIONS
 {
 	tree		= 0;
 	tris		= 0;
@@ -76,9 +73,7 @@ void	MODEL::build			(Fvector* V, int Vcnt, TRI* T, int Tcnt, build_callback* bc,
     R_ASSERT					((Vcnt>=4)&&(Tcnt>=2));
 
 	_initialize_cpu_thread		();
-#ifdef _EDITOR    
-	build_internal				(V,Vcnt,T,Tcnt,bc,bcp);
-#else
+
 	if(!strstr(Core.Params, "-mt_cdb"))
 	{
 		build_internal				(V,Vcnt,T,Tcnt,bc,bcp);
@@ -88,7 +83,6 @@ void	MODEL::build			(Fvector* V, int Vcnt, TRI* T, int Tcnt, build_callback* bc,
 		thread_spawn				(build_thread,"CDB-construction",0,&P);
 		while						(S_INIT	== status)	Sleep	(5);
 	}
-#endif
 }
 
 void	MODEL::build_internal	(Fvector* V, int Vcnt, TRI* T, int Tcnt, build_callback* bc, void* bcp)

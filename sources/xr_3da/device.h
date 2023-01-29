@@ -104,10 +104,6 @@ public:
 	float									fASPECT;
 	
 	CRenderDevice			()
-		#ifdef PROFILE_CRITICAL_SECTIONS
-			: mt_csEnter(MUTEX_PROFILE_ID(CRenderDevice::mt_csEnter))
-			,mt_csLeave(MUTEX_PROFILE_ID(CRenderDevice::mt_csLeave))
-		#endif // PROFILE_CRITICAL_SECTIONS
 	{
 	    m_hWnd              = NULL;
 		b_is_Active			= FALSE;

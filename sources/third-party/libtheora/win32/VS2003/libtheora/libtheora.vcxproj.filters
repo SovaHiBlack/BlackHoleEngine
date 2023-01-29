@@ -73,11 +73,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\libtheora.def">
-      <Filter>Source Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\..\lib\block_inline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -108,5 +103,8 @@
     <ClInclude Include="..\..\..\lib\toplevel_lookup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\libtheora.def" />
   </ItemGroup>
 </Project>

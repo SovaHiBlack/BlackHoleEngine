@@ -25,9 +25,6 @@
     <Filter Include="Environment">
       <UniqueIdentifier>{ecb68f6a-9e1b-4a99-ac93-f87aef9502cc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc %28or old%29">
-      <UniqueIdentifier>{821e4e77-783a-4a53-a10a-d48f87e339dd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Cache">
       <UniqueIdentifier>{9a43ee70-b7e2-4406-86d6-fba5fc6287cb}</UniqueIdentifier>
     </Filter>
@@ -75,15 +72,6 @@
     <ClInclude Include="SoundRender_Environment.h">
       <Filter>Environment</Filter>
     </ClInclude>
-    <ClInclude Include="MusicStream.h">
-      <Filter>Misc %28or old%29</Filter>
-    </ClInclude>
-    <ClInclude Include="xr_cda.h">
-      <Filter>Misc %28or old%29</Filter>
-    </ClInclude>
-    <ClInclude Include="xr_streamsnd.h">
-      <Filter>Misc %28or old%29</Filter>
-    </ClInclude>
     <ClInclude Include="SoundRender_Cache.h">
       <Filter>Cache</Filter>
     </ClInclude>
@@ -92,7 +80,7 @@
     <ClCompile Include="guids.cpp">
       <Filter>Kernel</Filter>
     </ClCompile>
-    <ClCompile Include="sound.cpp">
+    <ClCompile Include="Sound.cpp">
       <Filter>Kernel</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
@@ -148,15 +136,6 @@
     </ClCompile>
     <ClCompile Include="SoundRender_Environment.cpp">
       <Filter>Environment</Filter>
-    </ClCompile>
-    <ClCompile Include="MusicStream.cpp">
-      <Filter>Misc %28or old%29</Filter>
-    </ClCompile>
-    <ClCompile Include="xr_cda.cpp">
-      <Filter>Misc %28or old%29</Filter>
-    </ClCompile>
-    <ClCompile Include="xr_streamsnd.cpp">
-      <Filter>Misc %28or old%29</Filter>
     </ClCompile>
     <ClCompile Include="SoundRender_Cache.cpp">
       <Filter>Cache</Filter>

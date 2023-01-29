@@ -32,13 +32,6 @@ void xrCore::_initialize	(LPCSTR _ApplicationName, LogCallback cb, BOOL init_fs,
 {
 	strcpy_s					(ApplicationName,_ApplicationName);
 	if (0==init_counter) {
-#ifdef XRCORE_STATIC	
-		_clear87	();
-		_control87	( _PC_53,   MCW_PC );
-		_control87	( _RC_CHOP, MCW_RC );
-		_control87	( _RC_NEAR, MCW_RC );
-		_control87	( _MCW_EM,  MCW_EM );
-#endif
 		// Init COM so we can use CoCreateInstance
 //		HRESULT co_res = 
 			CoInitializeEx (NULL, COINIT_MULTITHREADED);
@@ -52,9 +45,8 @@ void xrCore::_initialize	(LPCSTR _ApplicationName, LogCallback cb, BOOL init_fs,
         GetModuleFileName(GetModuleHandle(MODULE_NAME),fn,sizeof(fn));
         _splitpath		(fn,dr,di,0,0);
         strconcat		(sizeof(ApplicationPath),ApplicationPath,dr,di);
-#ifndef _EDITOR
+
 		strcpy_s		(g_application_path,sizeof(g_application_path),ApplicationPath);
-#endif
 
 		// working path
         if( strstr(Params,"-wf") )
@@ -83,8 +75,6 @@ void xrCore::_initialize	(LPCSTR _ApplicationName, LogCallback cb, BOOL init_fs,
 		InitLog				();
 		_initialize_cpu		();
 
-//		Debug._initialize	();
-
 		rtc_initialize		();
 
 		xr_FS				= xr_new<CLocatorAPI>	();
@@ -100,34 +90,28 @@ void xrCore::_initialize	(LPCSTR _ApplicationName, LogCallback cb, BOOL init_fs,
 		if (strstr(Params,"-cache"))  flags |= CLocatorAPI::flCacheFiles;
 		else flags &= ~CLocatorAPI::flCacheFiles;
 #endif // DEBUG
-#ifdef _EDITOR // for EDITORS - no cache
-		flags 				&=~ CLocatorAPI::flCacheFiles;
-#endif // _EDITOR
+
 		flags |= CLocatorAPI::flScanAppRoot;
 
-#ifndef	_EDITOR
-	#ifndef ELocatorAPIH
 		if (0!=strstr(Params,"-file_activity"))	 flags |= CLocatorAPI::flDumpFileActivity;
-	#endif
-#endif
+
 		FS._initialize		(flags,0,fs_fname);
 		Msg					("'%s' build %d, %s\n","xrCore",build_id, build_date);
 		EFS._initialize		();
+
 #ifdef DEBUG
-    #ifndef	_EDITOR
 		Msg					("CRT heap 0x%08x",_get_heap_handle());
 		Msg					("Process heap 0x%08x",GetProcessHeap());
-    #endif
 #endif // DEBUG
+
 	}
 	SetLogCB				(cb);
 	init_counter++;
 }
 
-#ifndef	_EDITOR
 #include "compression_ppmd_stream.h"
 extern compression::ppmd::stream	*trained_model;
-#endif
+
 void xrCore::_destroy		()
 {
 	--init_counter;
@@ -137,26 +121,17 @@ void xrCore::_destroy		()
 		xr_delete			(xr_FS);
 		xr_delete			(xr_EFS);
 
-#ifndef	_EDITOR
 		if (trained_model) {
 			void			*buffer = trained_model->buffer();
 			xr_free			(buffer);
 			xr_delete		(trained_model);
 		}
-#endif
 
 		Memory._destroy		();
 	}
 }
 
-#ifndef XRCORE_STATIC
-
-//. why ??? 
-#ifdef _EDITOR
-	BOOL WINAPI DllEntryPoint(HINSTANCE hinstDLL, DWORD ul_reason_for_call, LPVOID lpvReserved)
-#else
-	BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD ul_reason_for_call, LPVOID lpvReserved)
-#endif
+BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD ul_reason_for_call, LPVOID lpvReserved)
 {
 	switch (ul_reason_for_call)
 	{
@@ -184,4 +159,3 @@ void xrCore::_destroy		()
 	}
     return TRUE;
 }
-#endif // XRCORE_STATIC

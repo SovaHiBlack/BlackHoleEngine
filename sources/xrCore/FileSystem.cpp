@@ -241,5 +241,3 @@ LPCSTR EFS_Utils::GenerateName(LPCSTR base_path, LPCSTR base_name, LPCSTR def_ex
     strcpy(out_name,fn);
 	return out_name;
 }
-
-//#endif

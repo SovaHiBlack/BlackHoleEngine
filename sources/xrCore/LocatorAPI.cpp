@@ -34,11 +34,7 @@ XRCORE_API DUMMY_STUFF	*g_temporary_stuff = 0;
 
 CLocatorAPI*		xr_FS = NULL;
 
-#ifdef _EDITOR
-#	define FSLTX	"fs.ltx"
-#else
-#	define FSLTX	"fsgame.ltx"
-#endif
+#define FSLTX	"fsgame.ltx"
 
 struct _open_file
 {
@@ -181,9 +177,6 @@ XRCORE_API void _dump_open_files(int mode)
 }
 
 CLocatorAPI::CLocatorAPI()
-#ifdef PROFILE_CRITICAL_SECTIONS
-	:m_auth_lock			(MUTEX_PROFILE_ID(CLocatorAPI::m_auth_lock))
-#endif // PROFILE_CRITICAL_SECTIONS
 {
     m_Flags.zero		();
 	// get page size
@@ -1071,7 +1064,7 @@ void CLocatorAPI::copy_file_to_build	(T *&r, LPCSTR source_name)
 
     IReader* R		= 0;
     if (0==xr_strcmp(ext,".dds")){
-        P			= get_path("$game_textures$");               
+        P			= get_path("$game_textures$");
         update_path	(e_cpy_name,"$textures$",source_name+xr_strlen(P->m_Path));
         // tga
         *strext		(e_cpy_name) = 0;
@@ -1085,7 +1078,7 @@ void CLocatorAPI::copy_file_to_build	(T *&r, LPCSTR source_name)
     }
 	
 	if (0==xr_strcmp(ext,".ogg")){
-        P			= get_path("$game_sounds$");                               
+        P			= get_path("$game_sounds$");
         update_path	(e_cpy_name,"$sounds$",source_name+xr_strlen(P->m_Path));
         // wav
         *strext		(e_cpy_name) = 0;
@@ -1193,9 +1186,6 @@ IWriter* CLocatorAPI::w_open	(LPCSTR path, LPCSTR _fname)
 	xr_strlwr(fname);//,".$");
 	if (path&&path[0]) update_path(fname,path,fname);
     CFileWriter* W 	= xr_new<CFileWriter>(fname,false); 
-#ifdef _EDITOR
-	if (!W->valid()) xr_delete(W);
-#endif    
 	return W;
 }
 
@@ -1206,9 +1196,6 @@ IWriter* CLocatorAPI::w_open_ex	(LPCSTR path, LPCSTR _fname)
 	xr_strlwr(fname);//,".$");
 	if (path&&path[0]) update_path(fname,path,fname);
 	CFileWriter* W 	= xr_new<CFileWriter>(fname,true); 
-#ifdef _EDITOR
-	if (!W->valid()) xr_delete(W);
-#endif    
 	return W;
 }
 

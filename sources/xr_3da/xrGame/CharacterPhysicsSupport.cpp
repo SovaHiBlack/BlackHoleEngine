@@ -26,11 +26,6 @@
 
 #include "../device.h"
 
-#ifdef PRIQUEL
-#	define USE_SMART_HITS
-#	define USE_IK
-#endif // PRIQUEL
-
 void  NodynamicsCollide(bool& do_colide,bool bo1,dContact& c,SGameMtl * /*material_1*/,SGameMtl * /*material_2*/)
 {
 	dBodyID body1=dGeomGetBody(c.geom.g1);
@@ -245,10 +240,7 @@ void CCharacterPhysicsSupport::SpawnInitPhysics(CSE_Abstract* e)
 			Msg("CCharacterPhysicsSupport::SpawnInitPhysics obj %s before collision correction %f,%f,%f",PH_DBG_ObjectTrack(),m_EntityAlife.Position().x,m_EntityAlife.Position().y,m_EntityAlife.Position().z);
 		}
 #endif
-#ifdef	USE_IK
-		if( etStalker == m_eType || etActor == m_eType )
-				CreateIKController( );
-#endif
+
 		if( !m_EntityAlife.animation_movement_controlled( ) )
 			CreateCharacter( );
 #ifdef DEBUG  
@@ -434,14 +426,6 @@ void CCharacterPhysicsSupport::in_Hit(float P,Fvector &dir, CObject *who,s16 ele
 	{
 		if(!is_killing&&m_EntityAlife.g_Alive())
 			m_PhysicMovementControl->ApplyHit(dir,impulse,hit_type);
-
-#ifdef USE_SMART_HITS
-		if(Type()==etStalker)
-		{
-				m_hit_animations.PlayHitMotion(dir,p_in_object_space,element,m_EntityAlife);
-		}
-#endif // USE_SMART_HITS
-
 	}else 
 		m_pPhysicsShell->applyHit(p_in_object_space,dir,impulse,element,hit_type);
 }

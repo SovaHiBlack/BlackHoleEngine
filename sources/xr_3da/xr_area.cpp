@@ -95,13 +95,12 @@ void __stdcall _sound_event		(ref_sound_data_ptr S, float range)
 // Purpose	: stores space slots
 //----------------------------------------------------------------------
 CObjectSpace::CObjectSpace	( )
-#ifdef PROFILE_CRITICAL_SECTIONS
-	:Lock(MUTEX_PROFILE_ID(CObjectSpace::Lock))
-#endif // PROFILE_CRITICAL_SECTIONS
 {
+
 #ifdef DEBUG
 	sh_debug.create				("debug\\wireframe","$null");
 #endif
+
 	m_BoundingVolume.invalidate	();
 }
 //----------------------------------------------------------------------

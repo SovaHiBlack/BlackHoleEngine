@@ -249,11 +249,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\config\msvcdefs.def">
-      <Filter>Source Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
+    <None Include="..\..\..\config\msvcdefs.def" />
   </ItemGroup>
 </Project>

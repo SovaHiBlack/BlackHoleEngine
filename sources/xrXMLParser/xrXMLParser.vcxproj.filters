@@ -12,7 +12,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="StdAfx.cpp">
+    <ClCompile Include="stdafx.cpp">
       <Filter>Kernel</Filter>
     </ClCompile>
     <ClCompile Include="xrXMLParser.cpp">

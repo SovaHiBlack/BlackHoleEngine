@@ -112,7 +112,7 @@ float		ps_r2_slight_fade			= 1.f;				// 1.f
 //- Mad Max
 float		ps_r2_gloss_factor			= 1.0f;
 //- Mad Max
-#ifndef _EDITOR
+
 #include	"..\xr_ioconsole.h"
 #include	"..\xr_ioc_cmd.h"
 
@@ -395,4 +395,3 @@ void	xrRender_apply_tf		()
 #endif
 }
 
-#endif

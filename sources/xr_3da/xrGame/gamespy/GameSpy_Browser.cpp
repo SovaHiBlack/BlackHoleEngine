@@ -15,10 +15,6 @@
 void __cdecl SBCallback(void* sb, SBCallbackReason reason, void* server, void *instance);
 
 CGameSpy_Browser::CGameSpy_Browser()
-#ifdef PROFILE_CRITICAL_SECTIONS
-	:m_refresh_lock(MUTEX_PROFILE_ID(CGameSpy_Browser::m_refresh_lock))
-#endif // PROFILE_CRITICAL_SECTIONS
-
 {
 	//-------------------------
 	m_hGameSpyDLL = NULL;
@@ -38,10 +34,6 @@ CGameSpy_Browser::CGameSpy_Browser()
 };
 
 CGameSpy_Browser::CGameSpy_Browser(HMODULE hGameSpyDLL)
-#ifdef PROFILE_CRITICAL_SECTIONS
-	:m_refresh_lock(MUTEX_PROFILE_ID(CGameSpy_Browser::m_refresh_lock))
-#endif // PROFILE_CRITICAL_SECTIONS
-
 {
 	//-------------------------
 	m_hGameSpyDLL = NULL;
@@ -340,10 +332,6 @@ void	CGameSpy_Browser::ReadServerInfo	(ServerInfo* pServerInfo, void* pServer)
 	pServerInfo->m_bPassword	= xrGS_SBServerGetBoolValue(pServer, m_pQR2->xrGS_RegisteredKey(PASSWORD_KEY), SBFalse) == SBTrue;
 	pServerInfo->m_bUserPass	= xrGS_SBServerGetBoolValue(pServer, m_pQR2->xrGS_RegisteredKey(G_USER_PASSWORD_KEY), SBFalse) == SBTrue;
 
-#ifdef BATTLEYE
-	pServerInfo->m_bBattlEye	= xrGS_SBServerGetBoolValue(pServer, m_pQR2->xrGS_RegisteredKey(G_BATTLEYE_KEY), SBFalse) == SBTrue;
-#endif // BATTLEYE
-
 	pServerInfo->m_Ping = (s16)(xrGS_SBServerGetPing(pServer) & 0xffff);
 	pServerInfo->m_ServerNumPlayers = (s16)xrGS_SBServerGetIntValue(pServer, m_pQR2->xrGS_RegisteredKey(NUMPLAYERS_KEY), 0);
 	pServerInfo->m_ServerMaxPlayers = (s16)xrGS_SBServerGetIntValue(pServer, m_pQR2->xrGS_RegisteredKey(MAXPLAYERS_KEY), 32);
@@ -374,10 +362,6 @@ void	CGameSpy_Browser::ReadServerInfo	(ServerInfo* pServerInfo, void* pServer)
 	pServerInfo->m_aInfos.push_back(GameInfo(*st.translate("mp_si_servername"), pServerInfo->m_ServerName));
 	pServerInfo->m_aInfos.push_back(GameInfo(*st.translate("mp_si_version"), pServerInfo->m_ServerVersion));
 	
-#ifdef BATTLEYE
-	ADD_BOOL_INFO(pServerInfo, pServer, "BattlEye", G_BATTLEYE_KEY);
-#endif // BATTLEYE
-
 	ADD_INT_INFO_N (pServerInfo, pServer, 1, "Max ping", "", G_MAX_PING_KEY);	
 	ADD_BOOL_INFO(pServerInfo, pServer, *st.translate("mp_si_maprotation"), G_MAP_ROTATION_KEY);
 	

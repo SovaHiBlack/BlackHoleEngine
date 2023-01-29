@@ -3,19 +3,13 @@
 
 #include "IGame_Persistent.h"
 #include "environment.h"
-#ifndef _EDITOR
-#	include "x_ray.h"
-#	include "IGame_Level.h"
-#	include "XR_IOConsole.h"
-#	include "resourcemanager.h"
-#	include "Render.h"
-#	include "ps_instance.h"
-#	include "CustomHUD.h"
-#endif
-
-#ifdef _EDITOR
-	bool g_dedicated_server	= false;
-#endif
+#include "x_ray.h"
+#include "IGame_Level.h"
+#include "XR_IOConsole.h"
+#include "resourcemanager.h"
+#include "Render.h"
+#include "ps_instance.h"
+#include "CustomHUD.h"
 
 ENGINE_API	IGame_Persistent*		g_pGamePersistent	= NULL;
 
@@ -52,8 +46,7 @@ void IGame_Persistent::OnAppDeactivate		()
 
 void IGame_Persistent::OnAppStart	()
 {
-	if(!g_dedicated_server)
-		Environment().load				();
+	Environment().load				();
 }
 
 void IGame_Persistent::OnAppEnd		()
@@ -61,11 +54,8 @@ void IGame_Persistent::OnAppEnd		()
 	Environment().unload				();
 	OnGameEnd						();
 
-#ifndef _EDITOR
 	DEL_INSTANCE					(g_hud);
-#endif    
 }
-
 
 void IGame_Persistent::PreStart		(LPCSTR op)
 {
@@ -89,10 +79,9 @@ void IGame_Persistent::Start		(LPCSTR op)
 	{
 		if (*m_game_params.m_game_type)
 			OnGameStart					();
-#ifndef _EDITOR
+
 		if(g_hud)
 			DEL_INSTANCE			(g_hud);
-#endif            
 	}
 	else UpdateGameType();
 
@@ -101,18 +90,15 @@ void IGame_Persistent::Start		(LPCSTR op)
 
 void IGame_Persistent::Disconnect	()
 {
-#ifndef _EDITOR
 	// clear "need to play" particles
 	destroy_particles					(true);
 
 	if(g_hud)
 		g_hud->OnDisconnected			();
-#endif
 }
 
 void IGame_Persistent::OnGameStart()
 {
-#ifndef _EDITOR
 	LoadTitle								("st_prefetching_objects");
 	if (strstr(Core.Params,"-noprefetch"))	return;
 
@@ -131,26 +117,18 @@ void IGame_Persistent::OnGameStart()
 
 	Msg					("* [prefetch] time:    %d ms",	iFloor(p_time));
 	Msg					("* [prefetch] memory:  %dKb",	p_mem/1024);
-#endif
 }
 
 void IGame_Persistent::OnGameEnd	()
 {
-#ifndef _EDITOR
 	ObjectPool.clear					();
 	Render->models_Clear				(TRUE);
-#endif
 }
 
 void IGame_Persistent::OnFrame		()
 {
-
-#ifndef DEDICATED_SERVER
 	if(!Device.Paused() || Device.dwPrecacheFrame)
 		Environment().OnFrame				();
-#endif
-
-#ifndef _EDITOR
 
 	Device.Statistic->Particles_starting= ps_needtoplay.size	();
 	Device.Statistic->Particles_active	= ps_active.size		();
@@ -177,12 +155,10 @@ void IGame_Persistent::OnFrame		()
 		ps_destroy.pop_back		();
 		psi->PSI_internal_delete();
 	}
-#endif
 }
 
 void IGame_Persistent::destroy_particles		(const bool &all_particles)
 {
-#ifndef _EDITOR
 	ps_needtoplay.clear				();
 
 	while (ps_destroy.size())
@@ -217,5 +193,5 @@ void IGame_Persistent::destroy_particles		(const bool &all_particles)
 	}
 
 	VERIFY								(ps_needtoplay.empty() && ps_destroy.empty() && (!all_particles || ps_active.empty()));
-#endif
+
 }

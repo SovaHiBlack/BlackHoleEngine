@@ -105,9 +105,6 @@
     <ClCompile Include="FileSystem.cpp">
       <Filter>FS</Filter>
     </ClCompile>
-    <ClCompile Include="FileSystem_borland.cpp">
-      <Filter>FS</Filter>
-    </ClCompile>
     <ClCompile Include="FS.cpp">
       <Filter>FS</Filter>
     </ClCompile>
@@ -120,10 +117,7 @@
     <ClCompile Include="LocatorAPI_defs.cpp">
       <Filter>FS</Filter>
     </ClCompile>
-    <ClCompile Include="LocatorAPI_Notifications.cpp">
-      <Filter>FS</Filter>
-    </ClCompile>
-    <ClCompile Include="log.cpp">
+    <ClCompile Include="Log.cpp">
       <Filter>FS</Filter>
     </ClCompile>
     <ClCompile Include="Xr_ini.cpp">
@@ -134,9 +128,6 @@
     </ClCompile>
     <ClCompile Include="file_stream_reader.cpp">
       <Filter>FS\file_stream_reader</Filter>
-    </ClCompile>
-    <ClCompile Include="memory_allocation_stats.cpp">
-      <Filter>Memory manager</Filter>
     </ClCompile>
     <ClCompile Include="memory_usage.cpp">
       <Filter>Memory manager</Filter>
@@ -162,16 +153,10 @@
     <ClCompile Include="xrMemory_pso_Fill32.cpp">
       <Filter>Memory manager</Filter>
     </ClCompile>
-    <ClCompile Include="xrMemory_subst_borland.cpp">
-      <Filter>Memory manager</Filter>
-    </ClCompile>
     <ClCompile Include="xrMemory_subst_msvc.cpp">
       <Filter>Memory manager</Filter>
     </ClCompile>
     <ClCompile Include="xrDebug.cpp">
-      <Filter>Debug core</Filter>
-    </ClCompile>
-    <ClCompile Include="xrDebugNew.cpp">
       <Filter>Debug core</Filter>
     </ClCompile>
     <ClCompile Include="blackbox\BlackBoxUI.cpp">
@@ -375,7 +360,7 @@
     <ClInclude Include="LocatorAPI_defs.h">
       <Filter>FS</Filter>
     </ClInclude>
-    <ClInclude Include="log.h">
+    <ClInclude Include="Log.h">
       <Filter>FS</Filter>
     </ClInclude>
     <ClInclude Include="xr_ini.h">
@@ -403,9 +388,6 @@
       <Filter>Memory manager</Filter>
     </ClInclude>
     <ClInclude Include="xrMemory_pure.h">
-      <Filter>Memory manager</Filter>
-    </ClInclude>
-    <ClInclude Include="xrMemory_subst_borland.h">
       <Filter>Memory manager</Filter>
     </ClInclude>
     <ClInclude Include="xrMemory_subst_msvc.h">
@@ -523,9 +505,6 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="FileSystem.h">
-      <Filter>FS</Filter>
-    </CustomBuild>
-    <CustomBuild Include="LocatorAPI_Notifications.h">
       <Filter>FS</Filter>
     </CustomBuild>
   </ItemGroup>

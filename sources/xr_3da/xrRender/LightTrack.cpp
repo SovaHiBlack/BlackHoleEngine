@@ -5,14 +5,8 @@
 #include "stdafx.h"
 #include "LightTrack.h"
 #include "..\xr_object.h"
-
-#ifdef _EDITOR
-#include "igame_persistent.h"
-#include "environment.h"
-#else
 #include "..\igame_persistent.h"
 #include "..\environment.h"
-#endif
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction

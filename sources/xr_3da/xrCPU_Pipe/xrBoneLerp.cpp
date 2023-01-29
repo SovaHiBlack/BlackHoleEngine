@@ -1,11 +1,7 @@
 #include "stdafx.h"
 #pragma hdrstop
 
-#ifdef _EDITOR
- 	#include "SkeletonAnimated.h"
-#else
- 	#include "..\SkeletonAnimated.h"
-#endif
+#include "..\SkeletonAnimated.h"
 
 IC float myasin(const float x)
 {

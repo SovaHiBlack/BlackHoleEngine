@@ -26,8 +26,4 @@ long atol( const char* nptr );
 
 };
 
-#ifdef _EDITOR
-#   define min(a,b) ((a) < (b) ? (a) : (b))
-#endif // _EDITOR
-
 #endif //

@@ -4,20 +4,18 @@
 #	include <time.h>
 #	include <direct.h>
 
-#define STATIC
-//#define STATIC	static
 
 // constants
-STATIC const u32				buffer_size = 512*1024;
-STATIC LPCSTR					output_folder = "x:/memory_monitor_stats/";
-STATIC LPCSTR					output_extension = ".bin";
+const u32				buffer_size = 512*1024;
+LPCSTR					output_folder = "x:/memory_monitor_stats/";
+LPCSTR					output_extension = ".bin";
 
 // for internal use only
-STATIC bool						detaching = false;
-STATIC CRITICAL_SECTION			critical_section;
+bool						detaching = false;
+CRITICAL_SECTION			critical_section;
 
 namespace memory_monitor {
-STATIC inline FILE *file()
+inline FILE *file()
 {
 	static FILE					*m_file = 0;
 	static char					buffer[buffer_size];
@@ -49,7 +47,7 @@ union _allocation_size {
 	u32		allocation_size;
 };
 
-STATIC bool use_monitor					()
+bool use_monitor					()
 {
 	return						(!!strstr(GetCommandLine(),"-memory_monitor"));
 }
@@ -66,7 +64,7 @@ void memory_monitor::flush_each_time	(const bool &value)
 }
 
 namespace memory_monitor {
-STATIC void initialize					()
+void initialize					()
 {
 	VERIFY						(use_monitor());
 	InitializeCriticalSection	(&critical_section);
@@ -78,7 +76,7 @@ void memory_monitor::monitor_alloc		(const void *allocation_address, const u32 &
 	if (!use_monitor())
 		return;
 
-	STATIC bool initialized		= false;
+	bool initialized		= false;
 	if (!initialized) {
 		initialized				= true;
 		initialize				();

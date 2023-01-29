@@ -1,18 +1,11 @@
 #include "stdafx.h"
 #pragma hdrstop
 
-#include <time.h>
-#include "resource.h"
-#include "log.h"
-
 extern BOOL					LogExecCB		= TRUE;
 static string_path			logFName		= "engine.log";
 static BOOL 				no_log			= TRUE;
-#ifdef PROFILE_CRITICAL_SECTIONS
-	static xrCriticalSection	logCS(MUTEX_PROFILE_ID(log));
-#else // PROFILE_CRITICAL_SECTIONS
-	static xrCriticalSection	logCS;
-#endif // PROFILE_CRITICAL_SECTIONS
+static xrCriticalSection	logCS;
+
 xr_vector<shared_str>*		LogFile			= NULL;
 static LogCallback			LogCB			= 0;
 

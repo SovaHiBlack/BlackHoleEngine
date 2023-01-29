@@ -8,11 +8,8 @@
 
 #include	"FVisual.h"
 #include	"FProgressive.h"
-#ifdef _EDITOR
-#	include	"SkeletonX.h"
-#else
-#	include	"..\SkeletonX.h"
-#endif
+#include	"..\SkeletonX.h"
+
 struct	SEnumVerticesCallback;
 class		CSkeletonX_ext	: public CSkeletonX	// shared code for SkeletonX derivates
 {

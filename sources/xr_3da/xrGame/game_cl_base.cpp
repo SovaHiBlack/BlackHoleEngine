@@ -189,15 +189,6 @@ void game_cl_GameState::TranslateGameMessage	(u32 msg, NET_Packet& P)
 	{
 	case GAME_EVENT_PLAYER_CONNECTED:
 		{
-
-#ifdef BATTLEYE
-			if ( g_pGameLevel && Level().battleye_system.GetTestClient() )
-			{
-				bool res_battleye = Level().battleye_system.LoadClient();
-				VERIFY( res_battleye );
-			}
-#endif // BATTLEYE
-
 			string64 PlayerName;
 			P.r_stringZ(PlayerName);
 			
@@ -403,8 +394,6 @@ void game_cl_GameState::set_type_name(LPCSTR s)
 };
 void game_cl_GameState::reset_ui()
 {
-	if(g_dedicated_server)	return;
-
 	if(!m_game_ui_custom)
 		m_game_ui_custom = HUD().GetUI()->UIGame();
 

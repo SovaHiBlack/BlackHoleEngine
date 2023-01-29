@@ -127,16 +127,8 @@ void InitSettings	()
 }
 void InitConsole	()
 {
-#ifdef DEDICATED_SERVER
-	{
-		Console						= xr_new<CTextConsole>	();		
-	}
-#else
-	//	else
-	{
-		Console						= xr_new<CConsole>	();
-	}
-#endif
+	Console						= xr_new<CConsole>	();
+
 	Console->Initialize			( );
 
 	strcpy_s						(Console->ConfigFile,"user.ltx");
@@ -150,8 +142,6 @@ void InitConsole	()
 void InitInput		()
 {
 	BOOL bCaptureInput			= !strstr(Core.Params,"-i");
-	if(g_dedicated_server)
-		bCaptureInput			= FALSE;
 
 	pInput						= xr_new<CInput>		(bCaptureInput);
 }
@@ -234,10 +224,9 @@ void Startup					( )
 	}
 
 	// Initialize APP
-//#ifndef DEDICATED_SERVER
 	ShowWindow( Device.m_hWnd , SW_SHOWNORMAL );
 	Device.Create				( );
-//#endif
+
 	LALib.OnCreate				( );
 	pApp						= xr_new<CApplication>	();
 	g_pGamePersistent			= (IGame_Persistent*)	NEW_INSTANCE (CLSID_GAME_PERSISTANT);
@@ -552,15 +541,12 @@ void foo	()
 }
 #endif // 0
 
-ENGINE_API	bool g_dedicated_server	= false;
-
 int APIENTRY WinMain_impl(HINSTANCE hInstance,
                      HINSTANCE hPrevInstance,
                      char *    lpCmdLine,
                      int       nCmdShow)
 {
 //	foo();
-#ifndef DEDICATED_SERVER
 
 	// Check for virtual memory
 
@@ -585,9 +571,6 @@ int APIENTRY WinMain_impl(HINSTANCE hInstance,
 		return 1;
 	}
 #endif
-#else // DEDICATED_SERVER
-	g_dedicated_server			= true;
-#endif // DEDICATED_SERVER
 
 	SetThreadAffinityMask		(GetCurrentThread(),1);
 
@@ -626,11 +609,9 @@ int APIENTRY WinMain_impl(HINSTANCE hInstance,
 	Core._initialize			("xray",NULL, TRUE, fsgame[0] ? fsgame : NULL);
 	InitSettings				();
 
-#ifndef DEDICATED_SERVER
 	{
 		damn_keys_filter		filter;
 		(void)filter;
-#endif // DEDICATED_SERVER
 
 		FPU::m24r				();
 		InitEngine				();
@@ -691,14 +672,13 @@ int APIENTRY WinMain_impl(HINSTANCE hInstance,
 			
 			_spawnv							(_P_NOWAIT, _args[0], _args);//, _envvar);
 		}
-#ifndef DEDICATED_SERVER
+
 #ifdef NO_MULTI_INSTANCES		
 		// Delete application presence mutex
 		CloseHandle( hCheckPresenceMutex );
 #endif
 	}
 	// here damn_keys_filter class instanse will be destroyed
-#endif // DEDICATED_SERVER
 
 	return						0;
 }
@@ -724,11 +704,7 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 {
 	__try 
 	{
-#ifdef DEDICATED_SERVER
-		Debug._initialize	(true);
-#else // DEDICATED_SERVER
-		Debug._initialize	(false);
-#endif // DEDICATED_SERVER
+		Debug._initialize	();
 
 		WinMain_impl		(hInstance,hPrevInstance,lpCmdLine,nCmdShow);
 	}
@@ -915,13 +891,12 @@ void CApplication::LoadBegin	()
 
 		g_appLoaded			= FALSE;
 
-#ifndef DEDICATED_SERVER
 		_InitializeFont		(pFontSystem,"ui_font_graffiti19_russian",0);
 
 		ll_hGeom.create		(FVF::F_TL, RCache.Vertex.Buffer(), RCache.QuadIB);
 		sh_progress.create	("hud\\default","ui\\ui_load");
 		ll_hGeom2.create		(FVF::F_TL, RCache.Vertex.Buffer(),NULL);
-#endif
+
 		phase_timer.Start	();
 		load_stage			= 0;
 
@@ -958,10 +933,7 @@ void CApplication::LoadDraw		()
 
 	if(!Device.Begin () )		return;
 
-	if	(g_dedicated_server)
-		Console->OnRender			();
-	else
-		load_draw_internal			();
+	load_draw_internal			();
 
 	Device.End					();
 	CheckCopyProtection			();

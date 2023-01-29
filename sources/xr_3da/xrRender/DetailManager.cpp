@@ -6,18 +6,10 @@
 #pragma hdrstop
 
 #include "DetailManager.h"
-#include "cl_intersect.h"
+#include "../../xrCDB/cl_intersect.h"
 
-#ifdef _EDITOR
-#	include "ESceneClassList.h"
-#	include "Scene.h"
-#	include "SceneObject.h"
-#	include "igame_persistent.h"
-#	include "environment.h"
-#else
 #	include "..\igame_persistent.h"
 #	include "..\environment.h"
-#endif
 
 const float dbgOffset			= 0.f;
 const int	dbgItems			= 128;
@@ -87,9 +79,6 @@ CDetailManager::~CDetailManager	()
 {
 
 }
-/*
-*/
-#ifndef _EDITOR
 
 /*
 void dump	(CDetailManager::vis_list& lst)
@@ -160,7 +149,7 @@ void CDetailManager::Load		()
 	swing_desc[1].rot2	= pSettings->r_float("details","swing_fast_rot2");
 	swing_desc[1].speed	= pSettings->r_float("details","swing_fast_speed");
 }
-#endif
+
 void CDetailManager::Unload		()
 {
 	if (UseVS())	hw_Unload	();
@@ -215,9 +204,9 @@ void CDetailManager::UpdateVisibleM()
 					u32 _res	= View.testSAABB			(S.vis.sphere.P,S.vis.sphere.R,S.vis.box.data(),_mask);
 					if (fcvNone==_res)						continue;	// invisible-view frustum
 				}
-#ifndef _EDITOR
+
 				if (!RImplementation.HOM.visible(S.vis))	continue;	// invisible-occlusion
-#endif
+
 				// Add to visibility structures
 				if (Device.dwFrame>S.frame){
 					// Calc fade factor	(per slot)
@@ -269,10 +258,9 @@ void CDetailManager::UpdateVisibleM()
 
 void CDetailManager::Render	()
 {
-#ifndef _EDITOR
+
 	if (0==dtFS)						return;
 	if (!psDeviceFlags.is(rsDetails))	return;
-#endif
 
 	// MT
 	MT_SYNC					();
@@ -293,11 +281,9 @@ void CDetailManager::Render	()
 
 void __stdcall	CDetailManager::MT_CALC		()
 {
-#ifndef _EDITOR
 	if (0==RImplementation.Details)		return;	// possibly deleted
 	if (0==dtFS)						return;
 	if (!psDeviceFlags.is(rsDetails))	return;
-#endif    
 
 	MT.Enter					();
 	if (m_frame_calc!=Device.dwFrame)	

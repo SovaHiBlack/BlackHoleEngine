@@ -19,9 +19,6 @@
     <Filter Include="Lights">
       <UniqueIdentifier>{e549cc20-1233-4cbd-a989-a61fcbceddaa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Glows">
-      <UniqueIdentifier>{ce7611db-345b-4ef0-beda-fc524d833a10}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Wallmarks">
       <UniqueIdentifier>{34878562-ca12-4074-8fd2-6e688129d006}</UniqueIdentifier>
     </Filter>
@@ -51,9 +48,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cl_intersect.h">
-      <Filter>Kernel</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>Kernel</Filter>
     </ClInclude>
@@ -104,9 +98,6 @@
     </ClInclude>
     <ClInclude Include="..\xrRender\xrStripify.h">
       <Filter>Stripifier</Filter>
-    </ClInclude>
-    <ClInclude Include="light.h">
-      <Filter>Lights</Filter>
     </ClInclude>
     <ClInclude Include="..\xrRender\Light_DB.h">
       <Filter>Lights</Filter>
@@ -242,6 +233,9 @@
     </ClInclude>
     <ClInclude Include="r2_rendertarget_wallmarks.h">
       <Filter>Core_Target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\xrRender\light.h">
+      <Filter>Lights</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -539,8 +533,5 @@
     <ClCompile Include="r2_rendertarget_phase_smap_S.cpp">
       <Filter>Core_Target</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="todo.txt" />
   </ItemGroup>
 </Project>

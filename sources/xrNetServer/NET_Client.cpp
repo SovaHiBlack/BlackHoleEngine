@@ -4,7 +4,6 @@
 #include "net_server.h"
 #include "net_messages.h"
 #include "NET_Log.h"
-#include "../xr_3da/xrGame/battleye.h"
 
 #pragma warning(push)
 #pragma warning(disable:4995)
@@ -29,9 +28,6 @@ void	dump_URL	(LPCSTR p, IDirectPlay8Address* A)
 
 // 
 INetQueue::INetQueue()		
-#ifdef PROFILE_CRITICAL_SECTIONS
-	:cs(MUTEX_PROFILE_ID(INetQueue))
-#endif // PROFILE_CRITICAL_SECTIONS
 {
 	unused.reserve	(128);
 	for (int i=0; i<16; i++)
@@ -227,17 +223,6 @@ void  IPureClient::_Recieve( const void* data, u32 data_size, u32 /*param*/ )
 		
 		if ( data_size == sizeof(MSYS_CONFIG) )
 		{
-			MSYS_CONFIG* msys_cfg = (MSYS_CONFIG*)data;
-			if ( msys_cfg->is_battleye )
-			{
-#ifdef BATTLEYE
-				if ( !TestLoadBEClient() )
-				{
-					net_Connected = EnmConnectionFails;
-					return;
-				}
-#endif // BATTLEYE
-			}
 			net_Connected = EnmConnectionCompleted;
 			return;
 		}
@@ -264,9 +249,6 @@ void  IPureClient::_Recieve( const void* data, u32 data_size, u32 /*param*/ )
 //==============================================================================
 
 IPureClient::IPureClient	(CTimer* timer): net_Statistic(timer)
-#ifdef PROFILE_CRITICAL_SECTIONS
-,net_csEnumeration(MUTEX_PROFILE_ID(IPureClient::net_csEnumeration))
-#endif // PROFILE_CRITICAL_SECTIONS
 {
 	NET						= NULL;
 	net_Address_server		= NULL;

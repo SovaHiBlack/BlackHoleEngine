@@ -11,11 +11,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="libvorbisfile.def">
-      <Filter>Source Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\..\lib\vorbisfile.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -26,6 +21,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
+    <None Include="libvorbisfile.def" />
   </ItemGroup>
 </Project>

@@ -9,9 +9,7 @@
 #include <d3dx9.h>
 #pragma warning(default:4995)
 
-#ifndef _EDITOR
-    #include	"Render.h"
-#endif
+#include "Render.h"
 #include "SkeletonX.h"
 #include "SkeletonCustom.h"
 #include "fmesh.h"
@@ -308,9 +306,6 @@ void CSkeletonX::_Load	(const char* N, IReader *data, u32& dwVertCount)
 			
 	u16			hw_bones	= u16((HW.Caps.geometry.dwRegisters-22)/3);
 	u16			sw_bones	= 0;
-#ifdef _EDITOR
-	hw_bones	= 0;
-#endif
 
 	u32			dwVertType,size,it,crc;
 	dwVertType	= data->r_u32(); 
@@ -329,11 +324,6 @@ void CSkeletonX::_Load	(const char* N, IReader *data, u32& dwVertCount)
 				if		(bids.end() == std::find(bids.begin(),bids.end(),mid))	bids.push_back(mid);
 				if		(mid>sw_bones)	sw_bones = mid;
 			}
-#ifdef _EDITOR
-			// software
-			crc					= crc32	(data->pointer(),size);
-			Vertices1W.create	(crc,dwVertCount,(vertBoned1W*)data->pointer());
-#else
 			if	(1==bids.size())	{
 				// HW- single bone
 				RenderMode						= RM_SINGLE;
@@ -350,7 +340,6 @@ void CSkeletonX::_Load	(const char* N, IReader *data, u32& dwVertCount)
 				Vertices1W.create	(crc,dwVertCount,(vertBoned1W*)data->pointer());
 				Render->shader_option_skinning	(-1);
 			}
-#endif        
 		}
 		break;
 	case OGF_VERTEXFORMAT_FVF_2L: // 2-Link
@@ -380,11 +369,8 @@ void CSkeletonX::_Load	(const char* N, IReader *data, u32& dwVertCount)
 		Debug.fatal	(DEBUG_INFO,"Invalid vertex type in skinned model '%s'",N);
 		break;
 	}
-#ifdef _EDITOR
-	if (bids.size()>0)	
-#else
+
 	if (bids.size()>1)	
-#endif
     {
 		crc					= crc32(&*bids.begin(),bids.size()*sizeof(u16)); 
 		BonesUsed.create	(crc,bids.size(),&*bids.begin());
@@ -424,7 +410,7 @@ BOOL	CSkeletonX::has_visible_bones		()
 //-----------------------------------------------------------------------------------------------------
 // Wallmarks
 //-----------------------------------------------------------------------------------------------------
-#include "cl_intersect.h"
+#include "../xrCDB/cl_intersect.h"
 BOOL	CSkeletonX::_PickBoneSoft1W	(Fvector& normal, float& dist, const Fvector& S, const Fvector& D, u16* indices, CBoneData::FacesVec& faces)
 {
 	VERIFY				(*Vertices1W);

@@ -26,11 +26,7 @@
 #include "src\lualib.h"
 */
 
-#ifdef __BORLANDC__
-#pragma comment( lib, "x:\\xrCoreB.lib"	)
-#else
 #pragma comment( lib, "xrCore.lib"	)
-#endif
 
 #if !defined(DEBUG) || defined(FORCE_NO_EXCEPTIONS)
 	// release: no error checking, no exceptions

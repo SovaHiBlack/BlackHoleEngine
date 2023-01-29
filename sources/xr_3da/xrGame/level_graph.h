@@ -8,11 +8,7 @@
 
 #pragma once
 
-#ifndef AI_COMPILER
-	#include "../xrLevel.h"
-#else
-	#include "xrLevel.h"
-#endif
+#include "../xrLevel.h"
 
 #include "alife_space.h"
 #include "level_graph_space.h"
@@ -80,11 +76,7 @@ private:
 	};
 
 public:
-#ifndef AI_COMPILER
 					CLevelGraph					();
-#else
-					CLevelGraph					(LPCSTR file_name);
-#endif
 	virtual			~CLevelGraph				();
 	IC		const_vertex_iterator begin			() const;
 	IC		const_vertex_iterator end			() const;
@@ -205,7 +197,6 @@ public:
 			bool	neighbour_in_direction		(const Fvector &direction, u32 start_vertex_id) const;
 
 #ifdef DEBUG
-#	ifndef AI_COMPILER
 private:
 	ref_shader			sh_debug;
 
@@ -236,7 +227,6 @@ private:
 
 public:
 			void		render					();
-#	endif
 #endif
 };
 
@@ -248,11 +238,9 @@ IC	bool operator>		(const u32 &vertex_xz, const CLevelGraph::CVertex &vertex);
 IC	bool operator==		(const u32 &vertex_xz, const CLevelGraph::CVertex &vertex);
 
 #ifdef DEBUG
-#	ifndef AI_COMPILER
-		extern BOOL	g_bDebugNode;
-		extern u32	g_dwDebugNodeSource;
-		extern u32	g_dwDebugNodeDest;
-#	endif
+	extern BOOL	g_bDebugNode;
+	extern u32	g_dwDebugNodeSource;
+	extern u32	g_dwDebugNodeDest;
 #endif
 
 #include "level_graph_inline.h"

@@ -10,9 +10,6 @@
     <Filter Include="Interfaces">
       <UniqueIdentifier>{41f0a2eb-d527-41b8-8426-35b8119604fb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Interfaces\Sound">
-      <UniqueIdentifier>{a7e3e2e3-74ab-4a0f-bdf1-0cb56ebbcf29}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Interfaces\Input">
       <UniqueIdentifier>{d93add5f-28f7-4bcb-b7dd-ab96f2d53eff}</UniqueIdentifier>
     </Filter>
@@ -896,11 +893,5 @@
     <Image Include="ui_splash3.bmp">
       <Filter>General\Resources</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ClientServer.txt" />
-    <Text Include="Effects description.txt" />
-    <Text Include="features.txt" />
-    <Text Include="TODO.txt" />
   </ItemGroup>
 </Project>

@@ -2,18 +2,13 @@
 #include 	"stdafx.h"
 #pragma hdrstop
 
-#include 	"SkeletonCustom.h"
+#include	"SkeletonCustom.h"
 #include	"SkeletonX.h"
 #include	"fmesh.h"
-#ifndef _EDITOR
-    #include	"Render.h"
-#endif
+#include	"Render.h"
+
 int			psSkeletonUpdate	= 32;
-xrCriticalSection	UCalc_Mutex
-#ifdef PROFILE_CRITICAL_SECTIONS
-	(MUTEX_PROFILE_ID(UCalc_Mutex))
-#endif // PROFILE_CRITICAL_SECTIONS
-;
+xrCriticalSection	UCalc_Mutex;
 
 //////////////////////////////////////////////////////////////////////////
 // BoneInstance methods
@@ -224,12 +219,10 @@ void	CKinematics::Load(const char* N, IReader *data, u32 dwFlags)
         LD->close	();
     }
 
-#ifndef _EDITOR    
 	// User data
 	IReader* UD 	= data->open_chunk(OGF_S_USERDATA);
     pUserData		= UD?xr_new<CInifile>(UD,FS.get_path("$game_config$")->m_Path):0;
     if (UD)			UD->close();
-#endif
 
 	// Globals
 	bone_map_N		= xr_new<accel>		();
@@ -573,7 +566,7 @@ void CKinematics::EnumBoneVertices	(SEnumVerticesCallback &C, u16 bone_id)
 	for ( u32 i=0; i<children.size(); i++ )
 		LL_GetChild( i )->EnumBoneVertices( C, bone_id );
 }
-#include "cl_intersect.h"
+#include "../xrCDB/cl_intersect.h"
 
 DEFINE_VECTOR(Fobb,OBBVec,OBBVecIt);
 

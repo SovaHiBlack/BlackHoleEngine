@@ -1,11 +1,11 @@
-* Detected CPU: GenuineIntel P3 family, F6/M10/S4, 2498.00 mhz, 18-clk 'rdtsc'
+* Detected CPU: GenuineIntel P3 family, F6/M10/S4, 2493.00 mhz, 17-clk 'rdtsc'
 * CPU Features: RDTSC, MMX, SSE, SSE2
 
 Initializing File System...
 using fs-ltx fsgame.ltx
-FS: 30290 files cached, 5158Kb memory used.
-Init FileSystem 0.540302 sec
-'xrCore' build 8757, Jan 28 2023
+FS: 30287 files cached, 5158Kb memory used.
+Init FileSystem 0.528224 sec
+'xrCore' build 8758, Jan 29 2023
 
 Initializing Engine...
 Executing config-script "user.ltx"...
@@ -14,9 +14,9 @@ Starting INPUT device...
 Loading DLL: xrRender_R2.dll
 Loading DLL: xrGame.dll
 ! Unable to find Software\GSC Game World\STALKER-SHOC\ in registry
-* [win32]: free[3886248 K], reserved[84224 K], committed[223768 K]
+* [win32]: free[3891064 K], reserved[83920 K], committed[219256 K]
 * [ D3D ]: textures[0 K]
-* [x-ray]: process heap[10417 K], game lua[0 K], engine lua[0 K], render[0 K]
+* [x-ray]: process heap[10408 K], game lua[0 K], engine lua[0 K], render[0 K]
 * [x-ray]: economy: strings[2021 K], smem[0 K]
 Executing config-script "d:\engine\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx"...
 ! cant convert dik_name for dik[144], prop=[
@@ -65,7 +65,7 @@ Starting RENDER device...
 ! Renderer doesn't support blender 'effects\shadow_world'
 ! Version conflict in shader 'effects\watertest-1'
 count of .thm files=6
-load time=12 ms
+load time=14 ms
 * NULLRT supported
 * ...and used
 * HWDST/PCF supported and used
@@ -121,58 +121,91 @@ Loading DLL: xrGameSpy.dll
 [16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
 [16-9] get_xml_name for[ui_mm_main.xml] returns [ui_mm_main.xml]
 [16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[ui_mm_mp.xml] returns [ui_mm_mp.xml]
+[16-9] get_xml_name for[ui_mm_mp_tabclient.xml] returns [ui_mm_mp_tabclient.xml]
+[16-9] get_xml_name for[ui_mm_mp_tabserver.xml] returns [ui_mm_mp_tabserver.xml]
+[16-9] get_xml_name for[ui_mm_mp_taboptions.xml] returns [ui_mm_mp_taboptions.xml]
+[16-9] get_xml_name for[ui_mm_mp_gs_ext.xml] returns [ui_mm_mp_gs_ext_16.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+! Unable to find Software\GSC Game World\STALKER-SHOC\ in registry
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+! Unable to find Software\GSC Game World\STALKER-SHOC\ in registry
+! Unable to find Software\GSC Game World\STALKER-SHOC\ in registry
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+No new patches are available.
+! Unknown command:  mm_net_use_battleye
+! Unknown command:  mm_net_filter_battleye
+! Unable to find Software\GSC Game World\STALKER-SHOC\ in registry
+[16-9] get_xml_name for[ui_mapinfo.xml] returns [ui_mapinfo.xml]
+[16-9] get_xml_name for[ui_mapinfo.xml] returns [ui_mapinfo.xml]
+[16-9] get_xml_name for[ui_mapinfo.xml] returns [ui_mapinfo.xml]
+[16-9] get_xml_name for[ui_mapinfo.xml] returns [ui_mapinfo.xml]
+[16-9] get_xml_name for[ui_mapinfo.xml] returns [ui_mapinfo.xml]
+[16-9] get_xml_name for[ui_mapinfo.xml] returns [ui_mapinfo.xml]
+[16-9] get_xml_name for[ui_mapinfo.xml] returns [ui_mapinfo.xml]
+[16-9] get_xml_name for[ui_mapinfo.xml] returns [ui_mapinfo.xml]
+! Unknown command:  mm_net_use_battleye
+! Unknown command:  mm_net_filter_battleye
 * DVB created: 1536K
 * DIB created: 512K
 - r__tf_aniso 16
 - r2_tf_mipbias 0.
 * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
 * GPU vertex cache: unrecognized, 16
-*** RESET [319 ms]
+*** RESET [318 ms]
 "d:\engine\blackholeengine\release-win32\binaries\xr_3da.exe" 
 * phase time: 0 ms
-* phase cmem: 100409 K
+* phase cmem: 118518 K
 Кэширование объектов...
 Loading objects...
 Loading models...
-* [prefetch] time:    1321 ms
-* [prefetch] memory:  422549Kb
-* phase time: 1339 ms
-* phase cmem: 509985 K
+* [prefetch] time:    2775 ms
+* [prefetch] memory:  422536Kb
+* phase time: 2800 ms
+* phase cmem: 528077 K
 Сервер: Старт...
-* phase time: 26 ms
-* phase cmem: 510208 K
+* phase time: 32 ms
+* phase cmem: 512253 K
 Сервер: Загрузка симуляции жизни...
 * phase time: 9 ms
-* phase cmem: 510201 K
+* phase cmem: 512246 K
 Создание новой игры...
 * Creating new game...
 * Loading spawn registry...
 * 8641 spawn points are successfully loaded
 * Saving spawns...
 * Saving objects...
-* 17032 objects are successfully saved
+* 17092 objects are successfully saved
 * Game all.sav is successfully saved to file 'd:\engine\blackholeengine\release-win32\..\app_data\savedgames\all.sav'
 * New game is successfully created!
-* phase time: 1385 ms
-* phase cmem: 540647 K
+* phase time: 1319 ms
+* phase cmem: 542628 K
 Сервер: Соединяемся...
 MaxPlayers = 32
-* phase time: 13 ms
-* phase cmem: 540757 K
+* phase time: 14 ms
+* phase cmem: 542734 K
 Клиент: Соединение с localhost...
 # Player not found. New player created.
 * client : connection accepted - <>
 * phase time: 11 ms
-* phase cmem: 540781 K
+* phase cmem: 542759 K
 Открытие потока...
 * phase time: 10 ms
-* phase cmem: 540774 K
+* phase cmem: 542752 K
 Загрузка формы объектов...
-* phase time: 1338 ms
-* phase cmem: 613435 K
+* phase time: 1312 ms
+* phase cmem: 615413 K
 Загрузка шейдеров...
-* phase time: 121 ms
-* phase cmem: 614616 K
+* phase time: 125 ms
+* phase cmem: 616593 K
 Загрузка геометрии...
 * [Loading VB] 65532 verts, 2047 Kb
 * [Loading VB] 65525 verts, 2047 Kb
@@ -215,25 +248,25 @@ MaxPlayers = 32
 * [Loading IB] 1048575 indices, 2047 Kb
 * [Loading IB] 1048575 indices, 2047 Kb
 * [Loading IB] 718302 indices, 1402 Kb
-* phase time: 47 ms
-* phase cmem: 683435 K
+* phase time: 160 ms
+* phase cmem: 685396 K
 Загрузка базы пространств...
-* phase time: 385 ms
-* phase cmem: 687916 K
+* phase time: 346 ms
+* phase cmem: 689868 K
 Загрузка детальных объектов...
 * [DETAILS] VertexConsts(256), Batch(61)
 * [DETAILS] 40687 v(20), 26352 p
 * [DETAILS] Batch(61), VB(794K), IB(154K)
-* phase time: 23 ms
-* phase cmem: 688897 K
+* phase time: 26 ms
+* phase cmem: 690855 K
 Загрузка секторов и порталов...
 * Loading HOM: d:\engine\blackholeengine\release-win32\..\gamedata\levels\l01_escape\level.hom
-* phase time: 12 ms
-* phase cmem: 689073 K
+* phase time: 13 ms
+* phase cmem: 691025 K
 Загрузка ИИ объектов...
 - Loading music tracks from 'l01_escape_musics'...
-* phase time: 13 ms
-* phase cmem: 689113 K
+* phase time: 19 ms
+* phase cmem: 691064 K
 Клиент: Создание...
 - Game configuring : Started 
 - Game configuring : Finished 
@@ -316,19 +349,19 @@ MaxPlayers = 32
 [16-9] get_xml_name for[inventory_new.xml] returns [inventory_new_16.xml]
 [16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
 [16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
-* phase time: 76 ms
-* phase cmem: 697180 K
+* phase time: 80 ms
+* phase cmem: 698995 K
 Загрузка текстур...
 * t-report - base: 1447, 568679 K
 * t-report - lmap: 5, 5120 K
-* phase time: 335 ms
-* phase cmem: 995975 K
+* phase time: 984 ms
+* phase cmem: 997790 K
 Клиент: Синхронизация...
-* phase time: 17 ms
-* phase cmem: 995998 K
-* [win32]: free[2601976 K], reserved[79884 K], committed[1512380 K]
+* phase time: 16 ms
+* phase cmem: 997806 K
+* [win32]: free[2567404 K], reserved[109836 K], committed[1517000 K]
 * [ D3D ]: textures[573800 K]
-* [x-ray]: process heap[995998 K], game lua[22527 K], engine lua[125 K], render[0 K]
+* [x-ray]: process heap[997806 K], game lua[22484 K], engine lua[125 K], render[0 K]
 * [x-ray]: economy: strings[4664 K], smem[15587 K]
 [16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
 [16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
@@ -348,8 +381,8 @@ MaxPlayers = 32
 [16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
 [16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
 [16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
-Intro start 8466
-* MEMORY USAGE: 1037959 K
+Intro start 86001
+* MEMORY USAGE: 1041122 K
 [16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
 [16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
 [16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
@@ -362,87 +395,100 @@ Intro start 8466
 [16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
 [16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
 [16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
+[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
+[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
+[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
+[16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
+[16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
+[16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
+sv !ownership (entity already has parent) new_parent [0][actor:single_player] id_parent [0][actor:single_player] id_entity [23380][medkit:medkit23380] [92586]
+[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
+[16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
+[16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
+[16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
+[16-9] get_xml_name for[ui_mm_main.xml] returns [ui_mm_main.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[ui_mm_opt.xml] returns [ui_mm_opt.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[ui_keybinding.xml] returns [ui_keybinding.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+* DVB created: 1536K
+* DIB created: 512K
+- r__tf_aniso 16
+- r2_tf_mipbias 0.
+* GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+* GPU vertex cache: unrecognized, 16
+*** RESET [0 ms]
+* MEMORY USAGE: 1063355 K
+* DVB created: 1536K
+* DIB created: 512K
+- r__tf_aniso 16
+- r2_tf_mipbias 0.
+* GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+* GPU vertex cache: unrecognized, 16
+*** RESET [0 ms]
+* MEMORY USAGE: 1065337 K
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+* DVB created: 1536K
+* DIB created: 512K
+- r__tf_aniso 16
+- r2_tf_mipbias 0.
+* GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+* GPU vertex cache: unrecognized, 16
+*** RESET [305 ms]
+* phase time: 39 ms
+* phase cmem: 1037214 K
+Сервер: Загрузка симуляции жизни...
+* phase time: 17 ms
+* phase cmem: 1037300 K
+Загрузка игры "all.sav"...
+* Loading spawn registry...
+* 8641 spawn points are successfully loaded
+* Loading objects...
+* 17092 objects are successfully loaded
+* Game all is successfully loaded from file 'd:\engine\blackholeengine\release-win32\..\app_data\savedgames\all.sav' (0.617s)
+* phase time: 617 ms
+* phase cmem: 1039092 K
+Сервер: Соединяемся...
+* phase time: 19 ms
+* phase cmem: 1038814 K
+Клиент: Синхронизация...
+* phase time: 18 ms
+* phase cmem: 1038639 K
+* [win32]: free[2115220 K], reserved[296980 K], committed[1782040 K]
+* [ D3D ]: textures[583217 K]
+* [x-ray]: process heap[1038345 K], game lua[20708 K], engine lua[132 K], render[3686 K]
+* [x-ray]: economy: strings[5273 K], smem[15807 K]
+[16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
+[16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
+[16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
+[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
+* MEMORY USAGE: 1056657 K
 ~ g_god 1
 [16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
 [16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
 [16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
 [16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
 [16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
 [16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-!SV:ge_destroy: [239] not found on server
-!SV:ge_destroy: [247] not found on server
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-!SV:ge_destroy: [224] not found on server
-!SV:ge_destroy: [33800] not found on server
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-!SV:ge_destroy: [33799] not found on server
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-!SV:ge_destroy: [256] not found on server
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-sv !ownership (entity already has parent) new_parent [0][actor:single_player] id_parent [0][actor:single_player] id_entity [1058][outfit_bandit_m1:esc_outfit_bandit_m1] [59348]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[encyclopedia_item.xml] returns [encyclopedia_item.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
-[16-9] get_xml_name for[maingame_pda_msg.xml] returns [maingame_pda_msg.xml]
 [16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
 [16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
 [16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
-!SV:ge_destroy: [19204] not found on server
+[16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
+[16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
+[16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
+[16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
+[16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
+[16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
+~ demo_record 1
 [16-9] get_xml_name for[ui_mm_main.xml] returns [ui_mm_main.xml]
 [16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
 [16-9] get_xml_name for[message_box.xml] returns [message_box.xml]

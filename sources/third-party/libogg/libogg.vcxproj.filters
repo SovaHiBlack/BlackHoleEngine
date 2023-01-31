@@ -5,26 +5,32 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
+    <Filter Include="def">
+      <UniqueIdentifier>{f5fec4c9-f2a9-459e-bd84-a078b60aa86b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="def">
-      <UniqueIdentifier>{649fa0d3-11ed-4bfb-9e65-ec6f4949345b}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\vorbisfile.c">
+    <ClCompile Include="src\bitwise.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\framing.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\vorbis\vorbisfile.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\ogg\ogg.h">
+      <Filter>Shared Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ogg\os_types.h">
+      <Filter>Shared Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="libvorbisfile.def">
+    <None Include="ogg.def">
       <Filter>def</Filter>
     </None>
   </ItemGroup>

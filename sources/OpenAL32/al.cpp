@@ -18,10 +18,7 @@
  * Or go to http://www.gnu.org/copyleft/lgpl.html
  */
 
-
-
-
-#include "..\..\include\al\alc.h"
+#include "alc.h"
 #include "OpenAL32.h"
 
 typedef struct ALfunction_struct

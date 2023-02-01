@@ -18,14 +18,10 @@
  * Or go to http://www.gnu.org/copyleft/lgpl.html
  */
 
-
-
-
 #ifndef _AL_LIST_H_
 #define _AL_LIST_H_
 
-//.#include <al/al.h>
-#include "..\..\include\al\al.h"
+#include "al.h"
 
 #ifdef __cplusplus
 extern "C" {

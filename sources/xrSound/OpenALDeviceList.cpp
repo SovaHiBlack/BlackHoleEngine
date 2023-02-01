@@ -24,8 +24,8 @@
 #include "stdafx.h"
 
 #include "OpenALDeviceList.h"
-#include <al.h>
-#include <alc.h>
+#include <OpenAL32\al.h>
+#include <OpenAL32\alc.h>
 
 #pragma warning(push)
 #pragma warning(disable:4995)

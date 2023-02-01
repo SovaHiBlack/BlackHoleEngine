@@ -2,11 +2,11 @@
 #define SoundRender_CoreAH
 #pragma once
 
-#include "SoundRender_Core.h"            
+#include "SoundRender_Core.h"
 
-#include <al.h>
-#include <alc.h>
-//.#include <alut.h>
+#include <OpenAL32\al.h>
+#include <OpenAL32\alc.h>
+
 #include <eax.h>
 
 #include "OpenALDeviceList.h"

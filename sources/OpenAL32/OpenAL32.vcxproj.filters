@@ -31,5 +31,14 @@
     <ClInclude Include="OpenAL32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="al.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="alc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="alut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

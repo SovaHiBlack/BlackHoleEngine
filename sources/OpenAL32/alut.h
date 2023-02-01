@@ -1,7 +1,7 @@
 #ifndef _AL_ALUT_H
 #define _AL_ALUT_H
 
-#include <al.h>
+#include "al.h"
 
 #if defined(_WIN32) && !defined(_XBOX) && 0
  #if defined (_OPENAL32LIB)

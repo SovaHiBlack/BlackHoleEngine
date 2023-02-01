@@ -18,9 +18,6 @@
  * Or go to http://www.gnu.org/copyleft/lgpl.html
  */
 
-
-
-
 #ifndef _OPENAL32_H_
 #define _OPENAL32_H_
 
@@ -30,8 +27,7 @@ extern "C" {
 
 #define AL_BUILD_LIBRARY
 
-//.#include "al\al.h"
-#include "..\..\include\al\al.h"
+#include "al.h"
 
 // ALAPI
 typedef ALAPI ALvoid         (ALAPIENTRY *ALAPI_ENABLE)(ALenum capability);
@@ -205,8 +201,7 @@ typedef struct ALAPI_FXN_TABLE_STRUCT
 
 } ALAPI_FXN_TABLE;
 
-//.#include "al\alc.h"
-#include "..\..\include\al\alc.h"
+#include "alc.h"
 
 // ALCAPI
 typedef struct ALCdevice_struct ALCdevice;
@@ -268,9 +263,8 @@ typedef struct ALCAPI_FXN_TABLE_STRUCT
 
 } ALCAPI_FXN_TABLE;
 
-#include "windows.h"
+#include <windows.h>
 #include "alList.h"
-
 
 //*****************************************************************************
 // Additional Defines
@@ -321,4 +315,3 @@ extern ALCcontext* alCurrentContext;
 #endif
 
 #endif
-

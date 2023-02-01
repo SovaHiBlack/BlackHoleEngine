@@ -123,7 +123,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="libtheora.def">
+    <None Include="theora.def">
       <Filter>def</Filter>
     </None>
   </ItemGroup>

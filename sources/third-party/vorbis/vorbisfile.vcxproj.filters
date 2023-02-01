@@ -24,7 +24,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="libvorbisfile.def">
+    <None Include="vorbisfile.def">
       <Filter>def</Filter>
     </None>
   </ItemGroup>

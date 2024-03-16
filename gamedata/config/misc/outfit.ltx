@@ -21,7 +21,7 @@ $spawn 			= "outfit\novice_outfit"
 class			= E_STLK
 cform           = skeleton
 visual          = equipments\novice_suit
-actor_visual	= actors\hero\stalker_kurtka.ogf
+actor_visual	= actors\hero\stalker_novice.ogf
 
 ef_equipment_type	= 3
 
@@ -365,7 +365,7 @@ $prefetch 		= 32
 class			= E_STLK
 cform           = skeleton
 visual          = equipments\stalker_scient_suit	
-actor_visual	= actors\neytral\stalker_neytral_nauchniy.ogf
+actor_visual	= actors\hero\stalker_scien.ogf
 
 ef_equipment_type	= 2
 
@@ -712,7 +712,7 @@ fire_wound_immunity			= 0.01
 
 
 ;---------------------------------------------------------------------------------------------
-;		Œ¡€◊Õ€…  Œ—“ﬁÃ ”◊≈ÕŒ√Œ
+;		Œ¡€◊Õ€…  Œ—“ﬁÃ ”◊≈ÕÕŒ√Œ
 ;---------------------------------------------------------------------------------------------
 [ecolog_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -772,7 +772,7 @@ fire_wound_immunity			= 0.015
 
 
 ;---------------------------------------------------------------------------------------------
-;		” –≈œÀ≈ÕÕ€…  Œ—“ﬁÃ ”◊≈ÕŒ√Œ
+;		” –≈œÀ≈ÕÕ€…  Œ—“ﬁÃ ”◊≈ÕÕŒ√Œ
 ;---------------------------------------------------------------------------------------------
 [protection_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -798,7 +798,7 @@ inv_grid_y			= 16
 full_icon_name		= npc_icon_protection_outfit
 nightvision_sect	= effector_nightvision_good
 
-cost				= 25000
+cost				= 35000
 full_scale_icon		= 12,6			;ËÍÓÌÍ‡ ÒÚ‡ÎÍÂ‡ ‚ ÍÓÒÚ˛ÏÂ ‚ ÔÓÎÌ˚È ÓÒÚ
 
 immunities_sect			= sect_protection_outfit_immunities
@@ -1273,7 +1273,7 @@ inv_name_short		= bandit_master_outfit_name
 description			= bandit_master_outfit_description
 inv_weight			= 3.5
 inv_grid_width		= 2
-inv_grid_height		= 2
+inv_grid_height		= 3
 inv_grid_x			= 16
 inv_grid_y			= 29
 full_icon_name		= npc_icon_bandit_master_outfit
@@ -1371,7 +1371,7 @@ $prefetch 		= 32
 class			= E_STLK
 cform           = skeleton
 visual          = equipments\exoskelet	
-actor_visual	= actors\hero\stalker_mk1_exo.ogf
+actor_visual	= actors\neytral\stalker_neytral_exoskeleton.ogf
 
 ef_equipment_type	= 5
 
@@ -1385,37 +1385,38 @@ inv_grid_height		= 3
 inv_grid_x			= 14
 inv_grid_y			= 29
 full_icon_name		= npc_icon_neytral_exo_antigas_outfit
-nightvision_sect	=	
+nightvision_sect	=	effector_nightvision_bad
 
-cost				= 8000
+cost				= 18000
 full_scale_icon		= 2,11
 immunities_sect			= sect_neytral_exo_antigas_outfit_immunities
 
 ; MEDIUM RESISTANCE
-burn_protection 				= 0.2
-strike_protection 				= 0.2
-shock_protection 				= 0.2
-wound_protection				= 0.3
-radiation_protection 			= 0.0
+burn_protection 				= 0.3
+strike_protection 				= 0.3
+shock_protection 				= 0.3
+wound_protection				= 0.4
+radiation_protection 			= 0.35
 telepatic_protection 			= 0.0
-chemical_burn_protection 		= 0.1
-explosion_protection 			= 0.0
-fire_wound_protection  			= 0.23
+chemical_burn_protection 		= 0.2
+explosion_protection 			= 0.3
+fire_wound_protection  			= 0.25
 
-sprint_allowed				= true
+sprint_allowed					= true
+bones_koeff_protection			= exo_helmet_damage
 additional_inventory_weight		= 5
-additional_inventory_weight2		= 0
+additional_inventory_weight2	= 5
 
 [sect_neytral_exo_antigas_outfit_immunities]
 burn_immunity				= 0.03
 strike_immunity				= 0.01
 shock_immunity				= 0.03
-wound_immunity				= 0.01
+wound_immunity				= 0.020
 radiation_immunity			= 0.00
 telepatic_immunity			= 0.00
-chemical_burn_immunity			= 0.03
-explosion_immunity			= 0.03
-fire_wound_immunity			= 0.005
+chemical_burn_immunity		= 0.04
+explosion_immunity			= 0.04
+fire_wound_immunity			= 0.010
 ;===========================================Veteran_bandit========================
 [bandit_veteran_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -1434,7 +1435,7 @@ inv_name_short		= bandit_veteran_outfit_name
 description			= bandit_veteran_outfit_description
 inv_weight			= 3.5
 inv_grid_width		= 2
-inv_grid_height		= 2
+inv_grid_height		= 3
 inv_grid_x			= 12
 inv_grid_y			= 29
 full_icon_name		= npc_icon_bandit_veteran_outfit

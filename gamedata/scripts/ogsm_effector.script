@@ -1,6 +1,6 @@
------------------ Схема пост-процессинга пси-зон для OGSM 2.4 -----------------
+----------------- Схема пост-процессинга пси-зон для OGSM 2.x -----------------
 
-------------------------- Copyright 2007-2018 DEXXX ---------------------------
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
 
 
 local sound_obj_right = xr_sound.get_safe_sound_object([[ambient\random\rnd_the_horror]])
@@ -47,7 +47,7 @@ function action_postprocess:update(delta)
 	
 	self.actor_inside = self.object:inside(db.actor:position())
 	
-	if ogsm_options.psy_zones == 1 and self.actor_inside == true and not ogsm_hideout.is_in_specific_zone(db.actor) and not ogsm_hideout.is_in_hide(db.actor) then
+	if ogsm_psyzones and self.actor_inside == true and not ogsm_hideout.is_in_specific_zone(db.actor) and not ogsm_hideout.is_in_hide(db.actor) then
 		self.play_sounds()
 		self.gen_phantoms()
 		self.update_hit()
@@ -162,6 +162,22 @@ function set_scheme(npc, ini, scheme, section, gulag_name)
 end
 
 
------------------ Схема пост-процессинга пси-зон для OGSM 2.4 -----------------
+----------------- Схема пост-процессинга пси-зон для OGSM 2.x -----------------
 
-------------------------- Copyright 2007-2018 DEXXX ---------------------------
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
+
+--[[
+
+If you're going to use the whole of this script or its parts in your own creative 
+developments for the S.T.A.L.K.E.R. game, please don't become such a goddamn 
+motherfucker like the notorious author of the ABC Mod - Carbrobro. Leave the 
+copyrights, note the real author(s) and don't claim others' ideas and their 
+realization to be your own ones. It's just simple Modmakers' Ethics. Thank you!
+
+Если вы собираетесь использовать данный скрипт целиком или частично в своих 
+разработках по игре S.T.A.L.K.E.R., пожалуйста не опускайтесь до уровня печально 
+известного автора ABC мода - Carbrobro. Не удаляйте копирайты, указывайте настоящего 
+автора(ов) и не выдавайте чужие идеи и их реализацию за свои. Ведь это элементарная 
+этика модостроителей! Спасибо за понимание.
+
+]]--

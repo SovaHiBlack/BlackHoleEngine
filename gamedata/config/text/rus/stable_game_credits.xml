@@ -10,7 +10,7 @@
 	</string>
 
 	<string id="ogsm_dexxx">
-		<text>DEXXX\n(идея, скрипты, конфиги, звук, текстуры)</text>
+		<text>DEXXX\n(идея, скрипты, конфиги, звук, текстуры)\nOffbar (скрипты)</text>
 	</string>
 
 	<string id="ogsm_testers">
@@ -18,7 +18,7 @@
 	</string>
 
 	<string id="ogsm_testers_list">
-		<text>shrmn\ndarkomen\nkomissar1973\nchimera777\nSirShex</text>
+		<text>darkomen\nkomissar1973\nchimera777\nSirShex</text>
 	</string>
 
 	<string id="ogsm_assist">
@@ -26,7 +26,7 @@
 	</string>
 
 	<string id="ogsm_assist_list">
-		<text>xStream\nRed75\nlvg_brest\nOffbar</text>
+		<text>xStream\nRed75</text>
 	</string>
 
 	<string id="ogsm_assist_list2">
@@ -38,63 +38,63 @@
 	</string>
 
 	<string id="ogsm_modders">
-		<text>В моде использованы материалы из:</text>
+		<text>В моде использованы разработки из:</text>
 	</string>
 
 	<string id="ogsm_modders_1">
 		<text>bug_fix_attempt от bardak</text>
 	</string>
 	<string id="ogsm_modders_2">
-		<text>Patch 1.0007 от lvg_brest</text>
-	</string>
-	<string id="ogsm_modders_3">
 		<text>PsyZones_and_Emission от LLSNeitrino</text>
 	</string>
-	<string id="ogsm_modders_4">
+	<string id="ogsm_modders_3">
 		<text>Artefact Activation Mod от BAC9-FLCL</text>
 	</string>
-	<string id="ogsm_modders_5">
-		<text>Stalkers_are_not_blind и Stories Revival Mod от Red75</text>
+	<string id="ogsm_modders_4">
+		<text>Stalkers_are_not_blind от Red75</text>
 	</string>
-	<string id="ogsm_modders_6">
+	<string id="ogsm_modders_5">
 		<text>Dream Mod от Аb@dDon</text>
 	</string>
-	<string id="ogsm_modders_7">
+	<string id="ogsm_modders_6">
 		<text>All_armor_mod от DJekman</text>
 	</string>
-	<string id="ogsm_modders_8">
+	<string id="ogsm_modders_7">
 		<text>text_fix_full от Stabow</text>
 	</string>
-	<string id="ogsm_modders_9">
-		<text>Arena_Extension_Mod и Dynamic_Campfire_Mod от kstn</text>
+	<string id="ogsm_modders_8">
+		<text>Arena_Extension_Mod от kstn</text>
 	</string>
-	<string id="ogsm_modders_10">
+	<string id="ogsm_modders_9">
 		<text>UIRadiation Mod от sokol_jack</text>
 	</string>
-	<string id="ogsm_modders_11">
-		<text>Real Artifacts Activation In Fps от cOldSnake</text>
+	<string id="ogsm_modders_10">
+		<text>Stories Revival Mod от Red75</text>
 	</string>
-	<string id="ogsm_modders_12">
+	<string id="ogsm_modders_11">
 		<text>RagDoll Mod от LexMalin</text>
 	</string>
+	<string id="ogsm_modders_12">
+		<text>Garbage Blockpost Bribe Mod от XiaNi</text>
+	</string>
 	<string id="ogsm_modders_13">
-		<text>Treasure Mod от ежж</text>
+		<text>Steel Mod от Danila_STALKER</text>
 	</string>
 	<string id="ogsm_modders_14">
-		<text>Ammo_fix от IG-2007</text>
+		<text>Treasure Mod от ежж</text>
 	</string>
 	<string id="ogsm_modders_15">
-		<text>AI Pack и прочих замечательных творений от xStream</text>
+		<text>Ammo_fix от IG-2007</text>
 	</string>
 	<string id="ogsm_modders_16">
-		<text>а также работ LWR, Ирбис, MacroN, Argus, Xiani, OGSE Team\nи возможно других, чье авторство установить не удалось</text>
+		<text>AI Pack и прочих замечательных творений от xStream</text>
 	</string>
 
 	<string id="ogsm_forum">
-		<text>Больше интересных модов на нашем сайте</text>
+		<text>Посетите наш форум на</text>
 	</string>
 	<string id="ogsm_link">
-		<text>www.ogsmod.ru</text>
+		<text>www.gsc-game.ru</text>
 	</string>
 
 	<string id="ogsm_thanx">
@@ -105,7 +105,7 @@
 	</string>
 
 	<string id="ogsm_barnaul">
-		<text>©2007-2018 Developed in Barnaul, Russia</text>
+		<text>©2007-2008 Developed in Barnaul, Russia</text>
 	</string>
 
 	<string id="st_stuff">

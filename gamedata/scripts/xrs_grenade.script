@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------------------------------------------
 --'	Сумасшедший придурок швыряется гранатами
---'	ver: 2.0
+--' ver: 2.0
 --'	автор: xStream
 --'	TODO: 
 ----------------------------------------------------------------------------------------------------------------------
@@ -116,18 +116,8 @@ function evaluator_crazy_grenadier:evaluate()
 			self.a.test_running = false
 			self.a.test_begun = false
 			self.a.next_check_time = time_global() + 1000
-			if alife():object(self.a.test_grenades.hi) then
-				local obj = alife():object(self.a.test_grenades.hi)
-				if obj then
-					local result = pcall(prot_release_1, obj)
-				end 
-			end
-			if alife():object(self.a.test_grenades.lo) then
-				local obj = alife():object(self.a.test_grenades.lo)
-				if obj then
-					local result = pcall(prot_release_1, obj)
-				end
-			end
+			if alife():object(self.a.test_grenades.hi) then alife():release(alife():object(self.a.test_grenades.hi)) end
+			if alife():object(self.a.test_grenades.lo) then alife():release(alife():object(self.a.test_grenades.lo)) end
 			test_grenades[self.a.test_grenades.hi]=nil
 			test_grenades[self.a.test_grenades.lo]=nil
 			return false
@@ -176,14 +166,8 @@ function evaluator_crazy_grenadier:evaluate()
 					self.a.throwing=true
 				end
 				
-				local obj_1 = alife():object(self.a.test_grenades.hi)
-				if obj_1 then
-					local result = pcall(prot_release_3, obj_1)
-				end
-				local obj_2 = alife():object(self.a.test_grenades.lo)
-				if obj_2 then
-					local result = pcall(prot_release_4, obj_2)
-				end
+				alife():release(alife():object(self.a.test_grenades.hi))
+				alife():release(alife():object(self.a.test_grenades.lo))
 				test_grenades[self.a.test_grenades.hi]=nil
 				test_grenades[self.a.test_grenades.lo]=nil
 				
@@ -625,7 +609,7 @@ function update(delta)
 						pseudo_grenades[a.id]=true
 					end
 				end
-				local result = pcall(prot_release_2, sobj)
+				alife():release(sobj)
 				grenades[k]=nil
 			end
 		else
@@ -637,7 +621,7 @@ function update(delta)
 		local sobj = alife():object(k)
 		if sobj then
 			if time_global()>v then
-				local result = pcall(prot_release_2, sobj)
+				alife():release(sobj)
 				test_grenades[k]=nil
 			end
 		else
@@ -652,7 +636,7 @@ function death_callback(npc)
 		local grenade = grenadiers[npc:id()]
 		local dummy,timeout = get_grenade_radius(get_grenade(grenade):section())
 		grenade = alife():create(get_grenade(grenade):section(), npc:bone_position(grenade_bone), npc:level_vertex_id(), npc:game_vertex_id())
-		grenades[grenade.id] = time_global() + timeout
+		grenades[grenade.id] = time_global() + timeout		
 		grenadiers[npc:id()]=nil
 	end
 	
@@ -667,10 +651,7 @@ function death_callback(npc)
 		end
 	end, npc)
 	for k,v in pairs(remove_grenades) do
-		local obj = alife():object(v)
-		if obj then
-			local result = pcall(prot_release_1, obj)
-		end
+		alife():release(alife():object(v),true)
 	end
 end
 
@@ -735,7 +716,7 @@ function net_spawn()
 		if sobj then
 			for k,v in pairs(gr_types) do
 				if sobj:section_name()==v.."_test" or sobj:section_name()==v.."_fake" then
-					local result = pcall(prot_release_2, sobj)
+					alife():release(sobj)
 					break
 				end
 			end
@@ -747,27 +728,8 @@ function fake_pickup(obj)
 	level.map_remove_object_spot(obj:id(), "grenade_location")
 	for k,v in pairs(gr_types) do
 		if obj:section()==v.."_test" or obj:section()==v.."_fake" then
-			local obj = alife():object(obj:id())
-			if obj then
-				local result = pcall(prot_release_1, obj)
-			end
+			alife():release(alife():object(obj:id()))
 			return
 		end
 	end
-end
-
-function prot_release_1(obj)
-	alife():release(obj, true)
-end
-
-function prot_release_2(sobj)
-	alife():release(sobj, true)
-end
-
-function prot_release_3(obj_1)
-	alife():release(obj_1, true)
-end
-
-function prot_release_4(obj_2)
-	alife():release(obj_2, true)
 end

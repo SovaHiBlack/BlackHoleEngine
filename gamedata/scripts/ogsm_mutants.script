@@ -1,6 +1,6 @@
----------------------- Обработчик монстров для OGSM 2.4 -----------------------
+---------------------- Обработчик монстров для OGSM 2.x -----------------------
 
-------------------------- Copyright 2007-2018 DEXXX ---------------------------
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
 
 class "MutantManager"
 
@@ -52,7 +52,7 @@ end
 if self.object:section()=="burer_strong" and self.object:alive() then
 	local posit = self.object:position()
 
-	if db.actor and db.actor:alive() and posit:distance_to(db.actor:position()) < 20 then
+	if posit:distance_to(db.actor:position()) < 20 then
 		level.add_pp_effector("dead_zone.ppe", 1002, true)
 		psy_burer(self.object)
 	end
@@ -60,19 +60,8 @@ else
 	level.remove_pp_effector(1002)
 end
 
---[[ Звуковой эффект при приближении к контролёру
-
-if string.find(self.object:section(), "controller") and self.object:alive() then
-	local posit = self.object:position()
-
-	if db.actor and db.actor:alive() and posit:distance_to(db.actor:position()) < 20 then
-		psy_controller(self.object)	
-	end
 end
 
-]]-- устарело
-
-end
 
 function MutantManager:on_death(param)
 
@@ -95,7 +84,6 @@ if self.object:who_hit_name()=="single_player" then
 
 	if self.object:section()=="zombie_plague" then
 		if not has_alife_info("zombie_plague_dead") then db.actor:give_info_portion("zombie_plague_dead") end
-		stop_insects()
 	end
 
 	if self.object:section()=="burer_strong" then
@@ -191,8 +179,6 @@ local insect_sound = sound_object([[anomaly\flies]])
 local sound_obj_right = sound_object([[ambient\random\rnd_moan1]])
 local sound_obj_left = sound_object([[ambient\random\rnd_moan2]])
 
-local sound_obj_right_cntrl = sound_object([[monsters\controller\controller_presence_1]])
-local sound_obj_left_cntrl = sound_object([[monsters\controller\controller_presence_2]])
 
 -- Взрыв зомби-камикадзе
 function blow_zombie(p_obj)
@@ -226,17 +212,10 @@ if p_obj then
 		alife():create("af_zombie_hand", p_obj:position(), p_obj:level_vertex_id(), p_obj:game_vertex_id())
 	end
 
-	local obj = alife():object(p_obj:id())
-	if obj then
-		local result = pcall(prot_release_om, obj)
-	end
-
+	alife():release(alife():object(p_obj:id()))
 end
 end
 
-function prot_release_om(obj)
-	alife():release(obj, true)
-end
 
 -- Разряд электрохимеры
 function charge_chimera(p_obj)
@@ -299,12 +278,6 @@ if p_obj then
 end
 end
 
--- Удаление насекомых после убийства чумного зомби
-function stop_insects()
-	if insect_particle:playing() then
-		insect_particle:stop()
-	end
-end
 
 -- Аура пси-бюрера
 function psy_burer(p_obj)
@@ -319,16 +292,16 @@ zh.direction = p_obj:position():sub(db.actor:position())
 zh:bone("pelvis")
 zh.power = 0.1
 
-if not sound_obj_left:playing() then
+if not sound_obj_left:playing() then 
 	local i=math.random(1,4)
 	if i==1 then sound_obj_left = sound_object([[ambient\random\rnd_moan1]])
 	elseif i==2 then sound_obj_left = sound_object([[ambient\random\rnd_moan2]])
 	elseif i==3 then sound_obj_left = sound_object([[ambient\random\rnd_moan4]])
 	elseif i==4 then sound_obj_left = sound_object([[ambient\random\rnd_moan5]])
 	end
-	if sound_obj_left then
-		sound_obj_left:play_at_pos(db.actor, vector():set(1, 0, 1), 0, sound_object.s2d)
-	end
+
+	sound_obj_left:play_at_pos(db.actor, vector():set(1, 0, 1), 0, sound_object.s2d)
+
 	db.actor:hit(zh)
 end
 
@@ -339,47 +312,30 @@ if not sound_obj_right:playing() then
 	elseif j==3 then sound_obj_right = sound_object([[ambient\random\rnd_moan4]])
 	elseif j==4 then sound_obj_right = sound_object([[ambient\random\rnd_moan5]])
 	end
-	if sound_obj_right then
-		sound_obj_right:play_at_pos(db.actor, vector():set(-1, 0, 1), 0, sound_object.s2d)
-	end
+
+	sound_obj_right:play_at_pos(db.actor, vector():set(-1, 0, 1), 0, sound_object.s2d) 
+
 	db.actor:hit(zh)
 end
 
 end
 
--- Звуковая аура контролёра, lvg_brest
-function psy_controller(p_obj)
+---------------------- Обработчик монстров для OGSM 2.x -----------------------
 
-sound_obj_right_cntrl.volume = 0.5
-sound_obj_left_cntrl.volume = 0.5
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
 
-if not sound_obj_left_cntrl:playing() then
-	local i=math.random(1,4)
-	if i==1 then sound_obj_left_cntrl = sound_object([[monsters\controller\controller_presence_1]])
-	elseif i==2 then sound_obj_left_cntrl = sound_object([[monsters\controller\controller_presence_2]])
-	elseif i==3 then sound_obj_left_cntrl = sound_object([[monsters\controller\controller_presence_3]])
-	elseif i==4 then sound_obj_left_cntrl = sound_object([[monsters\controller\controller_presence_4]])
-	end
-	if sound_obj_left_cntrl then
-		sound_obj_left_cntrl:play_at_pos(db.actor, vector():set(1, 0, 1), 0, sound_object.s2d)
-	end
-end
+--[[
 
-if not sound_obj_right_cntrl:playing() then
-	local j=math.random(1,4)
-	if j==1 then sound_obj_right_cntrl = sound_object([[monsters\controller\controller_presence_1]])
-	elseif j==2 then sound_obj_right_cntrl = sound_object([[monsters\controller\controller_presence_2]])
-	elseif j==3 then sound_obj_right_cntrl = sound_object([[monsters\controller\controller_presence_3]])
-	elseif j==4 then sound_obj_right_cntrl = sound_object([[monsters\controller\controller_presence_4]])
-	end
-	if sound_obj_right_cntrl then
-		sound_obj_right_cntrl:play_at_pos(db.actor, vector():set(-1, 0, 1), 0, sound_object.s2d)
-	end
-end
+If you're going to use the whole of this script or its parts in your own creative 
+developments for the S.T.A.L.K.E.R. game, please don't become such a goddamn 
+motherfucker like the notorious author of the ABC Mod - Carbrobro. Leave the 
+copyrights, note the real author(s) and don't claim others' ideas and their 
+realization to be your own ones. It's just simple Modmakers' Ethics. Thank you!
 
-end
+Если вы собираетесь использовать данный скрипт целиком или частично в своих 
+разработках по игре S.T.A.L.K.E.R., пожалуйста не опускайтесь до уровня печально 
+известного автора ABC мода - Carbrobro. Не удаляйте копирайты, указывайте настоящего 
+автора(ов) и не выдавайте чужие идеи и их реализацию за свои. Ведь это элементарная 
+этика модостроителей! Спасибо за понимание.
 
-
----------------------- Обработчик монстров для OGSM 2.4 -----------------------
-
-------------------------- Copyright 2007-2018 DEXXX ---------------------------
+]]--

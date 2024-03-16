@@ -108,7 +108,11 @@
 	<article>zone_artifact_af-medusa</article>
  </info_portion>
 
-  <info_portion id="encyclopedy_zone_artifact_af-cristall-flower">
+  <info_portion id="encyclopedy_zone_surge">
+	<article>zone_surge</article>
+ </info_portion>
+
+   <info_portion id="encyclopedy_zone_artifact_af-cristall-flower">
 	<article>zone_artifact_af-cristall-flower</article>
  </info_portion>
  
@@ -227,15 +231,7 @@
  <info_portion id="encyclopedy_zone_zone-story_story-raid">
 	<article>zone_zone-story_story-raid</article>
  </info_portion>
-
-  <info_portion id="encyclopedy_zone_surge">
-	<article>zone_surge</article>
- </info_portion>
-
-  <info_portion id="encyclopedy_zone_psy">
-	<article>zone_psy</article>
- </info_portion>
-
+ 
   <info_portion id="encyclopedy_zone_anomalies_bald">
 	<article>zone_anomalies_bald</article>
  </info_portion>

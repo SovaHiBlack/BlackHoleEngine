@@ -7,12 +7,11 @@
 		<name>pri_trader_name</name>
 		<icon>ui_npc_u_stalker_bandit_veteran</icon>
 		<map_icon x="2" y="2"></map_icon>
-		<bio>pri_trader_bio</bio>
 		
 		<class>pri_trader_profile</class>
 		<community>trader</community> 
 	
-		<rank>863</rank>
+		<rank>963</rank>
 		<reputation>0</reputation>
 
 		<visual>actors\bandit\stalker_bandit_veteran</visual>

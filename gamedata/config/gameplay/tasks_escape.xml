@@ -124,7 +124,6 @@
 		<objective>
 			<text>esc_defend_lager_from_killers_2</text>
 			<map_location_type hint="novice_leader">green_location</map_location_type>
-			<map_location_hidden>1</map_location_hidden>
 			<object_story_id>esc_lager_leader</object_story_id>
 			<infoportion_complete>escape_lager_complete</infoportion_complete>
 			<infoportion_fail>esc_fanat_die</infoportion_fail>
@@ -150,42 +149,42 @@
 	
 	<game_task id="esc_flash_task" prio="495">
 		<title>tutorial_help_wounded</title>
-		<objective key="0">
+		<objective>
 			<text>tutorial_help_wounded</text>
 			<icon>ui_iconsTotal_tutorial_help_wounded</icon>
 			<infoportion_complete>esc_serious_talk</infoportion_complete>
 			<article>esc_flash_task_descr</article>
 		</objective>
-		<objective key="1">
+		<objective>
 			<text>tutorial_help_wounded_1</text>
 			<map_location_type hint="volk">green_location</map_location_type>
 			<object_story_id>Escape_novice_lager_volk</object_story_id>
 			<infoportion_complete>esc_kill_bandits_quest_have</infoportion_complete>
 			<function_fail>escape_tasks.task_volk_fail</function_fail>
 		</objective>
-		<objective key="2">
+		<objective>
 			<text>esc_dinamit_to_volk_1</text>
 			<map_location_type hint="wolfs_rangers">green_location</map_location_type>
 			<object_story_id>Escape_bridge_stalkers</object_story_id>
 			<map_location_hidden>1</map_location_hidden>
-			<function_complete>escape_tasks.petruha_talk</function_complete>
+			<function_complete>escape_tasks.petruha_talk</function_complete>			
 			<infoportion_fail>esc_petruha_die</infoportion_fail>
 		</objective>
-		<objective key="3">
+		<objective>
 			<text>esc_dinamit_to_volk</text>
 			<map_location_type hint="esc_dinamit_to_volk">green_location</map_location_type>
 			<map_location_hidden>1</map_location_hidden>
 			<object_story_id>esc_bandits_factory</object_story_id>
 			<infoportion_complete>esc_kill_bandits_quest_kill</infoportion_complete>
 		</objective>
-		<objective key="4">
+		<objective>
 			<text>tutorial_help_wounded_2</text>
 			<map_location_type hint="tutorial_wounded">green_location</map_location_type>
-			<map_location_hidden>1</map_location_hidden>
 			<object_story_id>Escape_tutorial_wounded</object_story_id>
+			<map_location_hidden>1</map_location_hidden>
 			<infoportion_complete>tutorial_wounded_give_info</infoportion_complete>
 		</objective>
-		<objective key="5">
+		<objective>
 			<text>tutorial_help_wounded_3</text>
 			<map_location_type hint="escape_trader">blue_location</map_location_type>
 			<object_story_id>Escape_Trader</object_story_id>

@@ -1,6 +1,6 @@
-------------- Спавн вырезанных монстров и укрытий для OGSM 2.4 ----------------
+------------- Спавн вырезанных монстров и укрытий для OGSM 2.x ----------------
 
-------------------------- Copyright 2007-2018 DEXXX ---------------------------
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
 
 local list_mob_ids = {}
 
@@ -167,7 +167,7 @@ function get_level_mobs()
 for i=1,65535 do
 	local obj = alife():object(i)
 	if obj then
-		if string.find(get_monster_portion(obj.id), level.name()) then
+		if string.find(get_monster_portion(obj.id), level.name()) then 
 			list_mob_ids[obj.id] = obj.id
 		end
 		if string.find(obj:name(), level.name().."_hide_restrictor") then
@@ -183,28 +183,11 @@ end
 
 -- Удаление трупов монстров
 function remove_corpse(p_id)
-local dist_to_mob = 15
-local dist_current = dist_to_mob
 local obj = alife():object(p_id)
-local sobj = level.object_by_id(p_id)
-	if sobj then
-		local posobj = sobj:position()
-		local actorpos = db.actor:position()
-		dist_current = posobj:distance_to(actorpos)
-	end
-	if obj then
-		if (dist_current >= dist_to_mob) then
-			local result = pcall(prot_release_or, obj)
-			if result == true then
-				list_mob_ids[p_id] = nil
-			end
-		end
-	end
-end
-
-
-function prot_release_or(obj)
+if obj then
 	alife():release(obj, true)
+	list_mob_ids[p_id] = nil
+end
 end
 
 
@@ -227,7 +210,7 @@ function parse_custom_data(str)
      for k, v in string.gfind(line, "(.*)") do
       k = trim(k)
       if k~=nil and k~='' then
-       t[section][k]="<<no_value>>"
+       t[section][k]="<<no_value>>" 
       end
      end
     end
@@ -275,7 +258,7 @@ end
 
 local qnt
 
-if cnt == 0 then qnt = p_count else qnt = ogsm_options.resp_index*p_count - cnt end
+if cnt == 0 then qnt = p_count else qnt = vars.resp_index*p_count - cnt end
 
 if qnt>=1 then
 	for ind = 1, qnt do
@@ -412,9 +395,6 @@ spawn_restrictor("l01_escape", vector():set(-119.7,-30.04,-386.4), 133789, 27, "
 spawn_restrictor("l01_escape", vector():set(-140.7,-29.68,-361.2), 109717, 18, "military", 4)
 -- Мельница
 spawn_restrictor("l01_escape", vector():set(13.3,2.7,98.7), 290783, 92, "military", 3)
--- Домик при выходе на Свалку -- добавил KamikaZze
-spawn_restrictor("l01_escape", vector():set(28,16.5,680), 308939, 208, "stalker_bandit", 3)
-
 
 -----------------------
 -- Укрытия на Свалке --
@@ -426,9 +406,6 @@ spawn_restrictor("l02_garbage", vector():set(-61.6,0.75,9.1), 135489, 330, "stal
 spawn_restrictor("l02_garbage", vector():set(66.5,0.6,144.9), 237602, 364, "bandit", 2)
 -- Ангар - западная часть
 spawn_restrictor("l02_garbage", vector():set(-102.9,0.44,11.9), 110339, 328, "bandit", 6)
--- Вагончик Долга на Свалке -- добавил KamikaZze
-spawn_restrictor("l02_garbage", vector():set(43.5,0.9,239.5), 217299, 359, "stalker_military_freedom_dolg_killer_bandit", 2)
-
 
 --------------------------
 -- Укрытия на Агропроме --
@@ -526,8 +503,6 @@ spawn_restrictor("l07_military", vector():set(9.1,-7.28,16.1), 316470, 1546, "fr
 spawn_restrictor("l07_military", vector():set(57.4,-8.054,16.8), 356438, 1546, "freedom", 6)
 -- Кухня
 spawn_restrictor("l07_military", vector():set(-77,-11.34,30.1), 235657, 1546, "freedom", 6)
--- Домик сумасшедшего сталкера -- добавил Dusty79
-spawn_restrictor("l07_military", vector():set(102.35,-8.35,165.85), 297156, 1643, "stalker", 1)
 
 -----------------------
 -- Укрытия на Янтаре --
@@ -535,9 +510,6 @@ spawn_restrictor("l07_military", vector():set(102.35,-8.35,165.85), 297156, 1643
 
 -- Бункер ученых
 spawn_restrictor("l08_yantar", vector():set(31.5,-11.68,-272.3), 54643, 1459, "fake_", 6)
--- Янтарь, глубь тоннеля -- добавил KamikaZze
-spawn_restrictor("l08_yantar", vector():set(126,-8,-179), 108475, 1471, "stalker_dolg_csky", 4)
-spawn_restrictor("l08_yantar", vector():set(129,-8,-128), 110529, 1470, "stalker_dolg_csky", 4)
 
 -----------------------
 -- Укрытия на Радаре --
@@ -549,8 +521,6 @@ spawn_restrictor("l10_radar", vector():set(650.955,-43.887,182.48), 226701, 1868
 spawn_restrictor("l10_radar", vector():set(147.35,-9.277,-24.21), 52689, 1868, "dolg_freedom_stalker_military_monolith", 4)
 -- Казармы на Радаре
 spawn_restrictor("l10_radar", vector():set(33.6,-3.38,-42), 21487, 1868, "dolg_freedom_stalker_military_monolith", 4)
--- Радар, домик торговца -- добавил KamikaZze
-spawn_restrictor("l10_radar", vector():set(-29.5,1.5,-48), 1378, 1961, "stalker_monolith", 3)
 
 -----------------------
 -- Укрытия в Припяти --
@@ -631,6 +601,7 @@ proceed_spawn("tushkano_weak", vector():set(114, 1, 58), 1, 813, 7, "l04_darkval
 
 proceed_spawn("cat_weak", vector():set(270, 2, -92), 1, 1233, 2, "l05_bar_cat_portion_1")
 proceed_spawn("cat_weak", vector():set(208, 5, -92), 1, 1233, 2, "l05_bar_cat_portion_2")
+proceed_spawn("chimera_weak", vector():set(275, 5, -152), 1, 1233, 1, "l05_bar_chimera_portion_1")
 
 -----------------------
 -- Монстры на Ростке --
@@ -733,11 +704,11 @@ alife():create("burer_strong", vector():set(12, 1, 34), 1, 2404)
 alife():create("burer_weak", vector():set(66, 1, 8.5), 1, 2404)
 
 
---------------
--- Предметы --
---------------
+-------------------------
+-- Предметы на Складах --
+-------------------------
 
-alife():create("pda_bunker", vector():set(8.617, -19.451, 24.317), 7708, 2768)
+--alife():create("wpn_vintorez", vector():set(41, -7, 385.5), 342418, 1806)
 for ind = 1, 3 do
 alife():create("ammo_9x39_sp5", vector():set(42, -7, 385.5), 342418, 1806)
 end
@@ -843,6 +814,8 @@ end
 if level_name == "l05_bar" then
 	proceed_spawn("cat_weak", vector():set(270, 2, -92), 1, 1233, 2, level_name.."_cat_portion_1")
 	proceed_spawn("cat_weak", vector():set(208, 5, -92), 1, 1233, 2, level_name.."_cat_portion_2")
+
+	proceed_spawn("chimera_weak", vector():set(275, 5, -152), 1, 1233, 1, level_name.."_chimera_portion_1")
 end
 
 
@@ -976,6 +949,22 @@ end
 end
 
 
-------------- Спавн вырезанных монстров и укрытий для OGSM 2.4 ----------------
+------------- Спавн вырезанных монстров и укрытий для OGSM 2.x ----------------
 
-------------------------- Copyright 2007-2018 DEXXX ---------------------------
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
+
+--[[
+
+If you're going to use the whole of this script or its parts in your own creative 
+developments for the S.T.A.L.K.E.R. game, please don't become such a goddamn 
+motherfucker like the notorious author of the ABC Mod - Carbrobro. Leave the 
+copyrights, note the real author(s) and don't claim others' ideas and their 
+realization to be your own ones. It's just simple Modmakers' Ethics. Thank you!
+
+Если вы собираетесь использовать данный скрипт целиком или частично в своих 
+разработках по игре S.T.A.L.K.E.R., пожалуйста не опускайтесь до уровня печально 
+известного автора ABC мода - Carbrobro. Не удаляйте копирайты, указывайте настоящего 
+автора(ов) и не выдавайте чужие идеи и их реализацию за свои. Ведь это элементарная 
+этика модостроителей! Спасибо за понимание.
+
+]]--

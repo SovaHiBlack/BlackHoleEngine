@@ -42,14 +42,14 @@ stand_run_fwd_0	 	=	   1,	   0.01,    1,	    0.25,    0.6,
 ;===========================================================================
 [chimera_immunities]
 burn_immunity = 0.9				;коэффициенты иммунитета 
-strike_immunity = 0.0
+strike_immunity = 0.5
 shock_immunity = 0.5
 wound_immunity = 0.1
 radiation_immunity = 0.0
 telepatic_immunity = 0.5
 chemical_burn_immunity = 0.9
 explosion_immunity = 0.15
-fire_wound_immunity  = 0.045
+fire_wound_immunity  = 0.04
 
 
 [m_chimera_e]:monster_base
@@ -114,7 +114,7 @@ Particle_Shield			= anomaly2\burer_shield_01
 ph_skeleton_airr_lin_factor   = -0.4
 ph_skeleton_airr_ang_factor   = -0.2
 ph_skeleton_hinger_factor1    = 1.0
-ph_skeleton_ddelay            = 5.0
+ph_skeleton_ddelay	      = 5.0
 ph_skel_fatal_impulse_factor  = 2.0
 ph_after_death_velocity_factor= 0.75
 ph_skel_shot_up_factor        = 0.25
@@ -218,19 +218,19 @@ Morale_Stable_Speed				= 0.01
 Morale_Despondent_Threashold	= 0.4
 
 
-sound_idle				= monsters\chimera\idle_
+sound_idle				= monsters\bloodsucker\idle_
 sound_eat				= monsters\bloodsucker\eat_
-sound_aggressive			= monsters\chimera\attack_
-sound_attack_hit			= monsters\chimera\attack_hit_
-sound_take_damage			= monsters\bloodsucker\hit_
-sound_die				= monsters\chimera\death_
+sound_aggressive			= monsters\bloodsucker\attack_
+sound_attack_hit		= monsters\bloodsucker\attack_hit_
+sound_take_damage		= monsters\bloodsucker\hit_
+sound_die				= monsters\bloodsucker\die_
 sound_bkgnd				= monsters\biting\def_
-sound_threaten				= monsters\biting\def_
-sound_landing				= monsters\biting\def_
+sound_threaten			= monsters\boar\threaten_
+sound_landing			= monsters\boar\landing_
 sound_steal				= monsters\biting\def_
-sound_panic				= monsters\biting\def_
-sound_growling				= monsters\biting\def_
-sound_die_in_anomaly			= monsters\chimera\death_
+sound_panic				= monsters\boar\hit_
+sound_growling			= monsters\biting\def_
+sound_die_in_anomaly	= monsters\boar\die_
 
 killer_clsids				= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
@@ -239,7 +239,7 @@ idle_sound_delay		= 95000
 eat_sound_delay			= 3000
 attack_sound_delay		= 12000
 
-sound_distant_idle			= monsters\chimera\idle_
+sound_distant_idle			= monsters\bloodsucker\idle_
 distant_idle_sound_delay	= 80000
 distant_idle_sound_range	= 100.0	
 
@@ -282,9 +282,7 @@ damage					= m_chimera_damage
 
 ;species of monster
 species					= chimera
-rank					= 0
-spec_rank				= weak
-community				= chimera
+
 
 [m_Chimera_damage]
 ;bone_name		 = <hit_scale>,-1,<wound_scale>

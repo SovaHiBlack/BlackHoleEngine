@@ -877,6 +877,7 @@ function parse_ini_section_to_array(ini,section)
 			end
 		end
 	else
+		mylog("no such section")
 	end
 	return tmp
 end
@@ -976,6 +977,7 @@ end
 local bufferedmessages={}
 
 function mylog(msg)
+  --if is_debug then 
 	  if msg==nil then
 	    return 
 	  end
@@ -992,9 +994,12 @@ function mylog(msg)
 	      table.insert(bufferedmessages,msg)
 	    end
 	  end
+
 	  if get_console() then
 	    get_console():execute("load ~~~ "..string.sub(msg,1,200))
 	    get_console():execute("flush")
 	  end
+
+	--end
 end
 

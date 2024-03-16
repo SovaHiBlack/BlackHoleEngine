@@ -1,6 +1,6 @@
----------------------- Квестовые функции для OGSM 2.4 -------------------------
+---------------------- Квестовые функции для OGSM 2.x -------------------------
 
-------------------------- Copyright 2007-2018 DEXXX ---------------------------
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
 
 local vdk_cnt = 0
 local blood = 0
@@ -9,20 +9,20 @@ local bl_sound = sound_object([[heart\2]])
 
 -- ГГ вступает в "Свободу"
 function set_freedom()
-	db.actor:set_character_community("actor_freedom",0,0)
-	db.actor:give_info_portion("mil_leader_attach_community")
+db.actor:set_character_community("actor_freedom",0,0)
+db.actor:give_info_portion("mil_leader_attach_community")
 end
 
 
 -- ГГ вступает в "Долг"
 function set_dolg()
-	db.actor:set_character_community("actor_dolg",0,0)
+db.actor:set_character_community("actor_dolg",0,0)
 end
 
 
 -- ГГ получает доступ в арсенал "Свободы"
 function allow_arsenal()
-	db.actor:give_info_portion("mil_leader_attach_community2")
+db.actor:give_info_portion("mil_leader_attach_community2")
 end
 
 
@@ -311,12 +311,21 @@ function remove_dealer_spot(fs,ss)
 	level.map_remove_object_spot(fs:id(), "red_location")
 end
 function release_dark_dealer()
+	local pos
+	for i=0, 65535 do
+		local obj = level.object_by_id(i)
+		if obj and string.find(obj:name(), "pri_trader") then
+			pos = obj:position()
+		end
+	end
+	if pos then
 		db.actor:hide_weapon()
 		level.disable_input()
 		level.add_cam_effector("camera_effects\\earthquake.anm", 2010, false, "")
 		local s = sound_object("ambient\\earthquake")
 		s:play_no_feedback(db.actor,sound_object.s2d, 0, vector():set(0, 0, 0), 1.0)
-		amk.start_timer("vd1", 2)
+		amk.start_timer("vd1", 2, pos)
+	end
 end
 function x18_laugh()
 	local s = sound_object("x18_laugh")
@@ -324,6 +333,22 @@ function x18_laugh()
 end
 
 
----------------------- Квестовые функции для OGSM 2.4 -------------------------
+---------------------- Квестовые функции для OGSM 2.x -------------------------
 
-------------------------- Copyright 2007-2018 DEXXX ---------------------------
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
+
+--[[
+
+If you're going to use the whole of this script or its parts in your own creative 
+developments for the S.T.A.L.K.E.R. game, please don't become such a goddamn 
+motherfucker like the notorious author of the ABC Mod - Carbrobro. Leave the 
+copyrights, note the real author(s) and don't claim others' ideas and their 
+realization to be your own ones. It's just simple Modmakers' Ethics. Thank you!
+
+Если вы собираетесь использовать данный скрипт целиком или частично в своих 
+разработках по игре S.T.A.L.K.E.R., пожалуйста не опускайтесь до уровня печально 
+известного автора ABC мода - Carbrobro. Не удаляйте копирайты, указывайте настоящего 
+автора(ов) и не выдавайте чужие идеи и их реализацию за свои. Ведь это элементарная 
+этика модостроителей! Спасибо за понимание.
+
+]]--

@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" ?>
 <string_table>
 
-	<string id="pda_bunker_name">
-		<text>Старый КПК</text>
-	</string>
-	<string id="pda_bunker_descr">
-		<text>Очень старый КПК, обнаруженный у скелета возле рубильника "Выжигателя". Наивно было бы надеяться, что он работает, но на оборотной стороне можно едва рассмотреть выцарапанные цифры: 2011533 / 342089. Серийный номер?</text>
-	</string>
-
 	<string id="zapiska">
 		<text>Записка</text>
 	</string>

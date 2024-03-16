@@ -13,7 +13,7 @@ function action_timer:update(delta)
 if not has_alife_info("freeplay") then
 	local actor = db.actor
 
-	if level.name()=="l12_stancia" then self.st.start_value = ogsm_options.aes_timer*60000 end
+	if level.name()=="l12_stancia" then self.st.start_value = vars.aes_timer*60000 end
 
 	if xr_logic.try_switch_to_another_section(self.object, self.st, actor) then
 		return

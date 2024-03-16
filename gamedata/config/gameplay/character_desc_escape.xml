@@ -49,7 +49,7 @@
 			ammo_9x18_fmj = 1 \n
 			wpn_ak74u \n
 			ammo_5.45x39_fmj \n
-			ammo_12x70_buck=3 \n
+ammo_12x70_buck=3 \n
 			device_torch \n
 			hand_radio \n
 		</supplies>
@@ -58,8 +58,6 @@
 
 		<start_dialog>escape_lager_volk_talk</start_dialog>
 		<start_dialog>dm_hello_dialog</start_dialog>
-		<actor_dialog>escape_lager_volk_info</actor_dialog>
-		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 		<actor_dialog>dm_cool_info_dialog</actor_dialog>
 		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
 		<actor_dialog>tm_wolf_dialog</actor_dialog>

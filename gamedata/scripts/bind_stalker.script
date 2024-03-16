@@ -17,10 +17,6 @@ lasthealth  = 0
 lasttime	= 0
 post_process = 0
 local weapon_hide = false
--->> Dynamic campfire mod
-local scan_flag
-local upd_time
---<< Dynamic campfire mod
 ----------------------------------------------------------------------------------------------------------------------
 class "actor_binder" (object_binder)
 ----------------------------------------------------------------------------------------------------------------------
@@ -31,7 +27,7 @@ function actor_binder:__init (obj) super(obj)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:net_spawn(data)
-	--printf("actor net spawn")		
+	printf("actor net spawn")		
 
 	level.show_indicators()
 
@@ -84,7 +80,6 @@ function actor_binder:net_destroy()
 	self.object:set_callback(callback.level_border_enter, nil)
 	self.object:set_callback(callback.level_border_exit, nil)
 	self.object:set_callback(callback.take_item_from_box, nil)
-    self.object:set_callback(callback.use_object, nil)
 
 	if sr_psy_antenna.psy_antenna then
 		sr_psy_antenna.psy_antenna:destroy()
@@ -119,7 +114,6 @@ function actor_binder:reinit()
 	self.object:set_callback(callback.level_border_enter, self.level_border_enter, self)
 	self.object:set_callback(callback.level_border_exit, self.level_border_exit, self)
 	self.object:set_callback(callback.take_item_from_box, self.take_item_from_box, self)
-    self.object:set_callback(callback.use_object, self.use_object, self)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:take_item_from_box(box, item)
@@ -160,14 +154,11 @@ function actor_binder:level_border_exit(npc, info_id)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:info_callback(npc, info_id)
-	--printf("*INFO*: npc='%s' id='%s'", npc:name(), info_id)
-	--' Сюжетный саундтрек
-	if ogsm_options.soundtrack == 1 then ogsm_music.proceed_info(info_id) end
+	printf("*INFO*: npc='%s' id='%s'", npc:name(), info_id)
 	--' Сюжет
 	level_tasks.proceed(self.object)
 	-- Отметки на карте
 	level_tasks.process_info_portion(info_id)
-	ogsm_debug.del_mark(info_id)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:on_trade (item, sell_bye, money)
@@ -225,7 +216,6 @@ function actor_binder:on_item_take (obj)
     if obj:clsid() == clsid.wpn_ammo then
         dunin_ammo.on_take(obj)
     end
-    ogsm_debug.on_take(obj)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:on_item_drop (obj)
@@ -369,14 +359,14 @@ function actor_binder:update(delta)
 
 
  	if self.bCheckStart then
-		--printf("SET DEFAULT INFOS")		
+		printf("SET DEFAULT INFOS")		
 
 		if not has_alife_info("storyline_actor_start") and
 		   (level.name() == "l01_escape")
 		then
 			self.object:give_info_portion("storyline_actor_start")
 			_G.g_start_avi = true
-			--printf("*AVI* RUN START AVI")			
+			printf("*AVI* RUN START AVI")			
 		end
 
 --		if not has_alife_info("encyclopedy") then
@@ -395,61 +385,6 @@ function actor_binder:update(delta)
 
 		self.bCheckStart = false		
 	end		
-	-->> Dynamic campfire mod
-	if scan_flag == nil then
-		scan_flag = 1
-		local lvl = level.name()
-		local exc_tbl = {
-			["zone_flame_small_0001"] = {"l01_escape"},
-			["zone_flame_small_0009"] = {"l01_escape"},
-			["zone_flame_small_0002"] = {"l05_bar"},
-			["zone_flame_small_0005"] = {"l06_rostok"},
-			["zone_flame_small_0006"] = {"l06_rostok"},
-			["zone_flame_small_0007"] = {"l06_rostok"},
-			["zone_flame_small_0008"] = {"l06_rostok"},
-			["zone_flame_small_0010"] = {"l06_rostok"},
-			["zone_flame_small_0012"] = {"l11_pripyat"},
-			["zone_flame_small_0013"] = {"l11_pripyat"},
-			["zone_flame_small_0024"] = {"l11_pripyat"},
-			["zone_flame_small_0025"] = {"l11_pripyat"},
-			["lights_camp_fire_omni_r1_r2_0001"] = {"l01_escape"},
-			["lights_camp_fire_omni_r1_r2_0009"] = {"l01_escape"},
-			["lights_camp_fire_omni_r1_r2_0002"] = {"l05_bar"},
-			["lights_camp_fire_omni_r1_r2_0011"] = {"l11_pripyat"},
-			["lights_camp_fire_omni_r1_r2_0012"] = {"l11_pripyat"},
-			["lights_camp_fire_omni_r1_r2_0031"] = {"l08_yantar"}
---			МОЖЕТ БЫТЬ ТАК:	["zone_flame_small_9999"] = {"l01_escapel02_garbagel05_barl07_military"},
---			МОЖЕТ БЫТЬ ТАК:	["lights_camp_fire_omni_r1_r2_9999"] = {"l01_escapel02_garbagel05_barl07_military"}
-		}
-		for id=1, 65535 do
-			local obj = level.object_by_id(id)
-			if obj then
-				local name = obj:name()
-				local exc_obj = exc_tbl[name]
-				if exc_obj and string.find(exc_obj[1], lvl) then
---					printf("EXEPTIONS: OBJ:[%s] LEVELS:[%s]", name, exc_obj[1])
-				else
-					if obj:section() == "zone_flame_small" then
-						table.insert(xr_kamp.lvl_objs, obj)
-						obj:disable_anomaly()
-					elseif string.find(name, "r1_r2") then
-						table.insert(xr_kamp.lvl_objs, obj)
-						obj:get_hanging_lamp():turn_off()
-					-- Масляные горелки (требуется доп. правка particles.xr)
---					elseif string.find(name, "light_gas") then
---						obj:get_hanging_lamp():turn_off()
-					end
-				end
-			end
-		end
-	end
-	if upd_time == nil then
-		upd_time = time + 10000
-	elseif upd_time < time then
-		upd_time = time + 10000
-		xr_kamp.update(time)
-	end
-	--<< Dynamic campfire mod
 
 	-- Обновление актора
 	amk.on_actor_update()
@@ -467,9 +402,9 @@ end
 function actor_binder:save(packet)
 	local pk1 = fake_net_packet.fake_net_packet()
 	self:save_old(pk1)
-	-- get_console():execute("Packet_size_is_"..pk1:w_tell())
-	if pk1:w_tell() > 7500 then
-		task_manager.cleanup_actor()
+	--get_console():execute("Packet_size_is_"..pk1:w_tell())
+	if pk1:w_tell()>7500 then
+		ogsm_debug.clean_pstor()
 	end
 	self:save_old(packet)
 end 
@@ -479,7 +414,7 @@ function actor_binder:save_old(packet)
 
 	local save_treasure_manager = true
 
-	--printf("actor_binder:save(): self.object:name()='%s'", self.object:name())
+	printf("actor_binder:save(): self.object:name()='%s'", self.object:name())
 	object_binder.save(self, packet)
 
 	--' Сохраняем уровень сложности
@@ -494,7 +429,7 @@ function actor_binder:save_old(packet)
 	if self.st.disable_input_time == nil then
 		packet:w_bool(false)
 	else
-		packet:w_bool(true)
+		packer:w_bool(true)
 		utils.w_CTime(packet, self.st.disable_input_time)
 	end
 
@@ -512,9 +447,9 @@ function actor_binder:save_old(packet)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:load(reader)
-	--printf("actor_binder:load(): self.object:name()='%s'", self.object:name())
+	printf("actor_binder:load(): self.object:name()='%s'", self.object:name())
 	object_binder.load(self, reader)
-	--printf("actor_binder:object_binder.load(): self.object:name()='%s'", self.object:name())
+	printf("actor_binder:object_binder.load(): self.object:name()='%s'", self.object:name())
 
 	--' Загружаем уровень сложности
 	local game_difficulty = reader:r_u8()
@@ -548,11 +483,7 @@ function actor_binder:load(reader)
 
 
 	task_manager.load(reader)
-	self.actor_detector:load(reader)
-end
-----------------------------------------------------------------------------------------------------------------------
-function actor_binder:use_object(obj)
-    sound_for_eat.use_snd(obj)	
+	self.actor_detector:load(reader)	
 end
 ----------------------------------------------------------------------------------------------------------------------
 

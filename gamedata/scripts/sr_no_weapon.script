@@ -53,17 +53,17 @@ end
 
 function action_no_weapon:zone_enter()
 	self.state = state_inside
-	if ogsm_options.hide_weap == 1 then bind_stalker.hide_weapon() end
+//	bind_stalker.hide_weapon()
 end
 
 function action_no_weapon:zone_leave()
 	self.state = state_outside
-	if ogsm_options.hide_weap == 1 then bind_stalker.restore_weapon() end
+//	bind_stalker.restore_weapon()
 end
 
 ---------------------------------------------------------------------------------------------------------------------
 function add_to_binder(npc, ini, scheme, section, storage)
-	--printf("DEBUG: add_to_binder: scheme='%s', section='%s'", scheme, section)
+	printf("DEBUG: add_to_binder: scheme='%s', section='%s'", scheme, section)
 
 	local new_action = action_no_weapon(npc, storage)
 

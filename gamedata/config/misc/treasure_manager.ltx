@@ -235,7 +235,7 @@ target = 5000
 name = esc_secret_0000_name
 description = esc_secret_0000_descr
 items = ammo_12x76_zhekan,30,wpn_wincheaster1300
-condlist = {+bar_darklab_document_done =npc_rank(experienced) =actor_on_level(l01_escape)} 10
+condlist = {=npc_rank(experienced) =actor_on_level(l01_escape)} 10
 community = military
 
 [esc_secret_anomaly_dead]
@@ -306,7 +306,7 @@ community = bandit
 target = 5009
 name = esc_secret_0009_name
 description = esc_secret_0009_descr
-items = af_cristall_flower
+items = af_electra_sparkler,af_ameba_slime
 condlist = {=actor_on_level(l01_escape) =npc_rank(novice)} 3
 community = bandit
 
@@ -590,7 +590,7 @@ target = 5054
 name = gar_secret_0024_name
 description = gar_secret_0024_descr
 items = wpn_wincheaster1300,ammo_12x76_dart,30
-condlist = {+agr_find_gunslinger_cache_found =actor_on_level(l02_garbage) =npc_rank(experienced)} 4, {+agr_find_gunslinger_cache_found =actor_on_level(l03_agroprom) =npc_rank(experienced)} 4
+condlist = {=actor_on_level(l02_garbage) =npc_rank(experienced)} 4, {=actor_on_level(l03_agroprom) =npc_rank(experienced)} 4
 community = stalker
 
 ;----------------- Agroprom -----------------
@@ -648,7 +648,7 @@ target = 5071
 name = agr_secret_0006_name
 description = agr_secret_0006_descr
 items = specops_outfit
-condlist = {+agr_find_gunslinger_cache_found =actor_on_level(l03_agroprom) =npc_rank(novice)} 5
+condlist = {=actor_on_level(l03_agroprom) =npc_rank(novice)} 5
 community = stalker, bandit
 
 [agr_secret_cisterne]
@@ -858,7 +858,7 @@ target = 5104
 name = agr_u_secret_0004_name
 description = agr_u_secret_0004_descr
 items = wpn_groza_m1,ammo_5.45x39_ap,90
-condlist = {+bar_darklab_document_done =actor_on_level(l03u_agr_underground) =npc_rank(experienced)} 10
+condlist = {=actor_on_level(l03u_agr_underground) =npc_rank(experienced)} 10
 community = stalker, bandit, military
 
 [val_secret_0000]

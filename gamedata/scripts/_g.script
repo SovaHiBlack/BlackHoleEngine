@@ -17,7 +17,6 @@ end
 ----------------------------------------------------------------------
 
 function printf(fmt,...)
---	get_console():execute("ERROR:" .. fmt)
 	log(string.format(fmt,...))
 end
 
@@ -105,13 +104,13 @@ function debug_get_level_object(obj_name)
     local res = level.debug_object(obj_name)
     while res == nil do
 
--- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
--- !!!!! НЕ ЗАКОММЕНТАРИВАЙТЕ, ИНАЧЕ НЕ БУДЕТ ВИДНО ОШИБОК ПРИ РАССТАНОВКЕ ОБЪЕКТОВ !!!!!
--- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-       -- printf("get_level_object() is waiting for object \"%s\"", obj_name)
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!! НЕ ЗАКОММЕНТАРИВАЙТЕ, ИНАЧЕ НЕ БУДЕТ ВИДНО ОШИБОК ПРИ РАССТАНОВКЕ ОБЪЕКТОВ !!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        printf("get_level_object() is waiting for object \"%s\"", obj_name)
 
         res         = level.object(obj_name)
-        wait()
+        wait        ()
     end
     return          res
 end
@@ -120,7 +119,7 @@ function debug_get_actor()
     local res       = level.debug_actor()
     while res == nil do
         res         = level.debug_actor()
-        wait()
+        wait        ()
     end
     return          res
 end
@@ -129,7 +128,7 @@ function distance_between(obj1, obj2)
     return obj1:position():distance_to(obj2:position())
 end
 
--- Если один объект nil, например нет актера, то считаем, что он далеко
+// Если один объект nil, например нет актера, то считаем, что он далеко
 function distance_between_safe(obj1, obj2)
     if(obj1 == nil or obj2 == nil) then return 100000 end
 	return obj1:position():distance_to(obj2:position())
@@ -147,7 +146,7 @@ end
 
 
 --------------------------------------------------
--- класс LUA реализущий Finite State Machine
+-- іласс LUA реализуі   ий Finite State Machine
 -- для управления персонажами
 --------------------------------------------------
 class 'FSM'
@@ -156,18 +155,18 @@ class 'FSM'
 function FSM:__init(script_name, npc_obj)
     -- указатель на подконтрольнvй NPC
     self.npc = npc_obj
-    -- строка - имя скрипта, который запускает игру
+    -- строка - имя скрипта, которvй запускает игру
     self.script_name = script_name
-    -- матрица, задающая граф переходов состояний
+    -- матрица, задаі   ая граф переходов состояний
     -- реализуется как двумерная таблица
     self.transition_matrix = {[0] = {}}
     -- номер теку   его состояния
     self.current_state = 0
 
-    -- флаг того, что машина включена
+    -- флаг того, что машина вклічена
     self.machine_running = true
 
-    --printf("inialization FSM for NPC %s", self.npc:name())
+    printf("inialization FSM for NPC %s", self.npc:name())
 end
 
 function FSM:is_running()
@@ -175,21 +174,21 @@ function FSM:is_running()
 end
 
 function FSM:start()
-    --printf("starting FSM for %s", self.npc:name())
+    printf("starting FSM for %s", self.npc:name())
     self.machine_running = true
 end
 
 function FSM:stop()
-    --printf("stoping FSM for %s", self.npc:name())
+    printf("stoping FSM for %s", self.npc:name())
     self.machine_running = false
     self:reset_script_control()
 end
 
 
 --  добавление указателя на булеву
---  функцию условия перехода
+--  функциі условия перехода
 function FSM:set_transition(from_state_num, to_state_num, cond_func)
-    --printf("in setting transition %d, %d ", from_state_num, to_state_num)
+    printf("in setting transition %d, %d ", from_state_num, to_state_num)
 
     if self.transition_matrix[from_state_num] == nil then
        self.transition_matrix[from_state_num] = {[to_state_num] = cond_func}
@@ -204,7 +203,7 @@ function FSM:run()
     table.foreach(transition_vector,
                   function(to_state_num, cond_func)
                         if cond_func(self.npc, self) == true then
-                            --printf("transition from %d to %d", self.current_state, to_state_num)
+                            printf("transition from %d to %d", self.current_state, to_state_num)
 
                             if to_state_num == 0 then
                                 self:reset_script_control()
@@ -224,14 +223,14 @@ end
 
 -- запуск бесконечного цикла FSM
 function FSM:run_loop()
-    --printf("running FSM loop for NPC %s", self.npc:name())
+    printf("running FSM loop for NPC %s", self.npc:name())
 
     while self:is_running() do
         local transition_vector = self.transition_matrix[self.current_state]
         table.foreach(transition_vector,
                       function(to_state_num, cond_func)
                             if cond_func(self.npc, self) == true then
-                               --printf("transition from %d to %d", self.current_state, to_state_num)
+                                printf("transition from %d to %d", self.current_state, to_state_num)
 
                                 if to_state_num == 0 then
                                     self:reset_script_control()
@@ -256,13 +255,13 @@ end
 
 -- взятие под контроль скрипта NPC (переход из нулевого состояния)
 function FSM:set_script_control()
-    --printf("set script control for FSM of NPC %s", self.npc:name())
+    printf("set script control for FSM of NPC %s", self.npc:name())
     self.npc:script(true, self.script_name)
 end
 
 -- отпускание из под контроля скрипта NPC (переход в нулевое состояние)
 function FSM:reset_script_control()
-    --printf("reset script control for FSM of NPC %s", self.npc:name())
+    printf("reset script control for FSM of NPC %s", self.npc:name())
     self.npc:script(false, self.script_name)
 end
 
@@ -296,7 +295,7 @@ function script_object:update()
 end
 
 --
--- передача персонажу информации
+-- іередача персонажу информации
 --
 
 function GiveInfoViaPda(obj_receiver, obj_sender, info_number)
@@ -308,22 +307,22 @@ end
 -- Functions and variables added by Zmey
 --------------------------------------------------
 
--- константа, которую использовать в местах, где нужно задать неограниченное время действия
+-- іонстанта, которуі использовать в местах, где нужно задать неограниченное время действия
 time_infinite = 100000000
 
--- название скрипта, который в данный момент находится в отладке
--- (в этом скрипте будут срабатывать вызовы функции debug_log)
+-- =азвание скрипта, которvй в даннvй момент находится в отладке
+-- (в этом скрипте будут срабатvвать вvзовv функции debug_log)
 debug_script_name = ""
 
--- выводит в лог строчку, если script_name == debug_script_name
--- используется для отрадки сценариев
+-- Tvводит в лог строчку, если script_name == debug_script_name
+-- Lспользуется для отрадки сценариев
 function debug_log(script_name, fmt, ...)
 	if debug_script_name == script_name then
---		log(string.format(fmt, ...))
+		log(string.format(fmt, ...))
 	end
 end
 
--- если в данный момент выполняется какое-то действие, прерывает его и отключает скриптовый режим
+-- +сли в даннvй момент вvполняется какое-то действие, прерvвает его и отклічает скриптовvй режим
 function interrupt_action(who, script_name)
   if who:get_script() then
     who:script(false, script_name)
@@ -342,10 +341,10 @@ function new_action(...)
     for i = 1, table.getn(arg) do
         act:set_action(arg[i])
     end
-    return act
+    return act;
 end
 
-obj_last_actions = {}
+obj_last_actions = {};
 
 function perform_action(obj, action_name, action)
   if (obj ~= nil) then
@@ -385,7 +384,7 @@ end
 function set_current_time (hour, min, sec)
     local current_time_factor = level.get_time_factor ()
 
-    --printf ("Need time : %d:%d:%d", hour, min, sec)
+    printf ("Need time : %d:%d:%d", hour, min, sec)
 
     local current_time = game.time ()
     local c_day = math.floor (current_time / 86400000)
@@ -550,7 +549,7 @@ end
 ----------------------------------------------------------------------------------------------------------------------
 -- Evaluators
 ----------------------------------------------------------------------------------------------------------------------
--- зарезервированы id с номерами от 0 до 256 для создания стандартных эвалуаторов.
+-- зарезервированv id с номерами от 0 до 256 для создания стандартнvх эвалуаторов.
 
 --Constant evaluator
 class "const_evaluator" (property_evaluator)
@@ -579,7 +578,7 @@ function wait_evaluator:evaluate ()
        return false
     end
 
-    local t = device():time_global () - self.current_time
+    local t = device():time_global () - self.current_time;
     if t > self.wait_time then return true end
     return false
 end
@@ -641,7 +640,7 @@ function str_split (str)
         str4 = string.format ("%s%c", str4, ref[a])
     end
 
-    --printf ("%s %s %d %d", str1, str2, str3, str4)
+    printf ("%s %s %d %d", str1, str2, str3, str4)
     return str1, str2, (str3 + 1) - 1, (str4 + 1) - 1
 end
 
@@ -707,8 +706,7 @@ end
     end
 
     return t
-end
-]]
+end]]
 
 -- Ї абЁв бва®Єг ўЁ¤  "n1, n2, n3..." ў в Ў«Ёжг { n1, n2, n3, ... } Ј¤Ґ n1, n2, n3... - ¤а®Ў­лҐ зЁб« 
 function parse_nums( s )
@@ -782,7 +780,7 @@ function vector_cross (v1, v2)
     return vector ():set (v1.y  * v2.z  - v1.z  * v2.y, v1.z  * v2.x  - v1.x  * v2.z, v1.x  * v2.y  - v1.y  * v2.x)
 end
 
---Вращает вектор вокруг оси y против часовой стрелки
+//Вращает вектор вокруг оси y против часовой стрелки
 
 function vector_rotate_y (v, angle)
     angle = angle * 0.017453292519943295769236907684886
@@ -908,7 +906,7 @@ function object_type(obj)
 end
 
 
--- Является ли оbj монстром (функция устарела, использовать функцию IsMonster (obj))
+// Является ли оbj монстром
 function is_object_monster(obj)
 	local otype = get_clsid(obj)
 	if(otype == clsid.crow			or
@@ -1251,7 +1249,7 @@ function get_texture_info(id_name, id_default)
 end
 
 function start_game_callback()
-	--printf	("start_game_callback called")
+	printf	("start_game_callback called")
 	task_manager.clear_task_manager()
 	treasure_manager.clear_treasure_manager()
 	xr_sound.clear_all_sound_object()
@@ -1304,4 +1302,3 @@ quest_section["hunters_toz"]		= true
 quest_section["bar_ecolog_flash"]	= true
 quest_section["bar_tiran_pda"]		= true
 quest_section["bar_lucky_pda"]		= true
-quest_section["pri_decoder_documents"]	= true

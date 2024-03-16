@@ -58,25 +58,22 @@ end
 function process_info_portion(info_id)
     if info_id == "val_sos_give_tip" then
 		level_tasks.add_location(422, "val_sos_location")
-		return true
 	elseif info_id == "val_sos_actor_near_wounded" then
 		level_tasks.remove_location(422, "val_sos_location")
-		return true 
 	elseif info_id == "val_show_zones" then
 		level_tasks.add_location(427, "crlc_big", "val_zone_bandits_hint")
-		level_tasks.add_location(426, "crlc_big", "val_zone_monolith_hint")
-		level_tasks.add_location(435, "crlc_mdl", "val_zone_robbers_hint")
-		level_tasks.add_location(430, "crlc_mdl", "val_zone_south_gate_hint")
-		return true
+		level_tasks.add_location(428, "crlc_big", "val_zone_monolith_hint")
+		level_tasks.add_location(429, "crlc_mdl", "val_zone_robbers_hint")
+		level_tasks.add_location(430, "crlc_small", "val_zone_south_gate_hint")
 	elseif info_id == "val_show_pipe_zone" then
 		level_tasks.add_location(431, "crlc_mdl", "val_zone_pipe_hint")
-		return true
 	elseif info_id == "val_show_farm_zone" then
 		level_tasks.add_location(435, "crlc_big", "val_zone_farm_hint")
-		return true
+	else
+        return false
 	end
 
-	return false
+	return true
 end
 
 --function send_codedoor1_tip()
@@ -101,29 +98,17 @@ function has_darklab_documents(task, objective)
 end
 
 function escort_task_done(task, objective)
-	if not has_alife_info("val_escort_captive_dead") and
+       return not has_alife_info("val_escort_captive_dead") and
            has_alife_info("val_escort_guard1_dead") and
            has_alife_info("val_escort_guard2_dead") and
-           has_alife_info("val_escort_actor_helped") then
-		for i = 0, 100 do
-			level_tasks.remove_location(400, "green_location")
-		end
-		return true
-	end
-	return false
+           has_alife_info("val_escort_actor_helped")
 end
 
 function escort_task_fail(task, objective)
-	if has_alife_info("val_escort_captive_dead") or
+    return has_alife_info("val_escort_captive_dead") or
            has_alife_info("val_escort_guard1_dead") and
            has_alife_info("val_escort_guard2_dead") and
-           not has_alife_info("val_escort_actor_helped") then
-		for i = 0, 100 do
-			level_tasks.remove_location(400, "green_location")
-		end
-		return true
-	end
-	return false
+           not has_alife_info("val_escort_actor_helped")
 end
 
 

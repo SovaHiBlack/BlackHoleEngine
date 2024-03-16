@@ -59,7 +59,7 @@
 [sound]
 occlusion_scale	= 0.4
 snd_collide_min_volume=0.1
-snd_collide_max_volume=100.0
+snd_collide_max_volume=200.
 
 [demo_record]
 speed0		= 0.3
@@ -76,7 +76,7 @@ files = ui_mp_icon_rank, ui_icons_map, ui_common, ui_old_textures, ui_ingame, ui
 
 [info_portions]
 ;список xml файлов, содержащих info_portions
-files = info_portions, info_portions_light, info_portions_test, info_lchanger_ico, info_level_tips, info_known_objects, info_l01escape, info_l02garbage, info_l03agroprom, info_l04agroprom_u, info_l05dark_valley, info_l06dark_valley_u, info_l07rostok, info_l08yantar, info_l08deadcity, info_l08rostok_bar, info_l09marshes, info_l09rostok_dolg, info_l10military, info_l11pripyat, info_l11yantar, info_l12yantar_u, info_l13deadcity, info_l14swamp, info_l10radar, info_l16radar_antena, info_l17monolith_control, info_l19stanciya, info_l12u_sarcofag, info_l21generators, info_l22warlab, info_stories, info_ogsm, aem_info
+files = info_portions, info_portions_light, info_portions_test, info_lchanger_ico, info_level_tips, info_known_objects, info_l01escape, info_l02garbage, info_l03agroprom, info_l04agroprom_u, info_l05dark_valley, info_l06dark_valley_u, info_l07rostok, info_l08yantar, info_l08deadcity, info_l08rostok_bar, info_l09marshes, info_l09rostok_dolg, info_l10military, info_l11pripyat, info_l11yantar, info_l12yantar_u, info_l13deadcity, info_l14swamp, info_l10radar, info_l16radar_antena, info_l17monolith_control, info_l19stanciya, info_l12u_sarcofag, info_l21generators, info_l22warlab, info_stories, aem_info
 
 [encyclopedia]
 files = encyclopedia_infos, storyline_info_to_diary, encyclopedia_weapons, encyclopedia_mutants, encyclopedia_zone, encyclopedia_social, encyclopedia_equipment, encyclopedia_tutorial
@@ -100,9 +100,9 @@ files = game_tasks
 
 [inventory]
 take_dist		= 2
-max_weight		= 50
+max_weight              = 50
 max_ruck		= 56
-max_belt		= 6
+max_belt		= 6 //16
 slots			= 11
 
 slot_persistent_1  = true		;knife
@@ -149,16 +149,16 @@ script_binding      = bind_physic_object.init
 
 [explosion_marks]
 wallmarks			= wm\wm_grenade
-dist				= 0.5
-size				= 0.6
+dist				= 0.5	;2.4	;
+size				= 0.6	;0.4	;
 max_count			= 5
 
 [bloody_marks]
 wallmarks			= wm\wm_blood_1,wm\wm_blood_2,wm\wm_blood_3,wm\wm_blood_4,wm\wm_blood_5,wm\wm_blood_6,wm\wm_blood_7,wm\wm_blood_8,wm\wm_blood_9
-dist				= 3	;(м) max расстояние отлета крови
-max_size			= 0.8	;(м)радиус пятна при хите силой nominal hit по большому объекту (по маленькому *0.5)
-min_size			= 0.1	;(м)минимальный радиус пятна
-nominal_hit			= 0.3	;величина номинального хита, при котором разлетается максимум крови (max_size)
+dist				= 3	;2.4	;(м) max расстояние отлета крови
+max_size			= 0.8	;0.3	;(м)радиус пятна при хите силой nominal hit по большому объекту (по маленькому *0.5)
+min_size			= 0.1			;(м)минимальный радиус пятна
+nominal_hit			= 0.3			;величина номинального хита, при котором разлетается максимум крови (max_size)
 
 ;капли крови
 
@@ -167,30 +167,52 @@ start_blood_size	= 0.4			;размер раны чтоб начала капать кровь
 stop_blood_size		= 0.025			;размер раны чтоб кровь остановилась (должно быть меньше start_blood_size)
 
 blood_drop_time     = 0.1			;OBSOLETE
-blood_drop_time_min = 0.3
-blood_drop_time_max = 2.0
+blood_drop_time_min = 0.3			;
+blood_drop_time_max = 2.0			;
 blood_drop_size		= 0.2			;размер капли (м) крови, которая упала
 
 
 [entity_fire_particles]
 fire_particles = damage_fx\burn_creatures
-start_burn_size	= 0.0003	;размер ожега после которого начать играть партиклы огня
-stop_burn_size	= 0.0001	;размер ожега после которого остановить партиклы
+start_burn_size	= 0.0003		;размер ожега после которого начать играть партиклы огня
+stop_burn_size	= 0.0001		;размер ожега после которого остановить партиклы
 min_burn_time	= 10000		;минимальное время отыгрыша партиклов (даже если рана уже зажила)
 
 [hud_cursor]
 ;все размеры в процентах от длины экрана
 cross_length		= 0.015					;длина "палочки" прицела
-min_radius			= 0.0				;минимальный радиус прицела (при нулевой дисперсии)
-max_radius			= 1.0				;максимальный радиус
+min_radius			= 0.0					;минимальный радиус прицела (при нулевой дисперсии)
+max_radius			= 1.0					;максимальный радиус
 radius_lerp_speed	= 0.08					;скорость интерполяции положений прицела
 cross_color			= 0.7,0.7,0.7,1.0		;цвет прицела
-disp_scale			= 0.08				;масштаб прицела (относительно радиан)
+disp_scale			= 0.08					;масштаб прицела (относительно радиан)
 
 [hud_hitmark]
 hit_mark_texture = ui\ui_hud_hit_mark_08
+;ui\ui_hud_hit_mark
+;ui\ui_hud_hit_mark_01
+;ui\ui_hud_hit_mark_02
+;ui\ui_hud_hit_mark_03
+;ui\ui_hud_hit_mark_04
+;ui\ui_hud_hit_mark_05
+;ui\ui_hud_hit_mark_06
+;ui\ui_hud_hit_mark_07
+;ui\ui_hud_hit_mark_08
+;ui\ui_hud_hit_mark_09
+;ui\ui_hud_hit_mark_10
+;ui\ui_hud_hit_mark_11
+;ui\ui_hud_hit_mark_12
+;ui\ui_hud_hit_mark_13
+;ui\ui_hud_hit_mark_14
+;ui\ui_hud_hit_mark_15
+;ui\ui_hud_hit_mark_16
+;ui\ui_hud_hit_mark_17
+;ui\ui_hud_hit_mark_18
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; inventory items
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;inventory items
+
 [document]
 GroupControlSection	= spawn_group
 ;discovery_dependency = 
@@ -202,7 +224,8 @@ visual				= equipments\item_document_01.ogf
 
 inv_name			= Document
 inv_name_short		= Document
-inv_weight			= 1
+inv_weight			= 1	;0.2
+
 inv_grid_width		= 1
 inv_grid_height		= 1
 inv_grid_x			= 0
@@ -213,9 +236,10 @@ cost				= 0
 
 
 [spectator]
-$player 				= on
+ $player 				= on
 class                   = SPECT
 
+      
 [tg_event]
 class 			 = EVENT
 
@@ -245,6 +269,7 @@ lim_yaw                  = -1.0, 1.0
 rot_speed                = 3.14, 3.14, 0
 
 [actor_free_cam]
+;----------------
 lim_pitch                = -1.5, 1.5
 lim_yaw                  = 0, 0
 lim_zoom                 = 1, 2
@@ -276,14 +301,14 @@ lim_yaw                  = -2.0, 2.0
 rot_speed                = 3.14, 1.0, 0
  
 [car_free_cam]
-lim_pitch                = -1, 1.56
-lim_yaw                  = 0, 0
-lim_zoom                 = 1, 10
-rot_speed                = 3.14, 1.0, 10
+lim_pitch                = -1, 1.56 ;0, 1.56
+lim_yaw                  = 0, 0 ;0, 0
+lim_zoom                 = 1, 10 ;1, 7
+rot_speed                = 3.14, 1.0, 10 ;3.14, 1.0, 10
 
 [car_look_cam]
 lim_pitch                = 0, 1.56
-lim_yaw                  = 0, 0
+lim_yaw                  = 0	, 0
 lim_zoom                 = 1, 7
 rot_speed                = 25, 1.0, 10
 
@@ -314,7 +339,9 @@ font_small               = font_small
 class                = AI_GRAPH
 $spawn               = "ai\graph point"
 
-;Trade
+;-----------------------------------------------------------------
+; Trade
+;-----------------------------------------------------------------
 [trade]
 ;коэффициенты изменения цены при торговле в зависимости от отношения к персонажу
 ;линейно апроксимируются между значения
@@ -322,6 +349,10 @@ buy_price_factor_hostile	= 1		;коэффициент покупки при goodwill = -100
 buy_price_factor_friendly	= 1		;коэффициент покупки при goodwill = 100
 sell_price_factor_hostile	= 1		;коэффициент покупки при goodwill = -100
 sell_price_factor_friendly	= 1		;коэффициент покупки при goodwill = 100
+
+
+
+;-----------------------------------------------------------------
 
 [spawn_group_zone]
 GroupControlSection			= spawn_group_zone
@@ -349,8 +380,9 @@ script_binding	= xr_zones.bind
 [physics]
 object_damage_factor		= 1.2f
 
-
-;ГЕНЕРАТОРЫ ИМЕН
+;*****************************************
+; ГЕНЕРАТОРЫ ИМЕН
+;*****************************************
 [stalker_names_stalker]
 name_cnt		= 102
 last_name_cnt	= 599
@@ -381,14 +413,14 @@ last_name_cnt	= 200
 
 
 [script_object]
-GroupControlSection		= spawn_group
-$spawn					= "script\script object"	; option for Level Editor
-$npc						= on				; option for Level Editor
-; $prefetch 					= 32
-Scheduled					= on				; option for ALife Simulator
-Human		     			= off					; option for ALife Simulator
-cform                       = skeleton						; collision class
-class                       = SCRPTOBJ						; AI class
+GroupControlSection			= spawn_group
+$spawn						= "script\script object"						; option for Level Editor
+$npc						= on											; option for Level Editor
+; $prefetch 					= 32										;
+Scheduled					= on											; option for ALife Simulator
+Human		     			= off											; option for ALife Simulator
+cform                       = skeleton										; collision class
+class                       = SCRPTOBJ										; AI class
 
 ;параметры показывания входящих сообщений PDA в главном меню
 [maingame_ui]
@@ -406,7 +438,7 @@ class					= II_ATTCH
 cost					= 100
 inv_name				= "Attachable item"
 inv_name_short			= "Attachable item"
-inv_weight				= 0.5
+inv_weight				= .5
 inv_grid_width			= 2
 inv_grid_height			= 1
 inv_grid_x				= 16
@@ -424,7 +456,7 @@ class					= II_BTTCH
 cost					= 100
 inv_name				= "Attachable item"
 inv_name_short			= "Attachable item"
-inv_weight				= 0.5
+inv_weight				= .5
 inv_grid_width			= 2
 inv_grid_height			= 1
 inv_grid_x				= 16
@@ -434,8 +466,8 @@ attach_position_offset	= 0.105, 0.00, 0.085
 attach_bone_name		= bip01_head
 
 [breakable_object]
-class					= O_BRKBL
-remove_time				= 10	    ;after remove_time seconds object will be removed after it is breaked
+class						= O_BRKBL
+remove_time					= 10	    ;after remove_time seconds object will be removed after it is breaked
 hit_break_threthhold		= 0.	    ;weapon impact can stand breakable_object
 collision_break_threthhold	= 2000.f	;collision impact can stand breakable_object
 immunity_factor				= 1.3	    ;hit power multiplier
@@ -499,7 +531,7 @@ visual                  = equipments\item_fmradio.ogf
 cost					= 0
 inv_name				= "custom_script_object"
 inv_name_short			= "custom_script_object"
-inv_weight				= 0.5
+inv_weight				= .5
 inv_grid_width			= 2
 inv_grid_height			= 1
 inv_grid_x				= 16
@@ -569,23 +601,23 @@ script_binding          = bind_restrictor.bind
 bonce_damage_factor_for_objects = 1.
 
 [details]
-swing_normal_amp1	= 0.1
-swing_normal_amp2	= 0.05
+swing_normal_amp1	= .1
+swing_normal_amp2	= .05
 swing_normal_rot1	= 30.0
 swing_normal_rot2	= 1.0
 swing_normal_speed	= 2.0
-; fast
-swing_fast_amp1		= 0.35
-swing_fast_amp2		= 0.20
+// fast
+swing_fast_amp1		= 0.35;0.25
+swing_fast_amp2		= .20;0.15
 swing_fast_rot1		= 5
-swing_fast_rot2		= 0.5
-swing_fast_speed	= 0.5
+swing_fast_rot2		= .5;0.75
+swing_fast_speed	= 0.5;1
 
 [ph_capture_visuals]
 
-;Список объектов которые можно таскать.
+//Список объектов которые можно таскать.
 
-;bandit
+//bandit
 actors\bandit\stalker_bandit_1
 actors\bandit\stalker_bandit_2
 actors\bandit\stalker_bandit_3
@@ -600,7 +632,7 @@ actors\bandit\stalker_bandit_drunk
 actors\bandit\stalker_bandit_master
 actors\bandit\stalker_bandit_veteran
 
-;dolg
+//dolg
 actors\dolg\stalker_do_antigas
 actors\dolg\stalker_do_balon_1
 actors\dolg\stalker_do_balon_2
@@ -617,11 +649,11 @@ actors\dolg\stalker_do_mask
 actors\dolg\stalker_do_mask_1
 actors\dolg\stalker_do_nauchniy
 
-;ecolog
+//ecolog
 actors\ecolog\stalker_ecolog
 actors\ecolog\stalker_ecolog_military
 
-;killer
+//killer
 actors\killer\stalker_ki_antigas
 actors\killer\stalker_ki_exoskeleton
 actors\killer\stalker_ki_head_1
@@ -637,17 +669,17 @@ actors\killer\stalker_ki_nauchniy
 actors\killer\stalker_ki_temp
 actors\killer\stalker_ki_temp2
 
-;militari
+//militari
 actors\militari\stalker_militari_1
 actors\militari\stalker_militari_2
 actors\militari\stalker_militari_antigas_1
 actors\militari\stalker_militari_antigas_2
 
-;nauchniy
+//nauchniy
 actors\nauchniy\nauchniy_0
 actors\nauchniy\nauchniy_1
 
-;neytral
+//neytral
 actors\neytral\stalker_bar_security
 actors\neytral\stalker_neytral_balon_1
 actors\neytral\stalker_neytral_balon_2
@@ -678,7 +710,7 @@ actors\neytral\stalker_neytral_rukzak_6
 actors\neytral\stalker_neytral_rukzak_7
 actors\neytral\stalker_prizrak
 
-;novice
+//novice
 actors\novice\green_stalker_1
 actors\novice\green_stalker_10
 actors\novice\green_stalker_11
@@ -692,7 +724,7 @@ actors\novice\green_stalker_8
 actors\novice\green_stalker_9
 actors\novice\green_stalker_antigas
 
-;soldier
+//soldier
 actors\soldier\soldier_antigas
 actors\soldier\soldier_bandana
 actors\soldier\soldier_bandana_1
@@ -713,7 +745,7 @@ actors\soldier\soldier_spetsnaz
 actors\soldier\stalker_military_black
 actors\soldier\stalker_military_green
 
-;stalker_zombi
+//stalker_zombi
 actors\stalker_zombi\stalker_zombie_specnaz
 actors\stalker_zombi\stalker_zombie1
 actors\stalker_zombi\stalker_zombie2
@@ -728,7 +760,7 @@ actors\stalker_zombi\zombie_fresh_0
 actors\stalker_zombi\zombie_fresh_1
 actors\stalker_zombi\zombie_fresh_2
 
-;svoboda
+//svoboda
 actors\svoboda\stalker_sv_balon_1
 actors\svoboda\stalker_sv_balon_10
 actors\svoboda\stalker_sv_cook
@@ -744,13 +776,13 @@ actors\svoboda\stalker_sv_rukzak_2
 actors\svoboda\stalker_sv_rukzak_3
 actors\svoboda\stalker_sv_rukzak_3_1
 
-;ucheniy
+//ucheniy
 actors\ucheniy\ucheniy_1
 actors\ucheniy\ucheniy_2
 actors\ucheniy\ucheniy_3
 actors\ucheniy\ucheniy_4
 
-;Monolith
+//Monolith
 actors\monolit\stalker_mo_exo
 actors\monolit\stalker_mo_head_1
 actors\monolit\stalker_mo_head1
@@ -758,7 +790,7 @@ actors\monolit\stalker_mo_hood_9
 actors\monolit\stalker_mo_mask
 actors\monolit\stalker_mo_nauchniy
 
-;Monsters
+//Monsters
 monsters\dog\dog
 monsters\dog\dog_bulterier
 monsters\dog\dog_bulterier_dead
@@ -823,7 +855,7 @@ monsters\zombi\zombi_x3
 monsters\zombi\zombi_x4
 monsters\zombi\zombi_3
 
-;Objects
+//Objects
 objects\dynamics\balon\balon_01
 objects\dynamics\balon\bidon
 objects\dynamics\balon\bochka_close_1

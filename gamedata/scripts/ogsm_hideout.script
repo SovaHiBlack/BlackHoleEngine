@@ -1,6 +1,6 @@
----------------- Схема поведения НПС при выбросе для OGSM 2.4 -----------------
+---------------- Схема поведения НПС при выбросе для OGSM 2.x -----------------
 
-------------------------- Copyright 2007-2018 DEXXX ---------------------------
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
 
 property_base = 12221
 property_blowout = property_base+1
@@ -113,8 +113,6 @@ function action_hideout:__init(name, storage) super (nil, name)
 end
 function action_hideout:initialize()
 	local npc = self.object
-	xr_sound.set_sound(npc, nil)
-	stop_play_sound(npc)
 	npc:set_desired_position()
 	npc:set_desired_direction()
 	npc:clear_animations()
@@ -150,8 +148,6 @@ function action_raskolbas:__init(name, storage) super (nil, name)
 end
 function action_raskolbas:initialize()
 	local npc = self.object
-	xr_sound.set_sound(npc, nil)
-	stop_play_sound(npc)
 	npc:set_desired_position()
 	npc:set_desired_direction()
 	npc:clear_animations()
@@ -187,8 +183,6 @@ function action_inhide:__init(name, storage) super (nil, name)
 end
 function action_inhide:initialize()
 	local npc = self.object
-	xr_sound.set_sound(npc, nil)
-	stop_play_sound(npc)
 	npc:set_desired_position()
 	npc:set_desired_direction()
 	npc:clear_animations()
@@ -200,11 +194,7 @@ function action_inhide:initialize()
 		self.vertex = self.hide.obj:level_vertex_id()
 		self.offset = vector():set(math.random()*3-1, 0, math.random()*3-1)
 		self.offset:normalize()
-		if self.hide.rad and tonumber(self.hide.rad) > 2 then
-			self.radius = math.random(1, self.hide.rad-1)
-		else
-			self.radius = 1
-		end
+		self.radius = math.random(1, self.hide.rad-1)
 		self.lvid = npc:vertex_in_direction(self.vertex, self.offset, self.radius)
 		if npc:level_vertex_id()~=self.lvid then
 			state_mgr.set_state(npc,"raid")
@@ -304,7 +294,6 @@ function add_to_binder(object, char_ini, scheme, section, st)
 	action:add_precondition(world_property(property_hideout_lost, false))
 
 	action = manager:action(stalker_ids.action_danger_planner)
-	action:add_precondition(world_property(property_inhide, false))
 	action:add_precondition(world_property(property_hideout_lost, false))
 end
 
@@ -322,6 +311,22 @@ function disable_scheme(npc, scheme)
 end
 
 
----------------- Схема поведения НПС при выбросе для OGSM 2.4 -----------------
+---------------- Схема поведения НПС при выбросе для OGSM 2.x -----------------
 
-------------------------- Copyright 2007-2018 DEXXX ---------------------------
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
+
+--[[
+
+If you're going to use the whole of this script or its parts in your own creative 
+developments for the S.T.A.L.K.E.R. game, please don't become such a goddamn 
+motherfucker like the notorious author of the ABC Mod - Carbrobro. Leave the 
+copyrights, note the real author(s) and don't claim others' ideas and their 
+realization to be your own ones. It's just simple Modmakers' Ethics. Thank you!
+
+Если вы собираетесь использовать данный скрипт целиком или частично в своих 
+разработках по игре S.T.A.L.K.E.R., пожалуйста не опускайтесь до уровня печально 
+известного автора ABC мода - Carbrobro. Не удаляйте копирайты, указывайте настоящего 
+автора(ов) и не выдавайте чужие идеи и их реализацию за свои. Ведь это элементарная 
+этика модостроителей! Спасибо за понимание.
+
+]]--

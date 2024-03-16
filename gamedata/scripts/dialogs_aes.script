@@ -1,4 +1,5 @@
---' Мы отказываемся вступить в осознание, нас переносит на вторую станцию.
+
+--' Мы отказываемся вступить в осознание, нас переносит на вторую станцию
 function osoznanie_decline(npc, actor)
 	db.actor:disable_info_portion("oso_init_dialog")
 	db.actor:stop_talk()
@@ -9,6 +10,7 @@ function osoznanie_decline(npc, actor)
 	snd:play_no_feedback(npc, sound_object.s3d, 0, npc:position(), 1.0)
 	amk.start_timer("oso", snd:length()/1000)
 end
+
 
 --' Мы соглашаемся вступить в осознание, конец игры.
 function osoznanie_agree(npc, actor)

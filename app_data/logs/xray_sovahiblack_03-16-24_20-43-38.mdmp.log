@@ -1,0 +1,570 @@
+* Detected CPU: GenuineIntel P3 family, F6/M10/S4, 2495.00 mhz, 796-clk 'rdtsc'
+* CPU Features: RDTSC, MMX, SSE, SSE2
+
+Initializing File System...
+using fs-ltx fsgame.ltx
+FS: 30115 files cached, 4886Kb memory used.
+Init FileSystem 7.539765 sec
+'xrCore' build 9169, Mar 16 2024
+
+Initializing Engine...
+Executing config-script "user.ltx"...
+[c:\blackholeengine\release-win32\..\app_data\user.ltx] successfully loaded.
+Starting INPUT device...
+Loading DLL: xrRender_R2.dll
+Loading DLL: xrGame.dll
+! Unable to find Software\GSC Game World\STALKER-SHOC\ in registry
+* [win32]: free[4048696 K], reserved[52356 K], committed[93188 K]
+* [ D3D ]: textures[0 K]
+* [x-ray]: process heap[9103 K], game lua[0 K], engine lua[0 K], render[0 K]
+* [x-ray]: economy: strings[2021 K], smem[0 K]
+Executing config-script "c:\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx"...
+! cant convert dik_name for dik[144], prop=[
+[c:\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx] successfully loaded.
+Executing config-script "user.ltx"...
+Executing config-script "c:\blackholeengine\release-win32\..\gamedata\config\rspec_extreme.ltx"...
+! Unknown command:  r__dtex_range
+! Unknown command:  r__ssa_glod_end
+! Unknown command:  r__ssa_glod_start
+! Unknown command:  r__wallmark_ttl
+! Unknown command:  rs_detail
+! Unknown command:  rs_skeleton_update
+! Unknown command:  vid_bpp
+[c:\blackholeengine\release-win32\..\gamedata\config\rspec_extreme.ltx] successfully loaded.
+Executing config-script "c:\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx"...
+[c:\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx] successfully loaded.
+[c:\blackholeengine\release-win32\..\app_data\user.ltx] successfully loaded.
+SOUND: OpenAL: enumerate devices...
+SOUND: OpenAL: EnumerationExtension Present
+devices Generic Software
+SOUND: OpenAL: system  default SndDevice name is Generic Software
+SOUND: OpenAL: All available devices:
+1. Generic Software, Spec Version 1.1 (default)
+SOUND: OpenAL: SelectBestDevice is Generic Software 1.1
+SOUND: OpenAL: Required device: Generic Software. Created device: Generic Software.
+* sound: EAX 2.0 extension: absent
+* sound: EAX 2.0 deferred: absent
+* sound : cache: 32773 kb, 3805 lines, 8820 bpl
+Starting RENDER device...
+* GPU [vendor:15AD]-[device:405]: VMware SVGA 3D
+* GPU driver: 9.17.6.3
+* CREATE: DeviceREF: 1
+* Vertex Processor: PURE HARDWARE
+*     Texture memory: 2028 M
+*          DDI-level: 9.0
+* GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+* GPU vertex cache: unrecognized, 16
+* DVB created: 1536K
+* DIB created: 512K
+! Version conflict in shader 'def_shaders\def_aref'
+! Version conflict in shader 'def_shaders\def_aref_v'
+! Version conflict in shader 'def_shaders\def_trans'
+! Version conflict in shader 'def_shaders\def_trans_v'
+! Version conflict in shader 'def_shaders\def_trans_v_tuchi'
+! Version conflict in shader 'def_shaders\lod_old'
+! Renderer doesn't support blender 'effects\shadow_world'
+! Version conflict in shader 'effects\watertest-1'
+count of .thm files=1
+load time=156 ms
+* HWDST/PCF supported and used
+- r__tf_aniso 16
+- r2_tf_mipbias 0.
+Starting engine...
+[16-9] get_xml_name for[ui_mp_icon_rank.xml] returns [ui_mp_icon_rank.xml]
+[16-9] get_xml_name for[ui_icons_map.xml] returns [ui_icons_map.xml]
+[16-9] get_xml_name for[ui_common.xml] returns [ui_common.xml]
+[16-9] get_xml_name for[ui_old_textures.xml] returns [ui_old_textures.xml]
+[16-9] get_xml_name for[ui_ingame.xml] returns [ui_ingame.xml]
+[16-9] get_xml_name for[ui_map_description.xml] returns [ui_map_description.xml]
+[16-9] get_xml_name for[ui_models_multiplayer.xml] returns [ui_models_multiplayer.xml]
+[16-9] get_xml_name for[ui_team_logo.xml] returns [ui_team_logo.xml]
+[16-9] get_xml_name for[ui_team_logo_small.xml] returns [ui_team_logo_small.xml]
+[16-9] get_xml_name for[ui_mainmenu.xml] returns [ui_mainmenu.xml]
+[16-9] get_xml_name for[ui_mp_main.xml] returns [ui_mp_main.xml]
+[16-9] get_xml_name for[ui_statistics.xml] returns [ui_statistics.xml]
+[16-9] get_xml_name for[ui_hud.xml] returns [ui_hud.xml]
+[16-9] get_xml_name for[ui_numpad.xml] returns [ui_numpad.xml]
+[16-9] get_xml_name for[ui_inventory.xml] returns [ui_inventory.xml]
+[16-9] get_xml_name for[ui_inventory2.xml] returns [ui_inventory2.xml]
+[16-9] get_xml_name for[ui_iconstotal.xml] returns [ui_iconstotal.xml]
+[16-9] get_xml_name for[ui_pda.xml] returns [ui_pda.xml]
+[16-9] get_xml_name for[ui_icons_npc.xml] returns [ui_icons_npc.xml]
+[16-9] get_xml_name for[ui_npc_monster.xml] returns [ui_npc_monster.xml]
+[16-9] get_xml_name for[ui_npc_unique.xml] returns [ui_npc_unique.xml]
+[16-9] get_xml_name for[ui_buy_menu.xml] returns [ui_buy_menu.xml]
+[16-9] get_xml_name for[ui_asus_intro.xml] returns [ui_asus_intro.xml]
+[16-9] get_xml_name for[aem_ui_npc.xml] returns [aem_ui_npc.xml]
+[16-9] get_xml_name for[color_defs.xml] returns [color_defs.xml]
+[16-9] get_xml_name for[hint_item.xml] returns [hint_item.xml]
+Loading DLL: xrGameSpy.dll
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+[16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
+[16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
+[16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
+[16-9] get_xml_name for[ui_mm_main.xml] returns [ui_mm_main.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+* DVB created: 1536K
+* DIB created: 512K
+- r__tf_aniso 16
+- r2_tf_mipbias 0.
+* GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+* GPU vertex cache: unrecognized, 16
+*** RESET [1215 ms]
+"c:\blackholeengine\release-win32\binaries\xr_3da.exe" 
+* phase time: 0 ms
+* phase cmem: 82899 K
+Кэширование объектов...
+Loading objects...
+Loading models...
+* [prefetch] time:    25571 ms
+* [prefetch] memory:  429612Kb
+* phase time: 25758 ms
+* phase cmem: 499432 K
+Сервер: Старт...
+* phase time: 237 ms
+* phase cmem: 499655 K
+Сервер: Загрузка симуляции жизни...
+* phase time: 78 ms
+* phase cmem: 499655 K
+Создание новой игры...
+* Creating new game...
+* Loading spawn registry...
+* 8641 spawn points are successfully loaded
+* Saving spawns...
+* Saving objects...
+* 17087 objects are successfully saved
+* Game all.sav is successfully saved to file 'c:\blackholeengine\release-win32\..\app_data\savedgames\all.sav'
+* New game is successfully created!
+* phase time: 15814 ms
+* phase cmem: 530114 K
+Сервер: Соединяемся...
+MaxPlayers = 32
+* phase time: 133 ms
+* phase cmem: 530197 K
+Клиент: Соединение с localhost...
+# Player not found. New player created.
+* client : connection accepted - <>
+* phase time: 87 ms
+* phase cmem: 530221 K
+Открытие потока...
+* phase time: 77 ms
+* phase cmem: 530221 K
+Загрузка формы объектов...
+* phase time: 12016 ms
+* phase cmem: 602906 K
+Загрузка шейдеров...
+* phase time: 1138 ms
+* phase cmem: 604026 K
+Загрузка геометрии...
+* [Loading VB] 65532 verts, 2047 Kb
+* [Loading VB] 65525 verts, 2047 Kb
+* [Loading VB] 65535 verts, 2047 Kb
+* [Loading VB] 65466 verts, 2045 Kb
+* [Loading VB] 17208 verts, 537 Kb
+* [Loading VB] 65533 verts, 2047 Kb
+* [Loading VB] 65534 verts, 2047 Kb
+* [Loading VB] 65534 verts, 2047 Kb
+* [Loading VB] 65531 verts, 2047 Kb
+* [Loading VB] 65535 verts, 2047 Kb
+* [Loading VB] 65535 verts, 2047 Kb
+* [Loading VB] 46595 verts, 1456 Kb
+* [Loading VB] 65534 verts, 2047 Kb
+* [Loading VB] 65533 verts, 2047 Kb
+* [Loading VB] 65535 verts, 2047 Kb
+* [Loading VB] 65532 verts, 2047 Kb
+* [Loading VB] 65533 verts, 2047 Kb
+* [Loading VB] 65533 verts, 2047 Kb
+* [Loading VB] 53181 verts, 1661 Kb
+* [Loading IB] 1048575 indices, 2047 Kb
+* [Loading IB] 1048572 indices, 2047 Kb
+* [Loading IB] 1048572 indices, 2047 Kb
+* [Loading IB] 1048572 indices, 2047 Kb
+* [Loading IB] 1048572 indices, 2047 Kb
+* [Loading IB] 1048572 indices, 2047 Kb
+* [Loading IB] 1048575 indices, 2047 Kb
+* [Loading IB] 1048572 indices, 2047 Kb
+* [Loading IB] 1048575 indices, 2047 Kb
+* [Loading IB] 228285 indices, 445 Kb
+* [Loading VB] 65533 verts, 767 Kb
+* [Loading VB] 65534 verts, 767 Kb
+* [Loading VB] 65534 verts, 767 Kb
+* [Loading VB] 65535 verts, 767 Kb
+* [Loading VB] 65535 verts, 767 Kb
+* [Loading VB] 65534 verts, 767 Kb
+* [Loading VB] 65535 verts, 767 Kb
+* [Loading VB] 14030 verts, 164 Kb
+* [Loading IB] 1048575 indices, 2047 Kb
+* [Loading IB] 1048575 indices, 2047 Kb
+* [Loading IB] 1048575 indices, 2047 Kb
+* [Loading IB] 718302 indices, 1402 Kb
+* phase time: 633 ms
+* phase cmem: 672839 K
+Загрузка базы пространств...
+* phase time: 4296 ms
+* phase cmem: 677315 K
+Загрузка детальных объектов...
+* [DETAILS] VertexConsts(256), Batch(61)
+* [DETAILS] 40687 v(20), 26352 p
+* [DETAILS] Batch(61), VB(794K), IB(154K)
+* phase time: 201 ms
+* phase cmem: 678300 K
+Загрузка секторов и порталов...
+* Loading HOM: c:\blackholeengine\release-win32\..\gamedata\levels\l01_escape\level.hom
+* phase time: 63 ms
+* phase cmem: 678473 K
+Загрузка ИИ объектов...
+- Loading music tracks from 'l01_escape_musics'...
+* phase time: 52 ms
+* phase cmem: 678528 K
+Клиент: Создание...
+- Game configuring : Started 
+- Game configuring : Finished 
+[16-9] get_xml_name for[maingame.xml] returns [maingame_16.xml]
+[16-9] get_xml_name for[zone_map.xml] returns [zone_map_16.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[car_panel.xml] returns [car_panel_16.xml]
+[16-9] get_xml_name for[motion_icon.xml] returns [motion_icon_16.xml]
+[16-9] get_xml_name for[messages_window.xml] returns [messages_window.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[ui_custom_msgs.xml] returns [ui_custom_msgs.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[inventory_new.xml] returns [inventory_new_16.xml]
+[16-9] get_xml_name for[inventory_item.xml] returns [inventory_item_16.xml]
+[16-9] get_xml_name for[af_params_16.xml] returns [af_params_16.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[inventory_new.xml] returns [inventory_new_16.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[pda.xml] returns [pda_16.xml]
+[16-9] get_xml_name for[pda_map.xml] returns [pda_map.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[hint_item.xml] returns [hint_item.xml]
+[16-9] get_xml_name for[pda_contacts_new.xml] returns [pda_contacts_new.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[events_new.xml] returns [events_new.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[news.xml] returns [news.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[encyclopedia.xml] returns [encyclopedia.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[actor_statistic.xml] returns [actor_statistic.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[pda_dialog_character.xml] returns [pda_dialog_character_16.xml]
+[16-9] get_xml_name for[stalkers_ranking.xml] returns [stalkers_ranking.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[stalkers_ranking_character.xml] returns [stalkers_ranking_character_16.xml]
+[16-9] get_xml_name for[pda_events.xml] returns [pda_events.xml]
+[16-9] get_xml_name for[pda_events.xml] returns [pda_events.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[hint_item.xml] returns [hint_item.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[job_item.xml] returns [job_item.xml]
+[16-9] get_xml_name for[talk.xml] returns [talk_16.xml]
+[16-9] get_xml_name for[trade_character.xml] returns [trade_character_16.xml]
+[16-9] get_xml_name for[trade_character.xml] returns [trade_character_16.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[trade.xml] returns [trade_16.xml]
+[16-9] get_xml_name for[trade_character.xml] returns [trade_character_16.xml]
+[16-9] get_xml_name for[trade_character.xml] returns [trade_character_16.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[trade_item.xml] returns [trade_item_16.xml]
+[16-9] get_xml_name for[af_params_16.xml] returns [af_params_16.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[carbody_new.xml] returns [carbody_new_16.xml]
+[16-9] get_xml_name for[trade_character.xml] returns [trade_character_16.xml]
+[16-9] get_xml_name for[trade_character.xml] returns [trade_character_16.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[carbody_item.xml] returns [carbody_item_16.xml]
+[16-9] get_xml_name for[af_params_16.xml] returns [af_params_16.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[inventory_new.xml] returns [inventory_new_16.xml]
+[16-9] get_xml_name for[scroll_bar.xml] returns [scroll_bar.xml]
+[16-9] get_xml_name for[message_box.xml] returns [message_box.xml]
+* phase time: 918 ms
+* phase cmem: 686652 K
+Загрузка текстур...
+* t-report - base: 1447, 570806 K
+* t-report - lmap: 5, 5120 K
+* phase time: 9158 ms
+* phase cmem: 985611 K
+Клиент: Синхронизация...
+* phase time: 64 ms
+* phase cmem: 985611 K
+* [win32]: free[2039816 K], reserved[117612 K], committed[2036812 K]
+* [ D3D ]: textures[575927 K]
+* [x-ray]: process heap[985611 K], game lua[22484 K], engine lua[125 K], render[0 K]
+* [x-ray]: economy: strings[4693 K], smem[28223 K]
+[16-9] get_xml_name for[game_tutorials.xml] returns [game_tutorials_16.xml]
+[16-9] get_xml_name for[ui_credits.xml] returns [ui_credits.xml]
+[16-9] get_xml_name for[ui_movies.xml] returns [ui_movies.xml]
+[16-9] get_xml_name for[map_spots.xml] returns [map_spots.xml]
+[16-9] get_xml_name for[map_spots_escape.xml] returns [map_spots_escape.xml]
+[16-9] get_xml_name for[map_spots_garbage.xml] returns [map_spots_garbage.xml]
+[16-9] get_xml_name for[map_spots_agroprom.xml] returns [map_spots_agroprom.xml]
+[16-9] get_xml_name for[map_spots_darkvalley.xml] returns [map_spots_darkvalley.xml]
+[16-9] get_xml_name for[map_spots_bar.xml] returns [map_spots_bar.xml]
+[16-9] get_xml_name for[map_spots_military.xml] returns [map_spots_military.xml]
+[16-9] get_xml_name for[map_spots_radar.xml] returns [map_spots_radar.xml]
+[16-9] get_xml_name for[map_spots_mp.xml] returns [map_spots_mp.xml]
+[16-9] get_xml_name for[map_spots_relations.xml] returns [map_spots_relations.xml]
+[16-9] get_xml_name for[map_spots_lchangers.xml] returns [map_spots_lchangers.xml]
+DEBUG: add_to_binder: npc:name()='escape_trader', scheme='mob_trade', section='mob_trade@new'
+TRADE INIT[escape_trader]
+DEBUG: add_to_binder: npc:name()='escape_trader', scheme='mob_trader', section='mob_trader@new_start_wait'
+DEBUG: add_to_binder: npc:name()='esc_suicidal_flesh', scheme='mob_walker', section='mob_walker1'
+_bp: mob_walker:reset_scheme: esc_suicidal_flesh
+_bp: path_parse_waypoints: pathname='esc_tut_flesh_bush_walk'
+_bp: path_parse_waypoints: pathname='esc_tut_flesh_bush_look'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_lager1]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_lager_guard_walk1'
+_bp: path_parse_waypoints: pathname='esc_lager_guard_look1'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_lager2]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_lager_guard_walk2'
+_bp: path_parse_waypoints: pathname='esc_lager_guard_look2'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_lager3]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_lager_guard_walk4'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_lager4]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_lager_guard_walk3'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_lager5]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_lager6]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_lager7]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_wolf]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_lager_wolf_walk'
+_bp: path_parse_waypoints: pathname='esc_lager_wolf_look'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_specnaz1]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_specnaz2]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_specnaz3]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_specnaz4]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_specnaz5]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_specnaz6]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_blokpost_soldier1]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_blokpost_post_walk1'
+_bp: path_parse_waypoints: pathname='esc_blokpost_post_look1'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_blokpost_soldier2]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_blokpost_post_walk2'
+_bp: path_parse_waypoints: pathname='esc_blokpost_post_look2'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_blokpost_soldier3]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_blokpost_day_patrol_walk'
+_bp: path_parse_waypoints: pathname='esc_blokpost_day_patrol_look'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_blokpost_soldier4]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_blokpost_day_patrol_walk'
+_bp: path_parse_waypoints: pathname='esc_blokpost_day_patrol_look'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_blokpost_soldier5]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_blokpost_day_patrol_walk'
+_bp: path_parse_waypoints: pathname='esc_blokpost_day_patrol_look'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_blokpost_soldier6]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_blokpost_camper_day_walk'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_blokpost_soldier7]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_blokpost_patrol_yard_walk'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_blokpost_soldier8]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_blokpost_watch_walk1'
+_bp: path_parse_waypoints: pathname='esc_blokpost_watch_look1'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_blokpost_soldier9]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_blokpost_watch_walk2'
+_bp: path_parse_waypoints: pathname='esc_blokpost_watch_look2'
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_blokpost_commander]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_blokpost_commander_walk'
+_bp: path_parse_waypoints: pathname='esc_blokpost_commander_look'
+RESPAWN: [esc2_respawn_bandits_fabrika] binder called
+RESPAWN: [esc2_respawn_bandits_fabrika] binded
+RESPAWN: [esc2_respawn_bandits_fabrika] net_spawn
+RESPAWN: [esc2_farm_flesh_respawn] binder called
+RESPAWN: [esc2_farm_flesh_respawn] binded
+RESPAWN: [esc2_farm_flesh_respawn] net_spawn
+RESPAWN: [esc2_end_dog_respawn] binder called
+RESPAWN: [esc2_end_dog_respawn] binded
+RESPAWN: [esc2_end_dog_respawn] net_spawn
+RESPAWN: [esc2_village_stalker_respawn] binder called
+RESPAWN: [esc2_village_stalker_respawn] binded
+RESPAWN: [esc2_village_stalker_respawn] net_spawn
+RESPAWN: [esc2_blockpost_soldier_respawn] binder called
+RESPAWN: [esc2_blockpost_soldier_respawn] binded
+RESPAWN: [esc2_blockpost_soldier_respawn] net_spawn
+DEBUG: set_scheme: scheme='heli_hunter' section='<nil>'
+DEBUG: add_to_binder: scheme='heli_hunter'
+TRADE INIT[esc_shustryi]
+THRESHOLD SECTION [<nil>]
+STALKER SPOT SECTION [<nil>]
+_bp: path_parse_waypoints: pathname='esc_lager_prisoner_walk'
+_bp: path_parse_waypoints: pathname='esc_lager_prisoner_look'
+RESPAWN: [esc_respawn_inventory_box_0000] binder called
+RESPAWN: [esc_respawn_inventory_box_0000] binded
+RESPAWN: [esc_respawn_inventory_box_0000] net_spawn
+RESPAWN: [esc_respawn_inventory_box_0001] binder called
+RESPAWN: [esc_respawn_inventory_box_0001] binded
+RESPAWN: [esc_respawn_inventory_box_0001] net_spawn
+RESPAWN: [esc_respawn_inventory_box_0002] binder called
+RESPAWN: [esc_respawn_inventory_box_0002] binded
+RESPAWN: [esc_respawn_inventory_box_0002] net_spawn
+RESPAWN: [esc_respawn_inventory_box_0003] binder called
+RESPAWN: [esc_respawn_inventory_box_0003] binded
+RESPAWN: [esc_respawn_inventory_box_0003] net_spawn
+ 
+FATAL ERROR
+ 
+[error]Expression    : fatal error
+[error]Function      : CModelPool::Instance_Load
+[error]File          : ..\xrRender\ModelPool.cpp
+[error]Line          : 94
+[error]Description   : <no expression>
+[error]Arguments     : Can't find model file 'weapons\artefact\wpn_artefact_medusa_hud.ogf'.
+ 
+
+stack trace:
+
+0023:744E208A xrCore.dll, xrDebug::fatal(), c:\blackholeengine\sources\xrcore\xrdebug.cpp, 321
+0023:72B7F25D xrRender_R2.dll, CModelPool::Instance_Load(), c:\blackholeengine\sources\xr_3da\xrrender\modelpool.cpp, 94
+0023:72B7ED38 xrRender_R2.dll, CModelPool::Create(), c:\blackholeengine\sources\xr_3da\xrrender\modelpool.cpp, 226
+0023:729682E0 xrGame.dll, weapon_hud_value::load(), c:\blackholeengine\sources\xr_3da\xrgame\weaponhud.cpp, 27
+0023:7269F394 xrGame.dll, shared_container<weapon_hud_value>::dock<shared_weapon_hud::on_new_pred>(), c:\blackholeengine\sources\xrcore\xr_shared.h, 31
+0023:7269F2FD xrGame.dll, shared_item<weapon_hud_value>::create<shared_weapon_hud::on_new_pred>(), c:\blackholeengine\sources\xrcore\xr_shared.h, 82
+0023:72968619 xrGame.dll, CWeaponHUD::Load(), c:\blackholeengine\sources\xr_3da\xrgame\weaponhud.cpp, 93
+0023:72811921 xrGame.dll, CHudItem::Load(), c:\blackholeengine\sources\xr_3da\xrgame\huditem.cpp, 55
+0023:7278001E xrGame.dll, CArtefact::Load(), c:\blackholeengine\sources\xr_3da\xrgame\artifact.cpp, 79
+0023:7280163E xrGame.dll, CGraviArtefact::Load(), c:\blackholeengine\sources\xr_3da\xrgame\graviartifact.cpp, 42
+0023:004A4023 XR_3DA.exe, CObjectList::Create(), c:\blackholeengine\sources\xr_3da\xr_object_list.cpp, 342
+0023:72837291 xrGame.dll, CLevel::g_sv_Spawn(), c:\blackholeengine\sources\xr_3da\xrgame\level_network_spawn.cpp, 92
+0023:72837471 xrGame.dll, CLevel::cl_Process_Spawn(), c:\blackholeengine\sources\xr_3da\xrgame\level_network_spawn.cpp, 40
+0023:7282BF2C xrGame.dll, CLevel::ProcessGameEvents(), c:\blackholeengine\sources\xr_3da\xrgame\level.cpp, 399
+0023:7282B8B5 xrGame.dll, CLevel::OnFrame(), c:\blackholeengine\sources\xr_3da\xrgame\level.cpp, 437
+0023:0049F26A XR_3DA.exe, CInput::OnFrame(), c:\blackholeengine\sources\xr_3da\xr_input.cpp, 395
+0023:004116C0 XR_3DA.exe, CRegistrator<pureAppEnd>::Process(), c:\blackholeengine\sources\xr_3da\pure.h, 77
+0023:004538D4 XR_3DA.exe, CRenderDevice::FrameMove(), c:\blackholeengine\sources\xr_3da\device.cpp, 318
+0023:00453ACA XR_3DA.exe, CRenderDevice::Run(), c:\blackholeengine\sources\xr_3da\device.cpp, 217
+0023:004A6B72 XR_3DA.exe, Startup(), c:\blackholeengine\sources\xr_3da\x_ray.cpp, 246
+0023:004A67C0 XR_3DA.exe, WinMain_impl(), c:\blackholeengine\sources\xr_3da\x_ray.cpp, 655
+0023:004A64C2 XR_3DA.exe, WinMain(), c:\blackholeengine\sources\xr_3da\x_ray.cpp, 710
+0023:004438AF XR_3DA.exe, __tmainCRTStartup(), f:\dd\vctools\crt\crtw32\dllstuff\crtexe.c, 618
+0023:767E05C9 KERNEL32.DLL, BaseThreadInitThunk()
+0023:771878BD ntdll.dll, RtlGetAppContainerNamedObjectPath()
+0023:7718788D ntdll.dll, RtlGetAppContainerNamedObjectPath()

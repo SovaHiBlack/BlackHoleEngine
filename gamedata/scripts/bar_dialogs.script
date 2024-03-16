@@ -315,7 +315,7 @@ function locate_bar_arena(actor,npc)
 	if sim == nil then
 		return
 	end
-	local obj = sim:story_object(573)
+	local obj = sim:story_object(571)
 	if obj then
 		level.map_add_object_spot(obj.id, "crlc_small", "bar_arena_locator")
 	end
@@ -327,11 +327,6 @@ function locate_bar_dolg(actor,npc)
 	end
 	local obj = sim:story_object(507)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_small", "bar_dolg_locator")
-		db.actor:give_info_portion("encyclopedy_social_stalker-clans_duty")
+		level.map_add_object_spot(obj.id, "green_location", "bar_voronin_name")
 	end
-end
-
-function loc_info()
-	db.actor:give_info_portion("l05_bar_level_info")
 end

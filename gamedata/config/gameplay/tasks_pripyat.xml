@@ -14,8 +14,6 @@
 		</objective>
 		<objective>
 			<text>return_for_reward</text>
-			<map_location_type hint="pri_return_to_dealer_hint">blue_location</map_location_type>
-			<object_story_id>pri_trader</object_story_id>
 			<infoportion_complete>pri_trader_arny_task_done</infoportion_complete>
 		</objective>
 	</game_task>
@@ -42,8 +40,6 @@
 		</objective>
 		<objective>
 			<text>return_for_reward</text>
-			<map_location_type hint="pri_return_to_dealer_hint">blue_location</map_location_type>
-			<object_story_id>pri_trader</object_story_id>
 			<infoportion_complete>pri_trader_freedom_task_done</infoportion_complete>
 		</objective>
 	</game_task>
@@ -70,8 +66,6 @@
 		</objective>
 		<objective>
 			<text>return_for_reward</text>
-			<map_location_type hint="pri_return_to_dealer_hint">blue_location</map_location_type>
-			<object_story_id>pri_trader</object_story_id>
 			<infoportion_complete>pri_trader_dolg_task_done</infoportion_complete>
 		</objective>
 	</game_task>

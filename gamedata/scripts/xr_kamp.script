@@ -3,11 +3,8 @@
 --	автор: Диденко Руслан (Stohe)
 --	TODO: 
 ----------------------------------------------------------------------------------------------------------------------
-function printf(fmt, ...)
---	local msg = string.format(fmt, ...)
---	local msg_no_ws = string.gsub(msg, "%s", "_")
---	get_console():execute("dbg:" .. msg_no_ws)
-end
+--function printf()
+--end
 
 kamps = {}
 kamp_stalkers = {} -- могут ли сталкеры в лагере юзаться игроком.
@@ -222,7 +219,6 @@ function action_wait:death_callback(npc)
 	kamps[self.a.center_point]:removeNpc(npc)
 end
 function action_wait:net_destroy(npc)
-	kamps[self.a.center_point]:decreasePops(self.object)	--<< Dynamic campfire mod
 	kamps[self.a.center_point]:removeNpc(npc)
 end
 
@@ -503,11 +499,11 @@ end
 function CKampManager:getDestVertex(npc_id, radius)
 	--printf("get dest Vertex called [%s]", npc_id)
 	if self.npc[npc_id].position == nil then
-		--printf("-------debug_info-------------")
-		--print_table(self.npc)
-		--printf("-------debug_info-------------")
-		--print_table(self.position)
-		--printf("-------debug_info-------------")
+		printf("-------debug_info-------------")
+		print_table(self.npc)
+		printf("-------debug_info-------------")
+		print_table(self.position)
+		printf("-------debug_info-------------")
 		abort("get dest Vertex: nil [%s]", npc_id)
 		return nil
 	end
@@ -582,7 +578,7 @@ function CKampManager:proceedState(npc)
 	for k,v in pairs(temp) do
 		p = p - v
 		if p <= 0 then
-			--printf("Selected [%s]", k)
+			printf("Selected [%s]", k)
 			if k == "idle" then
 				self.director = nil
 				if self.kamp_state ~= "idle" then
@@ -861,18 +857,7 @@ function CKampManager:checkNpcAbility(npc)
 			self.kamp_states["pre_joke"] = false
 			self.kamp_states["joke"] = false
 			self.kamp_states["post_joke"] = false
-		end
-	-- Монолитовцы не рассказывают анекдоты и не играют на гитарах, lvg_brest
-	else
-			self.npc[npc_id].states["play_guitar"] = false
-			self.npc[npc_id].states["wait_guitar"] = false
-			self.kamp_states["pre_guitar"] = false
-			self.kamp_states["guitar"] = false
-			self.kamp_states["post_guitar"] = false
-
-			self.kamp_states["pre_joke"] = false
-			self.kamp_states["joke"] = false
-			self.kamp_states["post_joke"] = false
+		end	
 	end
 	
 	-- Если чувак знает истории, надо добавить их к лагерю
@@ -887,9 +872,9 @@ function CKampManager:checkNpcAbility(npc)
 
 end
 function CKampManager:addNpc(npc)
-	--printf("KAMP [%s] add npc", npc:name())
+	printf("KAMP [%s] add npc", npc:name())
 	if self.npc[npc:id()] ~= nil then
-		--printf("NPC is already exist")
+		printf("NPC is already exist")
 		return
 	end
 	
@@ -913,7 +898,7 @@ function CKampManager:addNpc(npc)
 	end
 end
 function CKampManager:removeNpc(npc)
-	--printf("KAMP [%s] remove npc", npc:name())
+	printf("KAMP [%s] remove npc", npc:name())
 	local npc_id = npc:id()
 	if self.npc[npc_id] ~= nil then
 		-- Если удаляем режиссера - необходимо форсированно перевести лагерь в идловое состояние.
@@ -930,195 +915,16 @@ function CKampManager:removeNpc(npc)
 			stop_play_sound(npc)
 		end
 	
-		if self.npc[npc_id].position ~= nil then
-			self.position[self.npc[npc_id].position].used = nil
-		end
+		self.position[self.npc[npc_id].position].used = nil
 		self.npc[npc_id] = nil
 	end
 end
-
--->> Dynamic campfire mod
-local camp_tbl = {
-	["esc2_st_fabric_kamp_1"] = {"zone_flame_small_0001", "lights_camp_fire_omni_r1_r2_0001"},
-	["esc_bridge_kamp_point"] = {"zone_flame_small_0002", "lights_camp_fire_omni_r1_r2_0002"},
-	["esc_lager_camp_center"] = {"zone_flame_small_0004", "lights_camp_fire_omni_r1_r2_0004"},
-	["esc_killers_kamp"] = {"zone_flame_small_0004", "lights_camp_fire_omni_r1_r2_0004"},
-	["esc_blokpost_kamp"] = {"zone_flame_small_0005", "lights_camp_fire_omni_r1_r2_0005"},
-	["esc2_most_kamp_1"] = {"zone_flame_small_0006", "lights_camp_fire_omni_r1_r2_0006"},
-	["esc_assault_kamp_center1"] = {"zone_flame_small_0007", "lights_camp_fire_omni_r1_r2_0007"},
-	["esc_fabrika_bandit_camp_center"] = {"zone_flame_small_0007", "lights_camp_fire_omni_r1_r2_0007"},
-	["esc2_st_fabric_kamp_2"] = {"zone_flame_small_0007", "lights_camp_fire_omni_r1_r2_0007"},
-	["esc2_bandit_les_kamp_1"] = {"zone_flame_small_0008", "lights_camp_fire_omni_r1_r2_0008"},
-	["esc_stalker_camp_esc_fox_kamp"] = {"zone_flame_small_0009", "lights_camp_fire_omni_r1_r2_0009"},
-	["esc2_st_fox_place_kamp_1"] = {"zone_flame_small_0009", "lights_camp_fire_omni_r1_r2_0009"},
-	["esc_stalker_camp_camp_point"] = {"zone_flame_small_0009", "lights_camp_fire_omni_r1_r2_0009"},
-
-	["gar_angar_gar_seryi_kamp"] = {"zone_flame_small_0002", "lights_camp_fire_omni_r1_r2_0003"},
-	["gar_smart_garage_kamp_1"] = {"zone_flame_small_0002", "lights_camp_fire_omni_r1_r2_0003"},
-	["gar_smart_graveyard_kamp_1"] = {"zone_flame_small_0003", "lights_camp_fire_omni_r1_r2_0004"},
-	["gar_bandit_agr_kamp_point1"] = {"zone_flame_small_0003", "lights_camp_fire_omni_r1_r2_0004"},
-	["gar_bandit_agr_kamp_point"] = {"zone_flame_small_0003", "lights_camp_fire_omni_r1_r2_0004"},
-	["gar_hellcar_group_kamp_point"] = {"zone_flame_small_0003", "lights_camp_fire_omni_r1_r2_0004"},
-	["gar_smart_bandit_kamp_1"] = {"zone_flame_small_0004", "lights_camp_fire_omni_r1_r2_0005"},
-	["gar_smart_stalkers_1_kamp_1"] = {"zone_flame_small_0004", "lights_camp_fire_omni_r1_r2_0005"},
-	["gar_dolg_blokpost_kamp_point"] = {"zone_flame_small_0005", "lights_camp_fire_omni_r1_r2_0006"},
-	
-	["val_smart_bandit_2_kamp_2"] = {"zone_flame_small_0006", "lights_camp_fire_omni_r1_r2_0006"},
-	["val_smart_bandit_2_kamp_1"] = {"zone_flame_small_0007", "lights_camp_fire_omni_r1_r2_0007"},
-	["val_lager_bandits_kamp2"] = {"zone_flame_small_0010", "lights_camp_fire_omni_r1_r2_0010"},
-	["val_lager_bandits_kamp3"] = {"zone_flame_small_0009", "lights_camp_fire_omni_r1_r2_0009"},
-	["val_lager_bandits_kamp1"] = {"zone_flame_small_0012", "lights_camp_fire_omni_r1_r2_0012"},
-	["val_smart_bandit_1_kamp_1"] = {"zone_flame_small_0015", "lights_camp_fire_omni_r1_r2_0015"},
-	["val_rob_kamp"] = {"zone_flame_small_0015", "lights_camp_fire_omni_r1_r2_0015"},
-	["val_exit1_ambush_kamp_1"] = {"zone_flame_small_0017", "lights_camp_fire_omni_r1_r2_0017"},
-	["val_smart_bandit_3_kamp_1"] = {"zone_flame_small_0017", "lights_camp_fire_omni_r1_r2_0017"},
-	
-	["bar_visitors_kamp_1"] = {"zone_flame_small_0000", "lights_camp_fire_omni_r1_r2_0000"},
-	["bar_visitors_kamp_2"] = {"zone_flame_small_0001", "lights_camp_fire_omni_r1_r2_0001"},
-	["bar_visitors_kamp_3"] = {"zone_flame_small_0005", "lights_camp_fire_omni_r1_r2_0005"},
-	["bar_dolg_general_kamp_center"] = {"zone_flame_small_0003", "lights_camp_fire_omni_r1_r2_0003"},
-	["bar_visitors_kamp_4"] = {"zone_flame_small_0004", "lights_camp_fire_omni_r1_r2_0004"},
-	
-	["ros_smart_stalker_bandits1_kamp_1"] = {"zone_flame_small_0000", "lights_camp_fire_omni_r1_r2_0000"},
-	
-	["yan_st_stalker2_kamp_1"] = {"zone_flame_small_0008", "lights_camp_fire_omni_r1_r2_0008"},
-	
-	["mil_monolit_kamp1"] = {"zone_flame_small_0000", "lights_camp_fire_omni_r1_r2_0000"},
-	["mil_fneutral_kamp"] = {"zone_flame_small_0000", "lights_camp_fire_omni_r1_r2_0000"},
-	["mil_monolit_kamp2"] = {"zone_flame_small_0002", "lights_camp_fire_omni_r1_r2_0002"},
-	["mil_khutor_kamp_center"] = {"zone_flame_small_0003", "lights_camp_fire_omni_r1_r2_0003"},
-	["mil_smart_dolg_kamp_kamp_1"] = {"zone_flame_small_0005", "lights_camp_fire_omni_r1_r2_0005"},
-	["mil_dolg_camp_center"] = {"zone_flame_small_0005", "lights_camp_fire_omni_r1_r2_0005"},
-	["mil_village_kamp"] = {"zone_flame_small_0006", "lights_camp_fire_omni_r1_r2_0006"},
-	["mil_fblockpost_kamp"] = {"zone_flame_small_0007", "lights_camp_fire_omni_r1_r2_0007"},
-	["mil_monolit_kamp3"] = {"zone_flame_small_0007", "lights_camp_fire_omni_r1_r2_0007"},
-	["mil_lager_kamp_1"] = {"zone_flame_small_0009", "lights_camp_fire_omni_r1_r2_0009"},
-	["mil_mercs_kamp_1"] = {"zone_flame_small_0010", "lights_camp_fire_omni_r1_r2_0010"},
-	["mil_bandit_kamp_1"] = {"zone_flame_small_0011", "lights_camp_fire_omni_r1_r2_0011"},
-	["mil_freedom_camp_center1"] = {"zone_flame_small_0012", "lights_camp_fire_omni_r1_r2_0012"},
-	
-	["rad_prip_teleport_kamp_center"] = {"zone_flame_small_0001", "lights_camp_fire_omni_r1_r2_0001"},
-	["rad2_prip_teleport_kamp_1"] = {"zone_flame_small_0001", "lights_camp_fire_omni_r1_r2_0001"},
-	["rad_valley_kamp"] = {"zone_flame_small_0002", "lights_camp_fire_omni_r1_r2_0002"},
-	["rad_entrance_kamp"] = {"zone_flame_small_0005", "lights_camp_fire_omni_r1_r2_0005"},
-	["rad2_prip_teleport_kamp_2"] = {"zone_flame_small_0005", "lights_camp_fire_omni_r1_r2_0005"},
-	["rad_mil_entrance_kamp_center"] = {"zone_flame_small_0005", "lights_camp_fire_omni_r1_r2_0005"},
-	["rad_prip_road_kamp_center"] = {"zone_flame_small_0007", "lights_camp_fire_omni_r1_r2_0007"},
-	["rad_freedom_vs_duty_kamp_center1"] = {"zone_flame_small_0007", "lights_camp_fire_omni_r1_r2_0007"},
-	["rad_freedom_vs_duty_kamp_center"] = {"zone_flame_small_0007", "lights_camp_fire_omni_r1_r2_0007"},
-	["rad2_loner_0001_kamp_1"] = {"zone_flame_small_0008", "lights_camp_fire_omni_r1_r2_0008"},
-	["rad2_loner_0002_kamp_1"] = {"zone_flame_small_0009", "lights_camp_fire_omni_r1_r2_0009"},
-	["rad_antenna_monolith_kamp"] = {"zone_flame_small_0010", "lights_camp_fire_omni_r1_r2_0010"},
-	["rad_antenna_patrol_kamp"] = {"zone_flame_small_0010", "lights_camp_fire_omni_r1_r2_0010"},
-	["rad2_loner_0000_kamp_1"] = {"zone_flame_small_0013", "lights_camp_fire_omni_r1_r2_0013"},
-	
-	["pri_smart_monolith_stalker5_kamp_1"] = {"zone_flame_small_0018", "lights_camp_fire_omni_r1_r2_0005"},
-	["pri_smart_dolg_stalker1_kamp_1"] = {"zone_flame_small_0021", "lights_camp_fire_omni_r1_r2_0008"},
-	["pri_wave7_kamp_1"] = {"pri_zone_flame_small_0003", "pri_r1_r2_0001"},
-	["pri_sideway_left_kamp"] = {"pri_zone_flame_small_0043", "pri_r1_r2_00002"},
-	["pri_smart_freedom_stalker1_kamp_1"] = {"pri_zone_flame_small_0043", "pri_r1_r2_0002"},
-	["pri_smart_monolith_stalker4_kamp_1"] = {"pri_zone_flame_small_0044", "pri_r1_r2_0003"},
-	["pri_monolith_kamp2"] = {"pri_zone_flame_small_0026", "pri_r1_r2_0004"},
-	["pri_monolith_kamp3"] = {"pri_zone_flame_small_0021", "pri_r1_r2_0005"},
-	["pri_monolith_kamp5"] = {"pri_zone_flame_small_0045", "pri_r1_r2_0006"},
-	["pri_monolith_kamp7"] = {"pri_zone_flame_small_0000", "pri_r1_r2_0007"},
-	["pri_smart_monolith_stalker6_kamp_1"] = {"pri_zone_flame_small_0035", "pri_r1_r2_0008"}
-}
-
-	lvl_objs = {}
-	local kamps_info = {}
-
 function CKampManager:increasePops(npc)
 	self.population = self.population + 1
-	local camp_name = camp_tbl[self.kamp_name]
-	if self.population == 1 and camp_name then
-		local flame = camp_name[1]
-		local light = camp_name[2]
-		
---		kamps_info[self.kamp_name] = nil
---		if not kamps_info[self.kamp_name] then
-			kamps_info[self.kamp_name] = {}
-			kamps_info[self.kamp_name].time = time_global()
-			kamps_info[self.kamp_name].prtcl = nil
-			kamps_info[self.kamp_name].state = nil
---		end
-		
-		for i,o in pairs(lvl_objs) do
-			local obj = o
-			if obj and obj:name() == flame then
-				kamps_info[self.kamp_name].obj_fire = obj
-				obj:enable_anomaly()
-			end
-			if obj and obj:name() == light then
-				kamps_info[self.kamp_name].obj_light = obj
-			end
-		end
-	end
 end
 function CKampManager:decreasePops(npc)
 	self.population = self.population - 1
-	local camp_name = camp_tbl[self.kamp_name]
-	if self.population < 1 and camp_name then
-		local flame = camp_name[1]
-		local light = camp_name[2]
-		
---		if not kamps_info[self.kamp_name] then
-			kamps_info[self.kamp_name] = {}
-			kamps_info[self.kamp_name].time = time_global()
-			kamps_info[self.kamp_name].prtcl = particles_object("anomaly2\\artefact\\artefact_zharka")
-			kamps_info[self.kamp_name].state = nil
---		end
-		
-		for i,o in pairs(lvl_objs) do
-			local obj = o
-			if obj and obj:name() == flame then
-				kamps_info[self.kamp_name].obj_fire = obj
-			end
-			if obj and obj:name() == light then
-				kamps_info[self.kamp_name].obj_light = obj
-			end
-		end
-	end
 end
-
-function update(time)
-	for i,v in pairs(kamps_info) do
-		local kamp_name = i
-		local kamp_fire = v.obj_fire
-		local kamp_light = v.obj_light
-		local kamp_time = v.time
-		local kamp_prtcl = v.prtcl
-		local kamp_state = v.state
-		
-		if kamp_fire and kamp_light then
-			if kamp_prtcl == nil and kamp_time + 5000 < time then
-				kamp_light:get_hanging_lamp():turn_on()
-				kamps_info[kamp_name] = nil
-			end
-			
-			if kamp_prtcl then
-				if kamp_state == nil and kamp_time + 10000 < time then
-					kamps_info[kamp_name].state = 1
-					kamp_prtcl:play_at_pos(kamp_fire:position())
-				end
-				
-				if kamp_time + 15000 < time then
-					kamp_fire:disable_anomaly()
-				end
-				
-				if kamp_time + 48000 < time then
-					kamp_light:get_hanging_lamp():turn_off()
-				end
-				
-				if kamp_time + 120000 < time then
-					kamp_prtcl:stop()
-					kamps_info[kamp_name] = nil
-				end
-			end
-		end
-	end
-end
---<< Dynamic campfire mod
 ----------------------------------------------------------------------------------------------------------------------
 --Kamp binder
 ----------------------------------------------------------------------------------------------------------------------
@@ -1157,7 +963,7 @@ function add_to_binder(object, ini, scheme, section, storage)
 		manager:add_evaluator (properties["can_move_deadman"],	this.evaluator_can_move_deadman	("can_move_deadman", storage, "can_move_deadman"))
 	end
 
-	--printf("PRP %s", stalker_ids.property_script)
+	printf("PRP %s", stalker_ids.property_script)
 
 	-- Actions
 	local action = this.action_wait (object:name(),"action_kamp_wait", storage)

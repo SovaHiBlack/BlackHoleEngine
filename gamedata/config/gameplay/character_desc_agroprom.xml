@@ -37,7 +37,6 @@ ammo_12x70_buck=2 \n
 #include "gameplay\character_criticals_4.xml"
 
 		<start_dialog>agr_krot_help</start_dialog>
-		<actor_dialog>agr_stalker_talk_level</actor_dialog>
 #include "gameplay\character_dialogs.xml"		
 	</specific_character>
 

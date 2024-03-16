@@ -83,7 +83,7 @@
 			<grab_input>1</grab_input>
 			<pda_section>pda_map</pda_section>
 			<main_wnd>
-				<auto_static start_time="0" length_sec="4" x="226" y="608" width="50" height="50"  stretch="1" light_anim="tutor_rad_sign_clr" light_anim_cyclic="1" la_alpha="0" la_texture="1" xform_anim="tutor_rad_sign_xform" xform_anim_cyclic="1" alignment="c">
+				<auto_static start_time="0" length_sec="4" x="216" y="608" width="50" height="50"  stretch="1" light_anim="tutor_rad_sign_clr" light_anim_cyclic="1" la_alpha="0" la_texture="1" xform_anim="tutor_rad_sign_xform" xform_anim_cyclic="1" alignment="c">
 					<window_name>w1</window_name>
 					<texture>ui_highlight</texture>
 				</auto_static>
@@ -215,7 +215,7 @@
 			<grab_input>1</grab_input>
 			<pda_section>pda_diary</pda_section>
 			<main_wnd>
-				<auto_static start_time="0" length_sec="4" x="295" y="608" width="50" height="50" stretch="1" light_anim="tutor_rad_sign_clr" light_anim_cyclic="1" la_alpha="0" la_texture="1" xform_anim="tutor_rad_sign_xform" xform_anim_cyclic="1" alignment="c">
+				<auto_static start_time="0" length_sec="4" x="275" y="608" width="50" height="50" stretch="1" light_anim="tutor_rad_sign_clr" light_anim_cyclic="1" la_alpha="0" la_texture="1" xform_anim="tutor_rad_sign_xform" xform_anim_cyclic="1" alignment="c">
 					<window_name>w1</window_name>
 					<texture>ui_highlight</texture>
 				</auto_static>
@@ -233,7 +233,7 @@
 			<grab_input>1</grab_input>
 			<pda_section>pda_ranking</pda_section>
 			<main_wnd>
-				<auto_static start_time="0" length_sec="4" x="427" y="608" width="50" height="50" stretch="1" light_anim="tutor_rad_sign_clr" light_anim_cyclic="1" la_alpha="0" la_texture="1" xform_anim="tutor_rad_sign_xform" xform_anim_cyclic="1" alignment="c">
+				<auto_static start_time="0" length_sec="4" x="437" y="608" width="50" height="50" stretch="1" light_anim="tutor_rad_sign_clr" light_anim_cyclic="1" la_alpha="0" la_texture="1" xform_anim="tutor_rad_sign_xform" xform_anim_cyclic="1" alignment="c">
 					<window_name>w1</window_name>
 					<texture>ui_highlight</texture>
 				</auto_static>
@@ -249,7 +249,7 @@
 			<grab_input>1</grab_input>
 			<pda_section>pda_statistics</pda_section>
 			<main_wnd>
-				<auto_static start_time="0" length_sec="4" x="505" y="608" width="50" height="50" stretch="1" light_anim="tutor_rad_sign_clr" light_anim_cyclic="1" la_alpha="0" la_texture="1" xform_anim="tutor_rad_sign_xform" xform_anim_cyclic="1" alignment="c">
+				<auto_static start_time="0" length_sec="4" x="515" y="608" width="50" height="50" stretch="1" light_anim="tutor_rad_sign_clr" light_anim_cyclic="1" la_alpha="0" la_texture="1" xform_anim="tutor_rad_sign_xform" xform_anim_cyclic="1" alignment="c">
 					<window_name>w1</window_name>
 					<texture>ui_highlight</texture>
 				</auto_static>
@@ -266,7 +266,7 @@
 			<grab_input>1</grab_input>
 			<pda_section>pda_encyclopedia</pda_section>
 			<main_wnd>
-				<auto_static start_time="0" length_sec="6" x="602" y="608" width="50" height="50" stretch="1" light_anim="tutor_rad_sign_clr" light_anim_cyclic="1" la_alpha="0" la_texture="1" xform_anim="tutor_rad_sign_xform" xform_anim_cyclic="1" alignment="c">
+				<auto_static start_time="0" length_sec="6" x="622" y="608" width="50" height="50" stretch="1" light_anim="tutor_rad_sign_clr" light_anim_cyclic="1" la_alpha="0" la_texture="1" xform_anim="tutor_rad_sign_xform" xform_anim_cyclic="1" alignment="c">
 					<window_name>w1</window_name>
 					<texture>ui_highlight</texture>
 				</auto_static>
@@ -574,10 +574,10 @@
 
 
 
-	<part_7_psy><!--ьанызаудвриа-->
+	<part_7_psy><!--делаю новый туториал-->
 		<global_wnd/>
 		
-		<item><!-- сжа-->
+		<item><!-- Пси -->
 			<length_sec>10</length_sec>
 			<pause_state>off</pause_state>
 			<guard_key/>
@@ -595,10 +595,10 @@
 		</item>
 	</part_7_psy>
 
-	<part_13_satiety><!--ьанызаудвриа-->
+	<part_13_satiety><!--делаю новый туториал-->
 		<global_wnd/>
 		
-		<item><!--  -->
+		<item><!-- Голод -->
 			<length_sec>12</length_sec>
 			<pause_state>off</pause_state>
 			<guard_key/>
@@ -616,10 +616,10 @@
 		</item>
 	</part_13_satiety>	
 
-	<part_16_disguise><!--ьанызаудвриа-->
+	<part_16_disguise><!--делаю новый туториал-->
 		<global_wnd/>
 		
-		<item><!-- скиров -->
+		<item><!-- Маскировка -->
 			<length_sec>15</length_sec>
 			<pause_state>off</pause_state>
 			<guard_key/>
@@ -637,10 +637,10 @@
 		</item>
 	</part_16_disguise>	
 
-	<part_17_sleep><!--ьанызаудвриа-->
+	<part_17_sleep><!--делаю новый туториал-->
 		<global_wnd/>
 		
-		<item><!--  -->
+		<item><!-- Сон -->
 			<length_sec>15</length_sec>
 			<pause_state>off</pause_state>
 			<guard_key/>
@@ -658,10 +658,10 @@
 		</item>
 	</part_17_sleep>
 
-	<part_19_activation><!--ьанызаудвриа-->
+	<part_19_activation><!--делаю новый туториал-->
 		<global_wnd/>
 		
-		<item><!-- тивцйп свефактов -->
+		<item><!-- Активация артефактов -->
 			<length_sec>15</length_sec>
 			<pause_state>off</pause_state>
 			<guard_key/>

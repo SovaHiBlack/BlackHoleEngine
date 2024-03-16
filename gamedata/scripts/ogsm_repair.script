@@ -1,10 +1,10 @@
----------------------- Модуль ремонта вещей для OGSM 2.4 ----------------------
+---------------------- Модуль ремонта вещей для OGSM 2.x ----------------------
 
---------------------- Copyright 2007-2018 Ab@dDon & DEXXX ---------------------
+--------------------- Copyright 2007-2008 Ab@dDon & DEXXX ---------------------
 
 
-local weapon_profit_margin = 1.5
-local armor_profit_margin = 1.5 + ogsm_options.marauder/100
+local weapon_profit_margin = 2.5
+local armor_profit_margin = 3
 local set_cond1 = 0
 local set_cond2 = 0
 local set_cond6 = 0
@@ -120,6 +120,22 @@ function repair_costs(first_speaker, second_speaker)
 end
 
 
----------------------- Модуль ремонта вещей для OGSM 2.4 ----------------------
+---------------------- Модуль ремонта вещей для OGSM 2.x ----------------------
 
---------------------- Copyright 2007-2018 Ab@dDon & DEXXX ---------------------
+--------------------- Copyright 2007-2008 Ab@dDon & DEXXX ---------------------
+
+--[[
+
+If you're going to use the whole of this script or its parts in your own creative 
+developments for the S.T.A.L.K.E.R. game, please don't become such a goddamn 
+motherfucker like the notorious author of the ABC Mod - Carbrobro. Leave the 
+copyrights, note the real author(s) and don't claim others' ideas and their 
+realization to be your own ones. It's just simple Modmakers' Ethics. Thank you!
+
+Если вы собираетесь использовать данный скрипт целиком или частично в своих 
+разработках по игре S.T.A.L.K.E.R., пожалуйста не опускайтесь до уровня печально 
+известного автора ABC мода - Carbrobro. Не удаляйте копирайты, указывайте настоящего 
+автора(ов) и не выдавайте чужие идеи и их реализацию за свои. Ведь это элементарная 
+этика модостроителей! Спасибо за понимание.
+
+]]--

@@ -32,7 +32,6 @@ ammo_5.56x45_ss190=1
 		
 		<start_dialog>gar_seriy_start</start_dialog>
 		<start_dialog>dm_hello_dialog</start_dialog>
-		<actor_dialog>gar_seryi_about_garbage</actor_dialog>
 		<actor_dialog>dm_cool_info_dialog</actor_dialog>
 		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>	
 	</specific_character>	

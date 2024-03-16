@@ -37,12 +37,6 @@
 	<string id="aes_yastreb">
 		<text>Ястреб</text>
 	</string>
-	<string id="sar_secret_door_hint">
-		<text>Открыть секретную дверь</text>
-	</string>
-	<string id="sar_monolith_hint">
-		<text>Загадать желание</text>
-	</string>
 	<string id="sar_warlab_hint">
 		<text>Встретиться с О-Сознанием</text>
 	</string>

@@ -1,8 +1,7 @@
 --------------------------------------------------------------------------
 -- Stuff
 --------------------------------------------------------------------------
-function printf()
-end
+function printf() end
 
 
 --------------------------------------------------------------------------
@@ -303,8 +302,8 @@ gulags.pri_followers.job = function(sj, gname, type, squad, groups)
                     "[walker@" .. pref .. "_wave3]\n" ..
                     "path_walk           = wave3_stalker" .. i .. "_walk\n" ..
                     "path_look           = wave3_stalker" .. i .. "_look\n" ..
-                    "def_state_moving1   = assault\n" ..
-                    "def_state_moving2   = assault\n" ..
+                    "def_state_moving1   = assault ;sprint\n" ..
+                    "def_state_moving2   = assault ;sprint\n" ..
                     "on_timer            = " .. math.random(30, 40) .. "00 | remark@" .. pref .. "_wave3_fight\n" .. -- 30
                     "wounded             = wounded@ignore\n" ..
                     "meet                = no_meet\n" .. --meet@def
@@ -449,9 +448,7 @@ pri_followers_switcher[state_wave7] = function(actor, delta_time)
     then
         actor:give_info_portion("pri_undeground_respawn_start")
         actor:give_info_portion("pri_wave7_end")
-        if not has_alife_info("pri_aes_mapspot") then
 		actor:give_info_portion("pri_aes_mapspot")
-        end
         return state_wave8
     end
     return state_wave7
@@ -480,7 +477,6 @@ gulags.pri_followers.state = function(gulag)
 	    end
 	    if actor_leave then
 	        actor:give_info_portion("pri_followers_actor_leave")
-	        actor:give_info_portion("pri_aes_mapspot")
 	    end
 	end
 
@@ -661,7 +657,7 @@ gulags.pri_wave.job = function(sj, gname, type, squad, groups)
         ltx = ltx.."[camper@" .. idstr .. "]\n" ..                            
                    "path_walk                   = wsniper_" .. i .. "_walk\n" ..
                    "path_look                   = wsniper_" .. i .. "_look\n" ..
-                   "def_state_moving            = walk\n" ..
+                   "def_state_moving            = walk ;assault\n" ..
                    "def_state_campering         = threat_na\n" ..
                    "def_state_standing          = threat_na\n" ..
                    "def_state_campering_fire    = threat_sniper_fire\n" ..
@@ -677,7 +673,7 @@ gulags.pri_wave.job = function(sj, gname, type, squad, groups)
                    "[camper@" .. idstr .. "_guard]\n" ..                            
                    "path_walk                   = wsniper_" .. i .. "_walk\n" ..
                    "path_look                   = wsniper_" .. i .. "_look\n" ..
-                   "def_state_moving            = sneak_run\n" ..
+                   "def_state_moving            = sneak_run ;assault\n" ..
                    "def_state_campering         = threat_na\n" ..
                    "def_state_standing          = threat_na\n" ..
                    "def_state_campering_fire    = threat_fire\n" ..
@@ -1313,7 +1309,7 @@ gulags.pri_monolith.job = function(sj, gname, type, squad, groups)
                     "def_state_campering        = threat\n" ..
                     "def_state_campering_fire   = threat_fire\n" ..
                     "sniper                     = true\n" ..
-                    --"no_retreat                = true\n" ..
+                    ";no_retreat                = true\n" ..
                     "radius                     = 0\n" ..
                     "on_info                    = {+" .. gname .. "_snipers_free} walker@" .. gname .. "_sniper" .. i .. "_free\n" ..
                     "combat_ignore_cond         = {=pri_monolith_combat_ignore}\n" ..

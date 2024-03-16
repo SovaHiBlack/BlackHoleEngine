@@ -12,10 +12,10 @@ xrs_utils
 file: modules.script
 after: <<<END
 load_scheme("xr_patrol",      "patrol",      stype_stalker)  
-END
+END;
 code: <<<END
 if xrs_ai then xrs_ai.load_schemes() end 
-END
+END;
 ]]
 function load_schemes()
 	if xrs_grenade then load_scheme("xrs_grenade",      "grenadier",    stype_stalker) end 
@@ -28,10 +28,10 @@ file: xr_logic.script
 function: disable_generic_schemes(npc, stype)
 after: <<<END
 		xr_combat.disable_scheme(npc, "combat")
-END
+END;
 code: <<<END
 		if xrs_ai then xrs_ai.disable_schemes(npc, stype) end
-END
+END;
 ]]
 function disable_schemes(npc, stype)
 	if xrs_grenade then xrs_grenade.disable_scheme(npc, "grenadier") end
@@ -44,11 +44,11 @@ file: xr_logic.script
 function: enable_generic_schemes(ini, npc, stype, section)
 before: <<<END
 	elseif stype == modules.stype_mobile then
-END
+END;
 code: <<<END
 		if xrs_ai then xrs_ai.enable_schemes(ini, npc, stype, section) end
 
-END
+END;
 ]]
 function enable_schemes(ini, npc, stype, section)
 	if xrs_grenade then xrs_grenade.set_scheme(npc, ini, "grenadier", "grenadier") end
@@ -61,11 +61,11 @@ file: bind_stalker.script
 function: actor_binder:net_spawn(data)
 after: <<<END
 	death_manager.init_drop_settings()
-END
+END;
 code: <<<END
 
 	if xrs_ai then xrs_ai.actor_net_spawn(self) end
-END
+END;
 ]]
 function actor_net_spawn(binder)
 	if xrs_grenade then xrs_grenade.net_spawn() end
@@ -76,10 +76,10 @@ file: bind_stalker.script
 function: actor_binder:on_item_take (obj)
 after: <<<END
     level_tasks.proceed(self.object)
-END
+END;
 code: <<<END
 	if xrs_ai then xrs_ai.actor_item_take(obj) end
-END
+END;
 ]]
 function actor_item_take(obj)
 	if xrs_grenade then xrs_grenade.fake_pickup(obj) end
@@ -92,7 +92,7 @@ function: actor_binder:update(delta)
 add to end
 code: <<<END
 	if xrs_ai then xrs_ai.actor_update(delta) end
-END
+END;
 ]]
 function actor_update(delta)
 	if xrs_grenade then xrs_grenade.update(delta) end
@@ -105,7 +105,7 @@ function: motivator_binder:net_destroy()
 add to begin
 code: <<<END
 	if xrs_ai then xrs_ai.npc_net_destroy(self.object) end
-END
+END;
 ]]
 function npc_net_destroy(npc)
 	if xrs_medic then xrs_medic.death_callback(npc) end
@@ -117,7 +117,7 @@ function: motivator_binder:death_callback(victim, who)
 add to begin
 code: <<<END
 	if xrs_ai then xrs_ai.npc_death_callback(self.object) end
-END
+END;
 ]]
 function npc_death_callback(npc)
 	if xrs_grenade then xrs_grenade.death_callback(npc) end
@@ -130,7 +130,7 @@ function: motivator_binder:update(delta)
 add to end
 code: <<<END
 	if xrs_ai then xrs_ai.npc_update(self) end
-END
+END;
 ]]
 function npc_update(binder)
 	if xrs_grenade then xrs_grenade.npc_update(binder) end
@@ -144,7 +144,7 @@ function: addCommonPrecondition(action)
 add to end
 code: <<<END
 	if xrs_ai then xrs_ai.addCommonPrecondition(action) end
-END
+END;
 ]]
 function addCommonPrecondition(action)
 	if xrs_grenade then action:add_precondition (world_property(xrs_grenade.evid_crazy_grenadier, false)) end

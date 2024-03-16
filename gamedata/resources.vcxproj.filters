@@ -6691,28 +6691,13 @@
     <Xml Include="config\ui\trade_new.xml">
       <Filter>config\ui</Filter>
     </Xml>
-    <Xml Include="config\ui\ui_asus_intro.xml">
-      <Filter>config\ui</Filter>
-    </Xml>
-    <Xml Include="config\ui\ui_buy_menu.xml">
-      <Filter>config\ui</Filter>
-    </Xml>
     <Xml Include="config\ui\ui_game_over.xml">
-      <Filter>config\ui</Filter>
-    </Xml>
-    <Xml Include="config\ui\ui_icons_npc.xml">
       <Filter>config\ui</Filter>
     </Xml>
     <Xml Include="config\ui\ui_mm_mp_gs_ext.xml">
       <Filter>config\ui</Filter>
     </Xml>
     <Xml Include="config\ui\ui_mm_mp_gs_ext_16.xml">
-      <Filter>config\ui</Filter>
-    </Xml>
-    <Xml Include="config\ui\ui_npc_monster.xml">
-      <Filter>config\ui</Filter>
-    </Xml>
-    <Xml Include="config\ui\ui_npc_unique.xml">
       <Filter>config\ui</Filter>
     </Xml>
     <Xml Include="config\character_desc_general.xml">
@@ -6742,9 +6727,6 @@
     <Xml Include="config\text\rus\stable_repair_dialogs.xml">
       <Filter>config\text\rus</Filter>
     </Xml>
-    <Xml Include="config\ui\aem_ui_npc.xml">
-      <Filter>config\ui</Filter>
-    </Xml>
     <Xml Include="config\ui\game_tutorials_16.xml">
       <Filter>config\ui</Filter>
     </Xml>
@@ -6753,6 +6735,24 @@
     </Xml>
     <Xml Include="config\ui\ui_cheat_wnd.xml">
       <Filter>config\ui</Filter>
+    </Xml>
+    <Xml Include="config\ui\ui_npc_unique.xml">
+      <Filter>config\ui\textures_desc</Filter>
+    </Xml>
+    <Xml Include="config\ui\ui_asus_intro.xml">
+      <Filter>config\ui\textures_desc</Filter>
+    </Xml>
+    <Xml Include="config\ui\ui_npc_monster.xml">
+      <Filter>config\ui\textures_desc</Filter>
+    </Xml>
+    <Xml Include="config\ui\ui_icons_npc.xml">
+      <Filter>config\ui\textures_desc</Filter>
+    </Xml>
+    <Xml Include="config\ui\ui_buy_menu.xml">
+      <Filter>config\ui\textures_desc</Filter>
+    </Xml>
+    <Xml Include="config\ui\aem_ui_npc.xml">
+      <Filter>config\ui\textures_desc</Filter>
     </Xml>
   </ItemGroup>
   <ItemGroup>

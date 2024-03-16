@@ -81,7 +81,7 @@ script_binding  	 = bind_monster.bind
 ph_skeleton_airr_lin_factor   = -0.4
 ph_skeleton_airr_ang_factor   = -0.2
 ph_skeleton_hinger_factor1    = 1.0
-ph_skeleton_ddelay            = 5.0
+ph_skeleton_ddelay	      = 5.0
 ph_skel_fatal_impulse_factor  = 2.0
 ph_after_death_velocity_factor= 0.75
 ph_skel_shot_up_factor        = 0.25
@@ -194,10 +194,10 @@ sound_attack_hit		= monsters\tushkano\tushkano_attack_
 sound_take_damage		= monsters\tushkano\tushkano_pain_
 sound_die				= monsters\tushkano\tushkano_death_
 sound_threaten			= monsters\tushkano\tushkano_threaten_
-sound_landing			= monsters\tushkano\tushkano_pain_
-sound_steal				= monsters\tushkano\tushkano_idle_
+sound_landing			= monsters\tushkano\tushkano_pain_ ;monsters\tushkano\tush_idle_
+sound_steal				= monsters\beeps_ ;monsters\tushkano\tush_idle_
 sound_panic				= monsters\tushkano\tushkano_panic_
-sound_growling			= monsters\tushkano\tushkano_idle_
+sound_growling			= monsters\beeps_ ;monsters\tushkano\tush_idle_
 sound_die_in_anomaly	= monsters\tushkano\tushkano_anomaly_
 
 killer_clsids			= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
@@ -229,8 +229,7 @@ damage					= m_tushkano_damage
 
 ;species of monster
 species					= tushkano
-rank 					= 0
-spec_rank				= weak
+spec_rank				= normal
 community				= tushkano
 
 
@@ -257,19 +256,19 @@ bip01_head 			= 2.0, -1, 0.5, 10
 [m_tushkano_normal]:m_tushkano_e
 $spawn				= "monsters\tushkanos\tushkano_normal_old"
 ;---------------------------
-rank 				= 401
+rank = 401
 spec_rank			= normal
 community			= tushkano
 
 [tushkano_normal]:m_tushkano_e
 $spawn				= "monsters\tushkanos\tushkano_normal"
-rank 				= 401
+rank = 401
 spec_rank			= normal
 community			= tushkano
 
 [tushkano_weak]:m_tushkano_e
 $spawn				= "monsters\tushkanos\tushkano_normal"
-rank 				= 0
+rank = 101
 spec_rank			= weak
 community			= tushkano
 

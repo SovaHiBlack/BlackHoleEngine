@@ -171,13 +171,13 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 	
-    t = { section = "logic@mil_freedom_walker7",
+	t = { section = "logic@mil_freedom_walker7",
 		idle = 0,
 		prior = 19, state = {0, 3, 4},
 		squad = squad, group = groups[0],
 		in_rest = "mil_freedom_wall_restrictor", out_rest = "",
 		position_threshold = 600,
-    		predicate = function (info)
+    	predicate = function (info)
 	                    return info.profile_name == "mil_Svoboda_engineer"
 	                end
      	}
@@ -649,7 +649,7 @@ end
 function check_state (gulag)
     
     -- отсеиваем четвертое состо€ние.
-    if has_alife_info("mil_lukash_dead") then
+    if has_alife_info("mil_lukash_dead") or has_alife_info("mil_freedom_quests_end") then
        if this.check_enemy (gulag) == true then
           -- поскольку вопрос об отношении к актеру решатьс€ не собираетс€, то выход будет именно таким.
           if gulag:npc_is_enemy_to_anybody (db.actor) == true then
@@ -706,7 +706,7 @@ end
 function check_enemy (gulag)
     for k,v in pairs(gulag.Object) do
         if v ~= true then
-           if v:best_enemy () ~= nil and v:story_id () ~= 710 and IsMonster(v:best_enemy()) == false then 
+           if v:best_enemy () ~= nil and v:story_id () ~= 710 and is_object_monster (v:best_enemy ()) == false then 
               return true
            end
         end
@@ -1180,10 +1180,10 @@ end
 function check_village_state (gulag)
     if has_alife_info("mil_miser_task_complete") or 
        has_alife_info("mil_after_hunt_talked") then 
-       --printf ("VILLAGE GULAG CHANGE STATE TO 1")
+       printf ("VILLAGE GULAG CHANGE STATE TO 1")
        return 1 
     end
-    --printf ("VILLAGE GULAG CHANGE STATE TO 0")
+    printf ("VILLAGE GULAG CHANGE STATE TO 0")
     return 0    
 end
 
@@ -1485,10 +1485,9 @@ function load_job_dolg (sj, gname, type, squad, groups)
 		position_threshold = 400,
 		predicate = function (info)
 		                     return info.community == "dolg"
-		          end
+		            end
 		}
-	table.insert(sj, t)
-	
+	table.insert(sj, t)	
 end
 --------------------------------------------------------------------------
 -- ‘ункци€ проверки состо€ни€ гулага ƒолга
@@ -1505,7 +1504,7 @@ function check_dolg_state (gulag)
     
     if has_alife_info("mil_dolg_skull_talk") == true and not has_alife_info("mil_lukash_dead") then
        return 1
-    end
+    end    
     
     return 0
 end

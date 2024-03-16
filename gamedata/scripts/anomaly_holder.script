@@ -1,100 +1,78 @@
----------------------- Stalkers are not blind ---------------------
-------------------------- Copyright Red75 -------------------------
-
 local anom_list=nil
 local cur_level=nil
 
-local radius_anom = {
-    zone_ameba=4,
-    zone_burning_fuzz=3,
-    zone_burning_fuzz1=3,
-    zone_burning_fuzz_weak=3,
-    zone_burning_fuzz_average=3,
-    zone_burning_fuzz_strong=3,
-    zone_burning_fuzz_bottom_weak=3,
-    zone_burning_fuzz_bottom_average=3,
-    zone_burning_fuzz_bottom_strong=3,
-    zone_buzz=2,
-    zone_buzz_weak=2,
-    zone_buzz_average=2,
+local radius={
+    zone_buzz=1,
+    zone_buzz_weak=1,
+    zone_buzz_average=1,
     zone_buzz_strong=2,
     zone_gravi_zone=7,
-    zone_gravi_zone_weak=7,
-    zone_gravi_zone_weak_noart=7,
-    zone_gravi_zone_average=8,
-    zone_gravi_zone_strong=8,
-    zone_gravi_zone_killing=8,
+    zone_gravi_zone_weak=6,
+    zone_gravi_zone_weak_noart=6,
+    zone_gravi_zone_average=6,
+    zone_gravi_zone_strong=6,
+    zone_gravi_zone_killing=7,
     zone_mincer=7,
     zone_mincer_weak=7,
     zone_mincer_weak_noart=7,
-    zone_mincer_average=8,
-    zone_mincer_strong=8,
+    zone_mincer_average=7,
+    zone_mincer_strong=7,
     zone_mosquito_bald=7,
-    zone_mosquito_bald_weak=7,
+    zone_mosquito_bald_weak=6,
     zone_mosquito_bald_weak_noart=7,
-    zone_mosquito_bald_average=8,
-    zone_mosquito_bald_strong=8,
-    zone_mosquito_bald_strong_noart=8,
+    zone_mosquito_bald_average=7,
+    zone_mosquito_bald_strong=7,
+    zone_mosquito_bald_strong_noart=7,
     zone_sarcofag=5,
-    zone_witches_galantine=7,
-    zone_witches_galantine_weak=7,
-    zone_witches_galantine_average=8,
-    zone_witches_galantine_strong=8,
+    zone_witches_galantine=6,
+    zone_witches_galantine_weak=6,
+    zone_witches_galantine_average=6,
+    zone_witches_galantine_strong=7,
     zone_zharka_static=5,
     zone_zharka_static_weak=5,
     zone_zharka_static_average=5,
     zone_zharka_static_strong=5,
     zone_mine_field=2,
     zone_death=2,
-    noartf_buzz_weak=2,
-    noartf_buzz_average=2,
-    noartf_buzz_strong=2,
-    noartf_gravi_zone_weak=7,
-    noartf_gravi_zone_average=8,
-    noartf_gravi_zone_strong=8,
-    noartf_mincer_weak=7,
-    noartf_mincer_average=8,
-    noartf_mincer_strong=8,
-    noartf_mosquito_bald_weak=7,
-    noartf_mosquito_bald_average=8,
-    noartf_mosquito_bald_strong=8,
-    noartf_witches_galantine_weak=7,
-    noartf_witches_galantine_average=8,
-    noartf_witches_galantine_strong=8,
+    noartf_gravi_zone_weak=5,
+    noartf_gravi_zone_average=5,
+    noartf_gravi_zone_strong=5,
+    noartf_mincer_weak=5,
+    noartf_mincer_average=5,
+    noartf_mincer_strong=5,
+    noartf_mosquito_bald_weak=5,
+    noartf_mosquito_bald_average=5,
+    noartf_mosquito_bald_strong=5,
+    noartf_witches_galantine_weak=5,
+    noartf_witches_galantine_average=5,
+    noartf_witches_galantine_strong=5,
     noartf_zharka_static_weak=5,
     noartf_zharka_static_average=5,
     noartf_zharka_static_strong=5
   }
 
 function get_radius_for_section(sect)
-  if radius_anom[sect] then
-    return radius_anom[sect]
+  if radius[sect] then
+    return radius[sect]
   else
     return 4
   end
 end
 
-function add_anomaly(id,cls,sect,rad_a)
-  if anom_list == nil then
+function add_anomaly(id,cls,sect,rad)
+  if anom_list==nil then
     anom_list={}
   end
-  if cur_level ~= level.name() then
-    anom_list = {}
-    cur_level = level.name()
+  if cur_level~=level.name() then
+    anom_list={}
+    cur_level=level.name()
+--    mylog("switching to level " .. tostring(cur_level) )
   end
+--  mylog("adding " .. id .. " clsid " .. cls .. " " .. sect )
 
-  if rad_a == 0 or rad_a == nil then 
-	rad_a = get_radius_for_section(sect) 
-  end
-  
-  if string.find(sect, "mincer") or string.find(sect, "gravi") or string.find(sect, "mosquito") then
-	rad_a = rad_a + 2
-  end
-  
-  local status = ogsm_anomaly.get_anomaly_mode(id)
-  if status == "anom_off" then return end
+  if rad==0 or rad==nil then rad = get_radius_for_section(sect) end
 
-  anom_list[id] = {pos = 0, clsid = cls, radius = rad_a, section = sect}
+  anom_list[id]={pos=0,clsid=cls,radius=rad,section=sect}
 end
 
 function remove_anomaly(id)
@@ -105,55 +83,34 @@ end
 
 
 function enumerate_anoms()
-	if cur_level ~= level.name() then
-		anom_list = nil
-		cur_level = level.name()
-	end
-	local actor_vid = game_graph():vertex(alife():actor().m_game_vertex_id):level_id()
-	if not anom_list then
-		anom_list={}
-		for id=1,65535, 1 do
-			local anomaly = alife():object(id)
-			if anomaly then
-				local anomaly_vid = game_graph():vertex(anomaly.m_game_vertex_id):level_id()	
-				if actor_vid == anomaly_vid then
-					local sect = anomaly:section_name()
-					if sect and radius_anom[sect] then
-						local packet = m_net_utils.get_anomaly_data(anomaly)
-						local status = ogsm_anomaly.get_anomaly_mode(id)
-						if status ~= "anom_off" then
-							anom_list[id] = {pos = anomaly.position, clsid = anomaly:clsid(), radius = (packet.radius or radius_anom[sect]), section = sect}
-						end
-					end
-				end
-			end
-		end
-	else	
-		for id=1,65535, 1 do
-			local anomaly = alife():object(id)
-			if anomaly and not anom_list[id] then
-				local anomaly_vid = game_graph():vertex(anomaly.m_game_vertex_id):level_id()	
-				if actor_vid == anomaly_vid then
-					local sect = anomaly:section_name()
-					if sect and radius_anom[sect] then
-						local packet = m_net_utils.get_anomaly_data(anomaly)
-						local status = ogsm_anomaly.get_anomaly_mode(id)
-						if status ~= "anom_off" then
-							anom_list[id] = {pos = anomaly.position, clsid = anomaly:clsid(), radius = (packet.radius or radius_anom[sect]), section = sect}
-						end
-					end
-				end
-			elseif anomaly and anom_list[id] then	
-				local anomaly_vid = game_graph():vertex(anomaly.m_game_vertex_id):level_id()
-				if actor_vid == anomaly_vid then
-					local status = ogsm_anomaly.get_anomaly_mode(id)
-					if status == "anom_off" then
-						anom_list[id] = nil
-					end
-				end
-			end
-		end		
-	end
+  if cur_level~=level.name() then
+    anom_list=nil
+    cur_level=level.name()
+  end
+  if not anom_list then
+    anom_list={}
+    local cnt=0
+    for id=1,40000,1 do
+      local obj=level.object_by_id(id)
+      if obj then
+        if obj:clsid()==clsid.zone_bfuzz_s or
+            obj:clsid()==clsid.zone_galant_s or
+            obj:clsid()==clsid.zone_mbald_s or
+            obj:clsid()==clsid.zone_mincer_s then
+          anom_list[id]={object=obj,pos=obj:position(),clsid=obj:clsid()}
+          local pos=anom_list[id].pos
+--          mylog("found " .. id .. " " .. obj:clsid() .. " at " .. pos.x .. ";" .. pos.y .. ";" .. pos.z )
+          cnt=cnt+1
+        else
+--        mylog(obj:clsid())
+        end
+      end
+    end
+--    mylog("total " .. cnt)
+    if cnt==0 then
+      anom_list=nil
+    end
+  end
 end
 
 function get_nearest_anomaly(npc,dirp)
@@ -172,10 +129,11 @@ function get_nearest_anomaly(npc,dirp)
   end
   for id,o in pairs(anom_list) do
     if o then
-      if o.pos == 0 then
+      if o.pos==0 then
         local obj=level.object_by_id(id)
         if obj then
-          o.pos = obj:position()
+          o.pos=obj:position()
+--          mylog("reposition " .. id .. " clsid " .. obj:clsid() ..  " at " .. o.pos.x .. ";" .. o.pos.y .. ";" .. o.pos.z )
         end
       end
       if o.pos~=0 then
@@ -203,11 +161,3 @@ function get_nearest_anomaly(npc,dirp)
     return false
   end
 end
-
---[[
-
-Если вы собираетесь использовать данный скрипт целиком или частично в своих 
-разработках по игре S.T.A.L.K.E.R., пожалуйста не удаляйте копирайты, указывайте настоящего 
-автора(ов) и не выдавайте чужие идеи и их реализацию за свои. Спасибо за понимание.
-
-]]--

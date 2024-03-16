@@ -6,9 +6,9 @@
         <phrase_list>
             <phrase id="11">
                 <text>gar_seryi_about_garbage_11</text>
-                <give_info>gar_add_fake_spot7</give_info>
-                <give_info>gar_add_fake_spot8</give_info>
-                <give_info>gar_add_fake_spot4</give_info>
+                <give_info>gar_remove_fake_spot7</give_info>
+                <give_info>gar_remove_fake_spot8</give_info>
+                <give_info>gar_remove_fake_spot4</give_info>
             </phrase>
             <phrase id="1">
                 <text>gar_seryi_about_garbage_1</text>
@@ -81,7 +81,6 @@
         <phrase_list>
             <phrase id="1">
                 <text>gar_stalker_about_level_1</text>
-                <action>garbage_dialogs.loc_info</action>
             </phrase>
             <phrase id="0">
                 <text>gar_stalker_about_level_0</text>
@@ -189,7 +188,6 @@
             </phrase>
             <phrase id="311141">
                 <text>gar_hellcar_start_311141</text>
-                <action>garbage_dialogs.loc_info</action>
                 <next>3111411</next>
             </phrase>
             <phrase id="31114">

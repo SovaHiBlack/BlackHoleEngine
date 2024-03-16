@@ -55,8 +55,8 @@ destroyed_vis_name	 = physics\dead_body\skelet_crash_monster
 ph_skeleton_airr_lin_factor   = -0.4
 ph_skeleton_airr_ang_factor   = -0.2
 ph_skeleton_hinger_factor1    = 1.0
-ph_skeleton_ddelay            = 5.0
-ph_skel_fatal_impulse_factor  = 2.75
+ph_skeleton_ddelay	      = 5.0
+ph_skel_fatal_impulse_factor  = 2.0
 ph_after_death_velocity_factor= 0.75
 ph_skel_shot_up_factor        = 0.25
 ;---------------------------------------------------------------------
@@ -128,15 +128,15 @@ hit_type = strike
 
 ;entity condition
 
-satiety_v 						= 0.01				;скорость уменьшения сытости со временем
-radiation_v 					= 0.00001			;скорость уменьшения радиации
-satiety_power_v 				= 0.005				;увеличение силы при уменьшении сытости
-satiety_health_v 				= 0.001				;увеличение здоровья при уменьшении сытости
-satiety_critical 				= -1.0				;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
-radiation_health_v 				= 0.01				;уменьшение здоровья при воздействии радиации
-morale_v						= 0.01				;скорость восстановления морали
-health_hit_part 				= 1.0				;процент хита, уходящий на отнимание здоровья
-power_hit_part 					= 1.0				;процент хита, уходящий на отнимание силы
+satiety_v 						= 0.01				;ёъюЁюёЄ№ єьхэ№°хэш  ёvЄюёЄш ёю тЁхьхэхь
+radiation_v 					= 0.00001			;ёъюЁюёЄ№ єьхэ№°хэш  ЁрфшрЎшш
+satiety_power_v 				= 0.005				;єтхышўхэшх ёшыv яЁш єьхэ№°хэшш ёvЄюёЄш 
+satiety_health_v 				= 0.001				;єтхышўхэшх чфюЁют№  яЁш єьхэ№°хэшш ёvЄюёЄш 
+satiety_critical 				= -1.0				;ъЁшЄшўхёъюх чэрўхэш  ёvЄюёЄш (т яЁюЎхэЄрї юЄ 0..1) ъюуфр чфюЁют№х эрўшрэрхЄ єьхэ№°рЄ№ё 
+radiation_health_v 				= 0.01				;єьхэ№°хэшх чфюЁют№  яЁш тючфхщёЄтшш ЁрфшрЎшш
+morale_v						= 0.01				;ёъюЁюёЄ№ тюёёЄрэютыхэш  ьюЁрыш
+health_hit_part 				= 1.0				;яЁюЎхэЄ їшЄр, єїюф шщ эр юЄэшьрэшх чфюЁют№ 
+power_hit_part 					= 1.0				;яЁюЎхэЄ їшЄр, єїюф шщ эр юЄэшьрэшх ёшыv
 psy_health_v					= 0.1						;скорость восстановления psy-здоровья
 
 immunities_sect					= cat_immunities
@@ -148,15 +148,15 @@ wound_incarnation_v				= 0.05				;крутизна кривой заживления (какой процент раны
 min_wound_size					= 0.01
 
 
-sleep_health 					= 1.0				;коэффициенты скоростей изменения параметров во время сна
+sleep_health 					= 1.0				;ъю¤ЇЇшЎшхэЄv ёъюЁюёЄхщ шчьхэхэш  ярЁрьхЄЁют тю тЁхь  ёэр
 sleep_power 					= 1.0
 sleep_satiety 					= 1.0
 sleep_radiation 				= 1.0
 sleep_psy_health			= 1.0
 
-eat_freq						=	5.0	;частота укусов в сек
-eat_slice						=	0.01	;увеличение сытости при 1 укусе
-eat_slice_weight				=	10.0	;уменьшение еды у трупа
+eat_freq						=	5.0	; ўрёЄюЄр єъєёют т ёхъ
+eat_slice						=	0.01	; єтхышўхэшх ёvЄюёЄш яЁш 1 єъєёх
+eat_slice_weight				=	10.0	; єьхэ№°хэшх хфv є ЄЁєяр
 
 ; Morale
 Morale_Hit_Quant				= 0.1
@@ -168,18 +168,18 @@ Morale_Despondent_Threashold	= 0.5
 
 
 ; Sounds
-sound_idle				= monsters\cat\idle_
-sound_eat				= monsters\cat\eat_
-sound_aggressive		= monsters\cat\attack_
-sound_attack_hit		= monsters\cat\hit_
-sound_take_damage		= monsters\cat\damage_
-sound_die				= monsters\cat\die_
-sound_threaten			= monsters\cat\threat_
-sound_landing			= monsters\cat\land_
-sound_steal				= monsters\cat\steal_
-sound_panic				= monsters\cat\threat_
-sound_growling			= monsters\cat\attack_1
-sound_die_in_anomaly	= monsters\cat\die_2
+sound_idle				= monsters\cat\1
+sound_eat				= monsters\cat\2
+sound_aggressive			= monsters\cat\3
+sound_attack_hit		= monsters\cat\4
+sound_take_damage		= monsters\cat\5
+sound_die				= monsters\cat\6
+sound_threaten			= monsters\cat\7
+sound_landing			= monsters\cat\8
+sound_steal				= monsters\cat\9
+sound_panic				= monsters\cat\10
+sound_growling			= monsters\cat\11
+sound_die_in_anomaly	= monsters\cat\12
 
 killer_clsids				= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
@@ -198,7 +198,7 @@ idle_sound_delay		= 55000
 eat_sound_delay			= 3000
 attack_sound_delay		= 6000
 
-sound_distant_idle			= monsters\cat\idle_
+sound_distant_idle			= monsters\cat\1
 distant_idle_sound_delay	= 80000
 distant_idle_sound_range	= 100.0	
 

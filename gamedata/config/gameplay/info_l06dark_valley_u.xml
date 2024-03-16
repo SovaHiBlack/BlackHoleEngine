@@ -76,7 +76,7 @@
 <info_portion id="x18_door2_knock_stop"></info_portion>
 
 <info_portion id="dar_open_door1"></info_portion>
-<info_portion id="dar_open_door2"></info_portion>
+<info_portion id="dar_open_door2"><action>ogsm_quests.x18_laugh</action></info_portion>
 
 <info_portion id="info_knock"></info_portion>
 <info_portion id="dar_podval"></info_portion>

@@ -24,6 +24,7 @@
 		<task>yan_kill_brain_task</task>
 	</info_portion>
 	<info_portion id="yantar_find_ghost_task_end">
+	  
 		<article>journal_after_find_ghost</article>
 		<task>yan_kill_brain_task_2</task>
 	</info_portion>
@@ -120,9 +121,7 @@
 	<info_portion id="yan_provodnik_spawn">
 		<task>yan_provodnik_task</task>
 	</info_portion>
-	<info_portion id="yan_has_ghost_pda">
-		<article>yan_ghost_info</article>
-	</info_portion>
+	<info_portion id="yan_has_ghost_pda"></info_portion>
 	<info_portion id="yan_test_info"></info_portion>
 
 

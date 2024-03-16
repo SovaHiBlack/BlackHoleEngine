@@ -55,7 +55,7 @@ destroyed_vis_name	 = physics\Dead_Body\trupik_crash
 ph_skeleton_airr_lin_factor   = -0.4
 ph_skeleton_airr_ang_factor   = -0.2
 ph_skeleton_hinger_factor1    = 1.0
-ph_skeleton_ddelay            = 5.0
+ph_skeleton_ddelay	      = 5.0
 ph_skel_fatal_impulse_factor  = 2.0
 ph_after_death_velocity_factor= 0.75
 ph_skel_shot_up_factor        = 0.25
@@ -86,7 +86,7 @@ Accel_Aggressive		= 12.5
 ;--------------------------------------------------------------------------
 ; Attack parameters
 ;--------------------------------------------------------------------------
-MinAttackDist		= 1.5	;0.5
+MinAttackDist		= 0.1	;0.5
 MaxAttackDist		= 2.9	;3.8
 
 as_min_dist				= 0.3
@@ -237,8 +237,8 @@ step_params				= m_controller_step_params
 LegsCount				= 2
 damage					= m_controller_damage
 
-psy_hit_damage			= 0.4
-tube_damage				= 0.50
+psy_hit_damage			= 0.4;
+tube_damage				= 0.50;
 tube_at_once			= true
 tube_min_dist			= 1
 
@@ -247,7 +247,7 @@ control_fx_texture2		= act\act_controller_hit1
 
 
 ; Controlling ability properties
-Max_Controlled_Count	= 0
+Max_Controlled_Count	= 10;4
 
 control_effector			= controller_control_effector
 
@@ -259,7 +259,7 @@ Friend_Community_Overrides	= monolith
 PsyAura_HeadSound			= monsters\controller\controller_control1
 PsyAura_SoundLeftPath		= monsters\controller\controller_presence_l
 PsyAura_SoundRightPath		= monsters\controller\controller_presence_r
-PsyAura_Radius				= 20.0
+PsyAura_Radius				= 20	;30
 PsyAura_Damage				= 0.05
 
 aura_effector				= controller_aura_pp_effector_section
@@ -271,8 +271,6 @@ PsyAura_Fake_MaxAddDist		= 90
 PsyAura_Fake_MinAddDist		= 20
 PsyAura_HitDelay			= 1500
 PsyAura_PPHitDelay			= 300
-
-PsyAura_Fake_Sound 			= $no_sound ; Исправление эффекта пси-ауры (опционально)
 
 
 ;------------------------------------------------------------------------- 
@@ -318,22 +316,22 @@ fire_wound_immunity  				= 0.2
 ; CONTROL Effector
 ;==========================================================================================
 [controller_control_effector]
-duality_h		= 0.1
-duality_v		= 0.2
+duality_h		= 0.1	;0.31
+duality_v		= 0.2	;0.31
 blur			= 0.01
-gray			= 0.5
+gray			= 0.5	;0.5
 noise_intensity = 1.0
 noise_grain		= 0.9
 noise_fps		= 30
-color_base		= 1.1,1.1,1.0
-color_gray		= 1.0,1.0,1.0
+color_base		= 1.1,1.1,1	;0.1,0.15,0.4
+color_gray		= 1,1,1		;0.333,0.333,0.333
 color_add		= 0.2,0.2,0.1
-time			= 1.0
-time_attack		= 0.3		; fade in
+time			= 1.0		;1.5
+time_attack		= 0.3		;0.5		; fade in
 time_release	= 0.5		; fade out
 
 ; camera effects
-ce_time				= 1.0
+ce_time				= 1.0	;1.5
 ce_amplitude		= 20.0
 ce_period_number	= 1.0
 ce_power			= 0.7
@@ -348,11 +346,11 @@ duality_v		= 0.01
 blur			= 0.01
 gray			= 0.5
 noise_intensity = 0.0
-noise_grain		= 1.0
+noise_grain		= 1
 noise_fps		= 30
 color_base		= 0.65,0.15,0.1
 color_gray		= 0.333,0.333,0.333
-color_add		= 0.0,0.0,0.0
+color_add		= 0,0,0
 time			= 0.3
 time_attack		= 0.05		; fade in
 time_release	        = 0.25		; fade out
@@ -360,24 +358,39 @@ time_release	        = 0.25		; fade out
 ; camera effects
 ce_time				= 0.45 ;time 
 ce_amplitude		= -15.0 
-ce_period_number	= 1.5
-ce_power			= 1.5 ; power 
+ce_period_number	= 1.5 ;2.0 
+ce_power			= 1.5 ;0.7 ; power 
 
 ;=========================================================================================
 ; Aura PP Effector
 ;=========================================================================================
 [controller_aura_pp_effector_section]
+;duality_h		= 0.001
+;duality_v		= 0.001
+;blur			= 10
+;gray			= 0.5
+;noise_intensity = 1.0 ;0.5
+;noise_grain		= 1
+;noise_fps		= 5
+;color_base		= 0.999,0.433,0.0999
+;color_gray		= 0.333,0.3330,0.3330
+;color_add		= 0.999,0.433,0.0999 ;0.00,0.01,0.00
 
 duality_h		= 0.00
 duality_v		= 0.00
-blur			= 0.00
+blur			= 10
 gray			= 0.0
-noise_intensity = 0.0
-noise_grain		= 0.1
-noise_fps		= 50
-color_base		= 0.5,0.5,0.5
+noise_intensity = 10.0
+noise_grain		= 1
+noise_fps		= 25
+;color_base		= 0.5,0.5,0.5;0.2,0.2,0.2
+;color_gray		= 0.33,0.33,0.33
+;color_add		= 0.30,0.30,0.30
+color_base		= 0.9,0.9,1.0
 color_gray		= 0.33,0.330,0.33
-color_add		= 0.00,0.00,0.00
+color_add		= 0.00,0.00,0.015
+
+
 
 
 
@@ -432,6 +445,8 @@ community			= controller
 $spawn              = "monsters\old\controller_normal_fat"
 visual				= monsters\kontroler\kontroler_5
 icon				= ui_npc_monster_kontroler_5
+tube_at_once		= true
+tube_damage			= 0.50
 spec_rank			= normal
 rank				= 401
 community			= controller
@@ -440,6 +455,8 @@ community			= controller
 $spawn              = "monsters\old\controller_old"
 visual				= monsters\kontroler\kontroler_3
 icon				= ui_npc_monster_kontroler_3
+tube_at_once		= true
+tube_damage			= 0.50
 spec_rank			= strong
 rank				= 801
 community			= controller
@@ -448,12 +465,16 @@ community			= controller
 $spawn              = "monsters\old\controller_old_fat"
 visual				= monsters\kontroler\kontroler_4
 icon				= ui_npc_monster_kontroler_4
+tube_at_once		= true
+tube_damage			= 0.50
 spec_rank			= strong
 rank				= 801
 community			= controller
 
 [controller_tubeman]:m_controller_normal
 $spawn              = "monsters\controllers\controller_tubeman"
+tube_at_once		= true
+tube_damage			= 0.50
 satiety_threshold	= 0.6
 
 

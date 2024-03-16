@@ -104,6 +104,13 @@ function se_zone_anom:STATE_Read( packet, size )
 	packet:r_seek(p1+41)
 	local rad=packet:r_float()
 	packet:r_seek(p2)
+
+
+	if self.id~=65535 then
+		ogsm_anomaly.get_anom(self.id)
+		anomaly_holder.add_anomaly(self.id,self:clsid(),self:section_name(),rad)
+	end
+
   
 	if editor() then
 		return
@@ -111,11 +118,6 @@ function se_zone_anom:STATE_Read( packet, size )
   
 	if (is_single_player_game() == false) then
 		return
-	end
-  
-  	if self.id~=65535 then
-		ogsm_anomaly.get_anom(self.id)
-		anomaly_holder.add_anomaly(self.id,self:clsid(),self:section_name(),rad)
 	end
   
 	local flag = packet:r_u8()
@@ -185,9 +187,6 @@ end
 
 --' Рестрикторы
 class "se_restrictor" (cse_alife_space_restrictor)
-function se_restrictor:on_register()
-	cse_alife_space_restrictor.on_register(self)
-end
 function se_restrictor:__init (section) super (section)
 end
 function se_restrictor:keep_saved_data_anyway()

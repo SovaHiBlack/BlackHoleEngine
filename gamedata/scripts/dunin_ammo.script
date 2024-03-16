@@ -36,15 +36,14 @@ function on_take(obj)
 	end
 
 	local section = obj:section()
-	if section ~= nil and ammo[section] ~= nil then
-		if ammo[section].repack == false then
-			if get_ammo_size(obj) < ammo[section].box then
-				ammo[section].repack = true
-				repack = true
-			end
+	--dbglog("on_take('%s')", section)
+
+	if ammo[section].repack == false then
+		if get_ammo_size(obj) < ammo[section].box then
+			ammo[section].repack = true
+			repack = true
 		end
 	end
-	return repack
 end
 
 --------
@@ -68,12 +67,14 @@ end
 -- переупаковка патронов заданного типа
 --  section - строка, имя секции (тип патрон)
 --  box_size - колличество патрон в полной пачке
--- сначала составляем список неполных пачек, затем
+-- сначало составляем список неполных пачек, затем
 -- удаляем их и создаём нужное колличество полных
 --------
 function repack_ammo(section, box_size)
+	--dbglog("repack_ammo('%s')", section)
 	local s, t = enum_ammo(section, box_size)
 	if (s > 0) and (table.getn(t) > 1) then
+		--dbglog("repacking(magazins=%d, bullets=%d)", table.getn(t), s)
 		local i, id
 		local sim = alife()
 		local pos = db.actor:position()
@@ -82,10 +83,7 @@ function repack_ammo(section, box_size)
 		local pid = db.actor:id()
 
 		for i, id in pairs(t) do
-			local obj = sim:object(id)
-			if obj then
-				sim:release(obj, true)
-			end	
+			sim:release(sim:object(id), true)
 		end
 
 		while s >= box_size do
@@ -113,7 +111,7 @@ function enum_ammo(section, box_size)
 		obj = db.actor:object(i)
 		if obj:section() == section then
 			size = get_ammo_size(obj)
-			if size ~= box_size then
+			if size < box_size then
 				table.insert(t, obj:id())
 				s = s + size
 			end

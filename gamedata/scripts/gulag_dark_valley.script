@@ -316,7 +316,7 @@ gulags.val_escort.job = function(sj, gname, type, squad, groups)
 
                "[remark@" .. gname .. "_halfdead_wait]\n" ..
                "path_walk           = nap1_look\n" ..
-               "anim                = wounded_heavy\n" ..
+               "anim                = wounded_heavy ;wait\n" ..
                "target              = 406\n" ..
                "on_info             = {+val_nap1_phrase1_end} remark@" .. gname .. "_halfdead_phrase\n" ..
                "wounded             = wounded@" .. gname .. "_halfdead\n" ..
@@ -327,7 +327,7 @@ gulags.val_escort.job = function(sj, gname, type, squad, groups)
                --        Это все, что я знаю...бля-буду...
                --------------------------------------------------------------------------
                "[remark@" .. gname .. "_halfdead_phrase]\n" ..
-               "anim                = wounded_heavy\n" ..
+               "anim                = wounded_heavy ;wait\n" ..
                "snd                 = speech\n" ..
                "target              = 406\n" ..
                "on_signal           = sound_end | remark@" .. gname .. "_halfdead_end %+val_halfdead_phrase_end%\n" ..
@@ -335,7 +335,7 @@ gulags.val_escort.job = function(sj, gname, type, squad, groups)
                "combat_ignore_cond  = always\n" ..
 
                "[remark@" .. gname .. "_halfdead_end]\n" ..
-               "anim            = wounded_heavy\n" ..
+               "anim            = wounded_heavy ;wait\n" ..
                "target          = 406\n" ..
                "wounded         = wounded@" .. gname .. "_halfdead\n" ..
 			   "combat_ignore_cond  = always\n"
@@ -1119,11 +1119,11 @@ gulags.val_lager_bandits.state = function(gulag)
                     local enemy_type = get_clsid(enemy)
                     if enemy_type == clsid.actor and
                         utils.npc_in_zone(db.actor, db.zone_by_name["val_lager_bandits_restrictor"]) then
-                       --printf("gulag <val_lager_bandits>: STATE ALARM ACTOR")
+                        printf("gulag <val_lager_bandits>: STATE ALARM ACTOR")
                         return state_alarm_actor_inside
                     end
                     if enemy_type == clsid.actor or enemy_type == clsid.script_stalker then --or enemy_type == clsid.trader
-                        --printf("gulag <val_lager_bandits>: STATE ALARM")
+                        printf("gulag <val_lager_bandits>: STATE ALARM")
                         return state_alarm
                     end
                 end
@@ -1131,7 +1131,7 @@ gulags.val_lager_bandits.state = function(gulag)
         end
     end
     
-    --printf("gulag <val_lager_bandits>: STATE NORMAL")
+    printf("gulag <val_lager_bandits>: STATE NORMAL")
     return state_normal
 end
 

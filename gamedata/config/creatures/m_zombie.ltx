@@ -179,7 +179,7 @@ distant_idle_sound_range	= 100.0
 
 DamagedThreshold		= 0.5
 critical_wound_threshold		= 0.2
-critical_wound_decrease_quant	= 0.0
+critical_wound_decrease_quant	= 0.
 
 FakeDeathCount					= 4		; max count of fake death
 StartFakeDeathHealthThreshold	= 0.6
@@ -198,9 +198,7 @@ damage					= m_zombie_damage
 
 ;species of monster
 species					= zombie
-rank 					= 0
-spec_rank				= weak
-community				= zombie
+
 
 [m_zombie_damage]
 ;bone_name		 = <hit_scale>,-1,<wound_scale>
@@ -257,10 +255,10 @@ ce_power			= 1.5 ;0.7 ; power
 ;---------------------------------------------------------------------------
 ;	anim			| Cycles | time1 | power1 | time2 | power2 |
 ;---------------------------------------------------------------------------
-stand_walk_fwd_0 	=	    1,	   0.01,     1,     0.25,    0.7
-stand_walk_dmg_0 	=	    1,	   0.01,     1,     0.25,    0.7
-stand_run_fwd_0	 	=	    1,	   0.01,     1,	    0.25,    0.6
-stand_run_dmg_0	 	=	    1,	   0.01,     1,	    0.25,    0.6
+stand_walk_fwd_0 	=	    1,	   0.01,     1,     0.25,    0.7,   
+stand_walk_dmg_0 	=	    1,	   0.01,     1,     0.25,    0.7,     
+stand_run_fwd_0	 	=	    1,	   0.01,     1,	    0.25,    0.6,    
+stand_run_dmg_0	 	=	    1,	   0.01,     1,	    0.25,    0.6,    
 
 ;===========================================================================
 ; IMMUNITIES
@@ -283,7 +281,7 @@ panic_threshold		= 0.5
 rank = 0
 spec_rank			= weak
 community			= zombie
-icon = ui_npc_monster_zombie_weak
+icon = ui_npc_monster_zombie_weak	
 
 MaxHealthValue		 = 80
 FakeDeathCount					= 3		; max count of fake death

@@ -14,7 +14,8 @@
 	</info_portion>
 	<info_portion id="tutorial_artefact_done"></info_portion>
 	<info_portion id="tutorial_flesh_start"></info_portion>
-	<info_portion id="tutorial_flesh_die"></info_portion>
+	<info_portion id="tutorial_flesh_die">
+	</info_portion>
 	<info_portion id="tutorial_flesh_die_processed"></info_portion>
 	<info_portion id="tutorial_alarm_start"></info_portion>
 	<info_portion id="tutorial_alarm_played"></info_portion>
@@ -24,9 +25,6 @@
 		<task>storyline_eliminate_gunslinger</task>
 		<article>about_enciclopedia</article>
 		<article>sl_beginning</article>
-	</info_portion>
-
-	<info_portion id="volk_wishmaster_legend">
 		<article>sl_wishmaster_legend</article>
 	</info_portion>
 
@@ -65,9 +63,7 @@
 	<info_portion id="esc_wolf_say"></info_portion>
 	<info_portion id="esc_serious_talk"></info_portion>
 	<info_portion id="esc_wounded_arrive"></info_portion>
-	<info_portion id="esc_tutorial_secret">
-		<article>dead_novice_pda</article>
-	</info_portion>
+	<info_portion id="esc_tutorial_secret"></info_portion>
 	<info_portion id="esc_tutorial_secret_find"></info_portion>
 	<info_portion id="esc_shustryi_secret"></info_portion>
 	<info_portion id="esc_shustryi_secret_find"></info_portion>

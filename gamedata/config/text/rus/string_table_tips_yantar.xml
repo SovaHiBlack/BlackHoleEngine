@@ -5,10 +5,10 @@
 		<text>Что случилось?! Он погиб?! Возьми замеры и немедленно возвращайся!</text>
 	</string>
 	<string id="storyline_ghost_tip">
-		<text>Звуковая запись Призрака</text>
+		<text>Звуковая запись Призрака.</text>
 	</string>
 	<string id="storyline_vasilyev_tip">
-		<text>Звуковая запись Васильева</text>
+		<text>Звуковая запись Васильева.</text>
 	</string>
 	<string id="tips_labx16switcher_press">
 		<text>Чтобы отключить чудо-установку нажмите ($$ACTION_USE$$).</text>

@@ -15,7 +15,23 @@
 				<texture x="0" y="1" width="720" height="484">intro\thq_logo_hyuv</texture>
 			</video_wnd>
 		</item>
+		<item type="video">
+			<delay>1</delay>
+			<pause_state>on</pause_state>
+			<sound>characters_voice\scenario\video\intro_gsc_wp</sound>
+			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
+				<texture x="1" y="1" width="638" height="286">intro\intro_gsc-wp</texture>
+			</video_wnd>
+		</item>
 
+		<item type="video">
+			<sound>characters_voice\scenario\video\intro_gsc</sound>
+			<delay>1</delay>
+			<pause_state>on</pause_state>
+			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
+				<texture x="0" y="1" width="800" height="358">intro\intro_gsc</texture>
+			</video_wnd>
+		</item>
 
 		<item type="image">
 			<length_sec>9</length_sec>

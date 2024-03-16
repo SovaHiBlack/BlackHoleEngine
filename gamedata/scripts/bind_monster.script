@@ -4,7 +4,7 @@
 local particles={}
 
 function bind(obj)
-	--printf("_bp: monster.bind: name='%s', id='%d'", obj:name(), obj:id())
+	printf("_bp: monster.bind: name='%s', id='%d'", obj:name(), obj:id())
 
 	-- Для спауна
 	--xr_spawner.spawn_client(obj)
@@ -20,7 +20,6 @@ function generic_object_binder:__init(obj) super(obj)
 	self.loaded = false
 	self.particles = {}
 	self.MutantManager = ogsm_mutants.MutantManager()
-	self.start_anim_hit_cont = false
 end 
 
 function generic_object_binder:reload(section)
@@ -49,6 +48,7 @@ function generic_object_binder:update(delta)
 
 	if particles[self.object:id()] and table.getn(particles[self.object:id()])>0 then
 		for kk,vv in pairs(particles[self.object:id()]) do
+--			amk.mylog("particle found")
 			table.insert(self.particles,amk_particle.amk_particle(vv))
 			table.remove(particles[self.object:id()],kk)
 		end
@@ -64,7 +64,9 @@ function generic_object_binder:update(delta)
 		end
 	end
 
---	printf("_bp: generic_object_binder: UPDATE [name='%s' time=%d]", self.object:name(), time_global())
+
+--	printf("_bp: generic_object_binder: UPDATE [name='%s' time=%d]",
+--		self.object:name(), time_global())
 
 	-- Апдейт торговли
 	if self.object:clsid() == clsid.script_trader then
@@ -76,51 +78,6 @@ function generic_object_binder:update(delta)
 			self.object:set_tip_text("character_use")
 		else
 			self.object:set_tip_text("")
-		end
-		-- Удар контролера руками, demover123, lvg_brest
-		if self.object:clsid() == clsid.controller_s then
-			local target = db.actor
-			if target and self.object:see(target) then
-				local dist = self.object:position():distance_to(target:position())
-				if dist <= 0.85 then
-					if not self.get_hit then
-						self.get_hit = time_global() + 100
-						self.start_anim_hit_cont = true
-					elseif self.get_hit <= time_global() then
-						if self.start_anim_hit_cont then
-							if self.object:animation_count() > 0 then
-								self.object:clear_animations()
-							end
-							self.object:play_cycle("stand_attack_1", true)
-							self.start_anim_hit_cont = false
-						end
-						if not self.hit_to_enemy then
-							self.hit_to_enemy = time_global() + 300
-						elseif self.hit_to_enemy <= time_global() then
-							local snd_hit = xr_sound.get_safe_sound_object("monsters\\zombie\\zombie_attack_hit_0")
-							snd_hit:play_at_pos(self.object, self.object:position(), sound_object.s3d)
-							level.add_cam_effector("camera_effects\\hit_back_left.anm", 777, false, "")
-							local h = hit()
-							h.draftsman = self.object
-							h.type      = hit.wound
-							h.direction = vector():set(0,0,0)
-							h:bone("bip01_spine")
-							h.power     = 0.40
-							h.impulse   = 240
-							target:hit(h)
-							self.hit_to_enemy = nil
-							self.get_hit = nil
-						end
-					end
-				else
-					self.hit_to_enemy = nil
-					self.get_hit = nil
-				end
-			end
-			if self.object:animation_count() < 1 then
-				local i = math.random(0,5)
-				self.object:add_animation("stand_walk_fwd_"..i, true)
-			end
 		end
 	else
 		self.object:set_tip_text_default()
@@ -156,16 +113,8 @@ function generic_object_binder:waypoint_callback(obj, action_type, index)
 end
 
 function generic_object_binder:death_callback(victim, who)
-	local name = tostring(victim:name())
-	
-	if not self.object then
-		self.object = victim
-	end
-
-	if db.actor then
-		if who:id() == db.actor:id() then
-			xr_statistic.addKillCount(self.object)
-		end
+	if who:id() == db.actor:id() then
+		xr_statistic.addKillCount(self.object)
 	end
 
 	if self.st.mob_death then
@@ -182,11 +131,7 @@ function generic_object_binder:death_callback(victim, who)
 	local h = hit()
 	h.draftsman = self.object
 	h.type = hit.fire_wound
-
-	if db.actor ~= nil then
-		h.direction = db.actor:position():sub(self.object:position())
-	end
-
+	h.direction = db.actor:position():sub(self.object:position())
 	h:bone("pelvis")
 	h.power = 1
 	h.impulse = 10
@@ -272,7 +217,7 @@ function generic_object_binder:net_save_relevant()
 end
 
 function generic_object_binder:save(packet)
-	--printf("generic_object_binder:save(): self.object:name()='%s'", self.object:name())
+	printf("generic_object_binder:save(): self.object:name()='%s'", self.object:name())
 	object_binder.save(self, packet)
 
 	xr_logic.save_obj(self.object, packet)
@@ -284,7 +229,7 @@ end
 function generic_object_binder:load(reader)
 	self.loaded = true
 
-	--printf("generic_object_binder:load(): self.object:name()='%s'", self.object:name())
+	printf("generic_object_binder:load(): self.object:name()='%s'", self.object:name())
 	object_binder.load(self, reader)
 
 	if reader:r_eof() then

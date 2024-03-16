@@ -23,7 +23,6 @@ function evaluator_contact:evaluate()
 		end
 	
 		if xr_wounded.is_wounded(self.object) then
-			self.begtime=nil
 			return false
 		end
 
@@ -34,17 +33,7 @@ function evaluator_contact:evaluate()
 		end
 		if self.mgr:evaluator(stalker_ids.property_enemy):evaluate() then	
 			self.object:disable_talk()
-			self.begtime=nil
 			return false
-		end
-		local tken = (self.a.meet_manager.state ~= "nil")
-		local istk = self.object:is_talking()
-		if self.begtime == nil and tken then
-			self.begtime = time_global()
-		elseif not tken then
-			self.begtime = nil
-		elseif self.begtime+10000 < time_global() and (not istk) then
-      		return false
 		end
 		return tostring(self.a.meet_manager.state) ~= "nil"
 	else
@@ -58,6 +47,7 @@ local arastop={}
 
 -- Я попугай, слющай нехорошо, да?
 function am_i_ara(npc, sound)
+--	mylog("npc " .. tostring(npc:id()) .. " sound " .. tostring(sound))
 	if sound==nil then
 		return false
 	end
@@ -69,8 +59,10 @@ function am_i_ara(npc, sound)
 			arastop[npc:id()]={}
 		end
 		arastop[npc:id()][sound]=time_global()+300000
+--		mylog("i am not ara")
 		return false
 	else
+--		mylog("i am ara")
 		return true
 	end
 end

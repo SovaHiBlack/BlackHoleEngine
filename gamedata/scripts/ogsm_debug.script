@@ -1,6 +1,8 @@
------------------- Отладочные функции и фиксы для OGSM 2.4 --------------------
+------------------ Отладочные функции и фиксы для OGSM 2.x --------------------
 
-------------------------- Copyright 2007-2018 DEXXX ---------------------------
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
+
+local a = 0
 
 -- Вывод статистики
 function hud_stats()
@@ -65,14 +67,13 @@ function radar_fix()
 	amk.del_variable("rfx") 
 end
 
--- Багфикс таймеров
-function fix_timers()
-
---	for k,v in pairs(ogsm_anomaly.loc) do
---		if k ~= level.name() then
---			amk.del_variable("an"..ogsm_anomaly.loc[k])
---		end
---	end
+-- Экстренная очистка хранилища актора
+function clean_pstor()
+	for k,v in pairs(ogsm_anomaly.loc) do
+		if k ~= level.name() then
+			amk.del_variable("an"..ogsm_anomaly.loc[k])
+		end
+	end
 
 	for i=1,100 do
 		amk.del_variable("rt"..i)
@@ -83,49 +84,58 @@ function fix_timers()
 		amk.del_variable("gt"..i.."p")
 	end
 
-	amk.g_start_timer("slp",0,0,6)
-	amk.g_start_timer("bl1",0, 9+math.random(-1,1), 0)
-	amk.g_start_timer("rsp",0, 5+math.random(-1,1), 0)
+	amk.del_variable("rfx")
+	amk.del_variable("blt")
+	amk.del_variable("drnk")
+	amk.del_variable("slp")
+	amk.del_variable("nrg")
+	amk.del_variable("smn")
 
+	amk.del_variable("aem_team1")
+	amk.del_variable("aem_team2")
+	amk.del_variable("aem_cr")
+	amk.del_variable("aem_cm")
+	amk.del_variable("aem_rt")
+	amk.del_variable("aem_ct")
+
+	amk.del_variable("aem_lt")
+	amk.del_variable("aem_nt")
+	amk.del_variable("aem_it")
+	amk.del_variable("aem_mt")
+	amk.del_variable("aem_mk")
+
+	for i=1,5 do
+		amk.del_variable("snd"..i)
+	end
+
+	for i=1,65535 do
+		local obj = alife():object(i)
+		if obj and (obj:name()=="esc_tutorial_dead_novice" or 
+				obj:name()=="val_lager_bandits_borov" or 
+				obj:name()=="rostok_stalker") then
+			alife():release(obj, true)
+		end
+	end
+
+	db.actor:give_info_portion("val_actor_has_borov_key")
+
+	--amk.g_start_timer("bl1",0, 9+math.random(-1,1), 0)
+	--amk.g_start_timer("rsp",0, 5+math.random(-1,1), 0)
+
+	get_console():execute("Actor_storage_has_been_successfully_cleaned!")
 end
 
--- Удаление при загрузке трупов в Припяти во фриплее и фантомов пси-собак на Радаре, в Припяти, на ЧАЭС
-local dist_to_corpses = 150 -- расстояние от ГГ, свыше которого считаются трупы.
-local a = 0
-local b = 0
-
+-- Удаление трупов в Припяти во фриплее
 function clean_level()
-	if has_alife_info("freeplay") and level.name()=="l11_pripyat" and a==0 then
+	if has_alife_info("freeplay") and level.name()=="l11_pripyat" and a==0 then 
 		for i=1,65535 do
 			local obj = level.object_by_id(i)
-			if obj then
-				local posobj = obj:position()
-				local actorpos = db.actor:position()
-				local npc_name = obj:name()
-				if IsStalker(obj) and not obj:alive() and npc_name~="mil_freedom_member0012" and npc_name~="mil_freedom_member0021" and npc_name~="mil_freedom_member0018" and npc_name~="mil_freedom_member0026" and npc_name~="mil_freedom_member0023" then
-					if (posobj:distance_to(actorpos) > dist_to_corpses) then
-						local obj_1 = alife():object(obj:id())
-						if obj_1 then
-							local result = pcall(prot_release_ogd, obj_1)
-						end
-					end
-				end
+			if obj and (IsStalker(obj) or IsMonster(obj)) and not obj:alive() then
+				alife():release(alife():object(obj:id()), true)
 			end
 		end
 		a = 1
 	end
-	if (level.name()=="l10_radar" or level.name()=="l11_pripyat" or level.name()=="l12_stancia" or level.name()=="l12_stancia_2") and b==0 then 
-		for i=1,100 do
-			local obj_1 = alife():object("psy_dog_phantom")
-			if obj_1 then
-				local result = pcall(prot_release_ogd, obj_1)
-			end
-		end
-		b = 1
-	end
-end
-function prot_release_ogd(obj_1)
-	alife():release(obj_1, true)
 end
 
 -- Сохранение координат по массиву вертексов
@@ -172,120 +182,6 @@ alife():release(v, true)
 end
 end
 
--- Фикс сброса визуала при поднятии брони
-function on_take(obj)
-	if obj then
-		if obj:clsid() == clsid.equ_stalker_s or obj:clsid() == clsid.equ_exo then
-			local outfit = db.actor:get_current_outfit()
-			if outfit and outfit:id() ~= obj:id() then
-				db.actor:transfer_item(outfit, db.actor)
-			end
-		elseif obj:clsid() == clsid.artefact or obj:clsid() == clsid.artefact_s then
-			local sect = obj:section()
-			if not has_alife_info(sect .. "_info") then
-				db.actor:give_info_portion(sect .. "_info")
-				xr_statistic.addArtefact(obj)
-			end
-		end
-	end
-end
-
--- Массив кривых story id
-local badsids =	{
-		-- Кордон
-		escape_factory_assault_say_hello = 009,
-		esc_kill_bandits_quest_kill = 017,
-		tutorial_wounded_give_info = 004,
-		-- Свалка
-		gar_hellcar_dialog_end = 107,
-		-- Агропром
-		agr_find_gunslinger_cache_start = 302,
-		agr_find_gunslinger_cache_final = 307,
-		-- Темная долина
-		val_actor_on_bandits_base = 431,
-		val_actor_has_borov_key = 425,
-		val_actor_leave_bandits_base = 434,
-		val_x18_door_open = 426,
-		-- X-18
-		dar_password_info1 = 450,
-		dar_password_info2 = 451,
-		-- Янтарь
-		yan_find_scientist_done = 902,
-		yan_find_vasilyev_end = 903,
-		yantar_tunnel_finish = 921,
-		yan_kill_brain_done = 902,
-		labx16_find = 907,
-		-- X-16
-		yan_labx16_switcher_3_off = 910,
-		yan_labx16_switcher_2_off = 909,
-		yan_labx16_switcher_1_off = 908,
-		yan_labx16_switcher_primary_off = 911,
-		-- Военные склады
-		mil_miser_task_complete = 734,
-		mil_fblockpost_quest_reward = 724,
-		mil_sniper1_dead = 730,
-		mil_sniper2_dead = 731,
-		mil_sniper3_dead = 732,
-		mil_lukash_dead = 707,
-		mil_dolg_task_final = 774,
-		mil_dolg_dead = 708,
-		mil_courier_dead = 710,
-		mil_ara_dead = 719,
-		mil_freedom_cook_rg6_ask = 728,
-		mil_svoboda_rg6_gain = 706,
-		-- Радар
-		rad_antennas_reached = 1000,
-		rad_bun_found = 1005,
-		bar_deactivate_radar_done = 1006,
-		-- Припять
-		pri_aes_mapspot = 806,
-		pri_stadium_reached = 830,
-		-- ЧАЭС
-		aes_found_sarcofag = 1102,
-		-- Саркофаг
-		sar_monolith_destroy = 1300,
-		sar_finish_decoding = 1303
-		}
-
--- Удаление зависших меток заданий по ходу их выполнения
-function del_mark(info_id)
-
-	if badsids[info_id]~=nil then
-		for i = 0, 100 do
-			level_tasks.remove_location(badsids[info_id], "green_location")
-		end
-	end
-
-end
-
--- Удаление зависших меток заданий один раз при загрузке
-function del_marks_onload()
-
-	if amk.load_variable("chm", 0) == 0 then
-		for k,v in pairs(badsids) do
-			if has_alife_info(k) then
-				for i = 0, 100 do
-					level_tasks.remove_location(v, "green_location")
-				end
-			end
-		end
-		amk.save_variable("chm", 1)
-	end
-
-end
-
--- Удаление криво заспавленного объекта, указанного в файле настроек
-function remove_bad_obj()
-	if ogsm_options.obj_to_remove ~= "" and ogsm_options.obj_to_remove ~= nil then
-		for i=1,65535 do
-			local obj = alife():object(i)
-			if obj and obj ~= nil and obj:name() == ogsm_options.obj_to_remove then
-				local result = pcall(prot_release_ogd, obj)
-			end
-		end
-	end
-end
-
 -- Спавн новых монстров
 function test_spawn()
 alife():create("psy_dog", vector():set(-115.51, -26.59, -261.21), 1, 44)
@@ -305,45 +201,13 @@ end
 
 -- Читерский старт игры
 function cheat_start()
-	local outfits = {
-			"novice_outfit", "bandit_outfit", "monolit_outfit", "specops_outfit", "stalker_outfit",
-			"scientific_outfit", "exo_outfit", "svoboda_light_outfit", "svoboda_heavy_outfit",
-			"dolg_outfit", "dolg_scientific_outfit", "ecolog_outfit", "protection_outfit", "killer_outfit",
-			"killer_blue_exoskeleton", "dolg_black_exoskeleton", "svoboda_exoskeleton", "monolit_exoskeleton",
-			"freedom_scientific_outfit", "merc_scientific_outfit", "monolit_scientific_outfit", "bandit_master_outfit",
-			"soldier_outfit", "neytral_exo_antigas_outfit", "bandit_veteran_outfit", "military_outfit", 
-			"military_stalker_commander_outfit", "outfit_novice_m1", "outfit_bandit_m1", "outfit_dolg_m1", "outfit_killer_m1",
-			"outfit_specnaz_m1", "outfit_stalker_m1", "outfit_stalker_m2", "outfit_svoboda_m1", "outfit_exo_m1"
-			}
-
-	local arts = 	{
-			"af_ameba_slime", "af_ameba_slug", "af_ameba_mica", "af_medusa", "af_cristall_flower", "af_night_star",
-			"af_electra_sparkler", "af_electra_flash", "af_electra_moonlight", "af_vyvert", "af_gravi", "af_gold_fish",
-			"af_rusty_thorn", "af_rusty_sea-urchin", "af_rusty_kristall", "af_blood", "af_mincer_meat", "af_soul",
-			"af_drops", "af_fireball", "af_cristall", "af_dummy_pellicle", "af_dummy_battery", "af_dummy_spring",
-			"af_dummy_dummy", "af_dummy_glassbeads", "af_fuzz_kolobok"
-			}
-
-	local wpns =	{
-			"wpn_pm", "wpn_pb", "wpn_fort", "wpn_hpsa", "wpn_beretta", "wpn_walther", "wpn_sig220", "wpn_colt1911",
-			"wpn_usp", "wpn_desert_eagle", "wpn_bm16", "wpn_toz34", "wpn_wincheaster1300", "wpn_spas12", "wpn_ak74u",
-			"wpn_mp5", "wpn_ak74", "wpn_abakan", "wpn_l85", "wpn_lr300", "wpn_sig550", "wpn_groza", "wpn_val",
-			"wpn_vintorez", "wpn_svu", "wpn_svd", "wpn_rg-6", "wpn_rpg7", "wpn_g36", "wpn_fn2000", "wpn_svu_m1",
-			"wpn_ak74_m1", "wpn_abakan_m1", "wpn_fort_m1", "wpn_ak74u_m1", "wpn_mp5_m1", "wpn_groza_m1", "wpn_spas12_m1",
-			"wpn_winchester_m1", "wpn_l85_m1", "wpn_lr300_m1", "wpn_svd_m1", "wpn_sig_m1", "wpn_eagle_m1", "wpn_colt_m1",
-			"wpn_val_m1", "wpn_mp5_m2", "wpn_abakan_m2", "wpn_l85_m2", "wpn_sig_m2", "wpn_rg6_m1", "wpn_walther_m1",
-			"grenade_f1", "grenade_rgd5", "wpn_addon_scope", "wpn_addon_scope_susat", "wpn_addon_silencer", 
-			"wpn_addon_grenade_launcher", "wpn_addon_grenade_launcher_m203"
-			}
-
-	local items =	{
-			"mutant_flesh_eye", "mutant_boar_leg", "mutant_dog_tail", "mutant_psevdodog_tail", "mutant_krovosos_jaw",
-			"mutant_burer_hand", "mutant_zombie_hand", "mutant_snork_leg"
-			}
-
-	for k,v in pairs(outfits) do
-		amk.spawn_item_in_inv(v)
-	end
+amk.spawn_item_in_inv("military_stalker_commander_outfit")
+amk.spawn_item_in_inv("wpn_fn2000")
+amk.spawn_item_in_inv("af_electra_moonlight")
+amk.spawn_item_in_inv("af_electra_moonlight")
+amk.spawn_ammo_in_inv("ammo_5.56x45_ap", 300)
+db.actor:set_character_rank(650)
+db.actor:give_money(200000)
 end
 
 
@@ -355,6 +219,22 @@ end
 [logic] \nactive = sr_mapspot \n[sr_mapspot] \nhint = gar_swamp \nlocation = red_location
 ]]--
 
------------------- Отладочные функции и фиксы для OGSM 2.4 --------------------
+------------------ Отладочные функции и фиксы для OGSM 2.x --------------------
 
-------------------------- Copyright 2007-2018 DEXXX ---------------------------
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
+
+--[[
+
+If you're going to use the whole of this script or its parts in your own creative 
+developments for the S.T.A.L.K.E.R. game, please don't become such a goddamn 
+motherfucker like the notorious author of the ABC Mod - Carbrobro. Leave the 
+copyrights, note the real author(s) and don't claim others' ideas and their 
+realization to be your own ones. It's just simple Modmakers' Ethics. Thank you!
+
+Если вы собираетесь использовать данный скрипт целиком или частично в своих 
+разработках по игре S.T.A.L.K.E.R., пожалуйста не опускайтесь до уровня печально 
+известного автора ABC мода - Carbrobro. Не удаляйте копирайты, указывайте настоящего 
+автора(ов) и не выдавайте чужие идеи и их реализацию за свои. Ведь это элементарная 
+этика модостроителей! Спасибо за понимание.
+
+]]--

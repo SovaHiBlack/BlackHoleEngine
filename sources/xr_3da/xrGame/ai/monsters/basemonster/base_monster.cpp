@@ -47,7 +47,7 @@ CBaseMonster::CBaseMonster()
 {
 	m_pPhysics_support=xr_new<CCharacterPhysicsSupport>(CCharacterPhysicsSupport::etBitting,this);
 	
-	m_pPhysics_support				->in_Init();
+//	m_pPhysics_support				->in_Init();
 
 	// Components external init 
 	

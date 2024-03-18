@@ -491,9 +491,9 @@ function get_npc_community(npc)
 end
 
 
--- Выставляем группировку непися, можно ГГ
-function set_npc_community(npc,community_string)
-	--значения для community_string можно узнать в config\creatures\game_relations.ltx
+--' выставляем группировку непися, можно ГГ
+function set_npc_community(npc, community_string)
+	--' значения для community_string можно узнать в config\creatures\game_relations.ltx
 	return npc:set_character_community(community_string, 0, 0)
 end
 

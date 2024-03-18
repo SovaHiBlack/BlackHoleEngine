@@ -1,4 +1,3 @@
-
 #ifndef CHARACTER_PHYSICS_SUPPORT
 #define CHARACTER_PHYSICS_SUPPORT
 
@@ -9,17 +8,12 @@
 #include "Phdestroyable.h"
 #include "character_hit_animations.h"
 
-
 class CPhysicsShell;
 class CPHMovementControl;
 class CIKLimbsController;
 class interactive_motion;
 
-
-
-class CCharacterPhysicsSupport :
-public CPHSkeleton,
-public CPHDestroyable
+class CCharacterPhysicsSupport : public CPHSkeleton, public CPHDestroyable
 {
 public:
 enum EType
@@ -66,21 +60,18 @@ private:
 	character_hit_animation_controller	m_hit_animations;
 
 	interactive_motion					*m_interactive_motion;
-//skeleton modell(!share?)
+	// skeleton modell(!share?)
 	float								skel_airr_lin_factor																																;
 	float								skel_airr_ang_factor																																;
 	float								hinge_force_factor1																																	;
 	float								skel_fatal_impulse_factor																															;
 	float								skel_ddelay																																			;
 	float								skel_remain_time																																	;	
-/////////////////////////////////////////////////
-	//bool								b_death_anim_on																																		;
-	//bool								b_skeleton_in_shell																																	;
-///////////////////////////////////////////////////////////////////////////
+
 	float								m_shot_up_factor																																	;
 	float								m_after_death_velocity_factor																														;
 	float								m_BonceDamageFactor																																	;
-	//gray_wolf>ѕеременные дл€ поддержки измен€ющегос€ трени€ у персонажей во врем€ смерти
+	// ѕеременные дл€ поддержки измен€ющегос€ трени€ у персонажей во врем€ смерти
 	float								skeleton_skin_ddelay;
 	float								skeleton_skin_remain_time;
 	float								skeleton_skin_friction_start;
@@ -91,12 +82,11 @@ private:
 	float								m_Pred_Time;//ƒл€ вычислени€ дельта времени между пересчЄтами сопротивлени€ в джоинтах и коэффициента NPC
 	float								m_time_delta;
 	float								pelvis_factor_low_pose_detect;
-	BOOL								character_have_wounded_state;
-	//gray_wolf<
+	bool								character_have_wounded_state;
+
 public:
-	//gray_wolf>
 	float								m_curr_skin_friction_in_death;
-	//gray_wolf<
+
 EType Type()
 	{
 		return m_eType;
@@ -122,6 +112,7 @@ virtual void							SpawnInitPhysics				(CSE_Abstract	*D)																								
 virtual CPhysicsShellHolder*			PPhysicsShellHolder				()	{return m_EntityAlife.PhysicsShellHolder();}	
 
 virtual bool							CanRemoveObject					();
+
 public:
 IC		CPHMovementControl				*movement						()	{return m_PhysicMovementControl;}
 IC		CPHSoundPlayer					*ph_sound_player				()	{return &m_ph_sound_player;}
@@ -139,7 +130,7 @@ IC		CIKLimbsController				*ik_controller					()	{return	m_ik_controller;}
 		void 							in_NetDestroy					()																													;
 		void							in_NetRelcase					(CObject* O)																										;
 		void 							in_Init							()																													;
-		void 							in_Load							(LPCSTR section)																									;
+		void 							in_Load							(pcstr section)																									;
 		void 							in_Hit							(float P,Fvector &dir, CObject *who, s16 element,Fvector p_in_object_space, float impulse,ALife::EHitType hit_type ,bool is_killing=false);
 		void							in_NetSave						(NET_Packet& P)																										;
 		void							in_ChangeVisual					();
@@ -152,12 +143,12 @@ IC		CIKLimbsController				*ik_controller					()	{return	m_ik_controller;}
 		CCharacterPhysicsSupport& operator = (CCharacterPhysicsSupport& /**asup/**/){R_ASSERT2(false,"Can not assign it");}
 								CCharacterPhysicsSupport				(EType atype,CEntityAlive* aentity)																					;
 virtual							~CCharacterPhysicsSupport				()																													;
+
 private:
 		void 							CreateSkeleton					(CPhysicsShell* &pShell)																							;
 		void 							CreateSkeleton					();
 		void 							ActivateShell					(CObject* who)																										;
 		void							KillHit							(CObject* who, ALife::EHitType hit_type, float &impulse)																										;
-static	void							DeathAnimCallback				(CBlend *B)																											;
 		void							CreateIKController				()																													;
 		void							DestroyIKController				()																													;
 		void							CollisionCorrectObjPos			(const Fvector& start_from,bool character_create=false);
@@ -168,4 +159,5 @@ IC		void							UpdateDeathAnims				();
 IC		void							CalculateTimeDelta				();
 IC		bool							DoCharacterShellCollide			();
 };
+
 #endif  //CHARACTER_PHYSICS_SUPPORT

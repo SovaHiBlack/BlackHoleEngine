@@ -28,12 +28,12 @@ function parse_ranks( s, tbl )
 	return t[i-2]
 end
 
--- вычитывает сталкерские и монстрячие ранги из game_relations.ltx
+--' вычитывает сталкерские и монстрячие ранги из config\creatures\game_relations.ltx
 function read_all_ranks()
 	stalker_rank_intervals = {}
 	monster_rank_intervals = {}
 
-	local ltx  = system_ini()
+	local ltx = system_ini()
 
 	stalker_max_rank_name = parse_ranks( ltx:r_string( "game_relations", "rating" ),         stalker_rank_intervals )
 	monster_max_rank_name = parse_ranks( ltx:r_string( "game_relations", "monster_rating" ), monster_rank_intervals )

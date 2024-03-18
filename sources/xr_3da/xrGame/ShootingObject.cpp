@@ -125,6 +125,7 @@ void CShootingObject::LoadFireParams	(LPCSTR section, LPCSTR prefix)
 	fireDistance		= pSettings->r_float	(section,strconcat(sizeof(full_name),full_name, prefix, "fire_distance"));
 	//начальная скорость пули
 	m_fStartBulletSpeed = pSettings->r_float	(section,strconcat(sizeof(full_name),full_name, prefix, "bullet_speed"));
+	// поддерживается ли первая прицельная пуля
 	m_bUseAimBullet		= pSettings->r_bool		(section,strconcat(sizeof(full_name),full_name, prefix, "use_aim_bullet"));
 	if (m_bUseAimBullet)
 	{

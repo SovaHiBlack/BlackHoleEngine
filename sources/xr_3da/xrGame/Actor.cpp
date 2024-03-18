@@ -229,7 +229,7 @@ void CActor::reinit	()
 	CEntityAlive::reinit						();
 	CInventoryOwner::reinit						();
 
-	character_physics_support()->in_Init		();
+//	character_physics_support()->in_Init		();
 	material().reinit							();
 
 	m_pUsableObject								= NULL;

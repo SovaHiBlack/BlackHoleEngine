@@ -109,7 +109,7 @@ void CAI_Stalker::reinit			()
 
 	LoadSounds						(*cNameSect());
 
-	m_pPhysics_support->in_Init		();
+//	m_pPhysics_support->in_Init		();
 	
 	m_best_item_to_kill				= 0;
 	m_best_item_value				= 0.f;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="windows-1251" ?>
+<?xml version='1.0' encoding="windows-1251"?>
 <string_table>
 	<string id="artefact">
 		<text>Добыть артефакт.</text>
@@ -1167,14 +1167,12 @@
 	<string id="defend_lager">
 		<text>Защита лагеря</text>
 	</string>
-
 	<string id="pri_kill_arny">
 		<text>Убить Арни</text>
 	</string>
 	<string id="pri_kill_arny_0">
 		<text>Убить Арни</text>
 	</string>
-
 	<string id="pri_kill_freedom">
 		<text>Уничтожить лидеров "Свободы"</text>
 	</string>
@@ -1187,7 +1185,6 @@
 	<string id="pri_kill_freedom_2">
 		<text>Убить Скрягу</text>
 	</string>
-
 	<string id="pri_kill_dolg">
 		<text>Уничтожить лидеров "Долга"</text>
 	</string>
@@ -1200,7 +1197,6 @@
 	<string id="pri_kill_dolg_2">
 		<text>Убить полковника Петренко</text>
 	</string>
-
 	<string id="sar_warlab">
 		<text>Загадка Зоны</text>
 	</string>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="windows-1251" ?>
+<?xml version='1.0' encoding="windows-1251"?>
 <string_table>
 
 	<string id="zapiska">
@@ -28,25 +28,25 @@
 	<string id="enc_amk_matras">
 		<text>Походный спальный мешок. Пожалуй, самый удобный способ переночевать в Зоне. От радиации не спасёт, но от дождя защитит.</text>
 	</string>
-      <string id="guitar">
+	<string id="guitar">
 		<text>Гитара</text>
 	</string>
-      <string id="harmonica">
+	<string id="harmonica">
 		<text>Губная гармошка</text>
 	</string>
-      <string id="hand_radio">
+	<string id="hand_radio">
 		<text>Рация</text>
 	</string>
-      <string id="hand_radio1">
+	<string id="hand_radio1">
 		<text>Сломанная рация</text>
 	</string>
 	<string id="detect">
 		<text>Дозиметр</text>
 	</string>
-      <string id="detector">
+	<string id="detector">
 		<text>Универсальный детектор аномалий</text>
 	</string>
-      <string id="st_detector">
+	<string id="st_detector">
 		<text>Детектор аномальных полей</text>
 	</string>
 
@@ -131,10 +131,10 @@
 	<string id="enc_equipment_devic_detector1">
 		<text>Универсальный прибор, который определяет любые аномальные зоны и образования. Аномалию отображает на экране, определяет её концентрацию, объём и высоту. Для работы необходимы четыре батарейки. Размещается прибор на поясе.</text>
 	</string>
-      <string id="enc_equipment_devic_hand_radio">
+	<string id="enc_equipment_devic_hand_radio">
 		<text>Армейская рация. Радиус действия - 5 км. Настраивается на достаточно широкий диапазон частот, на которых иногда можно поймать довольно интересные вещи.</text>
 	</string>
-      <string id="enc_equipment_devic_hand_radio1">
+	<string id="enc_equipment_devic_hand_radio1">
 		<text>Какой-то мастер-ломастер пытался сделать из армейской рации FM-радиоприемник. Но видимо у него ничего не получилось.</text>
 	</string>
 	<string id="enc_equipment_devic_device-PDA1">
@@ -161,11 +161,11 @@
 	<string id="enc_equipment_food_vodka1">
 		<text>Водка производства компании "GSC". Хорошо пьётся, заметно снижает воздействие радиации, однако злоупотреблять ей не следует. Хотя некоторые в Зоне и говорят, что только водка от контроллера спасти может.</text>
 	</string>
-      <string id="enc_equipment_food_guitar1">
-             <text>Обычная шестиструнная гитара. После походов в небезопасные места Зоны сталкеры любят вечерком посидеть у костра и побренчать на гитаре - это успокаивает и расслабляет.</text>
+	<string id="enc_equipment_food_guitar1">
+		<text>Обычная шестиструнная гитара. После походов в небезопасные места Зоны сталкеры любят вечерком посидеть у костра и побренчать на гитаре - это успокаивает и расслабляет.</text>
 	</string>
-      <string id="enc_equipment_food_harmonica1">
-             <text>В Зоне, где каждый лишний килограмм в рюкзаке может стоить жизни, губная гармошка весьма популярна у любителей живой музыки.</text>
+	<string id="enc_equipment_food_harmonica1">
+		<text>В Зоне, где каждый лишний килограмм в рюкзаке может стоить жизни, губная гармошка весьма популярна у любителей живой музыки.</text>
 	</string>
 	<string id="enc_equipment_medi_antirad1">
 		<text>Снижают воздействие радиации на организм.</text>

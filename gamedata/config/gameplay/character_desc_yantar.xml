@@ -2,7 +2,7 @@
 
 <xml>
 
-<!----------------glavniy ucheniy-------------->
+<!-- glavniy ucheniy -->
 	<specific_character id="yan_general_ecolog" team_default = "1">
 		<name>yan_saharov_name</name>
 		<icon>ui_npc_u_ucheniy_2</icon>
@@ -34,7 +34,7 @@
 		<actor_dialog>yantar_zombie_hand_comeback</actor_dialog>
 	</specific_character>
 
-<!---------------------------RESCUE_ECOLOG------------------------>
+<!-- RESCUE_ECOLOG -->
 <specific_character id="yan_ecolog_help" team_default = "1">
 		<name>ros_kruglov_name</name>
 		<icon>ui_npc_u_stalker_ecolog_military</icon>
@@ -152,7 +152,7 @@ ammo_5.45x39_ap=3 \n
 		</supplies>
 </specific_character>
 
-<!---------------------------ECOLOG------------------------>
+<!-- ECOLOG -->
 	<specific_character id="yan_ecolog_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ecolog</icon>
@@ -206,7 +206,7 @@ ammo_5.45x39_ap=3 \n
 	</specific_character>
 	
 
-<!---------------------------ZOMBIED----------------------->
+<!-- ZOMBIED -->
 	<specific_character id="yan_zombied_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_zombie1</icon>
@@ -399,7 +399,7 @@ ammo_5.45x39_ap=3 \n
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-<!---------------------------ZOMBIED VETERANS----------------------->
+<!-- ZOMBIED VETERANS -->
 	<specific_character id="yan_zombied_veteran_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_zombie2</icon>
@@ -546,7 +546,7 @@ ammo_5.45x39_ap=3 \n
 
 
 
-<!---------------------------ZOMBIED AMBUSH----------------------->
+<!-- ZOMBIED AMBUSH -->
 	<specific_character id="yan_zombied_ambush_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_zombie2</icon>
@@ -607,7 +607,7 @@ ammo_5.45x39_ap=3 \n
 	</specific_character>
 
 
-<!---------------------------ZOMBIED MASTER----------------------->
+<!-- ZOMBIED MASTER -->
 	<specific_character id="yan_zombied_master_1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_zombie3</icon>
@@ -637,7 +637,7 @@ ammo_5.45x39_ap=3 \n
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-<!---------------------------ZOMBIED dolg----------------------->
+<!-- ZOMBIED dolg -->
 <specific_character id="yan_zombied_dolg" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_zombie2</icon>
@@ -666,7 +666,7 @@ ammo_5.45x39_ap=3 \n
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-<!---------------------------ÑÂÅÆÅZOMBIED STALKER----------------------->
+<!-- ÑÂÅÆÅZOMBIED STALKER -->
 	<specific_character id="yan_fresh_Zombied_stalker_1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_zombie_fresh_0</icon>

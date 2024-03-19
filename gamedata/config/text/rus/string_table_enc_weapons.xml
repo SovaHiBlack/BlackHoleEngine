@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="windows-1251" ?>
+<?xml version='1.0' encoding="windows-1251"?>
 <string_table>
 	<string id="wpn-svu_m1">
 		<text>СВУ "Громобой"</text>
@@ -586,19 +586,19 @@
 	<string id="wpn-wincheaster1300">
 		<text>Winchester 1300</text>
 	</string>
-      <string id="fuelcan">
+	<string id="fuelcan">
 		<text>Газовый баллон</text>
 	</string>
-      <string id="bomba">
+	<string id="bomba">
 		<text>Топливная бомба</text>
 	</string>
-      <string id="bochka">
+	<string id="bochka">
 		<text>Цистерна с топливом</text>
 	</string>
-      <string id="kanistra">
+	<string id="kanistra">
 		<text>Канистра</text>
 	</string>
-      <string id="dinamito">
+	<string id="dinamito">
 		<text>Ящик с динамитом</text>
 	</string>
 	<string id="enc_explosive_bomba">

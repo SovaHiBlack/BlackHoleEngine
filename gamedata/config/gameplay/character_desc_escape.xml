@@ -26,7 +26,7 @@
 		<actor_dialog>escape_trader_done_blockpost_box</actor_dialog>
 		<actor_dialog>escape_trader_repair</actor_dialog>
 	</specific_character>
-<!---------------------------------------esc_wolf----------------------------------------------------->
+<!-- esc_wolf -->
 	<specific_character id="esc_wolf" team_default = "1">
 		<name>esc_wolf_name</name>
 		<icon>ui_npc_u_stalker_neytral_balon_1</icon>
@@ -63,7 +63,7 @@ ammo_12x70_buck=3 \n
 		<actor_dialog>tm_wolf_dialog</actor_dialog>
 		<actor_dialog>tm_wolf_reward</actor_dialog>
 	</specific_character>
-<!---------------------------------------esc_fanat----------------------------------------------------->	
+<!-- esc_fanat -->	
 	<specific_character id="esc_fanat" team_default = "1">
 		<name>esc_fanat_name</name>
 		<icon>ui_npc_u_stalker_neytral_rukzak_3</icon>
@@ -97,7 +97,7 @@ ammo_12x70_buck=4 \n
 		<actor_dialog>dm_cool_info_dialog</actor_dialog>
 		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
 	</specific_character>
-<!---------------------------------------esc_fox----------------------------------------------------->	
+<!-- esc_fox -->	
 	<specific_character id="esc_fox" team_default = "1">
 		<name>esc_fox_name</name>
 		<icon>ui_npc_u_stalker_neytral_balon_4</icon>
@@ -131,7 +131,7 @@ ammo_9x19_fmj=2 \n
 		<actor_dialog>dm_cool_info_dialog</actor_dialog>
 		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
 	</specific_character>
-<!---------------------------------------esc_tutorial_wounded----------------------------------------------------->	
+<!-- esc_tutorial_wounded -->	
 	<specific_character id="esc_tutorial_wounded" team_default = "1">
 		<name>esc_tolik_name</name>
 		<icon>ui_npc_u_green_stalker_2</icon>
@@ -162,7 +162,7 @@ ammo_9x19_fmj=2 \n
 		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
 				
 	</specific_character>
-<!---------------------------------------esc_shustryi----------------------------------------------------->	
+<!-- esc_shustryi -->	
 	<specific_character id="esc_shustryi" team_default = "1">
 		<name>esc_shustryi_name</name>
 		<icon>ui_npc_u_green_stalker_1</icon>
@@ -196,7 +196,7 @@ ammo_9x19_fmj=2 \n
 		<actor_dialog>tm_shustriy_dialog</actor_dialog>
 		<actor_dialog>tm_shustriy_reward</actor_dialog>						
 	</specific_character>
-<!---------------------------------------killer_specnaz----------------------------------------------------->		
+<!-- killer_specnaz -->		
 	<specific_character id="esc_killer_specnaz" team_default = "1">
 		<terrain_sect_>stalker_terrain</terrain_sect_>
 		<name>GENERATE_NAME_stalker</name>
@@ -230,7 +230,7 @@ ammo_9x19_fmj=2 \n
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 	
-	<!---------------------------BANDIT NOVICE----------------------->
+	<!-- BANDIT NOVICE -->
 	<specific_character id="esc_bandit_novice_default1" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_3</icon>
@@ -260,7 +260,7 @@ ammo_9x19_fmj=2 \n
 					
 #include "gameplay\character_dialogs.xml"
 </specific_character>
-<!------------------------------------------------------------------------------------------>
+<!-- -->
 	<specific_character id="esc_bandit_novice_default2" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_4</icon>
@@ -293,7 +293,7 @@ ammo_9x19_fmj=2 \n
 #include "gameplay\character_criticals_3.xml"		
 #include "gameplay\character_dialogs.xml"	
 	</specific_character>
-<!------------------------------------------------------------------------------------------>
+<!-- -->
 	<specific_character id="esc_bandit_novice_default3" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_5</icon>
@@ -325,7 +325,7 @@ ammo_9x19_fmj=2 \n
 </specific_character>
 	
 	
-	<!---------------------------STALKER NOVICE----------------------->
+	<!-- STALKER NOVICE -->
 	
 	<specific_character id="esc_stalker_novice_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
@@ -357,7 +357,7 @@ ammo_9x18_fmj=5 \n
 		<start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"		
 	</specific_character>
-<!------------------------------------------------------------------------------------------>
+<!-- -->
 	<specific_character id="esc_stalker_novice_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_2</icon>
@@ -389,7 +389,7 @@ ammo_9x18_fmj=2 \n
 		<start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-<!------------------------------------------------------------------------------------------>
+<!-- -->
 	<specific_character id="esc_stalker_novice_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_3</icon>
@@ -420,7 +420,7 @@ ammo_9x18_pmm=3 \n
 		<start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-<!------------------------------------------------------------------------------------------>
+<!-- -->
 	<specific_character id="esc_stalker_novice_default4" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_3</icon>
@@ -451,7 +451,7 @@ ammo_9x18_pmm=2 \n
 		<start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-<!------------------------------------------------------------------------------------------>
+<!-- -->
 	<specific_character id="esc_stalker_novice_default5" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_4</icon>
@@ -483,7 +483,7 @@ ammo_9x19_fmj = 2 \n
 		<start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-<!------------------------------------------------------------------------------------------>
+<!-- -->
 	<specific_character id="esc_stalker_novice_default6" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_4</icon>
@@ -505,8 +505,8 @@ ammo_9x19_fmj = 2 \n
 			wpn_bm16 \n
 			ammo_12x70_buck \n
 ammo_9x19_fmj=1 \n		
-#include "gameplay\character_items.xml"	\n
-#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
 		</supplies>
 		
@@ -515,7 +515,7 @@ ammo_9x19_fmj=1 \n
 		<start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-<!------------------------------------------------------------------------------------------>
+<!-- -->
 	<specific_character id="esc_stalker_novice_default9" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_5</icon>
@@ -547,7 +547,7 @@ ammo_9x19_fmj=3 \n
 		<start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-<!------------------------------------------------------------------------------------------>
+<!-- -->
 	<specific_character id="esc_stalker_novice_default10" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_5</icon>
@@ -581,7 +581,7 @@ ammo_12x76_zhekan=1 \n
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 	
-<!-------------------------------------ranger----------------------------------------------------->	
+<!-- ranger -->	
 	<specific_character id="esc_ranger" team_default = "1">
 		<name>esc_petruha_name</name>
 		<icon>ui_npc_u_green_stalker_8</icon>
@@ -615,7 +615,7 @@ ammo_12x76_zhekan=1 \n
 		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
 	</specific_character>
 	
-<!-------------------------------------soldier_commander----------------------------------------------------->		
+<!-- soldier_commander -->		
 	<specific_character id="esc_soldier_commander" team_default = "1">
 		<name>esc_soldier_commander_name</name>
 		<icon>ui_npc_u_soldier_beret_1</icon>
@@ -646,7 +646,7 @@ ammo_12x76_zhekan=1 \n
 		<start_dialog>esc_bridge_soldiers_start</start_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-<!-------------------------------------soldier_regular----------------------------------------------------->	
+<!-- soldier_regular -->	
 	<specific_character id="esc_soldier_regular_default1" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_soldier_obichniy</icon>
@@ -676,7 +676,7 @@ ammo_12x76_zhekan=1 \n
 #include "gameplay\character_dialogs.xml"					
 		<start_dialog>hello_dialog</start_dialog>
 	</specific_character>
-<!-------------------------------------soldier_regular----------------------------------------------------->
+<!-- soldier_regular -->
 	<specific_character id="esc_soldier_regular_default2" team_default = "1">
 		<name>GENERATE_NAME_sergeant</name>
 		<icon>ui_npc_u_soldier_bandana_1</icon>
@@ -707,7 +707,7 @@ ammo_12x76_zhekan=1 \n
 #include "gameplay\character_dialogs.xml"					
 		<start_dialog>hello_dialog</start_dialog>
 	</specific_character>
-<!-------------------------------------soldier_regular----------------------------------------------------->
+<!-- soldier_regular -->
 	<specific_character id="esc_soldier_regular_default3" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_soldier_bandana_2</icon>
@@ -737,7 +737,7 @@ ammo_12x76_zhekan=1 \n
 #include "gameplay\character_dialogs.xml"					
 		<start_dialog>hello_dialog</start_dialog>
 	</specific_character>
-<!-------------------------------------soldier_regular----------------------------------------------------->
+<!-- soldier_regular -->
 	<specific_character id="esc_soldier_regular_default4" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_soldier_bandana_3</icon>
@@ -769,7 +769,7 @@ ammo_12x76_zhekan=1 \n
 #include "gameplay\character_dialogs.xml"					
 		<start_dialog>hello_dialog</start_dialog>
 	</specific_character>
-<!-------------------------------------soldier_regular----------------------------------------------------->
+<!-- soldier_regular -->
 	<specific_character id="esc_soldier_regular_default5" team_default = "1">
 		<name>GENERATE_NAME_sergeant</name>
 		<icon>ui_npc_u_soldier_bandana_4</icon>
@@ -800,7 +800,7 @@ ammo_12x76_zhekan=1 \n
 #include "gameplay\character_dialogs.xml"		
 		<start_dialog>hello_dialog</start_dialog>
 	</specific_character>
-<!-------------------------------------blockpost_commander----------------------------------------------------->	
+<!-- blockpost_commander -->	
 	<specific_character id="esc_soldier_blockpost_commander" team_default = "1">
 		<name>GENERATE_NAME_captain</name>
 		<icon>ui_npc_u_soldier_beret_1</icon>
@@ -829,7 +829,7 @@ ammo_12x76_zhekan=1 \n
 #include "gameplay\character_dialogs.xml"		
 		<start_dialog>hello_dialog</start_dialog>
 	</specific_character>
-<!-------------------------------------soldier_blokpost----------------------------------------------------->	
+<!-- soldier_blokpost -->	
 	<specific_character id="esc_soldier_blokpost_default1" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_soldier_obichniy</icon>
@@ -859,7 +859,7 @@ ammo_12x76_zhekan=1 \n
 #include "gameplay\character_dialogs.xml"
 		<start_dialog>hello_dialog</start_dialog>
 	</specific_character>
-<!-------------------------------------soldier_blokpost----------------------------------------------------->	
+<!-- soldier_blokpost -->	
 	<specific_character id="esc_soldier_blokpost_default2" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_soldier_bandana_5</icon>
@@ -890,7 +890,7 @@ ammo_12x76_zhekan=1 \n
 #include "gameplay\character_dialogs.xml"
 		<start_dialog>hello_dialog</start_dialog>
 	</specific_character>
-<!-------------------------------------soldier_blokpost----------------------------------------------------->	
+<!-- soldier_blokpost -->	
 	<specific_character id="esc_soldier_blokpost_default3" team_default = "1">
 		<name>GENERATE_NAME_sergeant</name>
 		<icon>ui_npc_u_soldier_bandana</icon>
@@ -920,7 +920,7 @@ ammo_12x76_zhekan=1 \n
 #include "gameplay\character_dialogs.xml"					
 		<start_dialog>hello_dialog</start_dialog>
 	</specific_character>
-<!-------------------------------------soldier_specnaz----------------------------------------------------->	
+<!-- soldier_specnaz -->	
 	<specific_character id="esc_soldier_specnaz_default1" team_default = "1">
 		<name>GENERATE_NAME_lieutenant</name>
 		<icon>ui_npc_u_soldier_spetsnaz</icon>
@@ -950,7 +950,7 @@ ammo_12x76_zhekan=1 \n
 #include "gameplay\character_dialogs.xml"					
 		<start_dialog>hello_dialog</start_dialog>
 	</specific_character>
-<!-------------------------------------soldier_specnaz----------------------------------------------------->
+<!-- soldier_specnaz -->
 		<specific_character id="esc_soldier_specnaz_default2" team_default = "1">
 		<name>GENERATE_NAME_lieutenant</name>
 		<icon>ui_npc_u_soldier_spetsnaz</icon>
@@ -981,7 +981,7 @@ ammo_12x76_zhekan=1 \n
 		<start_dialog>hello_dialog</start_dialog>
 	</specific_character>
 	
-<!-------------------------------------killer_master----------------------------------------------------->		
+<!-- killer_master -->		
 	<specific_character id="esc_killer_master" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ki_antigas</icon>
@@ -1011,7 +1011,7 @@ ammo_12x76_zhekan=1 \n
 		<start_dialog>hello_dialog</start_dialog>
 	</specific_character>
 	
-<!-------------------------------------provodnik----------------------------------------------------->		
+<!-- provodnik -->		
 	<specific_character id="esc_provodnik" team_default = "1">
 		<name>esc_provodnik_name</name>
 		<icon>ui_npc_u_stalker_neytral_rukzak_1</icon>

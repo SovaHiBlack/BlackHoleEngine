@@ -367,7 +367,7 @@ ammo_9x18_pmm=4 \n
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<!---------------------------BAR OSVEDOMITEL---------------------->
+	<!-- BAR OSVEDOMITEL -->
 	<specific_character id="bar_bar_osvedomitel" team_default = "1">
 		<name>bar_informer_name</name>
 		<icon>ui_npc_u_stalker_bandit_master</icon>
@@ -401,7 +401,7 @@ ammo_9x18_pmm=4 \n
 #include "gameplay\character_dialogs.xml"				
 	</specific_character>	
 
-	<!---------------------------BAR HUNTER---------------------->
+	<!-- BAR HUNTER -->
 	<specific_character id="bar_bar_hunter" team_default = "1">
 		<name>bar_hunter_name</name>
 		<icon>ui_npc_u_green_stalker_3</icon>
@@ -436,7 +436,7 @@ ammo_9x18_pmm=4 \n
 
 	</specific_character>	
 
-	<!---------------------------BAR DRUNK DOLG---------------------->
+	<!-- BAR DRUNK DOLG -->
 	<specific_character id="bar_bar_drunk_dolg" team_default = "1">
 		<name>bar_drunk_name</name>
 		<icon>ui_npc_u_stalker_do_balon_4</icon>
@@ -469,7 +469,7 @@ ammo_9x18_pmm=4 \n
 		
 	</specific_character>	
 
-	<!---------------------------BAR LISIY---------------------->
+	<!-- BAR LISIY -->
 	<specific_character id="bar_bar_lisiy" team_default = "1">
 		<name>bar_lisiy_name</name>
 		<icon>ui_npc_u_stalker_neytral_balon_4</icon>
@@ -568,12 +568,12 @@ ammo_7.62x54_7h1 \n
 		<start_dialog>bar_arena_man_start</start_dialog>
 		<actor_dialog>bar_arena_man_job</actor_dialog>
 
-		<!------------------------------------------------ARENA_EXTENSION_MOD------------------------------------------------>
+		<!-- ARENA_EXTENSION_MOD -->
 		<start_dialog>bar_arena_man_start</start_dialog>
 		<actor_dialog>bar_arena_man_job</actor_dialog>
 		<actor_dialog>bar_arena_man_fights</actor_dialog>
 		<actor_dialog>bar_arena_man_extra</actor_dialog>
-		<!------------------------------------------------ARENA_EXTENSION_MOD------------------------------------------------>
+		<!-- ARENA_EXTENSION_MOD -->
 
 #include "gameplay\character_dialogs.xml"
 
@@ -635,7 +635,7 @@ ammo_7.62x54_7h1 \n
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<!---------------------------DOLG LEADER---------------------->
+	<!-- DOLG LEADER -->
 	<specific_character id="bar_dolg_leader" team_default = "1">
 		<name>bar_voronin_name</name>
 		<icon>ui_npc_u_stalker_do_komandir</icon>
@@ -677,7 +677,7 @@ ammo_5.56x45_ap=2 \n
 
 	</specific_character>
 
-	<!---------------------------DOLG PETRENKO---------------------->
+	<!-- DOLG PETRENKO -->
 	<specific_character id="bar_dolg_petrenko" team_default = "1">
 		<name>bar_petrenko_name</name>
 		<icon>ui_npc_u_stalker_do_balon_3</icon>
@@ -716,7 +716,7 @@ ammo_5.56x45_ap=2 \n
 
 </specific_character>	
 
-	<!---------------------------DOLG IVANCOV---------------------->
+	<!-- DOLG IVANCOV -->
 	<specific_character id="bar_dolg_ivancov" team_default = "1">
 		<name>bar_ivancov_name</name>
 		<icon>ui_npc_u_stalker_do_balon_5</icon>
@@ -751,7 +751,7 @@ ammo_5.45x39_ap=2 \n
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>	
 
-	<!---------------------------DOLG Начальник Охраны---------------------->
+	<!-- DOLG Начальник Охраны -->
 	<specific_character id="bar_dolg_guard_commander" team_default = "1">
 		<name>bar_plichko_name</name>
 		<icon>ui_npc_u_stalker_do_balon_1</icon>
@@ -833,7 +833,7 @@ ammo_12x70_buck=2 \n
 		
 	</specific_character>	
 
-	<!-- ******************* Helicopter scene ********************** -->
+	<!-- Helicopter scene -->
 	<specific_character id="bar_ecolog_professor" team_default = "1">
 		<name>ros_kruglov_name</name>
 		<icon>ui_npc_u_stalker_ecolog_military</icon>
@@ -906,7 +906,7 @@ ammo_5.56x45_ss190 \n
 
 	</specific_character>
 
-	<!-- ******************* KILLER AMBUSH ********************** -->
+	<!-- KILLER AMBUSH -->
 	<specific_character id="bar_killer_ambush_tiran" team_default = "1">
 		<name>ros_tiran_name</name>
 		<icon>ui_npc_u_stalker_ki_exoskeleton</icon>
@@ -939,7 +939,7 @@ ammo_5.56x45_ss190 \n
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<!-- ******************* CRAZY VETERANS ********************** -->
+	<!-- CRAZY VETERANS -->
 	<specific_character id="bar_crazy_veterans_lucky" team_default = "1">
 		<name>ros_happy_name</name>
 		<icon>ui_npc_u_stalker_bandit_master</icon>
@@ -1030,7 +1030,7 @@ ammo_5.56x45_ss190 \n
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<!-- ************************ Гордон Фримен *********************** -->	
+	<!-- Гордон Фримен -->	
 	<specific_character id="bar_stalker_freeman" team_default = "1">
 		<name>ros_freeman_name</name>
 		<icon>ui_npc_u_green_stalker_7</icon>
@@ -1060,7 +1060,7 @@ ammo_5.56x45_ss190 \n
 	
 
 
-<!---------------------------DOLG REGULAR----------------------->
+<!-- DOLG REGULAR -->
 	<specific_character id="bar_dolg_regular_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_mask</icon>
@@ -1166,7 +1166,7 @@ ammo_12x70_buck=2 \n
 		<actor_dialog>bar_dolg_base_guard_acces</actor_dialog>
 	</specific_character>
 
-<!---------------------------DOLG SNIPER---------------------->
+<!-- DOLG SNIPER -->
 	<specific_character id="bar_dolg_sniper_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_balon_8</icon>
@@ -1265,7 +1265,7 @@ ammo_7.62x54_7h1=1 \n
 #include "gameplay\character_dialogs.xml"
 		</specific_character>
 
-<!---------------------------DOLG SPECNAZ---------------------->
+<!-- DOLG SPECNAZ -->
 	<specific_character id="bar_dolg_veteran_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_nauchniy</icon>
@@ -1399,7 +1399,7 @@ ammo_5.56x45_ss190=2 \n
 		
 	</specific_character>
 	
-<!---------------------------DOLG MASTER----------------------->
+<!-- DOLG MASTER -->
 	<specific_character id="bar_dolg_master_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_exoskeleton</icon>
@@ -1467,7 +1467,7 @@ ammo_5.56x45_ss190=3 \n
 	</specific_character>
 
 
-<!---------------------------STALKER NOVICE----------------------->
+<!-- STALKER NOVICE -->
 	<specific_character id="bar_stalker_novice_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_2</icon>
@@ -1709,7 +1709,7 @@ ammo_12x76_zhekan=1 \n
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-<!---------------------------STALKER GENERAL---------------------->
+<!-- STALKER GENERAL -->
 	<specific_character id="bar_stalker_general_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_uzor</icon>
@@ -1875,7 +1875,7 @@ ammo_9x39_pab9=1 \n
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 	
-<!---------------------------STALKER VETERAN---------------------->
+<!-- STALKER VETERAN -->
 	<specific_character id="bar_stalker_veteran_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_9</icon>
@@ -2045,7 +2045,7 @@ ammo_5.45x39_fmj=1 \n
 	</specific_character>
 
 
-<!---------------------------ECOLOG GUARD------------------------>
+<!-- ECOLOG GUARD -->
 	<specific_character id="bar_ecolog_guard_default1" team_default = "1">
 		<name>GENERATE_NAME_science</name>
 		<icon>ui_npc_u_stalker_ecolog</icon>
@@ -2107,7 +2107,7 @@ ammo_9x39_ap=2 \n
 	</specific_character>
 
 
-<!---------------------------KILLER REGULAR----------------------->
+<!-- KILLER REGULAR -->
 	<specific_character id="bar_killer_regular_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ki_head_1</icon>
@@ -2198,7 +2198,7 @@ ammo_9x39_ap=2 \n
 		
 	</specific_character>
 		
-<!---------------------------KILLER SNIPER---------------------->
+<!-- KILLER SNIPER -->
 	<specific_character id="bar_killer_sniper_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ki_mask</icon>
@@ -2288,7 +2288,7 @@ ammo_9x39_ap=2 \n
 		
 	</specific_character>
 	
-<!---------------------------KILLER SPECNAZ---------------------->
+<!-- KILLER SPECNAZ -->
 	<specific_character id="bar_killer_specnaz_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ki_nauchniy</icon>
@@ -2410,7 +2410,7 @@ ammo_9x39_ap=2 \n
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"		
 	</specific_character>
-<!-----------DELME:only for presentation--------------------->
+<!-- DELME:only for presentation -->
 	<specific_character id="bar_arena_respawner_default1" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_3</icon>

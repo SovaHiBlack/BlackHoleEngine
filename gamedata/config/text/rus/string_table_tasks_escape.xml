@@ -1,152 +1,145 @@
 	<string id="esc_bandits_on_factory">
-		<text>РЈРЅРёС‡С‚РѕР¶РёС‚СЊ Р±Р°РЅРґРёС‚РѕРІ РЅР° С„Р°Р±СЂРёРєРµ</text>
+		<text>Уничтожить бандитов на фабрике</text>
 	</string>
 	<string id="esc_bandits_on_factory_0">
-		<text>РЈРЅРёС‡С‚РѕР¶РёС‚СЊ Р±Р°РЅРґРёС‚РѕРІ Р·Р°СЃРµРІС€РёС… РЅР° С„Р°Р±СЂРёРєРµ.</text>
+		<text>Уничтожить бандитов засевших на фабрике.</text>
 	</string>
 	<string id="esc_bandits_on_factory_1">
-		<text>РЈР±РёС‚СЊ РІСЃРµС… Р±Р°РЅРґРёС‚РѕРІ РЅР° С„Р°Р±СЂРёРєРµ</text>
+		<text>Убить всех бандитов на фабрике</text>
 	</string>
 	<string id="esc_bandits_on_factory_2">
-		<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ С‚РѕСЂРіРѕРІС†РµРј</text>
+		<text>Поговорить с торговцем</text>
 	</string>
 	<string id="esc_bandits_on_factory_3">
-		<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р’РѕР»РєРѕРј</text>
+		<text>Поговорить с Волком</text>
 	</string>
 	<string id="esc_blockpost_case_to_trader">
-		<text>РЈРєСЂР°СЃС‚СЊ СЏС‰РёРє СЃ Р±Р»РѕРєРїРѕСЃС‚Р°</text>
+		<text>Украсть ящик с блокпоста</text>
 	</string>
 	<string id="esc_blockpost_case_to_trader_0">
-		<text>РЈРєСЂР°СЃС‚СЊ СЃ Р±Р»РѕРєРїРѕСЃС‚Р° СЏС‰РёРє СЃ РІР°Р¶РЅС‹РјРё РґРѕРєСѓРјРµРЅС‚Р°РјРё.</text>
+		<text>Украсть с блокпоста ящик с важными документами.</text>
 	</string>
 	<string id="esc_blockpost_case_to_trader_1">
-		<text>РЈРєСЂР°СЃС‚СЊ СЏС‰РёРє СЃ Р±Р»РѕРєРїРѕСЃС‚Р°</text>
+		<text>Украсть ящик с блокпоста</text>
 	</string>
 	<string id="esc_blockpost_case_to_trader_2">
-		<text>РџСЂРёРЅРµСЃС‚Рё СЏС‰РёРє С‚РѕСЂРіРѕРІС†Сѓ</text>
+		<text>Принести ящик торговцу</text>
 	</string>
 	<string id="esc_defend_lager">
-		<text>Р—Р°С‰РёС‚РёС‚СЊ Р»Р°РіРµСЂСЊ РЅРѕРІРёС‡РєРѕРІ РѕС‚ РЅР°РµРјРЅРёРєРѕРІ</text>
+		<text>Защитить лагерь новичков от наемников</text>
 	</string>
 	<string id="esc_defend_lager_from_killers_0">
-		<text>Р—Р°С‰РёС‚РёС‚СЊ Р»Р°РіРµСЂСЊ РЅРѕРІРёС‡РєРѕРІ РѕС‚ РЅР°РµРјРЅРёРєРѕРІ.</text>
+		<text>Защитить лагерь новичков от наемников.</text>
 	</string>
 	<string id="esc_defend_lager_from_killers_1">
-		<text>РЈРЅРёС‡С‚РѕР¶РёС‚СЊ РѕС‚СЂСЏРґ РЅР°РµРјРЅРёРєРѕРІ</text>
+		<text>Уничтожить отряд наемников</text>
 	</string>
 	<string id="esc_defend_lager_from_killers_2">
-		<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РєРѕРјР°РЅРґРёСЂРѕРј РЅРѕРІРёС‡РєРѕРІ</text>
+		<text>Поговорить с командиром новичков</text>
 	</string>
 	<string id="esc_dinamit_to_volk">
-		<text>РЈРЅРёС‡С‚РѕР¶РёС‚СЊ Р±Р°РЅРґРёС‚РѕРІ РЅР° РђРўРџ</text>
+		<text>Уничтожить бандитов на АТП</text>
 	</string>
 	<string id="esc_dinamit_to_volk_0">
-		<text>РЈРЅРёС‡С‚РѕР¶РёС‚СЊ Р±Р°РЅРґРёС‚РѕРІ РЅР° РђРўРџ Рё РѕС‚С‡РёС‚Р°С‚СЊСЃСЏ РїРµСЂРµРґ Р’РѕР»РєРѕРј.</text>
+		<text>Уничтожить бандитов на АТП и отчитаться перед Волком.</text>
 	</string>
 	<string id="esc_dinamit_to_volk_1">
-		<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р»СЋРґСЊРјРё Р’РѕР»РєР°</text>
+		<text>Встретиться с людьми Волка</text>
 	</string>
 	<string id="esc_dinamit_to_volk_2">
-		<text>РЈРЅРёС‡С‚РѕР¶РёС‚СЊ РІСЃРµС… Р±Р°РЅРґРёС‚РѕРІ</text>
+		<text>Уничтожить всех бандитов</text>
 	</string>
 	<string id="esc_dinamit_to_volk_3">
-		<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р’РѕР»РєРѕРј</text>
+		<text>Поговорить с Волком</text>
 	</string>
 	<string id="esc_help_wounded_from_raid">
-		<text>РЈР·РЅР°С‚СЊ Сѓ Р›РёСЃР° Рѕ РЎС‚СЂРµР»РєРµ</text>
+		<text>Узнать у Лиса о Стрелке</text>
 	</string>
 	<string id="esc_help_wounded_from_raid_0">
-		<text>РћРєР°Р·Р°С‚СЊ РїРѕРјРѕС‰СЊ СЂР°РЅРµРЅРѕРјСѓ СЃС‚Р°Р»РєРµСЂСѓ</text>
+		<text>Оказать помощь раненому сталкеру</text>
 	</string>
 	<string id="esc_help_wounded_from_raid_1">
-		<text>РџРѕРјРѕС‡СЊ Р›РёСЃСѓ</text>
+		<text>Помочь Лису</text>
 	</string>
 	<string id="esc_help_wounded_from_raid_2">
-		<text>РџРѕР»СѓС‡РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РЎС‚СЂРµР»РєРµ</text>
+		<text>Получить информацию о Стрелке</text>
 	</string>
 	<string id="esc_wounded_to_trader_gift">
-		<text>Р”РѕСЃС‚Р°РІРёС‚СЊ РїР°РєРµС‚ С‚РѕСЂРіРѕРІС†Сѓ.</text>
+		<text>Доставить пакет торговцу.</text>
 	</string>
 	<string id="esc_wounded_to_trader_gift_0">
-		<text>Р”РѕСЃС‚Р°РІРёС‚СЊ РїР°РєРµС‚ С‚РѕСЂРіРѕРІС†Сѓ. РћРЅ СЃРјРѕР¶РµС‚ С‚РµР±Рµ РїРѕРјРѕС‡СЊ.</text>
+		<text>Доставить пакет торговцу. Он сможет тебе помочь.</text>
 	</string>
 	<string id="garbage_meet_stalker">
-		<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ РЎРµСЂС‹Рј.</text>
+		<text>Встретиться с Серым.</text>
 	</string>
 	<string id="garbage_meet_stalker_0">
-		<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ РЎРµСЂС‹Рј РЅР° СЃРІР°Р»РєРµ.</text>
+		<text>Встретиться с Серым на свалке.</text>
 	</string>
 	<string id="meet_with_doctor">
-		<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р”РѕРєС‚РѕСЂРѕРј</text>
+		<text>Встретиться с Доктором</text>
 	</string>
 	<string id="meet_with_doctor_1">
-		<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р”РѕРєС‚РѕСЂРѕРј</text>
+		<text>Встретиться с Доктором</text>
 	</string>
 	<string id="meet_with_doctor_2">
-		<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р”РѕРєС‚РѕСЂРѕРј РІ С‚Р°Р№РЅРёРєРµ РЎС‚СЂРµР»РєР°</text>
+		<text>Встретиться с Доктором в тайнике Стрелка</text>
 	</string>
 	<string id="storyline_escape_eliminate_gunslinger">
-		<text>РЈР±РёС‚СЊ РЎС‚СЂРµР»РєР°</text>
+		<text>Убить Стрелка</text>
 	</string>
 	<string id="storyline_escape_find_gunslinger">
-		<text>РќР°Р№С‚Рё РЎС‚СЂРµР»РєР°</text>
+		<text>Найти Стрелка</text>
 	</string>
 	<string id="tutorial_find_artefact">
-		<text>РќР°Р№С‚Рё СЃРІРѕР№ РїРµСЂРІС‹Р№ Р°СЂС‚РµС„Р°РєС‚</text>
+		<text>Найти свой первый артефакт</text>
 	</string>
 	<string id="tutorial_find_artefact_0">
-		<text>РќР°Р№С‚Рё СЃРІРѕР№ РїРµСЂРІС‹Р№ Р°СЂС‚РµС„Р°РєС‚</text>
+		<text>Найти свой первый артефакт</text>
 	</string>
 	<string id="tutorial_find_artefact_1">
-		<text>РќР°Р№С‚Рё Р°СЂС‚РµС„Р°РєС‚</text>
+		<text>Найти артефакт</text>
 	</string>
 	<string id="tutorial_find_artefact_2">
-		<text>РџСЂРёРЅРµСЃС‚Рё Р°СЂС‚РµС„Р°РєС‚ С‚РѕСЂРіРѕРІС†Сѓ.</text>
+		<text>Принести артефакт торговцу.</text>
 	</string>
 	<string id="tutorial_help_wounded">
-		<text>Р—Р°Р±СЂР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Сѓ СЂР°Р·РІРµРґС‡РёРєР°</text>
+		<text>Забрать информацию у разведчика</text>
 	</string>
 	<string id="tutorial_help_wounded_0">
-		<text>РџСЂРёРЅРµСЃС‚Рё РёРЅС„РѕСЂРјР°С†РёСЋ С‚РѕСЂРіРѕРІС†Сѓ</text>
+		<text>Принести информацию торговцу</text>
 	</string>
 	<string id="tutorial_help_wounded_1">
-		<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р’РѕР»РєРѕРј</text>
+		<text>Поговорить с Волком</text>
 	</string>
 	<string id="tutorial_help_wounded_2">
-		<text>Р’Р·СЏС‚СЊ Сѓ РЁСѓСЃС‚СЂРѕРіРѕ С„Р»РµС€РєСѓ</text>
+		<text>Взять у Шустрого флешку</text>
 	</string>
 	<string id="tutorial_help_wounded_3">
-		<text>РџСЂРёРЅРµСЃС‚Рё С„Р»РµС€РєСѓ С‚РѕСЂРіРѕРІС†Сѓ</text>
+		<text>Принести флешку торговцу</text>
 	</string>
 	<string id="esc_trader_job">
-		<text>Р Р°Р±РѕС‚Р° РЅР° С‚РѕСЂРіРѕРІС†Р°</text>
+		<text>Работа на торговца</text>
 	</string>
 	<string id="esc_trader_job_text">
-		<text>РџРѕР»СѓС‡РёС‚СЊ СЃРїРµС†Р·Р°РґР°РЅРёРµ Сѓ С‚РѕСЂРіРѕРІС†Р°</text>
+		<text>Получить спецзадание у торговца</text>
 	</string>
 	<string id="bar_barman_job">
-		<text>Р Р°Р±РѕС‚Р° РЅР° Р±Р°СЂРјРµРЅР°</text>
+		<text>Работа на бармена</text>
 	</string>
 	<string id="bar_barman_job_text">
-		<text>РћР±СЂР°С‚РёС‚СЊСЃСЏ Рє Р±Р°СЂРјРµРЅСѓ Р·Р° СЂР°Р±РѕС‚РѕР№</text>
+		<text>Обратиться к бармену за работой</text>
 	</string>
-<!--
-	<string id="yan_scientist_job">
-		<text>РџРѕРјРѕС‰СЊ СѓС‡РµРЅС‹Рј</text>
-	</string>
-	<string id="yan_scientist_job_text">
-		<text>РџСЂРµРґР»РѕР¶РёС‚СЊ СЃРІРѕСЋ РїРѕРјРѕС‰СЊ СѓС‡РµРЅС‹Рј</text>
-	</string>
--->
 	<string id="find_railroad_passage">
-		<text>РџСЂРѕР±СЂР°С‚СЊСЃСЏ Р·Р° Р¶РµР»РµР·РЅРѕРґРѕСЂРѕР¶РЅСѓСЋ РЅР°СЃС‹РїСЊ</text>
+		<text>Пробраться за железнодорожную насыпь</text>
 	</string>
 	<string id="find_railroad_passage_1">
-		<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ РїСЂРѕРІРѕР¶Р°С‚С‹Рј</text>
+		<text>Встретиться с провожатым</text>
 	</string>
 	<string id="find_railroad_passage_2">
-		<text>РџРµСЂРµСЃРµС‡СЊ Р¶РµР»РµР·РЅРѕРґРѕСЂРѕР¶РЅСѓСЋ РЅР°СЃС‹РїСЊ</text>
+		<text>Пересечь железнодорожную насыпь</text>
 	</string>
 	<string id="find_railroad_passage_text">
-		<text>РџСЂРµР¶РґРµ С‡РµРј СѓРіР»СѓР±РёС‚СЊСЃСЏ РІ Р—РѕРЅСѓ, РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµСЃРµС‡СЊ СЃС‚Р°СЂСѓСЋ Р¶РµР»РµР·РЅРѕРґРѕСЂРѕР¶РЅСѓСЋ РЅР°СЃС‹РїСЊ. Р•РґРёРЅСЃС‚РІРµРЅРЅС‹Р№ Р±РµР·РѕРїР°СЃРЅС‹Р№ РїСЂРѕС…РѕРґ РІ РЅРµР№ РѕС…СЂР°РЅСЏРµС‚СЃСЏ РІРѕРµРЅРЅС‹Рј. РћРґРЅР°РєРѕ РµСЃС‚СЊ РЅРµР±РѕР»СЊС€РѕР№ С‚СѓРЅРЅРµР»СЊ СЃР»РµРІР°, РЅРѕРІРёС‡РєРё РѕР±С‹С‡РЅРѕ С…РѕРґСЏС‚ С‡РµСЂРµР· РЅРµРіРѕ. РўР°Рј С‚РµР±СЏ Р±СѓРґРµС‚ Р¶РґР°С‚СЊ РѕРґРёРЅ РёР· РјРѕРёС… РґРѕР»Р¶РЅРёРєРѕРІ.</text>
+		<text>Прежде чем углубиться в Зону, необходимо пересечь старую железнодорожную насыпь. Единственный безопасный проход в ней охраняется военным. Однако есть небольшой туннель слева, новички обычно ходят через него. Там тебя будет ждать один из моих должников.</text>
 	</string>
+

@@ -1,45 +1,45 @@
-<?xml version="1.0" encoding="windows-1251" ?>
+<?xml version='1.0' encoding="utf-8"?>
 <string_table>
-    <string id="gar_dolg_bribe_1">
-        <text>Мне нужно пройти на завод &amp;amp;amp;quot;Росток&amp;amp;amp;quot; к бару сталкеров.</text>
-    </string>
-    <string id="gar_dolg_bribe_11">
-        <text>К бару не пропустим - новичкам там нечего делать. Хотя… Трудно сейчас, денег нет, дома жена, дети сопливые, кушать хотят. В общем, при улучшении моего материального положения рублей так на 50 я мог бы отвернуться на 5 минут от охраняемого прохода на &amp;amp;amp;quot;Росток&amp;amp;amp;quot;.\n*** До получения документов в НИИ Агропром ***</text>
-    </string>
-    <string id="gar_dolg_bribe_111">
-        <text>Согласен. Держи.\n***Снимается со счета 50 рублей***</text>
-    </string>
-    <string id="gar_dolg_bribe_1111">
-        <text>Вот это другое дело. Пропустите его, ребята. Это мой знакомый, его ждут в баре.</text>
-    </string>
-    <string id="gar_dolg_bribe_11111">
-        <text>Пока. Удачи.</text>
-    </string>
-    <string id="gar_dolg_bribe_112">
-        <text>Нет у меня с собой столько денег.</text>
-    </string>
-    <string id="gar_dolg_bribe_1121">
-        <text>Жадный какой... Тогда не пустим.</text>
-    </string>
-    <string id="gar_dolg_bribe_11211">
-        <text>Ну, не особо я и огорчился. Пока.</text>
-    </string>
-    <string id="gar_dolg_bribe_12">
-        <text>Ага, привет. Нам про тебя Бармен говорил. Можешь проходить.\n*** После получения документов в НИИ Агропром ***</text>
-    </string>
-    <string id="gar_dolg_bribe_121">
-        <text>Спасибо, ребята. Бармену привет.</text>
-    </string>
-    <string id="lala1">
-        <text>test1</text>
-    </string>
-    <string id="optional_dialog_test_0">
-        <text>Я с тобой грю?</text>
-    </string>
-    <string id="optional_dialog_test_1">
-        <text>Са мной чиста.</text>
-    </string>
-    <string id="optional_dialog_test_11">
-        <text>Надо же.</text>
-    </string>
+	<string id="gar_dolg_bribe_1">
+		<text>РњРЅРµ РЅСѓР¶РЅРѕ РїСЂРѕР№С‚Рё РЅР° Р·Р°РІРѕРґ &amp;amp;amp;quot;Р РѕСЃС‚РѕРє&amp;amp;amp;quot; Рє Р±Р°СЂСѓ СЃС‚Р°Р»РєРµСЂРѕРІ.</text>
+	</string>
+	<string id="gar_dolg_bribe_11">
+		<text>Рљ Р±Р°СЂСѓ РЅРµ РїСЂРѕРїСѓСЃС‚РёРј - РЅРѕРІРёС‡РєР°Рј С‚Р°Рј РЅРµС‡РµРіРѕ РґРµР»Р°С‚СЊ. РҐРѕС‚СЏвЂ¦ РўСЂСѓРґРЅРѕ СЃРµР№С‡Р°СЃ, РґРµРЅРµРі РЅРµС‚, РґРѕРјР° Р¶РµРЅР°, РґРµС‚Рё СЃРѕРїР»РёРІС‹Рµ, РєСѓС€Р°С‚СЊ С…РѕС‚СЏС‚. Р’ РѕР±С‰РµРј, РїСЂРё СѓР»СѓС‡С€РµРЅРёРё РјРѕРµРіРѕ РјР°С‚РµСЂРёР°Р»СЊРЅРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ СЂСѓР±Р»РµР№ С‚Р°Рє РЅР° 50 СЏ РјРѕРі Р±С‹ РѕС‚РІРµСЂРЅСѓС‚СЊСЃСЏ РЅР° 5 РјРёРЅСѓС‚ РѕС‚ РѕС…СЂР°РЅСЏРµРјРѕРіРѕ РїСЂРѕС…РѕРґР° РЅР° &amp;amp;amp;quot;Р РѕСЃС‚РѕРє&amp;amp;amp;quot;.\n*** Р”Рѕ РїРѕР»СѓС‡РµРЅРёСЏ РґРѕРєСѓРјРµРЅС‚РѕРІ РІ РќРР РђРіСЂРѕРїСЂРѕРј ***</text>
+	</string>
+	<string id="gar_dolg_bribe_111">
+		<text>РЎРѕРіР»Р°СЃРµРЅ. Р”РµСЂР¶Рё.\n***РЎРЅРёРјР°РµС‚СЃСЏ СЃРѕ СЃС‡РµС‚Р° 50 СЂСѓР±Р»РµР№***</text>
+	</string>
+	<string id="gar_dolg_bribe_1111">
+		<text>Р’РѕС‚ СЌС‚Рѕ РґСЂСѓРіРѕРµ РґРµР»Рѕ. РџСЂРѕРїСѓСЃС‚РёС‚Рµ РµРіРѕ, СЂРµР±СЏС‚Р°. Р­С‚Рѕ РјРѕР№ Р·РЅР°РєРѕРјС‹Р№, РµРіРѕ Р¶РґСѓС‚ РІ Р±Р°СЂРµ.</text>
+	</string>
+	<string id="gar_dolg_bribe_11111">
+		<text>РџРѕРєР°. РЈРґР°С‡Рё.</text>
+	</string>
+	<string id="gar_dolg_bribe_112">
+		<text>РќРµС‚ Сѓ РјРµРЅСЏ СЃ СЃРѕР±РѕР№ СЃС‚РѕР»СЊРєРѕ РґРµРЅРµРі.</text>
+	</string>
+	<string id="gar_dolg_bribe_1121">
+		<text>Р–Р°РґРЅС‹Р№ РєР°РєРѕР№... РўРѕРіРґР° РЅРµ РїСѓСЃС‚РёРј.</text>
+	</string>
+	<string id="gar_dolg_bribe_11211">
+		<text>РќСѓ, РЅРµ РѕСЃРѕР±Рѕ СЏ Рё РѕРіРѕСЂС‡РёР»СЃСЏ. РџРѕРєР°.</text>
+	</string>
+	<string id="gar_dolg_bribe_12">
+		<text>РђРіР°, РїСЂРёРІРµС‚. РќР°Рј РїСЂРѕ С‚РµР±СЏ Р‘Р°СЂРјРµРЅ РіРѕРІРѕСЂРёР». РњРѕР¶РµС€СЊ РїСЂРѕС…РѕРґРёС‚СЊ.\n*** РџРѕСЃР»Рµ РїРѕР»СѓС‡РµРЅРёСЏ РґРѕРєСѓРјРµРЅС‚РѕРІ РІ РќРР РђРіСЂРѕРїСЂРѕРј ***</text>
+	</string>
+	<string id="gar_dolg_bribe_121">
+		<text>РЎРїР°СЃРёР±Рѕ, СЂРµР±СЏС‚Р°. Р‘Р°СЂРјРµРЅСѓ РїСЂРёРІРµС‚.</text>
+	</string>
+	<string id="lala1">
+		<text>test1</text>
+	</string>
+	<string id="optional_dialog_test_0">
+		<text>РЇ СЃ С‚РѕР±РѕР№ РіСЂСЋ?</text>
+	</string>
+	<string id="optional_dialog_test_1">
+		<text>РЎР° РјРЅРѕР№ С‡РёСЃС‚Р°.</text>
+	</string>
+	<string id="optional_dialog_test_11">
+		<text>РќР°РґРѕ Р¶Рµ.</text>
+	</string>
 </string_table>

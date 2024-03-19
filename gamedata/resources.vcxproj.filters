@@ -106,9 +106,6 @@
     <Filter Include="config\ui\item_infos">
       <UniqueIdentifier>{7acae965-0b63-4bca-973f-9e958f0b540c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="config\ui\character_desc">
-      <UniqueIdentifier>{d6fdaf5c-3e7a-402d-8a81-70f60bd3fbf1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="config\ui\mp">
       <UniqueIdentifier>{df2442a0-dffe-43ed-91d4-6477f42e1e69}</UniqueIdentifier>
     </Filter>
@@ -168,21 +165,6 @@
     </Filter>
     <Filter Include="config\scripts\sarcofag">
       <UniqueIdentifier>{d433b56d-a159-41e3-972a-8ea2ab7d7bf9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="config\models">
-      <UniqueIdentifier>{6ebffa1d-bd37-4f8c-939c-b75ad8530bb2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="config\models\objects">
-      <UniqueIdentifier>{76af02ba-977d-481c-a2fe-790532ce251f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="config\models\vehicles">
-      <UniqueIdentifier>{17260fc0-824d-4f0e-9fb2-d813144c0da1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="config\models\weapons">
-      <UniqueIdentifier>{8b05d498-9267-4e9f-9132-ce565d1eea4f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="config\models\capture">
-      <UniqueIdentifier>{9ba55459-7d0f-4f34-8ad4-0b510cff4753}</UniqueIdentifier>
     </Filter>
     <Filter Include="scripts">
       <UniqueIdentifier>{abffa33d-de8c-413e-92db-ee510c049ec0}</UniqueIdentifier>
@@ -396,6 +378,30 @@
     </Filter>
     <Filter Include="config\misc\gulags\military">
       <UniqueIdentifier>{ef057ffa-92e1-4632-9c4d-34fe6c90b40b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\ui\character_info">
+      <UniqueIdentifier>{d6fdaf5c-3e7a-402d-8a81-70f60bd3fbf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\gameplay\encyclopedia">
+      <UniqueIdentifier>{8b2aad02-25fd-46bb-adf5-81b3a046c40e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\gameplay\encyclopedia\storyline">
+      <UniqueIdentifier>{9c6c6513-dd78-4554-839a-b8549d50a27e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\misc\models">
+      <UniqueIdentifier>{6ebffa1d-bd37-4f8c-939c-b75ad8530bb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\misc\models\objects">
+      <UniqueIdentifier>{76af02ba-977d-481c-a2fe-790532ce251f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\misc\models\vehicles">
+      <UniqueIdentifier>{17260fc0-824d-4f0e-9fb2-d813144c0da1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\misc\models\weapons">
+      <UniqueIdentifier>{8b05d498-9267-4e9f-9132-ce565d1eea4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\misc\models\capture">
+      <UniqueIdentifier>{9ba55459-7d0f-4f34-8ad4-0b510cff4753}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1468,178 +1474,178 @@
       <Filter>config\prefetch</Filter>
     </None>
     <None Include="Config\models\objects\aes_zabor.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="Config\models\objects\artefact_monolit.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="Config\models\objects\box_lab_02.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="Config\models\objects\box_wood_01.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="config\models\objects\door_locker.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="Config\models\objects\light_night.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="config\models\objects\military_wall_brick_in.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="Config\models\objects\monolith_generator.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="Config\models\objects\sarcofag_hologram.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="Config\models\objects\wood_board_br_03.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="Config\models\objects\wood_fence.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="Config\models\vehicles\niva_engine.ltx">
-      <Filter>config\models\vehicles</Filter>
+      <Filter>config\misc\models\vehicles</Filter>
     </None>
     <None Include="Config\models\vehicles\veh_btr_script_u_01.ltx">
-      <Filter>config\models\vehicles</Filter>
+      <Filter>config\misc\models\vehicles</Filter>
     </None>
     <None Include="Config\models\vehicles\veh_btr_u_01.ltx">
-      <Filter>config\models\vehicles</Filter>
+      <Filter>config\misc\models\vehicles</Filter>
     </None>
     <None Include="config\models\vehicles\veh_kamaz_u_01.ltx">
-      <Filter>config\models\vehicles</Filter>
+      <Filter>config\misc\models\vehicles</Filter>
     </None>
     <None Include="config\models\vehicles\veh_mi24_u_01.ltx">
-      <Filter>config\models\vehicles</Filter>
+      <Filter>config\misc\models\vehicles</Filter>
     </None>
     <None Include="config\models\vehicles\veh_niva_u_01.ltx">
-      <Filter>config\models\vehicles</Filter>
+      <Filter>config\misc\models\vehicles</Filter>
     </None>
     <None Include="config\models\vehicles\veh_tr13_u_01.ltx">
-      <Filter>config\models\vehicles</Filter>
+      <Filter>config\misc\models\vehicles</Filter>
     </None>
     <None Include="config\models\vehicles\veh_uaz_u_01.ltx">
-      <Filter>config\models\vehicles</Filter>
+      <Filter>config\misc\models\vehicles</Filter>
     </None>
     <None Include="Config\models\vehicles\veh_zaz_u_01.ltx">
-      <Filter>config\models\vehicles</Filter>
+      <Filter>config\misc\models\vehicles</Filter>
     </None>
     <None Include="Config\models\vehicles\veh_zaz_u_01_part0.ltx">
-      <Filter>config\models\vehicles</Filter>
+      <Filter>config\misc\models\vehicles</Filter>
     </None>
     <None Include="config\models\weapons\mounted_wpn_pkm.ltx">
-      <Filter>config\models\weapons</Filter>
+      <Filter>config\misc\models\weapons</Filter>
     </None>
     <None Include="Config\models\capture\armor_helmet_damage_med.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\burer_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\c_dog.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\cat_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\chimera_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\dog_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\exo_helmet_damage_med.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\flesh_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\gilet_antigas_damage_low.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\gilet_antigas_damage_med.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\gilet_mask_damage_low.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\gilet_mask_damage_no.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\izlom_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\kombez_antigas_damage_low.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\kombez_antigas_damage_med.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\kombez_helmet_damage_low.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\kombez_helmet_damage_med.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\kombez_kupol_damage_high.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\kombez_kupol_damage_med.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\kombez_mask_damage_low.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\kombez_mask_damage_no.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\kontroler_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\krovosos_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\kurtka_antigas_damage_low.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\kurtka_kupol_damage_high.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\kurtka_mask_damage_no.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\mutant_boar_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\plasch_mask_damage_no.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\poltergeist_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\pseudodog_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\psevdogigant_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\snork_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\stalker_hero_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\tushkano_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\zombi_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="Config\models\capture\zombied_damage_med.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="scripts\ui_base_dialog.script">
       <Filter>scripts\UI</Filter>
@@ -3214,16 +3220,16 @@
       <Filter>config\misc</Filter>
     </None>
     <None Include="config\models\objects\box_metall_01.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="config\models\objects\wood_board_br_01.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="config\models\objects\wood_board_br_02.ltx">
-      <Filter>config\models\objects</Filter>
+      <Filter>config\misc\models\objects</Filter>
     </None>
     <None Include="config\models\niva_engine.ltx">
-      <Filter>config\models</Filter>
+      <Filter>config\misc\models</Filter>
     </None>
     <None Include="config\mp\lzo-dict.bin">
       <Filter>config\mp</Filter>
@@ -3411,25 +3417,13 @@
     <None Include="config\weathers\weather_stancia.ltx">
       <Filter>config\weathers</Filter>
     </None>
-    <None Include="config\_prefetch.ltx">
-      <Filter>config</Filter>
-    </None>
     <None Include="config\default_controls.ltx">
       <Filter>config</Filter>
     </None>
     <None Include="config\extracontent.ltx">
       <Filter>config</Filter>
     </None>
-    <None Include="config\fonts.ltx~">
-      <Filter>config</Filter>
-    </None>
     <None Include="config\localization.ltx">
-      <Filter>config</Filter>
-    </None>
-    <None Include="config\prefetch.ltx">
-      <Filter>config</Filter>
-    </None>
-    <None Include="config\rspec_maximum.ltx">
       <Filter>config</Filter>
     </None>
     <None Include="scripts\.script">
@@ -4724,9 +4718,6 @@
     <None Include="config\creatures\aem_stalkers.ltx">
       <Filter>config\creatures</Filter>
     </None>
-    <None Include="config\creatures\vssver.scc">
-      <Filter>config\creatures</Filter>
-    </None>
     <None Include="config\misc\aem_manager.ltx">
       <Filter>config\misc</Filter>
     </None>
@@ -4743,10 +4734,10 @@
       <Filter>config\misc</Filter>
     </None>
     <None Include="config\models\capture\fix_captures.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\models\capture\mk1_fixx.ltx">
-      <Filter>config\models\capture</Filter>
+      <Filter>config\misc\models\capture</Filter>
     </None>
     <None Include="config\mp\weapons_mp\w_knife_mp.ltx">
       <Filter>config\mp\weapons_mp</Filter>
@@ -5194,108 +5185,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="config\gameplay\character_criticals_1.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_criticals_2.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_criticals_3.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_criticals_4.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_criticals_5.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_criticals_6.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\character_drugs.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\character_food.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\character_items.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\encyclopedia_equipment.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\encyclopedia_infos.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\encyclopedia_mutants.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\encyclopedia_social.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\encyclopedia_tutorial.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\encyclopedia_vehicles.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\encyclopedia_weapons.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\encyclopedia_zone.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\npc_profile.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\stories.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\storyline_info_aes.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_agroprom.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_bar.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_darkvalley.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_deadcity.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_escape.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_garbage.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_military.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_pripyat.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_radar.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_sarcofag.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_taskmanager.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_to_diary.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_yantar.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\character_dialogs.xml">
-      <Filter>config\gameplay\dialogs</Filter>
-    </Xml>
     <Xml Include="Config\gameplay\dialogs.xml">
       <Filter>config\gameplay\dialogs</Filter>
     </Xml>
@@ -5389,9 +5278,6 @@
     <Xml Include="Config\gameplay\info_l03agroprom.xml">
       <Filter>config\gameplay\infoportions</Filter>
     </Xml>
-    <Xml Include="Config\gameplay\info_l04agroprom_u.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
     <Xml Include="Config\gameplay\info_l05dark_valley.xml">
       <Filter>config\gameplay\infoportions</Filter>
     </Xml>
@@ -5404,16 +5290,7 @@
     <Xml Include="Config\gameplay\info_l08deadcity.xml">
       <Filter>config\gameplay\infoportions</Filter>
     </Xml>
-    <Xml Include="Config\gameplay\info_l08rostok_bar.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
     <Xml Include="Config\gameplay\info_l08yantar.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\info_l09marshes.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\info_l09rostok_dolg.xml">
       <Filter>config\gameplay\infoportions</Filter>
     </Xml>
     <Xml Include="Config\gameplay\info_l10military.xml">
@@ -5425,40 +5302,13 @@
     <Xml Include="Config\gameplay\info_l11pripyat.xml">
       <Filter>config\gameplay\infoportions</Filter>
     </Xml>
-    <Xml Include="Config\gameplay\info_l11yantar.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
     <Xml Include="Config\gameplay\info_l12u_sarcofag.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\info_l12yantar_u.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\info_l13deadcity.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\info_l14swamp.xml">
       <Filter>config\gameplay\infoportions</Filter>
     </Xml>
     <Xml Include="Config\gameplay\info_l16radar_antena.xml">
       <Filter>config\gameplay\infoportions</Filter>
     </Xml>
-    <Xml Include="Config\gameplay\info_l17monolith_control.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\info_l18pripyat.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
     <Xml Include="Config\gameplay\info_l19stanciya.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\info_l20sarcofag.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\info_l21generators.xml">
-      <Filter>config\gameplay\infoportions</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\info_l22warlab.xml">
       <Filter>config\gameplay\infoportions</Filter>
     </Xml>
     <Xml Include="Config\gameplay\info_lchanger_ico.xml">
@@ -5480,9 +5330,6 @@
       <Filter>config\gameplay\infoportions</Filter>
     </Xml>
     <Xml Include="Config\gameplay\character_desc_aes.xml">
-      <Filter>config\gameplay\profiles</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_desc_aes2.xml">
       <Filter>config\gameplay\profiles</Filter>
     </Xml>
     <Xml Include="Config\gameplay\character_desc_agroprom.xml">
@@ -6316,29 +6163,23 @@
     <Xml Include="Config\ui\trade_item_16.xml">
       <Filter>config\ui\item_infos</Filter>
     </Xml>
-    <Xml Include="Config\ui\follower_character.xml">
-      <Filter>config\ui\character_desc</Filter>
-    </Xml>
-    <Xml Include="Config\ui\inventory_character.xml">
-      <Filter>config\ui\character_desc</Filter>
-    </Xml>
     <Xml Include="Config\ui\pda_dialog_character.xml">
-      <Filter>config\ui\character_desc</Filter>
+      <Filter>config\ui\character_info</Filter>
     </Xml>
     <Xml Include="Config\ui\pda_dialog_character_16.xml">
-      <Filter>config\ui\character_desc</Filter>
+      <Filter>config\ui\character_info</Filter>
     </Xml>
     <Xml Include="Config\ui\stalkers_ranking_character.xml">
-      <Filter>config\ui\character_desc</Filter>
+      <Filter>config\ui\character_info</Filter>
     </Xml>
     <Xml Include="Config\ui\stalkers_ranking_character_16.xml">
-      <Filter>config\ui\character_desc</Filter>
+      <Filter>config\ui\character_info</Filter>
     </Xml>
     <Xml Include="Config\ui\trade_character.xml">
-      <Filter>config\ui\character_desc</Filter>
+      <Filter>config\ui\character_info</Filter>
     </Xml>
     <Xml Include="Config\ui\trade_character_16.xml">
-      <Filter>config\ui\character_desc</Filter>
+      <Filter>config\ui\character_info</Filter>
     </Xml>
     <Xml Include="Config\ui\inventoryMP.xml">
       <Filter>config\ui\mp</Filter>
@@ -6465,78 +6306,6 @@
     </Xml>
     <Xml Include="Config\ui\scroll_bar.xml">
       <Filter>config\ui\controls</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_desc_bandit.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_desc_dar.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_desc_dolg.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_desc_ecolog.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_desc_killer.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_desc_monolit.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_desc_soldier.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_desc_stalker.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_desc_svoboda.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\character_desc_zombied.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\dialogs old.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\dialogs_escape_1.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\dialogs_escape_1_string.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\encyclopedia_new.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\info_escape.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\info_l04darkdolina.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\info_l05rostok.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\info_l06yantar.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\info_l07military.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\info_l12stanciya.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\info_l13generators.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\info_l15radar.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\info_news.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\test.xml">
-      <Filter>config\gameplay</Filter>
     </Xml>
     <Xml Include="config\text\eng\dialogs_escape_1_string.xml">
       <Filter>config\text\eng</Filter>
@@ -6700,27 +6469,6 @@
     <Xml Include="config\ui\ui_mm_mp_gs_ext_16.xml">
       <Filter>config\ui</Filter>
     </Xml>
-    <Xml Include="config\character_desc_general.xml">
-      <Filter>config</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\aem_characters.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\aem_info.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\aem_profile.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\dialogs_repair.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\info_ogsm.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
-    <Xml Include="config\gameplay\tasks_pripyat.xml">
-      <Filter>config\gameplay</Filter>
-    </Xml>
     <Xml Include="config\text\rus\aem_strings.xml">
       <Filter>config\text\rus</Filter>
     </Xml>
@@ -6753,6 +6501,117 @@
     </Xml>
     <Xml Include="config\ui\aem_ui_npc.xml">
       <Filter>config\ui\textures_desc</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\info_aem.xml">
+      <Filter>config\gameplay\infoportions</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\dialogs_repair.xml">
+      <Filter>config\gameplay\dialogs</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\character_dialogs.xml">
+      <Filter>config\gameplay\profiles</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\character_desc_aem.xml">
+      <Filter>config\gameplay\profiles</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\character_criticals_1.xml">
+      <Filter>config\gameplay\profiles</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\character_criticals_2.xml">
+      <Filter>config\gameplay\profiles</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\character_criticals_3.xml">
+      <Filter>config\gameplay\profiles</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\character_criticals_4.xml">
+      <Filter>config\gameplay\profiles</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\character_criticals_5.xml">
+      <Filter>config\gameplay\profiles</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\character_criticals_6.xml">
+      <Filter>config\gameplay\profiles</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\character_drugs.xml">
+      <Filter>config\gameplay\profiles</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\character_food.xml">
+      <Filter>config\gameplay\profiles</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\character_items.xml">
+      <Filter>config\gameplay\profiles</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\npc_profile.xml">
+      <Filter>config\gameplay\profiles</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\tasks_pripyat.xml">
+      <Filter>config\gameplay\tasks</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\encyclopedia_infos.xml">
+      <Filter>config\gameplay\encyclopedia</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_to_diary.xml">
+      <Filter>config\gameplay\encyclopedia</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\encyclopedia_weapons.xml">
+      <Filter>config\gameplay\encyclopedia</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\encyclopedia_mutants.xml">
+      <Filter>config\gameplay\encyclopedia</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\encyclopedia_zone.xml">
+      <Filter>config\gameplay\encyclopedia</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\encyclopedia_social.xml">
+      <Filter>config\gameplay\encyclopedia</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\encyclopedia_equipment.xml">
+      <Filter>config\gameplay\encyclopedia</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\encyclopedia_tutorial.xml">
+      <Filter>config\gameplay\encyclopedia</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_escape.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_garbage.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_agroprom.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_bar.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_darkvalley.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_deadcity.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_military.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_radar.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\storyline_info_aes.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_pripyat.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_sarcofag.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_yantar.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_taskmanager.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\stories.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
     </Xml>
   </ItemGroup>
   <ItemGroup>

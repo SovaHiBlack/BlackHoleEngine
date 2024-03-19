@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding="windows-1251"?>
 
 <xml>
-<!---------------------------MONOLIT REGULAR with RPG----------------------->
+<!-- MONOLIT REGULAR with RPG -->
 	<specific_character id="aes_Monolit_rpg" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_mask</icon>
@@ -28,8 +28,8 @@
 			ammo_9x19_fmj \n
 			wpn_rpg7 \n
 			ammo_og-7b = 1 \n
-#include "gameplay\character_items.xml"\n
-#include "gameplay\character_food.xml" \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -40,7 +40,7 @@
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-<!---------------------------MONOLIT SPECNAZ---------------------->
+<!-- MONOLIT SPECNAZ -->
   <specific_character id="aes_Monolit_specnaz" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_mo_hood_9</icon>
@@ -63,8 +63,8 @@
       [spawn] \n
       wpn_sig550 = 1 \n
       ammo_5.56x45_ap = 1 \n
-      #include "gameplay\character_items.xml"\n
-#include "gameplay\character_food.xml" \n
+      #include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
 
@@ -75,7 +75,7 @@
 #include "gameplay\character_dialogs.xml"
   </specific_character>
 
-<!---------------------------MONOLIT SPECNAZ RG6---------------------->
+<!-- MONOLIT SPECNAZ RG6 -->
   <specific_character id="aes_Monolit_specnaz_rg6" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_mo_hood_9</icon>
@@ -95,7 +95,7 @@
     <supplies>
       [spawn] \n
       wpn_colt1911 \n
-      ammo_11.43x23_hydro  = 1 \n
+      ammo_11.43x23_hydro = 1 \n
     </supplies>
     
 #include "gameplay\character_criticals_1.xml"
@@ -105,7 +105,7 @@
 #include "gameplay\character_dialogs.xml"
   </specific_character>
   
-<!---------------------------MONOLIT SNIPER---------------------->
+<!-- MONOLIT SNIPER -->
   <specific_character id="aes_Monolit_sniper" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -128,8 +128,8 @@
       [spawn] \n
       wpn_svd \n
       ammo_7.62x54_ap = 1 \n
-      #include "gameplay\character_items.xml"\n
-#include "gameplay\character_food.xml" \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
 
@@ -139,7 +139,7 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 #include "gameplay\character_dialogs.xml"
   </specific_character>
-<!---------------------------MONOLIT SNIPER GAUSS---------------------->
+<!-- MONOLIT SNIPER GAUSS -->
   <specific_character id="aes_Monolit_sniper_gauss" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_mo_mask</icon>
@@ -162,8 +162,8 @@
       [spawn] \n
       wpn_gauss \n
       ammo_gauss = 1 \n
-      #include "gameplay\character_items.xml"\n
-#include "gameplay\character_food.xml" \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
     
@@ -173,7 +173,7 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 #include "gameplay\character_dialogs.xml"
   </specific_character>
-<!---------------------------MONOLIT MASTER----------------------->
+<!-- MONOLIT MASTER -->
   <specific_character id="aes_Monolit_master" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_mo_exo</icon>
@@ -199,8 +199,8 @@
 	  ammo_11.43x23_hydro = 1 \n
       wpn_g36 \n
       ammo_5.56x45_ss190 = 1 \n
-      #include "gameplay\character_items.xml"\n
-#include "gameplay\character_food.xml" \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
 
@@ -211,8 +211,8 @@
 #include "gameplay\character_dialogs.xml"
   </specific_character>
 	
-<!---------------------------SOLDIERS PROFILES----------------------->
-<!---------------------------SOLDIER COMMANDER----------------------->
+<!-- SOLDIERS PROFILES -->
+<!-- SOLDIER COMMANDER -->
 	<specific_character id="aes_Soldier_commander" team_default = "1">
 		<name>GENERATE_NAME_captain</name>
 		<icon>ui_npc_u_soldier_beret_5</icon>
@@ -220,7 +220,8 @@
 		<bio>aes_Soldier_commander_bio</bio>
 
 		<class>aes_Soldier_commander</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>860</rank>
 		<reputation>12</reputation>
@@ -237,7 +238,7 @@
 			ammo_11.43x23_hydro = 1 \n
 			wpn_val \n
 			ammo_9x39_sp5 = 1 \n
-#include "gameplay\character_food.xml" \n
+#include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_items.xml"
 		</supplies>	
@@ -248,7 +249,7 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-<!---------------------------SOLDIER MASTER----------------------->
+<!-- SOLDIER MASTER -->
 	<specific_character id="aes_Soldier_military" team_default = "1">
 		<name>GENERATE_NAME_lieutenant</name>
 		<icon>ui_npc_u_stalker_militari_antigas_2</icon>
@@ -258,7 +259,8 @@
 		<team>Soldier_military</team>
 		
 		<class>aes_Soldier_military</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 
         <snd_config>characters_voice\human_03\military\</snd_config>
 		<crouch_type>0</crouch_type>
@@ -271,12 +273,12 @@
 		<visual>actors\militari\stalker_militari_antigas_2</visual>		
 		<supplies>
 			[spawn] \n
-			wpn_usp  \n
+			wpn_usp \n
 			ammo_11.43x23_hydro = 1 \n
 			wpn_val \n
 			ammo_9x39_sp5 = 1 \n
-#include "gameplay\character_items.xml"\n
-#include "gameplay\character_food.xml" \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
 		</supplies>		
 
@@ -286,7 +288,7 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-<!---------------------------SOLDIER SPECNAZ---------------------->
+<!-- SOLDIER SPECNAZ -->
 	<specific_character id="aes_Soldier_specnaz" team_default = "1">
 		<name>GENERATE_NAME_sergeant</name>
 		<icon>ui_npc_u_soldier_antigas</icon>
@@ -296,7 +298,8 @@
 		<team>Soldier_specnaz</team>
 		
 		<class>aes_Soldier_specnaz</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>850</rank>
 		<reputation>20</reputation>
@@ -310,11 +313,11 @@
 		<supplies>
 			[spawn] \n
 			wpn_usp \n
-			ammo_11.43x23_hydro	= 1 \n
+			ammo_11.43x23_hydro = 1 \n
 			wpn_val \n
 			ammo_9x39_sp5 = 1 \n
-#include "gameplay\character_items.xml"	\n
-#include "gameplay\character_food.xml" \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
 		</supplies>	
 		
@@ -324,7 +327,7 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-<!---------------------------SOLDIER SPECNAZ AES---------------------->
+<!-- SOLDIER SPECNAZ AES -->
 	<specific_character id="aes_Soldier_specnaz_aes" team_default = "1">
 		<name>aes_Soldier_specnaz_aes_name</name>
 		<icon>ui_npc_u_stalker_militari_antigas_2</icon>
@@ -334,7 +337,8 @@
 		<team>Soldier_specnaz</team>
 		
 		<class>aes_Soldier_specnaz_aes</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>890</rank>
 		<reputation>15</reputation>
@@ -351,8 +355,8 @@
 			ammo_11.43x23_hydro = 1 \n
 			wpn_val \n
 			ammo_9x39_sp5 = 1 \n
-#include "gameplay\character_items.xml"\n
-#include "gameplay\character_food.xml" \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
 		</supplies>		
 
@@ -361,7 +365,7 @@
 		<start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-<!---------------------------SOLDIER SNIPER---------------------->
+<!-- SOLDIER SNIPER -->
 	<specific_character id="aes_Soldier_sniper" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_stalker_militari_1</icon>
@@ -371,7 +375,8 @@
 		<team>Soldier_sniper</team>
 		
 		<class>aes_Soldier_sniper</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>660</rank>
 		<reputation>-13</reputation>
@@ -388,8 +393,8 @@
 			ammo_9x19_fmj \n
 			wpn_svu \n
 			ammo_7.62x54_ap = 1 \n
-#include "gameplay\character_items.xml"\n
-#include "gameplay\character_food.xml" \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
 		</supplies>		
 
@@ -401,7 +406,7 @@
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-<!---------------------------SOLDIER SNIPER---------------------->
+<!-- SOLDIER SNIPER -->
 	<specific_character id="aes_x" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_stalker_militari_antigas_1</icon>
@@ -411,7 +416,8 @@
 		<team>Soldier_sniper</team>
 		
 		<class>aes_x</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>900</rank>
 		<reputation>0</reputation>
@@ -427,8 +433,8 @@
 			ammo_9x19_fmj \n
 			wpn_sig550 \n
 			ammo_5.56x45_ap = 1 \n
-#include "gameplay\character_items.xml"\n
-#include "gameplay\character_food.xml" \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
 		</supplies>		
 
@@ -439,7 +445,7 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-<!---------------------------SOLDIER SNIPER---------------------->
+<!-- SOLDIER SNIPER -->
 	<specific_character id="aes_x_2" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_stalker_militari_antigas_1</icon>
@@ -449,7 +455,8 @@
 		<team>Soldier_sniper</team>
 		
 		<class>aes_x_2</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>900</rank>
 		<reputation>0</reputation>
@@ -466,8 +473,8 @@
 			ammo_9x19_fmj \n
 			wpn_sig550 \n
 			ammo_5.56x45_ap = 1 \n
-#include "gameplay\character_items.xml"\n
-#include "gameplay\character_food.xml" \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
 		</supplies>		
 
@@ -478,6 +485,4 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
-
-	
 </xml>

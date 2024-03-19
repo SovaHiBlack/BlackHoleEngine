@@ -2,7 +2,7 @@
 		<title>pri_kill_arny</title>
 		<objective>
 			<text>pri_kill_arny_0</text>
-			<icon>ui_iconsTotal_kill_stalker</icon>			
+			<icon>ui_iconsTotal_kill_stalker</icon>
 			<infoportion_complete>pri_trader_arny_task_done</infoportion_complete>
 			<infoportion_fail>pri_trader_dead</infoportion_fail>
 		</objective>
@@ -22,7 +22,7 @@
 		<title>pri_kill_freedom</title>
 		<objective>
 			<text>pri_kill_freedom_0</text>
-			<icon>ui_iconsTotal_mil_kill_lukash</icon>			
+			<icon>ui_iconsTotal_mil_kill_lukash</icon>
 			<infoportion_complete>pri_trader_freedom_task_done</infoportion_complete>
 			<infoportion_fail>pri_trader_dead</infoportion_fail>
 		</objective>
@@ -48,7 +48,7 @@
 		<title>pri_kill_dolg</title>
 		<objective>
 			<text>pri_kill_dolg_0</text>
-			<icon>ui_iconsTotal_mil_lukash_job</icon>			
+			<icon>ui_iconsTotal_mil_lukash_job</icon>
 			<infoportion_complete>pri_trader_dolg_task_done</infoportion_complete>
 			<infoportion_fail>pri_trader_dead</infoportion_fail>
 		</objective>

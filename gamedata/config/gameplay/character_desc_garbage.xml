@@ -172,7 +172,7 @@ ammo_11.43x23_hydro=2 \n
 #include "gameplay\character_dialogs.xml"	
 	</specific_character>
 	
-	<!----------------------BANDIT NOVICE----------------------->
+	<!-- BANDIT NOVICE -->
 	<specific_character id="gar_bandit_novice_default1" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_3</icon>
@@ -263,7 +263,7 @@ ammo_11.43x23_hydro=2 \n
 	</specific_character>
 	
 	
-	<!---------------------------BANDIT general----------------------->
+	<!-- BANDIT general -->
 	
 	<specific_character id="gar_bandit_general_default1" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
@@ -361,7 +361,7 @@ ammo_11.43x23_hydro=2 \n
 #include "gameplay\character_dialogs.xml"						
 	</specific_character>
 	
-	<!---------------------------Stalker general----------------------->
+	<!-- Stalker general -->
 	
 	<specific_character id="gar_stalker_general_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
@@ -566,7 +566,7 @@ ammo_9x19_fmj=2 \n
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 	
-	<!---------------------------DOLG BLOKPOST----------------------->
+	<!-- DOLG BLOKPOST -->
 	<specific_character id="gar_dolg_blokpost_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_mask_1</icon>

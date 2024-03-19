@@ -1,15 +1,11 @@
-<?xml version='1.0' encoding="UTF-8"?>
+<?xml version='1.0' encoding="utf-8"?>
 <window>
-
 	<!-- ICON -->
 	<icon_static x="0" y="0" width="124" height="108"/>
-
-
 	<!-- RANK -->
 	<rank_static x="140" y="15" width="120" height="16">
 		<text x="0" y="0" font="letterica18" r="150" g="150" b="180"/>
 	</rank_static>
-	
 	<!-- RANK CAPTION -->
 	<rank_caption x="140" y="0" width="120" height="15">
 		<text x="0" y="0" font="letterica16" r="128" g="128" b="128">ui_st_rank</text>

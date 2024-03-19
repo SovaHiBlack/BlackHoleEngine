@@ -574,10 +574,10 @@
 
 
 
-	<part_7_psy><!--¤¥« î ­®¢ë© âãâ®à¨ «-->
+	<part_7_psy><!--ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½à¨ ï¿½-->
 		<global_wnd/>
 		
-		<item><!-- á¨ -->
+		<item><!-- ï¿½ï¿½ -->
 			<length_sec>10</length_sec>
 			<pause_state>off</pause_state>
 			<guard_key/>
@@ -595,10 +595,10 @@
 		</item>
 	</part_7_psy>
 
-	<part_13_satiety><!--¤¥« î ­®¢ë© âãâ®à¨ «-->
+	<part_13_satiety><!--ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½à¨ ï¿½-->
 		<global_wnd/>
 		
-		<item><!-- ƒ®«®¤ -->
+		<item><!-- ï¿½ï¿½ï¿½ï¿½ï¿½ -->
 			<length_sec>12</length_sec>
 			<pause_state>off</pause_state>
 			<guard_key/>
@@ -616,10 +616,10 @@
 		</item>
 	</part_13_satiety>	
 
-	<part_16_disguise><!--¤¥« î ­®¢ë© âãâ®à¨ «-->
+	<part_16_disguise><!--ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½à¨ ï¿½-->
 		<global_wnd/>
 		
-		<item><!-- Œ áª¨à®¢ª  -->
+		<item><!-- ï¿½ï¿½áª¨à®¢ï¿½ï¿½ -->
 			<length_sec>15</length_sec>
 			<pause_state>off</pause_state>
 			<guard_key/>
@@ -637,10 +637,10 @@
 		</item>
 	</part_16_disguise>	
 
-	<part_17_sleep><!--¤¥« î ­®¢ë© âãâ®à¨ «-->
+	<part_17_sleep><!--ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½à¨ ï¿½-->
 		<global_wnd/>
 		
-		<item><!-- ‘®­ -->
+		<item><!-- ï¿½ï¿½ï¿½ -->
 			<length_sec>15</length_sec>
 			<pause_state>off</pause_state>
 			<guard_key/>
@@ -658,10 +658,10 @@
 		</item>
 	</part_17_sleep>
 
-	<part_19_activation><!--¤¥« î ­®¢ë© âãâ®à¨ «-->
+	<part_19_activation><!--ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½à¨ ï¿½-->
 		<global_wnd/>
 		
-		<item><!-- €ªâ¨¢ æ¨ï  àâ¥ä ªâ®¢ -->
+		<item><!-- ï¿½ï¿½â¨¢ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä ªâ®¢ -->
 			<length_sec>15</length_sec>
 			<pause_state>off</pause_state>
 			<guard_key/>

@@ -379,13 +379,13 @@
 	<specific_character id="sim_bandit_master_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_master</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_master_bio</bio>
 		
 		<team>Bandit_master</team>
 		
 		<class>sim_Bandit_master</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 
 		<snd_config>characters_voice\human_02\bandit\</snd_config>
 		
@@ -416,11 +416,11 @@
 	<specific_character id="sim_stalker_novice_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_2</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>sim_stalker_novice_bio</bio>
 
 		<class>sim_stalker_novice</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>34</rank>
 		<reputation>6</reputation>
@@ -446,11 +446,11 @@ ammo_12x70_buck \n
 	<specific_character id="sim_stalker_novice_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_2</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>sim_stalker_novice_bio</bio>
 
 		<class>sim_stalker_novice</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community> 
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>142</rank>
 		<reputation>-10</reputation>
@@ -474,11 +474,11 @@ ammo_12x70_buck \n
 	<specific_character id="sim_stalker_novice_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_3</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>sim_stalker_novice_bio</bio>
 
 		<class>sim_stalker_novice</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect> 
 		
 		<rank>65</rank>
 		<reputation>18</reputation>
@@ -503,11 +503,11 @@ ammo_12x70_buck=2 \n
 	<specific_character id="sim_stalker_novice_default4" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_3</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>sim_stalker_novice_bio</bio>
 
 		<class>sim_stalker_novice</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>112</rank>
 		<reputation>-15</reputation>
@@ -532,11 +532,11 @@ ammo_12x70_buck \n
 	<specific_character id="sim_stalker_novice_default5" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_4</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>sim_stalker_novice_bio</bio>
 
 		<class>sim_stalker_novice</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>98</rank>
 		<reputation>19</reputation>
@@ -562,11 +562,11 @@ ammo_5.45x39_fmj \n
 	<specific_character id="sim_stalker_novice_default6" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_4</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>sim_stalker_novice_bio</bio>
 
 		<class>sim_stalker_novice</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>12</rank>
 		<reputation>20</reputation>
@@ -594,11 +594,11 @@ ammo_9x19_fmj \n
 	<specific_character id="sim_stalker_novice_default7" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_5</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>sim_stalker_novice_bio</bio>
 
 		<class>sim_stalker_novice</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>135</rank>
 		<reputation>-20</reputation>
@@ -624,11 +624,11 @@ ammo_11.43x23_fmj=2 \n
 	<specific_character id="sim_stalker_novice_default8" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_5</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>sim_stalker_novice_bio</bio>
 
 		<class>sim_stalker_novice</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect> 
 		
 		<rank>78</rank>
 		<reputation>6</reputation>
@@ -656,11 +656,11 @@ ammo_12x76_dart=2 \n
 		<specific_character id="sim_stalker_general_default1" team_default = "1">
 			<name>GENERATE_NAME_stalker</name>
 			<icon>ui_npc_u_stalker_neytral_hood_uzor</icon>
-			<map_icon x="1" y="0"></map_icon>
 			<bio>sim_stalker_general_bio</bio>
 
 			<class>sim_Stalker_general</class>
-			<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+			<community>stalker</community>
+			<terrain_sect>stalker_terrain</terrain_sect>
 			
 			<rank>305</rank>
 			<reputation>35</reputation>
@@ -690,11 +690,11 @@ ammo_5.56x45_ss190 \n
 <specific_character id="sim_stalker_general_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_balon_8</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
 
 		<class>sim_Stalker_general</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>360</rank>
 		<reputation>46</reputation>
@@ -723,11 +723,11 @@ ammo_5.56x45_ss190=3 \n
 <specific_character id="sim_stalker_general_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_rukzak_2</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
 
 		<class>sim_Stalker_general</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>435</rank>
 		<reputation>63</reputation>
@@ -755,11 +755,11 @@ ammo_5.56x45_ss190 \n
 	<specific_character id="sim_stalker_general_default4" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_2</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
 
 		<class>sim_Stalker_general</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>365</rank>
 		<reputation>86</reputation>
@@ -787,11 +787,11 @@ ammo_5.56x45_ss190=3 \n
 	<specific_character id="sim_stalker_general_default5" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_8</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
 
 		<class>sim_Stalker_general</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>426</rank>
 		<reputation>42</reputation>
@@ -820,11 +820,11 @@ ammo_12x76_zhekan \n
 	<specific_character id="sim_stalker_general_default6" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_rukzak_2</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
 
 		<class>sim_Stalker_general</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>399</rank>
 		<reputation>-20</reputation>
@@ -853,11 +853,11 @@ ammo_5.45x39_fmj=2 \n
 	<specific_character id="sim_stalker_veteran_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_9</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_veteran_bio</bio>
 
 		<class>sim_Stalker_veteran</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 			
 		<rank>630</rank>
 		<reputation>55</reputation>
@@ -885,11 +885,11 @@ ammo_5.45x39_fmj=6 \n
 	<specific_character id="sim_stalker_veteran_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_rukzak_2</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_veteran_bio</bio>
 
 		<class>sim_Stalker_veteran</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 			
 		<rank>750</rank>
 		<reputation>101</reputation>
@@ -917,11 +917,11 @@ ammo_9x39_pab9=3 \n
 	<specific_character id="sim_stalker_veteran_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_nauchniy</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_veteran_bio</bio>
 
 		<class>sim_Stalker_veteran</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>698</rank>
 		<reputation>123</reputation>
@@ -949,11 +949,11 @@ ammo_9x39_pab9=4 \n
 	<specific_character id="sim_stalker_veteran_default4" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_9</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_veteran_bio</bio>
 
 		<class>sim_Stalker_veteran</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 	
 		<rank>763</rank>
 		<reputation>123</reputation>
@@ -981,11 +981,11 @@ ammo_9x18_fmj=10 \n
 	<specific_character id="sim_stalker_veteran_default5" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_8</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_veteran_bio</bio>
 
 		<class>sim_Stalker_veteran</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 			
 		<rank>623</rank>
 		<reputation>-53</reputation>
@@ -1015,11 +1015,11 @@ ammo_9x18_fmj=9 \n
 	<specific_character id="sim_stalker_master_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_exoskeleton</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_master_bio</bio>
 
 		<class>sim_stalker_master</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 				
 		<rank>920</rank>
 		<reputation>145</reputation>
@@ -1049,11 +1049,11 @@ ammo_5.56x45_ap=3 \n
 	<specific_character id="sim_stalker_master_default5" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_exoskeleton</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_master_bio</bio>
 
 		<class>sim_stalker_master</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 
 		<snd_config>characters_voice\human_03\stalker\</snd_config>
 		<crouch_type>0</crouch_type>
@@ -1083,11 +1083,11 @@ ammo_5.56x45_ap=6 \n
 	<specific_character id="sim_stalker_sniper_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_9</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_sniper_bio</bio>
 
 		<class>sim_Stalker_sniper</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 			
 		<rank>732</rank>
 		<reputation>89</reputation>
@@ -1121,11 +1121,11 @@ ammo_5.45x39_ap=3 \n
 	<specific_character id="sim_dolg_regular_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_mask</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>sim_dolg_regular_bio</bio>
 
 		<class>sim_Dolg_regular</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 		
 		<rank>360</rank>
 		<reputation>55</reputation>
@@ -1154,11 +1154,11 @@ ammo_12x70_buck \n
 	<specific_character id="sim_dolg_regular_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_balon_8</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>sim_dolg_regular_bio</bio>
 
 		<class>sim_Dolg_regular</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 		
 		<rank>420</rank>
 		<reputation>65</reputation>
@@ -1186,11 +1186,11 @@ ammo_9x18_pmm=9 \n
 	<specific_character id="sim_dolg_regular_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_mask_1</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>sim_dolg_regular_bio</bio>
 		
 		<class>sim_Dolg_regular</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 		
 		<rank>389</rank>
 		<reputation>73</reputation>
@@ -1219,11 +1219,11 @@ ammo_9x18_pmm=12 \n
 	<specific_character id="sim_dolg_veteran_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_nauchniy</icon>
-		<map_icon x="4" y="0"></map_icon>
-		<bio>sim_dolg_veteran_bio</bio>
+	<bio>sim_dolg_veteran_bio</bio>
 
 		<class>sim_Dolg_specnaz</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 
 		<rank>630</rank>
 		<reputation>89</reputation>
@@ -1250,11 +1250,11 @@ ammo_7.62x54_ap \n
 	<specific_character id="sim_dolg_veteran_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_antigas</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>sim_dolg_veteran_bio</bio>
 
 		<class>sim_Dolg_specnaz</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 
 		<rank>750</rank>
 		<reputation>96</reputation>
@@ -1280,11 +1280,11 @@ ammo_7.62x54_ap \n
 	<specific_character id="sim_dolg_veteran_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_nauchniy</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>sim_dolg_veteran_bio</bio>
 
 		<class>sim_Dolg_specnaz</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 
 		<rank>688</rank>
 		<reputation>114</reputation>
@@ -1313,11 +1313,11 @@ ammo_12x70_buck=6 \n
 	<specific_character id="sim_dolg_veteran_default4" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_antigas</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>sim_dolg_veteran_bio</bio>
 
 		<class>sim_Dolg_specnaz</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 
 		<rank>796</rank>
 		<reputation>124</reputation>
@@ -1346,11 +1346,11 @@ ammo_12x70_buck=6 \n
 	<specific_character id="sim_dolg_master_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_exoskeleton</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>sim_dolg_master_bio</bio>
 
 		<class>sim_dolg_master</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 		
 		<rank>923</rank>
 		<reputation>136</reputation>
@@ -1377,11 +1377,11 @@ ammo_7.62x54_ap \n
 	<specific_character id="sim_dolg_master_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_nauchniy</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>sim_dolg_master_bio</bio>
 		
 		<class>sim_dolg_master</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 		
 		<rank>901</rank>
 		<reputation>143</reputation>
@@ -1410,11 +1410,11 @@ ammo_9x19_pbp=120 \n
 	<specific_character id="sim_dolg_sniper_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_balon_8</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>sim_dolg_sniper_bio</bio>
 
 		<class>sim_Dolg_sniper</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 		
 		<rank>550</rank>
 		<reputation>64</reputation>
@@ -1442,11 +1442,11 @@ ammo_12x76_zhekan=2 \n
 	<specific_character id="sim_dolg_sniper_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_mask_1</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>sim_dolg_sniper_bio</bio>
 
 		<class>sim_Dolg_sniper</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 	
 		<rank>640</rank>
 		<reputation>87</reputation>
@@ -1474,11 +1474,11 @@ ammo_12x76_zhekan \n
 	<specific_character id="sim_dolg_sniper_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_mask</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>sim_dolg_sniper_bio</bio>
 
 		<class>sim_Dolg_sniper</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 	
 		<rank>610</rank>
 		<reputation>74</reputation>
@@ -1510,7 +1510,6 @@ ammo_12x76_zhekan \n
 	<specific_character id="sim_Svoboda_regular" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_sv_rukzak_1_1</icon>
-		<map_icon x="5" y="0"></map_icon>
 		<bio>sim_Svoboda_regular_bio</bio>
 
 		<team>Svoboda_regular</team>
@@ -1518,7 +1517,8 @@ ammo_12x76_zhekan \n
         <snd_config>characters_voice\human_01\freedom\</snd_config>
 		
 		<class>sim_Svoboda_regular</class>
-		<community>freedom</community> <terrain_sect>stalker_freedom_terrain</terrain_sect>
+		<community>freedom</community>
+		<terrain_sect>stalker_freedom_terrain</terrain_sect>
 		
 		<rank>321</rank>
 		<reputation>73</reputation>
@@ -1546,7 +1546,6 @@ ammo_5.45x39_ap=3 \n
 	<specific_character id="sim_Svoboda_specnaz" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_sv_hood_9</icon>
-		<map_icon x="5" y="0"></map_icon>
 		<bio>sim_Svoboda_specnaz_bio</bio>
 
 		<team>Svoboda_specnaz</team>
@@ -1554,7 +1553,8 @@ ammo_5.45x39_ap=3 \n
         <snd_config>characters_voice\human_03\freedom\</snd_config>
 		
 		<class>sim_Svoboda_specnaz</class>
-		<community>freedom</community> <terrain_sect>stalker_freedom_terrain</terrain_sect>
+		<community>freedom</community>
+		<terrain_sect>stalker_freedom_terrain</terrain_sect>
 
 		<rank>657</rank>
 		<reputation>113</reputation>
@@ -1582,13 +1582,13 @@ ammo_12x70_buck \n
 	<specific_character id="sim_Svoboda_master" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_sv_exoskeleton</icon>
-		<map_icon x="5" y="0"></map_icon>
 		<bio>sim_Svoboda_master_bio</bio>
 
 		<team>Svoboda_master</team>
 		
 		<class>sim_Svoboda_master</class>
-		<community>freedom</community> <terrain_sect>stalker_freedom_terrain</terrain_sect>
+		<community>freedom</community>
+		<terrain_sect>stalker_freedom_terrain</terrain_sect>
 
         <snd_config>characters_voice\human_03\freedom\</snd_config>
 		
@@ -1618,7 +1618,6 @@ ammo_12x70_buck=2 \n
 	<specific_character id="sim_Svoboda_sniper" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_sv_rukzak_3_1</icon>
-		<map_icon x="5" y="0"></map_icon>
 		<bio>sim_Svoboda_sniper_bio</bio>
 
 		<team>Svoboda_sniper</team>
@@ -1626,7 +1625,8 @@ ammo_12x70_buck=2 \n
         <snd_config>characters_voice\human_02\freedom\</snd_config>
 		<crouch_type>-1</crouch_type>
 		<class>sim_Svoboda_sniper</class>
-		<community>freedom</community> <terrain_sect>stalker_freedom_terrain</terrain_sect>
+		<community>freedom</community>
+		<terrain_sect>stalker_freedom_terrain</terrain_sect>
 
 		<rank>746</rank>
 		<reputation>125</reputation>
@@ -1656,11 +1656,11 @@ ammo_12x70_buck \n
 	<specific_character id="sim_killer_general1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ki_head_1</icon>
-		<map_icon x="2" y="0"></map_icon>
 		<bio>sim_killer_general_bio</bio>
 
 		<class>sim_killer_general</class>
-		<community>killer</community> <terrain_sect>stalker_killer_terrain</terrain_sect>
+		<community>killer</community>
+		<terrain_sect>stalker_killer_terrain</terrain_sect>
 
 		<rank>321</rank>
 		<reputation>-63</reputation>
@@ -1686,11 +1686,11 @@ ammo_12x70_buck \n
 	<specific_character id="sim_killer_general2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ki_mask</icon>
-		<map_icon x="2" y="0"></map_icon>
 		<bio>sim_killer_general_bio</bio>
 
 		<class>sim_killer_general</class>
-		<community>killer</community> <terrain_sect>stalker_killer_terrain</terrain_sect>
+		<community>killer</community>
+		<terrain_sect>stalker_killer_terrain</terrain_sect>
 
 		<rank>369</rank>
 		<reputation>-76</reputation>
@@ -1717,11 +1717,11 @@ ammo_12x70_buck \n
 	<specific_character id="sim_killer_veteran1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ki_head_1</icon>
-		<map_icon x="2" y="0"></map_icon>
 		<bio>sim_killer_veteran_bio</bio>
 
 		<class>sim_killer_veteran</class>
-		<community>killer</community> <terrain_sect>stalker_killer_terrain</terrain_sect>
+		<community>killer</community>
+		<terrain_sect>stalker_killer_terrain</terrain_sect>
 
 		<rank>650</rank>
 		<reputation>-95</reputation>
@@ -1747,11 +1747,11 @@ ammo_12x70_buck \n
 	<specific_character id="sim_killer_veteran2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ki_mask</icon>
-		<map_icon x="2" y="0"></map_icon>
 		<bio>sim_killer_veteran_bio</bio>
 
 		<class>sim_killer_veteran</class>
-		<community>killer</community> <terrain_sect>stalker_killer_terrain</terrain_sect>
+		<community>killer</community>
+		<terrain_sect>stalker_killer_terrain</terrain_sect>
 
 		<rank>798</rank>
 		<reputation>-105</reputation>
@@ -1778,11 +1778,11 @@ ammo_12x70_buck \n
 	<specific_character id="sim_killer_master1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ki_nauchniy</icon>
-		<map_icon x="2" y="0"></map_icon>
 		<bio>sim_killer_master_bio</bio>
 
 		<class>sim_killer_master</class>
-		<community>killer</community> <terrain_sect>stalker_killer_terrain</terrain_sect>
+		<community>killer</community>
+		<terrain_sect>stalker_killer_terrain</terrain_sect>
 		
 		<rank>909</rank>
 		<reputation>-132</reputation>
@@ -1808,11 +1808,11 @@ ammo_12x70_buck \n
 	<specific_character id="sim_killer_master2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ki_exoskeleton</icon>
-		<map_icon x="2" y="0"></map_icon>
 		<bio>sim_killer_master_bio</bio>
 
 		<class>sim_killer_master</class>
-		<community>killer</community> <terrain_sect>stalker_killer_terrain</terrain_sect>
+		<community>killer</community>
+		<terrain_sect>stalker_killer_terrain</terrain_sect>
 		
 		<rank>919</rank>
 		<reputation>-146</reputation>
@@ -1841,11 +1841,11 @@ ammo_12x70_buck \n
 	<specific_character id="sim_killer_sniper" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ki_mask</icon>
-		<map_icon x="2" y="0"></map_icon>
 		<bio>sim_killer_sniper_bio</bio>
 
 		<class>sim_killer_sniper</class>
-		<community>killer</community> <terrain_sect>stalker_killer_terrain</terrain_sect>
+		<community>killer</community>
+		<terrain_sect>stalker_killer_terrain</terrain_sect>
 
 		<rank>730</rank>
 		<reputation>-83</reputation>
@@ -1874,7 +1874,6 @@ ammo_12x70_buck \n
     <specific_character id="sim_monolith_regular_default1" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_head_1</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sim_monolith_regular_bio</bio>
 
         <class>sim_monolith_regular</class>
@@ -1903,7 +1902,6 @@ ammo_12x70_buck \n
     <specific_character id="sim_monolith_regular_default2" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_mask</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sim_monolith_regular_bio</bio>
 
         <class>sim_monolith_regular</class>
@@ -1932,7 +1930,6 @@ ammo_12x70_buck \n
     <specific_character id="sim_monolith_regular_default3" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_head_1</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sim_monolith_regular_bio</bio>
 
         <class>sim_monolith_regular</class>
@@ -1961,7 +1958,6 @@ ammo_12x70_buck \n
     <specific_character id="sim_monolith_regular_default4" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_mask</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sim_monolith_regular_bio</bio>
 
         <class>sim_monolith_regular</class>
@@ -1991,7 +1987,6 @@ ammo_12x70_buck \n
     <specific_character id="sim_monolith_specnaz_default1" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_hood_9</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sim_monolith_specnaz_bio</bio>
 
         <class>sim_monolith_specnaz</class>
@@ -2021,7 +2016,6 @@ ammo_12x70_buck \n
     <specific_character id="sim_monolith_specnaz_default2" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_nauchniy</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sim_monolith_specnaz_bio</bio>
 
         <class>sim_monolith_specnaz</class>
@@ -2052,7 +2046,6 @@ ammo_12x70_buck \n
     <specific_character id="sim_monolith_master_default1" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_exo</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sim_monolith_master_bio</bio>
 
         <class>sim_monolith_master</class>
@@ -2082,7 +2075,6 @@ ammo_12x70_buck \n
     <specific_character id="sim_monolith_master_default2" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_exo</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sim_monolith_master_bio</bio>
 
         <class>sim_monolith_master</class>
@@ -2114,7 +2106,6 @@ ammo_12x70_buck \n
     <specific_character id="sim_monolith_sniper" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_mask</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sim_monolith_sniper_bio</bio>
 
         <class>sim_monolith_sniper</class>
@@ -2149,11 +2140,11 @@ ammo_12x70_buck \n
 	<specific_character id="sim_ecolog_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ecolog</icon>
-		<map_icon x="0" y="6"></map_icon>
 		<bio>Охрана мобильного научного лагеря. Детальная информация отсутствует.</bio>
 
 		<class>sim_Ecolog</class>
-		<community>ecolog</community> <terrain_sect>stalker_ecolog_terrain</terrain_sect>
+		<community>ecolog</community>
+		<terrain_sect>stalker_ecolog_terrain</terrain_sect>
 
 		
 		<rank>800</rank>
@@ -2179,11 +2170,11 @@ ammo_5.56x45_ap=5 \n
 	<specific_character id="sim_ecolog_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ecolog_military</icon>
-		<map_icon x="1" y="6"></map_icon>
 		<bio>Научный работник. Детальная информация отсутствует.</bio>
 		
 		<class>sim_Ecolog</class>
-		<community>ecolog</community> <terrain_sect>stalker_ecolog_terrain</terrain_sect>
+		<community>ecolog</community>
+		<terrain_sect>stalker_ecolog_terrain</terrain_sect>
 		
 		<rank>789</rank>
 		<reputation>50</reputation>
@@ -2213,11 +2204,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_novice_default1" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_stalker_zombie1</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_novice_bio</bio>
 		
 		<class>sim_zombied_novice</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 
 		<rank>130</rank>
 		<reputation>-153</reputation>
@@ -2238,11 +2229,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_novice_default2" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_stalker_zombie2</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_novice_bio</bio>
 
 		<class>sim_zombied_novice</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 	
 		<rank>160</rank>
 		<reputation>-189</reputation>
@@ -2263,11 +2254,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_novice_default3" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_stalker_zombie3</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_novice_bio</bio>
 
 		<class>sim_zombied_novice</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>89</rank>
 		<reputation>-213</reputation>
@@ -2288,11 +2279,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_novice_default4" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_stalker_zombie4</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_novice_bio</bio>
 
 		<class>sim_zombied_novice</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>126</rank>
 		<reputation>-312</reputation>
@@ -2313,11 +2304,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_novice_default5" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_stalker_zombie5</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_novice_bio</bio>
 
 		<class>sim_zombied_novice</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>164</rank>
 		<reputation>-351</reputation>
@@ -2338,11 +2329,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_novice_default6" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_stalker_zombie7</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_novice_bio</bio>
 
 		<class>sim_zombied_novice</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 	
 		<rank>89</rank>
 		<reputation>-364</reputation>
@@ -2363,11 +2354,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_novice_default7" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_stalker_zombie8</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_novice_bio</bio>
 
 		<class>sim_zombied_novice</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>64</rank>
 		<reputation>-412</reputation>
@@ -2389,11 +2380,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_veteran_default1" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_stalker_zombie2</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_veteran_bio</bio>
 
 		<class>sim_Zombied_veteran</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>256</rank>
 		<reputation>-500</reputation>
@@ -2415,11 +2406,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_veteran_default2" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_stalker_zombie3</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_veteran_bio</bio>
 
 		<class>sim_Zombied_veteran</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>321</rank>
 		<reputation>-546</reputation>
@@ -2440,11 +2431,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_veteran_default3" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_stalker_zombie4</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_veteran_bio</bio>
 
 		<class>sim_Zombied_veteran</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>221</rank>
 		<reputation>-612</reputation>
@@ -2466,11 +2457,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_veteran_default4" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_stalker_zombie5</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_veteran_bio</bio>
 
 		<class>sim_Zombied_veteran</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>510</rank>
 		<reputation>-645</reputation>
@@ -2492,11 +2483,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_veteran_default5" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_stalker_zombie6</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_veteran_bio</bio>
 
 		<class>sim_Zombied_veteran</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>580</rank>
 		<reputation>-723</reputation>
@@ -2519,11 +2510,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_zombied_master_1" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_zombie_exoskeleton</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_zombied_master_bio</bio>
 
 		<class>sim_Zombied_master</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>899</rank>
 		<reputation>-864</reputation>
@@ -2545,11 +2536,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_fresh_Zombied_stalker_1" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_zombie_fresh_0</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_fresh_Zombied_bio</bio>
 
 		<class>sim_fresh_Zombied</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>631</rank>
 		<reputation>-856</reputation>
@@ -2571,11 +2562,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_fresh_Zombied_stalker_2" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_zombie_fresh_0</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_fresh_Zombied_bio</bio>
 
 		<class>sim_fresh_Zombied</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>864</rank>
 		<reputation>-923</reputation>
@@ -2597,11 +2588,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_fresh_Zombied_stalker_3" team_default = "1">
 		<name>zombie_name</name>
 		<icon>ui_npc_u_zombie_fresh_2</icon>
-		<map_icon x="7" y="0"></map_icon>
 		<bio>sim_fresh_Zombied_bio</bio>
 
 		<class>sim_fresh_Zombied</class>
-		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		<community>zombied</community>
+		<terrain_sect>stalker_zombied_terrain</terrain_sect>
 		
 		<rank>889</rank>
 		<reputation>-984</reputation>
@@ -2628,11 +2619,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_soldier_regular_default1" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_soldier_bandana</icon>
-		<map_icon x="1" y="2"></map_icon>
 		<bio>sim_soldier_regular_bio</bio>
 
 		<class>sim_Soldier_regular</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>56</rank>
 		<reputation>5</reputation>
@@ -2660,11 +2651,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_soldier_regular_default2" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_soldier_bandana_5</icon>
-		<map_icon x="1" y="2"></map_icon>
 		<bio>sim_soldier_regular_bio</bio>
 
 		<class>sim_Soldier_regular</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>71</rank>
 		<reputation>10</reputation>
@@ -2692,11 +2683,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_soldier_regular_default3" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_soldier_obichniy</icon>
-		<map_icon x="1" y="2"></map_icon>
 		<bio>sim_soldier_regular_bio</bio>
 
 		<class>sim_Soldier_regular</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>86</rank>
 		<reputation>12</reputation>
@@ -2724,11 +2715,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_soldier_regular_default4" team_default = "1">
 		<name>GENERATE_NAME_sergeant</name>
 		<icon>ui_npc_u_soldier_bandana</icon>
-		<map_icon x="1" y="2"></map_icon>
 		<bio>sim_soldier_regular_bio</bio>
 
 		<class>sim_Soldier_regular</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>125</rank>
 		<reputation>6</reputation>
@@ -2756,11 +2747,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_soldier_regular_default5" team_default = "1">
 		<name>GENERATE_NAME_sergeant</name>
 		<icon>ui_npc_u_soldier_obichniy</icon>
-		<map_icon x="1" y="2"></map_icon>
 		<bio>sim_soldier_regular_bio</bio>
 
 		<class>sim_Soldier_regular</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>149</rank>
 		<reputation>21</reputation>
@@ -2791,11 +2782,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_soldier_specnaz_default1" team_default = "1">
 		<name>GENERATE_NAME_sergeant</name>
 		<icon>ui_npc_u_soldier_spetsnaz</icon>
-		<map_icon x="2" y="2"></map_icon>
 		<bio>sim_soldier_specnaz_bio</bio>
 
 		<class>sim_Soldier_specnaz</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>670</rank>
 		<reputation>19</reputation>
@@ -2823,11 +2814,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_soldier_specnaz_default2" team_default = "1">
 		<name>GENERATE_NAME_lieutenant</name>
 		<icon>ui_npc_u_soldier_spetsnaz</icon>
-		<map_icon x="2" y="2"></map_icon>
 		<bio>sim_soldier_specnaz_bio</bio>
 
 		<class>sim_Soldier_specnaz</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>765</rank>
 		<reputation>23</reputation>
@@ -2859,11 +2850,12 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_soldier_commander1" team_default = "1">
 		<name>GENERATE_NAME_lieutenant</name>
 		<icon>ui_npc_u_soldier_beret</icon>
-		<map_icon x="2" y="0"></map_icon>
 		<bio>sim_soldier_commander_bio</bio>
 
 		<class>sim_Soldier_commander</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>860</rank>
 		<reputation>20</reputation>
@@ -2891,11 +2883,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_soldier_commander2" team_default = "1">
 		<name>GENERATE_NAME_captain</name>
 		<icon>ui_npc_u_soldier_beret_3</icon>
-		<map_icon x="2" y="0"></map_icon>
 		<bio>sim_soldier_commander_bio</bio>
 
 		<class>sim_Soldier_commander</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>910</rank>
 		<reputation>-23</reputation>
@@ -2924,11 +2916,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_soldier_sniper_default1" team_default = "1">
 		<name>GENERATE_NAME_sergeant</name>
 		<icon>ui_npc_u_soldier_obichniy</icon>
-		<map_icon x="1" y="2"></map_icon>
 		<bio>Рядовой солдат. Детальная информация отсутствует.</bio>
 
 		<class>sim_Soldier_sniper</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community> 
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>600</rank>
 		<reputation>0</reputation>
@@ -2956,11 +2948,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_soldier_sniper_default2" team_default = "1">
 		<name>GENERATE_NAME_sergeant</name>
 		<icon>ui_npc_u_soldier_bandana</icon>
-		<map_icon x="1" y="2"></map_icon>
 		<bio>sim_soldier_sniper_bio</bio>
 
 		<class>sim_Soldier_sniper</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 	
 		<rank>603</rank>
 		<reputation>4</reputation>
@@ -2988,11 +2980,11 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_soldier_sniper_default3" team_default = "1">
 		<name>GENERATE_NAME_lieutenant</name>
 		<icon>ui_npc_u_soldier_bandana_5</icon>
-		<map_icon x="1" y="2"></map_icon>
 		<bio>sim_soldier_sniper_bio</bio>
 
 		<class>sim_Soldier_sniper</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community>
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 		
 		<rank>697</rank>
 		<reputation>-9</reputation>
@@ -3021,13 +3013,13 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_Soldier_master" team_default = "1">
 		<name>GENERATE_NAME_captain</name>
 		<icon>ui_npc_u_stalker_militari_antigas_2</icon>
-		<map_icon x="2" y="2"></map_icon>
 		<bio>sim_Soldier_master_bio</bio>
 
 		<team>Soldier_military</team>
 		
 		<class>sim_Soldier_master</class>
-		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>military</community> 
+		<terrain_sect>stalker_military_terrain</terrain_sect>
 
         <snd_config>characters_voice\human_03\military\</snd_config>
 		<crouch_type>0</crouch_type>
@@ -3061,7 +3053,6 @@ ammo_5.56x45_ap=9 \n
 	<specific_character id="sim_stalker_veteran_gusarov" team_default = "1">
 		<name>sim_stalker_veteran_gusarov_name</name>
 		<icon>ui_npc_u_stalker_neytral_hood_9</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_veteran_gusarov_bio</bio>
 
 		<class>sim_stalker_veteran_gusarov</class>
@@ -3095,7 +3086,6 @@ ammo_9x39_sp5=6 \n
 <specific_character id="sim_Svoboda_specnaz_leshii" team_default = "1">
 		<name>sim_Svoboda_specnaz_leshii_name</name>
 		<icon>ui_npc_u_stalker_sv_hood_9</icon>
-		<map_icon x="5" y="0"></map_icon>
 		<bio>sim_Svoboda_specnaz_leshii_bio</bio>
 
 		<team>Svoboda_specnaz</team>
@@ -3130,11 +3120,11 @@ ammo_9x39_sp5=6 \n
 	<specific_character id="sim_stalker_master_chuchelo" team_default = "1">
 		<name>sim_stalker_master_chuchelo_name</name>
 		<icon>ui_npc_u_stalker_neytral_exoskeleton</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>sim_stalker_master_chuchelo_bio</bio>
 
 		<class>sim_stalker_master_chuchelo</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 				
 		<rank>920</rank>
 		<reputation>145</reputation>

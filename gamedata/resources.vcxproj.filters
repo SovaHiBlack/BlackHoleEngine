@@ -5221,9 +5221,6 @@
     <Xml Include="Config\gameplay\dialogs_radar.xml">
       <Filter>config\gameplay\dialogs</Filter>
     </Xml>
-    <Xml Include="Config\gameplay\dialogs_test.xml">
-      <Filter>config\gameplay\dialogs</Filter>
-    </Xml>
     <Xml Include="Config\gameplay\dialogs_yantar.xml">
       <Filter>config\gameplay\dialogs</Filter>
     </Xml>
@@ -6547,12 +6544,6 @@
     <Xml Include="config\gameplay\tasks_pripyat.xml">
       <Filter>config\gameplay\tasks</Filter>
     </Xml>
-    <Xml Include="Config\gameplay\encyclopedia_infos.xml">
-      <Filter>config\gameplay\encyclopedia</Filter>
-    </Xml>
-    <Xml Include="Config\gameplay\storyline_info_to_diary.xml">
-      <Filter>config\gameplay\encyclopedia</Filter>
-    </Xml>
     <Xml Include="Config\gameplay\encyclopedia_weapons.xml">
       <Filter>config\gameplay\encyclopedia</Filter>
     </Xml>
@@ -6611,6 +6602,9 @@
       <Filter>config\gameplay\encyclopedia\storyline</Filter>
     </Xml>
     <Xml Include="Config\gameplay\stories.xml">
+      <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="Config\gameplay\storyline_info_to_diary.xml">
       <Filter>config\gameplay\encyclopedia\storyline</Filter>
     </Xml>
   </ItemGroup>

@@ -1758,10 +1758,8 @@
     <Xml Include="Config\gameplay\dialogs_pripyat.xml" />
     <Xml Include="Config\gameplay\dialogs_radar.xml" />
     <Xml Include="config\gameplay\dialogs_repair.xml" />
-    <Xml Include="Config\gameplay\dialogs_test.xml" />
     <Xml Include="Config\gameplay\dialogs_yantar.xml" />
     <Xml Include="Config\gameplay\encyclopedia_equipment.xml" />
-    <Xml Include="Config\gameplay\encyclopedia_infos.xml" />
     <Xml Include="Config\gameplay\encyclopedia_mutants.xml" />
     <Xml Include="Config\gameplay\encyclopedia_social.xml" />
     <Xml Include="Config\gameplay\encyclopedia_tutorial.xml" />

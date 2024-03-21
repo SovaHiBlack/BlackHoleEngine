@@ -5,11 +5,11 @@
 	<specific_character id="gar_seriy" team_default = "1">
 		<name>gar_seryi_name</name>
 		<icon>ui_npc_u_stalker_neytral_hood_4</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>gar_seryi_bio</bio>
 
 		<class>gar_seriy</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>511</rank>
 		<reputation>-18</reputation>
@@ -39,11 +39,11 @@ ammo_5.56x45_ss190=1
 	<specific_character id="gar_dram_novice" team_default = "1">
 		<name>gar_dram_novice_name</name>
 		<icon>ui_npc_u_green_stalker_11</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>gar_dram_novice_bio</bio>
 
 		<class>gar_dram_novice</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>212</rank>
 		<reputation>19</reputation>
@@ -73,11 +73,11 @@ ammo_12x70_buck=2 \n
 	<specific_character id="gar_hellcar" team_default = "1">
 		<name>gar_hellcar_name</name>
 		<icon>ui_npc_u_stalker_neytral_balon_5</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>gar_hellcar_bio</bio>
 
 		<class>gar_hellcar</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 
 		<rank>594</rank>
 		<reputation>20</reputation>
@@ -111,12 +111,12 @@ ammo_5.56x45_ap=1 \n
 	<specific_character id="gar_bandit_novice_wounded" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_3</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>esc_bandit_novice_bio</bio>
 
 		
 		<class>gar_bandit_novice_wounded</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>195</rank>
 		<reputation>-120</reputation>
@@ -142,11 +142,11 @@ ammo_9x19_pbp=1 \n
 	<specific_character id="gar_bandit_leader" team_default = "1">
 		<name>gar_bandit_leader_name</name>
 		<icon>ui_npc_u_stalker_bandit_master</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>gar_bandit_leader_bio</bio>
 		
 		<class>gar_bandit_leader</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>199</rank>
 		<reputation>-145</reputation>
@@ -176,11 +176,11 @@ ammo_11.43x23_hydro=2 \n
 	<specific_character id="gar_bandit_novice_default1" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_3</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>esc_bandit_novice_bio</bio>
 	
 		<class>gar_bandit_novice</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>167</rank>
 		<reputation>-65</reputation>
@@ -205,11 +205,11 @@ ammo_11.43x23_hydro=2 \n
 	<specific_character id="gar_bandit_novice_default2" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_4</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>esc_bandit_novice_bio</bio>
 		
 		<class>gar_bandit_novice</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>268</rank>
 		<reputation>-95</reputation>
@@ -236,11 +236,11 @@ ammo_11.43x23_hydro=2 \n
 	<specific_character id="gar_bandit_novice_default3" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_5</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>esc_bandit_novice_bio</bio>
 		
 		<class>gar_bandit_novice</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>119</rank>
 		<reputation>-89</reputation>
@@ -268,11 +268,11 @@ ammo_11.43x23_hydro=2 \n
 	<specific_character id="gar_bandit_general_default1" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_3</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>esc_bandit_novice_bio</bio>
 	
 		<class>gar_bandit_general</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>125</rank>
 		<reputation>-126</reputation>
@@ -300,11 +300,11 @@ ammo_11.43x23_hydro=2 \n
 	<specific_character id="gar_bandit_general_default2" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_4</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>esc_bandit_novice_bio</bio>
 		
 		<class>gar_bandit_general</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>124</rank>
 		<reputation>-73</reputation>
@@ -332,11 +332,11 @@ ammo_11.43x23_hydro=2 \n
 	<specific_character id="gar_bandit_general_default3" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_5</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>esc_bandit_novice_bio</bio>
 				
 		<class>gar_bandit_general</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>133</rank>
 		<reputation>-100</reputation>
@@ -366,11 +366,11 @@ ammo_11.43x23_hydro=2 \n
 	<specific_character id="gar_stalker_general_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_uzor</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
 
 		<class>gar_stalker_general</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>423</rank>
 		<reputation>20</reputation>
@@ -400,11 +400,11 @@ ammo_11.43x23_hydro=3 \n
 	<specific_character id="gar_stalker_general_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_balon_8</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
 
 		<class>gar_stalker_general</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>354</rank>
 		<reputation>-11</reputation>
@@ -434,11 +434,11 @@ ammo_5.45x39_fmj=2 \n
 	<specific_character id="gar_stalker_general_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_2</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
 
 		<class>gar_stalker_general</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>515</rank>
 		<reputation>14</reputation>
@@ -468,11 +468,11 @@ ammo_5.45x39_fmj=3 \n
 	<specific_character id="gar_stalker_general_default4" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_2</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
 
 		<class>gar_stalker_general</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>546</rank>
 		<reputation>1</reputation>
@@ -502,11 +502,11 @@ ammo_9x19_fmj=3 \n
 	<specific_character id="gar_stalker_general_default5" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_balon_8</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
 
 		<class>gar_stalker_general</class>
-		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>447</rank>
 		<reputation>-15</reputation>
@@ -538,11 +538,11 @@ ammo_9x19_fmj=2 \n
 	<specific_character id="gar_wounded_bandit" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_neytral_hood_2</icon>
-		<map_icon x="1" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
 
 		<class>gar_wounded_bandit</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>408</rank>
 		<reputation>-90</reputation>
@@ -570,11 +570,11 @@ ammo_9x19_fmj=2 \n
 	<specific_character id="gar_dolg_blokpost_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_mask_1</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>gar_dolg_blokpost_bio</bio>
 
 		<class>gar_dolg_blokpost</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 		
 		<rank>499</rank>
 		<reputation>120</reputation>
@@ -605,11 +605,11 @@ ammo_5.56x45_ap=1 \n
 	<specific_character id="gar_dolg_blokpost_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_balon_8</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>gar_dolg_blokpost_bio</bio>
 
 		<class>gar_dolg_blokpost</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 		
 		<rank>520</rank>
 		<reputation>86</reputation>
@@ -640,11 +640,11 @@ ammo_9x39_pab9=1 \n
 	<specific_character id="gar_dolg_blokpost_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_balon_8</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>gar_dolg_blokpost_bio</bio>
 		
 		<class>gar_dolg_blokpost</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 		
 		<rank>471</rank>
 		<reputation>124</reputation>
@@ -675,11 +675,11 @@ ammo_11.43x23_hydro=1 \n
 	<specific_character id="gar_dolg_blokpost_commander" team_default = "1">
 		<name>gar_dolg_blokpost_leader_name</name>
 		<icon>ui_npc_u_stalker_do_balon_4</icon>
-		<map_icon x="4" y="0"></map_icon>
 		<bio>gar_dolg_blokpost_leader_bio</bio>
 		
 		<class>gar_dolg_blokpost_commander</class>
-		<community>dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<community>dolg</community>
+		<terrain_sect>stalker_dolg_terrain</terrain_sect>
 		
 		<rank>592</rank>
 		<reputation>140</reputation>
@@ -712,11 +712,11 @@ ammo_5.45x39_ap=3 \n
 	<specific_character id="gar_sniper" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_5</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>esc_bandit_novice_bio</bio>
 				
 		<class>gar_sniper</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>443</rank>
 		<reputation>-100</reputation>
@@ -746,11 +746,11 @@ ammo_5.45x39_ap=3 \n
 	<specific_character id="gar_bandit_dm" team_default = "1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_master</icon>
-		<map_icon x="0" y="0"></map_icon>
 		<bio>esc_bandit_novice_bio</bio>
 		
 		<class>gar_bandit_dm</class>
-		<community>stalker</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>stalker</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>250</rank>
 		<reputation>-145</reputation>

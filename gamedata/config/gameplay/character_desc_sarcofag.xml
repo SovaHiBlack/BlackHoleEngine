@@ -5,7 +5,6 @@
 <specific_character id="sar_monolith_specnaz_default1" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_hood_9</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>rad_monolith_specnaz_bio</bio>
 
         <class>sar_monolith_specnaz</class>
@@ -36,7 +35,6 @@
     <specific_character id="sar_monolith_specnaz_default2" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_hood_9</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>rad_monolith_specnaz_bio</bio>
 
         <class>sar_monolith_specnaz</class>
@@ -67,7 +65,6 @@
     <specific_character id="sar_monolith_specnaz_default3" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_hood_9</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>rad_monolith_specnaz_bio</bio>
 
         <class>sar_monolith_specnaz</class>
@@ -98,7 +95,6 @@
     <specific_character id="sar_monolith_specnaz_default4" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_hood_9</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>rad_monolith_specnaz_bio</bio>
 
         <class>sar_monolith_specnaz</class>
@@ -129,7 +125,6 @@
     <specific_character id="sar_monolith_specnaz_default5" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_hood_9</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>rad_monolith_specnaz_bio</bio>
 
         <class>sar_monolith_specnaz</class>
@@ -163,7 +158,6 @@
     <specific_character id="sar_monolith_exo_default2" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_exo</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>pri_monolith_exo_bio</bio>
 
         <class>sar_monolith_exo</class>
@@ -195,7 +189,6 @@
     <specific_character id="sar_monolith_exo_default3" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_exo</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>pri_monolith_exo_bio</bio>
 
         <class>sar_monolith_exo</class>
@@ -227,7 +220,6 @@
     <specific_character id="sar_monolith_exo_default4" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_exo</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>pri_monolith_exo_bio</bio>
 
         <class>sar_monolith_exo</class>
@@ -260,7 +252,6 @@
     <specific_character id="sar_monolith_exo_default6" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_exo</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>pri_monolith_exo_bio</bio>
 
         <class>sar_monolith_exo</class>
@@ -292,7 +283,6 @@
     <specific_character id="sar_monolith_exo_default7" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_exo</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>pri_monolith_exo_bio</bio>
 
         <class>sar_monolith_exo</class>
@@ -324,7 +314,6 @@
     <specific_character id="sar_monolith_exo_default8" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_exo</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>pri_monolith_exo_bio</bio>
 
         <class>sar_monolith_exo</class>
@@ -356,7 +345,6 @@
     <specific_character id="sar_monolith_exo_crystal_1" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_exo</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sar_monolith_cristall_bio</bio>
 
         <class>sar_monolith_exo_crystal</class>
@@ -388,7 +376,6 @@
 	<specific_character id="sar_monolith_commander" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_nauchniy</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sar_monolith_bio</bio>
 
         <class>sar_monolith_commander</class>
@@ -420,7 +407,6 @@
     <specific_character id="sar2_monolith_regular" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_hood_9</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sar_monolith_bio</bio>
 
         <class>sar2_monolith_regular</class>
@@ -448,7 +434,6 @@
     <specific_character id="sar2_monolith_regular2" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_hood_9</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>sar_monolith_bio</bio>
 
         <class>sar2_monolith_regular2</class>
@@ -476,7 +461,6 @@
     <specific_character id="sar2_monolith_specnaz" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_hood_9</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>rad_monolith_specnaz_bio</bio>
 
         <class>sar2_monolith_specnaz</class>
@@ -504,7 +488,6 @@
     <specific_character id="sar2_monolith_specnaz2" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_hood_9</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>rad_monolith_specnaz_bio</bio>
 
         <class>sar2_monolith_specnaz2</class>
@@ -534,7 +517,6 @@
 	<specific_character id="sar2_monolith_exo" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_exo</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>pri_monolith_exo_bio</bio>
 
         <class>sar2_monolith_exo</class>
@@ -562,7 +544,6 @@
     <specific_character id="sar2_monolith_exo2" team_default = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_npc_u_stalker_mo_exo</icon>
-        <map_icon x="3" y="0"></map_icon>
         <bio>pri_monolith_exo_bio</bio>
 
         <class>sar2_monolith_exo2</class>

@@ -1,10 +1,10 @@
-* Detected CPU: GenuineIntel P3 family, F6/M10/S9, 2692.00 mhz, 30-clk 'rdtsc'
+* Detected CPU: GenuineIntel P3 family, F6/M10/S9, 2694.00 mhz, 31-clk 'rdtsc'
 * CPU Features: RDTSC, MMX, SSE, SSE2
 
 Initializing File System...
 using fs-ltx fsgame.ltx
-FS: 30243 files cached, 5142Kb memory used.
-Init FileSystem 1.430587 sec
+FS: 30241 files cached, 5142Kb memory used.
+Init FileSystem 13.868340 sec
 'xrCore' build 9171, Mar 18 2024
 
 Initializing Engine...
@@ -14,44 +14,11 @@ Starting INPUT device...
 Loading DLL: xrRender_R2.dll
 Loading DLL: xrGame.dll
 ! Unable to find Software\GSC Game World\STALKER-SHOC\ in registry
-* [win32]: free[4050928 K], reserved[48800 K], committed[94512 K]
+* [win32]: free[4049632 K], reserved[50112 K], committed[94496 K]
 * [ D3D ]: textures[0 K]
 * [x-ray]: process heap[9325 K], game lua[0 K], engine lua[0 K], render[0 K]
 * [x-ray]: economy: strings[2004 K], smem[0 K]
 Executing config-script "d:\engine\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx"...
-! cant convert dik_name for dik[16], prop=[
-! cant convert dik_name for dik[17], prop=[
-! cant convert dik_name for dik[18], prop=[
-! cant convert dik_name for dik[19], prop=[
-! cant convert dik_name for dik[20], prop=[
-! cant convert dik_name for dik[21], prop=[
-! cant convert dik_name for dik[22], prop=[
-! cant convert dik_name for dik[23], prop=[
-! cant convert dik_name for dik[24], prop=[
-! cant convert dik_name for dik[25], prop=[
-! cant convert dik_name for dik[26], prop=[
-! cant convert dik_name for dik[27], prop=[
-! cant convert dik_name for dik[30], prop=[
-! cant convert dik_name for dik[31], prop=[
-! cant convert dik_name for dik[32], prop=[
-! cant convert dik_name for dik[33], prop=[
-! cant convert dik_name for dik[34], prop=[
-! cant convert dik_name for dik[35], prop=[
-! cant convert dik_name for dik[36], prop=[
-! cant convert dik_name for dik[37], prop=[
-! cant convert dik_name for dik[38], prop=[
-! cant convert dik_name for dik[39], prop=[
-! cant convert dik_name for dik[40], prop=[
-! cant convert dik_name for dik[41], prop=[
-! cant convert dik_name for dik[44], prop=[
-! cant convert dik_name for dik[45], prop=[
-! cant convert dik_name for dik[46], prop=[
-! cant convert dik_name for dik[47], prop=[
-! cant convert dik_name for dik[48], prop=[
-! cant convert dik_name for dik[49], prop=[
-! cant convert dik_name for dik[50], prop=[
-! cant convert dik_name for dik[51], prop=[
-! cant convert dik_name for dik[52], prop=[
 ! cant convert dik_name for dik[144], prop=[
 [d:\engine\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx] successfully loaded.
 Executing config-script "user.ltx"...
@@ -98,7 +65,7 @@ Starting RENDER device...
 ! Renderer doesn't support blender 'effects\shadow_world'
 ! Version conflict in shader 'effects\watertest-1'
 count of .thm files=6
-load time=92 ms
+load time=54 ms
 * NULLRT supported
 * ...and used
 * HWDST/PCF supported and used
@@ -112,52 +79,52 @@ Loading DLL: xrGameSpy.dll
 - r2_tf_mipbias 0.
 * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
 * GPU vertex cache: recognized, 32
-*** RESET [425 ms]
+*** RESET [361 ms]
 "d:\engine\blackholeengine\sources\..\release-win32\binaries\xr_3da.exe" 
 * phase time: 0 ms
-* phase cmem: 84999 K
+* phase cmem: 85797 K
 Кэширование объектов...
 Loading objects...
 Loading models...
-* [prefetch] time:    3564 ms
-* [prefetch] memory:  419115Kb
-* phase time: 3608 ms
-* phase cmem: 491036 K
+* [prefetch] time:    25773 ms
+* [prefetch] memory:  419097Kb
+* phase time: 25942 ms
+* phase cmem: 491818 K
 Сервер: Старт...
-* phase time: 52 ms
-* phase cmem: 491243 K
+* phase time: 172 ms
+* phase cmem: 492041 K
 Сервер: Загрузка симуляции жизни...
-* phase time: 15 ms
-* phase cmem: 491243 K
+* phase time: 14 ms
+* phase cmem: 492041 K
 Создание новой игры...
 * Creating new game...
 * Loading spawn registry...
 * 8641 spawn points are successfully loaded
 * Saving spawns...
 * Saving objects...
-* 17155 objects are successfully saved
+* 17156 objects are successfully saved
 * Game all.sav is successfully saved to file 'd:\engine\blackholeengine\release-win32\..\app_data\savedgames\all.sav'
 * New game is successfully created!
-* phase time: 3653 ms
-* phase cmem: 521785 K
+* phase time: 4740 ms
+* phase cmem: 522615 K
 Сервер: Соединяемся...
 MaxPlayers = 32
-* phase time: 26 ms
-* phase cmem: 521867 K
+* phase time: 46 ms
+* phase cmem: 522682 K
 Клиент: Соединение с localhost...
 # Player not found. New player created.
 * client : connection accepted - <>
-* phase time: 18 ms
-* phase cmem: 521892 K
+* phase time: 54 ms
+* phase cmem: 522722 K
 Открытие потока...
-* phase time: 17 ms
-* phase cmem: 521892 K
+* phase time: 29 ms
+* phase cmem: 522722 K
 Загрузка формы объектов...
-* phase time: 3144 ms
-* phase cmem: 594560 K
+* phase time: 3443 ms
+* phase cmem: 593319 K
 Загрузка шейдеров...
-* phase time: 275 ms
-* phase cmem: 595954 K
+* phase time: 326 ms
+* phase cmem: 594696 K
 Загрузка геометрии...
 * [Loading VB] 65532 verts, 2047 Kb
 * [Loading VB] 65525 verts, 2047 Kb
@@ -200,46 +167,47 @@ MaxPlayers = 32
 * [Loading IB] 1048575 indices, 2047 Kb
 * [Loading IB] 1048575 indices, 2047 Kb
 * [Loading IB] 718302 indices, 1402 Kb
-* phase time: 101 ms
-* phase cmem: 664729 K
+* phase time: 645 ms
+* phase cmem: 663470 K
 Загрузка базы пространств...
-* phase time: 1283 ms
-* phase cmem: 669176 K
+* phase time: 1524 ms
+* phase cmem: 667902 K
 Загрузка детальных объектов...
 * [DETAILS] VertexConsts(256), Batch(61)
 * [DETAILS] 40687 v(20), 26352 p
 * [DETAILS] Batch(61), VB(794K), IB(154K)
-* phase time: 46 ms
-* phase cmem: 670153 K
+* phase time: 133 ms
+* phase cmem: 668878 K
 Загрузка секторов и порталов...
 * Loading HOM: d:\engine\blackholeengine\release-win32\..\gamedata\levels\l01_escape\level.hom
-* phase time: 23 ms
-* phase cmem: 670342 K
+* phase time: 86 ms
+* phase cmem: 669083 K
 Загрузка ИИ объектов...
 - Loading music tracks from 'l01_escape_musics'...
-* phase time: 29 ms
-* phase cmem: 670397 K
+* phase time: 264 ms
+* phase cmem: 669122 K
 Клиент: Создание...
 - Game configuring : Started 
 - Game configuring : Finished 
-* phase time: 185 ms
-* phase cmem: 678408 K
+* phase time: 819 ms
+* phase cmem: 677285 K
 Загрузка текстур...
 * t-report - base: 1445, 566111 K
 * t-report - lmap: 5, 5120 K
-* phase time: 750 ms
-* phase cmem: 975311 K
+* phase time: 9981 ms
+* phase cmem: 974189 K
 Клиент: Синхронизация...
-* phase time: 23 ms
-* phase cmem: 975327 K
-* [win32]: free[2880436 K], reserved[82044 K], committed[1231760 K]
+* phase time: 142 ms
+* phase cmem: 974189 K
+* [win32]: free[2883952 K], reserved[80060 K], committed[1230228 K]
 * [ D3D ]: textures[571232 K]
-* [x-ray]: process heap[975327 K], game lua[28746 K], engine lua[125 K], render[0 K]
-* [x-ray]: economy: strings[4654 K], smem[15587 K]
-Intro start 6083
-* MEMORY USAGE: 1003841 K
+* [x-ray]: process heap[974189 K], game lua[28753 K], engine lua[142 K], render[0 K]
+* [x-ray]: economy: strings[4655 K], smem[15587 K]
+Intro start 51676
+* MEMORY USAGE: 1001832 K
 - Disconnect
 - Destroying level
+DestroySingleton::RefCounter: 0
 DestroySingleton::RefCounter: 0
 DestroySingleton::RefCounter: 0
 DestroySingleton::RefCounter: 0

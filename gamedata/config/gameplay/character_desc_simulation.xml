@@ -7,11 +7,11 @@
 	<specific_character id="sim_bandit_novice_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_3</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_novice_bio</bio>
 	
 		<class>sim_bandit_novice</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>123</rank>
 		<reputation>-56</reputation>
@@ -36,11 +36,11 @@
 	<specific_character id="sim_bandit_novice_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_4</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_novice_bio</bio>
 		
 		<class>sim_bandit_novice</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>85</rank>
 		<reputation>-51</reputation>
@@ -67,11 +67,11 @@
 	<specific_character id="sim_bandit_novice_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_5</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_novice_bio</bio>
 		
 		<class>sim_bandit_novice</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>64</rank>
 		<reputation>-63</reputation>
@@ -98,11 +98,11 @@
 	<specific_character id="sim_bandit_general_defaul1t" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_3</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_general_bio</bio>
 		
 		<class>sim_bandit_general</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>302</rank>
 		<reputation>-68</reputation>
@@ -129,11 +129,11 @@
 	<specific_character id="sim_bandit_general_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_4</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_general_bio</bio>
 		
 		<class>sim_bandit_general</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>365</rank>
 		<reputation>-79</reputation>
@@ -159,11 +159,11 @@
 	<specific_character id="sim_bandit_general_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_5</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_general_bio</bio>
 		
 		<class>sim_bandit_general</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>421</rank>
 		<reputation>-93</reputation>
@@ -189,11 +189,11 @@
 	<specific_character id="sim_bandit_general_default4" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_8</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_general_bio</bio>
 				
 		<class>sim_bandit_general</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>397</rank>
 		<reputation>-105</reputation>
@@ -220,11 +220,11 @@
 	<specific_character id="sim_bandit_veteran_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_master</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_veteran_bio</bio>
 		
 		<class>sim_bandit_veteran</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>670</rank>
 		<reputation>-112</reputation>
@@ -255,11 +255,11 @@
 	<specific_character id="sim_bandit_veteran_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_veteran</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_veteran_bio</bio>
 		
 		<class>sim_bandit_veteran</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>730</rank>
 		<reputation>-126</reputation>
@@ -285,11 +285,11 @@
 	<specific_character id="sim_bandit_veteran_default3" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_veteran</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_veteran_bio</bio>
 
 		<class>sim_bandit_veteran</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>860</rank>
 		<reputation>-135</reputation>
@@ -316,13 +316,13 @@
 	<specific_character id="sim_bandit_master_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_master</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_master_bio</bio>
 		
 		<team>Bandit_master</team>
 		
 		<class>sim_Bandit_master</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 		
 		<rank>910</rank>
 		<reputation>-139</reputation>
@@ -347,13 +347,13 @@
 	<specific_character id="sim_bandit_master_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_master</icon>
-		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_master_bio</bio>
 		
 		<team>Bandit_master</team>
 		
 		<class>sim_Bandit_master</class>
-		<community>bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		<community>bandit</community>
+		<terrain_sect>stalker_bandit_terrain</terrain_sect>
 
 		<snd_config>characters_voice\human_02\bandit\</snd_config>
 		

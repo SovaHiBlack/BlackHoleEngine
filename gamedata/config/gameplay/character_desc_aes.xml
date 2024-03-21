@@ -5,7 +5,6 @@
 	<specific_character id="aes_Monolit_rpg" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_mask</icon>
-		<map_icon x="3" y="0"></map_icon>
 		<bio>aes_Monolit_rpg_bio</bio>
 
 		<team>Monolit_rpg</team>
@@ -44,7 +43,6 @@
   <specific_character id="aes_Monolit_specnaz" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_mo_hood_9</icon>
-    <map_icon x="3" y="0"></map_icon>
     <bio>aes_Monolit_specnaz_bio</bio>
 
     <class>aes_Monolit_specnaz</class>
@@ -79,7 +77,6 @@
   <specific_character id="aes_Monolit_specnaz_rg6" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_mo_hood_9</icon>
-    <map_icon x="3" y="0"></map_icon>
     <bio>Боевик группировки "Монолит". Хорошо экипирован. Детальная информация отсутствует.</bio>
 
     <class>aes_Monolit_specnaz_rg6</class>
@@ -109,7 +106,6 @@
   <specific_character id="aes_Monolit_sniper" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_mo_head_1</icon>
-    <map_icon x="3" y="0"></map_icon>
     <bio>aes_Monolit_sniper_bio</bio>
 
     <class>aes_Monolit_sniper</class>
@@ -143,7 +139,6 @@
   <specific_character id="aes_Monolit_sniper_gauss" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_mo_mask</icon>
-    <map_icon x="3" y="0"></map_icon>
     <bio>Сталкер группировки "Монолит". Детальная информация отсутствует.</bio>
 
     <class>aes_Monolit_sniper_gauss</class>
@@ -177,7 +172,6 @@
   <specific_character id="aes_Monolit_master" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_mo_exo</icon>
-    <map_icon x="3" y="0"></map_icon>
     <bio>Хранитель группировки "Монолит". Лучше держаться от него подальше. Детальная информация отсутствует.</bio>
 
     <class>aes_Monolit_master</class>
@@ -216,7 +210,6 @@
 	<specific_character id="aes_Soldier_commander" team_default = "1">
 		<name>GENERATE_NAME_captain</name>
 		<icon>ui_npc_u_soldier_beret_5</icon>
-		<map_icon x="2" y="0"></map_icon>
 		<bio>aes_Soldier_commander_bio</bio>
 
 		<class>aes_Soldier_commander</class>
@@ -253,7 +246,6 @@
 	<specific_character id="aes_Soldier_military" team_default = "1">
 		<name>GENERATE_NAME_lieutenant</name>
 		<icon>ui_npc_u_stalker_militari_antigas_2</icon>
-		<map_icon x="2" y="2"></map_icon>
 		<bio>aes_Soldier_military_bio</bio>
 
 		<team>Soldier_military</team>
@@ -292,7 +284,6 @@
 	<specific_character id="aes_Soldier_specnaz" team_default = "1">
 		<name>GENERATE_NAME_sergeant</name>
 		<icon>ui_npc_u_soldier_antigas</icon>
-		<map_icon x="12" y="4"></map_icon>
 		<bio>aes_Soldier_specnaz_bio</bio>
 
 		<team>Soldier_specnaz</team>
@@ -331,7 +322,6 @@
 	<specific_character id="aes_Soldier_specnaz_aes" team_default = "1">
 		<name>aes_Soldier_specnaz_aes_name</name>
 		<icon>ui_npc_u_stalker_militari_antigas_2</icon>
-		<map_icon x="2" y="2"></map_icon>
 		<bio>aes_Soldier_specnaz_aes_bio</bio>
 
 		<team>Soldier_specnaz</team>
@@ -369,7 +359,6 @@
 	<specific_character id="aes_Soldier_sniper" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_stalker_militari_1</icon>
-		<map_icon x="1" y="2"></map_icon>
 		<bio>aes_Soldier_sniper_bio</bio>
 
 		<team>Soldier_sniper</team>
@@ -410,7 +399,6 @@
 	<specific_character id="aes_x" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_stalker_militari_antigas_1</icon>
-		<map_icon x="1" y="2"></map_icon>
 		<bio>Рядовой солдат. Детальная информация отсутствует.</bio>
 
 		<team>Soldier_sniper</team>
@@ -449,7 +437,6 @@
 	<specific_character id="aes_x_2" team_default = "1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_stalker_militari_antigas_1</icon>
-		<map_icon x="1" y="2"></map_icon>
 		<bio>Рядовой солдат. Детальная информация отсутствует.</bio>
 
 		<team>Soldier_sniper</team>

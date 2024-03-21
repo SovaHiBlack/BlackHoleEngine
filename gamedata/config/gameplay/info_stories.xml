@@ -1,41 +1,49 @@
 <?xml version='1.0' encoding="windows-1251"?>
-
 <game_information_portions>
-
-
 	<info_portion id="story_01">
 		<article>stalker_story_1</article>
 	</info_portion>
+
 	<info_portion id="story_02">
 		<article>stalker_story_1</article>
 	</info_portion>
+
 	<info_portion id="story_03">
 		<article>stalker_story_1</article>
 	</info_portion>
+
 	<info_portion id="story_04">
 		<article>stalker_story_1</article>
 	</info_portion>
+
 	<info_portion id="story_05">
 		<article>stalker_story_1</article>
 	</info_portion>
+
 	<info_portion id="story_06">
 		<article>stalker_story_1</article>
 	</info_portion>
+
 	<info_portion id="legend_01">
 		<article>stalker_story_1</article>
 	</info_portion>
+
 	<info_portion id="legend_02">
 		<article>stalker_story_1</article>
 	</info_portion>
+
 	<info_portion id="legend_03">
 		<article>stalker_story_1</article>
 	</info_portion>
+
 	<info_portion id="legend_04">
 		<article>stalker_story_1</article>
 	</info_portion>
+
 	<info_portion id="legend_05">
 		<article>stalker_story_1</article>
 	</info_portion>
+
 	<info_portion id="stalker_story_1">
 		<article>stalker_story_1</article>
 	</info_portion>
@@ -83,7 +91,7 @@
 	<info_portion id="stalker_story_12">
 		<article>stalker_story_12</article>
 	</info_portion>
-	
+
 	<info_portion id="stalker_story_13">
 		<article>stalker_story_13</article>
 	</info_portion>
@@ -123,5 +131,4 @@
 	<info_portion id="stalker_story_92">
 		<article>stalker_story_92</article>
 	</info_portion>
-
 </game_information_portions>

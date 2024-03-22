@@ -2,7 +2,7 @@
 <xml>
 	<!-- MILITARY -->
 	<!-- 1on1 -->
-	<specific_character id="aem_military_1_1" team_default = "1">
+	<specific_character id="aem_military_1_1" team_default="1">
 		<name>GENERATE_NAME_captain</name>
 		<icon>ui_npc_u_stalker_militari_antigas_2</icon>
 		<bio>bar_arena_stalker</bio>
@@ -25,7 +25,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-#include "gameplay\character_criticals_6.xml"
+		#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on2_1 -->

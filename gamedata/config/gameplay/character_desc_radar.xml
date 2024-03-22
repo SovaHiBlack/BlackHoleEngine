@@ -1,7 +1,6 @@
-<?xml version='1.0' encoding="windows-1251"?>
-
+<?xml version='1.0' encoding="utf-8"?>
 <xml>
-<!---------------------------MONOLIT REGULAR----------------------->
+	<!-- MONOLIT REGULAR -->
 	<specific_character id="rad_monolit_regular_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -16,7 +15,7 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -24,13 +23,13 @@
 			wpn_lr300 \n
 			ammo_5.56x45_ss190 = 1 \n
 			grenade_f1 = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_regular_default2" team_default = "1">
@@ -47,21 +46,21 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n
 			wpn_ak74 \n
-            ammo_5.45x39_ap = 1 \n
-	    	grenade_f1 = 1 \n
-#include "gameplay\character_drugs.xml"
+			ammo_5.45x39_ap = 1 \n
+			grenade_f1 = 1 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_regular_default3" team_default = "1">
@@ -78,21 +77,21 @@
 
 		<visual>actors\monolit\stalker_mo_mask</visual>
 		<snd_config>characters_voice\human_01\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
-			ammo_9x19_fmj \n	
+			ammo_9x19_fmj \n
 			wpn_abakan \n
-            ammo_5.45x39_ap = 1 \n
-	    	grenade_f1 = 1 \n
-#include "gameplay\character_drugs.xml"
+			ammo_5.45x39_ap = 1 \n
+			grenade_f1 = 1 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_regular_default4" team_default = "1">
@@ -109,23 +108,23 @@
 
 		<visual>actors\monolit\stalker_mo_mask</visual>
 		<snd_config>characters_voice\human_01\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
-			ammo_9x19_fmj \n	
+			ammo_9x19_fmj \n
 			wpn_abakan \n
-            ammo_5.45x39_ap = 1 \n
-#include "gameplay\character_drugs.xml"
+			ammo_5.45x39_ap = 1 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
-	
+
+
 	<specific_character id="rad_monolit_regular_default5" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -140,23 +139,23 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n
 			wpn_ak74 \n
-            ammo_5.45x39_ap = 1 \n
-#include "gameplay\character_drugs.xml"
+			ammo_5.45x39_ap = 1 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
-	
+
+
 	<specific_character id="rad_monolit_regular_default6" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -171,23 +170,23 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n
 			wpn_ak74 \n
-            ammo_5.45x39_ap = 1 \n
+			ammo_5.45x39_ap = 1 \n
 			grenade_f1 = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
+
 	<specific_character id="rad_monolit_regular_default7" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -202,23 +201,23 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n
 			wpn_abakan \n
-            ammo_5.45x39_ap = 1 \n
-            grenade_f1 = 1 \n
-#include "gameplay\character_drugs.xml"
+			ammo_5.45x39_ap = 1 \n
+			grenade_f1 = 1 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
+
 	<specific_character id="rad_monolit_regular_default8" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -233,23 +232,23 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n
 			wpn_lr300 \n
 			ammo_5.56x45_ap = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
-	
+
+
 	<specific_character id="rad_monolit_bunker_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -264,22 +263,22 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n
 			wpn_abakan \n
-            ammo_5.45x39_ap = 1 \n
+			ammo_5.45x39_ap = 1 \n
 			grenade_f1 = 1 \n
 			device_torch \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_bunker_default2" team_default = "1">
@@ -296,22 +295,22 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n
 			wpn_lr300 \n
-	    	ammo_5.56x45_ss190 = 1 \n
-	    	grenade_f1 = 1 \n
-	    	device_torch \n
-#include "gameplay\character_drugs.xml"
+			ammo_5.56x45_ss190 = 1 \n
+			grenade_f1 = 1 \n
+			device_torch \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_bunker_default3" team_default = "1">
@@ -328,22 +327,22 @@
 
 		<visual>actors\monolit\stalker_mo_mask</visual>
 		<snd_config>characters_voice\human_01\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n
 			wpn_lr300 \n
 			ammo_5.56x45_ap = 1 \n
-	    	grenade_f1 = 1 \n
-	    	device_torch \n
-#include "gameplay\character_drugs.xml"
+			grenade_f1 = 1 \n
+			device_torch \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_bunker_default4" team_default = "1">
@@ -360,24 +359,24 @@
 
 		<visual>actors\monolit\stalker_mo_mask</visual>
 		<snd_config>characters_voice\human_01\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
-			ammo_9x19_pbp = 1 \n	
+			ammo_9x19_pbp = 1 \n
 			wpn_lr300 \n
 			ammo_5.56x45_ap = 1 \n
 			device_torch \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
-	
+
+
 	<specific_character id="rad_monolit_bunker_default5" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -392,24 +391,24 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
-			ammo_9x19_pbp = 1 \n	
+			ammo_9x19_pbp = 1 \n
 			wpn_ak74 \n
-            ammo_5.45x39_ap = 1 \n
-            device_torch \n
-#include "gameplay\character_drugs.xml"
+			ammo_5.45x39_ap = 1 \n
+			device_torch \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
-	
+
+
 	<specific_character id="rad_monolit_bunker_default6" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -424,24 +423,24 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
-			ammo_9x19_pbp = 1 \n	
+			ammo_9x19_pbp = 1 \n
 			wpn_abakan \n
 			ammo_5.45x39_fmj \n
 			grenade_f1 = 1 \n
 			device_torch \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
+
 	<specific_character id="rad_monolit_bunker_default7" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -456,24 +455,24 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
-			ammo_9x19_pbp = 1 \n	
+			ammo_9x19_pbp = 1 \n
 			wpn_lr300 \n
 			ammo_5.56x45_ap = 1 \n
-            grenade_f1 = 1 \n
-            device_torch \n
-#include "gameplay\character_drugs.xml"
+			grenade_f1 = 1 \n
+			device_torch \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
+
 	<specific_character id="rad_monolit_bunker_default8" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -488,7 +487,7 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -496,18 +495,18 @@
 			wpn_l85  \n
 			ammo_5.56x45_ap = 2 \n
 			device_torch \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
-	
-	
-	
+
+
+
+
 	<specific_character id="rad_monolit_strong_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -522,7 +521,7 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -530,19 +529,19 @@
 			wpn_lr300 \n
 			ammo_5.56x45_ss190 = 1 \n
 			grenade_f1 = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_strong_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
-<bio>rad_monolith_general_bio</bio>
+		<bio>rad_monolith_general_bio</bio>
 
 		<class>rad_Monolit_regular</class>
 		<community>monolith</community>
@@ -553,21 +552,21 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_abakan \n
 			ammo_5.45x39_ap \n
-	    	grenade_f1 = 1 \n
-#include "gameplay\character_drugs.xml"
+			grenade_f1 = 1 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_strong_default3" team_default = "1">
@@ -584,21 +583,21 @@
 
 		<visual>actors\monolit\stalker_mo_mask</visual>
 		<snd_config>characters_voice\human_01\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
-			ammo_9x19_pbp = 1 \n	
+			ammo_9x19_pbp = 1 \n
 			wpn_lr300 \n
 			ammo_5.56x45_ss190 = 1 \n
-	    	grenade_f1 = 1 \n
-#include "gameplay\character_drugs.xml"
+			grenade_f1 = 1 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_strong_default4" team_default = "1">
@@ -615,23 +614,23 @@
 
 		<visual>actors\monolit\stalker_mo_mask</visual>
 		<snd_config>characters_voice\human_01\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
-			ammo_9x19_pbp = 1 \n	
+			ammo_9x19_pbp = 1 \n
 			wpn_abakan \n
-            ammo_5.45x39_ap = 1 \n
-#include "gameplay\character_drugs.xml"
+			ammo_5.45x39_ap = 1 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
-	
+
+
 	<specific_character id="rad_monolit_strong_default5" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -646,23 +645,23 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
-			ammo_9x19_pbp = 1 \n	
+			ammo_9x19_pbp = 1 \n
 			wpn_ak74 \n
-            ammo_5.45x39_ap = 1 \n
-#include "gameplay\character_drugs.xml"
+			ammo_5.45x39_ap = 1 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
-	
+
+
 	<specific_character id="rad_monolit_strong_default6" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -677,23 +676,23 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
-			ammo_9x19_pbp = 1 \n	
+			ammo_9x19_pbp = 1 \n
 			wpn_l85 \n
 			ammo_5.56x45_ap = 1 \n
 			grenade_f1 = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
+
 	<specific_character id="rad_monolit_strong_default7" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -708,23 +707,23 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
-			ammo_9x19_pbp = 1 \n	
+			ammo_9x19_pbp = 1 \n
 			wpn_abakan \n
-            ammo_5.45x39_ap = 1 \n
-            grenade_f1 = 1 \n
-#include "gameplay\character_drugs.xml"
+			ammo_5.45x39_ap = 1 \n
+			grenade_f1 = 1 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
+
 	<specific_character id="rad_monolit_strong_default8" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -739,25 +738,25 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_lr300 \n
 			ammo_5.56x45_ap = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
 
 
-<!---------------------------MONOLIT SNIPER---------------------->
+
+	<!-- MONOLIT SNIPER -->
 	<specific_character id="rad_monolit_sniper_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_mask</icon>
@@ -772,20 +771,20 @@
 
 		<visual>actors\monolit\stalker_mo_mask</visual>
 		<snd_config>characters_voice\human_01\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_svu \n
 			ammo_7.62x54_ap = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_sniper_default2" team_default = "1">
@@ -802,23 +801,23 @@
 
 		<visual>actors\monolit\stalker_mo_head_1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_svd \n
 			ammo_7.62x54_ap = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-<!---------------------------MONOLIT SPECNAZ---------------------->
+	<!-- MONOLIT SPECNAZ -->
 	<specific_character id="rad_monolit_specnaz_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_hood_9</icon>
@@ -833,20 +832,20 @@
 
 		<visual>actors\monolit\stalker_mo_hood_9</visual>
 		<snd_config>characters_voice\human_03\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_lr300 = 1, scope \n
 			ammo_5.56x45_ap = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_specnaz_default2" team_default = "1">
@@ -863,20 +862,20 @@
 
 		<visual>actors\monolit\stalker_mo_hood_9</visual>
 		<snd_config>characters_voice\human_03\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_l85 \n
 			ammo_5.56x45_ap = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_specnaz_default3" team_default = "1">
@@ -893,20 +892,20 @@
 
 		<visual>actors\monolit\stalker_mo_hood_9</visual>
 		<snd_config>characters_voice\human_03\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_lr300 \n
 			ammo_5.56x45_ap = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_specnaz_default4" team_default = "1">
@@ -923,62 +922,62 @@
 
 		<visual>actors\monolit\stalker_mo_hood_9</visual>
 		<snd_config>characters_voice\human_03\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_abakan \n
 			ammo_5.45x39_ap \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
-	
-	
+
+
 	<specific_character id="rad_monolit_master" team_default = "1">
-    <name>GENERATE_NAME_stalker</name>
-    <icon>ui_npc_u_stalker_mo_exo</icon>
-    <bio>mil_Monolit_master_bio</bio>
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_mo_exo</icon>
+		<bio>mil_Monolit_master_bio</bio>
 
-    <class>rad_monolit_master</class>
-    <community>monolith</community>
+		<class>rad_monolit_master</class>
+		<community>monolith</community>
 
 
-    <rank>934</rank>
-    <reputation>-564</reputation>
-    <money min="5000" max="10000" infinitive="0"/>
+		<rank>934</rank>
+		<reputation>-564</reputation>
+		<money min="5000" max="10000" infinitive="0"/>
 
-    <panic_threshold>0.0</panic_threshold>
+		<panic_threshold>0.0</panic_threshold>
 
-    <snd_config>characters_voice\human_03\monolith\</snd_config>
-  	<crouch_type>0</crouch_type>
+		<snd_config>characters_voice\human_03\monolith\</snd_config>
+		<crouch_type>0</crouch_type>
 
-    <visual>actors\monolit\stalker_mo_exo</visual>
-    <supplies>
-      [spawn] \n
+		<visual>actors\monolit\stalker_mo_exo</visual>
+		<supplies>
+			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_g36 \n
 			ammo_5.56x45_ap = 1 \n
-#include "gameplay\character_drugs.xml"
-    </supplies>
-    
-#include "gameplay\character_criticals_1.xml"
-					
-		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
-  </specific_character>
-  
-  
-  
-	
+			#include "gameplay\character_drugs.xml"
+		</supplies>
 
-<!---------------------------MONOLIT REGULAR with RPG----------------------->
+		#include "gameplay\character_criticals_1.xml"
+
+		<start_dialog>hello_dialog</start_dialog>
+		#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+
+
+
+
+	<!-- MONOLIT REGULAR with RPG -->
 	<specific_character id="rad_monolit_rpg_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
@@ -993,26 +992,26 @@
 
 		<visual>actors\monolit\stalker_mo_head1</visual>
 		<snd_config>characters_voice\human_02\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_rpg7 \n
 			ammo_og-7b = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_monolit_rpg_default2" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_mask</icon>
-	<bio>rad_monolith_general_bio</bio>
+		<bio>rad_monolith_general_bio</bio>
 
 		<class>rad_Monolit_rpg</class>
 		<community>monolith</community>
@@ -1023,27 +1022,27 @@
 
 		<visual>actors\monolit\stalker_mo_mask</visual>
 		<snd_config>characters_voice\human_01\monolith\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_rpg7 \n
 			ammo_og-7b = 1 \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 
 
 
 
-<!---------------------------ZOMBIED----------------------->
+	<!-- ZOMBIED -->
 	<specific_character id="rad_zombied_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_zombie1</icon>
@@ -1058,19 +1057,19 @@
 
 		<visual>actors\stalker_zombi\stalker_zombie1</visual>
 		<snd_config>characters_voice\human_01\zombied\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
-		    wpn_mp5 \n
+			wpn_mp5 \n
 			ammo_9x19_fmj \n
 		</supplies>
-		
-#include "gameplay\character_criticals_1.xml"
+
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_zombied_default2" team_default = "1">
@@ -1088,7 +1087,7 @@
 
 		<visual>actors\stalker_zombi\stalker_zombie2</visual>
 		<snd_config>characters_voice\human_02\zombied\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1097,10 +1096,10 @@
 			ammo_5.45x39_fmj \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_zombied_default3" team_default = "1">
@@ -1118,7 +1117,7 @@
 
 		<visual>actors\stalker_zombi\stalker_zombie3</visual>
 		<snd_config>characters_voice\human_01\zombied\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1127,10 +1126,10 @@
 			ammo_5.45x39_ap = 1 \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_zombied_default4" team_default = "1">
@@ -1148,7 +1147,7 @@
 
 		<visual>actors\stalker_zombi\stalker_zombie4</visual>
 		<snd_config>characters_voice\human_02\zombied\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1157,10 +1156,10 @@
 			ammo_5.56x45_ap = 1 \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_zombied_default5" team_default = "1">
@@ -1178,7 +1177,7 @@
 
 		<visual>actors\stalker_zombi\stalker_zombie5</visual>
 		<snd_config>characters_voice\human_01\zombied\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1187,10 +1186,10 @@
 			ammo_5.45x39_ap = 1 \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_zombied_default6" team_default = "1">
@@ -1208,7 +1207,7 @@
 
 		<visual>actors\stalker_zombi\stalker_zombie6</visual>
 		<snd_config>characters_voice\human_02\zombied\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1217,10 +1216,10 @@
 			ammo_12x76_zhekan = 1 \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_zombied_default7" team_default = "1">
@@ -1238,7 +1237,7 @@
 
 		<visual>actors\stalker_zombi\stalker_zombie7</visual>
 		<snd_config>characters_voice\human_01\zombied\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1247,10 +1246,10 @@
 			ammo_5.56x45_ap = 1 \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_zombied_default8" team_default = "1">
@@ -1268,7 +1267,7 @@
 
 		<visual>actors\stalker_zombi\stalker_zombie8</visual>
 		<snd_config>characters_voice\human_02\zombied\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1277,13 +1276,13 @@
 			ammo_5.56x45_ap = 1 \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-<!---------------------------ZOMBIED VETERANS----------------------->
+	<!-- ZOMBIED VETERANS -->
 	<specific_character id="rad_zombied_veteran_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_zombie_exoskeleton</icon>
@@ -1299,7 +1298,7 @@
 
 		<visual>actors\stalker_zombi\zombie_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\zombied\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1309,10 +1308,10 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_zombied_veteran_default2" team_default = "1">
@@ -1330,7 +1329,7 @@
 
 		<visual>actors\stalker_zombi\zombie_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\zombied\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1340,10 +1339,10 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_zombied_veteran_default3" team_default = "1">
@@ -1361,7 +1360,7 @@
 
 		<visual>actors\stalker_zombi\zombie_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\zombied\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1371,10 +1370,10 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_zombied_veteran_default4" team_default = "1">
@@ -1392,7 +1391,7 @@
 
 		<visual>actors\stalker_zombi\zombie_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\zombied\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1402,14 +1401,14 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+		#include "gameplay\character_criticals_1.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 
-<!---------------------------STALKER VETERAN---------------------->
+	<!-- STALKER VETERAN -->
 	<specific_character id="rad_stalker_veteran_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_9</icon>
@@ -1425,22 +1424,22 @@
 
 		<visual>actors\neytral\stalker_neytral_hood_9</visual>
 		<snd_config>characters_voice\human_03\stalker\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_lr300 \n
 			ammo_5.56x45_ap = 1 \n
-ammo_12x70_buck=9 \n
+			ammo_12x70_buck=9 \n
 			device_torch \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_4.xml"
+
+		#include "gameplay\character_criticals_4.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 
 	</specific_character>
 
@@ -1459,22 +1458,22 @@ ammo_12x70_buck=9 \n
 
 		<visual>actors\neytral\stalker_neytral_hood_8</visual>
 		<snd_config>characters_voice\human_01\stalker\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_ak74 = 1, scope \n
 			ammo_5.45x39_ap = 1 \n
-ammo_7.62x54_7h1=1 \n
+			ammo_7.62x54_7h1=1 \n
 			device_torch \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_4.xml"
+
+		#include "gameplay\character_criticals_4.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 
 	</specific_character>
 
@@ -1493,22 +1492,22 @@ ammo_7.62x54_7h1=1 \n
 
 		<visual>actors\neytral\stalker_neytral_rukzak_2</visual>
 		<snd_config>characters_voice\human_02\stalker\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_l85 \n
 			ammo_5.56x45_ss190 = 1 \n
-ammo_5.45x39_ap=6 \n
+			ammo_5.45x39_ap=6 \n
 			device_torch \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_4.xml"
+
+		#include "gameplay\character_criticals_4.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 
 	</specific_character>
 
@@ -1527,22 +1526,22 @@ ammo_5.45x39_ap=6 \n
 
 		<visual>actors\neytral\stalker_neytral_hood_9</visual>
 		<snd_config>characters_voice\human_03\stalker\</snd_config>
-  		<crouch_type>-1</crouch_type>
+		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_abakan \n
 			ammo_5.45x39_fmj \n
-ammo_5.56x45_ap=8 \n
+			ammo_5.56x45_ap=8 \n
 			device_torch \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_4.xml"
+
+		#include "gameplay\character_criticals_4.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 
 	</specific_character>
 
@@ -1561,26 +1560,26 @@ ammo_5.56x45_ap=8 \n
 
 		<visual>actors\neytral\stalker_neytral_nauchniy</visual>
 		<snd_config>characters_voice\human_03\stalker\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_abakan = 1, scope silencer launcher\n
-	    	ammo_5.45x39_ap = 1 \n
-ammo_9x39_sp5=4 \n
+			ammo_5.45x39_ap = 1 \n
+			ammo_9x39_sp5=4 \n
 			device_torch \n
-#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_4.xml"
+
+		#include "gameplay\character_criticals_4.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 
 	</specific_character>
 
-<!---------------------------STALKER MASTER----------------------->
+	<!-- STALKER MASTER -->
 	<specific_character id="rad_stalker_master_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_exoskeleton</icon>
@@ -1596,21 +1595,21 @@ ammo_9x39_sp5=4 \n
 
 		<visual>actors\neytral\stalker_neytral_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\stalker\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_val \n
 			ammo_9x39_sp5 = 1 \n
-ammo_7.62x54_ap=2 \n
-#include "gameplay\character_drugs.xml"
+			ammo_7.62x54_ap=2 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
 
-#include "gameplay\character_criticals_2.xml"
+		#include "gameplay\character_criticals_2.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 
 	</specific_character>
 
@@ -1629,21 +1628,21 @@ ammo_7.62x54_ap=2 \n
 
 		<visual>actors\neytral\stalker_neytral_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\stalker\</snd_config>
-   		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_lr300 = 1, scope \n
 			ammo_5.56x45_ap \n
-ammo_9x39_ap=5 \n
-#include "gameplay\character_drugs.xml"
+			ammo_9x39_ap=5 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
 
-#include "gameplay\character_criticals_2.xml"
+		#include "gameplay\character_criticals_2.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 
 	</specific_character>
 
@@ -1662,21 +1661,21 @@ ammo_9x39_ap=5 \n
 
 		<visual>actors\neytral\stalker_neytral_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\stalker\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_abakan = 1, scope \n
 			ammo_5.45x39_fmj \n
-ammo_9x39_ap=6 \n
-#include "gameplay\character_drugs.xml"
+			ammo_9x39_ap=6 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
 
-#include "gameplay\character_criticals_2.xml"
+		#include "gameplay\character_criticals_2.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_stalker_master_default4" team_default = "1">
@@ -1694,21 +1693,21 @@ ammo_9x39_ap=6 \n
 
 		<visual>actors\neytral\stalker_neytral_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\stalker\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_ak74 = 1, scope silencer \n
-	    	ammo_5.45x39_ap = 1 \n
-ammo_11.43x23_hydro=10 \n
-#include "gameplay\character_drugs.xml"
+			ammo_5.45x39_ap = 1 \n
+			ammo_11.43x23_hydro=10 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_2.xml"
+
+		#include "gameplay\character_criticals_2.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_stalker_master_default5" team_default = "1">
@@ -1726,25 +1725,25 @@ ammo_11.43x23_hydro=10 \n
 
 		<visual>actors\neytral\stalker_neytral_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\stalker\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_val \n
 			ammo_9x39_sp5 = 1 \n
-ammo_5.45x39_fmj=9 \n
-#include "gameplay\character_drugs.xml"
+			ammo_5.45x39_fmj=9 \n
+			#include "gameplay\character_drugs.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_2.xml"
+
+		#include "gameplay\character_criticals_2.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 
-	<!---------------------------SOLDIER SPECNAZ---------------------->
+	<!-- SOLDIER SPECNAZ -->
 
 	<specific_character id="rad_soldier_specnaz_default1" team_default = "1">
 		<name>GENERATE_NAME_lieutenant</name>
@@ -1761,7 +1760,7 @@ ammo_5.45x39_fmj=9 \n
 
 		<visual>actors\soldier\soldier_spetsnaz</visual>
 		<snd_config>characters_voice\human_01\military\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1769,14 +1768,14 @@ ammo_5.45x39_fmj=9 \n
 			wpn_abakan = 1, scope silencer \n
 			ammo_5.45x39_ap \n
 			device_torch \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_6.xml"
+
+		#include "gameplay\character_criticals_6.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_soldier_specnaz_default2" team_default = "1">
@@ -1794,7 +1793,7 @@ ammo_5.45x39_fmj=9 \n
 
 		<visual>actors\soldier\soldier_spetsnaz</visual>
 		<snd_config>characters_voice\human_02\military\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1802,14 +1801,14 @@ ammo_5.45x39_fmj=9 \n
 			wpn_abakan = 1, scope silencer \n
 			ammo_5.45x39_ap \n
 			device_torch \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_6.xml"
+
+		#include "gameplay\character_criticals_6.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_soldier_specnaz_default3" team_default = "1">
@@ -1827,7 +1826,7 @@ ammo_5.45x39_fmj=9 \n
 
 		<visual>actors\soldier\soldier_spetsnaz</visual>
 		<snd_config>characters_voice\human_01\military\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_walther \n
@@ -1835,17 +1834,17 @@ ammo_5.45x39_fmj=9 \n
 			wpn_abakan = 1, scope silencer \n
 			ammo_5.45x39_ap \n
 			device_torch \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_6.xml"
+
+		#include "gameplay\character_criticals_6.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-<!---------------------------SVOBODA MASTER----------------------->
+	<!-- SVOBODA MASTER -->
 
 	<specific_character id="rad_Svoboda_master1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
@@ -1862,22 +1861,22 @@ ammo_5.45x39_fmj=9 \n
 
 		<visual>actors\svoboda\stalker_sv_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\freedom\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_usp \n
 			ammo_11.43x23_fmj = 1 \n
 			wpn_g36 \n
 			ammo_5.56x45_ap = 1 \n
-ammo_5.45x39_fmj=6 \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			ammo_5.45x39_fmj=6 \n
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_2.xml"
+
+		#include "gameplay\character_criticals_2.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_Svoboda_master2" team_default = "1">
@@ -1895,22 +1894,22 @@ ammo_5.45x39_fmj=6 \n
 
 		<visual>actors\svoboda\stalker_sv_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\freedom\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_usp \n
 			ammo_11.43x23_fmj = 1 \n
 			wpn_lr300 = 1, scope \n
 			ammo_5.56x45_ap = 1 \n
-ammo_9x39_pab9=3 \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			ammo_9x39_pab9=3 \n
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_2.xml"
+
+		#include "gameplay\character_criticals_2.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_Svoboda_master3" team_default = "1">
@@ -1928,25 +1927,25 @@ ammo_9x39_pab9=3 \n
 
 		<visual>actors\svoboda\stalker_sv_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\freedom\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_usp \n
 			ammo_11.43x23_fmj = 1 \n
 			wpn_g36 \n
 			ammo_5.56x45_ap = 1 \n
-ammo_9x39_sp5=6 \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			ammo_9x39_sp5=6 \n
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_2.xml"
+
+		#include "gameplay\character_criticals_2.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-<!---------------------------DOLG MASTER---------------------->
+	<!-- DOLG MASTER -->
 	<specific_character id="rad_dolg_master_default1" team_default = "1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_exoskeleton</icon>
@@ -1962,23 +1961,23 @@ ammo_9x39_sp5=6 \n
 
 		<visual>actors\dolg\stalker_do_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\dolg\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_sig220 \n
 			ammo_11.43x23_hydro = 1 \n
 			wpn_val \n
 			ammo_9x39_sp5 = 1 \n
-ammo_5.45x39_ap=3 \n
-ammo_12x70_buck=6 \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			ammo_5.45x39_ap=3 \n
+			ammo_12x70_buck=6 \n
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_2.xml"
+
+		#include "gameplay\character_criticals_2.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_dolg_master_default2" team_default = "1">
@@ -1996,7 +1995,7 @@ ammo_12x70_buck=6 \n
 
 		<visual>actors\dolg\stalker_do_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\dolg\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_sig220 \n
@@ -2005,15 +2004,15 @@ ammo_12x70_buck=6 \n
 			ammo_9x39_pab9 = 1 \n
 			ammo_9x39_sp5 = 1 \n
 			ammo_vog-25 = 2 \n
-ammo_12x70_buck=9 \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			ammo_12x70_buck=9 \n
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_2.xml"
+
+		#include "gameplay\character_criticals_2.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_dolg_master_default3" team_default = "1">
@@ -2031,22 +2030,22 @@ ammo_12x70_buck=9 \n
 
 		<visual>actors\dolg\stalker_do_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\dolg\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_sig220 \n
 			ammo_11.43x23_hydro = 1 \n
 			wpn_val \n
 			ammo_9x39_sp5 = 1 \n
-ammo_5.45x39_ap=9 \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			ammo_5.45x39_ap=9 \n
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_2.xml"
+
+		#include "gameplay\character_criticals_2.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_dolg_master_default4" team_default = "1">
@@ -2064,24 +2063,24 @@ ammo_5.45x39_ap=9 \n
 
 		<visual>actors\dolg\stalker_do_exoskeleton</visual>
 		<snd_config>characters_voice\human_03\dolg\</snd_config>
-  		<crouch_type>0</crouch_type>
+		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_sig220 \n
 			ammo_11.43x23_hydro = 1 \n
 			wpn_abakan = 1, scope silencer launcher cond=0.9 \n
-	    	ammo_5.45x39_ap = 1 \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			ammo_5.45x39_ap = 1 \n
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_2.xml"
+
+		#include "gameplay\character_criticals_2.xml"
 
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-<!--------------------------- dead SCIENTISTS ---------------------->
+	<!-- dead SCIENTISTS -->
 
 	<specific_character id="rad_ecolog_default1" team_default = "1">
 		<name>rad_ecolog_name</name>
@@ -2091,26 +2090,26 @@ ammo_5.45x39_ap=9 \n
 		<class>rad_Ecolog</class>
 		<community>ecolog</community>
 		<terrain_sect>stalker_ecolog_terrain</terrain_sect>
-		
+
 		<rank>783</rank>
 		<reputation>50</reputation>
 		<money min="2000" max="5000" infinitive="0"/>
 
 		<visual>actors\ecolog\stalker_ecolog</visual>
 		<snd_config>characters_voice\human_03\ecolog\</snd_config>
-  		<crouch_type>1</crouch_type>
+		<crouch_type>1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_sig220 \n
 			ammo_11.43x23_hydro = 1 \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_3.xml"
-			
+
+		#include "gameplay\character_criticals_3.xml"
+
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_ecolog_default2" team_default = "1">
@@ -2128,21 +2127,21 @@ ammo_5.45x39_ap=9 \n
 
 		<visual>actors\ecolog\stalker_ecolog_military</visual>
 		<snd_config>characters_voice\human_03\ecolog\</snd_config>
-  		<crouch_type>1</crouch_type>
+		<crouch_type>1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_sig220 \n
 			ammo_11.43x23_hydro = 1 \n
 			wpn_ak74 \n
 			ammo_5.45x39_fmj = 1 \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_3.xml"
-			
+
+		#include "gameplay\character_criticals_3.xml"
+
 		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
+		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
 	<specific_character id="rad_ecolog_default3" team_default = "1">
@@ -2160,23 +2159,20 @@ ammo_5.45x39_ap=9 \n
 
 		<visual>actors\ecolog\stalker_ecolog_military</visual>
 		<snd_config>characters_voice\human_03\ecolog\</snd_config>
-  		<crouch_type>1</crouch_type>
+		<crouch_type>1</crouch_type>
 		<supplies>
 			[spawn] \n
 			wpn_sig220 \n
 			ammo_11.43x23_hydro = 1 \n
 			wpn_ak74 \n
 			ammo_5.45x39_fmj = 1 \n
-#include "gameplay\character_drugs.xml"
-#include "gameplay\character_food.xml"
+			#include "gameplay\character_drugs.xml"
+			#include "gameplay\character_food.xml"
 		</supplies>
-		
-#include "gameplay\character_criticals_3.xml"
-			
-		<start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
-	</specific_character>
-	
-	
 
+		#include "gameplay\character_criticals_3.xml"
+
+		<start_dialog>hello_dialog</start_dialog>
+		#include "gameplay\character_dialogs.xml"
+	</specific_character>
 </xml>

@@ -1,11 +1,11 @@
-* Detected CPU: GenuineIntel P3 family, F6/M10/S9, 2694.00 mhz, 31-clk 'rdtsc'
+* Detected CPU: GenuineIntel P3 family, F6/M10/S9, 2692.00 mhz, 27-clk 'rdtsc'
 * CPU Features: RDTSC, MMX, SSE, SSE2
 
 Initializing File System...
 using fs-ltx fsgame.ltx
 FS: 30241 files cached, 5142Kb memory used.
-Init FileSystem 13.868340 sec
-'xrCore' build 9171, Mar 18 2024
+Init FileSystem 15.871487 sec
+'xrCore' build 9175, Mar 22 2024
 
 Initializing Engine...
 Executing config-script "user.ltx"...
@@ -14,7 +14,7 @@ Starting INPUT device...
 Loading DLL: xrRender_R2.dll
 Loading DLL: xrGame.dll
 ! Unable to find Software\GSC Game World\STALKER-SHOC\ in registry
-* [win32]: free[4049632 K], reserved[50112 K], committed[94496 K]
+* [win32]: free[4050652 K], reserved[50428 K], committed[93160 K]
 * [ D3D ]: textures[0 K]
 * [x-ray]: process heap[9325 K], game lua[0 K], engine lua[0 K], render[0 K]
 * [x-ray]: economy: strings[2004 K], smem[0 K]
@@ -65,7 +65,7 @@ Starting RENDER device...
 ! Renderer doesn't support blender 'effects\shadow_world'
 ! Version conflict in shader 'effects\watertest-1'
 count of .thm files=6
-load time=54 ms
+load time=88 ms
 * NULLRT supported
 * ...and used
 * HWDST/PCF supported and used
@@ -79,52 +79,52 @@ Loading DLL: xrGameSpy.dll
 - r2_tf_mipbias 0.
 * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
 * GPU vertex cache: recognized, 32
-*** RESET [361 ms]
+*** RESET [380 ms]
 "d:\engine\blackholeengine\sources\..\release-win32\binaries\xr_3da.exe" 
 * phase time: 0 ms
-* phase cmem: 85797 K
+* phase cmem: 82851 K
 Кэширование объектов...
 Loading objects...
 Loading models...
-* [prefetch] time:    25773 ms
-* [prefetch] memory:  419097Kb
-* phase time: 25942 ms
-* phase cmem: 491818 K
+* [prefetch] time:    25766 ms
+* [prefetch] memory:  419081Kb
+* phase time: 25837 ms
+* phase cmem: 489206 K
 Сервер: Старт...
-* phase time: 172 ms
-* phase cmem: 492041 K
+* phase time: 128 ms
+* phase cmem: 489429 K
 Сервер: Загрузка симуляции жизни...
-* phase time: 14 ms
-* phase cmem: 492041 K
+* phase time: 18 ms
+* phase cmem: 489429 K
 Создание новой игры...
 * Creating new game...
 * Loading spawn registry...
 * 8641 spawn points are successfully loaded
 * Saving spawns...
 * Saving objects...
-* 17156 objects are successfully saved
+* 15507 objects are successfully saved
 * Game all.sav is successfully saved to file 'd:\engine\blackholeengine\release-win32\..\app_data\savedgames\all.sav'
 * New game is successfully created!
-* phase time: 4740 ms
-* phase cmem: 522615 K
+* phase time: 4588 ms
+* phase cmem: 519266 K
 Сервер: Соединяемся...
 MaxPlayers = 32
-* phase time: 46 ms
-* phase cmem: 522682 K
+* phase time: 49 ms
+* phase cmem: 519332 K
 Клиент: Соединение с localhost...
 # Player not found. New player created.
 * client : connection accepted - <>
-* phase time: 54 ms
-* phase cmem: 522722 K
+* phase time: 31 ms
+* phase cmem: 519357 K
 Открытие потока...
 * phase time: 29 ms
-* phase cmem: 522722 K
+* phase cmem: 519357 K
 Загрузка формы объектов...
-* phase time: 3443 ms
-* phase cmem: 593319 K
+* phase time: 3256 ms
+* phase cmem: 592025 K
 Загрузка шейдеров...
-* phase time: 326 ms
-* phase cmem: 594696 K
+* phase time: 358 ms
+* phase cmem: 593403 K
 Загрузка геометрии...
 * [Loading VB] 65532 verts, 2047 Kb
 * [Loading VB] 65525 verts, 2047 Kb
@@ -167,47 +167,46 @@ MaxPlayers = 32
 * [Loading IB] 1048575 indices, 2047 Kb
 * [Loading IB] 1048575 indices, 2047 Kb
 * [Loading IB] 718302 indices, 1402 Kb
-* phase time: 645 ms
-* phase cmem: 663470 K
+* phase time: 551 ms
+* phase cmem: 662176 K
 Загрузка базы пространств...
-* phase time: 1524 ms
-* phase cmem: 667902 K
+* phase time: 1230 ms
+* phase cmem: 666608 K
 Загрузка детальных объектов...
 * [DETAILS] VertexConsts(256), Batch(61)
 * [DETAILS] 40687 v(20), 26352 p
 * [DETAILS] Batch(61), VB(794K), IB(154K)
-* phase time: 133 ms
-* phase cmem: 668878 K
+* phase time: 109 ms
+* phase cmem: 667600 K
 Загрузка секторов и порталов...
 * Loading HOM: d:\engine\blackholeengine\release-win32\..\gamedata\levels\l01_escape\level.hom
-* phase time: 86 ms
-* phase cmem: 669083 K
+* phase time: 61 ms
+* phase cmem: 667789 K
 Загрузка ИИ объектов...
 - Loading music tracks from 'l01_escape_musics'...
-* phase time: 264 ms
-* phase cmem: 669122 K
+* phase time: 214 ms
+* phase cmem: 667829 K
 Клиент: Создание...
 - Game configuring : Started 
 - Game configuring : Finished 
-* phase time: 819 ms
-* phase cmem: 677285 K
+* phase time: 754 ms
+* phase cmem: 675582 K
 Загрузка текстур...
 * t-report - base: 1445, 566111 K
 * t-report - lmap: 5, 5120 K
-* phase time: 9981 ms
-* phase cmem: 974189 K
+* phase time: 10315 ms
+* phase cmem: 972486 K
 Клиент: Синхронизация...
 * phase time: 142 ms
-* phase cmem: 974189 K
-* [win32]: free[2883952 K], reserved[80060 K], committed[1230228 K]
+* phase cmem: 972502 K
+* [win32]: free[2885028 K], reserved[81408 K], committed[1227804 K]
 * [ D3D ]: textures[571232 K]
-* [x-ray]: process heap[974189 K], game lua[28753 K], engine lua[142 K], render[0 K]
-* [x-ray]: economy: strings[4655 K], smem[15587 K]
-Intro start 51676
-* MEMORY USAGE: 1001832 K
+* [x-ray]: process heap[972502 K], game lua[28697 K], engine lua[125 K], render[0 K]
+* [x-ray]: economy: strings[4561 K], smem[15587 K]
+Intro start 104523
+* MEMORY USAGE: 1000728 K
 - Disconnect
 - Destroying level
-DestroySingleton::RefCounter: 0
 DestroySingleton::RefCounter: 0
 DestroySingleton::RefCounter: 0
 DestroySingleton::RefCounter: 0

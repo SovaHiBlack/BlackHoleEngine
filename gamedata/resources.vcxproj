@@ -288,8 +288,6 @@
     <None Include="Config\creatures\helicopter.ltx" />
     <None Include="Config\creatures\immunities.ltx" />
     <None Include="Config\creatures\monsters.ltx" />
-    <None Include="config\creatures\m_army.ltx" />
-    <None Include="config\creatures\m_bandit.ltx" />
     <None Include="Config\creatures\m_bloodsucker.ltx" />
     <None Include="Config\creatures\m_boar.ltx" />
     <None Include="Config\creatures\m_burer.ltx" />
@@ -297,10 +295,8 @@
     <None Include="Config\creatures\m_chimera.ltx" />
     <None Include="Config\creatures\m_controller.ltx" />
     <None Include="Config\creatures\m_crow.ltx" />
-    <None Include="config\creatures\m_dog_.ltx" />
     <None Include="Config\creatures\m_dog.ltx" />
     <None Include="Config\creatures\m_flesh.ltx" />
-    <None Include="Config\creatures\m_fraction.ltx" />
     <None Include="Config\creatures\m_fracture.ltx" />
     <None Include="Config\creatures\m_giant.ltx" />
     <None Include="Config\creatures\m_person.ltx" />
@@ -1719,6 +1715,7 @@
   </ItemGroup>
   <ItemGroup>
     <Xml Include="config\gameplay\character_desc_aem.xml" />
+    <Xml Include="config\gameplay\character_desc_nouse.xml" />
     <Xml Include="config\gameplay\info_aem.xml" />
     <Xml Include="config\gameplay\character_criticals_1.xml" />
     <Xml Include="config\gameplay\character_criticals_2.xml" />

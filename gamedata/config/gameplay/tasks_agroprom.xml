@@ -21,6 +21,7 @@
 			<infoportion_complete>agroprom_military_case_done</infoportion_complete>
 		</objective>
 	</game_task>
+
 	<game_task id="agr_meet_krot_band" prio="465">
 		<title>agr_meet_krot_band</title>
 		<objective key="0">
@@ -49,6 +50,7 @@
 			<infoportion_complete>agr_krot_secret_info</infoportion_complete>
 		</objective>
 	</game_task>
+
 	<game_task id="agroprom_find_gunslinger_cache" prio="450">
 		<title>agroprom_find_gunslinger_cache</title>
 		<objective>
@@ -78,6 +80,7 @@
 			<infoportion_complete>agr_find_gunslinger_cache_final</infoportion_complete>
 		</objective>
 	</game_task>
+
 	<game_task id="agroprom_find_stalker_phantom" prio="0">
 		<title>agroprom_find_stalker_phantom</title>
 		<objective>
@@ -90,6 +93,7 @@
 			<infoportion_complete>yan_provodnik_spawn</infoportion_complete>
 		</objective>
 	</game_task>
+
 	<game_task id="agr_help_stalkers" prio="460">
 		<title>agr_help_stalkers</title>
 		<objective>
@@ -109,6 +113,7 @@
 			<infoportion_fail>agr_help_stalkers_defence_dead</infoportion_fail>
 		</objective>
 	</game_task>
+
 	<game_task id="agr_help_krot" prio="455">
 		<title>agr_help_krot</title>
 		<objective>
@@ -135,6 +140,7 @@
 			<infoportion_fail>agr_krot_dead</infoportion_fail>
 		</objective>
 	</game_task>
+
 	<game_task id="agr_find_ghost">
 		<title>agr_find_ghost</title>
 		<objective>

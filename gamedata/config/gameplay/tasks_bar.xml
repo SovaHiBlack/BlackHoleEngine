@@ -23,7 +23,6 @@
 		</objective>
 	</game_task>
 
-
 	<game_task id="bar_resque_information_2" prio="360">
 		<title>bar_resque_information_2</title>
 		<objective>
@@ -50,8 +49,6 @@
 			<infoportion_fail>bar_rescue_research_fail</infoportion_fail>
 		</objective>
 	</game_task>
-
-
 
 	<game_task id="bar_hunter_rifle">
 		<title>bar_hunter_rifle</title>
@@ -110,7 +107,6 @@
 		</objective>
 	</game_task>
 
-
 	<game_task id="bar_dolg_community_quest">
 		<title>bar_dolg_community_quest</title>
 		<objective>
@@ -149,7 +145,6 @@
 			<infoportion_complete>bar_dolg_base_rules_finish</infoportion_complete>
 		</objective>
 	</game_task>
-
 
 	<game_task id="bar_dolg_test_quest">
 		<title>bar_dolg_test_quest</title>
@@ -204,7 +199,6 @@
 		</objective>
 	</game_task>
 
-
 	<game_task id="bar_dolg_svoboda_leader_kill_quest">
 		<title>bar_dolg_svoboda_leader_kill_quest</title>
 		<objective>
@@ -234,7 +228,6 @@
 			<infoportion_complete>bar_kill_svoboda_leader_done</infoportion_complete>
 		</objective>
 	</game_task>
-
 
 	<game_task id="bar_x16_documents" prio="380">
 		<title>bar_x16_documents</title>
@@ -291,7 +284,6 @@
 		</objective>
 	</game_task>
 
-
 	<game_task id="bar_barman_job_1" prio="0">
 		<title>bar_barman_job</title>
 		<objective>
@@ -305,6 +297,7 @@
 			<infoportion_complete>bar_darklab_document_start</infoportion_complete>
 		</objective>
 	</game_task>
+
 	<game_task id="bar_barman_job_2" prio="0">
 		<title>bar_barman_job</title>
 		<objective>
@@ -318,6 +311,7 @@
 			<infoportion_complete>bar_x16_documents_start</infoportion_complete>
 		</objective>
 	</game_task>
+
 	<game_task id="bar_barman_job_3" prio="0">
 		<title>bar_barman_job</title>
 		<objective>
@@ -331,4 +325,3 @@
 			<infoportion_complete>bar_deactivate_radar_start</infoportion_complete>
 		</objective>
 	</game_task>
-

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding="windows-1251"?>
 <xml>
 	<!-- MONOLIT REGULAR with RPG -->
-	<specific_character id="aes_Monolit_rpg" team_default = "1">
+	<specific_character id="aes_Monolit_rpg" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_mask</icon>
 		<bio>aes_Monolit_rpg_bio</bio>
@@ -39,7 +39,7 @@
 	</specific_character>
 
 	<!-- MONOLIT SPECNAZ -->
-	<specific_character id="aes_Monolit_specnaz" team_default = "1">
+	<specific_character id="aes_Monolit_specnaz" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_hood_9</icon>
 		<bio>aes_Monolit_specnaz_bio</bio>
@@ -73,7 +73,7 @@
 	</specific_character>
 
 	<!-- MONOLIT SPECNAZ RG6 -->
-	<specific_character id="aes_Monolit_specnaz_rg6" team_default = "1">
+	<specific_character id="aes_Monolit_specnaz_rg6" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_hood_9</icon>
 		<bio>Боевик группировки "Монолит". Хорошо экипирован. Детальная информация отсутствует.</bio>
@@ -102,7 +102,7 @@
 	</specific_character>
 
 	<!-- MONOLIT SNIPER -->
-	<specific_character id="aes_Monolit_sniper" team_default = "1">
+	<specific_character id="aes_Monolit_sniper" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
 		<bio>aes_Monolit_sniper_bio</bio>
@@ -134,8 +134,9 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
+
 	<!-- MONOLIT SNIPER GAUSS -->
-	<specific_character id="aes_Monolit_sniper_gauss" team_default = "1">
+	<specific_character id="aes_Monolit_sniper_gauss" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_mask</icon>
 		<bio>Сталкер группировки "Монолит". Детальная информация отсутствует.</bio>
@@ -167,15 +168,15 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
+
 	<!-- MONOLIT MASTER -->
-	<specific_character id="aes_Monolit_master" team_default = "1">
+	<specific_character id="aes_Monolit_master" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_exo</icon>
 		<bio>Хранитель группировки "Монолит". Лучше держаться от него подальше. Детальная информация отсутствует.</bio>
 
 		<class>aes_Monolit_master</class>
 		<community>monolith</community>
-
 
 		<rank>920</rank>
 		<reputation>-863</reputation>
@@ -188,7 +189,7 @@
 		<visual>actors\monolit\stalker_mo_exo</visual>
 		<supplies>
 			[spawn] \n
-			wpn_usp  \n
+			wpn_usp \n
 			ammo_11.43x23_hydro = 1 \n
 			wpn_g36 \n
 			ammo_5.56x45_ss190 = 1 \n
@@ -206,7 +207,7 @@
 
 	<!-- SOLDIERS PROFILES -->
 	<!-- SOLDIER COMMANDER -->
-	<specific_character id="aes_Soldier_commander" team_default = "1">
+	<specific_character id="aes_Soldier_commander" team_default="1">
 		<name>GENERATE_NAME_captain</name>
 		<icon>ui_npc_u_soldier_beret_5</icon>
 		<bio>aes_Soldier_commander_bio</bio>
@@ -226,7 +227,7 @@
 		<visual>actors\soldier\soldier_beret_5</visual>
 		<supplies>
 			[spawn] \n
-			wpn_usp  \n
+			wpn_usp \n
 			ammo_11.43x23_hydro = 1 \n
 			wpn_val \n
 			ammo_9x39_sp5 = 1 \n
@@ -241,8 +242,9 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
+
 	<!-- SOLDIER MASTER -->
-	<specific_character id="aes_Soldier_military" team_default = "1">
+	<specific_character id="aes_Soldier_military" team_default="1">
 		<name>GENERATE_NAME_lieutenant</name>
 		<icon>ui_npc_u_stalker_militari_antigas_2</icon>
 		<bio>aes_Soldier_military_bio</bio>
@@ -279,8 +281,9 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
+
 	<!-- SOLDIER SPECNAZ -->
-	<specific_character id="aes_Soldier_specnaz" team_default = "1">
+	<specific_character id="aes_Soldier_specnaz" team_default="1">
 		<name>GENERATE_NAME_sergeant</name>
 		<icon>ui_npc_u_soldier_antigas</icon>
 		<bio>aes_Soldier_specnaz_bio</bio>
@@ -317,8 +320,9 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
+
 	<!-- SOLDIER SPECNAZ AES -->
-	<specific_character id="aes_Soldier_specnaz_aes" team_default = "1">
+	<specific_character id="aes_Soldier_specnaz_aes" team_default="1">
 		<name>aes_Soldier_specnaz_aes_name</name>
 		<icon>ui_npc_u_stalker_militari_antigas_2</icon>
 		<bio>aes_Soldier_specnaz_aes_bio</bio>
@@ -354,8 +358,9 @@
 		<start_dialog>hello_dialog</start_dialog>
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
+
 	<!-- SOLDIER SNIPER -->
-	<specific_character id="aes_Soldier_sniper" team_default = "1">
+	<specific_character id="aes_Soldier_sniper" team_default="1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_stalker_militari_1</icon>
 		<bio>aes_Soldier_sniper_bio</bio>
@@ -395,7 +400,7 @@
 	</specific_character>
 
 	<!-- SOLDIER SNIPER -->
-	<specific_character id="aes_x" team_default = "1">
+	<specific_character id="aes_x" team_default="1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_stalker_militari_antigas_1</icon>
 		<bio>Рядовой солдат. Детальная информация отсутствует.</bio>
@@ -432,8 +437,9 @@
 		<actor_dialog>esc_stalker_talk_level</actor_dialog>
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
+
 	<!-- SOLDIER SNIPER -->
-	<specific_character id="aes_x_2" team_default = "1">
+	<specific_character id="aes_x_2" team_default="1">
 		<name>GENERATE_NAME_private</name>
 		<icon>ui_npc_u_stalker_militari_antigas_1</icon>
 		<bio>Рядовой солдат. Детальная информация отсутствует.</bio>

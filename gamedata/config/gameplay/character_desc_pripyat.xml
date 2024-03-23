@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding="windows-1251"?>
 <xml>
-	<specific_character id="pri_trader_profile" team_default = "1">
+	<specific_character id="pri_trader_profile" team_default="1">
 		<name>pri_trader_name</name>
 		<icon>ui_npc_u_stalker_bandit_veteran</icon>
 
@@ -22,7 +22,7 @@
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 
 		<start_dialog>pri_trader_dialog</start_dialog>
 		<actor_dialog>tm_pri_dialog_arny</actor_dialog>
@@ -34,13 +34,12 @@
 		<actor_dialog>pri_trader_final</actor_dialog>
 		<actor_dialog>pri_trader_repair</actor_dialog>
 
-		#include "gameplay\character_dialogs.xml"
+#include "gameplay\character_dialogs.xml"
 	</specific_character>
-
 
 	<!-- MONOLITH -->
 	<!-- AMBUSH -->
-	<specific_character id="pri_monolith_ambush_default1" team_default = "1">
+	<specific_character id="pri_monolith_ambush_default1" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_mo_head_1</icon>
 		<bio>pri_monolith_common_bio</bio>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding="windows-1251"?>
 <xml>
-	<specific_character id="bar_barman" no_random = "1">
+	<specific_character id="bar_barman" no_random="1">
 		<name>bar_barmen_name</name>
 		<icon>ui_npc_u_barman</icon>
 		<bio>bar_barmen_bio</bio>
@@ -18,7 +18,6 @@
 		<supplies>
 			[spawn] \n
 			stalker_outfit \n
-
 		</supplies>
 
 		<start_dialog>bar_bar_barmen_start</start_dialog>
@@ -35,7 +34,7 @@
 		<actor_dialog>bar_trader_repair</actor_dialog>
 	</specific_character>
 
-	<specific_character id="bar_stalker_white_novice_1" team_default = "1">
+	<specific_character id="bar_stalker_white_novice_1" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_1</icon>
 		<bio>sim_stalker_novice_bio</bio>
@@ -56,7 +55,7 @@
 			[spawn] \n
 			wpn_ak74 \n
 			ammo_5.45x39_fmj \n
-			ammo_9x19_pbp=3 \n
+			ammo_9x19_pbp = 3 \n
 		</supplies>
 
 		#include "gameplay\character_criticals_3.xml"
@@ -65,7 +64,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_white_novice_2" team_default = "1">
+	<specific_character id="bar_stalker_white_novice_2" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_7</icon>
 		<bio>sim_stalker_novice_bio</bio>
@@ -86,7 +85,7 @@
 			[spawn] \n
 			wpn_mp5 \n
 			ammo_9x19_pbp \n
-			ammo_12x70_buck=2 \n
+			ammo_12x70_buck = 2 \n
 		</supplies>
 
 		#include "gameplay\character_criticals_3.xml"
@@ -95,7 +94,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_brown_novice_1" team_default = "1">
+	<specific_character id="bar_stalker_brown_novice_1" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_2</icon>
 		<bio>sim_stalker_novice_bio</bio>
@@ -116,7 +115,7 @@
 			[spawn] \n
 			wpn_ak74u \n
 			ammo_5.45x39_fmj \n
-			ammo_5.56x45_ss190=2 \n
+			ammo_5.56x45_ss190 = 2 \n
 		</supplies>
 
 		#include "gameplay\character_criticals_3.xml"
@@ -125,7 +124,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_brown_novice_2" team_default = "1">
+	<specific_character id="bar_stalker_brown_novice_2" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_8</icon>
 		<bio>sim_stalker_novice_bio</bio>
@@ -146,7 +145,7 @@
 			[spawn] \n
 			wpn_ak74u \n
 			ammo_5.45x39_fmj \n
-			ammo_9x19_fmj=4 \n
+			ammo_9x19_fmj = 4 \n
 		</supplies>
 
 		#include "gameplay\character_criticals_3.xml"
@@ -155,7 +154,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_general_1" team_default = "1">
+	<specific_character id="bar_stalker_general_1" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_uzor</icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -176,7 +175,7 @@
 			[spawn] \n
 			wpn_ak74 \n
 			ammo_5.45x39_fmj \n
-			ammo_9x19_fmj=3 \n
+			ammo_9x19_fmj = 3 \n
 		</supplies>
 
 		#include "gameplay\character_criticals_4.xml"
@@ -185,7 +184,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_general_2" team_default = "1">
+	<specific_character id="bar_stalker_general_2" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_neytral_hood_2</icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -206,7 +205,7 @@
 			[spawn] \n
 			wpn_ak74 \n
 			ammo_5.45x39_fmj \n
-			ammo_9x18_pmm=5 \n
+			ammo_9x18_pmm = 5 \n
 		</supplies>
 
 		#include "gameplay\character_criticals_4.xml"
@@ -215,7 +214,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_dolg_1" team_default = "1">
+	<specific_character id="bar_stalker_dolg_1" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_mask_1</icon>
 		<bio>sim_dolg_regular_bio</bio>
@@ -238,7 +237,7 @@
 			ammo_9x19_fmj \n
 			wpn_abakan \n
 			ammo_5.45x39_fmj \n
-			ammo_11.43x23_fmj=2 \n
+			ammo_11.43x23_fmj = 2 \n
 		</supplies>
 
 		#include "gameplay\character_criticals_6.xml"
@@ -247,7 +246,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_bandit_1" team_default = "1">
+	<specific_character id="bar_stalker_bandit_1" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_bandit_veteran</icon>
 		<bio>sim_bandit_general_bio</bio>
@@ -268,7 +267,7 @@
 			[spawn] \n
 			wpn_val \n
 			ammo_9x39_pab9 \n
-			ammo_5.45x39_ap=3 \n
+			ammo_5.45x39_ap = 3 \n
 		</supplies>
 
 		#include "gameplay\character_criticals_4.xml"
@@ -277,7 +276,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_killer_1" team_default = "1">
+	<specific_character id="bar_stalker_killer_1" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_ki_head_1</icon>
 		<bio>sim_killer_veteran_bio</bio>
@@ -298,7 +297,7 @@
 			[spawn] \n
 			wpn_lr300 \n
 			ammo_5.56x45_ss190 \n
-			ammo_12x76_dart=2 \n
+			ammo_12x76_dart = 2 \n
 		</supplies>
 
 		#include "gameplay\character_criticals_4.xml"
@@ -307,7 +306,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_guard" team_default = "1">
+	<specific_character id="bar_stalker_guard" team_default="1">
 		<name>bar_bar_guard_name</name>
 		<icon>ui_npc_u_stalker_bar_security</icon>
 		<bio>bar_bar_guard_bio</bio>
@@ -328,14 +327,14 @@
 			[spawn] \n
 			wpn_ak74 \n
 			ammo_5.45x39_fmj \n
-			ammo_12x76_zhekan=3 \n
+			ammo_12x76_zhekan = 3 \n
 		</supplies>
 
 		#include "gameplay\character_criticals_4.xml"
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_guard2" team_default = "1">
+	<specific_character id="bar_stalker_guard2" team_default="1">
 		<name>bar_bar_guard2_name</name>
 		<icon>ui_npc_u_stalker_bar_security</icon>
 		<bio>bar_bar_guard2_bio</bio>
@@ -356,7 +355,7 @@
 			[spawn] \n
 			wpn_ak74 \n
 			ammo_5.45x39_fmj \n
-			ammo_9x18_pmm=4 \n
+			ammo_9x18_pmm = 4 \n
 		</supplies>
 
 		#include "gameplay\character_criticals_4.xml"
@@ -364,7 +363,7 @@
 	</specific_character>
 
 	<!-- BAR OSVEDOMITEL -->
-	<specific_character id="bar_bar_osvedomitel" team_default = "1">
+	<specific_character id="bar_bar_osvedomitel" team_default="1">
 		<name>bar_informer_name</name>
 		<icon>ui_npc_u_stalker_bandit_master</icon>
 		<bio>bar_informer_bio</bio>
@@ -398,7 +397,7 @@
 	</specific_character>
 
 	<!-- BAR HUNTER -->
-	<specific_character id="bar_bar_hunter" team_default = "1">
+	<specific_character id="bar_bar_hunter" team_default="1">
 		<name>bar_hunter_name</name>
 		<icon>ui_npc_u_green_stalker_3</icon>
 		<bio>Добродушный весельчак, единственная его проблема это то, что умеет стрелять только из охотничьего ружья. Остальное даже не пробует. Недавно попал в передрягу на Дикой территории и потерял там свое фамильное ружье. Теперь околачивается в баре, надеется, что кто-то вернет ему его ружье.</bio>
@@ -429,11 +428,10 @@
 		<actor_dialog>tm_hunter_reward</actor_dialog>
 
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
 	<!-- BAR DRUNK DOLG -->
-	<specific_character id="bar_bar_drunk_dolg" team_default = "1">
+	<specific_character id="bar_bar_drunk_dolg" team_default="1">
 		<name>bar_drunk_name</name>
 		<icon>ui_npc_u_stalker_do_balon_4</icon>
 		<bio>bar_drunk_bio</bio>
@@ -462,11 +460,10 @@
 		<actor_dialog>tm_drunk_dolg_reward</actor_dialog>
 
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
 	<!-- BAR LISIY -->
-	<specific_character id="bar_bar_lisiy" team_default = "1">
+	<specific_character id="bar_bar_lisiy" team_default="1">
 		<name>bar_lisiy_name</name>
 		<icon>ui_npc_u_stalker_neytral_balon_4</icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -496,10 +493,9 @@
 		<actor_dialog>tm_lisiy_reward</actor_dialog>
 
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
-	<specific_character id="bar_psih" team_default = "1">
+	<specific_character id="bar_psih" team_default="1">
 		<name>bar_ryaboy_name</name>
 		<icon>ui_npc_u_stalker_zombie4</icon>
 		<bio>bar_ryaboy_bio</bio>
@@ -530,11 +526,10 @@
 		<actor_dialog>bar_bar_psih_talk_lisiy</actor_dialog>
 
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
 	<!-- ******************* ARENA ********************** -->
-	<specific_character id="bar_arena_manager" team_default = "1">
+	<specific_character id="bar_arena_manager" team_default="1">
 		<name>bar_arny_name</name>
 		<icon>ui_npc_u_stalker_neytral_balon_6</icon>
 		<bio>bar_arny_bio</bio>
@@ -555,7 +550,7 @@
 			[spawn] \n
 			wpn_lr300 \n
 			ammo_5.56x45_ap = 1 \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -572,10 +567,9 @@
 		<!-- ARENA_EXTENSION_MOD -->
 
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
-	<specific_character id="bar_arena_guard" team_default = "1">
+	<specific_character id="bar_arena_guard" team_default="1">
 		<name>bar_lelik_name</name>
 		<icon>ui_npc_u_stalker_bar_security</icon>
 		<bio>bar_lelik_bio</bio>
@@ -596,7 +590,7 @@
 			[spawn] \n
 			wpn_ak74 \n
 			ammo_5.45x39_fmj \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -604,7 +598,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_arena_savage" team_default = "1">
+	<specific_character id="bar_arena_savage" team_default="1">
 		<name>bar_beast_name</name>
 		<icon>ui_npc_u_zombie_exoskeleton</icon>
 		<bio>sim_zombied_master_bio</bio>
@@ -631,7 +625,7 @@
 	</specific_character>
 
 	<!-- DOLG LEADER -->
-	<specific_character id="bar_dolg_leader" team_default = "1">
+	<specific_character id="bar_dolg_leader" team_default="1">
 		<name>bar_voronin_name</name>
 		<icon>ui_npc_u_stalker_do_komandir</icon>
 		<bio>bar_voronin_bio</bio>
@@ -654,8 +648,8 @@
 			ammo_11.43x23_hydro \n
 			wpn_val \n
 			ammo_9x39_sp5 = 1 \n
-			ammo_5.56x45_ap=2 \n
-			#include "gameplay\character_food.xml" \n
+			ammo_5.56x45_ap = 2 \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -669,11 +663,10 @@
 		<actor_dialog>dolg_attach_community</actor_dialog>
 
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
 	<!-- DOLG PETRENKO -->
-	<specific_character id="bar_dolg_petrenko" team_default = "1">
+	<specific_character id="bar_dolg_petrenko" team_default="1">
 		<name>bar_petrenko_name</name>
 		<icon>ui_npc_u_stalker_do_balon_3</icon>
 		<bio>bar_petrenko_bio</bio>
@@ -696,7 +689,7 @@
 			ammo_9x19_fmj \n
 			wpn_groza \n
 			ammo_9x39_ap \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -708,11 +701,10 @@
 		<actor_dialog>tm_petrenko_reward</actor_dialog>
 
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
 	<!-- DOLG IVANCOV -->
-	<specific_character id="bar_dolg_ivancov" team_default = "1">
+	<specific_character id="bar_dolg_ivancov" team_default="1">
 		<name>bar_ivancov_name</name>
 		<icon>ui_npc_u_stalker_do_balon_5</icon>
 		<bio>bar_ivancov_bio</bio>
@@ -735,8 +727,8 @@
 			ammo_9x19_fmj \n
 			wpn_groza \n
 			ammo_9x39_ap \n
-			ammo_5.45x39_ap=2 \n
-			#include "gameplay\character_food.xml" \n
+			ammo_5.45x39_ap = 2 \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -747,7 +739,7 @@
 	</specific_character>
 
 	<!-- DOLG Начальник Охраны -->
-	<specific_character id="bar_dolg_guard_commander" team_default = "1">
+	<specific_character id="bar_dolg_guard_commander" team_default="1">
 		<name>bar_plichko_name</name>
 		<icon>ui_npc_u_stalker_do_balon_1</icon>
 		<bio>bar_plichko_bio</bio>
@@ -770,9 +762,9 @@
 			ammo_9x19_fmj \n
 			wpn_abakan \n
 			ammo_5.45x39_fmj \n
-			ammo_12x70_buck=2 \n
+			ammo_12x70_buck = 2 \n
 			device_torch \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -780,14 +772,12 @@
 
 		<start_dialog>bar_dolg_base_guard_start</start_dialog>
 		<actor_dialog>bar_dolg_base_guard_talk</actor_dialog>
-
 		<actor_dialog>bar_dolg_base_guard_rules</actor_dialog>
 
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
-	<specific_character id="bar_zastava_commander_1" team_default = "1">
+	<specific_character id="bar_zastava_commander_1" team_default="1">
 		<name>bar_kicenko_name</name>
 		<icon>ui_npc_u_stalker_do_balon_1</icon>
 		<bio>sim_dolg_veteran_bio</bio>
@@ -812,7 +802,7 @@
 			ammo_5.45x39_fmj \n
 			detector_advances \n
 			device_torch \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -825,11 +815,10 @@
 		<actor_dialog>tm_zastava_commander_reward</actor_dialog>
 
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
 	<!-- Helicopter scene -->
-	<specific_character id="bar_ecolog_professor" team_default = "1">
+	<specific_character id="bar_ecolog_professor" team_default="1">
 		<name>ros_kruglov_name</name>
 		<icon>ui_npc_u_stalker_ecolog_military</icon>
 		<bio>ros_kruglov_bio</bio>
@@ -861,10 +850,9 @@
 		<actor_dialog>bar_ecolog_crush_professor_give_info_dp</actor_dialog>
 
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
-	<specific_character id="bar_svoboda_attack_commander" team_default = "1">
+	<specific_character id="bar_svoboda_attack_commander" team_default="1">
 		<name>ros_volkodav_name</name>
 		<icon>ui_npc_u_stalker_ki_head_5</icon>
 		<bio>ros_volkodav_bio</bio>
@@ -888,7 +876,7 @@
 			ammo_9x19_fmj \n
 			wpn_lr300 \n
 			ammo_5.56x45_ap = 1 \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -898,11 +886,10 @@
 		<actor_dialog>bar_svoboda_volkodav_info_dp</actor_dialog>
 
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
 	<!-- KILLER AMBUSH -->
-	<specific_character id="bar_killer_ambush_tiran" team_default = "1">
+	<specific_character id="bar_killer_ambush_tiran" team_default="1">
 		<name>ros_tiran_name</name>
 		<icon>ui_npc_u_stalker_ki_exoskeleton</icon>
 		<bio>ros_tiran_bio</bio>
@@ -926,7 +913,7 @@
 			wpn_lr300 \n
 			ammo_5.56x45_ap = 1 \n
 			bar_tiran_pda \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -935,7 +922,7 @@
 	</specific_character>
 
 	<!-- CRAZY VETERANS -->
-	<specific_character id="bar_crazy_veterans_lucky" team_default = "1">
+	<specific_character id="bar_crazy_veterans_lucky" team_default="1">
 		<name>ros_happy_name</name>
 		<icon>ui_npc_u_stalker_bandit_master</icon>
 		<bio>ros_happy_bio</bio>
@@ -959,7 +946,7 @@
 			wpn_lr300 \n
 			ammo_5.56x45_ap = 1 \n
 			bar_lucky_pda \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -967,7 +954,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_crazy_veterans_1" team_default = "1">
+	<specific_character id="bar_crazy_veterans_1" team_default="1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_veteran</icon>
 		<bio>sim_bandit_veteran_bio</bio>
@@ -988,7 +975,7 @@
 			[spawn] \n
 			wpn_mp5 \n
 			ammo_9x19_pbp \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -996,7 +983,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_crazy_veterans_2" team_default = "1">
+	<specific_character id="bar_crazy_veterans_2" team_default="1">
 		<name>GENERATE_NAME_bandit</name>
 		<icon>ui_npc_u_stalker_bandit_veteran</icon>
 		<bio>sim_bandit_veteran_bio</bio>
@@ -1017,7 +1004,7 @@
 			[spawn] \n
 			wpn_mp5 \n
 			ammo_9x19_pbp \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1026,7 +1013,7 @@
 	</specific_character>
 
 	<!-- Гордон Фримен -->
-	<specific_character id="bar_stalker_freeman" team_default = "1">
+	<specific_character id="bar_stalker_freeman" team_default="1">
 		<name>ros_freeman_name</name>
 		<icon>ui_npc_u_green_stalker_7</icon>
 		<bio>ros_freeman_bio</bio>
@@ -1053,10 +1040,8 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-
-
 	<!-- DOLG REGULAR -->
-	<specific_character id="bar_dolg_regular_default1" team_default = "1">
+	<specific_character id="bar_dolg_regular_default1" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_mask</icon>
 		<bio>sim_dolg_regular_bio</bio>
@@ -1081,10 +1066,10 @@
 			ammo_9x19_fmj \n
 			wpn_abakan \n
 			ammo_5.45x39_fmj \n
-			ammo_5.56x45_ss190=2 \n
+			ammo_5.56x45_ss190 = 2 \n
 			device_torch \n
-			#include "gameplay\character_items.xml"\n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_items.xml"
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1093,7 +1078,7 @@
 		<actor_dialog>bar_dolg_base_guard_acces</actor_dialog>
 	</specific_character>
 
-	<specific_character id="bar_dolg_regular_default2" team_default = "1">
+	<specific_character id="bar_dolg_regular_default2" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_balon_8</icon>
 		<bio>sim_dolg_regular_bio</bio>
@@ -1115,10 +1100,10 @@
 			ammo_9x19_fmj \n
 			wpn_abakan \n
 			ammo_5.45x39_fmj \n
-			ammo_12x70_buck=3 \n
+			ammo_12x70_buck = 3 \n
 			device_torch \n
-			#include "gameplay\character_items.xml"\n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_items.xml"
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1127,7 +1112,7 @@
 		<actor_dialog>bar_dolg_base_guard_acces</actor_dialog>
 	</specific_character>
 
-	<specific_character id="bar_dolg_regular_default3" team_default = "1">
+	<specific_character id="bar_dolg_regular_default3" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_mask_1</icon>
 		<bio>sim_dolg_regular_bio</bio>
@@ -1149,10 +1134,10 @@
 			ammo_9x19_fmj \n
 			wpn_abakan \n
 			ammo_5.45x39_fmj \n
-			ammo_12x70_buck=2 \n
+			ammo_12x70_buck = 2 \n
 			device_torch \n
-			#include "gameplay\character_items.xml" \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_items.xml"
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1162,7 +1147,7 @@
 	</specific_character>
 
 	<!-- DOLG SNIPER -->
-	<specific_character id="bar_dolg_sniper_default1" team_default = "1">
+	<specific_character id="bar_dolg_sniper_default1" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_balon_8</icon>
 		<bio>sim_dolg_sniper_bio</bio>
@@ -1184,10 +1169,10 @@
 			ammo_9x19_fmj = 1 \n
 			wpn_l85 \n
 			ammo_5.56x45_ap = 1 \n
-			ammo_7.62x54_7h1=1 \n
+			ammo_7.62x54_7h1 = 1 \n
 			device_torch \n
-			#include "gameplay\character_items.xml" \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_items.xml"
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1195,7 +1180,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_dolg_sniper_default2" team_default = "1">
+	<specific_character id="bar_dolg_sniper_default2" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_mask_1</icon>
 		<bio>sim_dolg_sniper_bio</bio>
@@ -1218,8 +1203,8 @@
 			wpn_l85 \n
 			ammo_5.56x45_ap = 1 \n
 			device_torch \n
-			#include "gameplay\character_items.xml"\n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_items.xml"
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1227,7 +1212,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_dolg_sniper_default3" team_default = "1">
+	<specific_character id="bar_dolg_sniper_default3" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_mask</icon>
 		<bio>sim_dolg_sniper_bio</bio>
@@ -1249,10 +1234,10 @@
 			ammo_9x19_fmj = 1 \n
 			wpn_l85 \n
 			ammo_5.56x45_ap = 1 \n
-			ammo_7.62x54_7h1=1 \n
+			ammo_7.62x54_7h1 = 1 \n
 			device_torch \n
-			#include "gameplay\character_items.xml"	\n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_items.xml"
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1261,7 +1246,7 @@
 	</specific_character>
 
 	<!-- DOLG SPECNAZ -->
-	<specific_character id="bar_dolg_veteran_default1" team_default = "1">
+	<specific_character id="bar_dolg_veteran_default1" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_nauchniy</icon>
 		<bio>sim_dolg_veteran_bio</bio>
@@ -1283,18 +1268,17 @@
 			ammo_9x19_fmj \n
 			wpn_groza \n
 			ammo_9x39_ap \n
-			ammo_5.45x39_ap=1 \n
-			#include "gameplay\character_items.xml"	\n
-			#include "gameplay\character_food.xml" \n
+			ammo_5.45x39_ap = 1 \n
+			#include "gameplay\character_items.xml"
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
 		#include "gameplay\character_criticals_6.xml"
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
-	<specific_character id="bar_dolg_veteran_default2" team_default = "1">
+	<specific_character id="bar_dolg_veteran_default2" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_antigas</icon>
 		<bio>sim_dolg_veteran_bio</bio>
@@ -1316,18 +1300,17 @@
 			ammo_9x19_fmj \n
 			wpn_groza \n
 			ammo_9x39_ap \n
-			ammo_5.45x39_ap=2 \n
-			#include "gameplay\character_items.xml"	\n
-			#include "gameplay\character_food.xml" \n
+			ammo_5.45x39_ap = 2 \n
+			#include "gameplay\character_items.xml"
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
 		#include "gameplay\character_criticals_6.xml"
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
-	<specific_character id="bar_dolg_veteran_default3" team_default = "1">
+	<specific_character id="bar_dolg_veteran_default3" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_nauchniy</icon>
 		<bio>sim_dolg_veteran_bio</bio>
@@ -1351,17 +1334,16 @@
 			ammo_9x39_ap = 1 \n
 			ammo_9x39_sp5 = 1 \n
 			ammo_vog-25p = 2 \n
-			#include "gameplay\character_items.xml"	\n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_items.xml"
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
 		#include "gameplay\character_criticals_6.xml"
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
-	<specific_character id="bar_dolg_veteran_default4" team_default = "1">
+	<specific_character id="bar_dolg_veteran_default4" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_antigas</icon>
 		<bio>sim_dolg_veteran_bio</bio>
@@ -1383,19 +1365,18 @@
 			ammo_9x19_fmj \n
 			wpn_groza \n
 			ammo_9x39_ap \n
-			ammo_5.56x45_ss190=2 \n
-			#include "gameplay\character_items.xml" \n
-			#include "gameplay\character_food.xml" \n
+			ammo_5.56x45_ss190 = 2 \n
+			#include "gameplay\character_items.xml"
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
 		#include "gameplay\character_criticals_6.xml"
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
 	<!-- DOLG MASTER -->
-	<specific_character id="bar_dolg_master_default1" team_default = "1">
+	<specific_character id="bar_dolg_master_default1" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_exoskeleton</icon>
 		<bio>sim_dolg_master_bio</bio>
@@ -1417,18 +1398,17 @@
 			ammo_11.43x23_fmj \n
 			wpn_val \n
 			ammo_9x39_sp5 = 1 \n
-			ammo_5.56x45_ss190=3 \n
-			#include "gameplay\character_items.xml" \n
-			#include "gameplay\character_food.xml" \n
+			ammo_5.56x45_ss190 = 3 \n
+			#include "gameplay\character_items.xml"
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
 		#include "gameplay\character_criticals_2.xml"
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
-	<specific_character id="bar_dolg_master_default2" team_default = "1">
+	<specific_character id="bar_dolg_master_default2" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_stalker_do_nauchniy</icon>
 		<bio>sim_dolg_master_bio</bio>
@@ -1451,19 +1431,17 @@
 			wpn_groza \n
 			ammo_9x39_sp5 = 2 \n
 			ammo_vog-25p = 2 \n
-			#include "gameplay\character_items.xml"	\n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_items.xml"
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
 		#include "gameplay\character_criticals_6.xml"
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
-
 	<!-- STALKER NOVICE -->
-	<specific_character id="bar_stalker_novice_default1" team_default = "1">
+	<specific_character id="bar_stalker_novice_default1" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_2</icon>
 		<bio>sim_stalker_novice_bio</bio>
@@ -1483,9 +1461,9 @@
 			[spawn] \n
 			wpn_pm \n
 			ammo_9x18_fmj = 1 \n
-			ammo_12x70_buck=1 \n
+			ammo_12x70_buck = 1 \n
 			device_torch \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1493,7 +1471,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_novice_default2" team_default = "1">
+	<specific_character id="bar_stalker_novice_default2" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_3</icon>
 		<bio>sim_stalker_novice_bio</bio>
@@ -1513,18 +1491,17 @@
 			[spawn] \n
 			wpn_ak74u \n
 			ammo_5.45x39_fmj \n
-			ammo_12x70_buck=1 \n
+			ammo_12x70_buck = 1 \n
 			device_torch \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
 		#include "gameplay\character_criticals_3.xml"
 		#include "gameplay\character_dialogs.xml"
-
 	</specific_character>
 
-	<specific_character id="bar_stalker_novice_default3" team_default = "1">
+	<specific_character id="bar_stalker_novice_default3" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_4</icon>
 		<bio>sim_stalker_novice_bio</bio>
@@ -1544,9 +1521,9 @@
 			[spawn] \n
 			wpn_pb \n
 			ammo_9x18_fmj = 1 \n
-			ammo_9x19_fmj=2 \n
+			ammo_9x19_fmj = 2 \n
 			device_torch \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1554,7 +1531,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_novice_default4" team_default = "1">
+	<specific_character id="bar_stalker_novice_default4" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_5</icon>
 		<bio>sim_stalker_novice_bio</bio>
@@ -1574,9 +1551,9 @@
 			[spawn] \n
 			wpn_mp5 \n
 			ammo_9x19_fmj \n
-			ammo_9x18_pmm=3 \n
+			ammo_9x18_pmm = 3 \n
 			device_torch \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1584,7 +1561,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_novice_default5" team_default = "1">
+	<specific_character id="bar_stalker_novice_default5" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_6</icon>
 		<bio>sim_stalker_novice_bio</bio>
@@ -1604,9 +1581,9 @@
 			[spawn] \n
 			wpn_ak74 \n
 			ammo_5.45x39_fmj \n
-			ammo_9x18_pmm=2 \n
+			ammo_9x18_pmm = 2 \n
 			device_torch \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1614,7 +1591,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_novice_default6" team_default = "1">
+	<specific_character id="bar_stalker_novice_default6" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_10</icon>
 		<bio>sim_stalker_novice_bio</bio>
@@ -1634,9 +1611,9 @@
 			[spawn] \n
 			wpn_ak74u \n
 			ammo_5.45x39_fmj \n
-			ammo_5.56x45_ap=1 \n
+			ammo_5.56x45_ap = 1 \n
 			device_torch \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1644,7 +1621,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_novice_default9" team_default = "1">
+	<specific_character id="bar_stalker_novice_default9" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_antigas</icon>
 		<bio>sim_stalker_novice_bio</bio>
@@ -1664,9 +1641,9 @@
 			[spawn] \n
 			wpn_pm \n
 			ammo_9x18_fmj = 1 \n
-			ammo_11.43x23_fmj=2 \n
+			ammo_11.43x23_fmj = 2 \n
 			device_torch \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 
@@ -1674,7 +1651,7 @@
 		#include "gameplay\character_dialogs.xml"
 	</specific_character>
 
-	<specific_character id="bar_stalker_novice_default10" team_default = "1">
+	<specific_character id="bar_stalker_novice_default10" team_default="1">
 		<name>GENERATE_NAME_stalker</name>
 		<icon>ui_npc_u_green_stalker_antigas</icon>
 		<bio>sim_stalker_novice_bio</bio>
@@ -1694,9 +1671,9 @@
 			[spawn] \n
 			wpn_pm \n
 			ammo_9x18_fmj = 1 \n
-			ammo_12x76_zhekan=1 \n
+			ammo_12x76_zhekan = 1 \n
 			device_torch \n
-			#include "gameplay\character_food.xml" \n
+			#include "gameplay\character_food.xml"
 			#include "gameplay\character_drugs.xml"
 		</supplies>
 

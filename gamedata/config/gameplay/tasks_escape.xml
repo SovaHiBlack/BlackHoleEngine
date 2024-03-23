@@ -81,7 +81,7 @@
 			<icon>ui_iconsTotal_esc_dinamit_to_volk</icon>
 			<infoportion_complete>esc_kill_bandits_quest_done</infoportion_complete>
 			<infoportion_fail>esc_wolf_dead</infoportion_fail>
-<!--		<function_fail>escape_tasks.is_actor_enemy_lager</function_fail> -->
+			<!--<function_fail>escape_tasks.is_actor_enemy_lager</function_fail>-->
 		</objective>
 		<objective>
 			<text>esc_dinamit_to_volk_1</text>

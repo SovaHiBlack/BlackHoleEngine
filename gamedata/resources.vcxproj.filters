@@ -504,9 +504,6 @@
     <None Include="Config\creatures\m_flesh.ltx">
       <Filter>config\creatures</Filter>
     </None>
-    <None Include="Config\creatures\m_fraction.ltx">
-      <Filter>config\creatures</Filter>
-    </None>
     <None Include="Config\creatures\m_fracture.ltx">
       <Filter>config\creatures</Filter>
     </None>
@@ -3197,15 +3194,6 @@
     </None>
     <None Include="anims\yantar_underground_psi.ppe">
       <Filter>anims</Filter>
-    </None>
-    <None Include="config\creatures\m_army.ltx">
-      <Filter>config\creatures</Filter>
-    </None>
-    <None Include="config\creatures\m_bandit.ltx">
-      <Filter>config\creatures</Filter>
-    </None>
-    <None Include="config\creatures\m_dog_.ltx">
-      <Filter>config\creatures</Filter>
     </None>
     <None Include="config\misc\general_lager.ltx">
       <Filter>config\misc</Filter>
@@ -6606,6 +6594,9 @@
     </Xml>
     <Xml Include="Config\gameplay\storyline_info_to_diary.xml">
       <Filter>config\gameplay\encyclopedia\storyline</Filter>
+    </Xml>
+    <Xml Include="config\gameplay\character_desc_nouse.xml">
+      <Filter>config\gameplay\profiles</Filter>
     </Xml>
   </ItemGroup>
   <ItemGroup>

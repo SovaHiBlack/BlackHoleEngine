@@ -83,11 +83,11 @@
 	Velocity_Drag				= 1.5,			3.0,		3.0,		1.0,	1.0
 	Velocity_Steal				= 0.7,			3.0,		3.0,		1.0,	1.0
 
-	; Speed factors while invisible
+	;Speed factors while invisible
 	Velocity_Invisible_Linear			= 8.0
 	Velocity_Invisible_Angular			= 4.62
 
-	; acceleration
+	;acceleration
 	Accel_Generic						= 1.5
 	Accel_Calm							= 2.5
 	Accel_Aggressive					= 20.0
@@ -143,7 +143,7 @@
 	sleep_radiation						= 1.0
 	sleep_psy_health					= 1.0
 
-	; Eat settings
+	;Eat settings
 	eat_freq							= 5.0											;частота укусов в сек
 	eat_slice							= 0.05											;увеличение сытости при 1 укусе
 	eat_slice_weight					= 10.0											;уменьшение еды у трупа
@@ -369,7 +369,7 @@
 [m_bloodsucker_step_params]
 	; order: front_left, front_right
 	;--------------------------------------------------------------
-	;	anim			| Cycles | time1 | power1 | time2 | power2
+	;		anim		| Cycles | time1 | power1 | time2 | power2
 	;--------------------------------------------------------------
 	stand_run_0			=	1,		0.15,	1.0,	0.7,	1.0
 	stand_run_dmg_0		=	1,		0.15,	1.0,	0.4,	1.0
@@ -382,23 +382,23 @@
 ; Attack Animation Parameters
 ;==============================================================================
 [m_bloodsucker_attack_params]
-	;------------------------------------------------------------------------------------------------------------------------------------------
-	;		anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
-	;------------------------------------------------------------------------------------------------------------------------------------------
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
 	;Left hand Strike
-	stand_attack_0			=	0.3,		0.15,		150,		3.5, 2.0, 0.5,					-0.6, 0.6, -0.6, 0.6,				2.2
+	stand_attack_0		=	0.3,		0.15,		150,		3.5, 2.0, 0.5,					-0.6, 0.6, -0.6, 0.6,				2.2
 	;Both hands Strike
-	stand_attack_1			=	0.3,		0.25,		160,		0.0, 2.0, 4.0,					-0.6, 0.6, -0.6, 0.6,				2.2
+	stand_attack_1		=	0.3,		0.25,		160,		0.0, 2.0, 4.0,					-0.6, 0.6, -0.6, 0.6,				2.2
 	;Right hand Strike
-	stand_attack_2			=	0.3,		0.15,		150,		-4.0, 2.5, 0.5,					-0.6, 0.6, -0.6, 0.6,				2.2
+	stand_attack_2		=	0.3,		0.15,		150,		-4.0, 2.5, 0.5,					-0.6, 0.6, -0.6, 0.6,				2.2
 	;Right hand Strike
-	vampire_2				=	0.6,		0.5,		550,		0.0, 2.5, 4.5,					-1.2, 1.2, -1.2, 1.2,				4.5
+	vampire_2			=	0.6,		0.5,		550,		0.0, 2.5, 4.5,					-1.2, 1.2, -1.2, 1.2,				4.5
 	;Right hand Strike
-	stand_attack_run_0		= bloodsucker_run_attack_sect
+	stand_attack_run_0	= bloodsucker_run_attack_sect
 
 [bloodsucker_run_attack_sect]
-	value1					=	0.2,		0.1,		550,		0.0, 2.5, 4.5,					-1.2, 1.2, -1.2, 1.2,				4.5
-	value2					=	0.6,		0.2,		550,		0.0, 2.5, 4.5,					-1.2, 1.2, -1.2, 1.2,				4.5
+	value1				=	0.2,		0.1,		550,		0.0, 2.5, 4.5,					-1.2, 1.2, -1.2, 1.2,				4.5
+	value2				=	0.6,		0.2,		550,		0.0, 2.5, 4.5,					-1.2, 1.2, -1.2, 1.2,				4.5
 
 ;==============================================================================
 ; Immunities
@@ -580,8 +580,8 @@
 	stand_attack_run_0	= bloodsucker_strong_run_attack_sect
 
 [bloodsucker_strong_run_attack_sect]
-	value1				=	0.2,		0.4,		350,		0.0, 0.5, 4.5,				-1.2, 1.2, -1.2, 1.2,				  2.2
-	value2				=	0.6,		0.8,		400,		0.0, 0.5, 4.5,				-1.2, 1.2, -1.2, 1.2,				  2.2
+	value1				=	0.2,		0.4,		350,		0.0, 0.5, 4.5,				-1.2, 1.2, -1.2, 1.2,					2.2
+	value2				=	0.6,		0.8,		400,		0.0, 0.5, 4.5,				-1.2, 1.2, -1.2, 1.2,					2.2
 
 ;******************************************************************************
 ; CUSTOM PROFILES

@@ -1,7 +1,16 @@
+;==============================================================================
+; CONTROLLER
+;==============================================================================
+;******************************************************************************
+; BASE PROFILES
+;******************************************************************************
 [m_controller_e]:monster_base
-GroupControlSection	= spawn_group
+	GroupControlSection					= spawn_group
+	$spawn								= "monsters\controllers\controller_base"		;option for Level Editor
+
+
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
-$spawn               = "monsters\old\controller"	; option for Level Editor
+
 $npc			     = on						; option for Level Editor
 $prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
@@ -434,7 +443,9 @@ bip01_head 			= 2.0, -1, 0.5, 10
 
 
 [m_controller_normal]:m_controller_e
-$spawn              = "monsters\old\controller_normal"
+	$spawn								= "monsters\controllers\controller_normal"
+
+
 visual				= monsters\kontroler\kontroler
 icon				= ui_npc_monster_kontroler
 spec_rank			= normal
@@ -442,7 +453,9 @@ rank				= 401
 community			= controller
 
 [m_controller_normal_fat]:m_controller_e
-$spawn              = "monsters\old\controller_normal_fat"
+	$spawn								= "monsters\controllers\controller_normal_fat"
+
+
 visual				= monsters\kontroler\kontroler_5
 icon				= ui_npc_monster_kontroler_5
 tube_at_once		= true
@@ -452,7 +465,9 @@ rank				= 401
 community			= controller
 
 [m_controller_old]:m_controller_e
-$spawn              = "monsters\old\controller_old"
+	$spawn								= "monsters\controllers\controller_old"
+
+
 visual				= monsters\kontroler\kontroler_3
 icon				= ui_npc_monster_kontroler_3
 tube_at_once		= true
@@ -462,7 +477,9 @@ rank				= 801
 community			= controller
 
 [m_controller_old_fat]:m_controller_normal
-$spawn              = "monsters\old\controller_old_fat"
+	$spawn								= "monsters\controllers\controller_old_fat"
+
+
 visual				= monsters\kontroler\kontroler_4
 icon				= ui_npc_monster_kontroler_4
 tube_at_once		= true
@@ -472,13 +489,12 @@ rank				= 801
 community			= controller
 
 [controller_tubeman]:m_controller_normal
-$spawn              = "monsters\controllers\controller_tubeman"
+	$spawn								= "monsters\controllers\controller_tubeman"
+
+
 tube_at_once		= true
 tube_damage			= 0.50
 satiety_threshold	= 0.6
-
-
-
 
 [controller_critical_wound_bones_head]
 bip01_neck
@@ -539,7 +555,11 @@ bip01_r_toe1
 
 
 [arena_controller_1]:m_controller_e
-$spawn              = "monsters\old\controller_normal_fat"
+	$spawn								= "monsters\arena\controller_arena"
+
+
+
+
 visual				= monsters\kontroler\kontroler_5
 icon				= ui_npc_monster_kontroler_5
 spec_rank			= normal

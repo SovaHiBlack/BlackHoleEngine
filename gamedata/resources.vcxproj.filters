@@ -507,7 +507,7 @@
     <None Include="Config\creatures\m_fracture.ltx">
       <Filter>config\creatures</Filter>
     </None>
-    <None Include="Config\creatures\m_giant.ltx">
+    <None Include="Config\creatures\m_gigant.ltx">
       <Filter>config\creatures</Filter>
     </None>
     <None Include="Config\creatures\m_person.ltx">

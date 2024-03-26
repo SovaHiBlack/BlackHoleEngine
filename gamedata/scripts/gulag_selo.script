@@ -1643,24 +1643,25 @@ function checkStalker(npc_community, gulag_type)
 end
 
 function checkMonster(npc_community, gulag_type)
-		if gulag_type == "gar_boars_nest2" then
-			return npc_community == "boar"
-		end
-		
-		if gulag_type == "gar_boars_nest" then
-			return npc_community == "boar"
-		end
-		
-		if gulag_type == "gar_nest_flesh" then
-			return npc_community == "flesh"
-		end
-		
-		if gulag_type == "gar_dogs_nest" then
-			return npc_community == "dog"
-		end
-		
-		if gulag_type == "gar_dogs_nest2" then
-			return npc_community == "dog"
-		end
+	if gulag_type == "gar_boars_nest2" then
+		return npc_community == "boar"
+	end
+
+	if gulag_type == "gar_boars_nest" then
+		return npc_community == "boar"
+	end
+
+	if gulag_type == "gar_nest_flesh" then
+		return npc_community == "flesh"
+	end
+
+	if gulag_type == "gar_dogs_nest" then
+		return npc_community == "dog"
+	end
+
+	if gulag_type == "gar_dogs_nest2" then
+		return npc_community == "dog"
+	end
+
 	return false
 end

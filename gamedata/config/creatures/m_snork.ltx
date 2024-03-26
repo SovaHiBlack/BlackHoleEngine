@@ -1,5 +1,11 @@
+;==============================================================================
+; SNORK
+;==============================================================================
+;******************************************************************************
+; BASE PROFILES
+;******************************************************************************
 [m_snork_e]:monster_base
-GroupControlSection		= spawn_group
+	GroupControlSection					= spawn_group
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
 ;$spawn					= "monsters\snork"					 ; option for Level Editor
 $npc					= on								 ; option for Level Editor
@@ -471,7 +477,7 @@ jump_max_angle				= 0.8
 
 
 [arena_snork_1]:snork_strong
-$spawn				= "monsters\arena\snork_arena"
+$spawn				= "monsters\arena\snork_arena1"
 visual				= monsters\snork\snork
 icon				= ui_npc_monster_snork
 panic_threshold		= 0.05

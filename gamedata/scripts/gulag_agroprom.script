@@ -711,6 +711,6 @@ function checkStalker( npc_community, gulag_type )
 	return false
 end
 
-function checkMonster( npc_community, gulag_type )
+function checkMonster(npc_community, gulag_type)
 	return false
 end

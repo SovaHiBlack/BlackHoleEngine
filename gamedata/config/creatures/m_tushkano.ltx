@@ -1,35 +1,11 @@
-[m_tushkano_attack_params]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-stand_attack_0 =	  	0.25,		0.05,		    20,        0.0, 1.0, 0.0,		 -1.2, 1.2, -1.6, 1.6,							  1.0
-stand_attack_1 =	  	0.25,		0.05,		    30,        0.0, 1.0, 0.0,		 -1.2, 1.2, -1.6, 1.6,							  1.0
-stand_attack_2 =	  	0.25,		0.05,		    35,        0.0, 1.0, 0.0,		 -1.2, 1.2, -1.6, 1.6,							  1.0
-
-[m_tushkano_step_params]
-;---------------------------------------------------------------------------
-;	anim			| Cycles | time1 | power1 | time2 | power2 |
-;---------------------------------------------------------------------------
-stand_walk_fwd_0 	=	1,	   0.2,     0.5,     0.7,    1,   
-stand_run_0	 		=	1,	   0.25,     1,	    0.25,    1,    
-
-;===========================================================================
-; IMMUNITIES
-;===========================================================================
-[tushkano_immunities]
-burn_immunity			= 1			;коэффициенты иммунитета 
-strike_immunity			= 1
-shock_immunity			= 1
-wound_immunity			= 0.5
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1
-explosion_immunity		= 1
-fire_wound_immunity		= 1
-
-
+;==============================================================================
+; TUSHKANO
+;==============================================================================
+;******************************************************************************
+; BASE PROFILES
+;******************************************************************************
 [m_tushkano_e]:monster_base
-GroupControlSection	= spawn_group
+	GroupControlSection					= spawn_group
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
 $spawn               = "monsters\old\tushkano"				; option for Level Editor
 $npc			     = on						; option for Level Editor
@@ -231,6 +207,53 @@ damage					= m_tushkano_damage
 species					= tushkano
 spec_rank				= normal
 community				= tushkano
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[m_tushkano_attack_params]
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
+;---------------------------------------------------------------------------------------------------------------------------------------------
+stand_attack_0 =	  	0.25,		0.05,		    20,        0.0, 1.0, 0.0,		 -1.2, 1.2, -1.6, 1.6,							  1.0
+stand_attack_1 =	  	0.25,		0.05,		    30,        0.0, 1.0, 0.0,		 -1.2, 1.2, -1.6, 1.6,							  1.0
+stand_attack_2 =	  	0.25,		0.05,		    35,        0.0, 1.0, 0.0,		 -1.2, 1.2, -1.6, 1.6,							  1.0
+
+[m_tushkano_step_params]
+;---------------------------------------------------------------------------
+;	anim			| Cycles | time1 | power1 | time2 | power2 |
+;---------------------------------------------------------------------------
+stand_walk_fwd_0 	=	1,	   0.2,     0.5,     0.7,    1,   
+stand_run_0	 		=	1,	   0.25,     1,	    0.25,    1,    
+
+;===========================================================================
+; IMMUNITIES
+;===========================================================================
+[tushkano_immunities]
+burn_immunity			= 1			;коэффициенты иммунитета 
+strike_immunity			= 1
+shock_immunity			= 1
+wound_immunity			= 0.5
+radiation_immunity		= 0.0
+telepatic_immunity		= 1.0
+chemical_burn_immunity	= 1
+explosion_immunity		= 1
+fire_wound_immunity		= 1
+
+
 
 
 [m_tushkano_damage]

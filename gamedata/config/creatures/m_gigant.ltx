@@ -1,10 +1,16 @@
-;=========================================================================================
-; Base Definition
-;=========================================================================================
+;==============================================================================
+; GIGANT
+;==============================================================================
+;******************************************************************************
+; BASE PROFILES
+;******************************************************************************
 [m_gigant_e]:monster_base
-GroupControlSection	= spawn_group
+	GroupControlSection					= spawn_group
+	$spawn								= "monsters\gigants\gigant_base"				;option for Level Editor
+
+
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
-$spawn               = "monsters\old\gigant"		; option for Level Editor
+
 $npc			     = on						; option for Level Editor
 $prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
@@ -380,16 +386,6 @@ telepatic_immunity 		= 1.0
 chemical_burn_immunity	= 0.05
 explosion_immunity 		= 0.3
 fire_wound_immunity  	= 0.05
-
-;---------------------------
-; TODO: KILL THIS LATER
-;---------------------------
-[m_gigant_normal]:m_gigant_e
-$spawn				= "monsters\old\gigant_normal_old"
-;---------------------------
-rank				= 401
-spec_rank			= normal
-community			= pseudo_gigant
 
 [gigant_normal]:m_gigant_e
 $spawn				= "monsters\gigants\gigant_normal"

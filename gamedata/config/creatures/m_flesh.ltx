@@ -1,10 +1,16 @@
-;===========================================================================
+;==============================================================================
 ; FLESH
-;===========================================================================
+;==============================================================================
+;******************************************************************************
+; BASE PROFILES
+;******************************************************************************
 [m_flesh_e]:monster_base
-GroupControlSection	= spawn_group
+	GroupControlSection					= spawn_group
+	$spawn								= "monsters\fleshes\flesh_base"					;option for Level Editor
+
+
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald,zone_gravi_zone
-$spawn               = "monsters\fleshes\flesh_base"	; option for Level Editor
+
 $npc			     = on						; option for Level Editor
 $prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
@@ -338,7 +344,9 @@ stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 ;*********************************************************************************
 
 [flesh_weak]:m_flesh_e
-$spawn					= "monsters\fleshes\flesh_01_weak"
+	$spawn								= "monsters\fleshes\flesh_weak"
+
+
 visual					= monsters\flesh\flesh
 corpse_visual			= monsters\flesh\flesh_dead
 icon					= ui_npc_monster_flesh
@@ -376,7 +384,9 @@ stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 ;*********************************************************************************
 
 [flesh_normal]:m_flesh_e
-$spawn				= "monsters\fleshes\flesh_02_normal"
+	$spawn								= "monsters\fleshes\flesh_normal"
+
+
 visual				= monsters\flesh\flesh
 corpse_visual		= monsters\flesh\flesh_dead
 icon				= ui_npc_monster_flesh
@@ -416,7 +426,9 @@ stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 ;*********************************************************************************
 
 [flesh_strong]:m_flesh_e
-$spawn				= "monsters\fleshes\flesh_03_strong"
+	$spawn								= "monsters\fleshes\flesh_strong"
+
+
 visual				= monsters\flesh\flesh_strong
 icon				= ui_npc_monster_flesh_strong
 panic_threshold		= 0.05	
@@ -449,14 +461,6 @@ stand_attack_1 =	  	0.30,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 stand_attack_2 =	  	0.30,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
 stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
 
-
-[flesh_group]
-GroupControlSection	= spawn_group
-;$spawn              = "monsters\flesh-group"		; option for Level Editor
-$npc			    = on						; option for Level Editor
-Human		     	= off						; option for ALife Simulator
-class               = AI_FLE_G					; AI class
-monster_section		= m_flesh_e
 
 
 
@@ -496,3 +500,14 @@ bip01_r_hand
 bip01_r_finger0
 bip01_r_finger01
 bip01_l_thigh
+
+[flesh_group]
+	GroupControlSection					= spawn_group
+;	$spawn								= "monsters\flesh-group"						;option for Level Editor
+
+
+$npc			    = on						; option for Level Editor
+Human		     	= off						; option for ALife Simulator
+class               = AI_FLE_G					; AI class
+monster_section		= m_flesh_e
+

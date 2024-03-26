@@ -298,7 +298,7 @@
     <None Include="Config\creatures\m_dog.ltx" />
     <None Include="Config\creatures\m_flesh.ltx" />
     <None Include="Config\creatures\m_fracture.ltx" />
-    <None Include="Config\creatures\m_giant.ltx" />
+    <None Include="Config\creatures\m_gigant.ltx" />
     <None Include="Config\creatures\m_person.ltx" />
     <None Include="config\creatures\m_phantom.ltx" />
     <None Include="Config\creatures\m_poltergeist.ltx" />

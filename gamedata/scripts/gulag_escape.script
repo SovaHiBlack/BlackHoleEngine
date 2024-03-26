@@ -2334,7 +2334,6 @@ function checkStalker(npc_community, gulag_type, npc_rank, se_obj)
 end
 
 function checkMonster(npc_community, gulag_type)
-
 	if gulag_type == "esc_dogs_to_fox" then
 		return npc_community == "dog"
 	end
@@ -2344,8 +2343,7 @@ function checkMonster(npc_community, gulag_type)
 	end
 
 	if gulag_type == "esc_boars_dogs" then
-		return npc_community == "dog" or
-			npc_community == "boar"
+		return npc_community == "dog" or npc_community == "boar"
 	end
 
 	if gulag_type == "esc_zombie_1" then
@@ -2363,31 +2361,31 @@ function checkMonster(npc_community, gulag_type)
 	if gulag_type == "esc_flesh_2" then
 		return npc_community == "flesh"
 	end
-	
+
 	if gulag_type == "esc_bridge_boar" then
 		return npc_community == "boar"
 	end
-	
+
 	if gulag_type == "esc_small_home1" then
 		return npc_community == "boar"
 	end
-	
+
 	if gulag_type == "esc_small_home2" then
 		return npc_community == "boar"
 	end
-	
+
 	if gulag_type == "esc_small_home3" then
 		return npc_community == "dog"
 	end
-	
+
 	if gulag_type == "esc_small_home4" then
 		return npc_community == "dog"
 	end
-	
+
 	if gulag_type == "esc_small_home5" then
 		return npc_community == "dog"
 	end
-	
+
 	if gulag_type == "esc_small_home6" then
 		return npc_community == "flesh"
 	end

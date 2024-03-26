@@ -6,8 +6,11 @@
 ;******************************************************************************
 [m_boar_e]:monster_base
 	GroupControlSection					= spawn_group
-	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
 ;	$spawn								= "monsters\boars\boar_base"					;option for Level Editor
+
+
+	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
+
 	$npc								= on											;option for Level Editor
 	$prefetch							= 16
 	visual								= monsters\mutant_boar\mutant_boar
@@ -57,7 +60,7 @@
 	;--------------------------------------------------------------------------
 
 	;--------------------------------------------------------------------------
-	; Movement
+	; Movement::Velocities & Acceleration
 	;--------------------------------------------------------------------------
 	;	speed factors		| linear | angular_real | angular_path | min | max
 	;--------------------------------------------------------------------------
@@ -281,7 +284,7 @@
 ;==============================================================================
 ; Boar Damage
 ;==============================================================================
-[m_Boar_damage]
+[m_boar_damage]
 	;bone_name							= <hit_scale>,-1,<wound_scale>
 	;										<hit_scale>		- коэфф. изменения хита (уменьшения здоровья)
 	;										<wound_scale>	- коэфф. изменения величины открытой раны
@@ -385,7 +388,9 @@
 ; WEAK PROFILE
 ;******************************************************************************
 [boar_weak]:m_boar_e
-	$spawn								= "monsters\boars\boar_01_weak"
+	$spawn								= "monsters\boars\boar_weak"
+
+
 	visual								= monsters\mutant_boar\mutant_boar
 	icon								= ui_npc_monster_mutant_boar
 	panic_threshold						= 0.5
@@ -422,7 +427,9 @@
 ; NORMAL PROFILE
 ;*********************************************************************************
 [boar_normal]:m_boar_e
-	$spawn								= "monsters\boars\boar_02_normal"
+	$spawn								= "monsters\boars\boar_normal"
+
+
 	visual								= monsters\mutant_boar\mutant_boar
 	icon								= ui_npc_monster_mutant_boar
 	panic_threshold						= 0.2
@@ -459,7 +466,9 @@
 ; STRONG PROFILE
 ;******************************************************************************
 [boar_strong]:m_boar_e
-	$spawn								= "monsters\boars\boar_03_strong"
+	$spawn								= "monsters\boars\boar_strong"
+
+
 	visual								= monsters\mutant_boar\mutant_boar_strong
 	icon								= ui_npc_monster_mutant_boar_strong
 	panic_threshold						= 0.05

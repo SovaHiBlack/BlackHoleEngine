@@ -1,7 +1,17 @@
+;==============================================================================
+; DOG
+;==============================================================================
+;******************************************************************************
+; BASE PROFILES
+;******************************************************************************
 [m_dog_e]:monster_base
-GroupControlSection	= spawn_group
+	GroupControlSection					= spawn_group
+;	$spawn								= "monsters\dogs\dog_base"						; option for Level Editor
+
+
+
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
-;$spawn               = "monsters\dog"				; option for Level Editor
+
 $npc			     = on						; option for Level Editor
 $prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
@@ -381,7 +391,9 @@ bip01_l_thigh
 ; WEAK PROFILE
 ;*********************************************************************************
 [dog_weak]:m_dog_e
-$spawn				= "monsters\dogs\dog_01_weak"
+	$spawn								= "monsters\dogs\dog_weak"
+
+
 visual				= monsters\dog\dog
 corpse_visual		= monsters\dog\dog_dead
 icon				= ui_npc_monster_dog
@@ -424,7 +436,10 @@ stand_attack_3 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 ; NORMAL PROFILE
 ;*********************************************************************************
 [dog_normal]:m_dog_e
-$spawn				= "monsters\dogs\dog_02_normal"
+	$spawn								= "monsters\dogs\dog_normal"
+
+
+
 visual				= monsters\dog\dog_red
 corpse_visual		= monsters\dog\dog_red_dead
 icon				= ui_npc_monster_dog_red
@@ -462,7 +477,10 @@ stand_attack_3 =	  	0.45,		0.15,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 ; STRONG PROFILE
 ;*********************************************************************************
 [dog_strong]:m_dog_e
-$spawn				= "monsters\dogs\dog_03_strong"
+	$spawn								= "monsters\dogs\dog_strong"
+
+
+
 visual				= monsters\dog\dog_white
 corpse_visual		= monsters\dog\dog_white_dead
 icon				= ui_npc_monster_dog_white
@@ -498,7 +516,9 @@ stand_attack_3 =	  	0.45,		0.20,	    500,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.
 
 
 [arena_dog_1]:m_dog_e
-$spawn				= "monsters\dogs\dog_02_normal"
+	$spawn								= "monsters\arena\dog_arena1"
+
+
 visual				= monsters\dog\dog_red
 corpse_visual		= monsters\dog\dog_red_dead
 icon				= ui_npc_monster_dog_red
@@ -511,7 +531,9 @@ community			= dog
 custom_data = scripts\arena_mob_3.ltx
 
 [arena_dog_2]:m_dog_e
-$spawn				= "monsters\dogs\dog_03_strong"
+	$spawn								= "monsters\arena\dog_arena2"
+
+
 visual				= monsters\dog\dog_white
 corpse_visual		= monsters\dog\dog_white_dead
 icon				= ui_npc_monster_dog_white
@@ -524,7 +546,10 @@ community			= dog
 custom_data = scripts\arena_mob_4.ltx
 
 [arena_dog_3]:m_dog_e
-$spawn				= "monsters\dogs\dog_01_weak"
+	$spawn								= "monsters\arena\dog_arena3"
+
+
+
 visual				= monsters\dog\dog
 corpse_visual		= monsters\dog\dog_dead
 icon				= ui_npc_monster_dog
@@ -537,7 +562,9 @@ community			= dog
 custom_data = scripts\arena_mob_5.ltx
 
 [arena_dog_4]:m_dog_e
-$spawn				= "monsters\dogs\dog_02_normal"
+	$spawn								= "monsters\arena\dog_arena4"
+
+
 visual				= monsters\dog\dog_red
 corpse_visual		= monsters\dog\dog_red_dead
 icon				= ui_npc_monster_dog_red

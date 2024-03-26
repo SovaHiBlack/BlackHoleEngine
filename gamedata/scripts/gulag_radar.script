@@ -1499,9 +1499,7 @@ function checkStalker(npc_community, gulag_type, npc_rank, se_obj)
 	return false
 end
 
-function checkMonster( npc_community, gulag_type )
-
-
+function checkMonster(npc_community, gulag_type)
 	if gulag_type == "rad_gig" then
 		return npc_community == "pseudo_gigant"
 	end
@@ -1518,8 +1516,5 @@ function checkMonster( npc_community, gulag_type )
 		return npc_community == "snork"
 	end
 
-	
 	return false
 end
--------------------------------------------------------------------------------------------------------------------------
---                         -- job_func          -- check_state func     -- communities              -- dynamic ltx func

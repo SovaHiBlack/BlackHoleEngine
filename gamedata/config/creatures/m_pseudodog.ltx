@@ -1,5 +1,11 @@
+;==============================================================================
+; PSEUDODOG
+;==============================================================================
+;******************************************************************************
+; BASE PROFILES
+;******************************************************************************
 [m_pseudodog_e]:monster_base
-GroupControlSection	= spawn_group
+	GroupControlSection					= spawn_group
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
 ;$spawn               = "monsters\pseudodog"		; option for Level Editor
 $npc			     = on						; option for Level Editor
@@ -532,7 +538,7 @@ Time_Phantom_Appear = 5000
 
 
 [arena_pseudodog_1]:pseudodog_strong
-$spawn				= "monsters\arena\pseudodog_arena"
+$spawn				= "monsters\arena\pseudodog_arena1"
 visual				= monsters\pseudodog\pseudodog_grey
 icon				= ui_npc_monster_pseudodog_grey
 panic_threshold		= 0.05
@@ -540,7 +546,7 @@ species				= arena_monstr
 custom_data = scripts\arena_mob_1.ltx
 
 [arena_pseudodog_2]:pseudodog_strong
-$spawn				= "monsters\arena\pseudodog_arena"
+$spawn				= "monsters\arena\pseudodog_arena2"
 visual				= monsters\pseudodog\pseudodog
 icon				= ui_npc_monster_pseudodog
 panic_threshold		= 0.05

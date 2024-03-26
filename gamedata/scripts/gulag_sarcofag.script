@@ -195,6 +195,5 @@ function checkStalker(npc_community, gulag_type, npc_rank, se_obj)
 end
 
 function checkMonster(npc_community, gulag_type)
-		
 	return false
 end

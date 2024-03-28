@@ -11,6 +11,12 @@
 	$prefetch							= 16
 
 	visual								= monsters\cat\cat
+	corpse_visual						= monsters\cat\cat
+	icon								= ui_npc_monster_cat
+
+	cform								= skeleton											;collision class
+	class								= SM_CAT_S											;AI class
+
 
 
 
@@ -22,13 +28,9 @@ MinSpeed		    = 1.0						; option for ALife Simulator
 MaxSpeed		    = 1.5						; option for ALife Simulator
 going_speed         = 1.0                      ; option for ALife Simulator
 search_speed        = .5                       ; option for ALife Simulator
-corpse_visual		= monsters\cat\cat
-icon = ui_npc_monster_cat	
+	
 MaxHealthValue		= 100			; range [0..200]
 DynamicObjectsCount	= 32
-
-cform                = skeleton					; collision class
-class                = SM_CAT_S					; AI class
 
 ef_creature_type	 = 2				; option for evaluation functions
 ef_weapon_type		 = 2

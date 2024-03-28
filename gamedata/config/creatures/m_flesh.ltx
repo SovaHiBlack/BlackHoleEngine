@@ -11,7 +11,11 @@
 	$prefetch							= 16
 
 	visual								= monsters\flesh\flesh
+	corpse_visual						= monsters\flesh\flesh_dead
+	icon								= ui_npc_monster_flesh
 
+	cform								= skeleton											;collision class
+	class								= SM_FLESH											;AI class
 
 
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald,zone_gravi_zone
@@ -24,12 +28,9 @@ MaxSpeed		     = 1.5						; option for ALife Simulator
 going_speed          = 2.0                      ; option for ALife Simulator
 current_level_going_speed		= 1;2					; option for ALife Simulator
 search_speed         = .5                       ; option for ALife Simulator
-corpse_visual		 = monsters\flesh\flesh_dead
-icon				 = ui_npc_monster_flesh
 MaxHealthValue		     = 200			; range [0..200]
 DynamicObjectsCount	 = 32
 smart_terrain_choose_interval	= 00:15:00
-
 
 Spawn_Inventory_Item_Section = mutant_flesh_eye
 Spawn_Inventory_Item_Probability = 0.3
@@ -38,9 +39,6 @@ ef_creature_type	 = 7				; option for evaluation functions
 ef_weapon_type		 = 2
 ef_detector_type			 = 1
 panic_threshold		= 0.1
-
-cform               = skeleton					; collision class
-class               = SM_FLESH					; AI class
 
 script_binding		= bind_monster.bind
 
@@ -348,12 +346,9 @@ stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 [flesh_weak]:m_flesh_e
 	$spawn								= "monsters\fleshes\flesh_weak"						;option for Level Editor
 
-	visual								= monsters\flesh\flesh
 
 
 
-corpse_visual			= monsters\flesh\flesh_dead
-icon					= ui_npc_monster_flesh
 panic_threshold			= 0.2
 rank					= 0
 immunities_sect			= flesh_immunities_weak
@@ -390,12 +385,9 @@ stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 [flesh_normal]:m_flesh_e
 	$spawn								= "monsters\fleshes\flesh_normal"					;option for Level Editor
 
-	visual								= monsters\flesh\flesh
 
 
 
-corpse_visual		= monsters\flesh\flesh_dead
-icon				= ui_npc_monster_flesh
 panic_threshold		= 0.2
 rank				= 401
 immunities_sect		= flesh_immunities_normal
@@ -435,10 +427,10 @@ stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 	$spawn								= "monsters\fleshes\flesh_strong"					;option for Level Editor
 
 	visual								= monsters\flesh\flesh_strong
+	icon								= ui_npc_monster_flesh_strong
 
 
 
-icon				= ui_npc_monster_flesh_strong
 panic_threshold		= 0.05	
 rank				= 801
 immunities_sect		= flesh_immunities_strong

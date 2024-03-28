@@ -11,6 +11,10 @@
 	$prefetch							= 16
 
 	visual								= monsters\zombi\zombi_1
+	corpse_visual						= monsters\zombi\zombi_1
+	icon								= ui_npc_monster_zombie
+
+	cform								= skeleton											;collision class
 
 
 
@@ -23,8 +27,6 @@ MinSpeed		     = 1.0						; option for ALife Simulator
 MaxSpeed		     = 5.0						; option for ALife Simulator
 going_speed          = 2;4.5                      ; option for ALife Simulator
 search_speed         = 1.5                       ; option for ALife Simulator
-corpse_visual		 = monsters\zombi\zombi_1
-icon = ui_npc_monster_zombie	
 
 MaxHealthValue		 = 100			; range [0..200]
 DynamicObjectsCount	 = 32
@@ -38,7 +40,7 @@ panic_threshold		= 0.1
 Spawn_Inventory_Item_Section = mutant_zombie_hand
 Spawn_Inventory_Item_Probability = 0.4
 
-cform                = skeleton					; collision class
+
 class                = SM_ZOMBI					; AI class
 
 script_binding  	= bind_monster.bind
@@ -289,6 +291,8 @@ fire_wound_immunity		= 0.1
 	$spawn								= "monsters\zombies\zombie_weak"					;option for Level Editor
 
 	visual								= monsters\zombi\zombi_2
+	icon								= ui_npc_monster_zombie_weak
+
 
 
 
@@ -296,7 +300,7 @@ panic_threshold		= 0.5
 rank = 0
 spec_rank			= weak
 community			= zombie
-icon = ui_npc_monster_zombie_weak	
+	
 
 MaxHealthValue		 = 80
 FakeDeathCount					= 3		; max count of fake death
@@ -309,7 +313,7 @@ attack_params		= zombie_attack_params_normal
 	$spawn								= "monsters\zombies\zombie_normal"					;option for Level Editor
 
 	visual								= monsters\zombi\zombi_1
-
+	icon								= ui_npc_monster_zombie_normal
 
 
 
@@ -317,7 +321,6 @@ panic_threshold		= 0.2
 rank = 255
 spec_rank			= normal
 community			= zombie
-icon = ui_npc_monster_zombie_normal
 
 MaxHealthValue		 = 100
 FakeDeathCount					= 4		; max count of fake death
@@ -356,7 +359,7 @@ stand_attack_3 =	  	0.30,		0.35,		    180,        0.0, 1.0, 0.0,		 -1.0, 0.3, -0
 	$spawn								= "monsters\zombies\zombie_strong"					;option for Level Editor
 
 	visual								= monsters\zombi\zombi_1_ghost
-
+	icon								= ui_npc_monster_zombie_ghost
 
 
 
@@ -364,7 +367,7 @@ panic_threshold		= 0.05
 rank = 255
 spec_rank			= strong
 community			= zombie
-icon = ui_npc_monster_zombie_ghost
+
 
 MaxHealthValue		 = 120
 FakeDeathCount					= 6		; max count of fake death
@@ -402,42 +405,39 @@ stand_attack_3 =	  	0.30,		0.50,		    180,        0.0, 1.0, 0.0,		 -1.0, 0.3, -0
 	$spawn								= "monsters\zombies\zombie_immortal"				;option for Level Editor
 
 	visual								= monsters\zombi\zombi_trup_2
-
+	icon								= ui_npc_monster_zombie_immortal
 
 
 
 panic_threshold		= 0.05
-icon = ui_npc_monster_zombie_immortal
+
 	
 
 [zombie_ghost]:zombie_strong
 	$spawn								= "monsters\zombies\zombie_ghost"					;option for Level Editor
 
 	visual								= monsters\zombi\zombi_trup
-
+	icon								= ui_npc_monster_zombie_strong
 
 
 MaxHealthValue		 = 140			; range [0..200]
-icon = ui_npc_monster_zombie_strong
+
 
 [zombie_old]:zombie_normal
 	$spawn								= "monsters\zombies\zombie_old"						;option for Level Editor
 
 	visual								= monsters\zombi\zombi_3
-
-
-
-icon = ui_npc_monster_zombie_old
+	icon								= ui_npc_monster_zombie_old
 
 
 [zombie_rusty]:zombie_strong
 	$spawn								= "monsters\zombies\zombie_rusty"					;option for Level Editor
 
 	visual								= monsters\zombi\zombi_x4
+	icon								= ui_npc_monster_zombie_rusty
 
 
 
-icon = ui_npc_monster_zombie_rusty
 bones_particles			= zombie_rusty_particles
 sound_die				= $no_sound
 Health			     = 60
@@ -485,13 +485,13 @@ MaxHealthValue		 = 80
 	$spawn								= "monsters\zombies\zombie_plague"					;option for Level Editor
 
 	visual								= monsters\zombi\zombi_x3
-
+	icon								= ui_npc_monster_zombie_plague
 
 
 
 
 Health			     = 60
-icon = ui_npc_monster_zombie_plague
+
 FakeDeathCount			= 1
 StartFakeDeathHealthThreshold	= 0.001
 bones_particles			= zombie_plague_particles

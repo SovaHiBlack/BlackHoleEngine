@@ -11,8 +11,11 @@
 	$prefetch							= 16
 
 	visual								= monsters\dog\dog
+	corpse_visual						= monsters\dog\dog_dead
+	icon								= ui_npc_monster_dog
 
-
+	cform								= skeleton											;collision class
+	class								= SM_DOG_S											;AI class
 
 
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
@@ -24,8 +27,6 @@ MaxSpeed		     = 1.5						; option for ALife Simulator
 going_speed          = 5.0                      ; option for ALife Simulator
 current_level_going_speed		= 1;2					; option for ALife Simulator
 search_speed         = .5                       ; option for ALife Simulator
-corpse_visual		 = monsters\dog\dog_dead
-icon				 = ui_npc_monster_dog
 MaxHealthValue		     = 100			; range [0..200]
 DynamicObjectsCount	 = 32
 smart_terrain_choose_interval	= 00:15:00
@@ -33,14 +34,10 @@ smart_terrain_choose_interval	= 00:15:00
 Spawn_Inventory_Item_Section = mutant_dog_tail
 Spawn_Inventory_Item_Probability = 0.3
 
-cform                = skeleton					; collision class
-class                = SM_DOG_S					; AI class
-
 ef_creature_type	 = 6				; option for evaluation functions
 ef_weapon_type		 = 2
 ef_detector_type			 = 1
 panic_threshold		= 0.07
-
 
 script_binding  	= bind_monster.bind
 
@@ -394,12 +391,11 @@ bip01_l_thigh
 [dog_weak]:m_dog_e
 	$spawn								= "monsters\dogs\dog_weak"							;option for Level Editor
 
-	visual								= monsters\dog\dog
 
 
 
-corpse_visual		= monsters\dog\dog_dead
-icon				= ui_npc_monster_dog
+
+
 panic_threshold		= 0.2
 rank				= 0
 immunities_sect		= dog_immunities_weak
@@ -442,11 +438,11 @@ stand_attack_3 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 	$spawn								= "monsters\dogs\dog_normal"						;option for Level Editor
 
 	visual								= monsters\dog\dog_red
+	corpse_visual						= monsters\dog\dog_red_dead
+	icon								= ui_npc_monster_dog_red
 
 
 
-corpse_visual		= monsters\dog\dog_red_dead
-icon				= ui_npc_monster_dog_red
 panic_threshold		= 0.2
 rank				= 401
 immunities_sect		= dog_immunities_normal
@@ -484,11 +480,11 @@ stand_attack_3 =	  	0.45,		0.15,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 	$spawn								= "monsters\dogs\dog_strong"						;option for Level Editor
 
 	visual								= monsters\dog\dog_white
+	corpse_visual						= monsters\dog\dog_white_dead
+	icon								= ui_npc_monster_dog_white
 
 
 
-corpse_visual		= monsters\dog\dog_white_dead
-icon				= ui_npc_monster_dog_white
 panic_threshold		= 0.2
 rank				= 801
 immunities_sect		= dog_immunities_strong
@@ -524,11 +520,11 @@ stand_attack_3 =	  	0.45,		0.20,	    500,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.
 	$spawn								= "monsters\arena\dog_arena1"						;option for Level Editor
 
 	visual								= monsters\dog\dog_red
+	corpse_visual						= monsters\dog\dog_red_dead
+	icon								= ui_npc_monster_dog_red
 
 
 
-corpse_visual		= monsters\dog\dog_red_dead
-icon				= ui_npc_monster_dog_red
 panic_threshold		= 0.2
 rank				= 401
 immunities_sect		= dog_immunities_strong
@@ -541,10 +537,10 @@ custom_data = scripts\arena_mob_3.ltx
 	$spawn								= "monsters\arena\dog_arena2"						;option for Level Editor
 
 	visual								= monsters\dog\dog_white
+	corpse_visual						= monsters\dog\dog_white_dead
+	icon								= ui_npc_monster_dog_white
 
 
-corpse_visual		= monsters\dog\dog_white_dead
-icon				= ui_npc_monster_dog_white
 panic_threshold		= 0.2
 rank				= 801
 immunities_sect		= dog_immunities_strong
@@ -556,12 +552,9 @@ custom_data = scripts\arena_mob_4.ltx
 [arena_dog_3]:m_dog_e
 	$spawn								= "monsters\arena\dog_arena3"						;option for Level Editor
 
-	visual								= monsters\dog\dog
 
 
 
-corpse_visual		= monsters\dog\dog_dead
-icon				= ui_npc_monster_dog
 panic_threshold		= 0.2
 rank				= 0
 immunities_sect		= dog_immunities_strong
@@ -574,11 +567,11 @@ custom_data = scripts\arena_mob_5.ltx
 	$spawn								= "monsters\arena\dog_arena4"						;option for Level Editor
 
 	visual								= monsters\dog\dog_red
+	corpse_visual						= monsters\dog\dog_red_dead
+	icon								= ui_npc_monster_dog_red
 
 
 
-corpse_visual		= monsters\dog\dog_red_dead
-icon				= ui_npc_monster_dog_red
 panic_threshold		= 0.2
 rank				= 401
 immunities_sect		= dog_immunities_strong

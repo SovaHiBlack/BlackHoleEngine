@@ -11,7 +11,10 @@
 	$prefetch							= 16
 
 	visual								= monsters\pseudodog\pseudodog
+	corpse_visual						= monsters\pseudodog\pseudodog_dead
+	icon								= ui_npc_monster_pseudodog
 
+	cform								= skeleton											;collision class
 
 
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
@@ -23,8 +26,6 @@ MaxSpeed		     = 1.5						; option for ALife Simulator
 going_speed          = 2.0                      ; option for ALife Simulator
 current_level_going_speed		= 1;2					; option for ALife Simulator
 search_speed         = .5                       ; option for ALife Simulator
-corpse_visual		 = monsters\pseudodog\pseudodog_dead
-icon				 = ui_npc_monster_pseudodog
 MaxHealthValue		     = 1.0			; range [0..200]
 DynamicObjectsCount	 = 32
 smart_terrain_choose_interval	= 00:15:00
@@ -37,7 +38,7 @@ ef_weapon_type		 = 3
 ef_detector_type	 = 1
 panic_threshold		= 0.1
 
-cform                = skeleton					; collision class
+
 class                = SM_P_DOG					; AI class
 
 script_binding       = bind_monster.bind
@@ -338,11 +339,10 @@ bip01_head 			= 2.0, -1, 0.3, 10
 [pseudodog_weak]:m_pseudodog_e
 	$spawn								= "monsters\pseudodogs\pseudodog_weak"				;option for Level Editor
 
-	visual								= monsters\pseudodog\pseudodog
 
 
 
-icon				= ui_npc_monster_pseudodog
+
 panic_threshold		= 0.5
 rank				= 0
 immunities_sect		= pseudodog_immunities_weak
@@ -377,11 +377,9 @@ run_jamp_1		=		0.55,		0.15,		    220,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 [pseudodog_normal]:m_pseudodog_e
 	$spawn								= "monsters\pseudodogs\pseudodog_normal"			;option for Level Editor
 
-	visual								= monsters\pseudodog\pseudodog
 
 
 
-icon				= ui_npc_monster_pseudodog
 panic_threshold		= 0.2
 rank				= 401
 immunities_sect		= pseudodog_immunities_normal
@@ -418,11 +416,12 @@ run_jamp_1		=		0.55,		0.25,		    320,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 	$spawn								= "monsters\pseudodogs\pseudodog_strong"			;option for Level Editor
 
 	visual								= monsters\pseudodog\pseudodog_grey
+	corpse_visual						= monsters\pseudodog\pseudodog_grey_dead
+	icon								= ui_npc_monster_pseudodog_grey
 
 
 
-corpse_visual		= monsters\pseudodog\pseudodog_grey_dead
-icon				= ui_npc_monster_pseudodog_grey
+
 panic_threshold		= 0.05	
 rank				= 801
 immunities_sect		= pseudodog_immunities_strong
@@ -462,12 +461,9 @@ run_jamp_1		=		0.55,		0.35,		    420,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 [pseudodog_arena]:pseudodog_strong
 	$spawn								= "monsters\arena\pseudodog_arena"					;option for Level Editor
 
-	visual								= monsters\pseudodog\pseudodog_grey
 
 
 
-
-icon				= ui_npc_monster_pseudodog_grey
 panic_threshold		= 0.05
 species				= arena_monstr
 
@@ -491,12 +487,9 @@ color_add		= 0.00,0.00,0.015
 [psy_dog]:pseudodog_strong
 	$spawn								= "monsters\psy_dogs\psy_dog"						;option for Level Editor
 
-	visual								= monsters\pseudodog\pseudodog_grey
 
 
 
-
-icon				= ui_npc_monster_pseudodog_grey
 class               = SM_DOG_P	
 ;custom_data = scripts\psy_dog.ltx
 aura_effector		= psy_dog_aura_effector
@@ -540,10 +533,10 @@ ce_power			= 0.3 ;0.7
 	$spawn								= "monsters\psy_dogs\psy_dog_phantom"				;option for Level Editor
 
 	visual								= monsters\pseudodog\pseudodog_grey
+	icon								= ui_npc_monster_pseudodog_grey
 
 
 
-icon				= ui_npc_monster_pseudodog_grey
 class               = SM_DOG_F
 
 ;jump_delay					= 3000 ;3000
@@ -570,11 +563,9 @@ Time_Phantom_Appear = 5000
 [arena_pseudodog_1]:pseudodog_strong
 	$spawn								= "monsters\arena\pseudodog_arena1"					;option for Level Editor
 
-	visual								= monsters\pseudodog\pseudodog_grey
 
 
 
-icon				= ui_npc_monster_pseudodog_grey
 panic_threshold		= 0.05
 species				= arena_monstr
 custom_data = scripts\arena_mob_1.ltx
@@ -583,10 +574,10 @@ custom_data = scripts\arena_mob_1.ltx
 	$spawn								= "monsters\arena\pseudodog_arena2"					;option for Level Editor
 
 	visual								= monsters\pseudodog\pseudodog
+	icon								= ui_npc_monster_pseudodog
 
 
 
-icon				= ui_npc_monster_pseudodog
 panic_threshold		= 0.05
 species				= arena_monstr
 custom_data = scripts\arena_mob_2.ltx

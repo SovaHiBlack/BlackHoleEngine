@@ -11,6 +11,11 @@
 	$prefetch							= 16
 
 	visual								= monsters\tushkano\tushkano
+	corpse_visual						= monsters\tushkano\tushkano_dead
+	icon								= ui_npc_monster_tushkano
+
+	cform								= skeleton											;collision class
+
 
 
 
@@ -26,8 +31,6 @@ going_speed          = 5;4.5                      ; option for ALife Simulator
 current_level_going_speed		= 1;2					; option for ALife Simulator
 search_speed         = 1.5                       ; option for ALife Simulator
 
-corpse_visual		 = monsters\tushkano\tushkano_dead
-icon				 = ui_npc_monster_tushkano
 MaxHealthValue		 = 20			; range [0..200]
 DynamicObjectsCount	 = 32
 smart_terrain_choose_interval	= 00:15:00
@@ -38,7 +41,7 @@ ef_weapon_type		 = 2
 ef_detector_type	 = 1
 panic_threshold		= 0.0
 
-cform                = skeleton					; collision class
+
 class                = SM_TUSHK ;AI_TUSH					; AI class
 
 bone_torso			 = bip01_spine1 			; bone name

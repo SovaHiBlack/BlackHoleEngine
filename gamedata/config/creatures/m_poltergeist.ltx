@@ -11,6 +11,10 @@
 	$prefetch							= 16
 
 	visual								= monsters\poltergeist\poltergeist
+	corpse_visual						= monsters\poltergeist\poltergeyst_dead
+	icon								= ui_npc_monster_poltergeist
+
+	cform								= skeleton											;collision class
 
 
 
@@ -23,13 +27,11 @@ MaxSpeed		     = 1.5						; option for ALife Simulator
 going_speed          = 2.0                      ; option for ALife Simulator
 current_level_going_speed		= 1;2					; option for ALife Simulator
 search_speed         = .5                       ; option for ALife Simulator
-corpse_visual		 = monsters\poltergeist\poltergeyst_dead
-icon				 = ui_npc_monster_poltergeist
 MaxHealthValue		 = 150			; range [0..200]
 DynamicObjectsCount	 = 32
 smart_terrain_choose_interval	= 00:15:00
 
-cform                = skeleton					; collision class
+
 class                = SM_POLTR					; AI class
 
 ef_creature_type	 = 5 	;10					; option for evaluation functions

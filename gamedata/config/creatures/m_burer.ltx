@@ -11,13 +11,15 @@
 	$prefetch							= 16
 
 	visual								= monsters\burer\burer
+	corpse_visual						= monsters\burer\burer
+	icon								= ui_npc_monster_burer
 
+	cform								= skeleton											;collision class
+	class								= SM_BURER											;AI class
 
 
 
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_radioactive
-	corpse_visual						= monsters\burer\burer
-	icon								= ui_npc_monster_burer
 	MaxHealthValue						= 150											;range [0..200]
 
 	Spawn_Inventory_Item_Section		= mutant_burer_hand
@@ -243,9 +245,6 @@
 	ef_detector_type					= 1
 	panic_threshold						= 0.1
 
-	cform								= skeleton										;collision class
-	class								= SM_BURER										;AI class
-
 	script_binding						= bind_monster.bind
 
 	bone_torso							= bip01_spine1 				;bone name
@@ -401,14 +400,13 @@ Tele_Time_To_Hold	= 200
 	$spawn								= "monsters\burers\burer_strong"					;option for Level Editor
 
 	visual								= monsters\burer\burer_1
-
+	icon								= ui_npc_monster_burer_strong
 
 
 monster_type		= indoor
 rank				= 901
 spec_rank			= strong
 community			= burer
-icon = ui_npc_monster_burer_strong
 scan_radius				= 0.01
 Particle_Gravi_Wave		= ogsm\ogsm_burer_wave
 ;custom_data = scripts\psy_burer.ltx
@@ -418,11 +416,11 @@ Particle_Gravi_Wave		= ogsm\ogsm_burer_wave
 	$spawn								= "monsters\arena\burer_arena1"						;option for Level Editor
 
 	visual								= monsters\burer\burer_1
+	icon								= ui_npc_monster_burer_strong
 
 
 
 
-icon = ui_npc_monster_burer_strong
 monster_type		= indoor
 rank				= 0
 spec_rank			= weak

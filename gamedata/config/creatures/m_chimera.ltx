@@ -11,6 +11,11 @@
 	$prefetch							= 16
 
 	visual								= monsters\chimera\chimera
+	corpse_visual						= monsters\chimera\chimera
+	icon								= ui_npc_monster_chimera
+
+	cform								= skeleton											;collision class
+	class								= SM_CHIMS											;AI class
 
 
 
@@ -24,9 +29,7 @@ MinSpeed		     = 1.0						; option for ALife Simulator
 MaxSpeed		     = 1.5						; option for ALife Simulator
 going_speed          = 1.0                      ; option for ALife Simulator
 search_speed         = .5                       ; option for ALife Simulator
-
-corpse_visual		 = monsters\chimera\chimera
-icon = ui_npc_monster_chimera	
+	
 MaxHealthValue		     = 400			; range [0..200]
 DynamicObjectsCount	 = 32
 
@@ -35,14 +38,10 @@ ef_weapon_type		= 3
 ef_detector_type			 = 1
 panic_threshold			= 0.1
 
-cform                = skeleton					; collision class
-class                = SM_CHIMS					; AI class
-
 script_binding  	= bind_monster.bind
 
 satiety_threshold		= 0.5
 jump_max_height = 1.0
-
 
 critical_wound_threshold		= -1
 critical_wound_decrease_quant	= 0.
@@ -323,7 +322,7 @@ community			= chimera
 	$spawn								= "monsters\chimeras\chimera_strong"				;option for Level Editor
 
 	visual								= monsters\chimera\chimera_strong
-
+	icon								= ui_npc_monster_chimera_strong
 
 
 
@@ -331,7 +330,7 @@ monster_type		= indoor
 rank				= 901
 spec_rank			= strong
 community			= chimera
-icon = ui_npc_monster_chimera_strong
+
 bones_particles = electro_chimera_particles
 immunities_sect	= electro_chimera_immunities
 MinAttackDist		= 2.0
@@ -384,10 +383,10 @@ custom_data = scripts\pri_electrochimera.ltx
 	$spawn								= "monsters\arena\chimera_arena1"					;option for Level Editor
 
 	visual								= monsters\chimera\chimera_strong
+	icon								= ui_npc_monster_chimera_strong
 
 
 
-icon = ui_npc_monster_chimera_strong
 monster_type		= indoor
 rank				= 0
 spec_rank			= weak

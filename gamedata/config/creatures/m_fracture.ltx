@@ -11,6 +11,10 @@
 	$prefetch							= 16
 
 	visual								= monsters\izlom\izlom
+	corpse_visual						= monsters\izlom\izlom
+	icon								= ui_npc_monster_fracture
+
+	cform								= skeleton											;collision class
 
 
 
@@ -23,8 +27,6 @@ MinSpeed		     = 1.0						; option for ALife Simulator
 MaxSpeed		     = 5.0						; option for ALife Simulator
 going_speed          = 4.5                      ; option for ALife Simulator
 search_speed         = 1.5                       ; option for ALife Simulator
-corpse_visual		 = monsters\izlom\izlom.ogf
-icon = ui_npc_monster_fracture	
 MaxHealthValue		 = 100			; range [0..200]
 DynamicObjectsCount	 = 32
 smart_terrain_choose_interval	= 00:15:00
@@ -42,7 +44,7 @@ ef_weapon_type		 = 4
 ef_detector_type			 = 1
 panic_threshold		= 0.1
 
-cform                = skeleton					; collision class
+
 class                = SM_IZLOM					; AI class
 
 bone_torso			 = bip01_spine1 			; bone name

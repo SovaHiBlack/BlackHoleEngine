@@ -6,11 +6,16 @@
 ;******************************************************************************
 [m_snork_e]:monster_base
 	GroupControlSection					= spawn_group
+;	$spawn								= "monsters\snorks\snork_base"						;option for Level Editor
+	$npc								= on												;option for Level Editor
+	$prefetch							= 16
+
+	visual								= monsters\snork\snork
+
+
+
+
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
-;$spawn					= "monsters\snork"					 ; option for Level Editor
-$npc					= on								 ; option for Level Editor
-$prefetch 				= 16
-visual					= monsters\snork\snork
 corpse_visual			= monsters\snork\snork_dead
 icon					= ui_npc_monster_snork
 DynamicObjectsCount		= 32
@@ -307,8 +312,11 @@ fire_wound_immunity		= 0.18
 ; WEAK PROFILE
 ;*********************************************************************************
 [snork_weak]:m_snork_e
-$spawn				= "monsters\snorks\snork_01_weak"
-visual				= monsters\snork\snork
+	$spawn								= "monsters\snorks\snork_weak"						;option for Level Editor
+
+	visual								= monsters\snork\snork
+
+
 icon				= ui_npc_monster_snork
 panic_threshold		= 0.5
 rank				= 0
@@ -346,8 +354,12 @@ stand_attack_2_1 =	  	0.30,		0.50,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6,
 ; NORMAL PROFILE
 ;*********************************************************************************
 [snork_normal]:m_snork_e
-$spawn				= "monsters\snorks\snork_02_normal"
-visual				= monsters\snork\snork
+	$spawn								= "monsters\snorks\snork_normal"					;option for Level Editor
+
+	visual								= monsters\snork\snork
+
+
+
 icon				= ui_npc_monster_snork
 panic_threshold		= 0.2
 rank				= 401
@@ -385,8 +397,13 @@ stand_attack_2_1 =	  	0.30,		0.70,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6,
 ; STRONG PROFILE
 ;*********************************************************************************
 [snork_strong]:m_snork_e
-$spawn				= "monsters\snorks\snork_03_strong"
-visual				= monsters\snork\snork
+	$spawn								= "monsters\snorks\snork_strong"					;option for Level Editor
+
+	visual								= monsters\snork\snork
+
+
+
+
 icon				= ui_npc_monster_snork
 panic_threshold		= 0.05
 rank				= 801
@@ -433,8 +450,12 @@ stand_attack_2_1 =	  	0.30,		1.00,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6,
 ;*********************************************************************************
 ;=======================================================================================
 [aes_snork]:snork_strong
-$spawn				= "monsters\snorks\aes_snork"
-visual				= monsters\snork\snork
+	$spawn								= "monsters\snorks\snork_aes"						;option for Level Editor
+
+	visual								= monsters\snork\snork
+
+
+
 icon				= ui_npc_monster_snork
 panic_threshold		= 0.0
 
@@ -443,8 +464,12 @@ panic_threshold		= 0.0
 
 
 [snork_arena]:snork_strong
-$spawn				= "monsters\arena\snork_arena"
-visual				= monsters\snork\snork
+	$spawn								= "monsters\arena\snork_arena"						;option for Level Editor
+
+	visual								= monsters\snork\snork
+
+
+
 icon				= ui_npc_monster_snork
 panic_threshold		= 0.05
 species				= arena_monstr
@@ -452,18 +477,25 @@ species				= arena_monstr
 
 
 [snork_indoor]:snork_weak
-$spawn			= "monsters\snorks\snork_indoor"
+	$spawn								= "monsters\snorks\snork_indoor"					;option for Level Editor
+
+
+
 monster_type	= indoor
 
 jump_min_distance			= 2.5
 jump_max_angle				= 0.4
 
 [snork_outdoor]:snork_weak
-$spawn			= "monsters\snorks\snork_outdoor"
+	$spawn								= "monsters\snorks\snork_outdoor"					;option for Level Editor
+
+
 monster_type	= outdoor
 
 [snork_jumper]:snork_weak
-$spawn			= "monsters\snorks\snork_jumper"
+	$spawn								= "monsters\snorks\snork_jumper"					;option for Level Editor
+
+
 monster_type	= outdoor
 panic_threshold		= 0.05
 
@@ -477,24 +509,36 @@ jump_max_angle				= 0.8
 
 
 [arena_snork_1]:snork_strong
-$spawn				= "monsters\arena\snork_arena1"
-visual				= monsters\snork\snork
+	$spawn								= "monsters\arena\snork_arena1"						;option for Level Editor
+
+	visual								= monsters\snork\snork
+
+
+
 icon				= ui_npc_monster_snork
 panic_threshold		= 0.05
 species				= arena_monstr
 custom_data = scripts\arena_mob_1.ltx
 
 [arena_snork_2]:snork_strong
-$spawn				= "monsters\arena\snork_arena"
-visual				= monsters\snork\snork
+	$spawn								= "monsters\arena\snork_arena2"						;option for Level Editor
+
+	visual								= monsters\snork\snork
+
+
+
 icon				= ui_npc_monster_snork
 panic_threshold		= 0.05
 species				= arena_monstr
 custom_data = scripts\arena_mob_2.ltx
 
 [arena_snork_3]:snork_strong
-$spawn				= "monsters\arena\snork_arena"
-visual				= monsters\snork\snork
+	$spawn								= "monsters\arena\snork_arena3"						;option for Level Editor
+
+	visual								= monsters\snork\snork
+
+
+
 icon				= ui_npc_monster_snork
 panic_threshold		= 0.05
 species				= arena_monstr

@@ -6,14 +6,16 @@
 ;******************************************************************************
 [m_dog_e]:monster_base
 	GroupControlSection					= spawn_group
-;	$spawn								= "monsters\dogs\dog_base"						; option for Level Editor
+;	$spawn								= "monsters\dogs\dog_base"							;option for Level Editor
+	$npc								= on												;option for Level Editor
+	$prefetch							= 16
+
+	visual								= monsters\dog\dog
+
 
 
 
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
-
-$npc			     = on						; option for Level Editor
-$prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 100						; option for ALife Simulator
@@ -22,7 +24,6 @@ MaxSpeed		     = 1.5						; option for ALife Simulator
 going_speed          = 5.0                      ; option for ALife Simulator
 current_level_going_speed		= 1;2					; option for ALife Simulator
 search_speed         = .5                       ; option for ALife Simulator
-visual				 = monsters\dog\dog
 corpse_visual		 = monsters\dog\dog_dead
 icon				 = ui_npc_monster_dog
 MaxHealthValue		     = 100			; range [0..200]
@@ -391,10 +392,12 @@ bip01_l_thigh
 ; WEAK PROFILE
 ;*********************************************************************************
 [dog_weak]:m_dog_e
-	$spawn								= "monsters\dogs\dog_weak"
+	$spawn								= "monsters\dogs\dog_weak"							;option for Level Editor
+
+	visual								= monsters\dog\dog
 
 
-visual				= monsters\dog\dog
+
 corpse_visual		= monsters\dog\dog_dead
 icon				= ui_npc_monster_dog
 panic_threshold		= 0.2
@@ -436,11 +439,12 @@ stand_attack_3 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 ; NORMAL PROFILE
 ;*********************************************************************************
 [dog_normal]:m_dog_e
-	$spawn								= "monsters\dogs\dog_normal"
+	$spawn								= "monsters\dogs\dog_normal"						;option for Level Editor
+
+	visual								= monsters\dog\dog_red
 
 
 
-visual				= monsters\dog\dog_red
 corpse_visual		= monsters\dog\dog_red_dead
 icon				= ui_npc_monster_dog_red
 panic_threshold		= 0.2
@@ -477,11 +481,12 @@ stand_attack_3 =	  	0.45,		0.15,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 ; STRONG PROFILE
 ;*********************************************************************************
 [dog_strong]:m_dog_e
-	$spawn								= "monsters\dogs\dog_strong"
+	$spawn								= "monsters\dogs\dog_strong"						;option for Level Editor
+
+	visual								= monsters\dog\dog_white
 
 
 
-visual				= monsters\dog\dog_white
 corpse_visual		= monsters\dog\dog_white_dead
 icon				= ui_npc_monster_dog_white
 panic_threshold		= 0.2
@@ -516,10 +521,12 @@ stand_attack_3 =	  	0.45,		0.20,	    500,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.
 
 
 [arena_dog_1]:m_dog_e
-	$spawn								= "monsters\arena\dog_arena1"
+	$spawn								= "monsters\arena\dog_arena1"						;option for Level Editor
+
+	visual								= monsters\dog\dog_red
 
 
-visual				= monsters\dog\dog_red
+
 corpse_visual		= monsters\dog\dog_red_dead
 icon				= ui_npc_monster_dog_red
 panic_threshold		= 0.2
@@ -531,10 +538,11 @@ community			= dog
 custom_data = scripts\arena_mob_3.ltx
 
 [arena_dog_2]:m_dog_e
-	$spawn								= "monsters\arena\dog_arena2"
+	$spawn								= "monsters\arena\dog_arena2"						;option for Level Editor
+
+	visual								= monsters\dog\dog_white
 
 
-visual				= monsters\dog\dog_white
 corpse_visual		= monsters\dog\dog_white_dead
 icon				= ui_npc_monster_dog_white
 panic_threshold		= 0.2
@@ -546,11 +554,12 @@ community			= dog
 custom_data = scripts\arena_mob_4.ltx
 
 [arena_dog_3]:m_dog_e
-	$spawn								= "monsters\arena\dog_arena3"
+	$spawn								= "monsters\arena\dog_arena3"						;option for Level Editor
+
+	visual								= monsters\dog\dog
 
 
 
-visual				= monsters\dog\dog
 corpse_visual		= monsters\dog\dog_dead
 icon				= ui_npc_monster_dog
 panic_threshold		= 0.2
@@ -562,10 +571,12 @@ community			= dog
 custom_data = scripts\arena_mob_5.ltx
 
 [arena_dog_4]:m_dog_e
-	$spawn								= "monsters\arena\dog_arena4"
+	$spawn								= "monsters\arena\dog_arena4"						;option for Level Editor
+
+	visual								= monsters\dog\dog_red
 
 
-visual				= monsters\dog\dog_red
+
 corpse_visual		= monsters\dog\dog_red_dead
 icon				= ui_npc_monster_dog_red
 panic_threshold		= 0.2

@@ -6,13 +6,15 @@
 ;******************************************************************************
 [m_cat_e]:monster_base
 	GroupControlSection					= spawn_group
-;	$spawn								= "monsters\cats\cat_base"						; option for Level Editor
+;	$spawn								= "monsters\cats\cat_base"							;option for Level Editor
+	$npc								= on												;option for Level Editor
+	$prefetch							= 16
+
+	visual								= monsters\cat\cat
 
 
 
 
-$npc			    = on						; option for Level Editor
-;$prefetch 			= 16
 Scheduled		    = on						; option for ALife Simulator
 Human		     	= off						; option for ALife Simulator
 Health				= 100						; option for ALife Simulator
@@ -20,7 +22,6 @@ MinSpeed		    = 1.0						; option for ALife Simulator
 MaxSpeed		    = 1.5						; option for ALife Simulator
 going_speed         = 1.0                      ; option for ALife Simulator
 search_speed        = .5                       ; option for ALife Simulator
-visual				= monsters\cat\cat
 corpse_visual		= monsters\cat\cat
 icon = ui_npc_monster_cat	
 MaxHealthValue		= 100			; range [0..200]
@@ -321,7 +322,7 @@ bip01_ponytail2		= 1.0, -1, 1.5
 
 
 [cat_weak]:m_cat_e
-	$spawn								= "monsters\cats\cat_weak"	
+	$spawn								= "monsters\cats\cat_weak"							;option for Level Editor
 
 
 

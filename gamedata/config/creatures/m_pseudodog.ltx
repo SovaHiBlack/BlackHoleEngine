@@ -6,10 +6,15 @@
 ;******************************************************************************
 [m_pseudodog_e]:monster_base
 	GroupControlSection					= spawn_group
+;	$spawn								= "monsters\pseudodogs\pseudodog_base"				;option for Level Editor
+	$npc								= on												;option for Level Editor
+	$prefetch							= 16
+
+	visual								= monsters\pseudodog\pseudodog
+
+
+
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
-;$spawn               = "monsters\pseudodog"		; option for Level Editor
-$npc			     = on						; option for Level Editor
-;$prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 250						; option for ALife Simulator
@@ -18,7 +23,6 @@ MaxSpeed		     = 1.5						; option for ALife Simulator
 going_speed          = 2.0                      ; option for ALife Simulator
 current_level_going_speed		= 1;2					; option for ALife Simulator
 search_speed         = .5                       ; option for ALife Simulator
-visual				 = monsters\pseudodog\pseudodog
 corpse_visual		 = monsters\pseudodog\pseudodog_dead
 icon				 = ui_npc_monster_pseudodog
 MaxHealthValue		     = 1.0			; range [0..200]
@@ -332,8 +336,12 @@ bip01_head 			= 2.0, -1, 0.3, 10
 ; WEAK PROFILE
 ;*********************************************************************************
 [pseudodog_weak]:m_pseudodog_e
-$spawn				= "monsters\pseudodogs\pseudodog_01_weak"
-visual				= monsters\pseudodog\pseudodog
+	$spawn								= "monsters\pseudodogs\pseudodog_weak"				;option for Level Editor
+
+	visual								= monsters\pseudodog\pseudodog
+
+
+
 icon				= ui_npc_monster_pseudodog
 panic_threshold		= 0.5
 rank				= 0
@@ -367,8 +375,12 @@ run_jamp_1		=		0.55,		0.15,		    220,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 ; NORMAL PROFILE
 ;*********************************************************************************
 [pseudodog_normal]:m_pseudodog_e
-$spawn				= "monsters\pseudodogs\pseudodog_02_normal"
-visual				= monsters\pseudodog\pseudodog
+	$spawn								= "monsters\pseudodogs\pseudodog_normal"			;option for Level Editor
+
+	visual								= monsters\pseudodog\pseudodog
+
+
+
 icon				= ui_npc_monster_pseudodog
 panic_threshold		= 0.2
 rank				= 401
@@ -403,8 +415,12 @@ run_jamp_1		=		0.55,		0.25,		    320,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 ; STRONG PROFILE
 ;*********************************************************************************
 [pseudodog_strong]:m_pseudodog_e
-$spawn				= "monsters\pseudodogs\pseudodog_03_strong"
-visual				= monsters\pseudodog\pseudodog_grey
+	$spawn								= "monsters\pseudodogs\pseudodog_strong"			;option for Level Editor
+
+	visual								= monsters\pseudodog\pseudodog_grey
+
+
+
 corpse_visual		= monsters\pseudodog\pseudodog_grey_dead
 icon				= ui_npc_monster_pseudodog_grey
 panic_threshold		= 0.05	
@@ -444,8 +460,13 @@ run_jamp_1		=		0.55,		0.35,		    420,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 ;*********************************************************************************
 
 [pseudodog_arena]:pseudodog_strong
-$spawn				= "monsters\arena\pseudodog_arena"
-visual				= monsters\pseudodog\pseudodog_grey
+	$spawn								= "monsters\arena\pseudodog_arena"					;option for Level Editor
+
+	visual								= monsters\pseudodog\pseudodog_grey
+
+
+
+
 icon				= ui_npc_monster_pseudodog_grey
 panic_threshold		= 0.05
 species				= arena_monstr
@@ -468,8 +489,13 @@ color_add		= 0.00,0.00,0.015
 
 
 [psy_dog]:pseudodog_strong
-$spawn				= "monsters\psy_dog\psy_dog"
-visual				= monsters\pseudodog\pseudodog_grey
+	$spawn								= "monsters\psy_dogs\psy_dog"						;option for Level Editor
+
+	visual								= monsters\pseudodog\pseudodog_grey
+
+
+
+
 icon				= ui_npc_monster_pseudodog_grey
 class               = SM_DOG_P	
 ;custom_data = scripts\psy_dog.ltx
@@ -511,8 +537,12 @@ ce_power			= 0.3 ;0.7
 ; Base Definition
 ;=========================================================================================
 [psy_dog_phantom]:pseudodog_weak
-$spawn				= "monsters\psy_dog\psy_dog_phantom"
-visual				= monsters\pseudodog\pseudodog_grey
+	$spawn								= "monsters\psy_dogs\psy_dog_phantom"				;option for Level Editor
+
+	visual								= monsters\pseudodog\pseudodog_grey
+
+
+
 icon				= ui_npc_monster_pseudodog_grey
 class               = SM_DOG_F
 
@@ -529,8 +559,8 @@ particles_disappear	= monsters\pseudo_phantom_death_00
 ;=========================================================================================
 
 
-[psy_dog_radar]:psy_dog 
-$spawn				= "monsters\psy_dog\rad_psy_dog"
+[psy_dog_radar]:psy_dog
+	$spawn								= "monsters\psy_dogs\psy_dog_radar"					;option for Level Editor
 
 Max_Phantoms_Count	= 4
 Min_Phantoms_Count	= 2
@@ -538,16 +568,24 @@ Time_Phantom_Appear = 5000
 
 
 [arena_pseudodog_1]:pseudodog_strong
-$spawn				= "monsters\arena\pseudodog_arena1"
-visual				= monsters\pseudodog\pseudodog_grey
+	$spawn								= "monsters\arena\pseudodog_arena1"					;option for Level Editor
+
+	visual								= monsters\pseudodog\pseudodog_grey
+
+
+
 icon				= ui_npc_monster_pseudodog_grey
 panic_threshold		= 0.05
 species				= arena_monstr
 custom_data = scripts\arena_mob_1.ltx
 
 [arena_pseudodog_2]:pseudodog_strong
-$spawn				= "monsters\arena\pseudodog_arena2"
-visual				= monsters\pseudodog\pseudodog
+	$spawn								= "monsters\arena\pseudodog_arena2"					;option for Level Editor
+
+	visual								= monsters\pseudodog\pseudodog
+
+
+
 icon				= ui_npc_monster_pseudodog
 panic_threshold		= 0.05
 species				= arena_monstr

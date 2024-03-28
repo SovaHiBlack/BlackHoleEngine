@@ -6,13 +6,15 @@
 ;******************************************************************************
 [m_gigant_e]:monster_base
 	GroupControlSection					= spawn_group
-	$spawn								= "monsters\gigants\gigant_base"				;option for Level Editor
+;	$spawn								= "monsters\gigants\gigant_base"					;option for Level Editor
+	$npc								= on												;option for Level Editor
+	$prefetch							= 16
+
+	visual								= monsters\psevdogigant\psevdogigant
+
 
 
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
-
-$npc			     = on						; option for Level Editor
-$prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 400						; option for ALife Simulator
@@ -21,7 +23,6 @@ MaxSpeed		     = 5.0						; option for ALife Simulator
 going_speed          = 2;4.5                      ; option for ALife Simulator
 current_level_going_speed		= 1;2					; option for ALife Simulator
 search_speed         = 1.5                       ; option for ALife Simulator
-visual				 = monsters\psevdogigant\psevdogigant
 corpse_visual	     = monsters\psevdogigant\psevdogigant_dead
 icon				 = ui_npc_monster_psevdogigant
 MaxHealthValue		     = 300			; range [0..200]
@@ -388,16 +389,24 @@ explosion_immunity 		= 0.3
 fire_wound_immunity  	= 0.05
 
 [gigant_normal]:m_gigant_e
-$spawn				= "monsters\gigants\gigant_normal"
-visual				= monsters\psevdogigant\psevdogigant
+	$spawn								= "monsters\gigants\gigant_normal"					;option for Level Editor
+
+	visual								= monsters\psevdogigant\psevdogigant
+
+
+
 icon				= ui_npc_monster_psevdogigant
 rank				= 401
 spec_rank			= normal
 community			= pseudo_gigant
 
 [gigant_strong]:m_gigant_e
-$spawn				= "monsters\gigants\gigant_strong"
-visual				= monsters\psevdogigant\psevdogigant_strong
+	$spawn								= "monsters\gigants\gigant_strong"					;option for Level Editor
+
+	visual								= monsters\psevdogigant\psevdogigant_strong
+
+
+
 icon				= ui_npc_monster_psevdogigant
 rank				= 801
 spec_rank			= strong
@@ -405,8 +414,12 @@ community			= pseudo_gigant
 
 
 [arena_gigant_1]:m_gigant_e
-$spawn        = "monsters\gigants\gigant_normal"
-visual        = monsters\psevdogigant\psevdogigant
+	$spawn								= "monsters\gigants\gigant_arena1"					;option for Level Editor
+
+	visual								= monsters\psevdogigant\psevdogigant
+
+
+
 icon        = ui_npc_monster_psevdogigant
 rank        = 401
 spec_rank     = normal

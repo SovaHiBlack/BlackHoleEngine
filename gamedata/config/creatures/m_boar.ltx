@@ -6,14 +6,16 @@
 ;******************************************************************************
 [m_boar_e]:monster_base
 	GroupControlSection					= spawn_group
-;	$spawn								= "monsters\boars\boar_base"					;option for Level Editor
+;	$spawn								= "monsters\boars\boar_base"						;option for Level Editor
+	$npc								= on												;option for Level Editor
+	$prefetch							= 16
+
+	visual								= monsters\mutant_boar\mutant_boar
+
+
 
 
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
-
-	$npc								= on											;option for Level Editor
-	$prefetch							= 16
-	visual								= monsters\mutant_boar\mutant_boar
 	corpse_visual						= monsters\mutant_boar\mutant_boar_dead
 	icon								= ui_npc_monster_mutant_boar
 
@@ -388,10 +390,12 @@
 ; WEAK PROFILE
 ;******************************************************************************
 [boar_weak]:m_boar_e
-	$spawn								= "monsters\boars\boar_weak"
-
+	$spawn								= "monsters\boars\boar_weak"						;option for Level Editor
 
 	visual								= monsters\mutant_boar\mutant_boar
+
+
+
 	icon								= ui_npc_monster_mutant_boar
 	panic_threshold						= 0.5
 	rank								= 0
@@ -427,10 +431,13 @@
 ; NORMAL PROFILE
 ;*********************************************************************************
 [boar_normal]:m_boar_e
-	$spawn								= "monsters\boars\boar_normal"
-
+	$spawn								= "monsters\boars\boar_normal"						;option for Level Editor
 
 	visual								= monsters\mutant_boar\mutant_boar
+
+
+
+
 	icon								= ui_npc_monster_mutant_boar
 	panic_threshold						= 0.2
 	rank								= 401
@@ -466,10 +473,13 @@
 ; STRONG PROFILE
 ;******************************************************************************
 [boar_strong]:m_boar_e
-	$spawn								= "monsters\boars\boar_strong"
-
+	$spawn								= "monsters\boars\boar_strong"						;option for Level Editor
 
 	visual								= monsters\mutant_boar\mutant_boar_strong
+
+
+
+
 	icon								= ui_npc_monster_mutant_boar_strong
 	panic_threshold						= 0.05
 	rank								= 801

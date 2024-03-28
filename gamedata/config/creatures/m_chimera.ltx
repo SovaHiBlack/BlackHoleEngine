@@ -6,13 +6,17 @@
 ;******************************************************************************
 [m_chimera_e]:monster_base
 	GroupControlSection					= spawn_group
-;	$spawn								= "monsters\chimeras\chimera_base"				;option for Level Editor
+;	$spawn								= "monsters\chimeras\chimera_base"					;option for Level Editor
+	$npc								= on												;option for Level Editor
+	$prefetch							= 16
+
+	visual								= monsters\chimera\chimera
+
+
+
 
 
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
-
-$npc			     = on						; option for Level Editor
-$prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 400						; option for ALife Simulator
@@ -20,7 +24,7 @@ MinSpeed		     = 1.0						; option for ALife Simulator
 MaxSpeed		     = 1.5						; option for ALife Simulator
 going_speed          = 1.0                      ; option for ALife Simulator
 search_speed         = .5                       ; option for ALife Simulator
-visual				 = monsters\chimera\chimera
+
 corpse_visual		 = monsters\chimera\chimera
 icon = ui_npc_monster_chimera	
 MaxHealthValue		     = 400			; range [0..200]
@@ -307,7 +311,7 @@ bip01_neck 			= 1, -1, 0.1
 bip01_head 			= 8, -1, 0.50
 
 [chimera_weak]:m_chimera_e
-	$spawn								= "monsters\chimeras\chimera_weak"				;option for Level Editor
+	$spawn								= "monsters\chimeras\chimera_weak"					;option for Level Editor
 
 
 monster_type		= indoor
@@ -316,10 +320,13 @@ spec_rank			= weak
 community			= chimera
 
 [chimera_strong]:m_chimera_e
-	$spawn								= "monsters\chimeras\chimera_strong"			;option for Level Editor
+	$spawn								= "monsters\chimeras\chimera_strong"				;option for Level Editor
+
+	visual								= monsters\chimera\chimera_strong
 
 
-visual			= monsters\chimera\chimera_strong
+
+
 monster_type		= indoor
 rank				= 901
 spec_rank			= strong
@@ -374,10 +381,12 @@ custom_data = scripts\pri_electrochimera.ltx
 
 
 [arena_chimera_1]:m_chimera_e
-	$spawn								= "monsters\arena\chimera_arena"				; option for Level Editor
+	$spawn								= "monsters\arena\chimera_arena1"					;option for Level Editor
+
+	visual								= monsters\chimera\chimera_strong
 
 
-visual			= monsters\chimera\chimera_strong
+
 icon = ui_npc_monster_chimera_strong
 monster_type		= indoor
 rank				= 0

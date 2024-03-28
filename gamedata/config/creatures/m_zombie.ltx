@@ -6,10 +6,16 @@
 ;******************************************************************************
 [m_zombie_e]:monster_base
 	GroupControlSection					= spawn_group
+;	$spawn								= "monsters\zombies\zombie_base"					;option for Level Editor
+	$npc								= on												;option for Level Editor
+	$prefetch							= 16
+
+	visual								= monsters\zombi\zombi_1
+
+
+
+
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
-;$spawn               = "monsters\zombies\zombie_base"		; option for Level Editor
-$npc			     = on						; option for Level Editor
-$prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 100						; option for ALife Simulator
@@ -17,7 +23,6 @@ MinSpeed		     = 1.0						; option for ALife Simulator
 MaxSpeed		     = 5.0						; option for ALife Simulator
 going_speed          = 2;4.5                      ; option for ALife Simulator
 search_speed         = 1.5                       ; option for ALife Simulator
-visual				 = monsters\zombi\zombi_1
 corpse_visual		 = monsters\zombi\zombi_1
 icon = ui_npc_monster_zombie	
 
@@ -281,8 +286,12 @@ explosion_immunity		= 0.3
 fire_wound_immunity		= 0.1
 	
 [zombie_weak]:m_zombie_e
-$spawn				= "monsters\zombies\zombie_01_weak"
-visual				= monsters\zombi\zombi_2
+	$spawn								= "monsters\zombies\zombie_weak"					;option for Level Editor
+
+	visual								= monsters\zombi\zombi_2
+
+
+
 panic_threshold		= 0.5
 rank = 0
 spec_rank			= weak
@@ -297,8 +306,13 @@ immunities_sect		= zombie_immunities_normal
 attack_params		= zombie_attack_params_normal
 
 [zombie_normal]:m_zombie_e
-$spawn				= "monsters\zombies\zombie_02_normal"
-visual				= monsters\zombi\zombi_1
+	$spawn								= "monsters\zombies\zombie_normal"					;option for Level Editor
+
+	visual								= monsters\zombi\zombi_1
+
+
+
+
 panic_threshold		= 0.2
 rank = 255
 spec_rank			= normal
@@ -339,8 +353,13 @@ stand_attack_3 =	  	0.30,		0.35,		    180,        0.0, 1.0, 0.0,		 -1.0, 0.3, -0
 
 
 [zombie_strong]:m_zombie_e
-$spawn				= "monsters\zombies\zombie_ghost"
-visual				= monsters\zombi\zombi_1_ghost
+	$spawn								= "monsters\zombies\zombie_strong"					;option for Level Editor
+
+	visual								= monsters\zombi\zombi_1_ghost
+
+
+
+
 panic_threshold		= 0.05	
 rank = 255
 spec_rank			= strong
@@ -380,27 +399,44 @@ stand_attack_3 =	  	0.30,		0.50,		    180,        0.0, 1.0, 0.0,		 -1.0, 0.3, -0
 
 
 [zombie_immortal]:zombie_strong
-$spawn				= "monsters\zombies\zombie_03_strong"
-visual				= monsters\zombi\zombi_trup_2
+	$spawn								= "monsters\zombies\zombie_immortal"				;option for Level Editor
+
+	visual								= monsters\zombi\zombi_trup_2
+
+
+
+
 panic_threshold		= 0.05
 icon = ui_npc_monster_zombie_immortal
 	
 
 [zombie_ghost]:zombie_strong
-$spawn				= "monsters\zombies\zombie_03_strong"
-visual				= monsters\zombi\zombi_trup
+	$spawn								= "monsters\zombies\zombie_ghost"					;option for Level Editor
+
+	visual								= monsters\zombi\zombi_trup
+
+
+
 MaxHealthValue		 = 140			; range [0..200]
 icon = ui_npc_monster_zombie_strong
 
 [zombie_old]:zombie_normal
-$spawn				= "monsters\zombies\zombie_02_normal"
-visual				= monsters\zombi\zombi_3
+	$spawn								= "monsters\zombies\zombie_old"						;option for Level Editor
+
+	visual								= monsters\zombi\zombi_3
+
+
+
 icon = ui_npc_monster_zombie_old
 
 
 [zombie_rusty]:zombie_strong
-$spawn				= "monsters\zombies\zombie_03_strong"
-visual				= monsters\zombi\zombi_x4
+	$spawn								= "monsters\zombies\zombie_rusty"					;option for Level Editor
+
+	visual								= monsters\zombi\zombi_x4
+
+
+
 icon = ui_npc_monster_zombie_rusty
 bones_particles			= zombie_rusty_particles
 sound_die				= $no_sound
@@ -446,8 +482,14 @@ MaxHealthValue		 = 80
 
 
 [zombie_plague]:zombie_normal
-$spawn				= "monsters\zombies\zombie_02_normal"
-visual				= monsters\zombi\zombi_x3
+	$spawn								= "monsters\zombies\zombie_plague"					;option for Level Editor
+
+	visual								= monsters\zombi\zombi_x3
+
+
+
+
+
 Health			     = 60
 icon = ui_npc_monster_zombie_plague
 FakeDeathCount			= 1

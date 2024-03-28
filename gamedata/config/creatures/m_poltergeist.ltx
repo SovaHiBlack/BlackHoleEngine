@@ -6,10 +6,15 @@
 ;******************************************************************************
 [m_poltergeist_e]:monster_base
 	GroupControlSection					= spawn_group
+;	$spawn								= "monsters\poltergeists\poltergeist_base"			;option for Level Editor
+	$npc								= on												;option for Level Editor
+	$prefetch							= 16
+
+	visual								= monsters\poltergeist\poltergeist
+
+
+
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald,zone_radioactive
-$spawn               = "monsters\old\poltergeist"		; option for Level Editor
-$npc			     = on						; option for Level Editor
-;$prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 250						; option for ALife Simulator
@@ -18,7 +23,6 @@ MaxSpeed		     = 1.5						; option for ALife Simulator
 going_speed          = 2.0                      ; option for ALife Simulator
 current_level_going_speed		= 1;2					; option for ALife Simulator
 search_speed         = .5                       ; option for ALife Simulator
-visual				 = monsters\poltergeist\poltergeist
 corpse_visual		 = monsters\poltergeist\poltergeyst_dead
 icon				 = ui_npc_monster_poltergeist
 MaxHealthValue		 = 150			; range [0..200]
@@ -335,7 +339,10 @@ fire_wound_immunity = 1.0
 
 
 [m_poltergeist_normal]:m_poltergeist_e
-$spawn               = "monsters\old\poltergeist_normal"
+	$spawn								= "monsters\poltergeists\poltergeist_normal"		;option for Level Editor
+
+
+
 spec_rank			= normal
 rank				= 401
 community			= poltergeist
@@ -345,7 +352,7 @@ community			= poltergeist
 ;===========================================================================
 
 [m_poltergeist_normal_tele]:m_poltergeist_normal
-$spawn               = "monsters\poltergeists\poltergeist_normal_tele"
+	$spawn								= "monsters\poltergeists\poltergeist_normal_tele"	;option for Level Editor
 
 type							= telekinetic
 
@@ -382,7 +389,9 @@ sound_tele_hold					= monsters\burer\burer_tele_hold
 sound_tele_throw				= monsters\burer\burer_tele_throw
 
 [m_poltergeist_tele_outdoor]:m_poltergeist_normal_tele
-$spawn               = "monsters\poltergeists\poltergeist_tele_outdoor"
+	$spawn								= "monsters\poltergeists\poltergeist_tele_outdoor"	;option for Level Editor
+
+
 
 Tele_Find_Radius				= 12 ;20
 
@@ -393,7 +402,9 @@ Tele_Find_Radius				= 12 ;20
 ;===========================================================================
 
 [m_poltergeist_normal_flame]:m_poltergeist_normal
-$spawn               = "monsters\poltergeists\poltergeist_normal_flame"
+	$spawn								= "monsters\poltergeists\poltergeist_normal_flame"	;option for Level Editor
+
+
 
 type					= flamer
 
@@ -451,7 +462,7 @@ time_release		= 0.85		; fade out
 
 
 [m_poltergeist_strong_flame]:m_poltergeist_normal_flame
-$spawn               = "monsters\poltergeists\poltergeist_strong_flame"
+	$spawn								= "monsters\poltergeists\poltergeist_strong_flame"	;option for Level Editor
 
 immunities_sect		= poltergeist_immunities_strong
 flame_hit_value			= 0.7

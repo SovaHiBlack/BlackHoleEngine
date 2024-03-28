@@ -6,13 +6,16 @@
 ;******************************************************************************
 [m_controller_e]:monster_base
 	GroupControlSection					= spawn_group
-	$spawn								= "monsters\controllers\controller_base"		;option for Level Editor
+;	$spawn								= "monsters\controllers\controller_base"			;option for Level Editor
+	$npc								= on												;option for Level Editor
+	$prefetch							= 16
+
+	visual								= monsters\kontroler\kontroler
+
+
 
 
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
-
-$npc			     = on						; option for Level Editor
-$prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 400						; option for ALife Simulator
@@ -21,7 +24,6 @@ MaxSpeed		     = 5.0						; option for ALife Simulator
 going_speed          = 5;4.5                      ; option for ALife Simulator
 current_level_going_speed		= 1;2					; option for ALife Simulator
 search_speed         = 1.5                       ; option for ALife Simulator
-visual				 = monsters\kontroler\kontroler
 corpse_visual		 = monsters\kontroler\kontroler_dead
 icon				 = ui_npc_monster_kontroler
 MaxHealthValue		     = 400			; range [0..200]
@@ -443,20 +445,24 @@ bip01_head 			= 2.0, -1, 0.5, 10
 
 
 [m_controller_normal]:m_controller_e
-	$spawn								= "monsters\controllers\controller_normal"
+	$spawn								= "monsters\controllers\controller_normal"			;option for Level Editor
+
+	visual								= monsters\kontroler\kontroler
 
 
-visual				= monsters\kontroler\kontroler
+
 icon				= ui_npc_monster_kontroler
 spec_rank			= normal
 rank				= 401
 community			= controller
 
 [m_controller_normal_fat]:m_controller_e
-	$spawn								= "monsters\controllers\controller_normal_fat"
+	$spawn								= "monsters\controllers\controller_normal_fat"		;option for Level Editor
+
+	visual								= monsters\kontroler\kontroler_5
 
 
-visual				= monsters\kontroler\kontroler_5
+
 icon				= ui_npc_monster_kontroler_5
 tube_at_once		= true
 tube_damage			= 0.50
@@ -465,10 +471,13 @@ rank				= 401
 community			= controller
 
 [m_controller_old]:m_controller_e
-	$spawn								= "monsters\controllers\controller_old"
+	$spawn								= "monsters\controllers\controller_old"				;option for Level Editor
+
+	visual								= monsters\kontroler\kontroler_3
 
 
-visual				= monsters\kontroler\kontroler_3
+
+
 icon				= ui_npc_monster_kontroler_3
 tube_at_once		= true
 tube_damage			= 0.50
@@ -477,10 +486,12 @@ rank				= 801
 community			= controller
 
 [m_controller_old_fat]:m_controller_normal
-	$spawn								= "monsters\controllers\controller_old_fat"
+	$spawn								= "monsters\controllers\controller_old_fat"			;option for Level Editor
+
+	visual								= monsters\kontroler\kontroler_4
 
 
-visual				= monsters\kontroler\kontroler_4
+
 icon				= ui_npc_monster_kontroler_4
 tube_at_once		= true
 tube_damage			= 0.50
@@ -489,7 +500,7 @@ rank				= 801
 community			= controller
 
 [controller_tubeman]:m_controller_normal
-	$spawn								= "monsters\controllers\controller_tubeman"
+	$spawn								= "monsters\controllers\controller_tubeman"			;option for Level Editor
 
 
 tube_at_once		= true
@@ -555,12 +566,13 @@ bip01_r_toe1
 
 
 [arena_controller_1]:m_controller_e
-	$spawn								= "monsters\arena\controller_arena"
+	$spawn								= "monsters\arena\controller_arena1"				;option for Level Editor
+
+	visual								= monsters\kontroler\kontroler_5
 
 
 
 
-visual				= monsters\kontroler\kontroler_5
 icon				= ui_npc_monster_kontroler_5
 spec_rank			= normal
 tube_at_once		= true

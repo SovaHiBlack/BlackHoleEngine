@@ -6,14 +6,16 @@
 ;******************************************************************************
 [m_fracture_e]:monster_base
 	GroupControlSection					= spawn_group
-;	$spawn								= "monsters\fractures\fracture_base"			;option for Level Editor
+;	$spawn								= "monsters\fractures\fracture_base"				;option for Level Editor
+	$npc								= on												;option for Level Editor
+	$prefetch							= 16
+
+	visual								= monsters\izlom\izlom
+
 
 
 
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
-
-$npc			     = on						; option for Level Editor
-$prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off ;on						; option for ALife Simulator
 Health			     = 150						; option for ALife Simulator
@@ -21,7 +23,6 @@ MinSpeed		     = 1.0						; option for ALife Simulator
 MaxSpeed		     = 5.0						; option for ALife Simulator
 going_speed          = 4.5                      ; option for ALife Simulator
 search_speed         = 1.5                       ; option for ALife Simulator
-visual				 = monsters\izlom\izlom.ogf
 corpse_visual		 = monsters\izlom\izlom.ogf
 icon = ui_npc_monster_fracture	
 MaxHealthValue		 = 100			; range [0..200]
@@ -252,7 +253,7 @@ fire_wound_immunity  = 0.3
 
 
 [fracture_weak]:m_fracture_e
-	$spawn								= "monsters\fractures\fracture_weak"			;option for Level Editor
+	$spawn								= "monsters\fractures\fracture_weak"				;option for Level Editor
 
 
 monster_type		= indoor
@@ -262,7 +263,7 @@ community			= fracture
 
 
 [arena_fracture_1]:m_fracture_e
-	$spawn								= "monsters\arena\fracture_arena"				;option for Level Editor
+	$spawn								= "monsters\arena\fracture_arena1"					;option for Level Editor
 
 
 

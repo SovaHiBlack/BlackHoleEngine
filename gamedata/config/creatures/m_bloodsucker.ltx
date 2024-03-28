@@ -6,14 +6,16 @@
 ;******************************************************************************
 [m_bloodsucker_e]:monster_base
 	GroupControlSection					= spawn_group
-;	$spawn								= "monsters\bloodsuckers\bloodsucker_base"		;option for Level Editor
+;	$spawn								= "monsters\bloodsuckers\bloodsucker_base"			;option for Level Editor
+	$npc								= on												;option for Level Editor
+	$prefetch							= 16
+
+	visual								= monsters\krovosos\krovosos
+
+
 
 
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
-
-	$npc								= on											;option for Level Editor
-;	$prefetch							= 16
-	visual								= monsters\krovosos\krovosos
 	corpse_visual						= monsters\krovosos\krovosos_dead
 	icon								= ui_npc_monster_krovosos
 	MaxHealthValue						= 200											;range [0..200]
@@ -457,10 +459,13 @@
 ; WEAK PROFILE
 ;******************************************************************************
 [bloodsucker_weak]:m_bloodsucker_e
-	$spawn								= "monsters\bloodsuckers\bloodsucker_weak"
-
+	$spawn								= "monsters\bloodsuckers\bloodsucker_weak"			;option for Level Editor
 
 	visual								= monsters\krovosos\krovosos
+
+
+
+
 	icon								= ui_npc_monster_krovosos
 	panic_threshold						= 0.5
 	rank								= 0
@@ -503,10 +508,12 @@
 ; NORMAL PROFILE
 ;******************************************************************************
 [bloodsucker_normal]:m_bloodsucker_e
-	$spawn								= "monsters\bloodsuckers\bloodsucker_normal"
-
+	$spawn								= "monsters\bloodsuckers\bloodsucker_normal"		;option for Level Editor
 
 	visual								= monsters\krovosos\krovosos
+
+
+
 	icon								= ui_npc_monster_krovosos
 	panic_threshold						= 0.2
 	rank								= 401
@@ -549,10 +556,13 @@
 ; STRONG PROFILE
 ;******************************************************************************
 [bloodsucker_strong]:m_bloodsucker_e
-	$spawn								= "monsters\bloodsuckers\bloodsucker_strong"
-
+	$spawn								= "monsters\bloodsuckers\bloodsucker_strong"		;option for Level Editor
 
 	visual								= monsters\krovosos\krovosos_strong
+
+
+
+
 	icon								= ui_npc_monster_krovosos_strong
 	Predator_Visual						= monsters\krovosos\krovosos_strong_xray
 	panic_threshold						= 0.05
@@ -600,27 +610,35 @@
 ;   - use custom immunities section to set custom immunity params
 ;------------------------------------------------------------------------------
 [bloodsucker_arena]:bloodsucker_strong
-	$spawn								= "monsters\arena\bloodsucker_arena"
-
+	$spawn								= "monsters\arena\bloodsucker_arena"				;option for Level Editor
 
 	visual								= monsters\krovosos\krovosos
+
+
+
 	icon								= ui_npc_monster_krovosos
 	panic_threshold						= 0.05
 	species								= arena_monstr
 
 [bloodsucker_mil]:bloodsucker_strong
-	$spawn								= "monsters\military\bloodsucker_mil"
-
+	$spawn								= "monsters\military\bloodsucker_mil"				;option for Level Editor
 
 	visual								= monsters\krovosos\krovosos
+
+
+
+
 	icon								= ui_npc_monster_krovosos
 	panic_threshold						= 0.05
 
 [arena_bloodsucker_1]:bloodsucker_strong
-	$spawn								= "monsters\arena\bloodsucker_arena1"
-
+	$spawn								= "monsters\arena\bloodsucker_arena1"				;option for Level Editor
 
 	visual								= monsters\krovosos\krovosos
+
+
+
+
 	icon								= ui_npc_monster_krovosos
 	panic_threshold						= 0.05
 	species								= arena_monstr

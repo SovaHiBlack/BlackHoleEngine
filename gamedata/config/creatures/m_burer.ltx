@@ -17,13 +17,24 @@
 	cform								= skeleton											;collision class
 	class								= SM_BURER											;AI class
 
+	;species of monster
+	species								= burer
+	rank								= 0
+	spec_rank							= weak
+	community							= burer
+;	monster_type						= indoor
 
-
+	material							= creatures\large
+	terrain								= burer_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_radioactive
-	MaxHealthValue						= 150											;range [0..200]
 
 	Spawn_Inventory_Item_Section		= mutant_burer_hand
 	Spawn_Inventory_Item_Probability	= 0.5
+
+
+
+
+	MaxHealthValue						= 150											;range [0..200]
 
 	;--------------------------------------------------------------------------
 	; Offline Alife
@@ -257,22 +268,14 @@
 
 	;									fSearchRange|fOptEnemyDistance|fOptEnemyDistanceWeight|fMinEnemyDistance|fMinEnemyDistanceWeight|fMaxEnemyDistance|fMaxEnemyDistanceWeight
 	selector_approach					=  20.0,            1.0,                 1000.0,             0.0,               0.0,              1000.0,				10000.0,      
-	terrain					= burer_terrain
+
 	hit_type				= wound
 
 	DamagedThreshold		= 0.5
 
-	material				= creatures\large
 	step_params				= m_burer_step_params
 	LegsCount				= 2
 	damage					= m_burer_damage
-
-	;species of monster
-	species					= burer
-	rank					= 0
-	spec_rank				= weak
-	community				= burer
-	;monster_type			= indoor
 
 ;=================================================================================
 ; Burer Attack Params
@@ -389,11 +392,14 @@ time_release		= 0.85		; fade out
 [burer_weak]:m_burer_e
 	$spawn								= "monsters\burers\burer_weak"						;option for Level Editor
 
+	rank								= 0
+	spec_rank							= weak
+	community							= burer
+	monster_type						= indoor
 
-monster_type		= indoor
-rank				= 0
-spec_rank			= weak
-community			= burer
+
+
+
 Tele_Time_To_Hold	= 200
 
 [burer_strong]:m_burer_e
@@ -402,11 +408,14 @@ Tele_Time_To_Hold	= 200
 	visual								= monsters\burer\burer_1
 	icon								= ui_npc_monster_burer_strong
 
+	rank								= 901
+	spec_rank							= strong
+	community							= burer
+	monster_type						= indoor
 
-monster_type		= indoor
-rank				= 901
-spec_rank			= strong
-community			= burer
+
+
+
 scan_radius				= 0.01
 Particle_Gravi_Wave		= ogsm\ogsm_burer_wave
 ;custom_data = scripts\psy_burer.ltx
@@ -418,13 +427,15 @@ Particle_Gravi_Wave		= ogsm\ogsm_burer_wave
 	visual								= monsters\burer\burer_1
 	icon								= ui_npc_monster_burer_strong
 
+	rank								= 0
+	spec_rank							= weak
+	community							= burer
+	monster_type						= indoor
 
 
 
-monster_type		= indoor
-rank				= 0
-spec_rank			= weak
-community			= burer
+
+
 immunities_sect		= burer_immunities_arena
 custom_data = scripts\arena_mob_1.ltx
 

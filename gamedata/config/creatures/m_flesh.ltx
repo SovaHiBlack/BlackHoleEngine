@@ -17,8 +17,16 @@
 	cform								= skeleton											;collision class
 	class								= SM_FLESH											;AI class
 
+	;species of monster
+	species								= flesh
 
-SpaceRestrictionSection = space_restrictor,zone_mosquito_bald,zone_gravi_zone
+	material							= creatures\hoof
+	terrain								= flesh_terrain
+	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_gravi_zone
+
+	Spawn_Inventory_Item_Section		= mutant_flesh_eye
+	Spawn_Inventory_Item_Probability	= 0.3
+
 
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
@@ -31,9 +39,6 @@ search_speed         = .5                       ; option for ALife Simulator
 MaxHealthValue		     = 200			; range [0..200]
 DynamicObjectsCount	 = 32
 smart_terrain_choose_interval	= 00:15:00
-
-Spawn_Inventory_Item_Section = mutant_flesh_eye
-Spawn_Inventory_Item_Probability = 0.3
 
 ef_creature_type	 = 7				; option for evaluation functions
 ef_weapon_type		 = 2
@@ -231,16 +236,9 @@ selector_approach	=      20.0,            1.0,                1000.0,           
 
 DamagedThreshold	= 0.2
 
-material			= creatures\hoof
 step_params			= m_flesh_step_params
 LegsCount			= 4
 damage				= m_flesh_damage
-
-;species of monster
-species				= flesh
-
-terrain				= flesh_terrain
-
 
 ;=================================================================================
 ; Flesh Damage
@@ -346,15 +344,15 @@ stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 [flesh_weak]:m_flesh_e
 	$spawn								= "monsters\fleshes\flesh_weak"						;option for Level Editor
 
+	rank								= 0
+	spec_rank							= weak
+	community							= flesh
 
 
 
 panic_threshold			= 0.2
-rank					= 0
 immunities_sect			= flesh_immunities_weak
 attack_params			= flesh_attack_params_weak
-spec_rank			= weak
-community			= flesh
 
 [flesh_immunities_weak]
 burn_immunity			= 1.0
@@ -385,16 +383,16 @@ stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 [flesh_normal]:m_flesh_e
 	$spawn								= "monsters\fleshes\flesh_normal"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= flesh
+
 
 
 
 panic_threshold		= 0.2
-rank				= 401
 immunities_sect		= flesh_immunities_normal
 attack_params		= flesh_attack_params_normal
-spec_rank			= normal
-community			= flesh
-
 
 [flesh_immunities_normal]
 burn_immunity			= 1.0
@@ -429,15 +427,15 @@ stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 	visual								= monsters\flesh\flesh_strong
 	icon								= ui_npc_monster_flesh_strong
 
+	rank								= 801
+	spec_rank							= strong
+	community							= flesh
+
 
 
 panic_threshold		= 0.05	
-rank				= 801
 immunities_sect		= flesh_immunities_strong
 attack_params		= flesh_attack_params_strong
-spec_rank			= strong
-community			= flesh
-
 
 [flesh_immunities_strong]
 burn_immunity			= 1.0
@@ -506,8 +504,10 @@ bip01_l_thigh
 ;	$spawn								= "monsters\flesh-group"							;option for Level Editor
 	$npc								= on												;option for Level Editor
 
+	class								= AI_FLE_G											;AI class
+
+
 
 
 Human		     	= off						; option for ALife Simulator
-class               = AI_FLE_G					; AI class
 monster_section		= m_flesh_e

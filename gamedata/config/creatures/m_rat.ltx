@@ -11,6 +11,13 @@
 	corpse_visual						= monsters\rat\rat_1
 
 	cform								= skeleton											;collision class
+	class								= AI_RAT											;AI class
+
+	;species of monster
+	species								= rat
+
+	material							= creatures\small
+	terrain								= rats_terrain
 
 
 
@@ -38,9 +45,6 @@ ef_creature_type	 = 1				; option for evaluation functions
 ef_weapon_type		 = 1
 ef_detector_type	 = 1
 panic_threshold		= 0.1
-
-
-class                        = AI_RAT			; AI class
 
 ph_box0_center 		     =   0.0,   0.11, -0.22
 ph_box0_size 		     =   0.085, 0.11, 0.525
@@ -110,11 +114,6 @@ EatCorpseInterval	     = 600000		; milliseconds
 
 corp_mass				 = 500			;
 
-;terrain		             = 3,255,255,255,30,60, 4,255,255,255,30,60, 11,255,255,255,30,60, 12,255,255,255,30,60, 13,255,255,255,30,60, 14,255,255,255,30,60, 15,255,255,255,30,60
-;terrain		             = 1,255,255,255,30,60, 2,255,255,255,30,60, 3,255,255,255,30,60, 4,255,255,255,30,60
-;terrain				 = 255,255,255,255,30,40
-terrain				 = rats_terrain
-
 ;inventory item information
 cost			= 0
 inv_name		= "dead rat"
@@ -170,11 +169,7 @@ sleep_satiety = 1.0		;0.8
 sleep_radiation = 1.0	;1.1
 sleep_psy_health = 1.0
 
-material				= creatures\small
 DynamicObjectsCount		= 32
-
-;species of monster
-species						= rat
 
 [rats_terrain]
 	255,000,255,255 ;на всех уровнях, по графам без описания
@@ -192,8 +187,10 @@ species						= rat
 	$spawn								= "monsters\rat-group"								;option for Level Editor
 	$npc								= on												;option for Level Editor
 
+	class								= AI_RAT_G											;AI class
+
+
 
 
 Human		     	 = off				; option for ALife Simulator
-class                = AI_RAT_G			; AI class
 monster_section      = m_rat_e

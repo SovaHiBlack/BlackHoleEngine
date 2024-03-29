@@ -17,11 +17,19 @@
 	cform								= skeleton											;collision class
 	class								= SM_CONTR											;AI class
 
+	;species of monster
+	species								= controller
+	rank								= 401
+	spec_rank							= normal
+	community							= controller
+
+	material							= creatures\medium
+	terrain								= controller_terrain
+	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
 
 
 
 
-SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 400						; option for ALife Simulator
@@ -122,8 +130,6 @@ selector_getaway		=      20.0,            20.0,                1000.0,          
 selector_approach		=      20.0,            1.0,                 1000.0,             0.0,               0.0,              1000.0,				10000.0,      
 ;							  fSearchRange,fOptEnemyDistance,fOptEnemyDistanceWeight,fMinEnemyDistance,fMinEnemyDistanceWeight,fMaxEnemyDistance,fMaxEnemyDistanceWeight
 selector_walk_around	=      20.0,            6.0,                 1000.0,             4.0,               5000.0,					8.0,				5000.0,      
-
-terrain				 = controller_terrain
 
 hit_type = wound
 
@@ -239,8 +245,6 @@ critical_wound_bones_legs	= controller_critical_wound_bones_legs
 
 DamagedThreshold		= 0.1
 
-material				= creatures\medium
-
 attack_effector			= m_controller_attack_effector
 
 attack_params			= m_controller_attack_params
@@ -283,19 +287,9 @@ PsyAura_Fake_MaxAddDist		= 90
 PsyAura_Fake_MinAddDist		= 20
 PsyAura_HitDelay			= 1500
 PsyAura_PPHitDelay			= 300
-
-
 ;------------------------------------------------------------------------- 
 
-
 Control_Hit					= weapons\generic_weapon_controler
-
-;species of monster
-species						= controller
-rank						= 401
-spec_rank					= normal
-community					= controller
-
 
 ;===========================================================================
 ; Step Events
@@ -448,12 +442,9 @@ bip01_head 			= 2.0, -1, 0.5, 10
 [m_controller_normal]:m_controller_e
 	$spawn								= "monsters\controllers\controller_normal"			;option for Level Editor
 
-
-
-
-spec_rank			= normal
-rank				= 401
-community			= controller
+	rank								= 401
+	spec_rank							= normal
+	community							= controller
 
 [m_controller_normal_fat]:m_controller_e
 	$spawn								= "monsters\controllers\controller_normal_fat"		;option for Level Editor
@@ -461,13 +452,13 @@ community			= controller
 	visual								= monsters\kontroler\kontroler_5
 	icon								= ui_npc_monster_kontroler_5
 
+	rank								= 401
+	spec_rank							= normal
+	community							= controller
 
 
 tube_at_once		= true
 tube_damage			= 0.50
-spec_rank			= normal
-rank				= 401
-community			= controller
 
 [m_controller_old]:m_controller_e
 	$spawn								= "monsters\controllers\controller_old"				;option for Level Editor
@@ -475,14 +466,14 @@ community			= controller
 	visual								= monsters\kontroler\kontroler_3
 	icon								= ui_npc_monster_kontroler_3
 
+	rank								= 801
+	spec_rank							= strong
+	community							= controller
 
 
 
 tube_at_once		= true
 tube_damage			= 0.50
-spec_rank			= strong
-rank				= 801
-community			= controller
 
 [m_controller_old_fat]:m_controller_normal
 	$spawn								= "monsters\controllers\controller_old_fat"			;option for Level Editor
@@ -490,13 +481,14 @@ community			= controller
 	visual								= monsters\kontroler\kontroler_4
 	icon								= ui_npc_monster_kontroler_4
 
+	rank								= 801
+	spec_rank							= strong
+	community							= controller
+
 
 
 tube_at_once		= true
 tube_damage			= 0.50
-spec_rank			= strong
-rank				= 801
-community			= controller
 
 [controller_tubeman]:m_controller_normal
 	$spawn								= "monsters\controllers\controller_tubeman"			;option for Level Editor
@@ -570,12 +562,13 @@ bip01_r_toe1
 	visual								= monsters\kontroler\kontroler_5
 	icon								= ui_npc_monster_kontroler_5
 
+	rank								= 401
+	spec_rank							= normal
+	community							= controller
 
 
 
-spec_rank			= normal
 tube_at_once		= true
 tube_damage			= 0.50
-rank				= 401
-community			= controller
+
 custom_data = scripts\arena_mob_1.ltx

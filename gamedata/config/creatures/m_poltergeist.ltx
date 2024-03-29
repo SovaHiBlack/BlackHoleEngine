@@ -15,10 +15,21 @@
 	icon								= ui_npc_monster_poltergeist
 
 	cform								= skeleton											;collision class
+	class								= SM_POLTR											;AI class
+
+	;species of monster
+	species								= poltergeist
+	rank								= 401
+	spec_rank							= normal
+	community							= poltergeist
+
+	material							= creatures\large
+	terrain								= poltergeist_terrain
+	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_radioactive
 
 
 
-SpaceRestrictionSection = space_restrictor,zone_mosquito_bald,zone_radioactive
+
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 250						; option for ALife Simulator
@@ -30,9 +41,6 @@ search_speed         = .5                       ; option for ALife Simulator
 MaxHealthValue		 = 150			; range [0..200]
 DynamicObjectsCount	 = 32
 smart_terrain_choose_interval	= 00:15:00
-
-
-class                = SM_POLTR					; AI class
 
 ef_creature_type	 = 5 	;10					; option for evaluation functions
 ef_weapon_type		 = 12	;3
@@ -114,8 +122,6 @@ Min_Satiety			= 0.7
 Max_Satiety			= 0.95
 
 distance_to_corpse	= 1.8
-
-terrain				 = poltergeist_terrain
 
 hit_type = strike
 
@@ -213,9 +219,6 @@ Morale_Despondent_Threashold	= 0.5
 ;-------------------------------------------------------------------------
 DamagedThreshold		= 0.4
 
-material				= creatures\large	;objects\bullet
-
-
 squad_attack_algorithm	= 1
 attack_effector			= m_poltergeist_attack_effector
 
@@ -257,17 +260,11 @@ Delay_Scare_Aggressive	= 30001
 
 ;---------------------------
 
-;species of monster
-species					= poltergeist
-rank					= 401
-spec_rank				= normal
-community				= poltergeist
-
 critical_wound_threshold		= -1
 critical_wound_decrease_quant	= 0.
 
 
-[m_Poltergeist_damage]
+[m_poltergeist_damage]
 ;bone_name		 = <hit_scale>,-1,<wound_scale>
 ;<hit_scale>	- коэфф. изменения хита (уменьшения здоровья)
 ;<wound_scale>	- коэфф. изменения величины открытой раны
@@ -343,16 +340,13 @@ fire_wound_immunity = 1.0
 [m_poltergeist_normal]:m_poltergeist_e
 	$spawn								= "monsters\poltergeists\poltergeist_normal"		;option for Level Editor
 
-
-
-spec_rank			= normal
-rank				= 401
-community			= poltergeist
+	rank								= 401
+	spec_rank							= normal
+	community							= poltergeist
 
 ;===========================================================================
 ; TELE
 ;===========================================================================
-
 [m_poltergeist_normal_tele]:m_poltergeist_normal
 	$spawn								= "monsters\poltergeists\poltergeist_normal_tele"	;option for Level Editor
 

@@ -17,9 +17,17 @@
 	cform								= skeleton											;collision class
 	class								= SM_BLOOD											;AI class
 
+	;species of monster
+	species								= bloodsucker
 
-
+	material							= creatures\medium
+	terrain								= bloodsucker_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
+
+	Spawn_Inventory_Item_Section		= mutant_krovosos_jaw
+	Spawn_Inventory_Item_Probability	= 0.4
+
+
 	MaxHealthValue						= 200											;range [0..200]
 
 	ef_creature_type					= 13											;option for evaluation functions
@@ -32,9 +40,6 @@
 	bone_head							= bip01_head									;bone name
 	bone_fire							= bip01_head
 	weapon_usage						= 0												;boolean
-
-	Spawn_Inventory_Item_Section		= mutant_krovosos_jaw
-	Spawn_Inventory_Item_Probability	= 0.4
 
 	;--------------------------------------------------------------------------
 	; Offline Alife
@@ -248,14 +253,8 @@
 	;									fSearchRange|fOptEnemyDistance|fOptEnemyDistanceWeight|fMinEnemyDistance|fMinEnemyDistanceWeight|fMaxEnemyDistance|fMaxEnemyDistanceWeight
 	selector_approach					=	20.0,			1.0,				1000.0,					0.0,				0.0,				1000.0,				10000.0
 
-	terrain								= bloodsucker_terrain
-	material							= creatures\medium
-
 	step_params							= m_bloodsucker_step_params
 	LegsCount							= 2
-
-	;species of monster
-	species								= bloodsucker
 
 	;--------------------------------------------------------------------------
 	; Invisible Ability
@@ -460,15 +459,15 @@
 [bloodsucker_weak]:m_bloodsucker_e
 	$spawn								= "monsters\bloodsuckers\bloodsucker_weak"			;option for Level Editor
 
+	rank								= 0
+	spec_rank							= weak
+	community							= bloodsucker
 
 
 
 	panic_threshold						= 0.5
-	rank								= 0
 	immunities_sect						= bloodsucker_immunities_weak
 	attack_params						= bloodsucker_attack_params_weak
-	spec_rank							= weak
-	community							= bloodsucker
 
 [bloodsucker_immunities_weak]
 	burn_immunity						= 1.0
@@ -506,16 +505,15 @@
 [bloodsucker_normal]:m_bloodsucker_e
 	$spawn								= "monsters\bloodsuckers\bloodsucker_normal"		;option for Level Editor
 
-
+	rank								= 401
+	spec_rank							= normal
+	community							= bloodsucker
 
 
 
 	panic_threshold						= 0.2
-	rank								= 401
 	immunities_sect						= bloodsucker_immunities_normal
 	attack_params						= bloodsucker_attack_params_normal
-	spec_rank							= normal
-	community							= bloodsucker
 
 [bloodsucker_immunities_normal]
 	burn_immunity						= 1.0
@@ -556,16 +554,17 @@
 	visual								= monsters\krovosos\krovosos_strong
 	icon								= ui_npc_monster_krovosos_strong
 
+	rank								= 401
+	spec_rank							= strong
+	community							= bloodsucker
+
 
 
 
 	Predator_Visual						= monsters\krovosos\krovosos_strong_xray
 	panic_threshold						= 0.05
-	rank								= 401
 	immunities_sect						= bloodsucker_immunities_strong
 	attack_params						= bloodsucker_attack_params_strong
-	spec_rank							= strong
-	community							= bloodsucker
 
 [bloodsucker_immunities_strong]
 	burn_immunity						= 1.0
@@ -610,10 +609,12 @@
 	visual								= monsters\krovosos\krovosos
 	icon								= ui_npc_monster_krovosos
 
+	species								= arena_monstr
+
+
 
 
 	panic_threshold						= 0.05
-	species								= arena_monstr
 
 [bloodsucker_mil]:bloodsucker_strong
 	$spawn								= "monsters\military\bloodsucker_mil"				;option for Level Editor
@@ -632,11 +633,11 @@
 	visual								= monsters\krovosos\krovosos
 	icon								= ui_npc_monster_krovosos
 
+	species								= arena_monstr
 
 
 
 	panic_threshold						= 0.05
-	species								= arena_monstr
 	immunities_sect						= bloodsucker_immunities_arena
 	custom_data							= scripts\arena_mob_1.ltx
 

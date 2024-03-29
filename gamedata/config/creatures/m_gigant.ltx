@@ -15,9 +15,22 @@
 	icon								= ui_npc_monster_psevdogigant
 
 	cform								= skeleton											;collision class
+	class								= SM_GIANT											;AI class
+
+	;species of monster
+	species								= giant
+	rank								= 401
+	spec_rank							= normal
+	community							= pseudo_gigant
+	monster_type						= outdoor
+
+	material							= creatures\large
+	terrain								= giant_terrain
+	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
 
 
-SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
+
+
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 400						; option for ALife Simulator
@@ -34,9 +47,6 @@ ef_creature_type	= 19							; option for evaluation functions
 ef_weapon_type		= 3
 ef_detector_type			 = 1
 panic_threshold		= 0.1
-
-
-class                = SM_GIANT					; AI class
 
 script_binding  	= bind_monster.bind
 
@@ -113,9 +123,6 @@ Max_Satiety			= 0.9		;
 distance_to_corpse	= 1.2		; 
 
 selector_approach		= 20.0,1.0,1000.0,0.0,0.0, 1000.0,	10000.0,      
-
-terrain					= giant_terrain
-
 
 hit_type				= wound
 
@@ -220,8 +227,6 @@ distant_idle_sound_range	= 100.0
 
 DamagedThreshold		= 0.2 ;0.05 ;0.2
 
-material				= creatures\large
-
 squad_attack_algorithm	= 1
 attack_effector			= m_giant_attack_effector
 
@@ -232,12 +237,6 @@ threaten_effector		= pseudogigant_threaten_effector
 
 
 LegsCount			= 2
-
-;species of monster
-species					= giant
-rank					= 401
-spec_rank				= normal
-community				= pseudo_gigant
 
 ;-----------------------------
 ; step effector
@@ -268,12 +267,8 @@ HugeKick_MinMaxDist			= 15,30	;10, 20
 HugeKick_MinMaxDelay		= 10000, 22000 ;10000, 30000
 HugeKick_Time_SlowDown		= 4000
 
-monster_type				= outdoor
-
 critical_wound_threshold		= -1
 critical_wound_decrease_quant	= 0.
-
-
 
 ;=========================================================================================
 ; Damage Params
@@ -392,12 +387,9 @@ fire_wound_immunity  	= 0.05
 [gigant_normal]:m_gigant_e
 	$spawn								= "monsters\gigants\gigant_normal"					;option for Level Editor
 
-
-
-
-rank				= 401
-spec_rank			= normal
-community			= pseudo_gigant
+	rank								= 401
+	spec_rank							= normal
+	community							= pseudo_gigant
 
 [gigant_strong]:m_gigant_e
 	$spawn								= "monsters\gigants\gigant_strong"					;option for Level Editor
@@ -405,23 +397,21 @@ community			= pseudo_gigant
 	visual								= monsters\psevdogigant\psevdogigant_strong
 	icon								= ui_npc_monster_psevdogigant
 
-
-
-rank				= 801
-spec_rank			= strong
-community			= pseudo_gigant
-
+	rank								= 801
+	spec_rank							= strong
+	community							= pseudo_gigant
 
 [arena_gigant_1]:m_gigant_e
 	$spawn								= "monsters\gigants\gigant_arena1"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= pseudo_gigant
 
 
 
 
-rank        = 401
-spec_rank     = normal
-community     = pseudo_gigant
+
 immunities_sect       = giant_immunities_arena
 custom_data = scripts\arena_mob_1.ltx
 

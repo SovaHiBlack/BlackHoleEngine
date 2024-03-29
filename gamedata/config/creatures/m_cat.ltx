@@ -17,7 +17,15 @@
 	cform								= skeleton											;collision class
 	class								= SM_CAT_S											;AI class
 
+	;species of monster
+	species								= cat
+	rank								= 0
+	spec_rank							= weak
+	community							= cat
+;	monster_type						= indoor
 
+	material							= creatures\medium
+	terrain								= cat_terrain
 
 
 
@@ -134,9 +142,6 @@ selector_approach		=      20.0,            1.0,                1000.0,          
 ;							  fSearchRange,fOptEnemyDistance,fOptEnemyDistanceWeight,fMinEnemyDistance,fMinEnemyDistanceWeight,fMaxEnemyDistance,fMaxEnemyDistanceWeight
 selector_walk_around	=      20.0,            6.0,                 1000.0,             4.0,               5000.0,					8.0,				5000.0,      
 
-
-terrain				 = 255,000,255,255
-
 hit_type = strike
 
 ;entity condition
@@ -221,8 +226,6 @@ distant_idle_sound_range	= 100.0
 DamagedThreshold		= 0.2
 damage					= m_cat_damage
 
-material				= creatures\medium
-
 squad_attack_algorithm	= 1
 
 attack_effector			= m_cat_attack_effector
@@ -231,16 +234,6 @@ attack_params			= m_cat_attack_params
 step_params				= m_cat_step_params
 
 LegsCount				= 4
-
-
-;species of monster
-species					= cat
-rank					= 0
-spec_rank				= weak
-community				= cat
-;monster_type			= indoor
-
-
 
 
 [m_cat_attack_params]
@@ -326,14 +319,13 @@ bip01_ponytail2		= 1.0, -1, 1.5
 [cat_weak]:m_cat_e
 	$spawn								= "monsters\cats\cat_weak"							;option for Level Editor
 
-
+	rank								= 0
+	spec_rank							= weak
+	community							= cat
 
 Health = 100
 MaxHealthValue = 100
 immunities_sect = cat_immunities_weak
-rank = 0	
-spec_rank = weak	
-community = cat	
 
 [cat_immunities_weak]
 burn_immunity 					= 1.0
@@ -345,3 +337,6 @@ telepatic_immunity 				= 1.0
 chemical_burn_immunity 			= 1.0
 explosion_immunity 				= 0.55
 fire_wound_immunity  			= 0.5
+
+[cat_terrain]
+255,000,255,255

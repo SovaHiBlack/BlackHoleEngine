@@ -15,16 +15,21 @@
 	icon								= ui_npc_monster_snork
 
 	cform								= skeleton											;collision class
+	class								= SM_SNORK											;AI class
+
+	;species of monster
+	species								= snork
+
+	material							= creatures\medium
+	terrain								= snork_terrain
+	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
+
+	Spawn_Inventory_Item_Section		= mutant_snork_leg
+	Spawn_Inventory_Item_Probability	= 0.3
 
 
 
-
-
-SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
 DynamicObjectsCount		= 32
-
-Spawn_Inventory_Item_Section = mutant_snork_leg
-Spawn_Inventory_Item_Probability = 0.3
 
 ;---OFFLINE ALIFE------------------------------------------------------------------
 Scheduled						= on			; option for ALife Simulator
@@ -45,9 +50,6 @@ ef_creature_type		= 11						; option for evaluation functions
 ef_weapon_type			= 2
 ef_detector_type		= 1
 panic_threshold		= 0.1
-
-
-class					 = SM_SNORK					; AI class
 
 bone_torso				= bip01_spine1 			; bone name
 bone_head				= bip01_head				; bone name
@@ -105,8 +107,6 @@ MaxAttackDist			= 2.9	;3.8
 as_min_dist				= 1.5
 as_step					= 0.4
 hit_type				= wound				; type of attack
-
-terrain					 = snork_terrain
 
 ;-------------------------------------------------------------------------
 ; Entity Conditions
@@ -209,8 +209,6 @@ transparency_threshold		= 0.25
 ;-------------------------------------------------------------------------
 ; Other Stuff (refactoring needed)
 ;-------------------------------------------------------------------------
-material				= creatures\medium
-
 attack_effector			= m_snork_attack_effector
 
 step_params				= m_snork_step_params
@@ -240,9 +238,6 @@ jump_min_distance			= 3.5
 jump_max_distance			= 10.0
 jump_max_angle				= 0.6
 jump_max_height				= 3.5
-
-;species of monster
-species						= snork
 
 ;=================================================================================
 ; SNORK Damage
@@ -317,16 +312,16 @@ fire_wound_immunity		= 0.18
 [snork_weak]:m_snork_e
 	$spawn								= "monsters\snorks\snork_weak"						;option for Level Editor
 
+	rank								= 0
+	spec_rank							= weak
+	community							= snork
 
 
 
 panic_threshold		= 0.5
-rank				= 0
+
 immunities_sect		= snork_immunities_weak
 attack_params		= snork_attack_params_weak
-spec_rank			= weak
-community			= snork
-
 
 [snork_immunities_weak]
 burn_immunity			= 0.4								;коэффициенты иммунитета 
@@ -358,16 +353,17 @@ stand_attack_2_1 =	  	0.30,		0.50,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6,
 [snork_normal]:m_snork_e
 	$spawn								= "monsters\snorks\snork_normal"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= snork
+
+
 
 
 
 panic_threshold		= 0.2
-rank				= 401
 immunities_sect		= snork_immunities_normal
 attack_params		= snork_attack_params_normal
-spec_rank			= normal
-community			= snork
-
 
 [snork_immunities_normal]
 burn_immunity			= 0.4								;коэффициенты иммунитета
@@ -399,16 +395,17 @@ stand_attack_2_1 =	  	0.30,		0.70,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6,
 [snork_strong]:m_snork_e
 	$spawn								= "monsters\snorks\snork_strong"					;option for Level Editor
 
+	rank								= 801
+	spec_rank							= strong
+	community							= snork
+
+
 
 
 
 panic_threshold		= 0.05
-rank				= 801
 immunities_sect		= snork_immunities_strong
 attack_params		= snork_attack_params_strong
-spec_rank			= strong
-community			= snork
-
 
 [snork_immunities_strong]
 burn_immunity			= 0.4								;коэффициенты иммунитета 
@@ -459,20 +456,18 @@ panic_threshold		= 0.0
 [snork_arena]:snork_strong
 	$spawn								= "monsters\arena\snork_arena"						;option for Level Editor
 
-
+	species								= arena_monstr
 
 
 panic_threshold		= 0.05
-species				= arena_monstr
-
-
 
 [snork_indoor]:snork_weak
 	$spawn								= "monsters\snorks\snork_indoor"					;option for Level Editor
 
+	monster_type						= indoor
 
 
-monster_type	= indoor
+
 
 jump_min_distance			= 2.5
 jump_max_angle				= 0.4
@@ -480,14 +475,15 @@ jump_max_angle				= 0.4
 [snork_outdoor]:snork_weak
 	$spawn								= "monsters\snorks\snork_outdoor"					;option for Level Editor
 
-
-monster_type	= outdoor
+	monster_type						= outdoor
 
 [snork_jumper]:snork_weak
 	$spawn								= "monsters\snorks\snork_jumper"					;option for Level Editor
 
+	monster_type						= outdoor
 
-monster_type	= outdoor
+
+
 panic_threshold		= 0.05
 
 ; jump parameters
@@ -502,29 +498,31 @@ jump_max_angle				= 0.8
 [arena_snork_1]:snork_strong
 	$spawn								= "monsters\arena\snork_arena1"						;option for Level Editor
 
+	species								= arena_monstr
+
 
 
 
 panic_threshold		= 0.05
-species				= arena_monstr
 custom_data = scripts\arena_mob_1.ltx
 
 [arena_snork_2]:snork_strong
 	$spawn								= "monsters\arena\snork_arena2"						;option for Level Editor
 
+	species								= arena_monstr
 
 
 
 panic_threshold		= 0.05
-species				= arena_monstr
 custom_data = scripts\arena_mob_2.ltx
 
 [arena_snork_3]:snork_strong
 	$spawn								= "monsters\arena\snork_arena3"						;option for Level Editor
 
+	species								= arena_monstr
+
 
 
 
 panic_threshold		= 0.05
-species				= arena_monstr
 custom_data = scripts\arena_mob_3.ltx

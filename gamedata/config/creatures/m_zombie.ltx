@@ -15,11 +15,20 @@
 	icon								= ui_npc_monster_zombie
 
 	cform								= skeleton											;collision class
+	class								= SM_ZOMBI											;AI class
+
+	;species of monster
+	species								= zombie
+
+	material							= creatures\medium
+	terrain								= zombie_terrain
+	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
+
+	Spawn_Inventory_Item_Section		= mutant_zombie_hand
+	Spawn_Inventory_Item_Probability	= 0.4
 
 
 
-
-SpaceRestrictionSection = space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 100						; option for ALife Simulator
@@ -36,12 +45,6 @@ ef_creature_type	 = 3				; option for evaluation functions
 ef_weapon_type		 = 1
 ef_detector_type	 = 1
 panic_threshold		= 0.1
-
-Spawn_Inventory_Item_Section = mutant_zombie_hand
-Spawn_Inventory_Item_Probability = 0.4
-
-
-class                = SM_ZOMBI					; AI class
 
 script_binding  	= bind_monster.bind
 
@@ -117,13 +120,7 @@ velocity_factor		     	= 0.5
 luminocity_factor			= 0.5 				; фактор освещения (только для Актёра)
 transparency_threshold		= 0.25
 
-
-
-terrain				 = zombie_terrain
-
 hit_type = wound
-
-;entity condition
 
 ; entity condition
 satiety_v 				= 0.00001	;0.01			;скорость уменьшения сытости со временем
@@ -197,10 +194,6 @@ critical_wound_decrease_quant	= 0.
 FakeDeathCount					= 4		; max count of fake death
 StartFakeDeathHealthThreshold	= 0.6
 
-
-
-material				= creatures\medium
-
 squad_attack_algorithm	= 1
 LegsCount				= 2
 
@@ -208,10 +201,6 @@ attack_effector			= m_zombie_attack_effector
 step_params				= m_zombie_step_params
 attack_params			= m_zombie_attack_params
 damage					= m_zombie_damage
-
-;species of monster
-species					= zombie
-
 
 [m_zombie_damage]
 ;bone_name		 = <hit_scale>,-1,<wound_scale>
@@ -293,15 +282,14 @@ fire_wound_immunity		= 0.1
 	visual								= monsters\zombi\zombi_2
 	icon								= ui_npc_monster_zombie_weak
 
+	rank								= 0
+	spec_rank							= weak
+	community							= zombie
+
 
 
 
 panic_threshold		= 0.5
-rank = 0
-spec_rank			= weak
-community			= zombie
-	
-
 MaxHealthValue		 = 80
 FakeDeathCount					= 3		; max count of fake death
 StartFakeDeathHealthThreshold	= 0.4
@@ -315,12 +303,15 @@ attack_params		= zombie_attack_params_normal
 	visual								= monsters\zombi\zombi_1
 	icon								= ui_npc_monster_zombie_normal
 
+	rank								= 255
+	spec_rank							= normal
+	community							= zombie
+
+
+
 
 
 panic_threshold		= 0.2
-rank = 255
-spec_rank			= normal
-community			= zombie
 
 MaxHealthValue		 = 100
 FakeDeathCount					= 4		; max count of fake death
@@ -361,13 +352,13 @@ stand_attack_3 =	  	0.30,		0.35,		    180,        0.0, 1.0, 0.0,		 -1.0, 0.3, -0
 	visual								= monsters\zombi\zombi_1_ghost
 	icon								= ui_npc_monster_zombie_ghost
 
+	rank								= 255
+	spec_rank							= strong
+	community							= zombie
+
 
 
 panic_threshold		= 0.05	
-rank = 255
-spec_rank			= strong
-community			= zombie
-
 
 MaxHealthValue		 = 120
 FakeDeathCount					= 6		; max count of fake death
@@ -428,7 +419,6 @@ MaxHealthValue		 = 140			; range [0..200]
 
 	visual								= monsters\zombi\zombi_3
 	icon								= ui_npc_monster_zombie_old
-
 
 [zombie_rusty]:zombie_strong
 	$spawn								= "monsters\zombies\zombie_rusty"					;option for Level Editor
@@ -520,29 +510,43 @@ fire_wound_immunity		= 0.1
 
 
 [arena_zombie_1]:zombie_weak
+	rank								= 255
+	spec_rank							= normal
+	community							= zombie
+
+
+
 panic_threshold		= 0.2
-rank = 255
-spec_rank			= normal
-community			= zombie
+
 custom_data = scripts\arena_mob_3.ltx
 
 [arena_zombie_2]:zombie_normal
+	rank								= 255
+	spec_rank							= normal
+	community							= zombie
+
+
+
+
 panic_threshold		= 0.2
-rank = 255
-spec_rank			= normal
-community			= zombie
+
 custom_data = scripts\arena_mob_4.ltx
 
 [arena_zombie_3]:zombie_ghost
+	rank								= 255
+	spec_rank							= normal
+	community							= zombie
+
+
 panic_threshold		= 0.2
-rank = 255
-spec_rank			= normal
-community			= zombie
+
 custom_data = scripts\arena_mob_5.ltx
 
 [arena_zombie_4]:zombie_immortal
+	rank								= 255
+	spec_rank							= normal
+	community							= zombie
+
 panic_threshold		= 0.2
-rank = 255
-spec_rank			= normal
-community			= zombie
+
 custom_data = scripts\arena_mob_6.ltx

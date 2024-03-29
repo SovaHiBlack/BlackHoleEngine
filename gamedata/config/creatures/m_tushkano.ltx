@@ -15,12 +15,21 @@
 	icon								= ui_npc_monster_tushkano
 
 	cform								= skeleton											;collision class
+	class								= SM_TUSHK											;AI class
+
+	;species of monster
+	species								= tushkano
+	spec_rank							= normal
+	community							= tushkano
+
+	material							= creatures\medium
+	terrain								= tushkan_terrain
+	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
 
 
 
 
 
-SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
 
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
@@ -40,9 +49,6 @@ ef_creature_type	 = 2							; option for evaluation functions
 ef_weapon_type		 = 2
 ef_detector_type	 = 1
 panic_threshold		= 0.0
-
-
-class                = SM_TUSHK ;AI_TUSH					; AI class
 
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
@@ -124,10 +130,6 @@ velocity_factor		     	= 0.5
 luminocity_factor			= 0.5 				; фактор освещения (только для Актёра)
 transparency_threshold		= 0.25
 
-
-
-terrain				 = tushkan_terrain
-
 hit_type = wound
 
 ;entity condition
@@ -172,7 +174,6 @@ Morale_Despondent_Speed			= 0.1
 Morale_Stable_Speed				= 0.05
 Morale_Despondent_Threashold	= 0.5
 
-
 sound_idle				= monsters\tushkano\tushkano_idle_
 sound_eat				= monsters\tushkano\tushkano_eat_
 sound_aggressive		= monsters\tushkano\tushkano_aggressive_
@@ -201,9 +202,6 @@ DamagedThreshold		= 0.4
 critical_wound_threshold		= -1
 critical_wound_decrease_quant	= 0.
 
-
-material				= creatures\medium
-
 squad_attack_algorithm	= 1
 attack_effector			= small_monster_attack_effector
 
@@ -212,27 +210,6 @@ LegsCount				= 2
 attack_params			= m_tushkano_attack_params
 step_params				= m_tushkano_step_params
 damage					= m_tushkano_damage
-
-;species of monster
-species					= tushkano
-spec_rank				= normal
-community				= tushkano
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 [m_tushkano_attack_params]
 ;---------------------------------------------------------------------------------------------------------------------------------------------
@@ -289,147 +266,148 @@ bip01_head 			= 2.0, -1, 0.5, 10
 [m_tushkano_normal]:m_tushkano_e
 	$spawn								= "monsters\tushkanos\tushkano_normal_old"			;option for Level Editor
 
-
-
-rank = 401
-spec_rank			= normal
-community			= tushkano
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 [tushkano_normal]:m_tushkano_e
 	$spawn								= "monsters\tushkanos\tushkano_normal"				;option for Level Editor
 
-
-
-rank = 401
-spec_rank			= normal
-community			= tushkano
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 [tushkano_weak]:m_tushkano_e
 	$spawn								= "monsters\tushkanos\tushkano_weak"				;option for Level Editor
 
-
-
-rank = 101
-spec_rank			= weak
-community			= tushkano
-
+	rank								= 101
+	spec_rank							= weak
+	community							= tushkano
 
 [arena_tushkano_1]:m_tushkano_e
 	$spawn								= "monsters\arena\tushkano_arena1"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 
-rank = 401
-spec_rank			= normal
-community			= tushkano
+
 custom_data = scripts\arena_mob_1.ltx
 
 [arena_tushkano_2]:m_tushkano_e
 	$spawn								= "monsters\arena\tushkano_arena2"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 
-rank = 401
-spec_rank			= normal
-community			= tushkano
+
+
 custom_data = scripts\arena_mob_2.ltx
 
 [arena_tushkano_3]:m_tushkano_e
 	$spawn								= "monsters\arena\tushkano_arena3"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 
-rank = 401
-spec_rank			= normal
-community			= tushkano
+
+
 custom_data = scripts\arena_mob_3.ltx
 
 [arena_tushkano_4]:m_tushkano_e
 	$spawn								= "monsters\arena\tushkano_arena4"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 
-rank = 401
-spec_rank			= normal
-community			= tushkano
+
+
 custom_data = scripts\arena_mob_4.ltx
 
 [arena_tushkano_5]:m_tushkano_e
 	$spawn								= "monsters\arena\tushkano_arena5"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 
-rank = 401
-spec_rank			= normal
-community			= tushkano
 custom_data = scripts\arena_mob_5.ltx
 
 [arena_tushkano_6]:m_tushkano_e
 	$spawn								= "monsters\arena\tushkano_arena6"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 
-rank = 401
-spec_rank			= normal
-community			= tushkano
 custom_data = scripts\arena_mob_6.ltx
 
 [arena_tushkano_7]:m_tushkano_e
 	$spawn								= "monsters\arena\tushkano_arena7"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 
-rank = 401
-spec_rank			= normal
-community			= tushkano
 custom_data = scripts\arena_mob_7.ltx
 
 [arena_tushkano_8]:m_tushkano_e
 	$spawn								= "monsters\arena\tushkano_arena8"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 
-rank = 401
-spec_rank			= normal
-community			= tushkano
+
 custom_data = scripts\arena_mob_8.ltx
 
 [arena_tushkano_9]:m_tushkano_e
 	$spawn								= "monsters\arena\tushkano_arena9"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 
-rank = 401
-spec_rank			= normal
-community			= tushkano
 custom_data = scripts\arena_mob_9.ltx
 
 [arena_tushkano_10]:m_tushkano_e
 	$spawn								= "monsters\arena\tushkano_arena10"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 
-rank = 401
-spec_rank			= normal
-community			= tushkano
 custom_data = scripts\arena_mob_10.ltx
 
 [arena_tushkano_11]:m_tushkano_e
 	$spawn								= "monsters\arena\tushkano_arena11"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 
-rank = 401
-spec_rank			= normal
-community			= tushkano
 custom_data = scripts\arena_mob_11.ltx
 
 [arena_tushkano_12]:m_tushkano_e
 	$spawn								= "monsters\arena\tushkano_arena12"					;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= tushkano
 
 
-rank = 401
-spec_rank			= normal
-community			= tushkano
 custom_data = scripts\arena_mob_12.ltx

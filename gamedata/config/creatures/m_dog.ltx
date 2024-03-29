@@ -17,8 +17,19 @@
 	cform								= skeleton											;collision class
 	class								= SM_DOG_S											;AI class
 
+	;species of monster
+	species								= dog
 
-SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
+	material							= creatures\medium
+	terrain								= dogs_terrain
+	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
+
+	Spawn_Inventory_Item_Section		= mutant_dog_tail
+	Spawn_Inventory_Item_Probability	= 0.3
+
+
+
+
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 100						; option for ALife Simulator
@@ -30,9 +41,6 @@ search_speed         = .5                       ; option for ALife Simulator
 MaxHealthValue		     = 100			; range [0..200]
 DynamicObjectsCount	 = 32
 smart_terrain_choose_interval	= 00:15:00
-
-Spawn_Inventory_Item_Section = mutant_dog_tail
-Spawn_Inventory_Item_Probability = 0.3
 
 ef_creature_type	 = 6				; option for evaluation functions
 ef_weapon_type		 = 2
@@ -235,13 +243,6 @@ Max_Satiety			= 1.0	;0.9 ; üðú¸. ýþ¨üð ¸vªþ¸ªø (ñþû¹°õ - þ¢õý¹ ¸vªvù)
 
 distance_to_corpse	= 1.3		; ôø¸ª. ôþ ª¨ºÿð, ÿ¨ø úþªþ¨þù þý ÿõ¨õ¿þôøª ò ¸þ¸ªþ ýøõ õôv
 
-
-terrain				 = dogs_terrain
-
-
-
-material				= creatures\medium
-
 squad_attack_algorithm	= 1
 
 attack_effector			= m_dog_attack_effector
@@ -250,10 +251,6 @@ attack_params			= m_dog_attack_params
 step_params			= m_dog_step_params
 
 LegsCount			= 4
-
-
-;species of monster
-species					= dog
 
 ;===========================================================================
 ; Attack Animation Parameters
@@ -391,17 +388,14 @@ bip01_l_thigh
 [dog_weak]:m_dog_e
 	$spawn								= "monsters\dogs\dog_weak"							;option for Level Editor
 
-
-
-
+	rank								= 0
+	spec_rank							= weak
+	community							= dog
 
 
 panic_threshold		= 0.2
-rank				= 0
 immunities_sect		= dog_immunities_weak
 attack_params		= dog_attack_params_weak
-spec_rank			= weak
-community			= dog
 
 eye_fov				 = 100
 eye_range			 = 20
@@ -441,15 +435,14 @@ stand_attack_3 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 	corpse_visual						= monsters\dog\dog_red_dead
 	icon								= ui_npc_monster_dog_red
 
+	rank								= 401
+	spec_rank							= normal
+	community							= dog
 
 
 panic_threshold		= 0.2
-rank				= 401
 immunities_sect		= dog_immunities_normal
 attack_params		= dog_attack_params_normal
-spec_rank			= normal
-community			= dog
-
 
 [dog_immunities_normal]
 burn_immunity			= 1.0
@@ -483,15 +476,14 @@ stand_attack_3 =	  	0.45,		0.15,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 	corpse_visual						= monsters\dog\dog_white_dead
 	icon								= ui_npc_monster_dog_white
 
+	rank								= 801
+	spec_rank							= strong
+	community							= dog
 
 
 panic_threshold		= 0.2
-rank				= 801
 immunities_sect		= dog_immunities_strong
 attack_params		= dog_attack_params_strong
-spec_rank			= strong
-community			= dog
-
 
 [dog_immunities_strong]
 burn_immunity			= 1.0
@@ -523,14 +515,15 @@ stand_attack_3 =	  	0.45,		0.20,	    500,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.
 	corpse_visual						= monsters\dog\dog_red_dead
 	icon								= ui_npc_monster_dog_red
 
+	rank								= 401
+	spec_rank							= normal
+	community							= dog
 
 
 panic_threshold		= 0.2
-rank				= 401
 immunities_sect		= dog_immunities_strong
 attack_params		= dog_attack_params_strong
-spec_rank			= normal
-community			= dog
+
 custom_data = scripts\arena_mob_3.ltx
 
 [arena_dog_2]:m_dog_e
@@ -540,27 +533,31 @@ custom_data = scripts\arena_mob_3.ltx
 	corpse_visual						= monsters\dog\dog_white_dead
 	icon								= ui_npc_monster_dog_white
 
+	rank								= 801
+	spec_rank							= strong
+	community							= dog
+
 
 panic_threshold		= 0.2
-rank				= 801
 immunities_sect		= dog_immunities_strong
 attack_params		= dog_attack_params_strong
-spec_rank			= strong
-community			= dog
+
 custom_data = scripts\arena_mob_4.ltx
 
 [arena_dog_3]:m_dog_e
 	$spawn								= "monsters\arena\dog_arena3"						;option for Level Editor
 
+	rank								= 0
+	spec_rank							= weak
+	community							= dog
+
 
 
 
 panic_threshold		= 0.2
-rank				= 0
 immunities_sect		= dog_immunities_strong
 attack_params		= dog_attack_params_strong
-spec_rank			= weak
-community			= dog
+
 custom_data = scripts\arena_mob_5.ltx
 
 [arena_dog_4]:m_dog_e
@@ -570,12 +567,13 @@ custom_data = scripts\arena_mob_5.ltx
 	corpse_visual						= monsters\dog\dog_red_dead
 	icon								= ui_npc_monster_dog_red
 
+	rank								= 401
+	spec_rank							= normal
+	community							= dog
+
 
 
 panic_threshold		= 0.2
-rank				= 401
 immunities_sect		= dog_immunities_strong
 attack_params		= dog_attack_params_strong
-spec_rank			= normal
-community			= dog
 custom_data = scripts\arena_mob_6.ltx

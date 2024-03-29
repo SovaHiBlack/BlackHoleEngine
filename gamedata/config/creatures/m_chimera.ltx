@@ -17,11 +17,16 @@
 	cform								= skeleton											;collision class
 	class								= SM_CHIMS											;AI class
 
+	;species of monster
+	species								= chimera
+
+	material							= creatures\medium
+	terrain								= chimera_terrain
+	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
 
 
 
 
-SpaceRestrictionSection = space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 400						; option for ALife Simulator
@@ -130,13 +135,9 @@ selector_approach		=      20.0,            1.0,                 1000.0,         
 ;							  fSearchRange,fOptEnemyDistance,fOptEnemyDistanceWeight,fMinEnemyDistance,fMinEnemyDistanceWeight,fMaxEnemyDistance,fMaxEnemyDistanceWeight
 selector_walk_around	=      20.0,            6.0,                 1000.0,             4.0,               5000.0,					8.0,				5000.0,      
 
-terrain				 = 255,255,255,255,30,40
-
 hit_type = wound
 
 ;entity condition
-
-
 satiety_v = 0.0001				;0.01			;скорость уменьшения сытости со временем
 radiation_v = 0.00001		;0.004			;скорость уменьшения радиации
 satiety_power_v = 0.0001		;0.01			;увеличение силы при уменьшении сытости 
@@ -227,8 +228,6 @@ jump_max_angle				= 0.6
 
 DamagedThreshold		= 0.5
 
-material				= creatures\medium
-
 squad_attack_algorithm	= 1
 attack_effector			= m_chimera_attack_effector
 
@@ -237,9 +236,6 @@ step_params			= m_chimera_step_params
 
 LegsCount			= 4
 damage					= m_chimera_damage
-
-;species of monster
-species					= chimera
 
 [m_chimera_attack_params]
 ;---------------------------------------------------------------------------------------------------------------------------------------------
@@ -312,11 +308,10 @@ bip01_head 			= 8, -1, 0.50
 [chimera_weak]:m_chimera_e
 	$spawn								= "monsters\chimeras\chimera_weak"					;option for Level Editor
 
-
-monster_type		= indoor
-rank				= 0
-spec_rank			= weak
-community			= chimera
+	rank								= 0
+	spec_rank							= weak
+	community							= chimera
+	monster_type						= indoor
 
 [chimera_strong]:m_chimera_e
 	$spawn								= "monsters\chimeras\chimera_strong"				;option for Level Editor
@@ -324,12 +319,14 @@ community			= chimera
 	visual								= monsters\chimera\chimera_strong
 	icon								= ui_npc_monster_chimera_strong
 
+	rank								= 901
+	spec_rank							= strong
+	community							= chimera
+	monster_type						= indoor
 
 
-monster_type		= indoor
-rank				= 901
-spec_rank			= strong
-community			= chimera
+
+
 
 bones_particles = electro_chimera_particles
 immunities_sect	= electro_chimera_immunities
@@ -385,12 +382,14 @@ custom_data = scripts\pri_electrochimera.ltx
 	visual								= monsters\chimera\chimera_strong
 	icon								= ui_npc_monster_chimera_strong
 
+	rank								= 0
+	spec_rank							= weak
+	community							= chimera
+	monster_type						= indoor
 
 
-monster_type		= indoor
-rank				= 0
-spec_rank			= weak
-community			= chimera
+
+
 immunities_sect		= chimera_immunities_arena
 custom_data = scripts\arena_mob_1.ltx
 
@@ -404,3 +403,6 @@ telepatic_immunity = 0.05
 chemical_burn_immunity = 0.03
 explosion_immunity = 0.04
 fire_wound_immunity  = 0.015
+
+[chimera_terrain]
+255,255,255,255,30,40

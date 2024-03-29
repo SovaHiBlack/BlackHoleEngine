@@ -15,9 +15,23 @@
 	icon								= ui_npc_monster_pseudodog
 
 	cform								= skeleton											;collision class
+	class								= SM_P_DOG											;AI class
+
+	;species of monster
+	species								= pseudodog
+	rank								= 0
+	spec_rank							= weak
+	community							= pseudodog
+
+	material							= creatures\medium
+	terrain								= pseudodogs_terrain
+	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
+
+	Spawn_Inventory_Item_Section		= mutant_psevdodog_tail
+	Spawn_Inventory_Item_Probability	= 0.4
 
 
-SpaceRestrictionSection = space_restrictor,zone_mosquito_bald
+
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
 Health			     = 250						; option for ALife Simulator
@@ -30,16 +44,10 @@ MaxHealthValue		     = 1.0			; range [0..200]
 DynamicObjectsCount	 = 32
 smart_terrain_choose_interval	= 00:15:00
 
-Spawn_Inventory_Item_Section = mutant_psevdodog_tail
-Spawn_Inventory_Item_Probability = 0.4
-
 ef_creature_type	 = 21							; option for evaluation functions
 ef_weapon_type		 = 3
 ef_detector_type	 = 1
 panic_threshold		= 0.1
-
-
-class                = SM_P_DOG					; AI class
 
 script_binding       = bind_monster.bind
 
@@ -106,9 +114,6 @@ Min_Satiety			= 0.95	;0.3	;0.6		; üøý. ýþ¨üð ¸vªþ¸ªø (üõý¹°õ - ºöõ óþûþôývù)
 Max_Satiety			= 1.0		; üðú¸. ýþ¨üð ¸vªþ¸ªø (ñþû¹°õ - þ¢õý¹ ¸vªvù)
 
 distance_to_corpse	= 1.8		; ôø¸ª. ôþ ª¨ºÿð, ÿ¨ø úþªþ¨þù þý ÿõ¨õ¿þôøª ò ¸þ¸ªþ ýøõ õôv
-
-;terrain				 = 255,255,255,255,30,40
-terrain				 = pseudodogs_terrain
 
 hit_type = wound
 
@@ -228,9 +233,6 @@ DamagedThreshold		= 0.2
 critical_wound_threshold		= -1
 critical_wound_decrease_quant	= 0.
 
-
-material				= creatures\medium
-
 squad_attack_algorithm	= 1
 
 attack_effector			= m_pseudodog_attack_effector
@@ -243,12 +245,6 @@ LegsCount				= 4
 
 anger_hunger_threshold	= 0.1
 anger_loud_threshold	= 0.7
-
-;species of monster
-species					= pseudodog
-rank					= 0
-spec_rank				= weak
-community				= pseudodog
 
 [m_pseudodog_attack_params]
 ;---------------------------------------------------------------------------------------------------------------------------------------------
@@ -339,17 +335,17 @@ bip01_head 			= 2.0, -1, 0.3, 10
 [pseudodog_weak]:m_pseudodog_e
 	$spawn								= "monsters\pseudodogs\pseudodog_weak"				;option for Level Editor
 
+	rank								= 0
+	spec_rank							= weak
+	community							= pseudodog
 
 
 
 
 panic_threshold		= 0.5
-rank				= 0
+
 immunities_sect		= pseudodog_immunities_weak
 attack_params		= pseudodog_attack_params_weak
-spec_rank			= weak
-community			= pseudodog
-
 
 [pseudodog_immunities_weak]
 burn_immunity			= 1.0
@@ -377,16 +373,16 @@ run_jamp_1		=		0.55,		0.15,		    220,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 [pseudodog_normal]:m_pseudodog_e
 	$spawn								= "monsters\pseudodogs\pseudodog_normal"			;option for Level Editor
 
+	rank								= 401
+	spec_rank							= normal
+	community							= pseudodog
 
 
 
 panic_threshold		= 0.2
-rank				= 401
+
 immunities_sect		= pseudodog_immunities_normal
 attack_params		= pseudodog_attack_params_normal
-spec_rank			= normal
-community			= pseudodog
-
 
 [pseudodog_immunities_normal]
 burn_immunity			= 1.0
@@ -419,16 +415,17 @@ run_jamp_1		=		0.55,		0.25,		    320,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 	corpse_visual						= monsters\pseudodog\pseudodog_grey_dead
 	icon								= ui_npc_monster_pseudodog_grey
 
+	rank								= 801
+	spec_rank							= strong
+	community							= pseudodog
+
+
 
 
 
 panic_threshold		= 0.05	
-rank				= 801
 immunities_sect		= pseudodog_immunities_strong
 attack_params		= pseudodog_attack_params_strong
-spec_rank			= strong
-community			= pseudodog
-
 
 [pseudodog_immunities_strong]
 burn_immunity			= 1.0
@@ -461,12 +458,10 @@ run_jamp_1		=		0.55,		0.35,		    420,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 [pseudodog_arena]:pseudodog_strong
 	$spawn								= "monsters\arena\pseudodog_arena"					;option for Level Editor
 
-
+	species								= arena_monstr
 
 
 panic_threshold		= 0.05
-species				= arena_monstr
-
 
 ;---------------------------------------------------------------------------------
 ;-- PSY DOG
@@ -487,10 +482,11 @@ color_add		= 0.00,0.00,0.015
 [psy_dog]:pseudodog_strong
 	$spawn								= "monsters\psy_dogs\psy_dog"						;option for Level Editor
 
+	class								= SM_DOG_P											;AI class
 
 
 
-class               = SM_DOG_P	
+
 ;custom_data = scripts\psy_dog.ltx
 aura_effector		= psy_dog_aura_effector
 Max_Phantoms_Count	= 4
@@ -535,9 +531,11 @@ ce_power			= 0.3 ;0.7
 	visual								= monsters\pseudodog\pseudodog_grey
 	icon								= ui_npc_monster_pseudodog_grey
 
+	class								= SM_DOG_F											;AI class
 
 
-class               = SM_DOG_F
+
+
 
 ;jump_delay					= 3000 ;3000
 ;jump_factor					= 3
@@ -563,11 +561,11 @@ Time_Phantom_Appear = 5000
 [arena_pseudodog_1]:pseudodog_strong
 	$spawn								= "monsters\arena\pseudodog_arena1"					;option for Level Editor
 
-
+	species								= arena_monstr
 
 
 panic_threshold		= 0.05
-species				= arena_monstr
+
 custom_data = scripts\arena_mob_1.ltx
 
 [arena_pseudodog_2]:pseudodog_strong
@@ -576,8 +574,10 @@ custom_data = scripts\arena_mob_1.ltx
 	visual								= monsters\pseudodog\pseudodog
 	icon								= ui_npc_monster_pseudodog
 
+	species								= arena_monstr
+
+
 
 
 panic_threshold		= 0.05
-species				= arena_monstr
 custom_data = scripts\arena_mob_2.ltx

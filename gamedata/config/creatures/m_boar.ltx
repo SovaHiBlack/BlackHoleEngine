@@ -17,9 +17,16 @@
 	cform								= skeleton											;collision class
 	class								= SM_BOARW											;AI class
 
+	;species of monster
+	species								= boar
 
-
+	material							= creatures\hoof
+	terrain								= boar_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
+
+	Spawn_Inventory_Item_Section		= mutant_boar_leg
+	Spawn_Inventory_Item_Probability	= 0.4
+
 
 
 	;--------------------------------------------------------------------------
@@ -37,8 +44,6 @@
 	MaxHealthValue						= 200											;range [0..200]
 	DynamicObjectsCount					= 32
 	smart_terrain_choose_interval		= 00:15:00
-	Spawn_Inventory_Item_Section		= mutant_boar_leg
-	Spawn_Inventory_Item_Probability	= 0.4
 
 	;--------------------------------------------------------------------------
 	; Physics
@@ -237,13 +242,6 @@
 
 	distance_to_corpse					= 2.1											;дист. до трупа, при которой он переходит в состояние еды
 
-	terrain								= boar_terrain
-
-	material							= creatures\hoof
-
-	;species of monster
-	species								= boar
-
 ;==============================================================================
 ; Attack Animation Parameters
 ;==============================================================================
@@ -392,17 +390,16 @@
 [boar_weak]:m_boar_e
 	$spawn								= "monsters\boars\boar_weak"						;option for Level Editor
 
-
-
+	rank								= 0
+	spec_rank							= weak
+	community							= boar
 
 
 
 	panic_threshold						= 0.5
-	rank								= 0
+
 	immunities_sect						= boar_immunities_weak
 	attack_params						= boar_attack_params_weak
-	spec_rank							= weak
-	community							= boar
 
 [boar_immunities_weak]
 	burn_immunity						= 1.0
@@ -433,17 +430,16 @@
 [boar_normal]:m_boar_e
 	$spawn								= "monsters\boars\boar_normal"						;option for Level Editor
 
-
-
+	rank								= 401
+	spec_rank							= normal
+	community							= boar
 
 
 
 	panic_threshold						= 0.2
-	rank								= 401
+
 	immunities_sect						= boar_immunities_normal
 	attack_params						= boar_attack_params_normal
-	spec_rank							= normal
-	community							= boar
 
 [boar_immunities_normal]
 	burn_immunity						= 1.0
@@ -477,15 +473,17 @@
 	visual								= monsters\mutant_boar\mutant_boar_strong
 	icon								= ui_npc_monster_mutant_boar_strong
 
+	rank								= 801
+	spec_rank							= strong
+	community							= boar
+
 
 
 
 	panic_threshold						= 0.05
-	rank								= 801
+
 	immunities_sect						= boar_immunities_strong
 	attack_params						= boar_attack_params_strong
-	spec_rank							= strong
-	community							= boar
 
 [boar_immunities_strong]
 	burn_immunity			= 1.0

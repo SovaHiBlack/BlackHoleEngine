@@ -15,11 +15,19 @@
 	icon								= ui_npc_monster_fracture
 
 	cform								= skeleton											;collision class
+	class								= SM_IZLOM											;AI class
+
+	;species of monster
+	species								= bloodsucker ;fracture
+
+	material							= creatures\medium
+	terrain								= fracture_terrain
+	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
 
 
 
 
-SpaceRestrictionSection = space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
+
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off ;on						; option for ALife Simulator
 Health			     = 150						; option for ALife Simulator
@@ -43,9 +51,6 @@ ef_creature_type	 = 21							; option for evaluation functions
 ef_weapon_type		 = 4
 ef_detector_type			 = 1
 panic_threshold		= 0.1
-
-
-class                = SM_IZLOM					; AI class
 
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
@@ -124,9 +129,6 @@ velocity_factor		     	= 0.5
 luminocity_factor			= 1.5 				; фактор освещения (только для Актёра)
 transparency_threshold		= 0.25
 
-
-terrain				 = 255,255,255,255,30,40
-
 hit_type = wound
 
 ;entity condition
@@ -195,8 +197,6 @@ distant_idle_sound_range	= 100.0
 
 DamagedThreshold		= 0.5
 
-material				= creatures\medium
-
 squad_attack_algorithm	= 1
 attack_effector			= monster_attack_effector
 
@@ -205,9 +205,6 @@ LegsCount				= 2
 attack_params			= m_fracture_attack_params
 step_params				= m_fracture_step_params
 damage					= m_Fracture_damage
-
-;species of monster
-species					= bloodsucker ;fracture
 
 
 [m_Fracture_damage]
@@ -257,20 +254,22 @@ fire_wound_immunity  = 0.3
 [fracture_weak]:m_fracture_e
 	$spawn								= "monsters\fractures\fracture_weak"				;option for Level Editor
 
-
-monster_type		= indoor
-rank				= 0
-spec_rank			= weak
-community			= fracture
-
+	rank								= 0
+	spec_rank							= weak
+	community							= fracture
+	monster_type						= indoor
 
 [arena_fracture_1]:m_fracture_e
 	$spawn								= "monsters\arena\fracture_arena1"					;option for Level Editor
 
+	rank								= 0
+	spec_rank							= weak
+	community							= fracture
+	monster_type						= indoor
 
 
-monster_type		= indoor
-rank				= 0
-spec_rank			= weak
-community			= fracture
+
 custom_data = scripts\arena_mob_2.ltx
+
+[fracture_terrain]
+255,255,255,255,30,40

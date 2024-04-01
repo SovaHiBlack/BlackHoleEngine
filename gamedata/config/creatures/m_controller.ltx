@@ -15,7 +15,7 @@
 	icon								= ui_npc_monster_kontroler
 
 	cform								= skeleton											;collision class
-	class								= SM_CONTR											;AI class
+	class								= SM_CONTR											;AI идентификатор класса
 
 	;species of monster
 	species								= controller
@@ -27,21 +27,29 @@
 	terrain								= controller_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
 
+	script_binding						= bind_monster.bind
+
+	;--------------------------------------------------------------------------
+	; Logic
+	;--------------------------------------------------------------------------
+	DayTime_Begin						= 0													;начала дня для монстра
+	DayTime_End							= 21												;конец дня для монстра
+	;--------------------------------------------------------------------------
+	; Offline Alife
+	;--------------------------------------------------------------------------
+	Scheduled							= on												;option for ALife Simulator
+	Human								= off												;option for ALife Simulator
+	Health								= 400												;option for ALife Simulator
+	MinSpeed							= 1.0												;option for ALife Simulator
+	MaxSpeed							= 5.0												;option for ALife Simulator
+	going_speed							= 5.0												;option for ALife Simulator
+	current_level_going_speed			= 1.0												;option for ALife Simulator
+	search_speed						= 1.5												;option for ALife Simulator
+
+	MaxHealthValue						= 400.0												;option for ALife Simulator, range [0..200]
+	smart_terrain_choose_interval		= 00:15:00
 
 
-
-Scheduled		     = on						; option for ALife Simulator
-Human		     	 = off						; option for ALife Simulator
-Health			     = 400						; option for ALife Simulator
-MinSpeed		     = 1.0						; option for ALife Simulator
-MaxSpeed		     = 5.0						; option for ALife Simulator
-going_speed          = 5;4.5                      ; option for ALife Simulator
-current_level_going_speed		= 1;2					; option for ALife Simulator
-search_speed         = 1.5                       ; option for ALife Simulator
-
-MaxHealthValue		     = 400			; range [0..200]
-DynamicObjectsCount	 = 32
-smart_terrain_choose_interval	= 00:15:00
 
 
 
@@ -49,8 +57,6 @@ ef_creature_type	 = 12						; option for evaluation functions
 ef_weapon_type		 = 11
 ef_detector_type			 = 1
 panic_threshold		= 0.1
-
-script_binding  	= bind_monster.bind
 
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
@@ -112,8 +118,8 @@ MaxAttackDist		= 2.9	;3.8
 as_min_dist				= 0.3
 as_step					= 0.5
 
-DayTime_Begin		= 0			; начала дня для монстра
-DayTime_End			= 21		; конец дня для монстра
+
+
 Min_Satiety			= 0.6		; мин. норма сытости (меньше - уже голодный)
 Max_Satiety			= 0.9		; макс. норма сытости (больше - очень сытый)
 
@@ -216,6 +222,8 @@ max_hear_dist		 = 60;
 ;-------------------------------------------------------------------------
 eye_fov				 = 110	;150
 eye_range			 = 60	;100
+
+DynamicObjectsCount	 = 32; количество видимых объектов, которые может обрабатывать монстр
 
 min_view_distance   		= 0.5				; коэффициент, который множится на eye_range, в зависимости от угла
 max_view_distance	 		= 1.0				; коэффициент, который множится на eye_range, в зависимости от угла

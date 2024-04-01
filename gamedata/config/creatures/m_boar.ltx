@@ -15,7 +15,7 @@
 	icon								= ui_npc_monster_mutant_boar
 
 	cform								= skeleton											;collision class
-	class								= SM_BOARW											;AI class
+	class								= SM_BOARW											;AI идентификатор класса
 
 	;species of monster
 	species								= boar
@@ -27,23 +27,33 @@
 	Spawn_Inventory_Item_Section		= mutant_boar_leg
 	Spawn_Inventory_Item_Probability	= 0.4
 
+	script_binding						= bind_monster.bind
+	actor_restrictor					= medium_monster									;medium_monster,stalker,none
 
-
+	;--------------------------------------------------------------------------
+	; Logic
+	;--------------------------------------------------------------------------
+	DayTime_Begin						= 0													;начала дня для монстра
+	DayTime_End							= 21												;конец дня для монстра
 	;--------------------------------------------------------------------------
 	; Offline Alife
 	;--------------------------------------------------------------------------
-	Scheduled							= on											;option for ALife Simulator
-	Human								= off											;option for ALife Simulator
-	Health								= 400											;option for ALife Simulator
-	MinSpeed							= 1.0											;option for ALife Simulator
-	MaxSpeed							= 5.0											;option for ALife Simulator
-	going_speed							= 2												;option for ALife Simulator
-	current_level_going_speed			= 1												;option for ALife Simulator
-	search_speed						= 1.5											;option for ALife Simulator
+	Scheduled							= on												;option for ALife Simulator
+	Human								= off												;option for ALife Simulator
+	Health								= 400												;option for ALife Simulator
+	MinSpeed							= 1.0												;option for ALife Simulator
+	MaxSpeed							= 5.0												;option for ALife Simulator
+	going_speed							= 2.0												;option for ALife Simulator
+	current_level_going_speed			= 1.0												;option for ALife Simulator
+	search_speed						= 1.5												;option for ALife Simulator
 
-	MaxHealthValue						= 200											;range [0..200]
-	DynamicObjectsCount					= 32
+	MaxHealthValue						= 200.0												;option for ALife Simulator, range [0..200]
 	smart_terrain_choose_interval		= 00:15:00
+
+
+
+
+
 
 	;--------------------------------------------------------------------------
 	; Physics
@@ -178,6 +188,8 @@
 	eye_fov								= 110
 	eye_range							= 40
 
+	DynamicObjectsCount					= 32; количество видимых объектов, которые может обрабатывать монстр
+
 	min_view_distance					= 0.5											;коэффициент, который множится на eye_range, в зависимости от угла
 	max_view_distance					= 1.0											;коэффициент, который множится на eye_range, в зависимости от угла
 	visibility_threshold				= 100.0											;значение, при достижении суммой которого объект считается видимым
@@ -225,20 +237,16 @@
 	ef_detector_type					= 1
 	panic_threshold						= 0.1
 
-	script_binding						= bind_monster.bind
-
 	bone_torso							= bip01_spine1									;bone name
 	bone_head							= bip01_head									;bone name
 	bone_fire							= bip01_head									;bone name
 	weapon_usage						= 0												;boolean
 
-	actor_restrictor					= medium_monster
-
 	step_params							= m_boar_step_params
 	LegsCount							= 4
 
-	DayTime_Begin						= 0												;начала дня для монстра
-	DayTime_End							= 21											;конец дня для монстра
+
+
 
 	distance_to_corpse					= 2.1											;дист. до трупа, при которой он переходит в состояние еды
 

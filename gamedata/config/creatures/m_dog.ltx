@@ -15,7 +15,7 @@
 	icon								= ui_npc_monster_dog
 
 	cform								= skeleton											;collision class
-	class								= SM_DOG_S											;AI class
+	class								= SM_DOG_S											;AI идентификатор класса
 
 	;species of monster
 	species								= dog
@@ -27,27 +27,37 @@
 	Spawn_Inventory_Item_Section		= mutant_dog_tail
 	Spawn_Inventory_Item_Probability	= 0.3
 
+	script_binding						= bind_monster.bind
+	actor_restrictor					= medium_monster									;medium_monster,stalker,none
+
+	;--------------------------------------------------------------------------
+	; Logic
+	;--------------------------------------------------------------------------
+	DayTime_Begin						= 0													;начала дня для монстра
+	DayTime_End							= 21												;конец дня для монстра
+	;--------------------------------------------------------------------------
+	; Offline Alife
+	;--------------------------------------------------------------------------
+	Scheduled							= on												;option for ALife Simulator
+	Human								= off												;option for ALife Simulator
+	Health								= 100												;option for ALife Simulator
+	MinSpeed							= 1.0												;option for ALife Simulator
+	MaxSpeed							= 1.5												;option for ALife Simulator
+	going_speed							= 5.0												;option for ALife Simulator
+	current_level_going_speed			= 1.0												;option for ALife Simulator
+	search_speed						= 0.5												;option for ALife Simulator
+
+	MaxHealthValue						= 100.0												;option for ALife Simulator, range [0..200]
+	smart_terrain_choose_interval		= 00:15:00
 
 
 
-Scheduled		     = on						; option for ALife Simulator
-Human		     	 = off						; option for ALife Simulator
-Health			     = 100						; option for ALife Simulator
-MinSpeed		     = 1.0						; option for ALife Simulator
-MaxSpeed		     = 1.5						; option for ALife Simulator
-going_speed          = 5.0                      ; option for ALife Simulator
-current_level_going_speed		= 1;2					; option for ALife Simulator
-search_speed         = .5                       ; option for ALife Simulator
-MaxHealthValue		     = 100			; range [0..200]
-DynamicObjectsCount	 = 32
-smart_terrain_choose_interval	= 00:15:00
+
 
 ef_creature_type	 = 6				; option for evaluation functions
 ef_weapon_type		 = 2
 ef_detector_type			 = 1
 panic_threshold		= 0.07
-
-script_binding  	= bind_monster.bind
 
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
@@ -65,7 +75,7 @@ ph_crash_speed_min			= 10
 ph_crash_speed_max			= 30
 ph_collision_damage_factor	= 0.1
 ph_mass 		     = 50
-actor_restrictor	 = medium_monster ;medium_monster,stalker,none
+
 destroyed_vis_name	 = physics\dead_body\skelet_crash_monster
 
 ;---------------------------------------------------------------------
@@ -204,6 +214,8 @@ max_hear_dist		 = 60
 eye_fov				 = 110	;140
 eye_range			 = 30	;50	;40;
 
+DynamicObjectsCount	 = 32; количество видимых объектов, которые может обрабатывать монстр
+
 min_view_distance   		= 0.7				; коэффициент, который множится на eye_range, в зависимости от угла
 max_view_distance	 		= 1.0				; коэффициент, который множится на eye_range, в зависимости от угла
 visibility_threshold	 	= 100.0				; значение, при достижении суммой которого объект считается видимым
@@ -236,8 +248,8 @@ critical_wound_bones_legs	= dog_critical_wound_bones_legs
 ;-------------------------------------------------------------------------
 ; Other Stuff (refactoring needed)
 ;-------------------------------------------------------------------------
-DayTime_Begin		= 0	;6		; эрўрыр фэ  фы  ьюэёЄЁр
-DayTime_End			= 21		; ъюэхЎ фэ  фы  ьюэёЄЁр
+
+
 Min_Satiety			= 0.5	;0.06 ; ьшэ. эюЁьр ёvЄюёЄш (ьхэ№°х - єцх уюыюфэvщ)
 Max_Satiety			= 1.0	;0.9 ; ьръё. эюЁьр ёvЄюёЄш (сюы№°х - юўхэ№ ёvЄvщ)
 

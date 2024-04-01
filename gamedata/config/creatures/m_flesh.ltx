@@ -15,7 +15,7 @@
 	icon								= ui_npc_monster_flesh
 
 	cform								= skeleton											;collision class
-	class								= SM_FLESH											;AI class
+	class								= SM_FLESH											;AI идентификатор класса
 
 	;species of monster
 	species								= flesh
@@ -27,25 +27,36 @@
 	Spawn_Inventory_Item_Section		= mutant_flesh_eye
 	Spawn_Inventory_Item_Probability	= 0.3
 
+	script_binding						= bind_monster.bind
 
-Scheduled		     = on						; option for ALife Simulator
-Human		     	 = off						; option for ALife Simulator
-Health			     = 250						; option for ALife Simulator
-MinSpeed		     = 1.0						; option for ALife Simulator
-MaxSpeed		     = 1.5						; option for ALife Simulator
-going_speed          = 2.0                      ; option for ALife Simulator
-current_level_going_speed		= 1;2					; option for ALife Simulator
-search_speed         = .5                       ; option for ALife Simulator
-MaxHealthValue		     = 200			; range [0..200]
-DynamicObjectsCount	 = 32
-smart_terrain_choose_interval	= 00:15:00
+	;--------------------------------------------------------------------------
+	; Logic
+	;--------------------------------------------------------------------------
+	DayTime_Begin						= 6													;начала дня для монстра
+	DayTime_End							= 21												;конец дня для монстра
+	;--------------------------------------------------------------------------
+	; Offline Alife
+	;--------------------------------------------------------------------------
+	Scheduled							= on												;option for ALife Simulator
+	Human								= off												;option for ALife Simulator
+	Health								= 250												;option for ALife Simulator
+	MinSpeed							= 1.0												;option for ALife Simulator
+	MaxSpeed							= 1.5												;option for ALife Simulator
+	going_speed							= 2.0												;option for ALife Simulator
+	current_level_going_speed			= 1.0												;option for ALife Simulator
+	search_speed						= 0.5												;option for ALife Simulator
+
+	MaxHealthValue						= 200.0												;option for ALife Simulator, range [0..200]
+	smart_terrain_choose_interval		= 00:15:00
+
+
+
+
 
 ef_creature_type	 = 7				; option for evaluation functions
 ef_weapon_type		 = 2
 ef_detector_type			 = 1
 panic_threshold		= 0.1
-
-script_binding		= bind_monster.bind
 
 bone_torso			= bip01_spine1 			; bone name
 bone_head			= bip01_head				; bone name
@@ -182,6 +193,8 @@ distant_idle_sound_range	= 100.0
 eye_fov					= 100
 eye_range				= 30	;60	;30
 
+DynamicObjectsCount	 = 32; количество видимых объектов, которые может обрабатывать монстр
+
 min_view_distance   		= 0.4				; коэффициент, который множится на eye_range, в зависимости от угла
 max_view_distance	 		= 1.0				; коэффициент, который множится на eye_range, в зависимости от угла
 visibility_threshold	 	= 100.0				; значение, при достижении суммой которого объект считается видимым
@@ -197,8 +210,8 @@ transparency_threshold		= 0.25
 ; Logic
 ;---------------------------------------------------------
 
-DayTime_Begin		= 6			; эрўрыр фэ  фы  ьюэёЄЁр
-DayTime_End			= 21		; ъюэхЎ фэ  фы  ьюэёЄЁр
+
+
 Min_Satiety		= 0.4	;0.6		; ьшэ. эюЁьр ёvЄюёЄш (ьхэ№°х - єцх уюыюфэvщ)
 Max_Satiety		= 1.0		; ьръё. эюЁьр ёvЄюёЄш (сюы№°х - юўхэ№ ёvЄvщ)
 
@@ -504,10 +517,10 @@ bip01_l_thigh
 ;	$spawn								= "monsters\flesh-group"							;option for Level Editor
 	$npc								= on												;option for Level Editor
 
-	class								= AI_FLE_G											;AI class
+	class								= AI_FLE_G											;AI идентификатор класса
+
+	Human								= off												;option for ALife Simulator
 
 
 
-
-Human		     	= off						; option for ALife Simulator
 monster_section		= m_flesh_e

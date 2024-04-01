@@ -312,7 +312,7 @@ min_wound_size				= 0.0256
 	panic_stand_run_forward		= 7.0
 
 [stalker]:common_ph_friction_params_on_npc_death
-class							= AI_STL_S						; Class identifier
+class							= AI_STL_S						;AI идентификатор класса
 
 can_select_items				= on
 
@@ -322,7 +322,7 @@ ef_creature_type				= 17							; option for evaluation functions
 ;---LEVEL EDITOR------------------------------------------------------
 $spawn							= "stalkers\stalker"			; option for Level Editor
 $npc							= on							; option for Level Editor
-visual							= actors\hero\stalker_novice.ogf; option for Level Editor
+visual							= actors\hero\stalker_novice	; option for Level Editor
 corpse_visual					= equipments\item_rukzak.ogf	;actors\hero\stalker_novice.ogf; option for Level Editor
 custom_data						= stalker_custom_data.ltx		; option for Level Editor
 character_profile				= default						; option for Level Editor
@@ -356,15 +356,15 @@ condition_sect					= stalker_condition
 ;---OFFLINE ALIFE------------------------------------------------------------------
 Health							= 100					; option for ALife Simulator
 money							= 5000					; option for ALife Simulator
-going_speed						= 2;2					; option for ALife Simulator
-current_level_going_speed		= 1						; option for ALife Simulator
+	going_speed							= 2.0												;option for ALife Simulator
+	current_level_going_speed			= 1.0												;option for ALife Simulator
 search_speed					= 0.5					; option for ALife Simulator
 going_item_detect_probability	= 0.1					; option for ALife Simulator
 search_item_detect_probability	= 0.9					; option for ALife Simulator
 max_item_mass					= 1000.0				; option for ALife Simulator
 inv_max_weight					= 1000.0				; Допустимый вес инвентори
-MaxHealthValue					= 100					; option for ALife Simulator, range [0..200]
-smart_terrain_choose_interval	= 00:15:00
+	MaxHealthValue						= 100.0												;option for ALife Simulator, range [0..200]
+	smart_terrain_choose_interval		= 00:15:00
 
 ;---ONLINE ALIFE-------------------------------------------------------------------
 time_to_search_for_artefacts	= 60000 ; in milliseconds
@@ -391,7 +391,7 @@ far_plane_factor				= 1.0				; фактор дальности тумана
 fog_density_factor				= 0.05				; фактор плотности тумана
 
 ;---MEMORY------------------------------------------------------------
-DynamicObjectsCount				= 32
+DynamicObjectsCount				= 32; количество видимых объектов, которые может обрабатывать монстр
 DynamicSoundsCount				= 32 
 DynamicHitCount					= 32
 

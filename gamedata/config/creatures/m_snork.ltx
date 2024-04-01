@@ -15,7 +15,7 @@
 	icon								= ui_npc_monster_snork
 
 	cform								= skeleton											;collision class
-	class								= SM_SNORK											;AI class
+	class								= SM_SNORK											;AI идентификатор класса
 
 	;species of monster
 	species								= snork
@@ -27,24 +27,34 @@
 	Spawn_Inventory_Item_Section		= mutant_snork_leg
 	Spawn_Inventory_Item_Probability	= 0.3
 
+	script_binding						= bind_monster.bind
+
+	;--------------------------------------------------------------------------
+	; Logic
+	;--------------------------------------------------------------------------
+	DayTime_Begin						= 0													;начала дня для монстра
+	DayTime_End							= 21												;конец дня для монстра
+	;--------------------------------------------------------------------------
+	; Offline Alife
+	;--------------------------------------------------------------------------
+	Scheduled							= on												;option for ALife Simulator
+	Human								= off												;option for ALife Simulator
+	Health								= 400												;option for ALife Simulator
+	MinSpeed							= 1.0												;option for ALife Simulator
+	MaxSpeed							= 5.0												;option for ALife Simulator
+	going_speed							= 2.0												;option for ALife Simulator
+	current_level_going_speed			= 1.0												;option for ALife Simulator
+	search_speed						= 1.5												;option for ALife Simulator
+
+	MaxHealthValue						= 200.0												;option for ALife Simulator, range [0..200]
+	smart_terrain_choose_interval		= 00:15:00
 
 
-DynamicObjectsCount		= 32
 
-;---OFFLINE ALIFE------------------------------------------------------------------
-Scheduled						= on			; option for ALife Simulator
-Human		     				= off			; option for ALife Simulator
-Health							= 400			; option for ALife Simulator
-MinSpeed						= 1.0			; option for ALife Simulator
-MaxSpeed						= 5.0			; option for ALife Simulator
-going_speed						= 2;4.5			; option for ALife Simulator
-current_level_going_speed		= 1;2					; option for ALife Simulator
-search_speed					= 1.5			; option for ALife Simulator
-MaxHealthValue					= 200			; range [0..200]
-smart_terrain_choose_interval	= 00:15:00
+
+
+
 ;-----------------------------------------------------------------------------------
-
-script_binding       = bind_monster.bind
 
 ef_creature_type		= 11						; option for evaluation functions
 ef_weapon_type			= 2
@@ -197,6 +207,8 @@ max_hear_dist						= 60
 eye_fov						= 110	;140
 eye_range					= 40	;50	
 
+DynamicObjectsCount		= 32; количество видимых объектов, которые может обрабатывать монстр
+
 min_view_distance   		= 0.4				; коэффициент, который множится на eye_range, в зависимости от угла
 max_view_distance	 		= 1.0				; коэффициент, который множится на eye_range, в зависимости от угла
 visibility_threshold	 	= 100.0				; значение, при достижении суммой которого объект считается видимым
@@ -219,8 +231,8 @@ critical_wound_decrease_quant	= 0.
 
 LegsCount				= 2
 
-DayTime_Begin			= 0			; эрўрыр фэ  фы  ьюэёЄЁр
-DayTime_End				= 21		; ъюэхЎ фэ  фы  ьюэёЄЁр
+
+
 Min_Satiety				= 0.4		; ьшэ. эюЁьр ёvЄюёЄш (ьхэ№°х - єцх уюыюфэvщ)
 Max_Satiety				= 1.0		; ьръё. эюЁьр ёvЄюёЄш (сюы№°х - юўхэ№ ёvЄvщ)
 

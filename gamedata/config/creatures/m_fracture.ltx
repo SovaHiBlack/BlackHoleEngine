@@ -15,7 +15,7 @@
 	icon								= ui_npc_monster_fracture
 
 	cform								= skeleton											;collision class
-	class								= SM_IZLOM											;AI class
+	class								= SM_IZLOM											;AI идентификатор класса
 
 	;species of monster
 	species								= bloodsucker ;fracture
@@ -24,24 +24,32 @@
 	terrain								= fracture_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
 
+	script_binding						= bind_monster.bind
+
+	;--------------------------------------------------------------------------
+	; Logic
+	;--------------------------------------------------------------------------
+	DayTime_Begin						= 0													;начала дня для монстра
+	DayTime_End							= 21												;конец дня для монстра
+	;--------------------------------------------------------------------------
+	; Offline Alife
+	;--------------------------------------------------------------------------
+	Scheduled							= on												;option for ALife Simulator
+	Human								= off												;option for ALife Simulator
+	Health								= 150												;option for ALife Simulator
+	MinSpeed							= 1.0												;option for ALife Simulator
+	MaxSpeed							= 5.0												;option for ALife Simulator
+	going_speed							= 4.5												;option for ALife Simulator
+	search_speed						= 1.5												;option for ALife Simulator
+
+	MaxHealthValue						= 100.0												;option for ALife Simulator, range [0..200]
+	smart_terrain_choose_interval		= 00:15:00
 
 
 
 
-Scheduled		     = on						; option for ALife Simulator
-Human		     	 = off ;on						; option for ALife Simulator
-Health			     = 150						; option for ALife Simulator
-MinSpeed		     = 1.0						; option for ALife Simulator
-MaxSpeed		     = 5.0						; option for ALife Simulator
-going_speed          = 4.5                      ; option for ALife Simulator
-search_speed         = 1.5                       ; option for ALife Simulator
-MaxHealthValue		 = 100			; range [0..200]
-DynamicObjectsCount	 = 32
-smart_terrain_choose_interval	= 00:15:00
 satiety_threshold		= 0.5
 jump_max_height = 1.0
-
-script_binding  = bind_monster.bind
 
 critical_wound_threshold		= -1
 critical_wound_decrease_quant	= 0.
@@ -111,13 +119,13 @@ as_min_dist				= 0.5
 as_step					= 0.5
 
 
-DayTime_Begin		= 0			; эрўрыр фэ  фы  ьюэёЄЁр
-DayTime_End			= 21		; ъюэхЎ фэ  фы  ьюэёЄЁр
+
+
 Min_Satiety			= 0.4		; ьшэ. эюЁьр ёvЄюёЄш (ьхэ№°х - єцх уюыюфэvщ)
 Max_Satiety			= 1.0		; ьръё. эюЁьр ёvЄюёЄш (сюы№°х - юўхэ№ ёvЄvщ)
 
 distance_to_corpse	= 1.2		; фшёЄ. фю ЄЁєяр, яЁш ъюЄюЁющ юэ яхЁхїюфшЄ т ёюёЄю эшх хфv
-
+DynamicObjectsCount	 = 32; количество видимых объектов, которые может обрабатывать монстр
 
 min_view_distance   		= 0.8				; коэффициент, который множится на eye_range, в зависимости от угла
 max_view_distance	 		= 1.0				; коэффициент, который множится на eye_range, в зависимости от угла

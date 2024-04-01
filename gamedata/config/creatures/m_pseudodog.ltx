@@ -15,7 +15,7 @@
 	icon								= ui_npc_monster_pseudodog
 
 	cform								= skeleton											;collision class
-	class								= SM_P_DOG											;AI class
+	class								= SM_P_DOG											;AI идентификатор класса
 
 	;species of monster
 	species								= pseudodog
@@ -30,26 +30,36 @@
 	Spawn_Inventory_Item_Section		= mutant_psevdodog_tail
 	Spawn_Inventory_Item_Probability	= 0.4
 
+	script_binding						= bind_monster.bind
+
+	;--------------------------------------------------------------------------
+	; Logic
+	;--------------------------------------------------------------------------
+	DayTime_Begin						= 0													;начала дня для монстра
+	DayTime_End							= 21												;конец дня для монстра
+	;--------------------------------------------------------------------------
+	; Offline Alife
+	;--------------------------------------------------------------------------
+	Scheduled							= on												;option for ALife Simulator
+	Human								= off												;option for ALife Simulator
+	Health								= 250												;option for ALife Simulator
+	MinSpeed							= 1.0												;option for ALife Simulator
+	MaxSpeed							= 1.5												;option for ALife Simulator
+	going_speed							= 2.0												;option for ALife Simulator
+	current_level_going_speed			= 1.0												;option for ALife Simulator
+	search_speed						= 0.5												;option for ALife Simulator
+
+	MaxHealthValue						= 1.0												;option for ALife Simulator, range [0..200]
+	smart_terrain_choose_interval		= 00:15:00
 
 
-Scheduled		     = on						; option for ALife Simulator
-Human		     	 = off						; option for ALife Simulator
-Health			     = 250						; option for ALife Simulator
-MinSpeed		     = 1.0						; option for ALife Simulator
-MaxSpeed		     = 1.5						; option for ALife Simulator
-going_speed          = 2.0                      ; option for ALife Simulator
-current_level_going_speed		= 1;2					; option for ALife Simulator
-search_speed         = .5                       ; option for ALife Simulator
-MaxHealthValue		     = 1.0			; range [0..200]
-DynamicObjectsCount	 = 32
-smart_terrain_choose_interval	= 00:15:00
+
+
 
 ef_creature_type	 = 21							; option for evaluation functions
 ef_weapon_type		 = 3
 ef_detector_type	 = 1
 panic_threshold		= 0.1
-
-script_binding       = bind_monster.bind
 
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
@@ -108,8 +118,8 @@ MaxAttackDist		= 2.0
 as_min_dist				= 1.0
 as_step					= 0.2
 
-DayTime_Begin		= 0	;6			; эрўрыр фэ  фы  ьюэёЄЁр
-DayTime_End			= 21		; ъюэхЎ фэ  фы  ьюэёЄЁр
+
+
 Min_Satiety			= 0.95	;0.3	;0.6		; ьшэ. эюЁьр ёvЄюёЄш (ьхэ№°х - єцх уюыюфэvщ)
 Max_Satiety			= 1.0		; ьръё. эюЁьр ёvЄюёЄш (сюы№°х - юўхэ№ ёvЄvщ)
 
@@ -192,6 +202,7 @@ max_hear_dist		 = 60
 eye_fov				 = 110	;150
 eye_range			 = 60	;100	
 
+DynamicObjectsCount	 = 32; количество видимых объектов, которые может обрабатывать монстр
 
 min_view_distance   		= 0.4				; коэффициент, который множится на eye_range, в зависимости от угла
 max_view_distance	 		= 1.0				; коэффициент, который множится на eye_range, в зависимости от угла
@@ -482,7 +493,7 @@ color_add		= 0.00,0.00,0.015
 [psy_dog]:pseudodog_strong
 	$spawn								= "monsters\psy_dogs\psy_dog"						;option for Level Editor
 
-	class								= SM_DOG_P											;AI class
+	class								= SM_DOG_P											;AI идентификатор класса
 
 
 
@@ -531,7 +542,7 @@ ce_power			= 0.3 ;0.7
 	visual								= monsters\pseudodog\pseudodog_grey
 	icon								= ui_npc_monster_pseudodog_grey
 
-	class								= SM_DOG_F											;AI class
+	class								= SM_DOG_F											;AI идентификатор класса
 
 
 

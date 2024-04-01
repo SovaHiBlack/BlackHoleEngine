@@ -11,7 +11,7 @@
 	corpse_visual						= monsters\rat\rat_1
 
 	cform								= skeleton											;collision class
-	class								= AI_RAT											;AI class
+	class								= AI_RAT											;AI идентификатор класса
 
 	;species of monster
 	species								= rat
@@ -19,25 +19,30 @@
 	material							= creatures\small
 	terrain								= rats_terrain
 
+	;--------------------------------------------------------------------------
+	; Offline Alife
+	;--------------------------------------------------------------------------
+	Scheduled							= on												;option for ALife Simulator
+	Human								= off												;option for ALife Simulator
+	Health								= 15												;option for ALife Simulator
+	MinSpeed							= 1.0												;option for ALife Simulator
+	MaxSpeed							= 1.5												;option for ALife Simulator
+	going_speed							= 1.0												;option for ALife Simulator
+
+	MaxHealthValue						= 15.0												;option for ALife Simulator, range [0..200]
+	smart_terrain_choose_interval		= 20:00:00
 
 
-Scheduled		     = on				; option for ALife Simulator
-Human		     	 = off				; option for ALife Simulator
-Health			     = 15				; option for ALife Simulator
-MinSpeed		     = 1.0				; option for ALife Simulator
-MaxSpeed		     = 1.5				; option for ALife Simulator
-going_speed          = 1.0				; option for ALife Simulator
+
 retreat_threshold	 = 0.2
 eye_fov				 = 170
 eye_range			 = 10
-MaxHealthValue		 = 15				; range [0..200]
+
 hit_power			 = 5
 hit_type			 = wound
 transparency_threshold	 = 1.0
-DynamicObjectsCount	 = 32
+DynamicObjectsCount	 = 32; количество видимых объектов, которые может обрабатывать монстр
 DynamicSoundsCount	 = 32
-
-smart_terrain_choose_interval	= 20:00:00
 
 killer_clsids			= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
@@ -106,7 +111,6 @@ MoraleDeathDistance	     = 50				; meters
 SoundThreshold		     = 0.06             ; range [0..1]
 
 ActionRefreshRate	     = 500			; milliseconds
-MaxHealthValue		     = 15			; range [0..200]
 
 EatMemberCorpses	     = 1			; range {0,1}
 Cannibalism				 = 1			; range {0,1}
@@ -169,8 +173,6 @@ sleep_satiety = 1.0		;0.8
 sleep_radiation = 1.0	;1.1
 sleep_psy_health = 1.0
 
-DynamicObjectsCount		= 32
-
 [rats_terrain]
 	255,000,255,255 ;на всех уровнях, по графам без описания
 	255,004,255,255 ;на всех уровнях, по мертвой земле
@@ -187,10 +189,10 @@ DynamicObjectsCount		= 32
 	$spawn								= "monsters\rat-group"								;option for Level Editor
 	$npc								= on												;option for Level Editor
 
-	class								= AI_RAT_G											;AI class
+	class								= AI_RAT_G											;AI идентификатор класса
+
+	Human								= off												;option for ALife Simulator
 
 
 
-
-Human		     	 = off				; option for ALife Simulator
 monster_section      = m_rat_e

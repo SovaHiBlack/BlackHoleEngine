@@ -15,7 +15,7 @@
 	icon								= ui_npc_monster_chimera
 
 	cform								= skeleton											;collision class
-	class								= SM_CHIMS											;AI class
+	class								= SM_CHIMS											;AI идентификатор класса
 
 	;species of monster
 	species								= chimera
@@ -24,33 +24,42 @@
 	terrain								= chimera_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
 
+	script_binding						= bind_monster.bind
+
+	;--------------------------------------------------------------------------
+	; Logic
+	;--------------------------------------------------------------------------
+	DayTime_Begin						= 0													;начала дня для монстра
+	DayTime_End							= 21												;конец дня для монстра
+
+	;--------------------------------------------------------------------------
+	; Offline Alife
+	;--------------------------------------------------------------------------
+	Scheduled							= on												;option for ALife Simulator
+	Human								= off												;option for ALife Simulator
+	Health								= 400												;option for ALife Simulator
+	MinSpeed							= 1.0												;option for ALife Simulator
+	MaxSpeed							= 1.5												;option for ALife Simulator
+	going_speed							= 1.0												;option for ALife Simulator
+	search_speed						= 0.5												;option for ALife Simulator
+
+	MaxHealthValue						= 400.0												;option for ALife Simulator, range [0..200]
+	smart_terrain_choose_interval		= 00:15:00
 
 
 
-Scheduled		     = on						; option for ALife Simulator
-Human		     	 = off						; option for ALife Simulator
-Health			     = 400						; option for ALife Simulator
-MinSpeed		     = 1.0						; option for ALife Simulator
-MaxSpeed		     = 1.5						; option for ALife Simulator
-going_speed          = 1.0                      ; option for ALife Simulator
-search_speed         = .5                       ; option for ALife Simulator
-	
-MaxHealthValue		     = 400			; range [0..200]
-DynamicObjectsCount	 = 32
+
 
 ef_creature_type	= 20							; option for evaluation functions
 ef_weapon_type		= 3
 ef_detector_type			 = 1
 panic_threshold			= 0.1
 
-script_binding  	= bind_monster.bind
-
 satiety_threshold		= 0.5
 jump_max_height = 1.0
 
 critical_wound_threshold		= -1
 critical_wound_decrease_quant	= 0.
-smart_terrain_choose_interval	= 00:15:00
 
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
@@ -116,8 +125,7 @@ as_step					= 0.3
 RunAttack_PathDistance	= 8.0
 RunAttack_StartDistance	= 4.0
 
-DayTime_Begin		= 0			; начала дня для монстра
-DayTime_End			= 21		; конец дня для монстра
+
 Min_Satiety			= 0.6		; мин. норма сытости (меньше - уже голодный)
 Max_Satiety			= 0.9		; макс. норма сытости (больше - очень сытый)
 
@@ -205,6 +213,8 @@ distant_idle_sound_range	= 100.0
 
 eye_fov						= 110	;150	
 eye_range					= 80	;120	
+
+DynamicObjectsCount	 = 32; количество видимых объектов, которые может обрабатывать монстр
 
 min_view_distance   		= 0.4				; коэффициент, который множится на eye_range, в зависимости от угла
 max_view_distance	 		= 1.0				; коэффициент, который множится на eye_range, в зависимости от угла

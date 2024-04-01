@@ -15,7 +15,7 @@
 	icon								= ui_npc_monster_tushkano
 
 	cform								= skeleton											;collision class
-	class								= SM_TUSHK											;AI class
+	class								= SM_TUSHK											;AI идентификатор класса
 
 	;species of monster
 	species								= tushkano
@@ -26,23 +26,31 @@
 	terrain								= tushkan_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
 
+	script_binding						= bind_monster.bind
+	actor_restrictor					= medium_monster									;medium_monster,stalker,none
+
+	;--------------------------------------------------------------------------
+	; Logic
+	;--------------------------------------------------------------------------
+	DayTime_Begin						= 0													;начала дня для монстра
+	DayTime_End							= 21												;конец дня для монстра
+	;--------------------------------------------------------------------------
+	; Offline Alife
+	;--------------------------------------------------------------------------
+	Scheduled							= on												;option for ALife Simulator
+	Human								= off												;option for ALife Simulator
+	Health								= 20												;option for ALife Simulator
+	MinSpeed							= 1.0												;option for ALife Simulator
+	MaxSpeed							= 5.0												;option for ALife Simulator
+	going_speed							= 5.0												;option for ALife Simulator
+	current_level_going_speed			= 1.0												;option for ALife Simulator
+	search_speed						= 1.5												;option for ALife Simulator
+
+	MaxHealthValue						= 20.0												;option for ALife Simulator, range [0..200]
+	smart_terrain_choose_interval		= 00:15:00
 
 
 
-
-
-Scheduled		     = on						; option for ALife Simulator
-Human		     	 = off						; option for ALife Simulator
-Health			     = 20						; option for ALife Simulator
-MinSpeed		     = 1.0						; option for ALife Simulator
-MaxSpeed		     = 5.0						; option for ALife Simulator
-going_speed          = 5;4.5                      ; option for ALife Simulator
-current_level_going_speed		= 1;2					; option for ALife Simulator
-search_speed         = 1.5                       ; option for ALife Simulator
-
-MaxHealthValue		 = 20			; range [0..200]
-DynamicObjectsCount	 = 32
-smart_terrain_choose_interval	= 00:15:00
 
 ;---EVALUATION FUNCTIONS----------------------------------------------
 ef_creature_type	 = 2							; option for evaluation functions
@@ -63,11 +71,8 @@ ph_crash_speed_min			= 10
 ph_crash_speed_max			= 30
 ph_collision_damage_factor	= 0.1
 ph_mass 		     = 20
-actor_restrictor	 = medium_monster ;medium_monster,stalker,none
 
 destroyed_vis_name	 = physics\dead_body\skelet_crash_monster
-
-script_binding  	 = bind_monster.bind
 
 ;---------------------------------------------------------------------
 ph_skeleton_airr_lin_factor   = -0.4
@@ -109,8 +114,8 @@ MaxAttackDist		= 1.8	;3.8
 as_min_dist				= 0.25
 as_step					= 0.25
 
-DayTime_Begin		= 0			; эрўрыр фэ  фы  ьюэёЄЁр
-DayTime_End			= 21		; ъюэхЎ фэ  фы  ьюэёЄЁр
+
+
 Min_Satiety			= 0.4		; ьшэ. эюЁьр ёvЄюёЄш (ьхэ№°х - єцх уюыюфэvщ)
 Max_Satiety			= 1.0		; ьръё. эюЁьр ёvЄюёЄш (сюы№°х - юўхэ№ ёvЄvщ)
 
@@ -119,6 +124,8 @@ distance_to_corpse	= 1.2		; фшёЄ. фю ЄЁєяр, яЁш ъюЄюЁющ юэ яхЁхїюфшЄ т ёюёЄю эшх
 
 eye_fov				 = 110	;140
 eye_range			 = 30	;50	;40;
+
+DynamicObjectsCount	 = 32; количество видимых объектов, которые может обрабатывать монстр
 
 min_view_distance   		= 0.7				; коэффициент, который множится на eye_range, в зависимости от угла
 max_view_distance	 		= 1.0				; коэффициент, который множится на eye_range, в зависимости от угла

@@ -15,7 +15,7 @@
 	icon								= ui_npc_monster_burer
 
 	cform								= skeleton											;collision class
-	class								= SM_BURER											;AI class
+	class								= SM_BURER											;AI идентификатор класса
 
 	;species of monster
 	species								= burer
@@ -31,22 +31,30 @@
 	Spawn_Inventory_Item_Section		= mutant_burer_hand
 	Spawn_Inventory_Item_Probability	= 0.5
 
+	script_binding						= bind_monster.bind
+	actor_restrictor					= medium_monster									;medium_monster,stalker,none
 
-
-
-	MaxHealthValue						= 150											;range [0..200]
-
+	;--------------------------------------------------------------------------
+	; Logic
+	;--------------------------------------------------------------------------
+	DayTime_Begin						= 0													;начала дня для монстра
+	DayTime_End							= 21												;конец дня для монстра
 	;--------------------------------------------------------------------------
 	; Offline Alife
 	;--------------------------------------------------------------------------
-	Scheduled							= on											;option for ALife Simulator
-	Human								= off											;option for ALife Simulator
-	Health								= 400											;option for ALife Simulator
-	MinSpeed							= 1.0											;option for ALife Simulator
-	MaxSpeed							= 5.0											;option for ALife Simulator
-	going_speed							= 3												;option for ALife Simulator
-	search_speed						= 1.5											;option for ALife Simulator
+	Scheduled							= on												;option for ALife Simulator
+	Human								= off												;option for ALife Simulator
+	Health								= 400												;option for ALife Simulator
+	MinSpeed							= 1.0												;option for ALife Simulator
+	MaxSpeed							= 5.0												;option for ALife Simulator
+	going_speed							= 3.0												;option for ALife Simulator
+	search_speed						= 1.5												;option for ALife Simulator
+
+	MaxHealthValue						= 150.0												;option for ALife Simulator, range [0..200]
 	smart_terrain_choose_interval		= 00:15:00
+
+
+
 
 	;--------------------------------------------------------------------------
 	; Physics
@@ -134,8 +142,6 @@
 	eat_slice							= 0.01						;увеличение сытости при 1 укусе
 	eat_slice_weight					= 10.0						;уменьшение еды у трупа
 
-	DayTime_Begin						= 0							;начала дня для монстра
-	DayTime_End							= 21						;конец дня для монстра
 	Min_Satiety							= 0.6						;мин. норма сытости (меньше - уже голодный)
 	Max_Satiety							= 0.9						;макс. норма сытости (больше - очень сытый)
 
@@ -179,8 +185,7 @@
 	eye_fov								= 100
 	eye_range							= 30
 
-	; number of visible objects monster can handle
-	DynamicObjectsCount					= 32
+	DynamicObjectsCount					= 32		; количество видимых объектов, которые может обрабатывать монстр
 
 	min_view_distance					= 0.4											;коэффициент, который множится на eye_range, в зависимости от угла
 	max_view_distance					= 1.0											;коэффициент, который множится на eye_range, в зависимости от угла
@@ -256,13 +261,10 @@
 	ef_detector_type					= 1
 	panic_threshold						= 0.1
 
-	script_binding						= bind_monster.bind
-
 	bone_torso							= bip01_spine1 				;bone name
 	bone_head							= bip01_head				;bone name
 	bone_fire							= bip01_head				;bone name
 	weapon_usage						= 0							;boolean
-	actor_restrictor					= medium_monster			;medium_monster, stalker, none
 
 	distance_to_corpse					= 1.2						;дист. до трупа, при которой он переходит в состояние еды
 

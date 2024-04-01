@@ -15,7 +15,7 @@
 	icon								= ui_npc_monster_poltergeist
 
 	cform								= skeleton											;collision class
-	class								= SM_POLTR											;AI class
+	class								= SM_POLTR											;AI идентификатор класса
 
 	;species of monster
 	species								= poltergeist
@@ -27,27 +27,38 @@
 	terrain								= poltergeist_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_radioactive
 
+	script_binding						= bind_monster.bind
+
+	;--------------------------------------------------------------------------
+	; Logic
+	;--------------------------------------------------------------------------
+	DayTime_Begin						= 0													;начала дня для монстра
+	DayTime_End							= 21												;конец дня для монстра
+	;--------------------------------------------------------------------------
+	; Offline Alife
+	;--------------------------------------------------------------------------
+	Scheduled							= on												;option for ALife Simulator
+	Human								= off												;option for ALife Simulator
+	Health								= 250												;option for ALife Simulator
+	MinSpeed							= 1.0												;option for ALife Simulator
+	MaxSpeed							= 1.5												;option for ALife Simulator
+	going_speed							= 2.0												;option for ALife Simulator
+	current_level_going_speed			= 1.0												;option for ALife Simulator
+	search_speed						= 0.5												;option for ALife Simulator
+
+	MaxHealthValue						= 150.0												;option for ALife Simulator, range [0..200]
+	smart_terrain_choose_interval		= 00:15:00
 
 
 
-Scheduled		     = on						; option for ALife Simulator
-Human		     	 = off						; option for ALife Simulator
-Health			     = 250						; option for ALife Simulator
-MinSpeed		     = 1.0						; option for ALife Simulator
-MaxSpeed		     = 1.5						; option for ALife Simulator
-going_speed          = 2.0                      ; option for ALife Simulator
-current_level_going_speed		= 1;2					; option for ALife Simulator
-search_speed         = .5                       ; option for ALife Simulator
-MaxHealthValue		 = 150			; range [0..200]
-DynamicObjectsCount	 = 32
-smart_terrain_choose_interval	= 00:15:00
+
 
 ef_creature_type	 = 5 	;10					; option for evaluation functions
 ef_weapon_type		 = 12	;3
 ef_detector_type	 = 1
 panic_threshold		= 0.1
 
-script_binding  	= bind_monster.bind
+
 
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
@@ -116,8 +127,8 @@ as_step					= 0.3
 ;-------------------------------------------------------------------------
 ; Entity Conditions
 ;-------------------------------------------------------------------------
-DayTime_Begin		= 0
-DayTime_End			= 21
+
+
 Min_Satiety			= 0.7
 Max_Satiety			= 0.95
 
@@ -193,6 +204,8 @@ max_hear_dist		 = 60
 
 eye_fov				 = 100	;120
 eye_range			 = 40 ;60
+
+DynamicObjectsCount	 = 32; количество видимых объектов, которые может обрабатывать монстр
 
 min_view_distance   		= 0.8				; коэффициент, который множится на eye_range, в зависимости от угла
 max_view_distance	 		= 1.0				; коэффициент, который множится на eye_range, в зависимости от угла

@@ -35,10 +35,23 @@
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						=   0.0,   0.11, -0.22
-	ph_box0_size						=   0.085, 0.11, 0.525
-	ph_box1_center						=   0.0,   0.11, -0.22
-	ph_box1_size						=   0.085, 0.11, 0.525
+	ph_box0_center						= 0.0,   0.11, -0.22
+	ph_box0_size						= 0.085, 0.11, 0.525
+	ph_box1_center						= 0.0,   0.11, -0.22
+	ph_box1_size						= 0.085, 0.11, 0.525
+
+	ph_crash_speed_min					= 10.0
+	ph_crash_speed_max					= 30.0
+	ph_mass								= 2.0
+	ph_collision_damage_factor			= 0.1
+
+	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
+	ef_creature_type					= 1
+	ef_weapon_type						= 1
+	ef_detector_type					= 1
+	panic_threshold						= 0.1
 
 
 retreat_threshold	 = 0.2
@@ -53,19 +66,6 @@ DynamicSoundsCount	 = 32
 
 killer_clsids			= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
-ef_creature_type	 = 1				; option for evaluation functions
-ef_weapon_type		 = 1
-ef_detector_type	 = 1
-panic_threshold		= 0.1
-
-
-
-
-
-ph_crash_speed_min			= 10
-ph_crash_speed_max			= 30
-ph_collision_damage_factor	= 0.1
-ph_mass 				= 2
 cost					= 5
 
 ;открытые раны
@@ -147,15 +147,12 @@ eat_radiation = 0.01	;0.03;
 wounds_heal_perc = 0
 eat_portions_num = -1
 
-hit_type = wound
-
 ;entity condition
-
 satiety_v = 0.0001			;0.01			;скорость уменьшения сытости со временем
 radiation_v = 0.00001		;0.004			;скорость уменьшения радиации
 satiety_power_v = 0.001		;0.01			;увеличение силы при уменьшении сытости 
 satiety_health_v = 0.001	;0.03			;увеличение здоровья при уменьшении сытости 
-satiety_critical = -1.0		;0.25						;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
+
 radiation_health_v = 0.01	;0.006			;уменьшение здоровья при воздействии радиации
 bleeding_v = 0.05			;0.02			;потеря крови при максимальной ране
 wound_incarnation_v = 0.01	;0.001		    ;скорость заживания раны 

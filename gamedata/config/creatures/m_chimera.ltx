@@ -51,16 +51,78 @@
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						= 0.0,  0.9,  0.0
-	ph_box0_size						= 0.35, 0.9,  0.35
-	ph_box1_center						= 0.0,  0.6,  0.0
-	ph_box1_size						= 0.40, 0.6,  0.40
+	ph_box0_center						= 0.0,  0.9, 0.0
+	ph_box0_size						= 0.35, 0.9, 0.35
+	ph_box1_center						= 0.0,  0.6, 0.0
+	ph_box1_size						= 0.4,  0.6, 0.4
+
+	ph_crash_speed_min					= 10.0
+	ph_crash_speed_max					= 30.0
+	ph_mass								= 220.0
+	ph_collision_damage_factor			= 0.1
+
+	destroyed_vis_name					= physics\dead_body\skelet_crash_monster
+
+	ph_skeleton_airr_lin_factor			= -0.4
+	ph_skeleton_airr_ang_factor			= -0.2
+	ph_skeleton_hinger_factor1			= 1.0
+	ph_skeleton_ddelay					= 5.0												;время изменения значения трения в суставе с момента создания шелла, сек
+	ph_skel_fatal_impulse_factor		= 2.0
+	ph_after_death_velocity_factor		= 0.75
+	ph_skel_shot_up_factor				= 0.25
+
+	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
+	ef_creature_type					= 20
+	ef_weapon_type						= 3
+	ef_detector_type					= 1
+	panic_threshold						= 0.1
+
+	;--------------------------------------------------------------------------
+	; Movement::Velocities & Acceleration
+	;--------------------------------------------------------------------------
+	;	speed factors		| linear | angular_real | angular_path | min | max
+	;--------------------------------------------------------------------------
+	Velocity_Stand			= 0.0,			1.4,			1.4,	1.0,	1.0
+	Velocity_RunFwdNormal	= 10.0,			2.5,			2.5,	0.2,	1.0
+	Velocity_RunFwdDamaged	= 5.0,			4.0,			4.0,	0.2,	1.0
+	Velocity_WalkFwdDamaged	= 2.0,			2.0,			2.0,	0.5,	2.0
+	Velocity_WalkFwdNormal	= 2.3,			1.2,			1.2,	0.02,	3.0
+	Velocity_Drag			= 1.0,			3.0,			3.0,	1.0,	1.0
+	Velocity_Steal			= 1.5,			2.0,			2.0,	1.0,	1.0
+	Velocity_Walk_Upper		= 0.5,			1.2,			1.2,	0.02,	2.0
+	Velocity_JumpGround		= 10.0,			0.01,			0.01,	0.4,	1.0
+	Velocity_RunAttack		= 10.0,			0.01,			0.01,	0.2,	1.0
+	Velocity_Run_Attack		= 10.0,			0.01,			0.01,	0.2,	1.0
+
+	;acceleration
+	Accel_Generic						= 1.5
+	Accel_Calm							= 3.5
+	Accel_Aggressive					= 9.5
+
+	;--------------------------------------------------------------------------
+	; Attack parameters
+	;--------------------------------------------------------------------------
+	attack_effector						= m_chimera_attack_effector
+	attack_params						= m_chimera_attack_params
+
+	MinAttackDist						= 2.8
+	MaxAttackDist						= 4.8
+
+	hit_type							= wound												;тип атаки
+
+	as_min_dist							= 0.9
+	as_step								= 0.3
+
+	RunAttack_PathDistance				= 8.0
+	RunAttack_StartDistance				= 4.0
 
 
-ef_creature_type	= 20							; option for evaluation functions
-ef_weapon_type		= 3
-ef_detector_type			 = 1
-panic_threshold			= 0.1
+
+
+
+
 
 satiety_threshold		= 0.5
 jump_max_height = 1.0
@@ -73,64 +135,16 @@ bone_head			 = bip01_head				; bone name
 bone_fire			 = bip01_head				; bone name
 weapon_usage		 = 0						; boolean
 
-
-
-
-
-ph_crash_speed_min			= 10
-ph_crash_speed_max			= 30
-ph_collision_damage_factor	= 0.1
-ph_mass 		     = 220
-
-destroyed_vis_name	 = physics\dead_body\skelet_crash_monster
-
 Particle_Tele_Object	= static\fire_distort
 Particle_Gravi_Wave		= anomaly2\burer_wave
 Particle_Gravi_Prepare	= anomaly2\burer_prepare
 Particle_Shield			= anomaly2\burer_shield_01
 
 ;---------------------------------------------------------------------
-ph_skeleton_airr_lin_factor   = -0.4
-ph_skeleton_airr_ang_factor   = -0.2
-ph_skeleton_hinger_factor1    = 1.0
-ph_skeleton_ddelay	      = 5.0
-ph_skel_fatal_impulse_factor  = 2.0
-ph_after_death_velocity_factor= 0.75
-ph_skel_shot_up_factor        = 0.25
-;---------------------------------------------------------------------
 
 SoundThreshold		 = 0.06             ; range [0..1]
 
 max_hear_dist		 = 50
-
-
-; speed factors			linear | angular_real | angular_path | min |  max
-Velocity_Stand			= 0,		1.4,			1.4,		1,		1
-Velocity_RunFwdNormal	= 10,		2.5,			2.5,		0.2,	1	
-Velocity_RunFwdDamaged	= 5.0,  	4.0,			4.0,		0.2,	1
-Velocity_WalkFwdDamaged	= 2.0,		2.0,			2.0,		0.5,	2.0	
-Velocity_WalkFwdNormal	= 2.3,		1.2,			1.2,		0.02,	3.0
-Velocity_Drag			= 1.0,		3.0,			3.0,		1,		1
-Velocity_Steal			= 1.5,		2.0,			2.0,		1,		1
-Velocity_Walk_Upper		= 0.5,		1.2,			1.2,		0.02,	2.0
-Velocity_JumpGround		= 10.0,		0.01,			0.01,		0.4,	1
-Velocity_RunAttack		= 10,		0.01,			0.01,		0.2,	1	
-Velocity_Run_Attack		= 10,		0.01,			0.01,		0.2,	1
-
-; acceleration
-Accel_Generic			= 1.5
-Accel_Calm				= 3.5
-Accel_Aggressive		= 9.5
-
-;attack parameters
-MinAttackDist		= 2.8;1.2	;0.5
-MaxAttackDist		= 4.8;2.7	;3.8
-
-as_min_dist				= 0.9
-as_step					= 0.3
-
-RunAttack_PathDistance	= 8.0
-RunAttack_StartDistance	= 4.0
 
 distance_to_corpse	= 1.2		; дист. до трупа, при которой он переходит в состояние еды
 
@@ -146,14 +160,12 @@ selector_approach		=      20.0,            1.0,                 1000.0,         
 ;							  fSearchRange,fOptEnemyDistance,fOptEnemyDistanceWeight,fMinEnemyDistance,fMinEnemyDistanceWeight,fMaxEnemyDistance,fMaxEnemyDistanceWeight
 selector_walk_around	=      20.0,            6.0,                 1000.0,             4.0,               5000.0,					8.0,				5000.0,      
 
-hit_type = wound
-
 ;entity condition
 satiety_v = 0.0001				;0.01			;скорость уменьшения сытости со временем
 radiation_v = 0.00001		;0.004			;скорость уменьшения радиации
 satiety_power_v = 0.0001		;0.01			;увеличение силы при уменьшении сытости 
 satiety_health_v = 0.0001	;0.03			;увеличение здоровья при уменьшении сытости 
-satiety_critical = -1.0		;0.25						;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
+
 radiation_health_v = 0.01	;0.006			;уменьшение здоровья при воздействии радиации
 morale_v			= 0.01					;скорость восстановления морали
 health_hit_part = 0.8		;0.8			;процент хита, уходящий на отнимание здоровья
@@ -241,10 +253,6 @@ jump_max_angle				= 0.6
 
 DamagedThreshold		= 0.5
 
-squad_attack_algorithm	= 1
-attack_effector			= m_chimera_attack_effector
-
-attack_params			= m_chimera_attack_params
 step_params			= m_chimera_step_params
 
 LegsCount			= 4
@@ -337,15 +345,16 @@ bip01_head 			= 8, -1, 0.50
 	community							= chimera
 	monster_type						= indoor
 
+	panic_threshold						= 0.00001
 
-
+	MinAttackDist						= 2.0
 
 
 bones_particles = electro_chimera_particles
 immunities_sect	= electro_chimera_immunities
-MinAttackDist		= 2.0
-panic_threshold			= 0.00001
-;
+
+
+
 [electro_chimera_immunities]:chimera_immunities
 shock_immunity = 0.0
 ;
@@ -377,15 +386,15 @@ bone = bip01_r_hand
 stop_on_death = true
 ;
 [esc_electro_chimera]:chimera_strong
-panic_threshold			= 0.0
+	panic_threshold						= 0.0
 custom_data = scripts\esc_electrochimera.ltx
-;
+
 [ros_electro_chimera]:chimera_strong
-panic_threshold			= 0.0
+	panic_threshold						= 0.0
 custom_data = scripts\ros_electrochimera.ltx
-;
+
 [pri_electro_chimera]:chimera_strong
-panic_threshold			= 0.0
+	panic_threshold						= 0.0
 custom_data = scripts\pri_electrochimera.ltx
 
 

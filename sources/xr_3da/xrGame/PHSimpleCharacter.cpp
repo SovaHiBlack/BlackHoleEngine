@@ -1741,6 +1741,7 @@ void CPHSimpleCharacter::GetSmothedVelocity(Fvector& vvel)
 	//	GetSavedVelocity(vvel);
 	//}
 }
+
 ALife::EHitType	CPHSimpleCharacter:: HitType	()const	
 {
 	if(GMLib.GetMaterialByIdx(LastMaterialIDX())->Flags.test(SGameMtl::flInjurious)&&IsGameTypeSingle())
@@ -1749,6 +1750,7 @@ ALife::EHitType	CPHSimpleCharacter:: HitType	()const
 //		return ALife::eHitTypeStrike;
 	return (GameID() == GAME_SINGLE) ? ALife::eHitTypeStrike : ALife::eHitTypePhysicStrike;
 }//
+
 CElevatorState*	CPHSimpleCharacter::ElevatorState()
 {
 	return &m_elevator_state;
@@ -1758,11 +1760,11 @@ SCollisionHitCallback*	CPHSimpleCharacter::HitCallback					()const
 {
 	return m_collision_damage_info.m_hit_callback;
 }
+
 const	float	resolve_depth=0.05f;
 static	float	restrictor_depth=0.f;
 void	CPHSimpleCharacter::	TestRestrictorContactCallbackFun	(bool& do_colide,bool bo1,dContact& c,SGameMtl* material_1,SGameMtl* material_2)
 {
-	
 	dGeomID g_this=NULL;
 	dGeomID g_obj=NULL;
 	if(bo1)

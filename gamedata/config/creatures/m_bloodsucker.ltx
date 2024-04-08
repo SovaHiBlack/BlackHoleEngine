@@ -55,64 +55,48 @@
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						= 0.0,  0.9,  0.0
-	ph_box0_size						= 0.35, 0.9,  0.35
-	ph_box1_center						= 0.0,  0.6,  0.0
-	ph_box1_size						= 0.4,  0.6,  0.0
+	ph_box0_center						= 0.0,  0.9, 0.0
+	ph_box0_size						= 0.35, 0.9, 0.35
+	ph_box1_center						= 0.0,  0.6, 0.0
+	ph_box1_size						= 0.4,  0.6, 0.0
 
+	ph_crash_speed_min					= 100.0
+	ph_crash_speed_max					= 200.0
+	ph_mass								= 100.0
+	ph_collision_damage_factor			= 0.1
 
-	ef_creature_type					= 13											;option for evaluation functions
+	destroyed_vis_name					= physics\dead_body\trupik_crash
+
+	ph_skeleton_airr_lin_factor			= -0.4
+	ph_skeleton_airr_ang_factor			= -0.2
+	ph_skeleton_hinger_factor1			= 1.0
+	ph_skeleton_ddelay					= 5.0												;время изменения значения трения в суставе с момента создания шелла, сек
+	ph_skel_fatal_impulse_factor		= 2.0
+	ph_after_death_velocity_factor		= 0.75
+	ph_skel_shot_up_factor				= 0.25
+
+	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
+	ef_creature_type					= 13
 	ef_weapon_type						= 3
 	ef_detector_type					= 1
 	panic_threshold						= 0.1
 
-	bone_head							= bip01_head									;bone name
-	bone_fire							= bip01_head
-	weapon_usage						= 0												;boolean
-
-
-
-
-
 	;--------------------------------------------------------------------------
-	; Physics
-	;--------------------------------------------------------------------------
-
-
-
-
-	ph_foot_size						= 0.2,  0.23, 0.2
-	ph_crash_speed_min					= 100
-	ph_crash_speed_max					= 200
-	ph_collision_damage_factor			= 0.1
-	ph_mass 							= 100
-
-	destroyed_vis_name					= physics\Dead_Body\trupik_crash
-
-	;--------------------------------------------------------------------------
-	ph_skeleton_airr_lin_factor			= -0.4
-	ph_skeleton_airr_ang_factor			= -0.2
-	ph_skeleton_hinger_factor1			= 1.0
-	ph_skeleton_ddelay					= 5.0
-	ph_skel_fatal_impulse_factor		= 2.0
-	ph_after_death_velocity_factor		= 0.75
-	ph_skel_shot_up_factor				= 0.25
-	;--------------------------------------------------------------------------
-
-	;-------------------------------------------------------------------------------
 	; Movement::Velocities & Acceleration
-	;-------------------------------------------------------------------------------
-	;	speed factors			| linear | angular_real | angular_path | min | max
-	;-------------------------------------------------------------------------------
-	Velocity_Stand				= 0,			3.05,		3.05,		1.0,	1.0
-	Velocity_WalkFwdNormal		= 2.15,			3.5,		3.5,		0.2,	2.0
-	Velocity_WalkFwdDamaged		= 1.4,			4.0,		4.0,		0.2,	2.0
-	Velocity_RunFwdNormal		= 5.84,			4.0,		4.0,		0.5,	1.0
-	Velocity_RunFwdDamaged		= 1.9,			3.0,		3.0,		0.5,	1.0
-	Velocity_Drag				= 1.5,			3.0,		3.0,		1.0,	1.0
-	Velocity_Steal				= 0.7,			3.0,		3.0,		1.0,	1.0
+	;--------------------------------------------------------------------------
+	;	speed factors		| linear | angular_real | angular_path | min | max
+	;--------------------------------------------------------------------------
+	Velocity_Stand			= 0.0,			3.05,		3.05,		1.0,	1.0
+	Velocity_WalkFwdNormal	= 2.15,			3.5,		3.5,		0.2,	2.0
+	Velocity_WalkFwdDamaged	= 1.4,			4.0,		4.0,		0.2,	2.0
+	Velocity_RunFwdNormal	= 5.84,			4.0,		4.0,		0.5,	1.0
+	Velocity_RunFwdDamaged	= 1.9,			3.0,		3.0,		0.5,	1.0
+	Velocity_Drag			= 1.5,			3.0,		3.0,		1.0,	1.0
+	Velocity_Steal			= 0.7,			3.0,		3.0,		1.0,	1.0
 
-	;Speed factors while invisible
+	;speed factors while invisible
 	Velocity_Invisible_Linear			= 8.0
 	Velocity_Invisible_Angular			= 4.62
 
@@ -124,23 +108,37 @@
 	;--------------------------------------------------------------------------
 	; Attack parameters
 	;--------------------------------------------------------------------------
+	attack_effector						= m_bloodsucker_attack_effector
+	attack_params						= m_bloodsucker_attack_params
+
 	MinAttackDist						= 2.3
 	MaxAttackDist						= 2.8
-	EffectDistance						= 20.0
-	hit_type							= wound											;type of attack
+
+	hit_type							= wound												;тип атаки
+
 	as_min_dist							= 1.7
 	as_step								= 0.3
 
 	Run_Attack_Dist						= 3.5, 4.5
 	Run_Attack_Delay					= 1000, 3000
 
-	attack_params						= m_bloodsucker_attack_params
+	Melee_Rotation_Factor				= 2.0
 
-	attack_effector						= m_bloodsucker_attack_effector
 	vampire_effector					= m_bloodsucker_vampire_effector
 
-	Melee_Rotation_Factor				= 2.0
 	berserk_always						= true
+
+
+
+
+
+
+
+
+	bone_head							= bip01_head									;bone name
+	bone_fire							= bip01_head
+	weapon_usage						= 0												;boolean
+
 	;--------------------------------------------------------------------------
 	; Entity Conditions
 	;--------------------------------------------------------------------------
@@ -148,7 +146,7 @@
 	radiation_v							= 0.00001										;скорость уменьшения радиации [0...1]
 	satiety_power_v						= 0.005											;увеличение силы при уменьшении сытости [0...1]
 	satiety_health_v					= 0.001											;увеличение здоровья при уменьшении сытости [0...1]
-	satiety_critical					= -1.0											;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
+
 	radiation_health_v					= 0.0											;уменьшение здоровья при воздействии радиации [0...1]
 	morale_v							= 0.01											;скорость восстановления морали [0...1]
 	health_hit_part						= 1.0											;процент хита, уходящий на отнимание здоровья [0...1]
@@ -482,11 +480,13 @@
 	spec_rank							= weak
 	community							= bloodsucker
 
-
-
 	panic_threshold						= 0.5
-	immunities_sect						= bloodsucker_immunities_weak
+
 	attack_params						= bloodsucker_attack_params_weak
+
+
+	immunities_sect						= bloodsucker_immunities_weak
+
 
 [bloodsucker_immunities_weak]
 	burn_immunity						= 1.0
@@ -528,11 +528,13 @@
 	spec_rank							= normal
 	community							= bloodsucker
 
-
-
 	panic_threshold						= 0.2
-	immunities_sect						= bloodsucker_immunities_normal
+
 	attack_params						= bloodsucker_attack_params_normal
+
+
+	immunities_sect						= bloodsucker_immunities_normal
+
 
 [bloodsucker_immunities_normal]
 	burn_immunity						= 1.0
@@ -577,13 +579,14 @@
 	spec_rank							= strong
 	community							= bloodsucker
 
+	panic_threshold						= 0.05
 
+	attack_params						= bloodsucker_attack_params_strong
 
 
 	Predator_Visual						= monsters\krovosos\krovosos_strong_xray
-	panic_threshold						= 0.05
 	immunities_sect						= bloodsucker_immunities_strong
-	attack_params						= bloodsucker_attack_params_strong
+
 
 [bloodsucker_immunities_strong]
 	burn_immunity						= 1.0
@@ -630,9 +633,6 @@
 
 	species								= arena_monstr
 
-
-
-
 	panic_threshold						= 0.05
 
 [bloodsucker_mil]:bloodsucker_strong
@@ -640,9 +640,6 @@
 
 	visual								= monsters\krovosos\krovosos
 	icon								= ui_npc_monster_krovosos
-
-
-
 
 	panic_threshold						= 0.05
 
@@ -654,9 +651,9 @@
 
 	species								= arena_monstr
 
-
-
 	panic_threshold						= 0.05
+
+
 	immunities_sect						= bloodsucker_immunities_arena
 	custom_data							= scripts\arena_mob_1.ltx
 

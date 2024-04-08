@@ -55,44 +55,75 @@
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						= 0.0,  0.9,  0.0
-	ph_box0_size						= 0.35, 0.9,  0.35
-	ph_box1_center						= 0.0,  0.6,  0.0
-	ph_box1_size						= 0.40, 0.6,  0.40
+	ph_box0_center						= 0.0,  0.9, 0.0
+	ph_box0_size						= 0.35, 0.9, 0.35
+	ph_box1_center						= 0.0,  0.6, 0.0
+	ph_box1_size						= 0.4,  0.6, 0.4
+
+	ph_crash_speed_min					= 10.0
+	ph_crash_speed_max					= 30.0
+	ph_mass								= 20.0
+	ph_collision_damage_factor			= 0.1
+
+	destroyed_vis_name					= physics\dead_body\skelet_crash_monster
+
+	ph_skeleton_airr_lin_factor			= -0.4
+	ph_skeleton_airr_ang_factor			= -0.2
+	ph_skeleton_hinger_factor1			= 1.0
+	ph_skeleton_ddelay					= 5.0												;время изменения значения трения в суставе с момента создания шелла, сек
+	ph_skel_fatal_impulse_factor		= 2.0
+	ph_after_death_velocity_factor		= 0.75
+	ph_skel_shot_up_factor				= 0.25
+
+	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
+	ef_creature_type					= 2
+	ef_weapon_type						= 2
+	ef_detector_type					= 1
+	panic_threshold						= 0.0
+
+	;--------------------------------------------------------------------------
+	; Movement::Velocities & Acceleration
+	;--------------------------------------------------------------------------
+	;	speed factors		| linear | angular_real | angular_path | min | max
+	;--------------------------------------------------------------------------
+	Velocity_Stand			= 0.0,			3.5,			3.5,	1.0,	1.0
+	Velocity_WalkFwdNormal	= 1.0,			7.5,			7.5,	0.02,	1.8
+	Velocity_RunFwdNormal	= 5.0,			3.5,			3.5,	0.3,	1.0
+	Velocity_WalkFwdDamaged	= 1.0,			4.5,			4.5,	0.2,	1.8
+	Velocity_RunFwdDamaged	= 3.0,			3.0,			3.0,	0.5,	1.0
+	Velocity_Drag			= 1.0,			3.0,			3.0,	1.0,	1.0
+	Velocity_Steal			= 1.5,			3.0,			3.0,	1.0,	1.0
+
+	;acceleration
+	Accel_Generic						= 1.5
+	Accel_Calm							= 2.5
+	Accel_Aggressive					= 7.5
+
+	;--------------------------------------------------------------------------
+	; Attack parameters
+	;--------------------------------------------------------------------------
+	attack_effector						= small_monster_attack_effector
+	attack_params						= m_tushkano_attack_params
+
+	MinAttackDist						= 1.2
+	MaxAttackDist						= 1.8
+
+	hit_type							= wound												;тип атаки
+
+	as_min_dist							= 0.25
+	as_step								= 0.25
 
 
 
-;---EVALUATION FUNCTIONS----------------------------------------------
-ef_creature_type	 = 2							; option for evaluation functions
-ef_weapon_type		 = 2
-ef_detector_type	 = 1
-panic_threshold		= 0.0
+
+
 
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
 bone_fire			 = bip01_head				; bone name
 weapon_usage		 = 0						; boolean
-
-
-
-
-
-ph_crash_speed_min			= 10
-ph_crash_speed_max			= 30
-ph_collision_damage_factor	= 0.1
-ph_mass 		     = 20
-
-destroyed_vis_name	 = physics\dead_body\skelet_crash_monster
-
-;---------------------------------------------------------------------
-ph_skeleton_airr_lin_factor   = -0.4
-ph_skeleton_airr_ang_factor   = -0.2
-ph_skeleton_hinger_factor1    = 1.0
-ph_skeleton_ddelay	      = 5.0
-ph_skel_fatal_impulse_factor  = 2.0
-ph_after_death_velocity_factor= 0.75
-ph_skel_shot_up_factor        = 0.25
-;---------------------------------------------------------------------
 
 SoundThreshold		 = 0.06             ; range [0..1]
 
@@ -101,35 +132,9 @@ max_hear_dist		 = 50
 hit_power			 = 1;
 
 ImpulseMin			 = 20.0
-ImpulseMax			 = 35.0 
-
-; speed factors			linear | angular_real | angular_path | min |  max
-Velocity_Stand			= 0,		3.5,			3.5,		1,		1
-Velocity_WalkFwdNormal	= 1.0,		7.5,			7.5,		0.02,	1.8	
-Velocity_RunFwdNormal	= 5.0,		3.5,			3.5,		0.3,	1	
-Velocity_WalkFwdDamaged	= 1.0,		4.5,			4.5,		0.2,	1.8	
-Velocity_RunFwdDamaged	= 3.0,  	3.0,			3.0,		0.5,	1
-Velocity_Drag			= 1.0,		3.0,			3.0,		1,		1
-Velocity_Steal			= 1.5,		3.0,			3.0,		1,		1
-
-; acceleration
-Accel_Generic			= 1.5
-Accel_Calm				= 2.5
-Accel_Aggressive		= 7.5
-
-;attack parameters
-MinAttackDist		= 1.2	;0.5
-MaxAttackDist		= 1.8	;3.8
-
-as_min_dist				= 0.25
-as_step					= 0.25
-
-
-
-
+ImpulseMax			 = 35.0
 
 distance_to_corpse	= 1.2		; фшёЄ. фю ЄЁєяр, яЁш ъюЄюЁющ юэ яхЁхїюфшЄ т ёюёЄю эшх хфv
-
 
 eye_fov				 = 110	;140
 eye_range			 = 30	;50	;40;
@@ -146,16 +151,14 @@ velocity_factor		     	= 0.5
 luminocity_factor			= 0.5 				; фактор освещения (только для Актёра)
 transparency_threshold		= 0.25
 
-hit_type = wound
 
-;entity condition
 
 ; entity condition
 satiety_v 		= 0.00001				;0.01			;скорость уменьшения сытости со временем
 radiation_v 		= 0.00001		;0.004			;скорость уменьшения радиации
 satiety_power_v 	= 0.005		;0.01			;увеличение силы при уменьшении сытости 
 satiety_health_v 	= 0.0001	;0.03			;увеличение здоровья при уменьшении сытости 
-satiety_critical 	= -1.0		;0.25			;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
+
 radiation_health_v 	= 0.01	;0.006			;уменьшение здоровья при воздействии радиации
 morale_v		= 0.01					;скорость восстановления морали
 health_hit_part 	= 1.0		;0.8			;процент хита, уходящий на отнимание здоровья
@@ -218,12 +221,9 @@ DamagedThreshold		= 0.4
 critical_wound_threshold		= -1
 critical_wound_decrease_quant	= 0.
 
-squad_attack_algorithm	= 1
-attack_effector			= small_monster_attack_effector
-
 LegsCount				= 2
 
-attack_params			= m_tushkano_attack_params
+
 step_params				= m_tushkano_step_params
 damage					= m_tushkano_damage
 

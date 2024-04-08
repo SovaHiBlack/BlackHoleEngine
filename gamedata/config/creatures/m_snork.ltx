@@ -55,78 +55,76 @@
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						= 0.0,  0.9,  0.0
-	ph_box0_size						= 0.35, 0.9,  0.35
-	ph_box1_center						= 0.0,  0.6,  0.0
-	ph_box1_size						= 0.40, 0.6,  0.40
+	ph_box0_center						= 0.0,  0.9, 0.0
+	ph_box0_size						= 0.35, 0.9, 0.35
+	ph_box1_center						= 0.0,  0.6, 0.0
+	ph_box1_size						= 0.4,  0.6, 0.4
+
+	ph_crash_speed_min					= 100.0
+	ph_crash_speed_max					= 300.0
+	ph_mass								= 70.0
+	ph_collision_damage_factor			= 0.1
+
+	destroyed_vis_name					= physics\dead_body\trupik_crash
+
+	ph_skeleton_airr_lin_factor			= -0.4
+	ph_skeleton_airr_ang_factor			= -0.2
+	ph_skeleton_hinger_factor1			= 1.0
+	ph_skeleton_ddelay					= 5.0												;время изменения значения трения в суставе с момента создания шелла, сек
+	ph_skel_fatal_impulse_factor		= 2.0
+	ph_after_death_velocity_factor		= 0.75
+	ph_skel_shot_up_factor				= 0.25
+
+	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
+	ef_creature_type					= 11
+	ef_weapon_type						= 2
+	ef_detector_type					= 1
+	panic_threshold						= 0.1
+
+	;--------------------------------------------------------------------------
+	; Movement::Velocities & Acceleration
+	;--------------------------------------------------------------------------
+	;	speed factors		| linear | angular_real | angular_path | min | max
+	;--------------------------------------------------------------------------
+	Velocity_Stand			= 0.0,			2.4,			2.4,	1.0,	1.0
+	Velocity_WalkFwdNormal	= 1.05,			1.0,			1.0,	0.02,	2.0
+	Velocity_WalkFwdDamaged	= 0.9,			1.0,			1.0,	0.02,	2.0
+	Velocity_RunFwdNormal	= 3.2,			3.5,			3.5,	0.4,	1.0
+	Velocity_RunFwdDamaged	= 1.7,			2.0,			2.0,	0.2,	1.0
+	Velocity_Drag			= 1.0,			1.0,			1.0,	1.0,	1.0
+	Velocity_Steal			= 1.5,			3.0,			3.0,	1.0,	1.0
+	Velocity_JumpGround		= 9.0,			3.0,			0.01,	0.4,	1.0
+	Velocity_Jump_Stand		= 9.0,			3.0,			0.01,	0.4,	1.0
+
+	;acceleration
+	Accel_Generic						= 1.5
+	Accel_Calm							= 2.5
+	Accel_Aggressive					= 12.0
+
+	;--------------------------------------------------------------------------
+	; Attack parameters
+	;--------------------------------------------------------------------------
+	attack_effector						= m_snork_attack_effector
+
+	MinAttackDist						= 1.9
+	MaxAttackDist						= 2.9
+
+	hit_type							= wound												;тип атаки
+
+	as_min_dist							= 1.5
+	as_step								= 0.4
 
 
 
 
 
-;-----------------------------------------------------------------------------------
-
-ef_creature_type		= 11						; option for evaluation functions
-ef_weapon_type			= 2
-ef_detector_type		= 1
-panic_threshold		= 0.1
 
 bone_torso				= bip01_spine1 			; bone name
 bone_head				= bip01_head				; bone name
 bone_fire				= bip01_head				; bone name
 weapon_usage			= 0						; boolean
-
-;---------------------------------------------------------------------
-; Physics
-;---------------------------------------------------------------------
-
-
-
-
-ph_crash_speed_min			= 100
-ph_crash_speed_max			= 300
-ph_collision_damage_factor	= 0.1
-ph_mass 				= 70
-
-destroyed_vis_name	 = physics\Dead_Body\trupik_crash
-
-;---------------------------------------------------------------------
-ph_skeleton_airr_lin_factor   = -0.4
-ph_skeleton_airr_ang_factor   = -0.2
-ph_skeleton_hinger_factor1    = 1.0
-ph_skeleton_ddelay	      = 5.0
-ph_skel_fatal_impulse_factor  = 2.0
-ph_after_death_velocity_factor= 0.75
-ph_skel_shot_up_factor        = 0.25
-;---------------------------------------------------------------------
-
-;----------------------------------------------------------------------------
-; Movement::Velocities & Acceleration
-;----------------------------------------------------------------------------
-; speed factors			linear | angular_real | angular_path | min	 |  max
-Velocity_Stand			= 0,		2.4,			2.4,		1,		1
-Velocity_WalkFwdNormal	= 1.05,		1.0,			1.0,		0.02,	2.0
-Velocity_WalkFwdDamaged	= 0.9,		1.0,			1.0,		0.02,	2.0			
-Velocity_RunFwdNormal	= 3.2,		3.5,			3.5,		0.4,	1	
-Velocity_RunFwdDamaged	= 1.7,		2.0,			2.0,		0.2,	1
-Velocity_Drag			= 1.0,		1.0,			1.0,		1,		1
-Velocity_Steal			= 1.5,		3.0,			3.0,		1,		1
-Velocity_JumpGround		= 9.0,		3.0,			0.01,		0.4,	1
-Velocity_Jump_Stand     = 9.0,		3.0,			0.01,		0.4,	1
-
-; acceleration
-Accel_Generic			= 1.5
-Accel_Calm				= 2.5
-Accel_Aggressive		= 12.0
-
-;--------------------------------------------------------------------------
-; Attack parameters
-;--------------------------------------------------------------------------
-MinAttackDist			= 1.9	;0.5
-MaxAttackDist			= 2.9	;3.8
-as_min_dist				= 1.5
-as_step					= 0.4
-hit_type				= wound				; type of attack
 
 ;-------------------------------------------------------------------------
 ; Entity Conditions
@@ -135,7 +133,6 @@ satiety_v 				= 0.005			;скорость уменьшения сытости со временем
 radiation_v 			= 0.00001		;0.004				;скорость уменьшения радиации
 satiety_power_v 		= 0.005		;0.01					;увеличение силы при уменьшении сытости 
 satiety_health_v 		= 0.0001	;0.03						;увеличение здоровья при уменьшении сытости 
-satiety_critical 		= -1.0		;0.25						;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
 radiation_health_v 		= 0.01	;0.006						;уменьшение здоровья при воздействии радиации
 morale_v				= 0.01								;скорость восстановления морали
 health_hit_part 		= 1		;0.8					;процент хита, уходящий на отнимание здоровья
@@ -231,7 +228,7 @@ transparency_threshold		= 0.25
 ;-------------------------------------------------------------------------
 ; Other Stuff (refactoring needed)
 ;-------------------------------------------------------------------------
-attack_effector			= m_snork_attack_effector
+
 
 step_params				= m_snork_step_params
 damage					= m_snork_damage
@@ -336,12 +333,13 @@ fire_wound_immunity		= 0.18
 	spec_rank							= weak
 	community							= snork
 
+	panic_threshold						= 0.5
 
+	attack_params						= snork_attack_params_weak
 
-panic_threshold		= 0.5
 
 immunities_sect		= snork_immunities_weak
-attack_params		= snork_attack_params_weak
+
 
 [snork_immunities_weak]
 burn_immunity			= 0.4								;коэффициенты иммунитета 
@@ -377,13 +375,13 @@ stand_attack_2_1 =	  	0.30,		0.50,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6,
 	spec_rank							= normal
 	community							= snork
 
+	panic_threshold						= 0.2
+
+	attack_params						= snork_attack_params_normal
 
 
-
-
-panic_threshold		= 0.2
 immunities_sect		= snork_immunities_normal
-attack_params		= snork_attack_params_normal
+
 
 [snork_immunities_normal]
 burn_immunity			= 0.4								;коэффициенты иммунитета
@@ -419,13 +417,13 @@ stand_attack_2_1 =	  	0.30,		0.70,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6,
 	spec_rank							= strong
 	community							= snork
 
+	panic_threshold						= 0.05
+
+	attack_params						= snork_attack_params_strong
 
 
-
-
-panic_threshold		= 0.05
 immunities_sect		= snork_immunities_strong
-attack_params		= snork_attack_params_strong
+
 
 [snork_immunities_strong]
 burn_immunity			= 0.4								;коэффициенты иммунитета 
@@ -466,20 +464,14 @@ stand_attack_2_1 =	  	0.30,		1.00,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6,
 [aes_snork]:snork_strong
 	$spawn								= "monsters\snorks\snork_aes"						;option for Level Editor
 
-
-panic_threshold		= 0.0
-
-;=======================================================================================
-
-
+	panic_threshold						= 0.0
 
 [snork_arena]:snork_strong
 	$spawn								= "monsters\arena\snork_arena"						;option for Level Editor
 
 	species								= arena_monstr
 
-
-panic_threshold		= 0.05
+	panic_threshold						= 0.05
 
 [snork_indoor]:snork_weak
 	$spawn								= "monsters\snorks\snork_indoor"					;option for Level Editor
@@ -502,9 +494,9 @@ jump_max_angle				= 0.4
 
 	monster_type						= outdoor
 
+	panic_threshold						= 0.05
 
 
-panic_threshold		= 0.05
 
 ; jump parameters
 
@@ -520,10 +512,10 @@ jump_max_angle				= 0.8
 
 	species								= arena_monstr
 
+	panic_threshold						= 0.05
 
 
 
-panic_threshold		= 0.05
 custom_data = scripts\arena_mob_1.ltx
 
 [arena_snork_2]:snork_strong
@@ -531,9 +523,9 @@ custom_data = scripts\arena_mob_1.ltx
 
 	species								= arena_monstr
 
+	panic_threshold						= 0.05
 
 
-panic_threshold		= 0.05
 custom_data = scripts\arena_mob_2.ltx
 
 [arena_snork_3]:snork_strong
@@ -541,8 +533,8 @@ custom_data = scripts\arena_mob_2.ltx
 
 	species								= arena_monstr
 
+	panic_threshold						= 0.05
 
 
 
-panic_threshold		= 0.05
 custom_data = scripts\arena_mob_3.ltx

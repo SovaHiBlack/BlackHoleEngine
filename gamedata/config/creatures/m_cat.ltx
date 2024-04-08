@@ -54,49 +54,81 @@
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						= 0.0,  0.3,  0.0
-	ph_box0_size						= 0.30, 0.3,  0.30
-	ph_box1_center						= 0.0,  0.3,  0.0
-	ph_box1_size						= 0.30, 0.3,  0.30
+	ph_box0_center						= 0.0, 0.3, 0.0
+	ph_box0_size						= 0.3, 0.3, 0.3
+	ph_box1_center						= 0.0, 0.3, 0.0
+	ph_box1_size						= 0.3, 0.3, 0.3
 
-ef_creature_type	 = 2				; option for evaluation functions
-ef_weapon_type		 = 2
-ef_detector_type			 = 1
+	ph_crash_speed_min					= 10.0
+	ph_crash_speed_max					= 30.0
+	ph_mass								= 50.0
+	ph_collision_damage_factor			= 0.1
 
-panic_threshold		= 0.02
+	destroyed_vis_name					= physics\dead_body\skelet_crash_monster
+
+	ph_skeleton_airr_lin_factor			= -0.4
+	ph_skeleton_airr_ang_factor			= -0.2
+	ph_skeleton_hinger_factor1			= 1.0
+	ph_skeleton_ddelay					= 5.0												;âðåìÿ èçìåíåíèÿ çíà÷åíèÿ òðåíèÿ â ñóñòàâå ñ ìîìåíòà ñîçäàíèÿ øåëëà, ñåê
+	ph_skel_fatal_impulse_factor		= 2.0
+	ph_after_death_velocity_factor		= 0.75
+	ph_skel_shot_up_factor				= 0.25
+
+	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
+	ef_creature_type					= 2
+	ef_weapon_type						= 2
+	ef_detector_type					= 1
+	panic_threshold						= 0.02
+
+	;--------------------------------------------------------------------------
+	; Movement::Velocities & Acceleration
+	;--------------------------------------------------------------------------
+	;	speed factors		| linear | angular_real | angular_path | min | max
+	;--------------------------------------------------------------------------
+	Velocity_Stand			= 0.0,			3.0,			3.0,	1.0,	1.0
+	Velocity_WalkFwdNormal	= 1.2,			1.5,			1.5,	0.2,	2.0
+	Velocity_WalkFwdDamaged	= 1.2,			2.14,			2.14,	0.2,	2.0
+	Velocity_RunFwdNormal	= 7.5,			2.5,			2.5,	0.2,	1.0
+	Velocity_RunFwdDamaged	= 4.5,			3.0,			3.0,	0.2,	1.0
+	Velocity_Drag			= 1.5,			2.14,			2.14,	1.0,	1.0
+	Velocity_Steal			= 1.3,			2.14,			2.14,	1.0,	1.0
+
+	;acceleration
+	Accel_Generic						= 1.5
+	Accel_Calm							= 1.5
+	Accel_Aggressive					= 4.5
+
+	;--------------------------------------------------------------------------
+	; Attack parameters
+	;--------------------------------------------------------------------------
+	attack_effector						= m_cat_attack_effector
+	attack_params						= m_cat_attack_params
+
+	MinAttackDist						= 1.4
+	MaxAttackDist						= 2.0
+
+	hit_type							= strike											;òèï àòàêè
+
+	as_min_dist							= 0.3
+	as_step								= 0.4
+
+
+
+
 
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
 bone_fire			 = bip01_head				; bone name
 weapon_usage		 = 0						; boolean
 
-;---------------------------------------------------------------------
-; Physics
-;---------------------------------------------------------------------
 
-
-
-
-ph_crash_speed_min			= 10
-ph_crash_speed_max			= 30
-ph_collision_damage_factor	= 0.1
-ph_mass 		     = 50						; also it's the food
 
 satiety_threshold		= 0.5							; below this value monster fill hunger
 critical_wound_threshold		= 0.4
 critical_wound_decrease_quant	= 0.
 
-destroyed_vis_name	 = physics\dead_body\skelet_crash_monster
-
-;---------------------------------------------------------------------
-ph_skeleton_airr_lin_factor   = -0.4
-ph_skeleton_airr_ang_factor   = -0.2
-ph_skeleton_hinger_factor1    = 1.0
-ph_skeleton_ddelay	      = 5.0
-ph_skel_fatal_impulse_factor  = 2.0
-ph_after_death_velocity_factor= 0.75
-ph_skel_shot_up_factor        = 0.25
-;---------------------------------------------------------------------
 
 SoundThreshold		 = 0.06						; range [0..1]
 
@@ -120,26 +152,14 @@ max_hear_dist		 = 60
 
 
 
-; speed factors			linear | angular_real | angular_path | min |  max
-Velocity_Stand			= 0,		3.0,			3.0,		1,		1		;0,	1.79,	1,		1
-Velocity_WalkFwdNormal	= 1.2,		1.5,			1.5,		0.2,	2.0
-Velocity_WalkFwdDamaged	= 1.2,		2.14,			2.14,		0.2,	2.0	
-Velocity_RunFwdNormal	= 7.5,		2.5,			2.5,		0.2,	1	
-Velocity_RunFwdDamaged	= 4.5,  	3.0,			3.0,		0.2,	1
-Velocity_Drag			= 1.5,		2.14,			2.14,		1,		1
-Velocity_Steal			= 1.3,		2.14,			2.14,		1,		1
 
-; acceleration
-Accel_Generic			= 1.5
-Accel_Calm			= 1.5
-Accel_Aggressive		= 4.5
 
 ;attack parameters
-MinAttackDist		= 1.4
-MaxAttackDist		= 2.0
 
-as_min_dist				= 0.3
-as_step					= 0.4
+
+
+
+
 
 
 distance_to_corpse	= 1.5		; ôø¸ª. ôþ ª¨ºÿð, ÿ¨ø úþªþ¨þù þý ÿõ¨õ¿þôøª ò ¸þ¸ªþ ýøõ õôv
@@ -156,15 +176,13 @@ selector_approach		=      20.0,            1.0,                1000.0,          
 ;							  fSearchRange,fOptEnemyDistance,fOptEnemyDistanceWeight,fMinEnemyDistance,fMinEnemyDistanceWeight,fMaxEnemyDistance,fMaxEnemyDistanceWeight
 selector_walk_around	=      20.0,            6.0,                 1000.0,             4.0,               5000.0,					8.0,				5000.0,      
 
-hit_type = strike
-
 ;entity condition
 
 satiety_v 						= 0.01				;¸úþ¨þ¸ª¹ ºüõý¹°õýø  ¸vªþ¸ªø ¸þ ò¨õüõýõü
 radiation_v 					= 0.00001			;¸úþ¨þ¸ª¹ ºüõý¹°õýø  ¨ðôøð¡øø
 satiety_power_v 				= 0.005				;ºòõûø¢õýøõ ¸øûv ÿ¨ø ºüõý¹°õýøø ¸vªþ¸ªø 
 satiety_health_v 				= 0.001				;ºòõûø¢õýøõ ÷ôþ¨þò¹  ÿ¨ø ºüõý¹°õýøø ¸vªþ¸ªø 
-satiety_critical 				= -1.0				;ú¨øªø¢õ¸úþõ ÷ýð¢õýø  ¸vªþ¸ªø (ò ÿ¨þ¡õýªð¿ þª 0..1) úþóôð ÷ôþ¨þò¹õ ýð¢øðýðõª ºüõý¹°ðª¹¸ 
+
 radiation_health_v 				= 0.01				;ºüõý¹°õýøõ ÷ôþ¨þò¹  ÿ¨ø òþ÷ôõù¸ªòøø ¨ðôøð¡øø
 morale_v						= 0.01				;¸úþ¨þ¸ª¹ òþ¸¸ªðýþòûõýø  üþ¨ðûø
 health_hit_part 				= 1.0				;ÿ¨þ¡õýª ¿øªð, º¿þô øù ýð þªýøüðýøõ ÷ôþ¨þò¹ 
@@ -240,18 +258,13 @@ distant_idle_sound_range	= 100.0
 DamagedThreshold		= 0.2
 damage					= m_cat_damage
 
-squad_attack_algorithm	= 1
 
-attack_effector			= m_cat_attack_effector
-
-attack_params			= m_cat_attack_params
 step_params				= m_cat_step_params
 
 LegsCount				= 4
 
 
 [m_cat_attack_params]
-
 ;---------------------------------------------------------------------------------------------------------------------------------------------
 ;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
 ;---------------------------------------------------------------------------------------------------------------------------------------------

@@ -58,16 +58,73 @@
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						= 0.0,  0.2,  0.0
-	ph_box0_size						= 0.5, 0.4,  0.5
-	ph_box1_center						= 0.0,  0.2,  0.0
-	ph_box1_size						= 0.50, 0.4,  0.50
+	ph_box0_center						= 0.0, 0.2, 0.0
+	ph_box0_size						= 0.5, 0.4, 0.5
+	ph_box1_center						= 0.0, 0.2, 0.0
+	ph_box1_size						= 0.5, 0.4, 0.5
+
+	ph_crash_speed_min					= 100.0
+	ph_crash_speed_max					= 300.0
+	ph_mass								= 50.0
+	ph_collision_damage_factor			= 0.1
+
+	destroyed_vis_name					= physics\dead_body\skelet_crash_monster
+
+	ph_skeleton_airr_lin_factor			= -0.4
+	ph_skeleton_airr_ang_factor			= -0.2
+	ph_skeleton_hinger_factor1			= 1.0
+	ph_skeleton_ddelay					= 5.0												;время изменения значения трения в суставе с момента создания шелла, сек
+	ph_skel_fatal_impulse_factor		= 2.0
+	ph_after_death_velocity_factor		= 0.75
+	ph_skel_shot_up_factor				= 0.25
+
+	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
+	ef_creature_type					= 21
+	ef_weapon_type						= 3
+	ef_detector_type					= 1
+	panic_threshold						= 0.1
+
+	;--------------------------------------------------------------------------
+	; Movement::Velocities & Acceleration
+	;--------------------------------------------------------------------------
+	;	speed factors		| linear | angular_real | angular_path | min | max
+	;--------------------------------------------------------------------------
+	Velocity_Stand			= 0.0,			1.4,			1.4,	1.0,	1.0
+	Velocity_RunFwdNormal	= 6.6,			2.0,			2.0,	0.05,	1.0
+	Velocity_RunFwdDamaged	= 4.3,			2.0,			2.0,	0.5,	1.0
+	Velocity_WalkFwdNormal	= 5.0,			2.0,			2.0,	0.1,	1.0
+	Velocity_WalkFwdDamaged	= 2.2,			3.0,			3.0,	0.1,	2.2
+	Velocity_Drag			= 0.6,			0.8,			0.8,	1.0,	1.0
+	Velocity_Steal			= 1.6,			3.0,			3.0,	1.0,	1.0
+
+	;acceleration
+	Accel_Generic						= 1.5
+	Accel_Calm							= 2.5
+	Accel_Aggressive					= 14.5
+
+	;--------------------------------------------------------------------------
+	; Attack parameters
+	;--------------------------------------------------------------------------
+	attack_effector						= m_pseudodog_attack_effector
+	attack_params						= m_pseudodog_attack_params
+
+	MinAttackDist						= 1.6
+	MaxAttackDist						= 2.0
+
+	hit_type							= wound												;тип атаки
+
+	as_min_dist							= 1.0
+	as_step								= 0.2
+
+	Melee_Rotation_Factor				= 2.6
 
 
-ef_creature_type	 = 21							; option for evaluation functions
-ef_weapon_type		 = 3
-ef_detector_type	 = 1
-panic_threshold		= 0.1
+
+
+
+
 
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
@@ -75,62 +132,8 @@ bone_fire			 = bip01_head				; bone name
 
 weapon_usage		 = 0						; boolean
 
-
-;---------------------------------------------------------------------
-; Physics
-;---------------------------------------------------------------------
-
-
-
-
-ph_crash_speed_min			= 100
-ph_crash_speed_max			= 300
-ph_collision_damage_factor	= 0.1
-ph_mass 		     = 50
-
-destroyed_vis_name	 = physics\dead_body\skelet_crash_monster
-
-;---------------------------------------------------------------------
-ph_skeleton_airr_lin_factor   = -0.4
-ph_skeleton_airr_ang_factor   = -0.2
-ph_skeleton_hinger_factor1    = 1.0
-ph_skeleton_ddelay	      = 5.0
-ph_skel_fatal_impulse_factor  = 2.0
-ph_after_death_velocity_factor= 0.75
-ph_skel_shot_up_factor        = 0.25
-;---------------------------------------------------------------------
-
-;----------------------------------------------------------------------------
-; Movement::Velocities & Acceleration
-;----------------------------------------------------------------------------
-; speed factors			linear | angular_real | angular_path | min |  max
-Velocity_Stand			= 0,		1.4,			1.4,		1,		1
-Velocity_RunFwdNormal	= 6.6,		2.0,			2.0,		0.05,	1.0	
-Velocity_RunFwdDamaged	= 4.3,  	2.0,			2.0,		0.5,	1.0
-Velocity_WalkFwdNormal	= 5.0,		2.0,			2.0,		0.1,	1.0
-Velocity_WalkFwdDamaged	= 2.2,		3.0,			3.0,		0.1,	2.2	
-Velocity_Drag			= 0.6,		0.8,			0.8,		1,		1
-Velocity_Steal			= 1.6,		3.0,			3.0,		1,		1
-
-; acceleration
-Accel_Generic			= 1.5
-Accel_Calm				= 2.5
-Accel_Aggressive		= 14.5
-
-;--------------------------------------------------------------------------
-; Attack parameters
-;--------------------------------------------------------------------------
-MinAttackDist		= 1.6	
-MaxAttackDist		= 2.0
-
-as_min_dist				= 1.0
-as_step					= 0.2
-
 distance_to_corpse	= 1.8		; фшёЄ. фю ЄЁєяр, яЁш ъюЄюЁющ юэ яхЁхїюфшЄ т ёюёЄю эшх хфv
 
-hit_type = wound
-
-Melee_Rotation_Factor	= 2.6
 ;-------------------------------------------------------------------------
 ; Entity Conditions
 ;-------------------------------------------------------------------------
@@ -138,7 +141,7 @@ satiety_v 		= 0.0001				;0.01			;скорость уменьшения сытости со временем
 radiation_v 		= 0.00001		;0.004			;скорость уменьшения радиации
 satiety_power_v 	= 0.005		;0.01			;увеличение силы при уменьшении сытости 
 satiety_health_v 	= 0.00001	;0.03			;увеличение здоровья при уменьшении сытости 
-satiety_critical 	= -1.0		;0.25			;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
+
 radiation_health_v 	= 0.01	;0.006			;уменьшение здоровья при воздействии радиации
 morale_v		= 0.1					;скорость восстановления морали
 health_hit_part 	= 1.0		;0.8			;процент хита, уходящий на отнимание здоровья
@@ -247,12 +250,9 @@ DamagedThreshold		= 0.2
 critical_wound_threshold		= -1
 critical_wound_decrease_quant	= 0.
 
-squad_attack_algorithm	= 1
-
-attack_effector			= m_pseudodog_attack_effector
 damage					= m_pseudodog_damage
 
-attack_params			= m_pseudodog_attack_params
+
 step_params			= m_pseudodog_step_params
 
 LegsCount				= 4
@@ -353,13 +353,13 @@ bip01_head 			= 2.0, -1, 0.3, 10
 	spec_rank							= weak
 	community							= pseudodog
 
+	panic_threshold						= 0.5
 
+	attack_params						= pseudodog_attack_params_weak
 
-
-panic_threshold		= 0.5
 
 immunities_sect		= pseudodog_immunities_weak
-attack_params		= pseudodog_attack_params_weak
+
 
 [pseudodog_immunities_weak]
 burn_immunity			= 1.0
@@ -391,12 +391,12 @@ run_jamp_1		=		0.55,		0.15,		    220,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 	spec_rank							= normal
 	community							= pseudodog
 
+	panic_threshold						= 0.2
 
-
-panic_threshold		= 0.2
+	attack_params						= pseudodog_attack_params_normal
 
 immunities_sect		= pseudodog_immunities_normal
-attack_params		= pseudodog_attack_params_normal
+
 
 [pseudodog_immunities_normal]
 burn_immunity			= 1.0
@@ -433,13 +433,13 @@ run_jamp_1		=		0.55,		0.25,		    320,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 	spec_rank							= strong
 	community							= pseudodog
 
+	panic_threshold						= 0.05
+
+	attack_params						= pseudodog_attack_params_strong
 
 
-
-
-panic_threshold		= 0.05	
 immunities_sect		= pseudodog_immunities_strong
-attack_params		= pseudodog_attack_params_strong
+
 
 [pseudodog_immunities_strong]
 burn_immunity			= 1.0
@@ -474,8 +474,7 @@ run_jamp_1		=		0.55,		0.35,		    420,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 
 	species								= arena_monstr
 
-
-panic_threshold		= 0.05
+	panic_threshold						= 0.05
 
 ;---------------------------------------------------------------------------------
 ;-- PSY DOG
@@ -577,8 +576,7 @@ Time_Phantom_Appear = 5000
 
 	species								= arena_monstr
 
-
-panic_threshold		= 0.05
+	panic_threshold						= 0.05
 
 custom_data = scripts\arena_mob_1.ltx
 
@@ -590,8 +588,8 @@ custom_data = scripts\arena_mob_1.ltx
 
 	species								= arena_monstr
 
+	panic_threshold						= 0.05
 
 
 
-panic_threshold		= 0.05
 custom_data = scripts\arena_mob_2.ltx

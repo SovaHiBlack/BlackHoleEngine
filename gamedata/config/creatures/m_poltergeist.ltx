@@ -55,16 +55,70 @@
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						= 0.0,  0.2,  0.0
-	ph_box0_size						= 0.50, 0.4,  0.50
-	ph_box1_center						= 0.0,  0.2,  0.0
-	ph_box1_size						= 0.50, 0.4,  0.50
+	ph_box0_center						= 0.0, 0.2, 0.0
+	ph_box0_size						= 0.5, 0.4, 0.5
+	ph_box1_center						= 0.0, 0.2, 0.0
+	ph_box1_size						= 0.5, 0.4, 0.5
 
+	ph_crash_speed_min					= 10.0
+	ph_crash_speed_max					= 30.0
+	ph_mass								= 80.0
+	ph_collision_damage_factor			= 0.1
 
-ef_creature_type	 = 5 	;10					; option for evaluation functions
-ef_weapon_type		 = 12	;3
-ef_detector_type	 = 1
-panic_threshold		= 0.1
+	destroyed_vis_name					= physics\dead_body\trupik_crash
+
+	ph_skeleton_airr_lin_factor			= -0.4
+	ph_skeleton_airr_ang_factor			= -0.2
+	ph_skeleton_hinger_factor1			= 1.0
+	ph_skeleton_ddelay					= 5.0												;время изменения значения трения в суставе с момента создания шелла, сек
+	ph_skel_fatal_impulse_factor		= 2.0
+	ph_after_death_velocity_factor		= 0.75
+	ph_skel_shot_up_factor				= 0.25
+
+	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
+	ef_creature_type					= 5
+	ef_weapon_type						= 12
+	ef_detector_type					= 1
+	panic_threshold						= 0.1
+
+	;--------------------------------------------------------------------------
+	; Movement::Velocities & Acceleration
+	;--------------------------------------------------------------------------
+	;	speed factors		| linear | angular_real | angular_path | min | max
+	;--------------------------------------------------------------------------
+	Velocity_Stand			= 0.0,			5.0,			5.0,	0.2,	0.5
+	Velocity_WalkFwdNormal	= 1.7,			2.0,			2.0,	0.2,	2.0
+	Velocity_WalkFwdDamaged	= 1.5,			3.0,			3.0,	0.8,	2.0
+	Velocity_RunFwdNormal	= 4.0,			3.0,			3.0,	0.4,	1.0
+	Velocity_RunFwdDamaged	= 2.5,			3.2,			3.2,	0.4,	1.0
+	Velocity_Drag			= 0.6,			3.0,			3.0,	1.0,	1.0
+	Velocity_Steal			= 1.5,			3.0,			3.0,	1.0,	1.0
+
+	;speed factors while invisible
+	Velocity_Invisible_Linear			= 5.0
+	Velocity_Invisible_Angular			= 3.5
+
+	;acceleration
+	Accel_Generic						= 1.5
+	Accel_Calm							= 2.5
+	Accel_Aggressive					= 3.0
+
+	;--------------------------------------------------------------------------
+	; Attack parameters
+	;--------------------------------------------------------------------------
+	attack_effector						= m_poltergeist_attack_effector
+	attack_params						= m_poltergeist_attack_params
+
+	MinAttackDist						= 0.5
+	MaxAttackDist						= 2.0
+
+	hit_type							= strike											;тип атаки
+
+	as_min_dist							= 0.1
+	as_step								= 0.3
+
 
 
 
@@ -76,69 +130,11 @@ weapon_usage		 = 0						; boolean
 
 type				= flamer
 
-;---------------------------------------------------------------------
-; Physics
-;---------------------------------------------------------------------
-
-
-
-
-ph_crash_speed_min			= 10
-ph_crash_speed_max			= 30
-ph_collision_damage_factor	= 0.1
-ph_mass 		     = 80						; also it's the food
-
-destroyed_vis_name	 = physics\Dead_Body\trupik_crash
-
-;---------------------------------------------------------------------
-ph_skeleton_airr_lin_factor   = -0.4
-ph_skeleton_airr_ang_factor   = -0.2
-ph_skeleton_hinger_factor1    = 1.0
-ph_skeleton_ddelay	      = 5.0
-ph_skel_fatal_impulse_factor  = 2.0
-ph_after_death_velocity_factor= 0.75
-ph_skel_shot_up_factor        = 0.25
-;---------------------------------------------------------------------
-
-
-;----------------------------------------------------------------------------
-; Movement::Velocities & Acceleration
-;----------------------------------------------------------------------------
-; speed factors			linear | angular_real | angular_path | min |  max
-Velocity_Stand			= 0,		5.0,			5.0,		0.2,	0.5
-Velocity_WalkFwdNormal	= 1.7,		2.0,			2.0,		0.2,	2.0
-Velocity_WalkFwdDamaged	= 1.5,		3.0,			3.0,		0.8,	2.0
-Velocity_RunFwdNormal	= 4.0,		3.0,			3.0,		0.4,	1.0
-Velocity_RunFwdDamaged	= 2.5,  	3.2,			3.2,		0.4,	1
-Velocity_Drag			= 0.6,		3.0,			3.0,		1,		1
-Velocity_Steal			= 1.5,		3.0,			3.0,		1,		1
-
-; Speed factors while invisible
-Velocity_Invisible_Linear		= 5.0
-Velocity_Invisible_Angular		= 3.5
-
-; acceleration
-Accel_Generic			= 1.5
-Accel_Calm				= 2.5
-Accel_Aggressive		= 3.0
-
-;--------------------------------------------------------------------------
-; Attack parameters
-;--------------------------------------------------------------------------
-;attack parameters
-MinAttackDist		= 0.5	;2.1
-MaxAttackDist		= 2.0
-
-as_min_dist				= 0.1
-as_step					= 0.3
-
 ;-------------------------------------------------------------------------
 ; Entity Conditions
 ;-------------------------------------------------------------------------
 
 distance_to_corpse	= 1.8
-
-hit_type = strike
 
 ;entity condition
 
@@ -146,7 +142,7 @@ satiety_v 			= 0.0001				;скорость уменьшения сытости со временем
 radiation_v 		= 0.00001				;скорость уменьшения радиации
 satiety_power_v 	= 0.005					;увеличение силы при уменьшении сытости
 satiety_health_v 	= 0.001					;увеличение здоровья при уменьшении сытости
-satiety_critical 	= -1.0					;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
+
 radiation_health_v 	= 0.0001				;уменьшение здоровья при воздействии радиации
 morale_v			= 0.1					;скорость восстановления морали
 health_hit_part 	= 1.0					;процент хита, уходящий на отнимание здоровья
@@ -236,10 +232,6 @@ Morale_Despondent_Threashold	= 0.5
 ;-------------------------------------------------------------------------
 DamagedThreshold		= 0.4
 
-squad_attack_algorithm	= 1
-attack_effector			= m_poltergeist_attack_effector
-
-attack_params			= m_poltergeist_attack_params
 step_params				= m_poltergeist_step_params
 
 anger_hunger_threshold	= 0.1

@@ -32,7 +32,8 @@ class CSE_ALifeItemWeapon;
 class CSE_ALifeSchedulable;
 class CGameGraph;
 
-namespace ALife {
+namespace ALife
+{
 	typedef u64	_CLASS_ID;									// Class ID
 	typedef u16	_OBJECT_ID;									// Object ID
 	typedef u64	_TIME_ID;									// Time  ID
@@ -82,7 +83,8 @@ namespace ALife {
 		eRelationTypeDummy = u32(-1),
 	};
 
-	enum EHitType {
+	enum EHitType
+	{
 		eHitTypeBurn = u32(0),
 		eHitTypeShock,
 		eHitTypeStrike,

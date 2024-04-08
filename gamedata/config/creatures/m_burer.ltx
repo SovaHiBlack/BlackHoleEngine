@@ -59,36 +59,40 @@
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						= 0.0,  0.7,  0.0
-	ph_box0_size						= 0.35, 0.7,  0.35
-	ph_box1_center						= 0.0,  0.6,  0.0
-	ph_box1_size						= 0.35, 0.6,  0.35
+	ph_box0_center						= 0.0,  0.7, 0.0
+	ph_box0_size						= 0.35, 0.7, 0.35
+	ph_box1_center						= 0.0,  0.6, 0.0
+	ph_box1_size						= 0.35, 0.6, 0.35
 
-
-
-	ph_crash_speed_min					= 10
-	ph_crash_speed_max					= 30
+	ph_crash_speed_min					= 10.0
+	ph_crash_speed_max					= 30.0
+	ph_mass								= 70.0
 	ph_collision_damage_factor			= 0.1
-	ph_mass								= 70
 
 	destroyed_vis_name					= physics\dead_body\skelet_crash_monster
 
-	;--------------------------------------------------------------------------
 	ph_skeleton_airr_lin_factor			= -0.4
 	ph_skeleton_airr_ang_factor			= -0.2
 	ph_skeleton_hinger_factor1			= 1.0
-	ph_skeleton_ddelay					= 5.0
+	ph_skeleton_ddelay					= 5.0												;время изменения значения трения в суставе с момента создания шелла, сек
 	ph_skel_fatal_impulse_factor		= 2.0
 	ph_after_death_velocity_factor		= 0.75
 	ph_skel_shot_up_factor				= 0.25
+
 	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
+	ef_creature_type					= 18
+	ef_weapon_type						= 12
+	ef_detector_type					= 1
+	panic_threshold						= 0.1
 
 	;--------------------------------------------------------------------------
 	; Movement::Velocities & Acceleration
 	;--------------------------------------------------------------------------
 	;	speed factors		| linear | angular_real | angular_path | min | max
 	;--------------------------------------------------------------------------
-	Velocity_Stand			= 0,			6.0,			6.0,	0.2,	0.5
+	Velocity_Stand			= 0.0,			6.0,			6.0,	0.2,	0.5
 	Velocity_RunFwdNormal	= 5.0,			2.5,			2.5,	0.2,	1.0
 	Velocity_RunFwdDamaged	= 3.5,			3.0,			3.0,	0.2,	1.0
 	Velocity_WalkFwdNormal	= 1.6,			3.0,			3.0,	0.02,	1.5
@@ -96,7 +100,7 @@
 	Velocity_Drag			= 1.0,			3.0,			3.0,	1.0,	1.0
 	Velocity_Steal			= 1.5,			3.0,			3.0,	1.0,	1.0
 
-	; acceleration
+	;acceleration
 	Accel_Generic						= 1.5
 	Accel_Calm							= 1.5
 	Accel_Aggressive					= 200
@@ -104,15 +108,24 @@
 	;--------------------------------------------------------------------------
 	; Attack parameters
 	;--------------------------------------------------------------------------
-	MinAttackDist						= 1.5
-	MaxAttackDist						= 2.5
-	as_min_dist							= 0.5
-	as_step								= 0.3
-
 	attack_effector						= m_burer_attack_effector
 	attack_params						= m_burer_attack_params
 
+	MinAttackDist						= 1.5
+	MaxAttackDist						= 2.5
+
+	hit_type							= wound												;тип атаки
+
+	as_min_dist							= 0.5
+	as_step								= 0.3
+
 	Melee_Rotation_Factor				= 1.8
+
+
+
+
+
+
 
 	;--------------------------------------------------------------------------
 	; Entity Conditions
@@ -121,7 +134,7 @@
 	radiation_v							= 0.00001					;скорость уменьшения радиации
 	satiety_power_v						= 0.001						;увеличение силы при уменьшении сытости
 	satiety_health_v					= 0.00007					;увеличение здоровья при уменьшении сытости
-	satiety_critical					= -1.0						;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
+
 	radiation_health_v					= 0.01						;уменьшение здоровья при воздействии радиации
 	morale_v							= 0.01						;скорость восстановления морали
 	health_hit_part						= 0.5						;процент хита, уходящий на отнимание здоровья
@@ -256,11 +269,6 @@
 	critical_wound_threshold			= -1
 	critical_wound_decrease_quant		= 0.0
 
-	ef_creature_type					= 18											;option for evaluation functions
-	ef_weapon_type						= 12
-	ef_detector_type					= 1
-	panic_threshold						= 0.1
-
 	bone_torso							= bip01_spine1 				;bone name
 	bone_head							= bip01_head				;bone name
 	bone_fire							= bip01_head				;bone name
@@ -270,8 +278,6 @@
 
 	;									fSearchRange|fOptEnemyDistance|fOptEnemyDistanceWeight|fMinEnemyDistance|fMinEnemyDistanceWeight|fMaxEnemyDistance|fMaxEnemyDistanceWeight
 	selector_approach					=  20.0,            1.0,                 1000.0,             0.0,               0.0,              1000.0,				10000.0,      
-
-	hit_type				= wound
 
 	DamagedThreshold		= 0.5
 

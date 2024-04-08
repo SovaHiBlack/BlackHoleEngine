@@ -51,10 +51,69 @@
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						= 0.0,  0.9,  0.0
-	ph_box0_size						= 0.35, 0.9,  0.35
-	ph_box1_center						= 0.0,  0.6,  0.0
-	ph_box1_size						= 0.40, 0.6,  0.40
+	ph_box0_center						= 0.0,  0.9, 0.0
+	ph_box0_size						= 0.35, 0.9, 0.35
+	ph_box1_center						= 0.0,  0.6, 0.0
+	ph_box1_size						= 0.4,  0.6, 0.4
+
+	ph_crash_speed_min					= 10.0
+	ph_crash_speed_max					= 30.0
+	ph_mass								= 80.0
+	ph_collision_damage_factor			= 0.1
+
+	destroyed_vis_name					= physics\dead_body\trupik_crash
+
+	ph_skeleton_airr_lin_factor			= -0.4
+	ph_skeleton_airr_ang_factor			= -0.2
+	ph_skeleton_hinger_factor1			= 1.0
+	ph_skeleton_ddelay					= 5.0												;время изменения значения трения в суставе с момента создания шелла, сек
+	ph_skel_fatal_impulse_factor		= 2.0
+	ph_after_death_velocity_factor		= 0.75
+	ph_skel_shot_up_factor				= 0.25
+
+	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
+	ef_creature_type					= 21
+	ef_weapon_type						= 4
+	ef_detector_type					= 1
+	panic_threshold						= 0.1
+
+	;--------------------------------------------------------------------------
+	; Movement::Velocities & Acceleration
+	;--------------------------------------------------------------------------
+	;	speed factors		| linear | angular_real | angular_path | min | max
+	;--------------------------------------------------------------------------
+	Velocity_Stand			= 0,			1.4,			1.4,	1.0,	1.0
+	Velocity_WalkFwdNormal	= 0.9,			2.5,			2.5,	0.02,	2.0
+	Velocity_RunFwdNormal	= 3.0,			3.5,			3.5,	0.4,	1.0
+	Velocity_WalkFwdDamaged	= 0.7,			3.0,			3.0,	0.2,	2.0
+	Velocity_RunFwdDamaged	= 5.0,			3.0,			3.0,	0.2,	1.0
+	Velocity_Drag			= 1.0,			3.0,			3.0,	1.0,	1.0
+	Velocity_Steal			= 1.5,			3.0,			3.0,	1.0,	1.0
+
+	;acceleration
+	Accel_Generic						= 1.5
+	Accel_Calm							= 2.5
+	Accel_Aggressive					= 7.5
+
+	;--------------------------------------------------------------------------
+	; Attack parameters
+	;--------------------------------------------------------------------------
+	attack_effector						= monster_attack_effector
+	attack_params						= m_fracture_attack_params
+
+	MinAttackDist						= 1.8
+	MaxAttackDist						= 2.4
+
+	hit_type							= wound												;тип атаки
+
+	as_min_dist							= 0.5
+	as_step								= 0.5
+
+
+
+
 
 
 satiety_threshold		= 0.5
@@ -63,37 +122,10 @@ jump_max_height = 1.0
 critical_wound_threshold		= -1
 critical_wound_decrease_quant	= 0.
 
-;---EVALUATION FUNCTIONS----------------------------------------------
-ef_creature_type	 = 21							; option for evaluation functions
-ef_weapon_type		 = 4
-ef_detector_type			 = 1
-panic_threshold		= 0.1
-
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
 bone_fire			 = bip01_head				; bone name
 weapon_usage		 = 0						; boolean
-
-
-
-
-
-ph_crash_speed_min			= 10
-ph_crash_speed_max			= 30
-ph_collision_damage_factor	= 0.1
-ph_mass 		     = 80
-
-destroyed_vis_name	 = physics\Dead_Body\trupik_crash
-
-;---------------------------------------------------------------------
-ph_skeleton_airr_lin_factor   = -0.4
-ph_skeleton_airr_ang_factor   = -0.2
-ph_skeleton_hinger_factor1    = 1.0
-ph_skeleton_ddelay	      = 5.0
-ph_skel_fatal_impulse_factor  = 2.0
-ph_after_death_velocity_factor= 0.75
-ph_skel_shot_up_factor        = 0.25
-;---------------------------------------------------------------------
 
 SoundThreshold		 = 0.06             ; range [0..1]
 
@@ -105,28 +137,6 @@ hit_power			 = 50.0;
 
 ImpulseMin			 = 500.0
 ImpulseMax			 = 550.0 
-
-; speed factors			linear | angular_real | angular_path | min |  max
-Velocity_Stand			= 0,		1.4,			1.4,		1,		1
-Velocity_WalkFwdNormal	= 0.9,		2.5,			2.5,		0.02,	2.0	
-Velocity_RunFwdNormal	= 3.0,		3.5,			3.5,		0.4,	1	
-Velocity_WalkFwdDamaged	= 0.7,		3.0,			3.0,		0.2,	2.0	
-Velocity_RunFwdDamaged	= 5.0,  	3.0,			3.0,		0.2,	1
-Velocity_Drag			= 1.0,		3.0,			3.0,		1,		1
-Velocity_Steal			= 1.5,		3.0,			3.0,		1,		1
-
-; acceleration
-Accel_Generic			= 1.5
-Accel_Calm			= 2.5
-Accel_Aggressive		= 7.5
-
-;attack parameters
-MinAttackDist		= 1.8	;0.5
-MaxAttackDist		= 2.4	;3.8
-
-as_min_dist				= 0.5
-as_step					= 0.5
-
 
 distance_to_corpse	= 1.2		; фшёЄ. фю ЄЁєяр, яЁш ъюЄюЁющ юэ яхЁхїюфшЄ т ёюёЄю эшх хфv
 DynamicObjectsCount	 = 32; количество видимых объектов, которые может обрабатывать монстр
@@ -141,16 +151,12 @@ velocity_factor		     	= 0.5
 luminocity_factor			= 1.5 				; фактор освещения (только для Актёра)
 transparency_threshold		= 0.25
 
-hit_type = wound
-
-;entity condition
-
 ; entity condition
 satiety_v 		= 0.00001				;0.01			;скорость уменьшения сытости со временем
 radiation_v 		= 0.00001		;0.004			;скорость уменьшения радиации
 satiety_power_v 	= 0.005		;0.01			;увеличение силы при уменьшении сытости 
 satiety_health_v 	= 0.0001	;0.03			;увеличение здоровья при уменьшении сытости 
-satiety_critical 	= -1.0		;0.25			;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
+
 radiation_health_v 	= 0.01	;0.006			;уменьшение здоровья при воздействии радиации
 morale_v		= 0.01					;скорость восстановления морали
 health_hit_part 	= 0.8		;0.8			;процент хита, уходящий на отнимание здоровья
@@ -209,12 +215,9 @@ distant_idle_sound_range	= 100.0
 
 DamagedThreshold		= 0.5
 
-squad_attack_algorithm	= 1
-attack_effector			= monster_attack_effector
-
 LegsCount				= 2
 
-attack_params			= m_fracture_attack_params
+
 step_params				= m_fracture_step_params
 damage					= m_Fracture_damage
 

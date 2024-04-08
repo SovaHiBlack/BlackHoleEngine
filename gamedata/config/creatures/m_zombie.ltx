@@ -54,18 +54,70 @@
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						= 0.0,  0.9,  0.0
-	ph_box0_size						= 0.35, 0.9,  0.35
-	ph_box1_center						= 0.0,  0.6,  0.0
-	ph_box1_size						= 0.40, 0.6,  0.40
+	ph_box0_center						= 0.0,  0.9, 0.0
+	ph_box0_size						= 0.35, 0.9, 0.35
+	ph_box1_center						= 0.0,  0.6, 0.0
+	ph_box1_size						= 0.4,  0.6, 0.4
+
+	ph_crash_speed_min					= 10.0
+	ph_crash_speed_max					= 30.0
+	ph_mass								= 80.0
+	ph_collision_damage_factor			= 0.1
+
+	destroyed_vis_name					= physics\dead_body\trupik_crash
+
+	ph_skeleton_airr_lin_factor			= -0.4
+	ph_skeleton_airr_ang_factor			= -0.2
+	ph_skeleton_hinger_factor1			= 1.0
+	ph_skeleton_ddelay					= 5.0												;время изменения значения трения в суставе с момента создания шелла, сек
+	ph_skel_fatal_impulse_factor		= 2.0
+	ph_after_death_velocity_factor		= 0.75
+	ph_skel_shot_up_factor				= 0.25
+
+	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
+	ef_creature_type					= 3
+	ef_weapon_type						= 1
+	ef_detector_type					= 1
+	panic_threshold						= 0.1
+
+	;--------------------------------------------------------------------------
+	; Movement::Velocities & Acceleration
+	;--------------------------------------------------------------------------
+	;	speed factors		| linear | angular_real | angular_path | min | max
+	;--------------------------------------------------------------------------
+	Velocity_Stand			= 0,			1.4,			1.4,	1.0,	1.0
+	Velocity_WalkFwdNormal	= 0.9,			0.6,			0.6,	0.02,	2.0
+	Velocity_RunFwdNormal	= 1.7,			3.0,			3.0,	0.4,	1.0
+	Velocity_WalkFwdDamaged	= 0.7,			3.0,			0.8,	0.2,	2.0
+	Velocity_RunFwdDamaged	= 1.5,			3.0,			3.0,	0.2,	1.0
+	Velocity_Drag			= 1.0,			3.0,			3.0,	1.0,	1.0
+	Velocity_Steal			= 1.5,			3.0,			3.0,	1.0,	1.0
+
+	;acceleration
+	Accel_Generic						= 1.5
+	Accel_Calm							= 2.5
+	Accel_Aggressive					= 7.5
+
+	;--------------------------------------------------------------------------
+	; Attack parameters
+	;--------------------------------------------------------------------------
+	attack_effector						= m_zombie_attack_effector
+	attack_params						= m_zombie_attack_params
+
+	MinAttackDist						= 1.7
+	MaxAttackDist						= 2.3
+
+	hit_type							= wound												;тип атаки
+
+	as_min_dist							= 1.4
+	as_step								= 0.1
+
+	Melee_Rotation_Factor				= 1.6
 
 
 
-
-ef_creature_type	 = 3				; option for evaluation functions
-ef_weapon_type		 = 1
-ef_detector_type	 = 1
-panic_threshold		= 0.1
 
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
@@ -74,53 +126,12 @@ weapon_usage		 = 0						; boolean
 
 
 
-
-
-ph_crash_speed_min			= 10
-ph_crash_speed_max			= 30
-ph_collision_damage_factor	= 0.1
-ph_mass 		     = 80
-destroyed_vis_name	 = physics\Dead_Body\trupik_crash
-
-;---------------------------------------------------------------------
-ph_skeleton_airr_lin_factor   = -0.4
-ph_skeleton_airr_ang_factor   = -0.2
-ph_skeleton_hinger_factor1    = 1.0
-ph_skeleton_ddelay	      = 5.0
-ph_skel_fatal_impulse_factor  = 2.0
-ph_after_death_velocity_factor= 0.75
-ph_skel_shot_up_factor        = 0.25
-;---------------------------------------------------------------------
-
 SoundThreshold		 = 0.06             ; range [0..1]
 
 eye_fov				 = 80
 eye_range			 = 50
 max_hear_dist		 = 30
 
-
-; speed factors			linear | angular_real | angular_path | min |  max
-Velocity_Stand			= 0,		1.4,			1.4,		1,		1
-Velocity_WalkFwdNormal	= 0.9,		0.6,			0.6,		0.02,	2.0	
-Velocity_RunFwdNormal	= 1.7,		3.0,			3.0,		0.4,	1	
-Velocity_WalkFwdDamaged	= 0.7,		3.0,			0.8,		0.2,	2.0	
-Velocity_RunFwdDamaged	= 1.5,  	3.0,			3.0,		0.2,	1
-Velocity_Drag			= 1.0,		3.0,			3.0,		1,		1
-Velocity_Steal			= 1.5,		3.0,			3.0,		1,		1
-
-; acceleration
-Accel_Generic			= 1.5
-Accel_Calm			= 2.5
-Accel_Aggressive		= 7.5
-
-;attack parameters
-MinAttackDist		= 1.7	;0.5
-MaxAttackDist		= 2.3	;3.8
-
-Melee_Rotation_Factor	= 1.6
-
-as_min_dist				= 1.4
-as_step					= 0.1
 
 distance_to_corpse	= 1.2		; фшёЄ. фю ЄЁєяр, яЁш ъюЄюЁющ юэ яхЁхїюфшЄ т ёюёЄю эшх хфv
 
@@ -136,14 +147,12 @@ velocity_factor		     	= 0.5
 luminocity_factor			= 0.5 				; фактор освещения (только для Актёра)
 transparency_threshold		= 0.25
 
-hit_type = wound
-
 ; entity condition
 satiety_v 				= 0.00001	;0.01			;скорость уменьшения сытости со временем
 radiation_v 			= 0.00001	;0.004			;скорость уменьшения радиации
 satiety_power_v 		= 0.01		;0.01			;увеличение силы при уменьшении сытости 
 satiety_health_v 		= 0.005		;0.03			;увеличение здоровья при уменьшении сытости 
-satiety_critical 		= -1.0			;0.25			;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
+
 radiation_health_v 		= 0.01		;0.006			;уменьшение здоровья при воздействии радиации
 morale_v				= 0.01						;скорость восстановления морали
 health_hit_part 		= 1.0		;0.8			;процент хита, уходящий на отнимание здоровья
@@ -210,12 +219,10 @@ critical_wound_decrease_quant	= 0.
 FakeDeathCount					= 4		; max count of fake death
 StartFakeDeathHealthThreshold	= 0.6
 
-squad_attack_algorithm	= 1
 LegsCount				= 2
 
-attack_effector			= m_zombie_attack_effector
 step_params				= m_zombie_step_params
-attack_params			= m_zombie_attack_params
+
 damage					= m_zombie_damage
 
 [m_zombie_damage]
@@ -304,14 +311,16 @@ fire_wound_immunity		= 0.1
 
 	MaxHealthValue						= 80.0												;option for ALife Simulator, range [0..200]
 
+	panic_threshold						= 0.5
 
-panic_threshold		= 0.5
+	attack_params						= zombie_attack_params_normal
+
 
 FakeDeathCount					= 3		; max count of fake death
 StartFakeDeathHealthThreshold	= 0.4
 
 immunities_sect		= zombie_immunities_normal
-attack_params		= zombie_attack_params_normal
+
 
 [zombie_normal]:m_zombie_e
 	$spawn								= "monsters\zombies\zombie_normal"					;option for Level Editor
@@ -323,17 +332,17 @@ attack_params		= zombie_attack_params_normal
 	spec_rank							= normal
 	community							= zombie
 
+	panic_threshold						= 0.2
+
+	attack_params						= zombie_attack_params_normal
 
 
-
-
-panic_threshold		= 0.2
 
 FakeDeathCount					= 4		; max count of fake death
 StartFakeDeathHealthThreshold	= 0.6
 
 immunities_sect		= zombie_immunities_normal
-attack_params		= zombie_attack_params_normal
+
 
 [zombie_immunities_normal]
 burn_immunity			= 1.0
@@ -373,14 +382,16 @@ stand_attack_3 =	  	0.30,		0.35,		    180,        0.0, 1.0, 0.0,		 -1.0, 0.3, -0
 
 	MaxHealthValue						= 120.0												;option for ALife Simulator, range [0..200]
 
-panic_threshold		= 0.05	
+	panic_threshold						= 0.05
+
+	attack_params						= zombie_attack_params_strong
+
 
 
 FakeDeathCount					= 6		; max count of fake death
 StartFakeDeathHealthThreshold	= 0.8
 
 immunities_sect		= zombie_immunities_strong
-attack_params		= zombie_attack_params_strong
 
 [zombie_immunities_strong]
 burn_immunity			= 1.0
@@ -413,11 +424,7 @@ stand_attack_3 =	  	0.30,		0.50,		    180,        0.0, 1.0, 0.0,		 -1.0, 0.3, -0
 	visual								= monsters\zombi\zombi_trup_2
 	icon								= ui_npc_monster_zombie_immortal
 
-
-
-panic_threshold		= 0.05
-
-	
+	panic_threshold						= 0.05
 
 [zombie_ghost]:zombie_strong
 	$spawn								= "monsters\zombies\zombie_ghost"					;option for Level Editor
@@ -443,6 +450,22 @@ panic_threshold		= 0.05
 
 	MaxHealthValue						= 60.0												;option for ALife Simulator, range [0..200]
 
+	;--------------------------------------------------------------------------
+	; Movement::Velocities & Acceleration
+	;--------------------------------------------------------------------------
+	;	speed factors		| linear | angular_real | angular_path | min | max
+	;--------------------------------------------------------------------------
+	Velocity_Stand			= 0,			1.4,			1.4,	1.0,	1.0
+	Velocity_WalkFwdNormal	= 2.0,			0.6,			0.6,	0.02,	2.0
+	Velocity_RunFwdNormal	= 4.0,			3.0,			3.0,	0.4,	1.0
+	Velocity_WalkFwdDamaged	= 2.0,			3.0,			0.8,	0.2,	2.0
+	Velocity_RunFwdDamaged	= 3.5,			3.0,			3.0,	0.2,	1.0
+	Velocity_Drag			= 1.0,			3.0,			3.0,	1.0,	1.0
+	Velocity_Steal			= 1.5,			3.0,			3.0,	1.0,	1.0
+
+	MinAttackDist						= 1.1
+
+
 
 bones_particles			= zombie_rusty_particles
 sound_die				= $no_sound
@@ -450,17 +473,10 @@ sound_die				= $no_sound
 immunities_sect		= zombie_rusty_immunities
 FakeDeathCount			= 1
 StartFakeDeathHealthThreshold	= 0.001
-MinAttackDist		= 1.1
+
 ;custom_data = scripts\zombie_rusty.ltx
-; speed factors			linear | angular_real |  angular_path  |  min  |  max
-Velocity_Stand			= 0,		1.4,			1.4,		1,		1
-Velocity_WalkFwdNormal		= 2.0,	0.6,			0.6,		0.02,		2.0	
-Velocity_RunFwdNormal		= 4.0,	3.0,			3.0,		0.4,		1	
-Velocity_WalkFwdDamaged		= 2.0,	3.0,			0.8,		0.2,		2.0	
-Velocity_RunFwdDamaged		= 3.5,  	3.0,			3.0,		0.2,		1
-Velocity_Drag			= 1.0,	3.0,			3.0,		1,		1
-Velocity_Steal			= 1.5,	3.0,			3.0,		1,		1
-;
+
+
 [zombie_rusty_immunities]
 burn_immunity			= 0.0
 strike_immunity			= 0.0
@@ -529,9 +545,9 @@ fire_wound_immunity		= 0.1
 	spec_rank							= normal
 	community							= zombie
 
+	panic_threshold						= 0.2
 
 
-panic_threshold		= 0.2
 
 custom_data = scripts\arena_mob_3.ltx
 
@@ -540,10 +556,10 @@ custom_data = scripts\arena_mob_3.ltx
 	spec_rank							= normal
 	community							= zombie
 
+	panic_threshold						= 0.2
 
 
 
-panic_threshold		= 0.2
 
 custom_data = scripts\arena_mob_4.ltx
 
@@ -552,8 +568,8 @@ custom_data = scripts\arena_mob_4.ltx
 	spec_rank							= normal
 	community							= zombie
 
+	panic_threshold						= 0.2
 
-panic_threshold		= 0.2
 
 custom_data = scripts\arena_mob_5.ltx
 
@@ -562,6 +578,6 @@ custom_data = scripts\arena_mob_5.ltx
 	spec_rank							= normal
 	community							= zombie
 
-panic_threshold		= 0.2
+	panic_threshold						= 0.2
 
 custom_data = scripts\arena_mob_6.ltx

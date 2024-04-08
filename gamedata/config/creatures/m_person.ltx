@@ -15,10 +15,6 @@ script_binding		 			= bind_monster.bind
 supplies					= grenade_f1,15,0,1.0, ammo_5.45x39_ap,ammo_5.45x39_fmj,50,0,1.0, ammo_5.56x45_ap,ammo_5.56х45_ss190,50,0,1.0, ammo_9x19_fmj,50,0,1.0, ammo_7.62x54_ap,10,0,1.0, ammo_og-7b,10,0,1.0 
 max_item_mass				= 10000.0
 
-;---EVALUATION FUNCTIONS----------------------------------------------
-ef_creature_type			= 1							; option for evaluation functions
-ef_weapon_type				= 1
-
 	Scheduled							= on												;option for ALife Simulator
 	Human								= off												;option for ALife Simulator
 Health			     = 40						; option for ALife Simulator
@@ -29,16 +25,21 @@ Health			     = 40						; option for ALife Simulator
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						= 0.0,  0.9,  0.0
-	ph_box0_size						= 0.35, 0.9,  0.35
-	ph_box1_center						= 0.0,  0.6,  0.0
-	ph_box1_size						= 0.40, 0.6,  0.40
+	ph_box0_center						= 0.0,  0.9, 0.0
+	ph_box0_size						= 0.35, 0.9, 0.35
+	ph_box1_center						= 0.0,  0.6, 0.0
+	ph_box1_size						= 0.4,	0.6, 0.4
 
+	ph_crash_speed_min					= 8.0
+	ph_crash_speed_max					= 16.0
+	ph_mass								= 170.0
 
+	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
+	ef_creature_type					= 1
+	ef_weapon_type						= 1
 
-ph_crash_speed_min   = 8;16
-ph_crash_speed_max   = 16;30
-ph_mass 		     = 170.
 cost			     = 1
 
 
@@ -197,17 +198,22 @@ visual			 = actors\izgoy\izgoy
 	;--------------------------------------------------------------------------
 	; Physics
 	;--------------------------------------------------------------------------
-	ph_box0_center						= 0.0,  0.9,  0.0
-	ph_box0_size						= 0.35, 0.9,  0.35
-	ph_box1_center						= 0.0,  0.6,  0.0
-	ph_box1_size						= 0.40, 0.6,  0.40
+	ph_box0_center						= 0.0,  0.9, 0.0
+	ph_box0_size						= 0.35, 0.9, 0.35
+	ph_box1_center						= 0.0,  0.6, 0.0
+	ph_box1_size						= 0.4,  0.6, 0.4
+
+	ph_crash_speed_min					= 16.0
+	ph_crash_speed_max					= 30.0
+	ph_mass								= 80.0
+
+	destroyed_vis_name					= physics\dead_body\trupik_crash
+
+	;--------------------------------------------------------------------------
+	; Evaluation functions
+	;--------------------------------------------------------------------------
 
 
-
-
-ph_crash_speed_min       = 16
-ph_crash_speed_max       = 30
-ph_mass 				 = 80
 
 
 weapon_usage		     = 1			; boolean
@@ -315,17 +321,14 @@ condition_sect				= trader_condition
 
 hit_power				= 10
 hit_type				= strike
-
 material				= creatures\human
 
 ;дисперсия во время ходьбы и бега
 disp_vel_factor		 = 0.1
 disp_crouch_factor	 = 0.75
 disp_jump_factor	 = 3
-destroyed_vis_name	 = physics\Dead_Body\trupik_crash
 
 species				= human
-
 
 [trader_immunities]
 burn_immunity 				= 0.0				;коэффициенты иммунитета 
@@ -343,7 +346,7 @@ satiety_v					= 0.0				;скорость уменьшения сытости со временем
 radiation_v					= 1.0				;скорость уменьшения радиации
 satiety_power_v				= 1.0				;увеличение силы при уменьшении сытости 
 satiety_health_v			= 1.0				;увеличение здоровья при уменьшении сытости 
-satiety_critical			= 0.0				;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
+
 radiation_health_v			= 0.0				;уменьшение здоровья при воздействии радиации
 morale_v					= 0.0				;скорость восстановления морали 						
 health_hit_part				= 1.0				;процент хита, уходящий на отнимание здоровья

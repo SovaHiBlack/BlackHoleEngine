@@ -23,7 +23,7 @@ end
 
 -- Удаление шкалы радиации при использовании бинокля
 function check_binoc()
-  local act_it=db.actor:active_item()
+	local act_it=db.actor:active_item()
 	if (ui_rad and db.actor.health>0) then
 		if act_it and act_it:section()=="wpn_binoc" then
 			local zoom=67.5/device().fov

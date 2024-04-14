@@ -118,6 +118,36 @@
 
 	Melee_Rotation_Factor				= 2.6
 
+	;--------------------------------------------------------------------------
+	; Entity conditions
+	;--------------------------------------------------------------------------
+	satiety_v							= 0.0001											;скорость уменьшения сытости со временем [0...1]
+	radiation_v							= 0.00001											;скорость уменьшения радиации [0...1]
+	satiety_power_v						= 0.005												;увеличение силы при уменьшении сытости [0...1]
+	satiety_health_v					= 0.005												;увеличение здоровья при уменьшении сытости [0...1]
+	radiation_health_v					= 0.01												;уменьшение здоровья при воздействии радиации [0...1]
+	morale_v							= 0.01												;скорость восстановления морали [0...1]
+	health_hit_part						= 0.8												;процент хита, уходящий на отнимание здоровья [0...1]
+	power_hit_part						= 1.0												;процент хита, уходящий на отнимание силы [0...1]
+	psy_health_v						= 0.1												;скорость восстановления psy-здоровья [0...1]
+
+	;открытые раны
+	bleeding_v							= 0.04												;потеря крови при номинальной ране в секунду
+	wound_incarnation_v					= 0.05												;крутизна кривой заживления (какой процент раны останется после заживления в игровую секунду)
+	min_wound_size						= 0.01
+
+	;eat settings
+	eat_freq							= 5.0												;частота укусов в сек
+	eat_slice							= 0.01												;увеличение сытости при 1 укусе
+	eat_slice_weight					= 10.0												;уменьшение еды у трупа
+
+	satiety_threshold					= 0.5												;ниже этого значения сытости монстр утоляет голод
+	distance_to_corpse					= 1.3												;дист. до трупа, при которой он переходит в состояние еды
+
+	;immunities
+	immunities_sect						= dog_immunities
+
+
 
 
 
@@ -144,40 +174,24 @@ jump_trace_dist			= 1.0
 ;-------------------------------------------------------------------------
 ; Entity Conditions
 ;-------------------------------------------------------------------------
-satiety_v 		= 0.0001				;0.01			;скорость уменьшения сытости со временем
-radiation_v 		= 0.00001		;0.004			;скорость уменьшения радиации
-satiety_power_v 	= 0.005		;0.01			;увеличение силы при уменьшении сытости 
-satiety_health_v 	= 0.005	;0.03			;увеличение здоровья при уменьшении сытости 
-
-radiation_health_v 	= 0.01	;0.006			;уменьшение здоровья при воздействии радиации
-morale_v		= 0.01					;скорость восстановления морали
-health_hit_part 	=0.8
-power_hit_part 		= 1.0		;0.9			;процент хита, уходящий на отнимание силы
-psy_health_v		= 0.1						;скорость восстановления psy-здоровья
-
-immunities_sect		= dog_immunities
-
-;открытые раны
-bleeding_v					= 0.04						;потеря крови при номинальной ране в секунду
-wound_incarnation_v			= 0.05				;крутизна кривой заживления (какой процент раны останется после заживления в игровую секунду)
-min_wound_size				= 0.01
-
-sleep_health = 1.0		;1.5				;ъю¤ЇЇшЎшхэЄv ёъюЁюёЄхщ шчьхэхэш  ярЁрьхЄЁют тю тЁхь  ёэр
-sleep_power = 1.0		;1.5
-sleep_satiety = 1.0		;0.8
-sleep_radiation = 1.0	;1.1
-sleep_psy_health = 1.0
-
-eat_freq			=	5.0		; ўрёЄюЄр єъєёют т ёхъ
-eat_slice			=	0.01	; єтхышўхэшх ёvЄюёЄш яЁш 1 єъєёх
-eat_slice_weight	=	10.0	; єьхэ№°хэшх хфv є ЄЁєяр
-
-satiety_threshold		= 0.5							; below this value monster fill hunger
 
 
-EatMemberCorpses	 = 1			; range {0,1}
-Cannibalism		 = 1			; range {0,1}
-EatCorpseInterval	 = 30000		; milliseconds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ;-------------------------------------------------------------------------
 ; Morale
@@ -264,7 +278,7 @@ critical_wound_bones_legs	= dog_critical_wound_bones_legs
 ; Other Stuff (refactoring needed)
 ;-------------------------------------------------------------------------
 
-distance_to_corpse	= 1.3		; фшёЄ. фю ЄЁєяр, яЁш ъюЄюЁющ юэ яхЁхїюфшЄ т ёюёЄю эшх хфv
+
 
 step_params			= m_dog_step_params
 
@@ -413,8 +427,7 @@ bip01_l_thigh
 	panic_threshold						= 0.2
 
 	attack_params						= dog_attack_params_weak
-
-immunities_sect		= dog_immunities_weak
+	immunities_sect						= dog_immunities_weak
 
 eye_fov				 = 100
 eye_range			 = 20
@@ -461,8 +474,7 @@ stand_attack_3 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 	panic_threshold						= 0.2
 
 	attack_params						= dog_attack_params_normal
-
-immunities_sect		= dog_immunities_normal
+	immunities_sect						= dog_immunities_normal
 
 
 [dog_immunities_normal]
@@ -504,8 +516,7 @@ stand_attack_3 =	  	0.45,		0.15,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 	panic_threshold						= 0.2
 
 	attack_params						= dog_attack_params_strong
-
-immunities_sect		= dog_immunities_strong
+	immunities_sect						= dog_immunities_strong
 
 
 [dog_immunities_strong]
@@ -545,9 +556,9 @@ stand_attack_3 =	  	0.45,		0.20,	    500,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.
 	panic_threshold						= 0.2
 
 	attack_params						= dog_attack_params_strong
+	immunities_sect						= dog_immunities_strong
 
 
-immunities_sect		= dog_immunities_strong
 custom_data = scripts\arena_mob_3.ltx
 
 [arena_dog_2]:m_dog_e
@@ -564,8 +575,10 @@ custom_data = scripts\arena_mob_3.ltx
 	panic_threshold						= 0.2
 
 	attack_params						= dog_attack_params_strong
+	immunities_sect						= dog_immunities_strong
 
-immunities_sect		= dog_immunities_strong
+
+
 custom_data = scripts\arena_mob_4.ltx
 
 [arena_dog_3]:m_dog_e
@@ -578,8 +591,11 @@ custom_data = scripts\arena_mob_4.ltx
 	panic_threshold						= 0.2
 
 	attack_params						= dog_attack_params_strong
+	immunities_sect						= dog_immunities_strong
 
-immunities_sect		= dog_immunities_strong
+
+
+
 custom_data = scripts\arena_mob_5.ltx
 
 [arena_dog_4]:m_dog_e
@@ -595,9 +611,11 @@ custom_data = scripts\arena_mob_5.ltx
 
 	panic_threshold						= 0.2
 
-attack_params		= dog_attack_params_strong
+	attack_params						= dog_attack_params_strong
+	immunities_sect						= dog_immunities_strong
 
 
 
-immunities_sect		= dog_immunities_strong
+
+
 custom_data = scripts\arena_mob_6.ltx

@@ -40,24 +40,25 @@ function update(bShow)
 			return
 		end
 		if (custom_static_rad_back == nil or custom_static_rad == nil) then
-			if (device().aspect_ratio < 0.75) then --widescreen. Use coords from maingame_16.xml		
+			if (device().aspect_ratio < 0.75) then --widescreen. Use coords from maingame_16.xml
 				read_params(true)
 			else --normal -- Use coords from maingame.xml
-				read_params()		
-			end		
+				read_params()
+			end
 
 			if custom_static_rad_back == nil then
 				hud_rad:AddCustomStatic("hud_rad_back", true)
 				custom_static_rad_back = hud_rad:GetCustomStatic("hud_rad_back")
 				if (custom_static_rad_back and custom_static_rad_back.wnd) then
-					 wnd_ = custom_static_rad_back:wnd()
-					 if (wnd_) then
+					wnd_ = custom_static_rad_back:wnd()
+					if (wnd_) then
 						wnd_:SetWndPos(posx, posy)
 						wnd_:SetHeight(height)
 						wnd_:SetWidth(width)
 					end
 				end
 			end
+
 			if custom_static_rad == nil then
 				hud_rad:AddCustomStatic("hud_rad_level", true)
 				custom_static_rad = hud_rad:GetCustomStatic("hud_rad_level")
@@ -87,9 +88,12 @@ function read_params(bWide)
 	local section = ""
 	local ui_rad_ini = ini_file("misc\\ui_rad.ltx")
 	local id, value = "", "", result
-	local n = 0	
+	local n = 0
 	section = "ui_rad"
-	if bWide == true then section = "ui_rad_wide" end
+	if bWide == true then
+		section = "ui_rad_wide"
+	end
+
 	if (ui_rad_ini and ui_rad_ini:section_exist(section)) then
 		n = ui_rad_ini:line_count(section)
 		for i=0, n-1 do
@@ -105,10 +109,14 @@ function read_params(bWide)
 			end
 		end
 	end
+
 	section = "ui_rad_progress"
-	if bWide == true then section = "ui_rad_progress_wide" end
+	if bWide == true then
+		section = "ui_rad_progress_wide"
+	end
+
 	if (ui_rad_ini and ui_rad_ini:section_exist(section)) then
-		n = ui_rad_ini:line_count(section)		
+		n = ui_rad_ini:line_count(section)
 		for i=0, n-1 do
 			result, id, value = ui_rad_ini:r_line(section, i, "", "")
 			if (id == "dx") then
@@ -121,5 +129,5 @@ function read_params(bWide)
 				p_height = value
 			end
 		end
-	end	
+	end
 end

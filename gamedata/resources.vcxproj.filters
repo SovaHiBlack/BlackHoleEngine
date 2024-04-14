@@ -3201,12 +3201,6 @@
     <None Include="config\misc\general_lair.ltx">
       <Filter>config\misc</Filter>
     </None>
-    <None Include="config\misc\gulag_radar_u.script">
-      <Filter>config\misc</Filter>
-    </None>
-    <None Include="config\misc\gulag_selo.ltx">
-      <Filter>config\misc</Filter>
-    </None>
     <None Include="config\models\objects\box_metall_01.ltx">
       <Filter>config\misc\models\objects</Filter>
     </None>
@@ -4709,16 +4703,7 @@
     <None Include="config\misc\aem_manager.ltx">
       <Filter>config\misc</Filter>
     </None>
-    <None Include="config\misc\trade_povar.ltx">
-      <Filter>config\misc</Filter>
-    </None>
-    <None Include="config\misc\trade_pri.ltx">
-      <Filter>config\misc</Filter>
-    </None>
     <None Include="config\misc\ui_rad.ltx">
-      <Filter>config\misc</Filter>
-    </None>
-    <None Include="config\misc\vssver.scc">
       <Filter>config\misc</Filter>
     </None>
     <None Include="config\models\capture\fix_captures.ltx">
@@ -5170,6 +5155,18 @@
     </None>
     <None Include="spawns\unpack\way_l12u_sarcofag.ltx">
       <Filter>spawns\unpack</Filter>
+    </None>
+    <None Include="config\misc\trade_povar.ltx">
+      <Filter>config\misc\trade</Filter>
+    </None>
+    <None Include="config\misc\trade_pri.ltx">
+      <Filter>config\misc\trade</Filter>
+    </None>
+    <None Include="config\misc\gulag_radar_u.script">
+      <Filter>config\misc\gulags</Filter>
+    </None>
+    <None Include="config\misc\gulag_selo.ltx">
+      <Filter>config\misc\gulags</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

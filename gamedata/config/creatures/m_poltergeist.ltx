@@ -148,7 +148,15 @@
 	;immunities
 	immunities_sect						= poltergeist_immunities
 
-
+	;--------------------------------------------------------------------------
+	; Sounds and sound parameters
+	;--------------------------------------------------------------------------
+	sound_idle							= monsters\biting\def_
+	sound_eat							= monsters\biting\def_
+	sound_aggressive					= monsters\biting\def_
+	sound_attack_hit					= monsters\biting\def_
+	sound_take_damage					= monsters\biting\def_
+	sound_die							= monsters\biting\def_
 
 
 
@@ -169,12 +177,12 @@ type				= flamer
 ;---------------------------------------------------------
 ; Sounds and sound parameters
 ;---------------------------------------------------------
-sound_idle				= monsters\biting\def_
-sound_eat				= monsters\biting\def_
-sound_aggressive		= monsters\biting\def_
-sound_attack_hit		= monsters\biting\def_
-sound_take_damage		= monsters\biting\def_
-sound_die				= monsters\biting\def_
+
+
+
+
+
+
 sound_threaten			= monsters\biting\def_
 sound_landing			= monsters\biting\def_
 sound_steal				= monsters\biting\def_
@@ -356,6 +364,13 @@ fire_wound_immunity = 1.0
 [m_poltergeist_normal_tele]:m_poltergeist_normal
 	$spawn								= "monsters\poltergeists\poltergeist_normal_tele"	;option for Level Editor
 
+	sound_idle							= monsters\poltergeist\tele_idle_0
+	sound_take_damage					= monsters\poltergeist\tele_damage_
+	sound_die							= monsters\poltergeist\tele_death_
+
+
+
+
 type							= telekinetic
 
 Tele_Fly_Time					= 0.30
@@ -383,9 +398,7 @@ Particles_Hidden				= monsters\polter_linza
 Hidden_Particles				= monsters\polter_linza
 ;Hide_Particles					= monsters\polter_yadro;monsters\polter_hide
 
-Sound_Idle						= monsters\poltergeist\tele_idle_0
-sound_take_damage				= monsters\poltergeist\tele_damage_
-sound_die						= monsters\poltergeist\tele_death_
+
 
 sound_tele_hold					= monsters\burer\burer_tele_hold
 sound_tele_throw				= monsters\burer\burer_tele_throw

@@ -194,60 +194,65 @@ void CVisualMemoryManager::enable		(const CObject *object, bool enable)
 	(*J).m_enabled					= enable;
 }
 
-float CVisualMemoryManager::object_visible_distance(const CGameObject *game_object, float &object_distance) const
+float CVisualMemoryManager::object_visible_distance(const CGameObject* game_object, float& object_distance) const
 {
-	Fvector								eye_position = Fvector().set(0.f,0.f,0.f), eye_direction;
-	Fmatrix								eye_matrix;
-	float								object_range = flt_max, object_fov = flt_max;
+	Fvector eye_position									= Fvector( ).set(0.0f, 0.0f, 0.0f);
+	Fvector													eye_direction;
+	Fmatrix													eye_matrix;
+	float object_range										= flt_max;
+	float object_fov										= flt_max;
 
-	if (m_object) {
-		eye_matrix						= 
-			smart_cast<CKinematics*>(
-				m_object->Visual()
-			)
-			->LL_GetTransform		(
-				u16(m_object->eye_bone)
-			);
+	if (m_object)
+	{
+		eye_matrix											= smart_cast<CKinematics*>(m_object->Visual( ))->LL_GetTransform(u16(m_object->eye_bone));
 
-		Fvector							temp;
-		eye_matrix.transform_tiny		(temp,eye_position);
-		m_object->XFORM().transform_tiny(eye_position,temp);
+		Fvector												temp;
+		eye_matrix.transform_tiny							(temp, eye_position);
+		m_object->XFORM( ).transform_tiny					(eye_position, temp);
 
-		if (m_stalker) {
-			eye_direction.setHP				(-m_stalker->movement().m_head.current.yaw, -m_stalker->movement().m_head.current.pitch);
-		} else { // if its a monster
-			const MonsterSpace::SBoneRotation &head_orient = m_object->head_orientation();
-			eye_direction.setHP				(-head_orient.current.yaw, -head_orient.current.pitch);
+		if (m_stalker)
+		{
+			eye_direction.setHP								(-m_stalker->movement( ).m_head.current.yaw, -m_stalker->movement( ).m_head.current.pitch);
 		}
-	} 
-	else {
-		Fvector							dummy;
-		float							_0,_1;
-		m_client->camera				(eye_position,eye_direction,dummy,object_fov,_0,_1,object_range);
+		else // if its a monster
+		{
+			const MonsterSpace::SBoneRotation& head_orient	= m_object->head_orientation( );
+			eye_direction.setHP								(-head_orient.current.yaw, -head_orient.current.pitch);
+		}
+	}
+	else
+	{
+		Fvector												dummy;
+		float												_0;
+		float												_1;
+		m_client->camera									(eye_position, eye_direction, dummy, object_fov, _0, _1, object_range);
 	}
 
-	Fvector								object_direction;
-	game_object->Center					(object_direction);
-	object_distance						= object_direction.distance_to(eye_position);
-	object_direction.sub				(eye_position);
-	object_direction.normalize_safe		();
-	
+	Fvector													object_direction;
+	game_object->Center										(object_direction);
+	object_distance											= object_direction.distance_to(eye_position);
+	object_direction.sub									(eye_position);
+	object_direction.normalize_safe							( );
+
 	if (m_object)
-		m_object->update_range_fov		(object_range,object_fov,m_object->eye_range,deg2rad(m_object->eye_fov));
+	{
+		m_object->update_range_fov							(object_range, object_fov, m_object->eye_range, deg2rad(m_object->eye_fov));
+	}
 
-	float								fov = object_fov*.5f;
-	float								cos_alpha = eye_direction.dotproduct(object_direction);
-	clamp								(cos_alpha,-.99999f,.99999f);
-	float								alpha = acosf(cos_alpha);
-	clamp								(alpha,0.f,fov);
+	float													fov = object_fov * 0.5f;
+	float cos_alpha											= eye_direction.dotproduct(object_direction);
+	clamp													(cos_alpha, -0.99999f, 0.99999f);
+	float alpha												= acosf(cos_alpha);
+	clamp													(alpha, 0.0f, fov);
 
-	float								max_view_distance = object_range, min_view_distance = object_range;
-	max_view_distance					*= current_state().m_max_view_distance;
-	min_view_distance					*= current_state().m_min_view_distance;
+	float max_view_distance									= object_range;
+	float min_view_distance									= object_range;
+	max_view_distance										*= current_state( ).m_max_view_distance;
+	min_view_distance										*= current_state( ).m_min_view_distance;
 
-	float								distance = (1.f - alpha/fov)*(max_view_distance - min_view_distance) + min_view_distance;
+	float distance											= (1.0f - alpha / fov) * (max_view_distance - min_view_distance) + min_view_distance;
 
-	return								(distance);
+	return distance;
 }
 
 float CVisualMemoryManager::object_luminocity	(const CGameObject *game_object) const

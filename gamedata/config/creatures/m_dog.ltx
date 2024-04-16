@@ -156,12 +156,36 @@
 	sound_attack_hit					= monsters\dog\attack_hit_							;звук для успешной попытки ударить или укусить (рык)
 	sound_take_damage					= monsters\dog\bdog_hurt_
 	sound_die							= monsters\dog\bdog_die_
+	sound_threaten						= monsters\dog\bdog_groan_
+	sound_steal							= monsters\biting\def_
+	sound_panic							= monsters\dog\bdog_panic_
+	sound_die_in_anomaly				= monsters\dog\bdog_die_
+	sound_distant_idle					= monsters\dog\bdog_distant_						;только для расстояний свыше 200м
+	distant_idle_sound_delay			= 80000
+	distant_idle_sound_range			= 30.0
 
+	;периодичность воспроизведения звуков
+	idle_sound_delay					= 80000
+	eat_sound_delay						= 2000
+	attack_sound_delay					= 5000
 
+	SoundThreshold						= 0.04												;range [0..1]
+	max_hear_dist						= 60.0
 
+	;--------------------------------------------------------------------------
+	; Vision
+	;--------------------------------------------------------------------------
+	eye_fov								= 110.0
+	eye_range							= 30.0
 
-
-
+	DynamicObjectsCount					= 32												;количество видимых объектов, которые может обрабатывать монстр
+	min_view_distance					= 0.7												;коэффициент, который множится на eye_range, в зависимости от угла
+	max_view_distance					= 1.0												;коэффициент, который множится на eye_range, в зависимости от угла
+	visibility_threshold				= 100.0												;значение, при достижении суммой которого объект считается видимым
+	always_visible_distance				= 0.4
+	time_quant							= 0.001
+	decrease_value						= 0.01												;значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
+	velocity_factor						= 0.5
 
 
 
@@ -190,55 +214,24 @@ Morale_Despondent_Speed			= 0.1
 Morale_Stable_Speed				= 0.01
 Morale_Despondent_Threashold	= 0.4
 
-;---------------------------------------------------------
-; Sounds and sound parameters
-;---------------------------------------------------------
-
-
-
-; sound_attack			= ; звук для неудачной попытки ударить или укусить (рык)
-
-
-
-sound_bkgnd				= monsters\biting\def_
-sound_threaten			= monsters\dog\bdog_groan_
-sound_landing			= monsters\biting\def_
-sound_steal				= monsters\biting\def_
-sound_panic				= monsters\dog\bdog_panic_
-sound_growling			= monsters\biting\def_
-sound_die_in_anomaly	= monsters\dog\bdog_die_
-sound_distant_idle		= monsters\dog\bdog_distant_	; только для расстояний свыше 200м
 
 killer_clsids				= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
-
-
-idle_sound_delay		= 80000;50000	;20000	;15000
-eat_sound_delay			= 2000	;3000
-attack_sound_delay		= 5000	;2000; 5000	;2000
-
-distant_idle_sound_delay = 80000
-distant_idle_sound_range = 30.0	
-
-
-
-SoundThreshold		 = 0.04             ; range [0..1]
-max_hear_dist		 = 60
 ;-------------------------------------------------------------------------
 ; Vision
 ;-------------------------------------------------------------------------
-eye_fov				 = 110	;140
-eye_range			 = 30	;50	;40;
 
-DynamicObjectsCount	 = 32; количество видимых объектов, которые может обрабатывать монстр
 
-min_view_distance   		= 0.7				; коэффициент, который множится на eye_range, в зависимости от угла
-max_view_distance	 		= 1.0				; коэффициент, который множится на eye_range, в зависимости от угла
-visibility_threshold	 	= 100.0				; значение, при достижении суммой которого объект считается видимым
-always_visible_distance 	= 0.4
-time_quant					= 0.001
-decrease_value				= 0.01				; значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
-velocity_factor		     	= 0.5
+
+
+
+
+
+
+
+
+
+
 luminocity_factor			= 0.5 				; фактор освещения (только для Актёра)
 transparency_threshold		= 0.25
 
@@ -416,10 +409,10 @@ bip01_l_thigh
 	attack_params						= dog_attack_params_weak
 	immunities_sect						= dog_immunities_weak
 
-eye_fov				 = 100
-eye_range			 = 20
-time_quant			 = 0.003
+	eye_fov								= 100.0
+	eye_range							= 20.0
 
+	time_quant							= 0.003
 
 [dog_immunities_weak]
 burn_immunity			= 1.0

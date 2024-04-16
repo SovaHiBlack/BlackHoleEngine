@@ -159,68 +159,69 @@
 	sound_attack_hit					= monsters\burer\burer_attack_
 	sound_take_damage					= monsters\burer\burer_telekinetic_
 	sound_die							= monsters\burer\burer_attacking_
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	;--------------------------------------------------------------------------
-	; Sounds and sound parameters
-	;--------------------------------------------------------------------------
-
-
-
-
-
-
 	sound_threaten						= monsters\biting\def_
-	sound_landing						= monsters\biting\def_
 	sound_steal							= monsters\biting\def_
 	sound_panic							= monsters\burer\burer_attacking_
-	sound_growling						= monsters\biting\def_
+	sound_die_in_anomaly				= monsters\burer\burer_attacking_
 	sound_gravi_attack					= monsters\burer\burer_gravi_attack_
 	sound_tele_attack					= monsters\biting\def_
 	sound_gravi_wave					= monsters\burer\burer_gravi_wave_0
-	sound_die_in_anomaly				= monsters\burer\burer_attacking_
-
-	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
-
-	idle_sound_delay					= 55000
-	eat_sound_delay						= 3000
-	attack_sound_delay					= 14000
-
 	sound_distant_idle					= monsters\burer\burer_idle_
 	distant_idle_sound_delay			= 80000
 	distant_idle_sound_range			= 100.0
 
-	SoundThreshold						= 0.06											;range [0..1]
-	max_hear_dist						= 60
+	;периодичность воспроизведения звуков
+	idle_sound_delay					= 55000
+	eat_sound_delay						= 3000
+	attack_sound_delay					= 14000
+
+	SoundThreshold						= 0.06												;range [0..1]
+	max_hear_dist						= 60.0
 
 	;--------------------------------------------------------------------------
 	; Vision
 	;--------------------------------------------------------------------------
-	eye_fov								= 100
-	eye_range							= 30
+	eye_fov								= 100.0
+	eye_range							= 30.0
 
-	DynamicObjectsCount					= 32		; количество видимых объектов, которые может обрабатывать монстр
-
-	min_view_distance					= 0.4											;коэффициент, который множится на eye_range, в зависимости от угла
-	max_view_distance					= 1.0											;коэффициент, который множится на eye_range, в зависимости от угла
-	visibility_threshold				= 100.0											;значение, при достижении суммой которого объект считается видимым
+	DynamicObjectsCount					= 32												;количество видимых объектов, которые может обрабатывать монстр
+	min_view_distance					= 0.4												;коэффициент, который множится на eye_range, в зависимости от угла
+	max_view_distance					= 1.0												;коэффициент, который множится на eye_range, в зависимости от угла
+	visibility_threshold				= 100.0												;значение, при достижении суммой которого объект считается видимым
 	always_visible_distance				= 0.2
 	time_quant							= 0.001
-	decrease_value						= 0.01											;значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
+	decrease_value						= 0.01												;значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
 	velocity_factor						= 0.5
+
+
+
+
+
+
+
+
+
+
+
+
+	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
+
+
+	;--------------------------------------------------------------------------
+	; Vision
+	;--------------------------------------------------------------------------
+
+
+
+
+
+
+	
+
+
+
+
+
 	luminocity_factor					= 0.5											;фактор освещения (только для Актёра)
 	transparency_threshold				= 0.25
 

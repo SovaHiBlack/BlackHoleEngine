@@ -152,6 +152,37 @@
 	sound_attack_hit					= monsters\cat\4
 	sound_take_damage					= monsters\cat\5
 	sound_die							= monsters\cat\6
+	sound_threaten						= monsters\cat\7
+	sound_steal							= monsters\cat\9
+	sound_panic							= monsters\cat\10
+	sound_die_in_anomaly				= monsters\cat\12
+	sound_distant_idle					= monsters\cat\1
+	distant_idle_sound_delay			= 80000
+	distant_idle_sound_range			= 100.0
+
+	;периодичность воспроизведения звуков
+	idle_sound_delay					= 55000
+	eat_sound_delay						= 3000
+	attack_sound_delay					= 6000
+
+	SoundThreshold						= 0.06												;range [0..1]
+	max_hear_dist						= 60.0
+
+	;--------------------------------------------------------------------------
+	; Vision
+	;--------------------------------------------------------------------------
+	eye_fov								= 110.0
+	eye_range							= 30.0
+
+	DynamicObjectsCount					= 32												;количество видимых объектов, которые может обрабатывать монстр
+	min_view_distance					= 0.7												;коэффициент, который множится на eye_range, в зависимости от угла
+	max_view_distance					= 1.0												;коэффициент, который множится на eye_range, в зависимости от угла
+	visibility_threshold				= 100.0												;значение, при достижении суммой которого объект считается видимым
+	always_visible_distance				= 0.4
+	time_quant							= 0.001
+	decrease_value						= 0.01												;значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
+	velocity_factor						= 0.5
+
 
 
 
@@ -163,32 +194,25 @@ bone_head			 = bip01_head				; bone name
 bone_fire			 = bip01_head				; bone name
 weapon_usage		 = 0						; boolean
 
-
-
-
 critical_wound_threshold		= 0.4
 critical_wound_decrease_quant	= 0.
 
 
-SoundThreshold		 = 0.06						; range [0..1]
 
 
-eye_fov				 = 110	;140
-eye_range			 = 30	;50	;40;
 
-DynamicObjectsCount	= 32; количество видимых объектов, которые может обрабатывать монстр
 
-min_view_distance   		= 0.7				; коэффициент, который множится на eye_range, в зависимости от угла
-max_view_distance	 		= 1.0				; коэффициент, который множится на eye_range, в зависимости от угла
-visibility_threshold	 	= 100.0				; значение, при достижении суммой которого объект считается видимым
-always_visible_distance 	= 0.4
-time_quant					= 0.001
-decrease_value				= 0.01				; значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
-velocity_factor		     	= 0.5
+
+
+
+
+
+
+
 luminocity_factor			= 0.5 				; фактор освещения (только для Актёра)
 transparency_threshold		= 0.25
 
-max_hear_dist		 = 60
+
 
 ;							  fSearchRange,fCoverFromEnemyWeight,fOptEnemyDistance,fOptEnemyDistanceWeight,fMinEnemyDistance,fMinEnemyDistanceWeight,fMaxEnemyDistance,fMaxEnemyDistanceWeight
 selector_cover           =      20.0,            -1000.0,                30.0,                 0.0,                  0.0,              100000.0,             100000.0,               1000.0,
@@ -211,20 +235,6 @@ Morale_Stable_Speed				= 0.05
 Morale_Despondent_Threashold	= 0.5
 
 
-; Sounds
-
-
-
-
-
-
-sound_threaten			= monsters\cat\7
-sound_landing			= monsters\cat\8
-sound_steal				= monsters\cat\9
-sound_panic				= monsters\cat\10
-sound_growling			= monsters\cat\11
-sound_die_in_anomaly	= monsters\cat\12
-
 killer_clsids				= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
 
@@ -238,13 +248,6 @@ jump_min_distance			= 3.5
 jump_max_distance			= 6.0
 jump_max_angle				= 0.6
 
-idle_sound_delay		= 55000
-eat_sound_delay			= 3000
-attack_sound_delay		= 6000
-
-sound_distant_idle			= monsters\cat\1
-distant_idle_sound_delay	= 80000
-distant_idle_sound_range	= 100.0	
 
 ;-------------------------------------------------------------------------
 ; Damages

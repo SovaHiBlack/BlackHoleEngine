@@ -157,60 +157,64 @@
 	sound_attack_hit					= monsters\boar\boar_attack_
 	sound_take_damage					= monsters\boar\boar_pain_
 	sound_die							= monsters\boar\boar_death_
-
-
-
-
-
-
-
-
-	;--------------------------------------------------------------------------
-	; Sound
-	;--------------------------------------------------------------------------
-
-
-
-
-
-
-	sound_bkgnd							= monsters\biting\def_
 	sound_threaten						= monsters\boar\boar_threaten_
-	sound_landing						= monsters\boar\landing_
 	sound_steal							= monsters\biting\def_
 	sound_panic							= monsters\boar\boar_panic_
-	sound_growling						= monsters\biting\def_
 	sound_die_in_anomaly				= monsters\boar\boar_anomaly_
-
-	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
-
 	sound_distant_idle					= monsters\boar\boar_idle_
 	distant_idle_sound_delay			= 80000
 	distant_idle_sound_range			= 100.0
 
-	;Frequency of sounds to be played
+	;периодичность воспроизведения звуков
 	idle_sound_delay					= 18000
 	eat_sound_delay						= 5000
 	attack_sound_delay					= 4000
 
-	SoundThreshold						= 0.06											;range [0..1]
-	max_hear_dist						= 60
+	SoundThreshold						= 0.06												;range [0..1]
+	max_hear_dist						= 60.0
 
 	;--------------------------------------------------------------------------
 	; Vision
 	;--------------------------------------------------------------------------
-	eye_fov								= 110
-	eye_range							= 40
+	eye_fov								= 110.0
+	eye_range							= 40.0
 
-	DynamicObjectsCount					= 32; количество видимых объектов, которые может обрабатывать монстр
-
-	min_view_distance					= 0.5											;коэффициент, который множится на eye_range, в зависимости от угла
-	max_view_distance					= 1.0											;коэффициент, который множится на eye_range, в зависимости от угла
-	visibility_threshold				= 100.0											;значение, при достижении суммой которого объект считается видимым
+	DynamicObjectsCount					= 32												;количество видимых объектов, которые может обрабатывать монстр
+	min_view_distance					= 0.5												;коэффициент, который множится на eye_range, в зависимости от угла
+	max_view_distance					= 1.0												;коэффициент, который множится на eye_range, в зависимости от угла
+	visibility_threshold				= 100.0												;значение, при достижении суммой которого объект считается видимым
 	always_visible_distance				= 0.3
 	time_quant							= 0.001
-	decrease_value						= 0.01											;значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
+	decrease_value						= 0.01												;значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
 	velocity_factor						= 0.5
+
+
+
+
+
+
+
+
+
+
+
+	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
+
+	;--------------------------------------------------------------------------
+	; Vision
+	;--------------------------------------------------------------------------
+
+
+
+
+
+
+	
+
+
+
+
+
 	luminocity_factor					= 0.5											;фактор освещения (только для Актёра)
 	transparency_threshold				= 0.25
 

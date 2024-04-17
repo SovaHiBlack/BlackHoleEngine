@@ -3,9 +3,9 @@
 
 Initializing File System...
 using fs-ltx fsgame.ltx
-FS: 30241 files cached, 5142Kb memory used.
-Init FileSystem 15.871487 sec
-'xrCore' build 9175, Mar 22 2024
+FS: 30238 files cached, 5142Kb memory used.
+Init FileSystem 16.898008 sec
+'xrCore' build 9201, Apr 17 2024
 
 Initializing Engine...
 Executing config-script "user.ltx"...
@@ -14,11 +14,44 @@ Starting INPUT device...
 Loading DLL: xrRender_R2.dll
 Loading DLL: xrGame.dll
 ! Unable to find Software\GSC Game World\STALKER-SHOC\ in registry
-* [win32]: free[4050652 K], reserved[50428 K], committed[93160 K]
+* [win32]: free[4050636 K], reserved[49036 K], committed[94568 K]
 * [ D3D ]: textures[0 K]
-* [x-ray]: process heap[9325 K], game lua[0 K], engine lua[0 K], render[0 K]
-* [x-ray]: economy: strings[2004 K], smem[0 K]
+* [x-ray]: process heap[9250 K], game lua[0 K], engine lua[0 K], render[0 K]
+* [x-ray]: economy: strings[1947 K], smem[0 K]
 Executing config-script "d:\engine\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx"...
+! cant convert dik_name for dik[16], prop=[
+! cant convert dik_name for dik[17], prop=[
+! cant convert dik_name for dik[18], prop=[
+! cant convert dik_name for dik[19], prop=[
+! cant convert dik_name for dik[20], prop=[
+! cant convert dik_name for dik[21], prop=[
+! cant convert dik_name for dik[22], prop=[
+! cant convert dik_name for dik[23], prop=[
+! cant convert dik_name for dik[24], prop=[
+! cant convert dik_name for dik[25], prop=[
+! cant convert dik_name for dik[26], prop=[
+! cant convert dik_name for dik[27], prop=[
+! cant convert dik_name for dik[30], prop=[
+! cant convert dik_name for dik[31], prop=[
+! cant convert dik_name for dik[32], prop=[
+! cant convert dik_name for dik[33], prop=[
+! cant convert dik_name for dik[34], prop=[
+! cant convert dik_name for dik[35], prop=[
+! cant convert dik_name for dik[36], prop=[
+! cant convert dik_name for dik[37], prop=[
+! cant convert dik_name for dik[38], prop=[
+! cant convert dik_name for dik[39], prop=[
+! cant convert dik_name for dik[40], prop=[
+! cant convert dik_name for dik[41], prop=[
+! cant convert dik_name for dik[44], prop=[
+! cant convert dik_name for dik[45], prop=[
+! cant convert dik_name for dik[46], prop=[
+! cant convert dik_name for dik[47], prop=[
+! cant convert dik_name for dik[48], prop=[
+! cant convert dik_name for dik[49], prop=[
+! cant convert dik_name for dik[50], prop=[
+! cant convert dik_name for dik[51], prop=[
+! cant convert dik_name for dik[52], prop=[
 ! cant convert dik_name for dik[144], prop=[
 [d:\engine\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx] successfully loaded.
 Executing config-script "user.ltx"...
@@ -65,7 +98,7 @@ Starting RENDER device...
 ! Renderer doesn't support blender 'effects\shadow_world'
 ! Version conflict in shader 'effects\watertest-1'
 count of .thm files=6
-load time=88 ms
+load time=155 ms
 * NULLRT supported
 * ...and used
 * HWDST/PCF supported and used
@@ -79,52 +112,52 @@ Loading DLL: xrGameSpy.dll
 - r2_tf_mipbias 0.
 * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
 * GPU vertex cache: recognized, 32
-*** RESET [380 ms]
+*** RESET [375 ms]
 "d:\engine\blackholeengine\sources\..\release-win32\binaries\xr_3da.exe" 
 * phase time: 0 ms
-* phase cmem: 82851 K
+* phase cmem: 85213 K
 Кэширование объектов...
 Loading objects...
 Loading models...
-* [prefetch] time:    25766 ms
-* [prefetch] memory:  419081Kb
-* phase time: 25837 ms
-* phase cmem: 489206 K
+* [prefetch] time:    25274 ms
+* [prefetch] memory:  419076Kb
+* phase time: 25339 ms
+* phase cmem: 491213 K
 Сервер: Старт...
-* phase time: 128 ms
-* phase cmem: 489429 K
+* phase time: 116 ms
+* phase cmem: 491451 K
 Сервер: Загрузка симуляции жизни...
-* phase time: 18 ms
-* phase cmem: 489429 K
+* phase time: 15 ms
+* phase cmem: 491451 K
 Создание новой игры...
 * Creating new game...
 * Loading spawn registry...
 * 8641 spawn points are successfully loaded
 * Saving spawns...
 * Saving objects...
-* 15507 objects are successfully saved
+* 15492 objects are successfully saved
 * Game all.sav is successfully saved to file 'd:\engine\blackholeengine\release-win32\..\app_data\savedgames\all.sav'
 * New game is successfully created!
-* phase time: 4588 ms
-* phase cmem: 519266 K
+* phase time: 4954 ms
+* phase cmem: 521240 K
 Сервер: Соединяемся...
 MaxPlayers = 32
-* phase time: 49 ms
-* phase cmem: 519332 K
+* phase time: 70 ms
+* phase cmem: 521323 K
 Клиент: Соединение с localhost...
 # Player not found. New player created.
 * client : connection accepted - <>
-* phase time: 31 ms
-* phase cmem: 519357 K
+* phase time: 58 ms
+* phase cmem: 521347 K
 Открытие потока...
-* phase time: 29 ms
-* phase cmem: 519357 K
+* phase time: 46 ms
+* phase cmem: 521347 K
 Загрузка формы объектов...
-* phase time: 3256 ms
-* phase cmem: 592025 K
+* phase time: 3421 ms
+* phase cmem: 594016 K
 Загрузка шейдеров...
-* phase time: 358 ms
-* phase cmem: 593403 K
+* phase time: 352 ms
+* phase cmem: 595393 K
 Загрузка геометрии...
 * [Loading VB] 65532 verts, 2047 Kb
 * [Loading VB] 65525 verts, 2047 Kb
@@ -167,46 +200,97 @@ MaxPlayers = 32
 * [Loading IB] 1048575 indices, 2047 Kb
 * [Loading IB] 1048575 indices, 2047 Kb
 * [Loading IB] 718302 indices, 1402 Kb
-* phase time: 551 ms
-* phase cmem: 662176 K
+* phase time: 683 ms
+* phase cmem: 664168 K
 Загрузка базы пространств...
-* phase time: 1230 ms
-* phase cmem: 666608 K
+* phase time: 1592 ms
+* phase cmem: 668584 K
 Загрузка детальных объектов...
 * [DETAILS] VertexConsts(256), Batch(61)
 * [DETAILS] 40687 v(20), 26352 p
 * [DETAILS] Batch(61), VB(794K), IB(154K)
-* phase time: 109 ms
-* phase cmem: 667600 K
+* phase time: 131 ms
+* phase cmem: 669592 K
 Загрузка секторов и порталов...
 * Loading HOM: d:\engine\blackholeengine\release-win32\..\gamedata\levels\l01_escape\level.hom
-* phase time: 61 ms
-* phase cmem: 667789 K
+* phase time: 77 ms
+* phase cmem: 669781 K
 Загрузка ИИ объектов...
 - Loading music tracks from 'l01_escape_musics'...
-* phase time: 214 ms
-* phase cmem: 667829 K
+* phase time: 230 ms
+* phase cmem: 669820 K
 Клиент: Создание...
 - Game configuring : Started 
 - Game configuring : Finished 
-* phase time: 754 ms
-* phase cmem: 675582 K
+* phase time: 836 ms
+* phase cmem: 677566 K
 Загрузка текстур...
 * t-report - base: 1445, 566111 K
 * t-report - lmap: 5, 5120 K
-* phase time: 10315 ms
-* phase cmem: 972486 K
+* phase time: 9757 ms
+* phase cmem: 974467 K
 Клиент: Синхронизация...
-* phase time: 142 ms
-* phase cmem: 972502 K
-* [win32]: free[2885028 K], reserved[81408 K], committed[1227804 K]
+* phase time: 126 ms
+* phase cmem: 974467 K
+* [win32]: free[2878028 K], reserved[84304 K], committed[1231908 K]
 * [ D3D ]: textures[571232 K]
-* [x-ray]: process heap[972502 K], game lua[28697 K], engine lua[125 K], render[0 K]
-* [x-ray]: economy: strings[4561 K], smem[15587 K]
-Intro start 104523
-* MEMORY USAGE: 1000728 K
+* [x-ray]: process heap[974467 K], game lua[28702 K], engine lua[125 K], render[0 K]
+* [x-ray]: economy: strings[4502 K], smem[15587 K]
+Intro start 5837
+* MEMORY USAGE: 1002749 K
+~ g_god 1
+!SV:ge_destroy: [391] not found on server
+!SV:ge_destroy: [22272] not found on server
+!SV:ge_destroy: [23555] not found on server
+!SV:ge_destroy: [436] not found on server
+!SV:ge_destroy: [26371] not found on server
+!SV:ge_destroy: [30464] not found on server
+!SV:ge_destroy: [35072] not found on server
+sv !ownership (entity already has parent) new_parent [0][actor:single_player] id_parent [0][actor:single_player] id_entity [698][energy_drink:esc_energy_drink_0003] [14680]
+!SV:ge_destroy: [35338] not found on server
+!SV:ge_destroy: [35590] not found on server
+!SV:ge_destroy: [36352] not found on server
+!SV:ge_destroy: [36615] not found on server
+!SV:ge_destroy: [36353] not found on server
+!SV:ge_destroy: [37126] not found on server
+!SV:ge_destroy: [35845] not found on server
+!SV:ge_destroy: [37383] not found on server
+sv !ownership (entity already has parent) new_parent [0][actor:single_player] id_parent [0][actor:single_player] id_entity [1193][quest_case_01:esc_quest_case_01] [19852]
+sv !ownership (entity already has parent) new_parent [0][actor:single_player] id_parent [0][actor:single_player] id_entity [740][wpn_ak74u:esc_wpn_ak74u] [22050]
+sv !ownership (entity already has parent) new_parent [0][actor:single_player] id_parent [0][actor:single_player] id_entity [399][wpn_ak74u:wpn_ak74u0399] [22582]
+! Unknown command:  ERROR:loss_workaround:box=5014
+! Unknown command:  ERROR:__item:name=wpn_colt191148388
+! Unknown command:  ERROR:__item:name=grenade_f148389
+! Unknown command:  ERROR:__item:name=grenade_f148390
+! Unknown command:  ERROR:__item:name=grenade_f148391
+sv !ownership (entity already has parent) new_parent [0][actor:single_player] id_parent [0][actor:single_player] id_entity [352][wpn_ak74u:wpn_ak74u0352] [24714]
+!SV:ge_destroy: [220] not found on server
+!SV:ge_destroy: [209] not found on server
+!SV:ge_destroy: [216] not found on server
+!SV:ge_destroy: [244] not found on server
+!SV:ge_destroy: [233] not found on server
+!SV:ge_destroy: [237] not found on server
+!SV:ge_destroy: [61207] not found on server
+!SV:ge_destroy: [228] not found on server
+! Unknown command:  ERROR:loss_workaround:box=5008
+! Unknown command:  ERROR:__item:name=medkit_army20669
+! Unknown command:  ERROR:__item:name=medkit_army20670
+! Unknown command:  ERROR:__item:name=medkit_army20671
+! Unknown command:  ERROR:__item:name=medkit_army20672
+! Unknown command:  ERROR:__item:name=medkit_army20673
+! Unknown command:  ERROR:__item:name=antirad20674
+! Unknown command:  ERROR:__item:name=antirad20675
+! Unknown command:  ERROR:__item:name=antirad20676
+! Unknown command:  ERROR:__item:name=antirad20677
+! Unknown command:  ERROR:__item:name=antirad20678
+sv !ownership (entity already has parent) new_parent [0][actor:single_player] id_parent [0][actor:single_player] id_entity [969][outfit_bandit_m1:esc_outfit_bandit_m1] [44420]
+* Saving spawns...
+* Saving objects...
+* 16443 objects are successfully saved
+* Game sdf.sav is successfully saved to file 'd:\engine\blackholeengine\release-win32\..\app_data\savedgames\sdf.sav'
 - Disconnect
 - Destroying level
+DestroySingleton::RefCounter: 0
 DestroySingleton::RefCounter: 0
 DestroySingleton::RefCounter: 0
 DestroySingleton::RefCounter: 0

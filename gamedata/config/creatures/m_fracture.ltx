@@ -106,6 +106,7 @@
 	MinAttackDist						= 1.8
 	MaxAttackDist						= 2.4
 
+	hit_power							= 50.0
 	hit_type							= wound												;тип атаки
 
 	as_min_dist							= 0.5
@@ -172,6 +173,8 @@
 	eye_range							= 100.0
 
 	DynamicObjectsCount					= 32												;количество видимых объектов, которые может обрабатывать монстр
+
+	transparency_threshold				= 0.25
 	min_view_distance					= 0.8												;коэффициент, который множится на eye_range, в зависимости от угла
 	max_view_distance					= 1.0												;коэффициент, который множится на eye_range, в зависимости от угла
 	visibility_threshold				= 100.0												;значение, при достижении суммой которого объект считается видимым
@@ -179,6 +182,31 @@
 	time_quant							= 0.001
 	decrease_value						= 0.01												;значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
 	velocity_factor						= 0.5
+	luminocity_factor					= 1.5												;фактор освещения (только для Актёра)
+
+	;--------------------------------------------------------------------------
+	; Morale
+	;--------------------------------------------------------------------------
+	Morale_Hit_Quant					= 0.1
+	Morale_Attack_Success_Quant			= 0.1
+	Morale_Take_Heart_Speed				= 0.1
+	Morale_Despondent_Speed				= 0.1
+	Morale_Stable_Speed					= 0.01
+	Morale_Despondent_Threashold		= 0.5
+
+	;--------------------------------------------------------------------------
+	; Damages
+	;--------------------------------------------------------------------------
+	;Здоровье, с которым начинать проигрывать травмированную анимацию
+	DamagedThreshold					= 0.5
+	damage								= m_fracture_damage
+
+	critical_wound_threshold			= -1.0
+	critical_wound_decrease_quant		= 0.0
+
+
+
+
 
 
 
@@ -190,8 +218,8 @@
 
 jump_max_height = 1.0
 
-critical_wound_threshold		= -1
-critical_wound_decrease_quant	= 0.
+
+
 
 bone_torso			 = bip01_spine1 			; bone name
 bone_head			 = bip01_head				; bone name
@@ -200,47 +228,19 @@ weapon_usage		 = 0						; boolean
 
 
 
-
-
-
-
-hit_power			 = 50.0;
-
 ImpulseMin			 = 500.0
 ImpulseMax			 = 550.0 
-
-
-
-
-
-
-
-
-
-
-
-luminocity_factor			= 1.5 				; фактор освещения (только для Актёра)
-transparency_threshold		= 0.25
-
-; Morale
-Morale_Hit_Quant				= 0.1
-Morale_Attack_Success_Quant		= 0.1
-Morale_Take_Heart_Speed			= 0.1
-Morale_Despondent_Speed			= 0.1
-Morale_Stable_Speed				= 0.01
-Morale_Despondent_Threashold	= 0.5
-
 
 killer_clsids			= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
 
-DamagedThreshold		= 0.5
+
 
 LegsCount				= 2
 
 
 step_params				= m_fracture_step_params
-damage					= m_fracture_damage
+
 
 
 [m_fracture_damage]

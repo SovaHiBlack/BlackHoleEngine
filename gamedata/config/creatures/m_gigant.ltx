@@ -184,6 +184,8 @@
 	eye_range							= 40.0
 
 	DynamicObjectsCount					= 32												;количество видимых объектов, которые может обрабатывать монстр
+
+	transparency_threshold				= 0.25
 	min_view_distance					= 0.5												;коэффициент, который множится на eye_range, в зависимости от угла
 	max_view_distance					= 1.0												;коэффициент, который множится на eye_range, в зависимости от угла
 	visibility_threshold				= 100.0												;значение, при достижении суммой которого объект считается видимым
@@ -191,11 +193,27 @@
 	time_quant							= 0.001
 	decrease_value						= 0.01												;значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
 	velocity_factor						= 0.5
+	luminocity_factor					= 0.5												;фактор освещения (только для Актёра)
 
+	;--------------------------------------------------------------------------
+	; Morale
+	;--------------------------------------------------------------------------
+	Morale_Hit_Quant					= 0.001
+	Morale_Attack_Success_Quant			= 0.1
+	Morale_Take_Heart_Speed				= 0.1
+	Morale_Despondent_Speed				= 0.1
+	Morale_Stable_Speed					= 0.01
+	Morale_Despondent_Threashold		= 0.5
 
+	;--------------------------------------------------------------------------
+	; Damages
+	;--------------------------------------------------------------------------
+	;Здоровье, с которым начинать проигрывать травмированную анимацию
+	DamagedThreshold					= 0.2
+	damage								= m_giant_damage
 
-
-
+	critical_wound_threshold			= -1.0
+	critical_wound_decrease_quant		= 0.0
 
 
 
@@ -209,44 +227,14 @@ weapon_usage		 = 0						; boolean
 selector_approach		= 20.0,1.0,1000.0,0.0,0.0, 1000.0,	10000.0,      
 
 
-; Morale
-Morale_Hit_Quant				= 0.001
-Morale_Attack_Success_Quant		= 0.1
-Morale_Take_Heart_Speed			= 0.1
-Morale_Despondent_Speed			= 0.1
-Morale_Stable_Speed				= 0.01
-Morale_Despondent_Threashold	= 0.5
-
-
-
-
-;-------------------------------------------------------------------------
-; Vision
-;-------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-luminocity_factor			= 0.5 				; фактор освещения (только для Актёра)
-transparency_threshold		= 0.25
-
-
 killer_clsids			= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
 
 
-DamagedThreshold		= 0.2 ;0.05 ;0.2
+
 
 step_params				= m_gigant_step_params
-damage					= m_giant_damage
+
 threaten_effector		= pseudogigant_threaten_effector
 
 
@@ -281,8 +269,8 @@ HugeKick_MinMaxDist			= 15,30	;10, 20
 HugeKick_MinMaxDelay		= 10000, 22000 ;10000, 30000
 HugeKick_Time_SlowDown		= 4000
 
-critical_wound_threshold		= -1
-critical_wound_decrease_quant	= 0.
+
+
 
 ;=========================================================================================
 ; Damage Params

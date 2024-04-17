@@ -176,6 +176,8 @@
 	eye_range							= 30.0
 
 	DynamicObjectsCount					= 32												;количество видимых объектов, которые может обрабатывать монстр
+
+	transparency_threshold				= 0.25
 	min_view_distance					= 0.4												;коэффициент, который множится на eye_range, в зависимости от угла
 	max_view_distance					= 1.0												;коэффициент, который множится на eye_range, в зависимости от угла
 	visibility_threshold				= 100.0												;значение, при достижении суммой которого объект считается видимым
@@ -183,6 +185,38 @@
 	time_quant							= 0.001
 	decrease_value						= 0.01												;значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
 	velocity_factor						= 0.5
+	luminocity_factor					= 0.5												;фактор освещения (только для Актёра)
+
+	;--------------------------------------------------------------------------
+	; Morale
+	;--------------------------------------------------------------------------
+	Morale_Hit_Quant					= 0.1
+	Morale_Attack_Success_Quant			= 0.1
+	Morale_Take_Heart_Speed				= 0.1
+	Morale_Despondent_Speed				= 0.1
+	Morale_Stable_Speed					= 0.01
+	Morale_Despondent_Threashold		= 0.5
+
+	;--------------------------------------------------------------------------
+	; Damages
+	;--------------------------------------------------------------------------
+	;Здоровье, с которым начинать проигрывать травмированную анимацию
+	DamagedThreshold					= 0.2
+	damage								= m_flesh_damage
+
+	critical_wound_threshold			= 0.4
+	critical_wound_decrease_quant		= 0.0
+
+	critical_wound_anim_head			= critical_hit_head_0
+	critical_wound_bones_head			= flesh_critical_wound_bones_head
+
+	critical_wound_anim_torso			= critical_hit_torso_0
+	critical_wound_bones_torso			= flesh_critical_wound_bones_torso
+
+	critical_wound_anim_legs			= critical_hit_torso_0
+	critical_wound_bones_legs			= flesh_critical_wound_bones_legs
+
+
 
 
 
@@ -199,63 +233,24 @@ weapon_usage		= 0						; boolean
 
 killer_clsids			= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
-
-
-;---------------------------------------------------------
-; Vision
-;---------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-luminocity_factor			= 0.5 				; фактор освещения (только для Актёра)
-transparency_threshold		= 0.25
-
-;-------------------------------------------------------------------------
-; Morale
-;-------------------------------------------------------------------------
-
-Morale_Hit_Quant				= 0.1
-Morale_Attack_Success_Quant		= 0.1
-Morale_Take_Heart_Speed			= 0.1
-Morale_Despondent_Speed			= 0.1
-Morale_Stable_Speed				= 0.01
-Morale_Despondent_Threashold	= 0.5
-
 ;-------------------------------------------------------------------------
 ; Other Stuff (refactoring needed)
 ;-------------------------------------------------------------------------
 
-critical_wound_threshold		= 0.4
-critical_wound_decrease_quant	= 0.
 
-critical_wound_anim_head	= critical_hit_head_0
-critical_wound_bones_head	= flesh_critical_wound_bones_head
 
-critical_wound_anim_torso	= critical_hit_torso_0
-critical_wound_bones_torso	= flesh_critical_wound_bones_torso
 
-critical_wound_anim_legs	= critical_hit_torso_0
-critical_wound_bones_legs	= flesh_critical_wound_bones_legs
+
 
 
 
 selector_approach	=      20.0,            1.0,                1000.0,             0.0,               0.0,						1000.0,				10000.0,      
 
-DamagedThreshold	= 0.2
+
 
 step_params			= m_flesh_step_params
 LegsCount			= 4
-damage				= m_flesh_damage
+
 
 ;=================================================================================
 ; Flesh Damage

@@ -54,6 +54,12 @@
 	panic_threshold						= 0.1
 
 	;--------------------------------------------------------------------------
+	; Attack parameters
+	;--------------------------------------------------------------------------
+	hit_power							= 5.0
+	hit_type							= wound
+
+	;--------------------------------------------------------------------------
 	; Entity conditions
 	;--------------------------------------------------------------------------
 	satiety_v							= 0.0001											;скорость уменьшения сытости со временем [0...1]
@@ -91,6 +97,7 @@
 
 	DynamicObjectsCount					= 32												;количество видимых объектов, которые может обрабатывать монстр
 
+	transparency_threshold				= 1.0
 
 
 
@@ -101,13 +108,6 @@
 
 
 
-retreat_threshold	 = 0.2
-
-
-
-hit_power			 = 5
-hit_type			 = wound
-transparency_threshold	 = 1.0
 
 DynamicSoundsCount	 = 32
 
@@ -119,48 +119,13 @@ bone_torso		     = bip01_spine1 		; bone name
 bone_head		     = bip01_head		; bone name
 weapon_usage		     = 0			; boolean
 
-EyeYShift		     = .15			; meters
-
-MinVoiceInterval	     =  30000			; milliseconds
-MaxVoiceInterval	     = 120000			; milliseconds
-VoiceRefreshRate	     =   2500			; milliseconds
-
-ChangeActiveStateProbability = 1.0 			; range [0..1]
-ActiveCountPercent	     =   16				; percents
-StandingCountPercent	 =   16				; percents
-PassiveScheduleMin	     =  100				; microseconds
-PassiveScheduleMax       = 1000				; microseconds
-
-LostMemoryTime		     = 20000			; milliseconds
-LostRecoilTime		     =  2000			; milliseconds
-UnderFireDistance	     =   100			; meters
-RetreatTime				 = 10000			; milliseconds
-RetreatDistance		     =   100			; meters
-AttackStraightDistance	 =    10			; meters
-StableDistance		     =     5			; meters
-WallMinTurnValue	     =    90 			; degrees
-WallMaxTurnValue	     =   270			; degrees
-
-AngleSpeed				 = 0.2	            ; degrees per second
-GoalChangeDelta	 	     = 10.0				; seconds
-GoalVariation	  	     = 10.0, 0.0, 20.0	; each coordinate in meters
-AngularStandSpeed		 = 360				; degrees
-AngularMinSpeed			 = 360				; degrees
-AngularMaxSpeed			 = 30				; degrees
-AngularAttackSpeed		 = 10				; degrees
-
-MoraleDeathDistance	     = 50				; meters
-
-
-ActionRefreshRate	     = 500			; milliseconds
-
 corp_mass				 = 500			;
 
 ;inventory item information
 cost			= 0
 inv_name		= "dead rat"
 inv_name_short	= "rat"
-inv_weight		= 1.0	;.5
+inv_weight		= 1.0
 
 
 inv_grid_width		= 1
@@ -171,7 +136,7 @@ inv_weight			= 0.5
 food_value			= 10
 
 ; eatable item
-eat_health = -0.1										
+eat_health = -0.1
 eat_satiety = 0.2
 eat_power = -0.05
 eat_radiation = 0.01	;0.03;

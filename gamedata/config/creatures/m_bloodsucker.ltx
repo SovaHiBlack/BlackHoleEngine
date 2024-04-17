@@ -194,6 +194,8 @@
 	eye_range							= 80.0
 
 	DynamicObjectsCount					= 32												;количество видимых объектов, которые может обрабатывать монстр
+
+	transparency_threshold				= 0.25
 	min_view_distance					= 0.4												;коэффициент, который множится на eye_range, в зависимости от угла
 	max_view_distance					= 1.0												;коэффициент, который множится на eye_range, в зависимости от угла
 	visibility_threshold				= 100.0												;значение, при достижении суммой которого объект считается видимым
@@ -201,41 +203,7 @@
 	time_quant							= 0.001
 	decrease_value						= 0.01												;значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
 	velocity_factor						= 0.5
-
-
-
-
-
-	bone_head							= bip01_head									;bone name
-	bone_fire							= bip01_head
-	weapon_usage						= 0												;boolean
-
-	;Health from which to play injured animation
-	DamagedThreshold					= 0.1
-
-
-
-	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
-
-
-
-	;--------------------------------------------------------------------------
-	; Vision
-	;--------------------------------------------------------------------------
-
-
-
-
-
-
-	
-
-
-
-
-
-	luminocity_factor					= 0.5											;фактор освещения (только для Актёра)
-	transparency_threshold				= 0.25
+	luminocity_factor					= 0.5												;фактор освещения (только для Актёра)
 
 	;--------------------------------------------------------------------------
 	; Morale
@@ -250,6 +218,8 @@
 	;--------------------------------------------------------------------------
 	; Damages
 	;--------------------------------------------------------------------------
+	;Здоровье, с которым начинать проигрывать травмированную анимацию
+	DamagedThreshold					= 0.1
 	damage								= m_bloodsucker_damage
 
 	critical_wound_threshold			= -1.0
@@ -263,6 +233,35 @@
 
 	critical_wound_anim_legs			= critical_hit_torso_0
 	critical_wound_bones_legs			= bloodsucker_critical_wound_bones_legs
+
+
+
+
+
+
+
+
+
+	bone_head							= bip01_head									;bone name
+	bone_fire							= bip01_head
+	weapon_usage						= 0												;boolean
+
+	;Health from which to play injured animation
+
+
+
+
+	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
+
+	;--------------------------------------------------------------------------
+	; Damages
+	;--------------------------------------------------------------------------
+
+
+
+
+
+
 
 	;--------------------------------------------------------------------------
 	; Other Stuff (refactoring needed)

@@ -25,7 +25,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on2_1 -->
@@ -52,7 +52,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on2_2 -->
@@ -79,7 +79,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_1 -->
@@ -106,7 +106,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_2 -->
@@ -133,7 +133,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_3 -->
@@ -160,7 +160,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- KILLERS -->
@@ -188,7 +188,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on2_1 -->
@@ -215,7 +215,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on2_2 -->
@@ -242,7 +242,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_1 -->
@@ -270,7 +270,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_2 -->
@@ -297,7 +297,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_3 -->
@@ -324,7 +324,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- FREEDOM -->
@@ -353,7 +353,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on2_1 -->
@@ -380,7 +380,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on2_2 -->
@@ -407,7 +407,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_1 -->
@@ -435,7 +435,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_2 -->
@@ -462,7 +462,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_3 -->
@@ -489,7 +489,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- Спец. бой -->
@@ -517,7 +517,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- DOLG -->
@@ -546,7 +546,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on2_1 -->
@@ -573,7 +573,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on2_2 -->
@@ -600,7 +600,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_1 -->
@@ -628,7 +628,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_2 -->
@@ -655,7 +655,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_3 -->
@@ -682,7 +682,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- Спец. бой -->
@@ -708,7 +708,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_2.xml"
+#include "gameplay\character_criticals_2.xml"
 	</specific_character>
 
 	<!-- NEUTRAL -->
@@ -737,7 +737,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on2_1 -->
@@ -764,7 +764,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on2_2 -->
@@ -791,7 +791,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_1 -->
@@ -819,7 +819,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_2 -->
@@ -846,7 +846,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- 1on3_3 -->
@@ -873,7 +873,7 @@
 			device_torch = 1 \n
 		</supplies>
 
-		#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals_6.xml"
 	</specific_character>
 
 	<!-- Спецбой -->
@@ -897,7 +897,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_2.xml"
+#include "gameplay\character_criticals_2.xml"
 	</specific_character>
 
 	<!-- BANDIT -->
@@ -923,7 +923,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals_4.xml"
 	</specific_character>
 
 	<!-- 1on2_1 -->
@@ -948,7 +948,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals_4.xml"
 	</specific_character>
 
 	<!-- 1on2_2 -->
@@ -973,7 +973,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals_4.xml"
 	</specific_character>
 
 	<!-- 1on3_1 -->
@@ -998,7 +998,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals_4.xml"
 	</specific_character>
 
 	<!-- 1on3_2 -->
@@ -1023,7 +1023,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals_4.xml"
 	</specific_character>
 
 	<!-- 1on3_3 -->
@@ -1048,7 +1048,7 @@
 			device_torch \n
 		</supplies>
 
-		#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals_4.xml"
 	</specific_character>
 
 	<!-- NEW_MANAGERS -->
@@ -1073,11 +1073,12 @@
 			[spawn] \n
 			wpn_val_arena = 1 \n
 			ammo_9x39_sp5 = 1 \n
-			#include "gameplay\character_food.xml"
-			#include "gameplay\character_drugs.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
 		</supplies>
 
-		#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals_4.xml"
+
 		<start_dialog>bar_arena_man_start</start_dialog>
 		<actor_dialog>bar_arena_man_job</actor_dialog>
 		<actor_dialog>bar_arena_man_fights</actor_dialog>
@@ -1105,11 +1106,12 @@
 			[spawn] \n
 			wpn_groza = 1 \n
 			ammo_9x39_sp5 = 1 \n
-			#include "gameplay\character_food.xml"
-			#include "gameplay\character_drugs.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
 		</supplies>
 
-		#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals_4.xml"
+
 		<start_dialog>bar_arena_man_start</start_dialog>
 		<actor_dialog>bar_arena_man_job</actor_dialog>
 		<actor_dialog>bar_arena_man_fights</actor_dialog>
@@ -1137,11 +1139,12 @@
 			[spawn] \n
 			wpn_abakan = 1 \n
 			ammo_5.45x39_fmj = 1 \n
-			#include "gameplay\character_food.xml"
-			#include "gameplay\character_drugs.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
 		</supplies>
 
-		#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals_4.xml"
+
 		<start_dialog>bar_arena_man_start</start_dialog>
 		<actor_dialog>bar_arena_man_job</actor_dialog>
 		<actor_dialog>bar_arena_man_fights</actor_dialog>
@@ -1169,11 +1172,12 @@
 			[spawn] \n
 			wpn_ak74 = 1 \n
 			ammo_5.45x39_fmj = 1 \n
-			#include "gameplay\character_food.xml"
-			#include "gameplay\character_drugs.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
 		</supplies>
 
-		#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals_4.xml"
+
 		<start_dialog>bar_arena_man_start</start_dialog>
 		<actor_dialog>bar_arena_man_job</actor_dialog>
 		<actor_dialog>bar_arena_man_fights</actor_dialog>
@@ -1201,11 +1205,12 @@
 			[spawn] \n
 			wpn_ak74u = 1 \n
 			ammo_5.45x39_fmj = 1 \n
-			#include "gameplay\character_food.xml"
-			#include "gameplay\character_drugs.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
 		</supplies>
 
-		#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals_4.xml"
+
 		<start_dialog>bar_arena_man_start</start_dialog>
 		<actor_dialog>bar_arena_man_job</actor_dialog>
 		<actor_dialog>bar_arena_man_fights</actor_dialog>
@@ -1233,17 +1238,16 @@
 			[spawn] \n
 			wpn_lr300 = 1 \n
 			ammo_5.56x45_ap = 1 \n
-			#include "gameplay\character_food.xml"
-			#include "gameplay\character_drugs.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
 		</supplies>
 
-		#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals_4.xml"
 
 		<start_dialog>bar_arena_man_start</start_dialog>
 		<actor_dialog>bar_arena_man_job</actor_dialog>
 		<actor_dialog>bar_arena_man_fights</actor_dialog>
 		<actor_dialog>bar_arena_man_extra</actor_dialog>
-
-		#include "gameplay\character_dialogs.xml"
+#include "gameplay\character_dialogs.xml"
 	</specific_character>
 </xml>

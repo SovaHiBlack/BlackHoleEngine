@@ -5401,9 +5401,6 @@
     <Xml Include="Config\text\rus\stable_dialogs.xml">
       <Filter>config\text\rus\other</Filter>
     </Xml>
-    <Xml Include="Config\text\rus\stable_dialogs_test.xml">
-      <Filter>config\text\rus\other</Filter>
-    </Xml>
     <Xml Include="Config\text\rus\stable_generate_fnames.xml">
       <Filter>config\text\rus\other</Filter>
     </Xml>
@@ -5474,9 +5471,6 @@
       <Filter>config\text\rus\other\l10_radar</Filter>
     </Xml>
     <Xml Include="Config\text\rus\stable_storyline_info_sarcofag.xml">
-      <Filter>config\text\rus\other\L12u_sarcofag</Filter>
-    </Xml>
-    <Xml Include="Config\text\rus\string_table_mapspots_sarcofag.xml">
       <Filter>config\text\rus\other\L12u_sarcofag</Filter>
     </Xml>
     <Xml Include="Config\text\rus\string_table_tasks_sarcofag.xml">
@@ -5582,9 +5576,6 @@
       <Filter>config\text\rus\other\l06_yantar</Filter>
     </Xml>
     <Xml Include="config\text\rus\stable_storyline_info_yantar.xml">
-      <Filter>config\text\rus\other\l06_yantar</Filter>
-    </Xml>
-    <Xml Include="Config\text\rus\string_table_mapspots_yantar.xml">
       <Filter>config\text\rus\other\l06_yantar</Filter>
     </Xml>
     <Xml Include="Config\text\rus\string_table_tasks_yantar.xml">

@@ -239,31 +239,10 @@
 	LegsCount							= 4
 	step_params							= m_dog_step_params
 
-
-
-
-
-
-
-
-
-
-
-;-------------------------------------------------------------------------
-; Other Stuff (refactoring needed)
-;-------------------------------------------------------------------------
-
-
-
-
-
-
-
 ;===========================================================================
 ; Attack Animation Parameters
 ;===========================================================================
 [m_dog_attack_params]
-
 ;---------------------------------------------------------------------------------------------------------------------------------------------------------
 ;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist|
 ;---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -275,7 +254,6 @@ stand_attack_2 =	  	0.45,		0.25,	    50,        0.0, 1.0, 0.0,		 -1.6, 1.6, -1.6
 stand_attack_3 =	  	0.45,		0.25,	    50,        0.0, 1.0, 0.0,		 -1.6, 1.6, -1.6, 1.6,				 3.5
 
 [m_dog_attack_effector]
-
 duality_h		= 0.01
 duality_v		= 0.01
 blur			= 0.01
@@ -340,8 +318,6 @@ bip01_spine1 		= 1.0, -1, 0.5
 bip01_neck 			= 1.0, -1, 1.5
 bip01_head 			= 2.0, -1, 0.5, 10
 
-
-
 [dog_critical_wound_bones_head]
 bip01_neck
 bip01_head
@@ -380,8 +356,6 @@ bip01_r_hand
 bip01_r_finger0
 bip01_r_finger01
 bip01_l_thigh
-
-
 
 ;=================================================================================
 ; DOG Terrain
@@ -431,7 +405,6 @@ stand_attack_1 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 stand_attack_2 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
 stand_attack_3 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
 
-
 ;*********************************************************************************
 ; NORMAL PROFILE
 ;*********************************************************************************
@@ -450,7 +423,6 @@ stand_attack_3 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 
 	attack_params						= dog_attack_params_normal
 	immunities_sect						= dog_immunities_normal
-
 
 [dog_immunities_normal]
 burn_immunity			= 1.0
@@ -493,7 +465,6 @@ stand_attack_3 =	  	0.45,		0.15,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 	attack_params						= dog_attack_params_strong
 	immunities_sect						= dog_immunities_strong
 
-
 [dog_immunities_strong]
 burn_immunity			= 1.0
 strike_immunity			= 1.0
@@ -516,7 +487,6 @@ stand_attack_1 =	  	0.45,		0.20,	    500,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.
 stand_attack_2 =	  	0.45,		0.20,	    500,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
 stand_attack_3 =	  	0.45,		0.20,	    500,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
 
-
 [arena_dog_1]:m_dog_e
 	$spawn								= "monsters\arena\dog_arena1"						;option for Level Editor
 
@@ -532,7 +502,6 @@ stand_attack_3 =	  	0.45,		0.20,	    500,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.
 
 	attack_params						= dog_attack_params_strong
 	immunities_sect						= dog_immunities_strong
-
 
 custom_data = scripts\arena_mob_3.ltx
 
@@ -552,8 +521,6 @@ custom_data = scripts\arena_mob_3.ltx
 	attack_params						= dog_attack_params_strong
 	immunities_sect						= dog_immunities_strong
 
-
-
 custom_data = scripts\arena_mob_4.ltx
 
 [arena_dog_3]:m_dog_e
@@ -567,9 +534,6 @@ custom_data = scripts\arena_mob_4.ltx
 
 	attack_params						= dog_attack_params_strong
 	immunities_sect						= dog_immunities_strong
-
-
-
 
 custom_data = scripts\arena_mob_5.ltx
 
@@ -588,9 +552,5 @@ custom_data = scripts\arena_mob_5.ltx
 
 	attack_params						= dog_attack_params_strong
 	immunities_sect						= dog_immunities_strong
-
-
-
-
 
 custom_data = scripts\arena_mob_6.ltx

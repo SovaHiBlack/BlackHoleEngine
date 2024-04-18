@@ -221,7 +221,7 @@
 	critical_wound_bones_legs			= controller_critical_wound_bones_legs
 
 	psy_hit_damage						= 0.4;
-	tube_damage							= 0.50;
+	tube_damage							= 0.5;
 	tube_at_once						= true
 	tube_min_dist						= 1
 
@@ -347,7 +347,6 @@ ce_power			= 0.7
 ; Psy Attack Effector
 ;==========================================================================================
 [m_controller_attack_effector]
-
 duality_h		= 0.01
 duality_v		= 0.01
 blur			= 0.01
@@ -457,9 +456,8 @@ bip01_head 			= 2.0, -1, 0.5, 10
 	spec_rank							= normal
 	community							= controller
 
-
-tube_at_once		= true
-tube_damage			= 0.50
+	tube_at_once						= true
+	tube_damage							= 0.5
 
 [m_controller_old]:m_controller_e
 	$spawn								= "monsters\controllers\controller_old"				;option for Level Editor
@@ -471,10 +469,8 @@ tube_damage			= 0.50
 	spec_rank							= strong
 	community							= controller
 
-
-
-tube_at_once		= true
-tube_damage			= 0.50
+	tube_at_once						= true
+	tube_damage							= 0.5
 
 [m_controller_old_fat]:m_controller_normal
 	$spawn								= "monsters\controllers\controller_old_fat"			;option for Level Editor
@@ -486,20 +482,16 @@ tube_damage			= 0.50
 	spec_rank							= strong
 	community							= controller
 
-
-
-tube_at_once		= true
-tube_damage			= 0.50
+	tube_at_once						= true
+	tube_damage							= 0.5
 
 [controller_tubeman]:m_controller_normal
 	$spawn								= "monsters\controllers\controller_tubeman"			;option for Level Editor
 
 	satiety_threshold					= 0.6												;ниже этого значения сытости монстр утоляет голод
 
-
-
-tube_at_once		= true
-tube_damage			= 0.50
+	tube_at_once						= true
+	tube_damage							= 0.5
 
 
 [controller_critical_wound_bones_head]
@@ -570,9 +562,7 @@ bip01_r_toe1
 	spec_rank							= normal
 	community							= controller
 
-
-
-tube_at_once		= true
-tube_damage			= 0.50
+	tube_at_once						= true
+	tube_damage							= 0.5
 
 custom_data = scripts\arena_mob_1.ltx

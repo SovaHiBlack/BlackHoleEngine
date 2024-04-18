@@ -1930,7 +1930,6 @@
     <Xml Include="config\text\rus\stable_dialogs_military.xml" />
     <Xml Include="Config\text\rus\stable_dialogs_pripyat.xml" />
     <Xml Include="Config\text\rus\stable_dialogs_radar.xml" />
-    <Xml Include="Config\text\rus\stable_dialogs_test.xml" />
     <Xml Include="Config\text\rus\stable_dialogs_yantar.xml" />
     <Xml Include="Config\text\rus\stable_dialog_manager.xml" />
     <Xml Include="Config\text\rus\stable_dialog_manager_uni.xml" />
@@ -1975,8 +1974,6 @@
     <Xml Include="config\text\rus\string_table_mapspots_military.xml" />
     <Xml Include="Config\text\rus\string_table_mapspots_pripyat.xml" />
     <Xml Include="Config\text\rus\string_table_mapspots_radar.xml" />
-    <Xml Include="Config\text\rus\string_table_mapspots_sarcofag.xml" />
-    <Xml Include="Config\text\rus\string_table_mapspots_yantar.xml" />
     <Xml Include="Config\text\rus\string_table_outfit.xml" />
     <Xml Include="config\text\rus\string_table_tasks_aes.xml" />
     <Xml Include="Config\text\rus\string_table_tasks_agroprom.xml" />

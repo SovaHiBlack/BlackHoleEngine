@@ -143,29 +143,27 @@ bip01_r_toe0	 	 		= 0.0, -1, 0.2
 	eye_left
 	eye_right
 	jaw_1
-	bip01_l_hand	 	 	    
-	bip01_l_finger0	 	 	    
-	bip01_l_finger01	 		
-	bip01_l_finger02	 		
-	bip01_l_finger1	 	 	    
-	bip01_l_finger11	 		
-	bip01_l_finger12	 		
-	bip01_l_finger2	 	 	    
-	bip01_l_finger21	 		
+	bip01_l_hand
+	bip01_l_finger0
+	bip01_l_finger01
+	bip01_l_finger02
+	bip01_l_finger1
+	bip01_l_finger11
+	bip01_l_finger12
+	bip01_l_finger2
+	bip01_l_finger21
 	bip01_l_finger22
-	bip01_r_hand	 	 		
-	bip01_r_finger0	 	 		
-	bip01_r_finger01	 		
-	bip01_r_finger02	 		
-	bip01_r_finger1	 	 		
-	bip01_r_finger11	 		
-	bip01_r_finger12	 		
-	bip01_r_finger2	 	 	 	
-	bip01_r_finger21	 		
-	bip01_r_finger22	 		
+	bip01_r_hand
+	bip01_r_finger0
+	bip01_r_finger01
+	bip01_r_finger02
+	bip01_r_finger1
+	bip01_r_finger11
+	bip01_r_finger12
+	bip01_r_finger2
+	bip01_r_finger21
+	bip01_r_finger22
 	bip01_neck
-	
-	
 
 [critical_wound_torso_section]
 	bip01_pelvis
@@ -174,16 +172,15 @@ bip01_r_toe0	 	 		= 0.0, -1, 0.2
 	bip01_spine1
 	bip01_spine2
 
-
 [critical_wound_hand_left_section]
 	bip01_l_upperarm
-	bip01_l_forearm	
-	bip01_l_clavicle	 		
+	bip01_l_forearm
+	bip01_l_clavicle
 
 [critical_wound_hand_right_section]
 	bip01_r_upperarm
-	bip01_r_forearm	
-	bip01_r_clavicle	 		
+	bip01_r_forearm
+	bip01_r_clavicle
 
 [critical_wound_leg_left_section]
 	bip01_l_thigh
@@ -196,7 +193,7 @@ bip01_r_toe0	 	 		= 0.0, -1, 0.2
 	bip01_r_calf
 	bip01_r_foot
 	bip01_r_toe0
-	
+
 [critical_wound_body_parts_section]
 	head					= critical_wound_head_section
 	torso					= critical_wound_torso_section
@@ -204,7 +201,7 @@ bip01_r_toe0	 	 		= 0.0, -1, 0.2
 	hand_right				= critical_wound_hand_right_section
 	leg_left				= critical_wound_leg_left_section
 	leg_right				= critical_wound_leg_right_section
-  
+
 [stalker_immunities]
 burn_immunity 				= 1.0				;коэффициенты иммунитета 
 strike_immunity 			= 1.0
@@ -214,27 +211,27 @@ radiation_immunity 			= 0.0
 telepatic_immunity 			= 1.0
 chemical_burn_immunity 		= 1.0
 explosion_immunity 			= 1.0
-fire_wound_immunity  		= 1.0 
+fire_wound_immunity  		= 1.0
 wound_2_immunity  			= 1.0
 
 [stalker_condition]
 satiety_v					= 0.00001				;скорость уменьшения сытости со временем
 radiation_v					= 0.0001				;скорость уменьшения радиации
-satiety_power_v				= 0.0005				;увеличение силы при уменьшении сытости 
-satiety_health_v			= 0.0 ;0.0001				;увеличение здоровья при уменьшении сытости 
+satiety_power_v				= 0.0005				;увеличение силы при уменьшении сытости
+satiety_health_v			= 0.0 ;0.0001			;увеличение здоровья при уменьшении сытости
 
 radiation_health_v			= 0.001					;уменьшение здоровья при воздействии радиации
-morale_v					= 0.0001				;скорость восстановления морали 						
+morale_v					= 0.0001				;скорость восстановления морали
 health_hit_part				= 1.0					;процент хита, уходящий на отнимание здоровья
 power_hit_part				= 0.0					;процент хита, уходящий на отнимание силы
-psy_health_v				= 0.01					; скорость восстановления psy-здоровья
+psy_health_v				= 0.01					;скорость восстановления psy-здоровья
 
 ;---LIMPING STATE-----------------------------------------------------
 use_limping_state			= on
 limping_threshold			= 0.0
 
 ;открытые раны
-bleeding_v					= 0.001						;потеря крови при номинальной ране в секунду
+bleeding_v					= 0.001					;потеря крови при номинальной ране в секунду
 wound_incarnation_v			= 0.003					;крутизна кривой заживления (какой процент раны останется после заживления в игровую секунду)
 min_wound_size				= 0.0256
 
@@ -242,7 +239,7 @@ min_wound_size				= 0.0256
 	255,000,255,255
 	008,001,255,255 ;Разрешено ходить по опасным местам на баре
 	012,001,255,255 ;Разрешено ходить по опасным местам на Милитари
-	
+
 [stalker_dolg_terrain]
 	255,000,255,255
 	008,001,255,255 ;Разрешено ходить по опасным местам на баре
@@ -268,8 +265,6 @@ min_wound_size				= 0.0256
 	255,000,255,255
 	010,001,255,255	;Разрешено ходить по опасным местам на янтаре
 
-
-	
 [stalker_movement_speeds]
 	; danger
 	;; crouch
@@ -289,7 +284,7 @@ min_wound_size				= 0.0256
 	danger_stand_walk_backward	= 1.8
 	danger_stand_walk_left		= 2.0
 	danger_stand_walk_right		= 2.0
-	;;; run 
+	;;; run
 	danger_stand_run_forward	= 3.6
 	danger_stand_run_backward	= 3.0
 	danger_stand_run_left		= 2.0
@@ -532,5 +527,5 @@ radiation_immunity 			= 0.0
 telepatic_immunity 			= 0.0
 chemical_burn_immunity 		= 0.0
 explosion_immunity 			= 0.0
-fire_wound_immunity  		= 0.0 
+fire_wound_immunity  		= 0.0
 wound_2_immunity  			= 0.0

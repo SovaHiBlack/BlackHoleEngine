@@ -1,46 +1,35 @@
-<?xml version="1.0" encoding="windows-1251" ?>
+<?xml version='1.0' encoding="windows-1251"?>
 <string_table>
-
 	<string id="ogsm_stuff">
 		<text>Old Good Stalker Mod</text>
 	</string>
-
 	<string id="ogsm_lead">
 		<text>Разработка:</text>
 	</string>
-
 	<string id="ogsm_dexxx">
 		<text>DEXXX\n(идея, скрипты, конфиги, звук, текстуры)\nOffbar (скрипты)</text>
 	</string>
-
 	<string id="ogsm_testers">
 		<text>Тестирование:</text>
 	</string>
-
 	<string id="ogsm_testers_list">
 		<text>darkomen\nkomissar1973\nchimera777\nSirShex</text>
 	</string>
-
 	<string id="ogsm_assist">
 		<text>Особые благодарности:</text>
 	</string>
-
 	<string id="ogsm_assist_list">
 		<text>xStream\nRed75</text>
 	</string>
-
 	<string id="ogsm_assist_list2">
 		<text>а также всем тем, кто поддерживал мод\nс момента его появления</text>
 	</string>
-
 	<string id="ogsm_assist_list3">
 		<text>ну и конечно же GSC Game World за великолепную игру, в ресурсах которой мы теперь так бессовестно копаемся :)</text>
 	</string>
-
 	<string id="ogsm_modders">
 		<text>В моде использованы разработки из:</text>
 	</string>
-
 	<string id="ogsm_modders_1">
 		<text>bug_fix_attempt от bardak</text>
 	</string>
@@ -89,25 +78,21 @@
 	<string id="ogsm_modders_16">
 		<text>AI Pack и прочих замечательных творений от xStream</text>
 	</string>
-
 	<string id="ogsm_forum">
 		<text>Посетите наш форум на</text>
 	</string>
 	<string id="ogsm_link">
 		<text>www.gsc-game.ru</text>
 	</string>
-
 	<string id="ogsm_thanx">
 		<text>Спасибо за игру...</text>
 	</string>
 	<string id="ogsm_freeplay">
 		<text>Чистого Неба вам, Сталкеры :)</text>
 	</string>
-
 	<string id="ogsm_barnaul">
 		<text>©2007-2008 Developed in Barnaul, Russia</text>
 	</string>
-
 	<string id="st_stuff">
 		<text>GSC:</text>
 	</string>
@@ -181,7 +166,7 @@
 		<text>Демиденко</text>
 	</string>
 	<string id="st_zaitsev">
-		<text>Евгений </text>
+		<text>Евгений</text>
 	</string>
 	<string id="st_zaitsev2">
 		<text>Зайцев</text>
@@ -196,16 +181,16 @@
 		<text>Владимир А.</text>
 	</string>
 	<string id="st_efimov2">
-		<text>Ефимов </text>
+		<text>Ефимов</text>
 	</string>
 	<string id="st_shpilevoy">
-		<text>Дмитрий </text>
+		<text>Дмитрий</text>
 	</string>
 	<string id="st_shpilevoy2">
-		<text>Шпилевой </text>
+		<text>Шпилевой</text>
 	</string>
 	<string id="st_suprun">
-		<text>Богдан </text>
+		<text>Богдан</text>
 	</string>
 	<string id="st_suprun2">
 		<text>Супрун</text>
@@ -256,28 +241,28 @@
 		<text>Аниматоры</text>
 	</string>
 	<string id="st_vladimir_korunchak">
-		<text>Владимир </text>
+		<text>Владимир</text>
 	</string>
 	<string id="st_vladimir_korunchak2">
 		<text>Корунчак</text>
 	</string>
 	<string id="st_kravcova">
-		<text>Валерия </text>
+		<text>Валерия</text>
 	</string>
 	<string id="st_kravcova2">
 		<text>Кравцова</text>
 	</string>
 	<string id="st_sergiy_volchanov">
-		<text>Сергей </text>
+		<text>Сергей</text>
 	</string>
 	<string id="st_sergiy_volchanov2">
 		<text>Волчанов</text>
 	</string>
 	<string id="st_olga_volchanova">
-		<text>Ольга </text>
+		<text>Ольга</text>
 	</string>
 	<string id="st_olga_volchanova2">
-		<text>Волчанова </text>
+		<text>Волчанова</text>
 	</string>
 	<string id="st_character_models">
 		<text>Модели персонажей</text>
@@ -292,7 +277,7 @@
 		<text>Гончаренко</text>
 	</string>
 	<string id="st_konovalchuk">
-		<text>Руслан </text>
+		<text>Руслан</text>
 	</string>
 	<string id="st_konovalchuk2">
 		<text>Коновальчук</text>
@@ -301,13 +286,13 @@
 		<text>Текстуры</text>
 	</string>
 	<string id="st_podorvaniy">
-		<text>Анатолий </text>
+		<text>Анатолий</text>
 	</string>
 	<string id="st_podorvaniy2">
-		<text>Подорваный </text>
+		<text>Подорваный</text>
 	</string>
 	<string id="st_kovach">
-		<text>Александр </text>
+		<text>Александр</text>
 	</string>
 	<string id="st_kovach2">
 		<text>Ковач</text>
@@ -316,36 +301,35 @@
 		<text>Интерфейс и графика</text>
 	</string>
 	<string id="st_lukash">
-		<text>Виктор </text>
+		<text>Виктор</text>
 	</string>
 	<string id="st_lukash2">
 		<text>Лукаш</text>
 	</string>
 	<string id="st_khivrenko">
-		<text>Иван </text>
+		<text>Иван</text>
 	</string>
 	<string id="st_khivrenko2">
-		<text>Хивренко </text>
+		<text>Хивренко</text>
 	</string>
 	<string id="st_nesin">
-		<text>Роман </text>
+		<text>Роман</text>
 	</string>
 	<string id="st_nesin2">
 		<text>Несин</text>
 	</string>
 	<string id="st_troekurova">
-		<text>Ольга </text>
+		<text>Ольга</text>
 	</string>
 	<string id="st_troekurova2">
 		<text>Троекурова</text>
 	</string>
 	<string id="st_kotov">
-		<text>Владимир </text>
+		<text>Владимир</text>
 	</string>
 	<string id="st_kotov2">
 		<text>Котов</text>
 	</string>
-
 	<string id="st_programming_department">
 		<text>ОТДЕЛ ПРОГРАММИРОВАНИЯ</text>
 	</string>
@@ -413,43 +397,43 @@
 		<text>наполнения игры и скрипты</text>
 	</string>
 	<string id="st_didenko">
-		<text>Руслан </text>
+		<text>Руслан</text>
 	</string>
 	<string id="st_didenko2">
 		<text>Диденко</text>
 	</string>
 	<string id="st_chugai">
-		<text>Александр </text>
+		<text>Александр</text>
 	</string>
 	<string id="st_chugai2">
 		<text>Чугай</text>
 	</string>
 	<string id="st_fidrya">
-		<text>Андрей </text>
+		<text>Андрей</text>
 	</string>
 	<string id="st_fidrya2">
 		<text>Фидря</text>
 	</string>
 	<string id="st_khryptul">
-		<text>Олег </text>
+		<text>Олег</text>
 	</string>
 	<string id="st_khryptul2">
 		<text>Хриптул</text>
 	</string>
 	<string id="st_eugene_negrobov">
-		<text>Евгений </text>
+		<text>Евгений</text>
 	</string>
 	<string id="st_eugene_negrobov2">
 		<text>Негробов</text>
 	</string>
 	<string id="st_plichko">
-		<text>Александр </text>
+		<text>Александр</text>
 	</string>
 	<string id="st_plichko2">
 		<text>Пличко</text>
 	</string>
 	<string id="st_tunduk">
-		<text>Владимир </text>
+		<text>Владимир</text>
 	</string>
 	<string id="st_tunduk2">
 		<text>Тундук</text>
@@ -458,30 +442,29 @@
 		<text>Дополнительное программирование </text>
 	</string>
 	<string id="st_nikolaev">
-		<text>Андрей </text>
+		<text>Андрей</text>
 	</string>
 	<string id="st_nikolaev2">
-		<text>Николаев </text>
+		<text>Николаев</text>
 	</string>
 	<string id="st_vinnichenko">
-		<text>Сергей </text>
+		<text>Сергей</text>
 	</string>
 	<string id="st_vinnichenko2">
 		<text>Винниченко</text>
 	</string>
 	<string id="st_reutsky">
-		<text>Виктор </text>
+		<text>Виктор</text>
 	</string>
 	<string id="st_reutsky2">
 		<text>Реутский</text>
 	</string>
 	<string id="st_marchenko">
-		<text>Роман </text>
+		<text>Роман</text>
 	</string>
 	<string id="st_marchenko2">
-		<text>Марченко </text>
+		<text>Марченко</text>
 	</string>
-
 	<string id="st_gamedesign_department">
 		<text>ОТДЕЛ</text>
 	</string>
@@ -489,7 +472,7 @@
 		<text>ГЕЙМ-ДИЗАЙНА</text>
 	</string>
 	<string id="st_sityanov">
-		<text>Алексей </text>
+		<text>Алексей</text>
 	</string>
 	<string id="st_sityanov2">
 		<text>Сытьянов</text>
@@ -507,19 +490,19 @@
 		<text>Веретянников</text>
 	</string>
 	<string id="st_verpahovskiy">
-		<text>Андрей </text>
+		<text>Андрей</text>
 	</string>
 	<string id="st_verpahovskiy2">
 		<text>Верпаховский</text>
 	</string>
 	<string id="st_volvach">
-		<text>Денис </text>
+		<text>Денис</text>
 	</string>
 	<string id="st_volvach2">
 		<text>Волвач</text>
 	</string>
 	<string id="st_dushynsky">
-		<text>Петр </text>
+		<text>Петр</text>
 	</string>
 	<string id="st_dushynsky2">
 		<text>Душинский</text>
@@ -531,7 +514,7 @@
 		<text>Константинов</text>
 	</string>
 	<string id="st_kuzmin">
-		<text>Константин </text>
+		<text>Константин</text>
 	</string>
 	<string id="st_kuzmin2">
 		<text>Кузьмин</text>
@@ -543,13 +526,13 @@
 		<text>Лехно</text>
 	</string>
 	<string id="st_nekhaychuk">
-		<text>Константин </text>
+		<text>Константин</text>
 	</string>
 	<string id="st_nekhaychuk2">
 		<text>Нехайчук</text>
 	</string>
 	<string id="st_shyshkin">
-		<text>Роман </text>
+		<text>Роман</text>
 	</string>
 	<string id="st_shyshkin2">
 		<text>Шишкин</text>
@@ -594,34 +577,34 @@
 		<text>ОТДЕЛ КОНТРОЛЯ КАЧЕСТВА</text>
 	</string>
 	<string id="st_dyukov">
-		<text>Петр </text>
+		<text>Петр</text>
 	</string>
 	<string id="st_dyukov2">
 		<text>Дюков</text>
 	</string>
 	<string id="st_krivets">
-		<text>Дмитрий </text>
+		<text>Дмитрий</text>
 	</string>
 	<string id="st_krivets2">
 		<text>Кривец</text>
 	</string>
 	<string id="st_scripal">
-		<text>Юрий </text>
+		<text>Юрий</text>
 	</string>
 	<string id="st_scripal2">
 		<text>Скрипаль</text>
 	</string>
 	<string id="st_bragin">
-		<text>Кирилл </text>
+		<text>Кирилл</text>
 	</string>
 	<string id="st_bragin2">
-		<text>Брагин </text>
+		<text>Брагин</text>
 	</string>
 	<string id="st_naprasniy">
-		<text>Денис </text>
+		<text>Денис</text>
 	</string>
 	<string id="st_naprasniy2">
-		<text>Напрасный </text>
+		<text>Напрасный</text>
 	</string>
 	<string id="st_pr_department">
 		<text>PR ОТДЕЛ</text>
@@ -662,80 +645,77 @@
 	<string id="st_boyko">
 		<text>Виктория Бойко</text>
 	</string>
-
 	<string id="st_russian_voice">
 		<text>Актеры</text>
 	</string>
 	<string id="st_vilkov">
-		<text>Александр  </text>
+		<text>Александр</text>
 	</string>
 	<string id="st_vilkov2">
 		<text>Вилков</text>
 	</string>
 	<string id="st_bogush">
-		<text>Анатолий </text>
+		<text>Анатолий</text>
 	</string>
 	<string id="st_bogush2">
 		<text> Богуш</text>
 	</string>
 	<string id="st_podubinskiy">
-		<text>Андрей  </text>
+		<text>Андрей</text>
 	</string>
 	<string id="st_podubinskiy2">
 		<text>Подубинский</text>
 	</string>
 	<string id="st_girich">
-		<text>Анжелика  </text>
+		<text>Анжелика</text>
 	</string>
 	<string id="st_girich2">
 		<text>Гирич</text>
 	</string>
 	<string id="st_malukha">
-		<text>Евгений  </text>
+		<text>Евгений</text>
 	</string>
 	<string id="st_malukha2">
 		<text>Малуха</text>
 	</string>
 	<string id="st_german">
-		<text>Григорий  </text>
+		<text>Григорий</text>
 	</string>
 	<string id="st_german2">
 		<text>Герман</text>
 	</string>
 	<string id="st_rozin">
-		<text>Иван  </text>
+		<text>Иван</text>
 	</string>
 	<string id="st_rozin2">
 		<text>Розин</text>
 	</string>
 	<string id="st_borisenok">
-		<text>Юрий  </text>
+		<text>Юрий</text>
 	</string>
 	<string id="st_borisenok2">
 		<text> Борисенок</text>
 	</string>
 	<string id="st_stalchuk">
-		<text>Олег  </text>
+		<text>Олег</text>
 	</string>
 	<string id="st_stalchuk2">
 		<text>Стальчук</text>
 	</string>
 	<string id="st_gofurov">
-		<text>Руслан  </text>
+		<text>Руслан</text>
 	</string>
 	<string id="st_gofurov2">
 		<text>Гофуров</text>
 	</string>
 	<string id="st_tereschuk">
-		<text>Владимир  </text>
+		<text>Владимир</text>
 	</string>
 	<string id="st_tereschuk2">
 		<text>Терещук</text>
 	</string>
 
-
-	<!-- THQ  -->
-
+	<!-- THQ -->
 	<string id="st_thq">
 		<text>THQ:</text>
 	</string>
@@ -772,7 +752,6 @@
 	<string id="st_wong">
 		<text>Warren Wong</text>
 	</string>
-
 	<string id="st_testers">
 		<text>Testers</text>
 	</string>
@@ -789,7 +768,7 @@
 		<text>Lopez</text>
 	</string>
 	<string id="st_aarsvold">
-		<text>Andrew </text>
+		<text>Andrew</text>
 	</string>
 	<string id="st_aarsvold2">
 		<text>Aarsvold</text>
@@ -801,16 +780,16 @@
 		<text>Aguilar</text>
 	</string>
 	<string id="st_letwinch">
-		<text>Casey </text>
+		<text>Casey</text>
 	</string>
 	<string id="st_letwinch2">
 		<text>Letwinch</text>
 	</string>
 	<string id="st_wiemer">
-		<text>Dustin  </text>
+		<text>Dustin</text>
 	</string>
 	<string id="st_wiemer2">
-		<text>Wiemer </text>
+		<text>Wiemer</text>
 	</string>
 	<string id="st_deerson">
 		<text>Eric</text>
@@ -837,7 +816,7 @@
 		<text>Fiorentine</text>
 	</string>
 	<string id="st_rand">
-		<text>Herb </text>
+		<text>Herb</text>
 	</string>
 	<string id="st_rand2">
 		<text>Rand</text>
@@ -855,7 +834,7 @@
 		<text>Padovan</text>
 	</string>
 	<string id="st_castaneda">
-		<text>Jose </text>
+		<text>Jose</text>
 	</string>
 	<string id="st_castaneda2">
 		<text>Castaneda</text>
@@ -867,19 +846,19 @@
 		<text>Plianpho</text>
 	</string>
 	<string id="st_moore">
-		<text>Kayron </text>
+		<text>Kayron</text>
 	</string>
 	<string id="st_moore2">
 		<text>Moore</text>
 	</string>
 	<string id="st_heeter">
-		<text>Kevin </text>
+		<text>Kevin</text>
 	</string>
 	<string id="st_heeter2">
 		<text>Heeter</text>
 	</string>
 	<string id="st_oldfield">
-		<text>Matt </text>
+		<text>Matt</text>
 	</string>
 	<string id="st_oldfield2">
 		<text>Oldfield</text>
@@ -891,34 +870,34 @@
 		<text>Mejia</text>
 	</string>
 	<string id="st_donnell">
-		<text>Rory </text>
+		<text>Rory</text>
 	</string>
 	<string id="st_donnell2">
 		<text>O'Donnell</text>
 	</string>
 	<string id="st_escobar">
-		<text>Rudy  </text>
+		<text>Rudy</text>
 	</string>
 	<string id="st_escobar2">
 		<text>Escobar</text>
 	</string>
 	<string id="st_johnson">
-		<text>Ryan  </text>
+		<text>Ryan</text>
 	</string>
 	<string id="st_johnson2">
 		<text>Johnson</text>
 	</string>
 	<string id="st_allman">
-		<text>Scott  </text>
+		<text>Scott</text>
 	</string>
 	<string id="st_allman2">
 		<text>Allman</text>
 	</string>
 	<string id="st_tester">
-		<text>Scott </text>
+		<text>Scott</text>
 	</string>
 	<string id="st_tester2">
-		<text>Tester </text>
+		<text>Tester</text>
 	</string>
 	<string id="st_wright">
 		<text>Selvin</text>
@@ -927,10 +906,10 @@
 		<text>Wright</text>
 	</string>
 	<string id="st_malloy">
-		<text>Steven </text>
+		<text>Steven</text>
 	</string>
 	<string id="st_malloy2">
-		<text>Malloy </text>
+		<text>Malloy</text>
 	</string>
 	<string id="st_thurman">
 		<text>Tim</text>
@@ -939,47 +918,41 @@
 		<text>Thurman</text>
 	</string>
 	<string id="st_fong">
-		<text>Trevor  </text>
+		<text>Trevor</text>
 	</string>
 	<string id="st_fong2">
-		<text>Fong </text>
+		<text>Fong</text>
 	</string>
 	<string id="st_sexton">
-		<text>Walter </text>
+		<text>Walter</text>
 	</string>
 	<string id="st_sexton2">
 		<text>Sexton</text>
 	</string>
 	<string id="st_kemp">
-		<text>Willis </text>
+		<text>Willis</text>
 	</string>
 	<string id="st_kemp2">
 		<text>Kemp</text>
 	</string>
-
 	<string id="st_pc_specialist">
 		<text>PC Specialist</text>
 	</string>
 	<string id="st_gonzalez">
 		<text>Ruben Gonzalez</text>
 	</string>
-
 	<string id="st_bloch">
 		<text>Jonathan Bloch</text>
 	</string>
 	<string id="st_bloch2">
 		<text>Bloch</text>
 	</string>
-
 	<string id="st_leippi">
 		<text>Christopher Leippi</text>
 	</string>
 	<string id="st_leippi2">
 		<text>Leippi</text>
 	</string>
-
-
-
 	<string id="st_pcsupervisor">
 		<text>PC Supervisor</text>
 	</string>
@@ -998,7 +971,6 @@
 	<string id="st_drolet">
 		<text>Justin Drolet</text>
 	</string>
-
 	<string id="st_mastering_lab_supervisor">
 		<text>Mastering Lab Supervisor</text>
 	</string>
@@ -1044,7 +1016,6 @@
 	<string id="st_batarse2">
 		<text>Batarse</text>
 	</string>
-
 	<string id="st_database_administrator">
 		<text>Database Administrator</text>
 	</string>
@@ -1057,7 +1028,6 @@
 	<string id="st_kincaid">
 		<text>Brian Kincaid</text>
 	</string>
-
 	<string id="st_game_evaluation_team">
 		<text>Game Evaluation Team</text>
 	</string>
@@ -1100,7 +1070,6 @@
 	<string id="st_wilson2">
 		<text>Wilson</text>
 	</string>
-
 	<string id="st_qa_operations_coordinator">
 		<text>QA Operations Coordinator</text>
 	</string>
@@ -1113,14 +1082,12 @@
 	<string id="st_waldman">
 		<text>Eve Waldman</text>
 	</string>
-
 	<string id="st_qa_special_thanks">
 		<text>QA Special Thanks</text>
 	</string>
 	<string id="st_wagman">
 		<text>Mark Wagman</text>
 	</string>
-
 	<string id="st_headquarters">
 		<text>HEADQUARTERS</text>
 	</string>
@@ -1142,7 +1109,6 @@
 	<string id="st_flock">
 		<text>Kelly Flock</text>
 	</string>
-
 	<string id="st_product_development">
 		<text>PRODUCT DEVELOPMENT</text>
 	</string>
@@ -1155,7 +1121,6 @@
 	<string id="st_dauterman">
 		<text>Steve Dauterman</text>
 	</string>
-
 	<string id="st_executive_producer">
 		<text>Executive Producer</text>
 	</string>
@@ -1192,14 +1157,12 @@
 	<string id="st_herbertz">
 		<text>Andreas Herbertz</text>
 	</string>
-
 	<string id="st_global_brand_management">
 		<text>GLOBAL BRAND MANAGEMENT</text>
 	</string>
 	<string id="st_aniello">
 		<text>Bob Aniello</text>
 	</string>
-
 	<string id="st_director_global_brand">
 		<text>Director, Global Brand</text>
 	</string>
@@ -1227,7 +1190,6 @@
 	<string id="st_cunis">
 		<text>Guy Cunis</text>
 	</string>
-
 	<string id="st_media_relations_manager">
 		<text>Media Relations Manager</text>
 	</string>
@@ -1243,7 +1205,6 @@
 	<string id="st_mitchell">
 		<text>Craig Mitchell</text>
 	</string>
-
 	<string id="st_legal">
 		<text>Legal</text>
 	</string>
@@ -1271,7 +1232,6 @@
 	<string id="st_kennedy2">
 		<text>Kennedy</text>
 	</string>
-
 	<string id="st_creative_services">
 		<text>CREATIVE SERVICES</text>
 	</string>
@@ -1287,7 +1247,6 @@
 	<string id="st_somdal">
 		<text>Kirk Somdal</text>
 	</string>
-
 	<string id="st_video_production_manager">
 		<text>Video Production Manager</text>
 	</string>
@@ -1300,7 +1259,6 @@
 	<string id="st_rivas">
 		<text>Melissa Rivas</text>
 	</string>
-
 	<string id="st_thq_international">
 		<text>THQ INTERNATIONAL</text>
 	</string>
@@ -1316,7 +1274,6 @@
 	<string id="st_pattison">
 		<text>Michael Pattison</text>
 	</string>
-
 	<string id="st_senior_global_brand_manager">
 		<text>Senior Global Brand Manager</text>
 	</string>
@@ -1335,32 +1292,24 @@
 	<string id="st_newall">
 		<text>Anthony Newall</text>
 	</string>
-
 	<string id="st_online_manager">
 		<text>Online Manager</text>
 	</string>
-
 	<string id="st_huw_beynon">
 		<text>Huw Beynon</text>
 	</string>
-
 	<string id="st_uk_product_manager">
 		<text>UK Product Manager</text>
 	</string>
-
-
 	<string id="st_laura_disney">
 		<text>Laura Disney</text>
 	</string>
-
 	<string id="st_uk_pr_manager">
 		<text>UK PR Manager</text>
 	</string>
-
 	<string id="st_helen_jones">
 		<text>Helen Jones</text>
 	</string>
-
 	<string id="st_export_marketing_manager">
 		<text>Export Marketing Manager</text>
 	</string>
@@ -1382,7 +1331,6 @@
 	<string id="st_reckenthaler">
 		<text>Georg Reckenthaler</text>
 	</string>
-
 	<string id="st_marketing_manager_nordic">
 		<text>Marketing Manager, Nordic</text>
 	</string>
@@ -1407,7 +1355,6 @@
 	<string id="st_benzadon">
 		<text>Jerome Benzadon</text>
 	</string>
-
 	<string id="st_product_manager_spain">
 		<text>Product Manager, Spain</text>
 	</string>
@@ -1426,7 +1373,6 @@
 	<string id="st_wolff">
 		<text>Robin Wolff</text>
 	</string>
-
 	<string id="st_product_manager_asia_pacific">
 		<text>Product Manager, Asia Pacific</text>
 	</string>
@@ -1454,7 +1400,6 @@
 	<string id="st_takahiro_morita">
 		<text>Takahiro Morita</text>
 	</string>
-
 	<string id="st_international_art_director">
 		<text>International Art Director</text>
 	</string>
@@ -1506,7 +1451,6 @@
 	<string id="st_stell2">
 		<text>Stell</text>
 	</string>
-
 	<string id="st_cd_centre">
 		<text>CD PROJEKT LOCALISATION CENTRE</text>
 	</string>
@@ -1531,8 +1475,6 @@
 	<string id="st_stranowski">
 		<text>Marcin Stranowski</text>
 	</string>
-
-
 	<string id="st_cd_testers">
 		<text>Testers</text>
 	</string>
@@ -1663,7 +1605,7 @@
 		<text>Wonko</text>
 	</string>
 	<string id="st_jedrzejewski">
-		<text>Michal </text>
+		<text>Michal</text>
 	</string>
 	<string id="st_jedrzejewski2">
 		<text>Jedrzejewski</text>
@@ -1699,7 +1641,7 @@
 		<text>Dobrodziej</text>
 	</string>
 	<string id="st_rzeznicki">
-		<text>Dominik </text>
+		<text>Dominik</text>
 	</string>
 	<string id="st_rzeznicki2">
 		<text>Rzeznicki</text>
@@ -1711,7 +1653,7 @@
 		<text>Pawlowski</text>
 	</string>
 	<string id="st_chotnicki">
-		<text>Lukasz </text>
+		<text>Lukasz</text>
 	</string>
 	<string id="st_chotnicki2">
 		<text>Chotnicki</text>
@@ -1731,7 +1673,6 @@
 	<string id="st_centkowski">
 		<text>Dariusz Centkowski</text>
 	</string>
-
 	<string id="st_additional_writing">
 		<text>Additional Writing</text>
 	</string>
@@ -1786,7 +1727,6 @@
 	<string id="st_dave_sullivan">
 		<text>Dave Sullivan</text>
 	</string>
-
 	<string id="st_weapons_recorded">
 		<text>Weapons recorded at:</text>
 	</string>
@@ -1802,7 +1742,6 @@
 	<string id="st_disused_pit">
 		<text>Disused Gravel Pit, Bono, Arkansas </text>
 	</string>
-
 	<string id="st_gun">
 		<text>Gun Wranglers:</text>
 	</string>
@@ -1831,8 +1770,7 @@
 		<text>Foley Artists - Andrew Barnabas and Dave Sullivan</text>
 	</string>
 
-	<!-- PLASTIC WAX    -->
-
+	<!-- PLASTIC WAX -->
 	<string id="st_wax">
 		<text>PLASTIC WAX:</text>
 	</string>
@@ -1939,10 +1877,10 @@
 		<text>Animation Lead</text>
 	</string>
 	<string id="st_simper">
-		<text>Damien </text>
+		<text>Damien</text>
 	</string>
 	<string id="st_simper2">
-		<text> Simper</text>
+		<text>Simper</text>
 	</string>
 	<string id="st_wax_animation">
 		<text>Animation</text>
@@ -1954,22 +1892,22 @@
 		<text>Wilson</text>
 	</string>
 	<string id="st_kerrigan">
-		<text>Kate </text>
+		<text>Kate</text>
 	</string>
 	<string id="st_kerrigan2">
-		<text> Kerrigan</text>
+		<text>Kerrigan</text>
 	</string>
 	<string id="st_to">
-		<text>Philip </text>
+		<text>Philip</text>
 	</string>
 	<string id="st_to2">
-		<text> To</text>
+		<text>To</text>
 	</string>
 	<string id="st_willis">
-		<text>Ray </text>
+		<text>Ray</text>
 	</string>
 	<string id="st_willis2">
-		<text> Willis</text>
+		<text>Willis</text>
 	</string>
 	<string id="st_lighting_rendering_lead">
 		<text>Lighting Rendering Lead</text>
@@ -2005,28 +1943,28 @@
 		<text>FX</text>
 	</string>
 	<string id="st_allan">
-		<text>Hugh </text>
+		<text>Hugh</text>
 	</string>
 	<string id="st_allan2">
 		<text> Carrick-Allan</text>
 	</string>
 	<string id="st_cheng">
-		<text>Sidney </text>
+		<text>Sidney</text>
 	</string>
 	<string id="st_cheng2">
-		<text> Cheng</text>
+		<text>Cheng</text>
 	</string>
 	<string id="st_harris">
-		<text>Christopher </text>
+		<text>Christopher</text>
 	</string>
 	<string id="st_harris2">
-		<text> Harris</text>
+		<text>Harris</text>
 	</string>
 	<string id="st_macgowan">
-		<text>Adam </text>
+		<text>Adam</text>
 	</string>
 	<string id="st_macgowan2">
-		<text> MacGowan</text>
+		<text>MacGowan</text>
 	</string>
 	<string id="st_cloth_fx">
 		<text>Cloth FX</text>
@@ -2041,10 +1979,7 @@
 		<text>Stuart Spoard</text>
 	</string>
 
-
-
 	<!-- SPECIAL THANKS -->
-
 	<string id="st_special_thanks">
 		<text>Отдельная благодарность:</text>
 	</string>
@@ -2063,14 +1998,14 @@
 	<string id="st_special_thanks_4">
 		<text>Jason Meyer</text>
 	</string>
-
 	<string id="st_thanks_chernobyl">
 		<text>Генеральному директору ЧАЭС Игорю Грамоткину,</text>
 	</string>
 	<string id="st_thanks_chernobyl2">
 		<text>заместителю технического директора по безопасности ЧАЭС Александру Новикову</text>
 	</string>
-	<string id="st_thanks_chernobyl3">">
+	<string id="st_thanks_chernobyl3">
+		">
 		<text>а также остальному персоналу и администрации Чернобыльской Электростанции за поддержку</text>
 	</string>
 	<string id="st_thanks_administration">
@@ -2080,10 +2015,10 @@
 		<text>проводить наши сумасшедшие исследования</text>
 	</string>
 	<string id="st_thanks_chernobylinterinform">
-		<text>Римме Киселице  , Марине Поляковой</text>
+		<text>Римме Киселице, Марине Поляковой</text>
 	</string>
 	<string id="st_thanks_chernobylinterinform2">
-		<text>и остальному персоналу агентства </text>
+		<text>и остальному персоналу агентства</text>
 	</string>
 	<string id="st_thanks_chernobylinterinform3">
 		<text>Чернобыльинтеринформ за заботу,</text>
@@ -2091,15 +2026,14 @@
 	<string id="st_thanks_chernobylinterinform4">
 		<text>обилие информации и за сытные обеды</text>
 	</string>
-
 	<string id="st_line_horiz">
 		<text>________________</text>
 	</string>
 	<string id="st_line_vert">
 		<text>|</text>
 	</string>
- 	<string id="st_thanks_naumov">
-		<text>Александру Наумову за огромный информационный  </text>
+	<string id="st_thanks_naumov">
+		<text>Александру Наумову за огромный информационный</text>
 	</string>
 	<string id="st_thanks_naumov2">
 		<text>вклад и за его благородную миссию</text>
@@ -2153,7 +2087,6 @@
 	<string id="st_thanks_fanbase8">
 		<text>Николая Дашевского, Abe, Антона Бровко, Mario, fen1x,</text>
 	</string>
-
 	<string id="st_thanks_fanbase9">
 		<text>Диму Кудрявцева, Рубена Коса, Лева Соколова aka Davinci,</text>
 	</string>
@@ -2181,14 +2114,12 @@
 	<string id="st_thanks_fanbase17">
 		<text>Behringer, DA_Star, STALKER Sanek, Дейв Миллер (P R E Y),</text>
 	</string>
-
 	<string id="st_thanks_fanbase18">
 		<text>Goodspeed, Ian_C, Grisly Silence, Midnight Rambler, Dale Oleverio,</text>
 	</string>
 	<string id="st_thanks_fanbase19">
 		<text>ruintertained, UltimateGecko, Snowgim, Franz La Zerte, Chickenballz,</text>
 	</string>
-
 	<string id="st_thanks_fanbase20">
 		<text>Алана Ногуейра да Гаму и всех остальных многочисленных</text>
 	</string>
@@ -2210,11 +2141,9 @@
 	<string id="st_thanks_all4">
 		<text>Ваши благие дела не будут забыты!</text>
 	</string>
-
 	<string id="st_thanks_license1">
 		<text>Мы хотели бы выразить огромную признательность следующим Open-source проектам:</text>
 	</string>
-
 	<string id="st_thanks_license2">
 		<text>ode.org за физический движок (Open Dynamic Engine, ODE)</text>
 	</string>
@@ -2248,15 +2177,12 @@
 	<string id="st_thanks_license12">
 		<text>за его библиотеку fastdelegate (fastdelegate)</text>
 	</string>
-
 	<string id="st_thanks_license13">
 		<text>intelle-soft.com за бесплатную библиотеку отлавливания глюков BugTrap</text>
 	</string>
-
 	<string id="st_thanks_license14">
 		<text>Отдельная благодарность компаниям, которые помогали нам с оптимизацией игры:</text>
 	</string>
-
 	<string id="st_thanks_license15">
 		<text>Intel</text>
 	</string>
@@ -2266,8 +2192,7 @@
 	<string id="st_thanks_license17">
 		<text>nVidia</text>
 	</string>
-
-        <string id="st_ui_art">
+	<string id="st_ui_art">
 		<text>Интерфейс</text>
 	</string>
 	<string id="st_ui_art2">

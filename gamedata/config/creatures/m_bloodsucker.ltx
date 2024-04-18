@@ -234,52 +234,6 @@
 	critical_wound_anim_legs			= critical_hit_torso_0
 	critical_wound_bones_legs			= bloodsucker_critical_wound_bones_legs
 
-
-
-
-
-
-
-
-
-	bone_head							= bip01_head									;bone name
-	bone_fire							= bip01_head
-	weapon_usage						= 0												;boolean
-
-	;Health from which to play injured animation
-
-
-
-
-	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
-
-	;--------------------------------------------------------------------------
-	; Damages
-	;--------------------------------------------------------------------------
-
-
-
-
-
-
-
-	;--------------------------------------------------------------------------
-	; Other Stuff (refactoring needed)
-	;--------------------------------------------------------------------------
-
-
-
-
-
-	;spin spin sugar
-	bone_spin							= bip01_spine1
-
-	;									fSearchRange|fOptEnemyDistance|fOptEnemyDistanceWeight|fMinEnemyDistance|fMinEnemyDistanceWeight|fMaxEnemyDistance|fMaxEnemyDistanceWeight
-	selector_approach					=	20.0,			1.0,				1000.0,					0.0,				0.0,				1000.0,				10000.0
-
-	step_params							= m_bloodsucker_step_params
-	LegsCount							= 2
-
 	;--------------------------------------------------------------------------
 	; Invisible Ability
 	;--------------------------------------------------------------------------
@@ -300,6 +254,44 @@
 	; Predator Ability
 	;--------------------------------------------------------------------------
 	Predator_Visual						= monsters\krovosos\krovosos_xray
+
+	;--------------------------------------------------------------------------
+	; Other
+	;--------------------------------------------------------------------------
+	bone_head							= bip01_head										;bone name
+	bone_spin							= bip01_spine1
+
+	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
+
+	LegsCount							= 2
+	step_params							= m_bloodsucker_step_params
+
+
+
+
+
+
+
+
+	;--------------------------------------------------------------------------
+	; Other Stuff (refactoring needed)
+	;--------------------------------------------------------------------------
+
+
+
+
+
+
+
+	;									fSearchRange|fOptEnemyDistance|fOptEnemyDistanceWeight|fMinEnemyDistance|fMinEnemyDistanceWeight|fMaxEnemyDistance|fMaxEnemyDistanceWeight
+	selector_approach					=	20.0,			1.0,				1000.0,					0.0,				0.0,				1000.0,				10000.0
+
+
+
+
+
+
+
 
 ;==============================================================================
 ; Bloodsucker Damage

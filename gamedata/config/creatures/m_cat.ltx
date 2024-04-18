@@ -206,6 +206,27 @@
 	critical_wound_threshold			= 0.4
 	critical_wound_decrease_quant		= 0.0
 
+	;--------------------------------------------------------------------------
+	; Jump parameters
+	;--------------------------------------------------------------------------
+	jump_delay							= 3000
+	jump_factor							= 2.0
+	jump_ground_trace_range				= 0.8
+	jump_hit_trace_range				= 1.0
+	jump_build_line_distance			= 0.0
+	jump_min_distance					= 3.5
+	jump_max_distance					= 6.0
+	jump_max_angle						= 0.6
+
+	;--------------------------------------------------------------------------
+	; Other
+	;--------------------------------------------------------------------------
+	bone_head							= bip01_head										;bone name
+
+	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
+
+	LegsCount							= 4
+	step_params							= m_cat_step_params
 
 
 
@@ -214,10 +235,6 @@
 
 
 
-bone_torso			 = bip01_spine1 			; bone name
-bone_head			 = bip01_head				; bone name
-bone_fire			 = bip01_head				; bone name
-weapon_usage		 = 0						; boolean
 
 
 
@@ -251,34 +268,12 @@ selector_approach		=      20.0,            1.0,                1000.0,          
 ;							  fSearchRange,fOptEnemyDistance,fOptEnemyDistanceWeight,fMinEnemyDistance,fMinEnemyDistanceWeight,fMaxEnemyDistance,fMaxEnemyDistanceWeight
 selector_walk_around	=      20.0,            6.0,                 1000.0,             4.0,               5000.0,					8.0,				5000.0,      
 
-; Morale
-
-
-
-killer_clsids				= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
-
-
-; jump parameters
-jump_delay					= 3000
-jump_factor					= 2.0
-jump_ground_trace_range		= 0.8
-jump_hit_trace_range		= 1.0
-jump_build_line_distance	= 0.0
-jump_min_distance			= 3.5
-jump_max_distance			= 6.0
-jump_max_angle				= 0.6
-
-
-;-------------------------------------------------------------------------
-; Damages
-;-------------------------------------------------------------------------
 
 
 
 
-step_params				= m_cat_step_params
 
-LegsCount				= 4
+
 
 
 [m_cat_attack_params]
@@ -294,7 +289,6 @@ jump_attack_2		=	0.50,		0.20,			30,		0.0, -0.5,1.0,       -0.6, 0.6, -1.6, 0.6,	
 
 
 [m_cat_attack_effector]
-
 duality_h		= 0.01
 duality_v		= 0.01
 blur			= 0.01

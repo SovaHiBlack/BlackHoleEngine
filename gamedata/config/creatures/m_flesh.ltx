@@ -216,6 +216,15 @@
 	critical_wound_anim_legs			= critical_hit_torso_0
 	critical_wound_bones_legs			= flesh_critical_wound_bones_legs
 
+	;--------------------------------------------------------------------------
+	; Other
+	;--------------------------------------------------------------------------
+	bone_head							= bip01_head										;bone name
+
+	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
+
+	LegsCount							= 4
+	step_params							= m_flesh_step_params
 
 
 
@@ -225,13 +234,8 @@
 
 
 
-bone_torso			= bip01_spine1 			; bone name
-bone_head			= bip01_head				; bone name
-bone_fire			= bip01_head				; bone name
-weapon_usage		= 0						; boolean
 
 
-killer_clsids			= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
 ;-------------------------------------------------------------------------
 ; Other Stuff (refactoring needed)
@@ -248,8 +252,8 @@ selector_approach	=      20.0,            1.0,                1000.0,           
 
 
 
-step_params			= m_flesh_step_params
-LegsCount			= 4
+
+
 
 
 ;=================================================================================
@@ -517,6 +521,4 @@ bip01_l_thigh
 
 	Human								= off												;option for ALife Simulator
 
-
-
-monster_section		= m_flesh_e
+	monster_section						= m_flesh_e

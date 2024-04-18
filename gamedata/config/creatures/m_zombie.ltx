@@ -208,38 +208,23 @@
 	critical_wound_threshold			= 0.2
 	critical_wound_decrease_quant		= 0.0
 
+	;--------------------------------------------------------------------------
+	; Other
+	;--------------------------------------------------------------------------
+	bone_head							= bip01_head										;bone name
 
+	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
+	LegsCount							= 2
+	step_params							= m_zombie_step_params
 
-
-
-
-
-bone_torso			 = bip01_spine1 			; bone name
-bone_head			 = bip01_head				; bone name
-bone_fire			 = bip01_head				; bone name
-weapon_usage		 = 0						; boolean
-
-
-killer_clsids			= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
-
-
-
-
-
-
-FakeDeathCount					= 4		; max count of fake death
-StartFakeDeathHealthThreshold	= 0.6
-
-LegsCount				= 2
-
-step_params				= m_zombie_step_params
-
+	FakeDeathCount						= 4													;max count of fake death
+	StartFakeDeathHealthThreshold		= 0.6
 
 
 [m_zombie_damage]
 ;bone_name		 = <hit_scale>,-1,<wound_scale>
-;<hit_scale>	- коэфф. изменения хита (уменьшения здоровья) 
+;<hit_scale>	- коэфф. изменения хита (уменьшения здоровья)
 ;<wound_scale>	- коэфф. изменения величины открытой раны
 
 default				= 1.0, -1, 0.01

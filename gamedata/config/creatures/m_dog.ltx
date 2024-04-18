@@ -219,37 +219,27 @@
 	critical_wound_anim_legs			= critical_hit_torso_0
 	critical_wound_bones_legs			= dog_critical_wound_bones_legs
 
+	;--------------------------------------------------------------------------
+	; Jump parameters
+	;--------------------------------------------------------------------------
+	jump_delay							= 4000
+	jump_factor							= 1.7
+	jump_hit_trace_range				= 1.0
+	jump_max_angle						= 0.5
+	jump_min_distance					= 4.5
+	jump_max_distance					= 3.0
+
+	;--------------------------------------------------------------------------
+	; Other
+	;--------------------------------------------------------------------------
+	bone_head							= bip01_head										;bone name
+
+	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
+
+	LegsCount							= 4
+	step_params							= m_dog_step_params
 
 
-
-
-
-
-
-bone_torso			 = bip01_spine1 			; bone name
-bone_head			 = bip01_head				; bone name
-bone_fire			 = bip01_head				; bone name
-weapon_usage		 = 0						; boolean
-
-;--------------------------------------------------------------------------
-; Jump parameters
-;--------------------------------------------------------------------------
-jump_factor				= 1.7
-jump_delay				= 4000	;6000	
-jump_min_dist			= 4.5;9.;3.0	;1.5	;4.0 
-jump_max_dist			= 3.0;8.;4.0	;3.0
-jump_max_angle			= 0.5	;1.0	;1.2
-jump_trace_dist			= 1.0
-
-
-
-killer_clsids				= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
-
-
-
-;-------------------------------------------------------------------------
-; Damages
-;-------------------------------------------------------------------------
 
 
 
@@ -265,9 +255,9 @@ killer_clsids				= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
 
 
-step_params			= m_dog_step_params
 
-LegsCount			= 4
+
+
 
 ;===========================================================================
 ; Attack Animation Parameters

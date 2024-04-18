@@ -208,6 +208,28 @@
 	critical_wound_threshold			= -1.0
 	critical_wound_decrease_quant		= 0.0
 
+	;--------------------------------------------------------------------------
+	; Jump parameters
+	;--------------------------------------------------------------------------
+	jump_delay							= 5000
+	jump_factor							= 1.5
+	jump_ground_trace_range				= 1.5
+	jump_hit_trace_range				= 2.0
+	jump_build_line_distance			= 6.0
+	jump_min_distance					= 3.5
+	jump_max_distance					= 10.0
+	jump_max_angle						= 0.6
+	jump_max_height						= 3.5
+
+	;--------------------------------------------------------------------------
+	; Other
+	;--------------------------------------------------------------------------
+	bone_head							= bip01_head										;bone name
+
+	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
+
+	LegsCount							= 2
+	step_params							= m_snork_step_params
 
 
 
@@ -218,47 +240,28 @@
 
 
 
-bone_torso				= bip01_spine1 			; bone name
-bone_head				= bip01_head				; bone name
-bone_fire				= bip01_head				; bone name
-weapon_usage			= 0						; boolean
 
 
-;Health from which to play injured animation
 
-
-killer_clsids			= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
 ;-------------------------------------------------------------------------
 ; Other Stuff (refactoring needed)
 ;-------------------------------------------------------------------------
 
 
-step_params				= m_snork_step_params
-
-
-
-
-
-LegsCount				= 2
 
 
 
 
 
 
-;--------------------------------------------------------------------------
-; Jump parameters
-;--------------------------------------------------------------------------
-jump_delay					= 5000
-jump_factor					= 1.5
-jump_ground_trace_range		= 1.5
-jump_hit_trace_range		= 2.0
-jump_build_line_distance	= 6.0
-jump_min_distance			= 3.5
-jump_max_distance			= 10.0
-jump_max_angle				= 0.6
-jump_max_height				= 3.5
+
+
+
+
+
+
+
 
 ;=================================================================================
 ; SNORK Damage
@@ -476,11 +479,8 @@ stand_attack_2_1 =	  	0.30,		1.00,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6,
 
 	monster_type						= indoor
 
-
-
-
-jump_min_distance			= 2.5
-jump_max_angle				= 0.4
+	jump_min_distance					= 2.5
+	jump_max_angle						= 0.4
 
 [snork_outdoor]:snork_weak
 	$spawn								= "monsters\snorks\snork_outdoor"					;option for Level Editor
@@ -494,16 +494,10 @@ jump_max_angle				= 0.4
 
 	panic_threshold						= 0.05
 
-
-
-; jump parameters
-
-jump_factor					= 1.2
-jump_min_distance			= 3
-jump_max_distance			= 30
-jump_max_angle				= 0.8
-
-
+	jump_factor							= 1.2
+	jump_min_distance					= 3.0
+	jump_max_distance					= 30.0
+	jump_max_angle						= 0.8
 
 [arena_snork_1]:snork_strong
 	$spawn								= "monsters\arena\snork_arena1"						;option for Level Editor

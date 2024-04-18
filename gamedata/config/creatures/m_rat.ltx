@@ -99,11 +99,12 @@
 
 	transparency_threshold				= 1.0
 
+	;--------------------------------------------------------------------------
+	; Other
+	;--------------------------------------------------------------------------
+	bone_head							= bip01_head										;bone name
 
-
-
-
-
+	killer_clsids						= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
 
 
 
@@ -111,13 +112,13 @@
 
 DynamicSoundsCount	 = 32
 
-killer_clsids			= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
+
 
 cost					= 5
 
-bone_torso		     = bip01_spine1 		; bone name
-bone_head		     = bip01_head		; bone name
-weapon_usage		     = 0			; boolean
+
+
+
 
 corp_mass				 = 500			;
 
@@ -126,7 +127,6 @@ cost			= 0
 inv_name		= "dead rat"
 inv_name_short	= "rat"
 inv_weight		= 1.0
-
 
 inv_grid_width		= 1
 inv_grid_height		= 1
@@ -139,7 +139,7 @@ food_value			= 10
 eat_health = -0.1
 eat_satiety = 0.2
 eat_power = -0.05
-eat_radiation = 0.01	;0.03;
+eat_radiation = 0.01
 wounds_heal_perc = 0
 eat_portions_num = -1
 
@@ -175,6 +175,4 @@ fire_wound_immunity  = 1.0
 
 	Human								= off												;option for ALife Simulator
 
-
-
-monster_section      = m_rat_e
+	monster_section						= m_rat_e

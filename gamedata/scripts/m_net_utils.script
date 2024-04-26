@@ -1165,7 +1165,7 @@ function trim(s)
 	return (string.gsub(s, "^%s*(.-)%s*$", "%1"))
 end
 
---/ для правильного парсинга запрещены комментарии!!!
+--' для правильного парсинга запрещены комментарии!!!
 function parse_custom_data(str)
 	local t = {}
 	if str then

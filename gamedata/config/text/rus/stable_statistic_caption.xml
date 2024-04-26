@@ -1,195 +1,195 @@
 	<string id="chimera_weak">
-		<text>С…РёРјРµСЂР°</text>
+		<text>химера</text>
 	</string>
 	<string id="chimera_strong">
-		<text>СЌР»РµРєС‚СЂРѕС…РёРјРµСЂР°</text>
+		<text>электрохимера</text>
 	</string>
 	<string id="tushkano_normal">
-		<text>С‚СѓС€РєР°РЅ</text>
+		<text>тушкан</text>
 	</string>
 	<string id="fracture_weak">
-		<text>РёР·Р»РѕРј</text>
+		<text>излом</text>
 	</string>
 	<string id="cat_weak">
-		<text>РєРѕС‚-Р±Р°СЋРЅ</text>
+		<text>кот-баюн</text>
 	</string>
 	<string id="bandit_experienced">
-		<text>Р±Р°РЅРґРёС‚, РѕРїС‹С‚РЅС‹Р№</text>
+		<text>бандит, опытный</text>
 	</string>
 	<string id="bandit_master">
-		<text>Р±Р°РЅРґРёС‚, РјР°СЃС‚РµСЂ</text>
+		<text>бандит, мастер</text>
 	</string>
 	<string id="bandit_novice">
-		<text>Р±Р°РЅРґРёС‚, РЅРѕРІРёС‡РѕРє</text>
+		<text>бандит, новичок</text>
 	</string>
 	<string id="bandit_veteran">
-		<text>Р±Р°РЅРґРёС‚, РІРµС‚РµСЂР°РЅ</text>
+		<text>бандит, ветеран</text>
 	</string>
 	<string id="bloodsucker_normal">
-		<text>РїРѕРґР·РµРјРЅС‹Р№ РєСЂРѕРІРѕСЃРѕСЃ</text>
+		<text>подземный кровосос</text>
 	</string>
 	<string id="bloodsucker_strong">
-		<text>С‡РµСЂРЅС‹Р№ РєСЂРѕРІРѕСЃРѕСЃ</text>
+		<text>черный кровосос</text>
 	</string>
 	<string id="bloodsucker_weak">
-		<text>РєСЂРѕРІРѕСЃРѕСЃ</text>
+		<text>кровосос</text>
 	</string>
 	<string id="boar_normal">
-		<text>РІР·СЂРѕСЃР»С‹Р№ РєР°Р±Р°РЅ</text>
+		<text>взрослый кабан</text>
 	</string>
 	<string id="boar_strong">
-		<text>РјР°С‚РµСЂС‹Р№ РєР°Р±Р°РЅ</text>
+		<text>матерый кабан</text>
 	</string>
 	<string id="boar_weak">
-		<text>РјРѕР»РѕРґРѕР№ РєР°Р±Р°РЅ</text>
+		<text>молодой кабан</text>
 	</string>
 	<string id="burer_weak">
-		<text>Р±СЋСЂРµСЂ</text>
+		<text>бюрер</text>
 	</string>
 	<string id="burer_strong">
-		<text>РїСЃРё-Р±СЋСЂРµСЂ</text>
+		<text>пси-бюрер</text>
 	</string>
 	<string id="controller_weak">
-		<text>РєРѕРЅС‚СЂРѕР»РµСЂ</text>
+		<text>контролер</text>
 	</string>
 	<string id="dog_normal">
-		<text>РїРµСЃ РєСЂС‹СЃРѕРґР°РІ</text>
+		<text>пес крысодав</text>
 	</string>
 	<string id="dog_strong">
-		<text>СЃРѕР±Р°РєР° Р°Р»СЊР±РёРЅРѕСЃ</text>
+		<text>собака альбинос</text>
 	</string>
 	<string id="dog_weak">
-		<text>РґРёРєРёР№ РїРµСЃ</text>
+		<text>дикий пес</text>
 	</string>
 	<string id="dolg_experienced">
-		<text>"Р”РѕР»Рі", РѕРїС‹С‚РЅС‹Р№</text>
+		<text>"Долг", опытный</text>
 	</string>
 	<string id="dolg_master">
-		<text>"Р”РѕР»Рі", РјР°СЃС‚РµСЂ</text>
+		<text>"Долг", мастер</text>
 	</string>
 	<string id="dolg_veteran">
-		<text>"Р”РѕР»Рі", РІРµС‚РµСЂР°РЅ</text>
+		<text>"Долг", ветеран</text>
 	</string>
 	<string id="ecolog_experienced">
-		<text>СѓС‡РµРЅС‹Р№, РѕРїС‹С‚РЅС‹Р№</text>
+		<text>ученый, опытный</text>
 	</string>
 	<string id="ecolog_novice">
-		<text>СѓС‡РµРЅС‹Р№, РЅРѕРІРёС‡РѕРє</text>
+		<text>ученый, новичок</text>
 	</string>
 	<string id="flesh_normal">
-		<text>Р»РµСЃРЅР°СЏ РїР»РѕС‚СЊ</text>
+		<text>лесная плоть</text>
 	</string>
 	<string id="flesh_strong">
-		<text>Р±РѕР»РѕС‚РЅР°СЏ РїР»РѕС‚СЊ</text>
+		<text>болотная плоть</text>
 	</string>
 	<string id="flesh_weak">
-		<text>СЃС‚РµРїРЅР°СЏ РїР»РѕС‚СЊ</text>
+		<text>степная плоть</text>
 	</string>
 	<string id="freedom_experienced">
-		<text>"РЎРІРѕР±РѕРґР°", РѕРїС‹С‚РЅС‹Р№</text>
+		<text>"Свобода", опытный</text>
 	</string>
 	<string id="freedom_master">
-		<text>"РЎРІРѕР±РѕРґР°", РјР°СЃС‚РµСЂ</text>
+		<text>"Свобода", мастер</text>
 	</string>
 	<string id="freedom_veteran">
-		<text>"РЎРІРѕР±РѕРґР°", РІРµС‚РµСЂР°РЅ</text>
+		<text>"Свобода", ветеран</text>
 	</string>
 	<string id="killer_experienced">
-		<text>РЅР°РµРјРЅРёРє, РѕРїС‹С‚РЅС‹Р№</text>
+		<text>наемник, опытный</text>
 	</string>
 	<string id="killer_master">
-		<text>РЅР°РµРјРЅРёРє, РјР°СЃС‚РµСЂ</text>
+		<text>наемник, мастер</text>
 	</string>
 	<string id="killer_veteran">
-		<text>РЅР°РµРјРЅРёРє, РІРµС‚РµСЂР°РЅ</text>
+		<text>наемник, ветеран</text>
 	</string>
 	<string id="military_experienced">
-		<text>РІРѕРµРЅРЅС‹Р№, СЃРµСЂР¶Р°РЅС‚</text>
+		<text>военный, сержант</text>
 	</string>
 	<string id="military_master">
-		<text>РІРѕРµРЅРЅС‹Р№, РєР°РїРёС‚Р°РЅ</text>
+		<text>военный, капитан</text>
 	</string>
 	<string id="military_novice">
-		<text>РІРѕРµРЅРЅС‹Р№, СЂСЏРґРѕРІРѕР№</text>
+		<text>военный, рядовой</text>
 	</string>
 	<string id="military_veteran">
-		<text>РІРѕРµРЅРЅС‹Р№, Р»РµР№С‚РµРЅР°РЅС‚</text>
+		<text>военный, лейтенант</text>
 	</string>
 	<string id="monolith_experienced">
-		<text>"РњРѕРЅРѕР»РёС‚", РѕРїС‹С‚РЅС‹Р№</text>
+		<text>"Монолит", опытный</text>
 	</string>
 	<string id="monolith_master">
-		<text>"РњРѕРЅРѕР»РёС‚", РјР°СЃС‚РµСЂ</text>
+		<text>"Монолит", мастер</text>
 	</string>
 	<string id="monolith_novice">
-		<text>"РњРѕРЅРѕР»РёС‚", РЅРѕРІРёС‡РѕРє</text>
+		<text>"Монолит", новичок</text>
 	</string>
 	<string id="monolith_veteran">
-		<text>"РњРѕРЅРѕР»РёС‚", РІРµС‚РµСЂР°РЅ</text>
+		<text>"Монолит", ветеран</text>
 	</string>
 	<string id="neutral_experienced">
-		<text>СЃС‚Р°Р»РєРµСЂ, РѕРїС‹С‚РЅС‹Р№</text>
+		<text>сталкер, опытный</text>
 	</string>
 	<string id="neutral_master">
-		<text>СЃС‚Р°Р»РєРµСЂ, РјР°СЃС‚РµСЂ</text>
+		<text>сталкер, мастер</text>
 	</string>
 	<string id="neutral_novice">
-		<text>СЃС‚Р°Р»РєРµСЂ, РЅРѕРІРёС‡РѕРє</text>
+		<text>сталкер, новичок</text>
 	</string>
 	<string id="neutral_veteran">
-		<text>СЃС‚Р°Р»РєРµСЂ, РІРµС‚РµСЂР°РЅ</text>
+		<text>сталкер, ветеран</text>
 	</string>
 	<string id="poltergeist_weak">
-		<text>РїРѕР»С‚РµСЂРіРµР№СЃС‚</text>
+		<text>полтергейст</text>
 	</string>
 	<string id="pseudo_gigant_weak">
-		<text>РїСЃРµРІРґРѕРіРёРіР°РЅС‚</text>
+		<text>псевдогигант</text>
 	</string>
 	<string id="pseudodog_normal">
-		<text>РјР°С‚РµСЂР°СЏ РїСЃРµРІРґРѕСЃРѕР±Р°РєР°</text>
+		<text>матерая псевдособака</text>
 	</string>
 	<string id="pseudodog_strong">
-		<text>СЃРµСЂР°СЏ РїСЃРµРІРґРѕСЃРѕР±Р°РєР°</text>
+		<text>серая псевдособака</text>
 	</string>
 	<string id="pseudodog_weak">
-		<text>РїСЃРµРІРґРѕСЃРѕР±Р°РєР°</text>
+		<text>псевдособака</text>
 	</string>
 	<string id="psy_dog_weak">
-		<text>С‡РµСЂРЅРѕР±С‹Р»СЊСЃРєРёР№ РїС‘СЃ</text>
+		<text>чернобыльский пёс</text>
 	</string>
 	<string id="snork_normal">
-		<text>СЃРЅРѕСЂРє РїР°РґР°Р»СЊС‰РёРє</text>
+		<text>снорк падальщик</text>
 	</string>
 	<string id="snork_strong">
-		<text>СЃРЅРѕСЂРє Р»СЋРґРѕРµРґ</text>
+		<text>снорк людоед</text>
 	</string>
 	<string id="snork_weak">
-		<text>СЃРЅРѕСЂРє</text>
+		<text>снорк</text>
 	</string>
 	<string id="tushkano_weak">
-		<text>С‚СѓС€РєР°РЅ</text>
+		<text>тушкан</text>
 	</string>
 	<string id="zombie_rusty">
-		<text>Р·РѕРјР±Рё-РєР°РјРёРєР°РґР·Рµ</text>
+		<text>зомби-камикадзе</text>
 	</string>
 	<string id="zombie_plague">
-		<text>С‡СѓРјРЅРѕР№ Р·РѕРјР±Рё</text>
+		<text>чумной зомби</text>
 	</string>
 	<string id="zombie_strong">
-		<text>Р·РѕРјР±Рё-РїСЂРёР·СЂР°Рє</text>
+		<text>зомби-призрак</text>
 	</string>
 	<string id="zombie_weak">
-		<text>РіСЂР°Р¶РґР°РЅСЃРєРёР№ Р·РѕРјР±Рё</text>
+		<text>гражданский зомби</text>
 	</string>
 	<string id="zombied_experienced">
-		<text>Р·РѕРјР±РёСЂРѕРІР°РЅРЅС‹Р№, РѕРїС‹С‚РЅС‹Р№</text>
+		<text>зомбированный, опытный</text>
 	</string>
 	<string id="zombied_master">
-		<text>Р·РѕРјР±РёСЂРѕРІР°РЅРЅС‹Р№, РјР°СЃС‚РµСЂ</text>
+		<text>зомбированный, мастер</text>
 	</string>
 	<string id="zombied_novice">
-		<text>Р·РѕРјР±РёСЂРѕРІР°РЅРЅС‹Р№, РЅРѕРІРёС‡РѕРє</text>
+		<text>зомбированный, новичок</text>
 	</string>
 	<string id="zombied_veteran">
-		<text>Р·РѕРјР±РёСЂРѕРІР°РЅРЅС‹Р№, РІРµС‚РµСЂР°РЅ</text>
+		<text>зомбированный, ветеран</text>
 	</string>

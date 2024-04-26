@@ -20,12 +20,10 @@ function numpad:__init(owner) super()
 end
 
 function numpad:__finalize()
-
 end
 
 function numpad:InitControls()
-
-	self:Init(342,199,339,369)			  
+	self:Init(342,199,339,369)
     local xml = CScriptXmlInit()
     xml:ParseFile("ui_numpad_wnd.xml")
 	

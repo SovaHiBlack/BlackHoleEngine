@@ -2027,7 +2027,6 @@
     <Xml Include="config\text\string_table_tasks_escape.xml" />
     <Xml Include="config\text\string_table_tips.xml" />
     <Xml Include="config\text\string_table_ui.xml" />
-    <Xml Include="config\text\test_radar.xml" />
     <Xml Include="config\text\test_string.xml" />
     <Xml Include="config\ui\actor_diary.xml" />
     <Xml Include="Config\ui\actor_statistic.xml" />

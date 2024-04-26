@@ -119,7 +119,7 @@ function parse_creature_packet(ret,stpk,updpk)
   ret.upddir.z=updpk:r_float()
   ret.updteam=updpk:r_u8()
   ret.updsquad=updpk:r_u8()
-  ret.updgroup=updpk:r_u8()  
+  ret.updgroup=updpk:r_u8()
   return ret
 end
 
@@ -130,7 +130,7 @@ function fill_creature_packet(ret,stpk,updpk)
   stpk:w_u8(ret.group)
   stpk:w_float(ret.health)
   writevu32u16(stpk,ret.crvu32u16u1)
-  writevu32u16(stpk,ret.crvu32u16u2)  
+  writevu32u16(stpk,ret.crvu32u16u2)
   stpk:w_u16(ret.killerid)
   writevu8u8(stpk,ret.game_death_time)
 
@@ -184,7 +184,7 @@ function parse_trader_packet(ret,stpk,updpk)
   ret.communityid=stpk:r_s32()
   ret.rank=stpk:r_s32()
   ret.reputation=stpk:r_s32()
-  ret.charname=stpk:r_stringZ()  
+  ret.charname=stpk:r_stringZ()
   return ret
 end
 
@@ -908,7 +908,7 @@ function quotemeta(str)
 	return (string.gsub(s, "[%^%$%(%)%%%.%[%]%*%+%-%?]", "%%%1"))
 end
 
---для правильного парсинга запрещены комментарии!!!
+--' для правильного парсинга запрещены комментарии!!!
 function parse_custom_data(str)
 	local t={}
 	if str then
@@ -919,15 +919,15 @@ function parse_custom_data(str)
 				if string.find(line,"=")~=nil then
 					for k, v in string.gfind(line, "([^=]-)%s*=%s*(.*)") do
 						k = trim(k)
-						if k~=nil and k~='' and v~=nil then 
-							t[section][k]=trim(v) 
+						if k~=nil and k~='' and v~=nil then
+							t[section][k]=trim(v)
 						end
 					end
 				else
 					for k, v in string.gfind(line, "(.*)") do
 						k = trim(k)
 						if k~=nil and k~='' then
-							t[section][k]="<<no_value>>" 
+							t[section][k]="<<no_value>>"
 						end
 					end
 				end
@@ -1002,4 +1002,3 @@ function mylog(msg)
 
 	--end
 end
-

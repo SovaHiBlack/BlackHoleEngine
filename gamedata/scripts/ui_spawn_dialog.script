@@ -51,7 +51,6 @@ function spawn_dialog:SetClGame  (game_cl)
 end
 
 function spawn_dialog:FillList()
-
 	local f = getFS();
 	local flist = f:file_list_open_ex("$game_spawn$",FS.FS_ListFiles,"*.spawn")
 	local f_cnt = flist:Size()
@@ -65,7 +64,6 @@ function spawn_dialog:FillList()
 		--menu_item =  .. 
 		self:AddItemToList(file_name, date_time)
 	end
-	
 end
 
 function spawn_dialog:InitControls()

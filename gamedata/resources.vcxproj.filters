@@ -6358,9 +6358,6 @@
     <Xml Include="config\text\string_table_ui.xml">
       <Filter>config\text</Filter>
     </Xml>
-    <Xml Include="config\text\test_radar.xml">
-      <Filter>config\text</Filter>
-    </Xml>
     <Xml Include="config\text\test_string.xml">
       <Filter>config\text</Filter>
     </Xml>

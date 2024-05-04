@@ -131,9 +131,9 @@ void CAI_Bloodsucker::Load(LPCSTR section)
 	anim().LinkAction(ACT_DRAG,			eAnimWalkBkwd);
 	anim().LinkAction(ACT_ATTACK,		eAnimAttack);
 	anim().LinkAction(ACT_STEAL,		eAnimSteal);
-	anim().LinkAction(ACT_LOOK_AROUND,	eAnimLookAround); 
+	anim().LinkAction(ACT_LOOK_AROUND,	eAnimLookAround);
 
-	#ifdef DEBUG	
+	#ifdef DEBUG
 		anim().accel_chain_test		();
 	#endif
 	
@@ -149,10 +149,8 @@ void CAI_Bloodsucker::Load(LPCSTR section)
 	m_vampire_want_speed			= pSettings->r_float(section,"Vampire_Want_Speed");
 	m_vampire_wound					= pSettings->r_float(section,"Vampire_Wound");
 
-
 	invisible_particle_name			= pSettings->r_string(section,"Particle_Invisible");
 }
-
 
 void CAI_Bloodsucker::reinit()
 {
@@ -192,7 +190,6 @@ void CAI_Bloodsucker::reload(LPCSTR section)
 	sound().add(pSettings->r_string(section,"sound_alien"),						DEFAULT_SAMPLE_COUNT,	SOUND_TYPE_MONSTER_ATTACKING, MonsterSound::eCriticalPriority,	u32(MonsterSound::eCaptureAllChannels),	eAlien,				"bip01_head");
 }
 
-
 void CAI_Bloodsucker::LoadVampirePPEffector(LPCSTR section)
 {
 	pp_vampire_effector.duality.h			= pSettings->r_float(section,"duality_h");
@@ -209,8 +206,7 @@ void CAI_Bloodsucker::LoadVampirePPEffector(LPCSTR section)
 	sscanf(pSettings->r_string(section,"color_add"),	"%f,%f,%f", &pp_vampire_effector.color_add.r,  &pp_vampire_effector.color_add.g,  &pp_vampire_effector.color_add.b);
 }
 
-
-void  CAI_Bloodsucker::BoneCallback(CBoneInstance *B)
+void CAI_Bloodsucker::BoneCallback(CBoneInstance *B)
 {
 	CAI_Bloodsucker*	this_class = static_cast<CAI_Bloodsucker*> (B->Callback_Param);
 

@@ -24,7 +24,7 @@
 	community							= poltergeist
 
 	material							= creatures\large
-	terrain								= poltergeist_terrain
+	terrain								= m_poltergeist_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_radioactive
 
 	script_binding						= bind_monster.bind
@@ -34,8 +34,6 @@
 	;--------------------------------------------------------------------------
 	DayTime_Begin						= 0													;начала дня для монстра
 	DayTime_End							= 21												;конец дня для монстра
-	Min_Satiety							= 0.7												;мин. норма сытости (меньше - уже голодный)
-	Max_Satiety							= 0.95												;макс. норма сытости (больше - очень сытый)
 
 	;--------------------------------------------------------------------------
 	; Offline Alife
@@ -146,7 +144,7 @@
 	distance_to_corpse					= 1.8												;дист. до трупа, при которой он переходит в состояние еды
 
 	;immunities
-	immunities_sect						= poltergeist_immunities
+	immunities_sect						= m_poltergeist_immunities
 
 	;--------------------------------------------------------------------------
 	; Sounds and sound parameters
@@ -232,88 +230,95 @@
 	anger_hunger_threshold				= 0.1
 	anger_loud_threshold				= 0.7
 
+	type								= flamer
 
-
-
-
-
-
-type				= flamer
-
-
+;------------------------------------------------------------------------------
+; Poltergeist Damage
+;------------------------------------------------------------------------------
 [m_poltergeist_damage]
-;bone_name		 = <hit_scale>,-1,<wound_scale>
-;<hit_scale>	- коэфф. изменения хита (уменьшения здоровья)
-;<wound_scale>	- коэфф. изменения величины открытой раны
+	;bone_name							= <hit_scale>, -1, <wound_scale>
+	;										<hit_scale>		- коэфф. изменения хита (уменьшения здоровья)
+	;										<wound_scale>	- коэфф. изменения величины открытой раны
 
-default				= 1.0,	-1,	0.1
+	default								= 1.0, -1, 0.1
+	bip01_pelvis						= 1.0, -1, 0.2
+	bip01_spine							= 1.0, -1, 0.2
+	bip01_spine1						= 1.0, -1, 0.2
+	bip01_neck							= 1.0, -1, 0.5
+	bip01_head							= 2.0, -1, 0.3
 
-bip01_pelvis 		= 1.0, -1, 0.2
-bip01_spine 		= 1.0, -1, 0.2
-bip01_spine1 		= 1.0, -1, 0.2
-bip01_neck 			= 1.0, -1, 0.5
-bip01_head 			= 2.0, -1, 0.3
-
-[m_poltergeist_attack_params]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Left hand Strike
-stand_attack_0	=	  	0.30,		0.20,		    50,        0.0, 1.0, 1.0,		 -1.6, 1.6, -1.6, 1.6,							  3.5
-;Left hand Strike2
-stand_attack_1	=	  	0.30,		0.15,		    50,        0.0, 1.0, 1.0,		 -1.6, 1.6, -1.6, 1.6,							  3.5
-
+;------------------------------------------------------------------------------
+; Special Effector
+;------------------------------------------------------------------------------
 [m_poltergeist_attack_effector]
-duality_h		= 0.01
-duality_v		= 0.01
-blur			= 0.01
-gray			= 0.5
-noise_intensity = 0.0
-noise_grain		= 1
-noise_fps		= 30
-color_base		= 0.65,0.15,0.1
-color_gray		= 0.333,0.333,0.333
-color_add		= 0,0,0
-time			= 0.3
-time_attack		= 0.05		; fade in
-time_release	 = 0.25		; fade out
+	duality_h							= 0.01
+	duality_v							= 0.01
+	gray								= 0.5
+	blur								= 0.01
+	noise_intensity						= 0.0
+	noise_grain							= 1.0
+	noise_fps							= 30.0
+	color_base							= 0.65, 0.15, 0.1
+	color_gray							= 0.333, 0.333, 0.333
+	color_add							= 0.0, 0.0, 0.0
+	time								= 0.3
+	time_attack							= 0.05												;fade in
+	time_release						= 0.25												;fade out
 
-; camera effects
-ce_time				= 0.45 ;time
-ce_amplitude		= -15.0
-ce_period_number	= 1.5 ;2.0
-ce_power			= 1.5 ;0.7 ; power
+	;camera effects
+	ce_time								= 0.45												;time
+	ce_amplitude						= -15.0
+	ce_period_number					= 1.5
+	ce_power							= 1.5												;power
 
-[m_poltergeist_step_params]                ;left             right            right           left
-;------------------------------------------------------------------------------------------------------------------
-;	anim					cycles |	time1 | power1 |	time2 | power2 | time3 | power3 | time4     | power4 |
-;-----------------------------------------------------------------------------------------------------------------
-stand_walk_fwd_0		=   	1,		0.1,      1,	  	0.34,    1,		 0.6,	 1,			0.84,		1
-stand_walk_fwd_dmg_0	=   	1,		0.2,      1,	  	0.25,    1,		 0.5,	 1,			0.7,		1
-stand_run_0				=		1,		0.1,      1,	  	0.3,     1,		 0.5,	 1,			0.55,		1
-stand_run_dmg_0			=		1,		0.2,      1,	  	0.25,    1,		 0.7,	 1,			0.75,		1
+;------------------------------------------------------------------------------
+; Attack Animation Parameters
+;------------------------------------------------------------------------------
+[m_poltergeist_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Left hand Strike
+	stand_attack_0		=	0.3,		0.20,		50,			0.0, 1.0, 1.0,					-1.6, 1.6, -1.6, 1.6,				3.5
+	;Left hand Strike2
+	stand_attack_1		=	0.3,		0.15,		50,			0.0, 1.0, 1.0,					-1.6, 1.6, -1.6, 1.6,				3.5
 
-;===========================================================================
-; TERRAIN
-;===========================================================================
-[poltergeist_terrain]
+;------------------------------------------------------------------------------
+; Step Events
+;------------------------------------------------------------------------------
+	[m_poltergeist_step_params]
+	; order: left, right, right, left
+	;------------------------------------------------------------------------------------------------
+	;		anim		| cycles | time1 | power1 | time2 | power2 | time3 | power3 | time4 | power4
+	;------------------------------------------------------------------------------------------------
+	stand_walk_fwd_0	=	1,		0.1,	1.0,	0.34,	1.0,	0.6,	1.0,		0.84,	1.0
+	stand_walk_fwd_dmg_0=	1,		0.2,	1.0,	0.25,	1.0,	0.5,	1.0,		0.7,	1.0
+	stand_run_0			=	1,		0.1,	1.0,	0.3,	1.0,	0.5,	1.0,		0.55,	1.0
+	stand_run_dmg_0		=	1,		0.2,	1.0,	0.25,	1.0,	0.7,	1.0,		0.75,	1.0
+
+;------------------------------------------------------------------------------
+; Immunities
+;------------------------------------------------------------------------------
+[m_poltergeist_immunities]
+	burn_immunity						= 0.3												;коэффициенты иммунитета
+	strike_immunity						= 0.7
+	shock_immunity						= 0.5
+	wound_immunity						= 0.3
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 1.0
+	fire_wound_immunity					= 1.0
+
+;------------------------------------------------------------------------------
+; Terrain
+;------------------------------------------------------------------------------
+[m_poltergeist_terrain]
 	255,000,255,255
 
-;===========================================================================
-; IMMUNITIES
-;===========================================================================
-[poltergeist_immunities]
-burn_immunity 		= 0.3					;коэффициенты иммунитета
-strike_immunity 	= 0.7
-shock_immunity 		= 0.5
-wound_immunity 		= 0.3
-radiation_immunity 	= 0.0
-telepatic_immunity 	= 1.0
-chemical_burn_immunity 	= 1.0
-explosion_immunity 	= 1.0
-fire_wound_immunity = 1.0
-
-
+;******************************************************************************
+; NORMAL PROFILE
+;******************************************************************************
 [m_poltergeist_normal]:m_poltergeist_e
 	$spawn								= "monsters\poltergeists\poltergeist_normal"		;option for Level Editor
 
@@ -321,9 +326,9 @@ fire_wound_immunity = 1.0
 	spec_rank							= normal
 	community							= poltergeist
 
-;===========================================================================
+;******************************************************************************
 ; TELE
-;===========================================================================
+;******************************************************************************
 [m_poltergeist_normal_tele]:m_poltergeist_normal
 	$spawn								= "monsters\poltergeists\poltergeist_normal_tele"	;option for Level Editor
 
@@ -352,16 +357,17 @@ fire_wound_immunity = 1.0
 	Tele_Delay_Between_Objects_Raise_Time	= 200
 	Tele_Fly_Velocity					= 30
 
+;******************************************************************************
+; TELE OUTDOOR
+;******************************************************************************
 [m_poltergeist_tele_outdoor]:m_poltergeist_normal_tele
 	$spawn								= "monsters\poltergeists\poltergeist_tele_outdoor"	;option for Level Editor
 
 	Tele_Find_Radius					= 12
 
-
-;===========================================================================
-; FLAMER
-;===========================================================================
-
+;******************************************************************************
+; FLAMER NORMAL
+;******************************************************************************
 [m_poltergeist_normal_flame]:m_poltergeist_normal
 	$spawn								= "monsters\poltergeists\poltergeist_normal_flame"	;option for Level Editor
 
@@ -388,7 +394,7 @@ fire_wound_immunity = 1.0
 	flame_aura_radius					= 10
 	flame_scan_radius					= 10
 	flame_scan_sound					= monsters\burer\burer_scan_affect_0
-	flame_scan_effector_section			= m_poltergeist_scan_effector
+	flame_scan_effector_section			= poltergeist_flame_scan_effector
 	flame_scan_delay_min_max			= 5000, 10000
 
 	Particles_Death						= monsters\polter_death_00
@@ -397,36 +403,38 @@ fire_wound_immunity = 1.0
 
 	Sound_Idle							= monsters\poltergeist\fire_idle_0
 
-[m_poltergeist_scan_effector]
-duality_h			= 0.003
-duality_v			= 0.002
-blur				= 1.5
-gray				= 0.3
-noise_intensity		= 0.0
-noise_grain			= 2
-noise_fps			= 8
-color_base			= 0.55,0.5,0.5;0.637,0.442,0.456
-color_gray			= 0.333,0.333,0.333
-color_add			= 0.05,0.0,0.0
-time				= 10.00
-time_attack			= 0.3		; fade in
-time_release		= 0.85		; fade out
+[poltergeist_flame_scan_effector]
+	duality_h							= 0.003
+	duality_v							= 0.002
+	gray								= 0.3
+	blur								= 1.5
+	noise_intensity						= 0.0
+	noise_grain							= 2.0
+	noise_fps							= 8.0
+	color_base							= 0.55, 0.5, 0.5
+	color_gray							= 0.333, 0.333, 0.333
+	color_add							= 0.05, 0.0, 0.0
+	time								= 10.0
+	time_attack							= 0.3												;fade in
+	time_release						= 0.85												;fade out
 
-
+;******************************************************************************
+; FLAMER STRONG
+;******************************************************************************
 [m_poltergeist_strong_flame]:m_poltergeist_normal_flame
 	$spawn								= "monsters\poltergeists\poltergeist_strong_flame"	;option for Level Editor
 
-	immunities_sect						= poltergeist_immunities_strong
+	immunities_sect						= poltergeist_flame_strong_immunities
 
 	flame_hit_value						= 0.7
 
-[poltergeist_immunities_strong]
-burn_immunity 		= 0.3					;коэффициенты иммунитета
-strike_immunity 	= 0.7
-shock_immunity 		= 0.5
-wound_immunity 		= 0.3
-radiation_immunity 	= 0.0
-telepatic_immunity 	= 1.0
-chemical_burn_immunity 	= 1.0
-explosion_immunity 	= 0.3
-fire_wound_immunity = 0.3
+[poltergeist_flame_strong_immunities]
+	burn_immunity						= 0.3												;коэффициенты иммунитета
+	strike_immunity						= 0.7
+	shock_immunity						= 0.5
+	wound_immunity						= 0.3
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.3
+	fire_wound_immunity					= 0.3

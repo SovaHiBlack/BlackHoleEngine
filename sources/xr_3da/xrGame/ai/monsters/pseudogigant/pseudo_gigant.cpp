@@ -34,7 +34,6 @@ CPseudoGigant::~CPseudoGigant()
 	xr_delete(StateMan);
 }
 
-
 void CPseudoGigant::Load(LPCSTR section)
 {
 	inherited::Load	(section);
@@ -123,17 +122,16 @@ void CPseudoGigant::Load(LPCSTR section)
 	anim().AddTransition(PS_STAND,			eAnimSleep,		eAnimStandLieDown,		true);
 	anim().AddTransition(PS_STAND,			PS_LIE,			eAnimStandLieDown,		false);
 
-#ifdef DEBUG	
+#ifdef DEBUG
 	anim().accel_chain_test		();
-#endif
+#endif // def DEBUG
 
-
-	// Load psi postprocess --------------------------------------------------------
+	// Load psi postprocess
 	LPCSTR ppi_section = pSettings->r_string(section, "threaten_effector");
 	m_threaten_effector.ppi.duality.h		= pSettings->r_float(ppi_section,"duality_h");
 	m_threaten_effector.ppi.duality.v		= pSettings->r_float(ppi_section,"duality_v");
-	m_threaten_effector.ppi.gray				= pSettings->r_float(ppi_section,"gray");
-	m_threaten_effector.ppi.blur				= pSettings->r_float(ppi_section,"blur");
+	m_threaten_effector.ppi.gray			= pSettings->r_float(ppi_section,"gray");
+	m_threaten_effector.ppi.blur			= pSettings->r_float(ppi_section,"blur");
 	m_threaten_effector.ppi.noise.intensity	= pSettings->r_float(ppi_section,"noise_intensity");
 	m_threaten_effector.ppi.noise.grain		= pSettings->r_float(ppi_section,"noise_grain");
 	m_threaten_effector.ppi.noise.fps		= pSettings->r_float(ppi_section,"noise_fps");
@@ -143,17 +141,15 @@ void CPseudoGigant::Load(LPCSTR section)
 	sscanf(pSettings->r_string(ppi_section,"color_gray"),	"%f,%f,%f", &m_threaten_effector.ppi.color_gray.r,	&m_threaten_effector.ppi.color_gray.g,	&m_threaten_effector.ppi.color_gray.b);
 	sscanf(pSettings->r_string(ppi_section,"color_add"),	"%f,%f,%f", &m_threaten_effector.ppi.color_add.r,	&m_threaten_effector.ppi.color_add.g,	&m_threaten_effector.ppi.color_add.b);
 
-	m_threaten_effector.time			= pSettings->r_float(ppi_section,"time");
-	m_threaten_effector.time_attack	= pSettings->r_float(ppi_section,"time_attack");
-	m_threaten_effector.time_release	= pSettings->r_float(ppi_section,"time_release");
+	m_threaten_effector.time				= pSettings->r_float(ppi_section,"time");
+	m_threaten_effector.time_attack			= pSettings->r_float(ppi_section,"time_attack");
+	m_threaten_effector.time_release		= pSettings->r_float(ppi_section,"time_release");
 
-	m_threaten_effector.ce_time			= pSettings->r_float(ppi_section,"ce_time");
+	m_threaten_effector.ce_time				= pSettings->r_float(ppi_section,"ce_time");
 	m_threaten_effector.ce_amplitude		= pSettings->r_float(ppi_section,"ce_amplitude");
 	m_threaten_effector.ce_period_number	= pSettings->r_float(ppi_section,"ce_period_number");
 	m_threaten_effector.ce_power			= pSettings->r_float(ppi_section,"ce_power");
-
 	// --------------------------------------------------------------------------------
-	
 
 	::Sound->create(m_sound_threaten_hit,pSettings->r_string(section,"sound_threaten_hit"),		st_Effect,SOUND_TYPE_WORLD);
 	::Sound->create(m_sound_start_threaten,pSettings->r_string(section,"sound_threaten_start"), st_Effect,SOUND_TYPE_MONSTER_ATTACKING);

@@ -336,14 +336,13 @@ void CActor::update_camera (CCameraShotEffector* effector)
 			pACam->pitch += PI_MUL_2;
 		while (pACam->pitch > pACam->lim_pitch[1])
 			pACam->pitch -= PI_MUL_2;
-	};
+	}
 
 	effector->ApplyLastAngles(&(pACam->pitch), &(pACam->yaw));
 
 	if (pACam->bClampYaw)	clamp(pACam->yaw,pACam->lim_yaw[0],pACam->lim_yaw[1]);
 	if (pACam->bClampPitch)	clamp(pACam->pitch,pACam->lim_pitch[0],pACam->lim_pitch[1]);
 }
-
 
 #ifdef DEBUG
 void dbg_draw_frustum (float FOV, float _FAR, float A, Fvector &P, Fvector &D, Fvector &U);
@@ -360,33 +359,7 @@ void CActor::OnRender	()
 
 	inherited::OnRender();
 }
-#endif
-/*
-void CActor::LoadShootingEffector (LPCSTR section)
-{
-
-	if(!m_pShootingEffector) 
-		m_pShootingEffector = xr_new<SShootingEffector>();
-
-
-	m_pShootingEffector->ppi.duality.h		= pSettings->r_float(section,"duality_h");
-	m_pShootingEffector->ppi.duality.v		= pSettings->r_float(section,"duality_v");
-	m_pShootingEffector->ppi.gray				= pSettings->r_float(section,"gray");
-	m_pShootingEffector->ppi.blur				= pSettings->r_float(section,"blur");
-	m_pShootingEffector->ppi.noise.intensity	= pSettings->r_float(section,"noise_intensity");
-	m_pShootingEffector->ppi.noise.grain		= pSettings->r_float(section,"noise_grain");
-	m_pShootingEffector->ppi.noise.fps		= pSettings->r_float(section,"noise_fps");
-	VERIFY(!fis_zero(m_pShootingEffector->ppi.noise.fps));
-
-	sscanf(pSettings->r_string(section,"color_base"),	"%f,%f,%f", &m_pShootingEffector->ppi.color_base.r, &m_pShootingEffector->ppi.color_base.g, &m_pShootingEffector->ppi.color_base.b);
-	sscanf(pSettings->r_string(section,"color_gray"),	"%f,%f,%f", &m_pShootingEffector->ppi.color_gray.r, &m_pShootingEffector->ppi.color_gray.g, &m_pShootingEffector->ppi.color_gray.b);
-	sscanf(pSettings->r_string(section,"color_add"),	"%f,%f,%f", &m_pShootingEffector->ppi.color_add.r,  &m_pShootingEffector->ppi.color_add.g,	&m_pShootingEffector->ppi.color_add.b);
-
-	m_pShootingEffector->time				= pSettings->r_float(section,"time");
-	m_pShootingEffector->time_attack		= pSettings->r_float(section,"time_attack");
-	m_pShootingEffector->time_release		= pSettings->r_float(section,"time_release");
-
-}*/
+#endif // def DEBUG
 
 void CActor::LoadSleepEffector	(LPCSTR section)
 {

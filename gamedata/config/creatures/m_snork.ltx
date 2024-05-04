@@ -21,7 +21,7 @@
 	species								= snork
 
 	material							= creatures\medium
-	terrain								= snork_terrain
+	terrain								= m_snork_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
 
 	Spawn_Inventory_Item_Section		= mutant_snork_leg
@@ -34,8 +34,6 @@
 	;--------------------------------------------------------------------------
 	DayTime_Begin						= 0													;начала дн€ дл€ монстра
 	DayTime_End							= 21												;конец дн€ дл€ монстра
-	Min_Satiety							= 0.4												;мин. норма сытости (меньше - уже голодный)
-	Max_Satiety							= 1.0												;макс. норма сытости (больше - очень сытый)
 
 	;--------------------------------------------------------------------------
 	; Offline Alife
@@ -143,7 +141,7 @@
 	distance_to_corpse					= 1.2												;дист. до трупа, при которой он переходит в состо€ние еды
 
 	;immunities
-	immunities_sect						= snork_immunities
+	immunities_sect						= m_snork_immunities
 
 	;--------------------------------------------------------------------------
 	; Sounds and sound parameters
@@ -231,106 +229,83 @@
 	LegsCount							= 2
 	step_params							= m_snork_step_params
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-;=================================================================================
-; SNORK Damage
-;=================================================================================
+;------------------------------------------------------------------------------
+; Snork Damage
+;------------------------------------------------------------------------------
 [m_snork_damage]
-;bone_name		 = <hit_scale>,-1,<wound_scale>
-;<hit_scale>	- коэфф. изменени€ хита (уменьшени€ здоровь€) 
-;<wound_scale>	- коэфф. изменени€ величины открытой раны
+	;bone_name							= <hit_scale>, -1, <wound_scale>
+	;										<hit_scale>		- коэфф. изменени€ хита (уменьшени€ здоровь€)
+	;										<wound_scale>	- коэфф. изменени€ величины открытой раны
 
-default				= 0.5,	-1,	0.1
+	default								= 0.5, -1, 0.1
+	bip01_pelvis						= 1.0, -1, 0.1
+	bip01_spine							= 1.0, -1, 0.1
+	bip01_spine1						= 1.0, -1, 0.1
+	bip01_neck							= 1.0, -1, 0.5
+	bip01_head							= 2.0, -1, 0.1, 10
 
-bip01_pelvis 		= 1.0, -1, 0.1
-bip01_spine 		= 1.0, -1, 0.1
-bip01_spine1 		= 1.0, -1, 0.1
-bip01_neck 			= 1.0, -1, 0.5
-bip01_head 			= 2.0, -1, 0.1, 10
-
+;------------------------------------------------------------------------------
+; Special Effector
+;------------------------------------------------------------------------------
 [m_snork_attack_effector]
-duality_h			= 0.05;0.01
-duality_v			= 0.02;0.01
-blur				= 0.01
-gray				= 0.5
-noise_intensity		= 0.0
-noise_grain			= 1
-noise_fps			= 30
-color_base			= 0.65,0.15,0.1
-color_gray			= 0.333,0.333,0.333
-color_add			= 0,0,0
-time				= 0.30
-time_attack			= 0.05				; fade in
-time_release	    = 0.15				; fade out
+	duality_h							= 0.05
+	duality_v							= 0.02
+	gray								= 0.5
+	blur								= 0.01
+	noise_intensity						= 0.0
+	noise_grain							= 1.0
+	noise_fps							= 30.0
+	color_base							= 0.65, 0.15, 0.1
+	color_gray							= 0.333, 0.333, 0.333
+	color_add							= 0.0, 0.0, 0.0
+	time								= 0.3
+	time_attack							= 0.05												;fade in
+	time_release						= 0.15												;fade out
 
-; camera effects
-ce_time				= 0.35				; time 
-ce_amplitude		= 10				; head shake after hit
-ce_period_number	= 2.0				; camera shake times
-ce_power			= 2.5; 2.0			; power 
+	;camera effects
+	ce_time								= 0.35												;time
+	ce_amplitude						= 10.0												;head shake after hit
+	ce_period_number					= 2.0												;camera shake times
+	ce_power							= 2.5												;power
 
-;===========================================================================
+;------------------------------------------------------------------------------
 ; Step Events
-;===========================================================================
-[m_snork_step_params]			   
-;-------------------------------------------------------------------------------------------------------------
-;	anim			| Cycles | time1 | power1 | time2 | power2 | time3 | power3 | time4 | power4 |
-;-------------------------------------------------------------------------------------------------------------
-stand_walk_fwd_0 	=	  1,    0.01,   1,		 0.5,     0.7,    0.15,   1.0,     0.5,   1.0
-stand_walk_damaged_0=  	  1,	0.2,    1,	     0.25,    0.7,    0.5,    1.0,     0.7,   1.0
-stand_run_0		 	=  	  1,	0.01,   1,	     0.05,    0.7,    0.2,    1.0,     0.2,   0.2
-stand_run_damaged_0	=	  1,	0.2,    1,	     0.25,    0.7,    0.7,    1.0,     0.7,   1.0
-stand_steal_0		=	  1,	0.2,    1,	     0.25,    0.7,    0.7,    1.0,     0.7,   1.0
-stand_drag_0		=	  1,	0.2,    1,	     0.25,    0.7,    0.7,    1.0,     0.7,   1.0
+;------------------------------------------------------------------------------
+[m_snork_step_params]
+	;------------------------------------------------------------------------------------------------
+	;		anim		| Cycles | time1 | power1 | time2 | power2 | time3 | power3 | time4 | power4
+	;------------------------------------------------------------------------------------------------
+	stand_walk_fwd_0	=	1,		0.01,	1.0,	0.5,	0.7,	0.15,	1.0,		0.5,	1.0
+	stand_walk_damaged_0=	1,		0.2,	1.0,	0.25,	0.7,	0.5,	1.0,		0.7,	1.0
+	stand_run_0			=	1,		0.01,	1.0,	0.05,	0.7,	0.2,	1.0,		0.2,	0.2
+	stand_run_damaged_0	=	1,		0.2,	1.0,	0.25,	0.7,	0.7,	1.0,		0.7,	1.0
+	stand_steal_0		=	1,		0.2,	1.0,	0.25,	0.7,	0.7,	1.0,		0.7,	1.0
+	stand_drag_0		=	1,		0.2,	1.0,	0.25,	0.7,	0.7,	1.0,		0.7,	1.0
 
+;------------------------------------------------------------------------------
+; Immunities
+;------------------------------------------------------------------------------
+[m_snork_immunities]
+	burn_immunity						= 0.8												;коэффициенты иммунитета
+	strike_immunity						= 0.8
+	shock_immunity						= 0.8
+	wound_immunity						= 0.8
+	radiation_immunity					= 0.01
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 0.8
+	explosion_immunity					= 0.8
+	fire_wound_immunity					= 0.18
 
-;===========================================================================
-; IMMUNITIES
-;===========================================================================
-[snork_immunities]
-burn_immunity			= 0.8								;коэффициенты иммунитета 
-strike_immunity			= 0.8
-shock_immunity			= 0.8
-wound_immunity			= 0.8	;0.75	;1.0		
-radiation_immunity		= 0.01	;0.5
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 0.8
-explosion_immunity		= 0.8
-fire_wound_immunity		= 0.18
+;------------------------------------------------------------------------------
+; Terrain
+;------------------------------------------------------------------------------
+[m_snork_terrain]
+	255,000,255,255
+	010,001,255,255																			;ќграниченный доступ на янтаре
 
-
-;*********************************************************************************
+;******************************************************************************
 ; WEAK PROFILE
-;*********************************************************************************
+;******************************************************************************
 [snork_weak]:m_snork_e
 	$spawn								= "monsters\snorks\snork_weak"						;option for Level Editor
 
@@ -340,33 +315,32 @@ fire_wound_immunity		= 0.18
 
 	panic_threshold						= 0.5
 
-	attack_params						= snork_attack_params_weak
-	immunities_sect						= snork_immunities_weak
+	attack_params						= snork_weak_attack_params
+	immunities_sect						= snork_weak_immunities
 
+[snork_weak_immunities]
+	burn_immunity						= 0.4												;коэффициенты иммунитета
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.4
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.8
+	fire_wound_immunity					= 0.3
 
-[snork_immunities_weak]
-burn_immunity			= 0.4								;коэффициенты иммунитета 
-strike_immunity			= 1.0
-shock_immunity			= 1.0
-wound_immunity			= 0.4
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.8
-fire_wound_immunity		= 0.3
-
-[snork_attack_params_weak]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Right Leg Attack
-stand_attack_0 =	  	0.30,		0.20,			30,        0.0, 0.5, 0.5,		-0.3, 0.3, -0.6, 0.6,								2.5
-;Right Hand Attack
-stand_attack_1 =	  	0.30,		0.20,			30,        0.0, 0.5, 0.5,		-0.8, 1.6, -0.6, 0.6,								2.1
-;Right Leg Attack
-;stand_attack_2 =	  	0.30,		0.20,			50,        0.0, 1.0, 2.0,		-1.6, 1.6, -1.6, 1.6,								2.9
-;Jump attack
-stand_attack_2_1 =	  	0.30,		0.50,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6, 1.6,								2.5
+[snork_weak_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, bottom, top) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Right Leg Attack
+	stand_attack_0		=	0.3,		0.2,		30,			0.0, 0.5, 0.5,					-0.3, 0.3, -0.6, 0.6,				2.5
+	;Right Hand Attack
+	stand_attack_1		=	0.3,		0.2,		30,			0.0, 0.5, 0.5,					-0.8, 1.6, -0.6, 0.6,				2.1
+	;Right Leg Attack
+	;stand_attack_2		=	0.3,		0.2,		50,			0.0, 1.0, 2.0,					-1.6, 1.6, -1.6, 1.6,				2.9
+	;Jump attack
+	stand_attack_2_1	=	0.3,		0.5,		70,			0.0, 1.0, 2.0,					-0.8, 0.8, -1.6, 1.6,				2.5
 
 ;*********************************************************************************
 ; NORMAL PROFILE
@@ -380,33 +354,32 @@ stand_attack_2_1 =	  	0.30,		0.50,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6,
 
 	panic_threshold						= 0.2
 
-	attack_params						= snork_attack_params_normal
-	immunities_sect						= snork_immunities_normal
+	attack_params						= snork_normal_attack_params
+	immunities_sect						= snork_normal_immunities
 
+[snork_normal_immunities]
+	burn_immunity						= 0.4								;коэффициенты иммунитета
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.2
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.6
+	fire_wound_immunity					= 0.2
 
-[snork_immunities_normal]
-burn_immunity			= 0.4								;коэффициенты иммунитета
-strike_immunity			= 1.0
-shock_immunity			= 1.0
-wound_immunity			= 0.2
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.6
-fire_wound_immunity		= 0.2
-
-[snork_attack_params_normal]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Right Leg Attack
-stand_attack_0 =	  	0.30,		0.40,			30,        0.0, 0.5, 0.5,		-0.3, 0.3, -0.6, 0.6,								2.5
-;Right Hand Attack
-stand_attack_1 =	  	0.30,		0.40,			30,        0.0, 0.5, 0.5,		-0.8, 1.6, -0.6, 0.6,								2.1
-;Right Leg Attack
-;stand_attack_2 =	  	0.30,		0.40,			50,        0.0, 1.0, 2.0,		-1.6, 1.6, -1.6, 1.6,								2.9
-;Jump attack
-stand_attack_2_1 =	  	0.30,		0.70,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6, 1.6,								2.5
+[snork_normal_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, bottom, top) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Right Leg Attack
+	stand_attack_0		=	0.3,		0.4,		30,			0.0, 0.5, 0.5,					-0.3, 0.3, -0.6, 0.6,				2.5
+	;Right Hand Attack
+	stand_attack_1		=	0.3,		0.4,		30,			0.0, 0.5, 0.5,					-0.8, 1.6, -0.6, 0.6,				2.1
+	;Right Leg Attack
+	;stand_attack_2		=	0.3,		0.4,		50,			0.0, 1.0, 2.0,					-1.6, 1.6, -1.6, 1.6,				2.9
+	;Jump attack
+	stand_attack_2_1	=	0.3,		0.7,		70,			0.0, 1.0, 2.0,					-0.8, 0.8, -1.6, 1.6,				2.5
 
 ;*********************************************************************************
 ; STRONG PROFILE
@@ -420,65 +393,42 @@ stand_attack_2_1 =	  	0.30,		0.70,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6,
 
 	panic_threshold						= 0.05
 
-	attack_params						= snork_attack_params_strong
-	immunities_sect						= snork_immunities_strong
+	attack_params						= snork_strong_attack_params
+	immunities_sect						= snork_strong_immunities
 
+[snork_strong_immunities]
+	burn_immunity						= 0.4												;коэффициенты иммунитета
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.1
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.4
+	fire_wound_immunity					= 0.12
 
-[snork_immunities_strong]
-burn_immunity			= 0.4								;коэффициенты иммунитета 
-strike_immunity			= 1.0
-shock_immunity			= 1.0
-wound_immunity			= 0.1
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.4
-fire_wound_immunity		= 0.12
+[snork_strong_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, bottom, top) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Right Leg Attack
+	stand_attack_0		=	0.3,		0.6,		30,			0.0, 0.5, 0.5,					-0.3, 0.3, -0.6, 0.6,				2.5
+	;Right Hand Attack
+	stand_attack_1		=	0.3,		0.6,		30,			0.0, 0.5, 0.5,					-0.8, 1.6, -0.6, 0.6,				2.1
+	;Right Leg Attack
+	;stand_attack_2		=	0.3,		0.6,		50,			0.0, 1.0, 2.0,					-1.6, 1.6, -1.6, 1.6,				2.9
+	;Jump attack
+	stand_attack_2_1	=	0.3,		1.0,		70,			0.0, 1.0, 2.0,					-0.8, 0.8, -1.6, 1.6,				2.2
 
-[snork_attack_params_strong]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Right Leg Attack
-stand_attack_0 =	  	0.30,		0.60,			30,        0.0, 0.5, 0.5,		-0.3, 0.3, -0.6, 0.6,								2.5
-;Right Hand Attack
-stand_attack_1 =	  	0.30,		0.60,			30,        0.0, 0.5, 0.5,		-0.8, 1.6, -0.6, 0.6,								2.1
-;Right Leg Attack
-;stand_attack_2 =	  	0.30,		0.60,			50,        0.0, 1.0, 2.0,		-1.6, 1.6, -1.6, 1.6,								2.9
-;Jump attack
-stand_attack_2_1 =	  	0.30,		1.00,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6, 1.6,								2.2
-
-
-;=================================================================================
-; Terrain
-;=================================================================================
-[snork_terrain]
-	255,000,255,255
-	010,001,255,255 ;ќграниченный доступ на янтаре
-	
-;*********************************************************************************
+;******************************************************************************
 ; CUSTOM PROFILES
-;*********************************************************************************
-;=======================================================================================
-[aes_snork]:snork_strong
-	$spawn								= "monsters\snorks\snork_aes"						;option for Level Editor
-
-	panic_threshold						= 0.0
-
+;******************************************************************************
 [snork_arena]:snork_strong
 	$spawn								= "monsters\arena\snork_arena"						;option for Level Editor
 
 	species								= arena_monstr
 
 	panic_threshold						= 0.05
-
-[snork_indoor]:snork_weak
-	$spawn								= "monsters\snorks\snork_indoor"					;option for Level Editor
-
-	monster_type						= indoor
-
-	jump_min_distance					= 2.5
-	jump_max_angle						= 0.4
 
 [snork_outdoor]:snork_weak
 	$spawn								= "monsters\snorks\snork_outdoor"					;option for Level Editor
@@ -496,35 +446,3 @@ stand_attack_2_1 =	  	0.30,		1.00,			70,        0.0, 1.0, 2.0,		-0.8, 0.8, -1.6,
 	jump_min_distance					= 3.0
 	jump_max_distance					= 30.0
 	jump_max_angle						= 0.8
-
-[arena_snork_1]:snork_strong
-	$spawn								= "monsters\arena\snork_arena1"						;option for Level Editor
-
-	species								= arena_monstr
-
-	panic_threshold						= 0.05
-
-
-
-custom_data = scripts\arena_mob_1.ltx
-
-[arena_snork_2]:snork_strong
-	$spawn								= "monsters\arena\snork_arena2"						;option for Level Editor
-
-	species								= arena_monstr
-
-	panic_threshold						= 0.05
-
-
-custom_data = scripts\arena_mob_2.ltx
-
-[arena_snork_3]:snork_strong
-	$spawn								= "monsters\arena\snork_arena3"						;option for Level Editor
-
-	species								= arena_monstr
-
-	panic_threshold						= 0.05
-
-
-
-custom_data = scripts\arena_mob_3.ltx

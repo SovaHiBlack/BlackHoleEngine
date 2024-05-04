@@ -1,21 +1,3 @@
---
--- Разработчик: Andrey Fidrya (af@svitonline.com) aka Zmey
--- 
-
---[postprocess_psi]
---duality_h		= 0.02
---duality_v		= 0.01
---blur			= 10
---gray			= 0.5
---noise_intensity = 0.5
---noise_grain		= 1
---noise_fps		= 5
---color_base		= 0.666,0.433,0.0666
---color_gray		= 0.333,0.3330,0.3330
---color_add		= 0.00,0.01,0.00
---radius_min		= 0.5
---radius_max		= 1.1
-
 class "pp_radar" (effector)
 
 function pp_radar:__init(effector_type, start_time, life_time) super(effector_type, start_time)
@@ -24,11 +6,11 @@ function pp_radar:__init(effector_type, start_time, life_time) super(effector_ty
 	self.stop_time = start_time + life_time
 
 	self.percent = 0
-	
+
 	self.duality_h = 0.02
 	self.duality_v = 0.01
-	self.blur = 10
 	self.gray = 0.5
+	self.blur = 10.0
 	self.noise_intensity = 0.5
 	self.noise_grain = 1
 	self.noise_fps = 5
@@ -36,11 +18,11 @@ function pp_radar:__init(effector_type, start_time, life_time) super(effector_ty
 	self.color_base_g = 0.433
 	self.color_base_b = 0.0666
 	self.color_gray_r = 0.333
-	self.color_gray_g = 0.3330
-	self.color_gray_b = 0.3330
-	self.color_add_r = 0.00
+	self.color_gray_g = 0.333
+	self.color_gray_b = 0.333
+	self.color_add_r = 0.0
 	self.color_add_g = 0.01
-	self.color_add_b = 0.00
+	self.color_add_b = 0.0
 	self.radius_min = 0.5
 	self.radius_max = 1.1
 end

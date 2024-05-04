@@ -98,7 +98,7 @@ void CController::Load(LPCSTR section)
 	anim().AddReplacedAnim(&m_bDamaged, eAnimRun,		eAnimRunDamaged);
 	anim().AddReplacedAnim(&m_bDamaged, eAnimWalkFwd,	eAnimWalkDamaged);
 
-	// Load control postprocess --------------------------------------------------------
+	// Load control postprocess
 	LPCSTR ppi_section = pSettings->r_string(section, "control_effector");
 	m_control_effector.ppi.duality.h		= pSettings->r_float(ppi_section,"duality_h");
 	m_control_effector.ppi.duality.v		= pSettings->r_float(ppi_section,"duality_v");
@@ -122,7 +122,7 @@ void CController::Load(LPCSTR section)
 	m_control_effector.ce_period_number	= pSettings->r_float(ppi_section,"ce_period_number");
 	m_control_effector.ce_power			= pSettings->r_float(ppi_section,"ce_power");
 
-	SVelocityParam &velocity_none		= move().get_velocity(MonsterMovement::eVelocityParameterIdle);	
+	SVelocityParam &velocity_none		= move().get_velocity(MonsterMovement::eVelocityParameterIdle);
 	SVelocityParam &velocity_turn		= move().get_velocity(MonsterMovement::eVelocityParameterStand);
 	SVelocityParam &velocity_walk		= move().get_velocity(MonsterMovement::eVelocityParameterWalkNormal);
 	//SVelocityParam &velocity_run		= move().get_velocity(MonsterMovement::eVelocityParameterRunNormal);
@@ -146,11 +146,9 @@ void CController::Load(LPCSTR section)
 	anim().AddAnim(eAnimSteal,			"stand_steal_",			-1, &velocity_steal,	PS_STAND);
 	anim().AddAnim(eAnimCheckCorpse,	"stand_check_corpse_",	-1,	&velocity_none,		PS_STAND);
 	anim().AddAnim(eAnimDie,			"stand_die_",			-1, &velocity_none,		PS_STAND);
-	anim().AddAnim(eAnimStandSitDown,	"stand_sit_down_",		-1, &velocity_none,		PS_STAND);	
+	anim().AddAnim(eAnimStandSitDown,	"stand_sit_down_",		-1, &velocity_none,		PS_STAND);
 	anim().AddAnim(eAnimSitStandUp,		"sit_stand_up_",		-1, &velocity_none,		PS_SIT);
 	anim().AddAnim(eAnimSleep,			"sit_sleep_",			-1, &velocity_none,		PS_SIT);
-
-
 
 	//anim().AddAnim(eAnimStandIdle,		"new_torso_steal_",			-1, &velocity_none,		PS_STAND);
 	//anim().AddAnim(eAnimStandTurnLeft,	"new_torso_steal_",			-1, &velocity_turn,		PS_STAND);

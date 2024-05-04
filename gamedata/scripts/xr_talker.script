@@ -320,24 +320,22 @@ function vector_copy_by_val(vec)
 	return newvec
 end
 
-function set_talker(object, enable)
-	-- 
-	local char_ini = object:spawn_ini()
-	local st = xr_motivator.storage[object:id()].talker
-	if enable == nil then
-	    	if char_ini:section_exist ("talker") == true then
-        		if char_ini:line_exist("talker", "enabled") == true then
-                		st.enabled = char_ini:r_bool("talker", "enabled")
+function set_talker(object,enable)
+	local char_ini=object:spawn_ini()
+	local st=xr_motivator.storage[object:id()].talker
+	if enable==nil then
+		if char_ini:section_exist("talker")==true then
+			if char_ini:line_exist("talker","enabled")==true then
+				st.enabled=char_ini:r_bool("talker","enabled")
 			else
-				st.enabled = false
-		        end
+				st.enabled=false
+			end
 		else
-			st.enabled = false
+			st.enabled=false
 		end
 	else
-		st.enabled = enable		
-	end	
-
+		st.enabled=enable
+	end
 
 	xr_motivator.checkStorage(object)
 end

@@ -21,7 +21,7 @@
 	species								= dog
 
 	material							= creatures\medium
-	terrain								= dogs_terrain
+	terrain								= m_dog_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
 
 	Spawn_Inventory_Item_Section		= mutant_dog_tail
@@ -35,8 +35,6 @@
 	;--------------------------------------------------------------------------
 	DayTime_Begin						= 0													;начала дня для монстра
 	DayTime_End							= 21												;конец дня для монстра
-	Min_Satiety							= 0.5												;мин. норма сытости (меньше - уже голодный)
-	Max_Satiety							= 1.0												;макс. норма сытости (больше - очень сытый)
 
 	;--------------------------------------------------------------------------
 	; Offline Alife
@@ -145,7 +143,7 @@
 	distance_to_corpse					= 1.3												;дист. до трупа, при которой он переходит в состояние еды
 
 	;immunities
-	immunities_sect						= dog_immunities
+	immunities_sect						= m_dog_immunities
 
 	;--------------------------------------------------------------------------
 	; Sounds and sound parameters
@@ -211,13 +209,13 @@
 	critical_wound_decrease_quant		= 0.0
 
 	critical_wound_anim_head			= critical_hit_head_0
-	critical_wound_bones_head			= dog_critical_wound_bones_head
+	critical_wound_bones_head			= m_dog_critical_wound_bones_head
 
 	critical_wound_anim_torso			= critical_hit_torso_0
-	critical_wound_bones_torso			= dog_critical_wound_bones_torso
+	critical_wound_bones_torso			= m_dog_critical_wound_bones_torso
 
 	critical_wound_anim_legs			= critical_hit_torso_0
-	critical_wound_bones_legs			= dog_critical_wound_bones_legs
+	critical_wound_bones_legs			= m_dog_critical_wound_bones_legs
 
 	;--------------------------------------------------------------------------
 	; Jump parameters
@@ -239,133 +237,136 @@
 	LegsCount							= 4
 	step_params							= m_dog_step_params
 
-;===========================================================================
-; Attack Animation Parameters
-;===========================================================================
-[m_dog_attack_params]
-;---------------------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist|
-;---------------------------------------------------------------------------------------------------------------------------------------------------------
-;Bite
-stand_attack_0 =	  	0.35,		0.20,	    30,        0.0, 1.0, 0.0,		 -1.6, 1.6, -1.6, 1.6,				 3.5
-;Both Legs strike with bite
-stand_attack_1 =	  	0.45,		0.25,	    50,        0.0, 1.0, 0.0,		 -1.6, 1.6, -1.6, 1.6,				 3.5
-stand_attack_2 =	  	0.45,		0.25,	    50,        0.0, 1.0, 0.0,		 -1.6, 1.6, -1.6, 1.6,				 3.5
-stand_attack_3 =	  	0.45,		0.25,	    50,        0.0, 1.0, 0.0,		 -1.6, 1.6, -1.6, 1.6,				 3.5
+;------------------------------------------------------------------------------
+; Dog Damage
+;------------------------------------------------------------------------------
+[m_dog_damage]
+	;bone_name							= <hit_scale>, -1, <wound_scale>
+	;										<hit_scale>		- коэфф. изменения хита (уменьшения здоровья)
+	;										<wound_scale>	- коэфф. изменения величины открытой раны
 
+	default								= 0.5, -1, 0.2
+	bip01_pelvis						= 1.0, -1, 0.5
+	bip01_spine							= 1.0, -1, 0.5
+	bip01_spine1						= 1.0, -1, 0.5
+	bip01_neck							= 1.0, -1, 1.5
+	bip01_head							= 2.0, -1, 0.5, 10
+
+[m_dog_critical_wound_bones_head]
+	bip01_neck
+	bip01_head
+	bip01_ponytail2
+
+[m_dog_critical_wound_bones_torso]
+	bip01_pelvis
+	bip01_l_calf
+	bip01_r_calf
+	bip01_spine
+	bip01_spine1
+	bip01_spine2
+	bip01_l_clavicle
+	bip01_r_clavicle
+	bip01_tail
+	bip01_tail1
+	bip01_tail2
+	bip01_tail3
+
+[m_dog_critical_wound_bones_legs]
+	bip01_l_horselink
+	bip01_l_foot
+	bip01_l_toe0
+	bip01_r_thigh
+	bip01_r_horselink
+	bip01_r_foot
+	bip01_r_toe0
+	bip01_l_upperarm
+	bip01_l_forearm
+	bip01_l_hand
+	bip01_l_finger0
+	bip01_l_finger01
+	bip01_r_upperarm
+	bip01_r_forearm
+	bip01_r_hand
+	bip01_r_finger0
+	bip01_r_finger01
+	bip01_l_thigh
+
+;------------------------------------------------------------------------------
+; Special Effector
+;------------------------------------------------------------------------------
 [m_dog_attack_effector]
-duality_h		= 0.01
-duality_v		= 0.01
-blur			= 0.01
-gray			= 0.5
-noise_intensity = 0.0
-noise_grain		= 1
-noise_fps		= 30
-color_base		= 0.65,0.15,0.1
-color_gray		= 0.333,0.333,0.333
-color_add		= 0.1,0,0;0,0,0
-time			= 0.1
-time_attack		= 0.05		; fade in
-time_release	        = 0.25		; fade out
+	duality_h							= 0.01
+	duality_v							= 0.01
+	gray								= 0.5
+	blur								= 0.01
+	noise_intensity						= 0.0
+	noise_grain							= 1.0
+	noise_fps							= 30.0
+	color_base							= 0.65, 0.15, 0.1
+	color_gray							= 0.333, 0.333, 0.333
+	color_add							= 0.1, 0.0, 0.0
+	time								= 0.1
+	time_attack							= 0.05												;fade in
+	time_release						= 0.25												;fade out
 
-; camera effects
-ce_time			= 0.35 ;time 
-ce_amplitude		= 5.0 
-ce_period_number	= 2.0 
-ce_power		= 0.7 ; power 
+	; camera effects
+	ce_time								= 0.35												;time
+	ce_amplitude						= 5.0
+	ce_period_number					= 2.0
+	ce_power							= 0.7												;power
 
-;===========================================================================
+;------------------------------------------------------------------------------
+; Attack Animation Parameters
+;------------------------------------------------------------------------------
+[m_dog_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Bite
+	stand_attack_0		=	0.35,		0.2,		30,			0.0, 1.0, 0.0,					-1.6, 1.6, -1.6, 1.6,				3.5
+	;Both Legs strike with bite
+	stand_attack_1		=	0.45,		0.25,		50,			0.0, 1.0, 0.0,					-1.6, 1.6, -1.6, 1.6,				3.5
+	stand_attack_2		=	0.45,		0.25,		50,			0.0, 1.0, 0.0,					-1.6, 1.6, -1.6, 1.6,				3.5
+	stand_attack_3		=	0.45,		0.25,		50,			0.0, 1.0, 0.0,					-1.6, 1.6, -1.6, 1.6,				3.5
+
+;------------------------------------------------------------------------------
 ; Step Events
-;===========================================================================
-[m_dog_step_params]			    ;fwdleftleg	    fwdrightleg     backrightleg     backleftleg
-;------------------------------------------------------------------------------------------------------------
-;	anim			Cycles 	| time1 | power1 | time2 | power2 | time3 | power3 | time4 | power4 |
-;------------------------------------------------------------------------------------------------------------
-stand_walk_fwd_0	=   1,	0.2,     0.75,	  0.4,     0.7,    0.6,     0.75,     0.8,   0.75
-stand_walk_dmg_0	=   1,	0.4,     0.75,	  0.2,     0.7,    0.45,    0.75,     0.7,    0.75
-stand_run_0			=	1,	0.25,    0.75,	  0.20,    0.7,    0.6,	    0.75,     0.67,   0.75
-stand_run_dmg_0		=	1,	0.4,     0.75,	  0.20,    0.7,    0.7,	    0.75,     0.7,    0.75
-stand_steal_0		=	1,	0.2,     0.75,	  0.25,    0.7,    0.7,	    0.75,     0.7,    0.75
-stand_drag_0		=	1,	0.2,     0.75,	  0.25,    0.7,    0.7,	    0.75,     0.7,    0.75
+;------------------------------------------------------------------------------
+[m_dog_step_params]
+	; order: front_left, front_right, back_right, back_left
+	;------------------------------------------------------------------------------------------------
+	;		anim		| Cycles | time1 | power1 | time2 | power2 | time3 | power3 | time4 | power4
+	;------------------------------------------------------------------------------------------------
+	stand_walk_fwd_0	=	1,		0.2,	0.75,	0.4,	0.7,	0.6,	0.75,		0.8,	0.75
+	stand_walk_dmg_0	=	1,		0.4,	0.75,	0.2,	0.7,	0.45,	0.75,		0.7,	0.75
+	stand_run_0			=	1,		0.25,	0.75,	0.2,	0.7,	0.6,	0.75,		0.67,	0.75
+	stand_run_dmg_0		=	1,		0.4,	0.75,	0.2,	0.7,	0.7,	0.75,		0.7,	0.75
+	stand_steal_0		=	1,		0.2,	0.75,	0.25,	0.7,	0.7,	0.75,		0.7,	0.75
+	stand_drag_0		=	1,		0.2,	0.75,	0.25,	0.7,	0.7,	0.75,		0.7,	0.75
 
-;===========================================================================
-; IMMUNITIES
-;===========================================================================
-[dog_immunities]
-burn_immunity = 1.0				;коэффициенты иммунитета 
-strike_immunity = 1.0
-shock_immunity = 1.0
-wound_immunity = 0.9	;0.75	;1.0		
-radiation_immunity = 0.001	;0.5
-telepatic_immunity = 1.0
-chemical_burn_immunity = 1.0
-explosion_immunity = 1.0
-fire_wound_immunity  = 0.8
+;------------------------------------------------------------------------------
+; Immunities
+;------------------------------------------------------------------------------
+[m_dog_immunities]
+	burn_immunity						= 1.0												;коэффициенты иммунитета
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.9
+	radiation_immunity					= 0.001
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 1.0
+	fire_wound_immunity					= 0.8
 
-;=================================================================================
-; DOG Damage
-;=================================================================================
-[m_Dog_damage]
-;bone_name		 = <hit_scale>,-1,<wound_scale>
-;<hit_scale>	- коэфф. изменения хита (уменьшения здоровья) 
-;<wound_scale>	- коэфф. изменения величины открытой раны
-
-default				= 0.5,	-1,	0.2
-
-bip01_pelvis 		= 1.0, -1, 0.5
-bip01_spine 		= 1.0, -1, 0.5
-bip01_spine1 		= 1.0, -1, 0.5
-bip01_neck 			= 1.0, -1, 1.5
-bip01_head 			= 2.0, -1, 0.5, 10
-
-[dog_critical_wound_bones_head]
-bip01_neck
-bip01_head
-bip01_ponytail2
-
-[dog_critical_wound_bones_torso]
-bip01_pelvis
-bip01_l_calf
-bip01_r_calf
-bip01_spine
-bip01_spine1
-bip01_spine2
-bip01_l_clavicle
-bip01_r_clavicle
-bip01_tail
-bip01_tail1
-bip01_tail2
-bip01_tail3
-
-[dog_critical_wound_bones_legs]
-bip01_l_horselink
-bip01_l_foot
-bip01_l_toe0
-bip01_r_thigh
-bip01_r_horselink
-bip01_r_foot
-bip01_r_toe0
-bip01_l_upperarm
-bip01_l_forearm
-bip01_l_hand
-bip01_l_finger0
-bip01_l_finger01
-bip01_r_upperarm
-bip01_r_forearm
-bip01_r_hand
-bip01_r_finger0
-bip01_r_finger01
-bip01_l_thigh
-
-;=================================================================================
-; DOG Terrain
-;=================================================================================
-[dogs_terrain]
+;------------------------------------------------------------------------------
+; Terrain
+;------------------------------------------------------------------------------
+[m_dog_terrain]
 	255,000,255,255
-	
-;*********************************************************************************
+
+;******************************************************************************
 ; WEAK PROFILE
-;*********************************************************************************
+;******************************************************************************
 [dog_weak]:m_dog_e
 	$spawn								= "monsters\dogs\dog_weak"							;option for Level Editor
 
@@ -375,39 +376,39 @@ bip01_l_thigh
 
 	panic_threshold						= 0.2
 
-	attack_params						= dog_attack_params_weak
-	immunities_sect						= dog_immunities_weak
+	attack_params						= dog_weak_attack_params
+	immunities_sect						= dog_weak_immunities
 
 	eye_fov								= 100.0
 	eye_range							= 20.0
 
 	time_quant							= 0.003
 
-[dog_immunities_weak]
-burn_immunity			= 1.0
-strike_immunity			= 1.0
-shock_immunity			= 1.0
-wound_immunity			= 0.70
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.55
-fire_wound_immunity		= 0.8
+[dog_weak_immunities]
+	burn_immunity						= 1.0
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.7
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.55
+	fire_wound_immunity					= 0.8
 
-[dog_attack_params_weak]
-;---------------------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist|
-;---------------------------------------------------------------------------------------------------------------------------------------------------------
-;Bite
-stand_attack_0 =	  	0.35,		0.10,	    30,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
-;Both Legs strike with bite
-stand_attack_1 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
-stand_attack_2 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
-stand_attack_3 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
+[dog_weak_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Bite
+	stand_attack_0		=	0.35,		0.1,		30,			1.0, 0.1, 0.0,					-0.5, 0.5, -1.0, 1.0,				1.8
+	;Both Legs strike with bite
+	stand_attack_1		=	0.45,		0.1,		50,			1.0, 0.1, 0.0,					-0.5, 0.5, -1.0, 1.0,				1.8
+	stand_attack_2		=	0.45,		0.1,		50,			1.0, 0.1, 0.0,					-0.5, 0.5, -1.0, 1.0,				1.8
+	stand_attack_3		=	0.45,		0.1,		50,			1.0, 0.1, 0.0,					-0.5, 0.5, -1.0, 1.0,				1.8
 
-;*********************************************************************************
+;******************************************************************************
 ; NORMAL PROFILE
-;*********************************************************************************
+;******************************************************************************
 [dog_normal]:m_dog_e
 	$spawn								= "monsters\dogs\dog_normal"						;option for Level Editor
 
@@ -421,30 +422,30 @@ stand_attack_3 =	  	0.45,		0.10,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 
 	panic_threshold						= 0.2
 
-	attack_params						= dog_attack_params_normal
-	immunities_sect						= dog_immunities_normal
+	attack_params						= dog_normal_attack_params
+	immunities_sect						= dog_normal_immunities
 
-[dog_immunities_normal]
-burn_immunity			= 1.0
-strike_immunity			= 1.0
-shock_immunity			= 1.0
-wound_immunity			= 0.50
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.55
-fire_wound_immunity		= 0.5
+[dog_normal_immunities]
+	burn_immunity						= 1.0
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.5
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.55
+	fire_wound_immunity					= 0.5
 
-[dog_attack_params_normal]
-;---------------------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist|
-;---------------------------------------------------------------------------------------------------------------------------------------------------------
-;Bite
-stand_attack_0 =	  	0.35,		0.15,	    30,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
-;Both Legs strike with bite
-stand_attack_1 =	  	0.45,		0.15,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
-stand_attack_2 =	  	0.45,		0.15,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
-stand_attack_3 =	  	0.45,		0.15,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
+[dog_normal_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Bite
+	stand_attack_0		=	0.35,		0.15,		30,			1.0, 0.1, 0.0,					-0.5, 0.5, -1.0, 1.0,				1.8
+	;Both Legs strike with bite
+	stand_attack_1		=	0.45,		0.15,		50,			1.0, 0.1, 0.0,					-0.5, 0.5, -1.0, 1.0,				1.8
+	stand_attack_2		=	0.45,		0.15,		50,			1.0, 0.1, 0.0,					-0.5, 0.5, -1.0, 1.0,				1.8
+	stand_attack_3		=	0.45,		0.15,		50,			1.0, 0.1, 0.0,					-0.5, 0.5, -1.0, 1.0,				1.8
 
 ;*********************************************************************************
 ; STRONG PROFILE
@@ -462,95 +463,27 @@ stand_attack_3 =	  	0.45,		0.15,	    50,        1.0, 0.1, 0.0,		 -0.5, 0.5, -1.0
 
 	panic_threshold						= 0.2
 
-	attack_params						= dog_attack_params_strong
-	immunities_sect						= dog_immunities_strong
+	attack_params						= dog_strong_attack_params
+	immunities_sect						= dog_strong_immunities
 
-[dog_immunities_strong]
-burn_immunity			= 1.0
-strike_immunity			= 1.0
-shock_immunity			= 1.0
-wound_immunity			= 0.30
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.55
-fire_wound_immunity		= 0.35
+[dog_strong_immunities]
+	burn_immunity						= 1.0
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.3
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.55
+	fire_wound_immunity					= 0.35
 
-[dog_attack_params_strong]
-;---------------------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist|
-;---------------------------------------------------------------------------------------------------------------------------------------------------------
-;Bite
-stand_attack_0 =	  	0.35,		0.20,	    300,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
-;Both Legs strike with bite
-stand_attack_1 =	  	0.45,		0.20,	    500,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
-stand_attack_2 =	  	0.45,		0.20,	    500,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
-stand_attack_3 =	  	0.45,		0.20,	    500,        .0, 0.1, 01.0,		 -0.5, 0.5, -1.0, 1.0,				 1.8
-
-[arena_dog_1]:m_dog_e
-	$spawn								= "monsters\arena\dog_arena1"						;option for Level Editor
-
-	visual								= monsters\dog\dog_red
-	corpse_visual						= monsters\dog\dog_red_dead
-	icon								= ui_npc_monster_dog_red
-
-	rank								= 401
-	spec_rank							= normal
-	community							= dog
-
-	panic_threshold						= 0.2
-
-	attack_params						= dog_attack_params_strong
-	immunities_sect						= dog_immunities_strong
-
-custom_data = scripts\arena_mob_3.ltx
-
-[arena_dog_2]:m_dog_e
-	$spawn								= "monsters\arena\dog_arena2"						;option for Level Editor
-
-	visual								= monsters\dog\dog_white
-	corpse_visual						= monsters\dog\dog_white_dead
-	icon								= ui_npc_monster_dog_white
-
-	rank								= 801
-	spec_rank							= strong
-	community							= dog
-
-	panic_threshold						= 0.2
-
-	attack_params						= dog_attack_params_strong
-	immunities_sect						= dog_immunities_strong
-
-custom_data = scripts\arena_mob_4.ltx
-
-[arena_dog_3]:m_dog_e
-	$spawn								= "monsters\arena\dog_arena3"						;option for Level Editor
-
-	rank								= 0
-	spec_rank							= weak
-	community							= dog
-
-	panic_threshold						= 0.2
-
-	attack_params						= dog_attack_params_strong
-	immunities_sect						= dog_immunities_strong
-
-custom_data = scripts\arena_mob_5.ltx
-
-[arena_dog_4]:m_dog_e
-	$spawn								= "monsters\arena\dog_arena4"						;option for Level Editor
-
-	visual								= monsters\dog\dog_red
-	corpse_visual						= monsters\dog\dog_red_dead
-	icon								= ui_npc_monster_dog_red
-
-	rank								= 401
-	spec_rank							= normal
-	community							= dog
-
-	panic_threshold						= 0.2
-
-	attack_params						= dog_attack_params_strong
-	immunities_sect						= dog_immunities_strong
-
-custom_data = scripts\arena_mob_6.ltx
+[dog_strong_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Bite
+	stand_attack_0		=	0.35,		0.2,		300,		0.0, 0.1, 1.0,					-0.5, 0.5, -1.0, 1.0,				1.8
+	;Both Legs strike with bite
+	stand_attack_1		=	0.45,		0.2,		500,		0.0, 0.1, 1.0,					-0.5, 0.5, -1.0, 1.0,				1.8
+	stand_attack_2		=	0.45,		0.2,		500,		0.0, 0.1, 1.0,					-0.5, 0.5, -1.0, 1.0,				1.8
+	stand_attack_3		=	0.45,		0.2,		500,		0.0, 0.1, 1.0,					-0.5, 0.5, -1.0, 1.0,				1.8

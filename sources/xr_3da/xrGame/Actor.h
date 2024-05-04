@@ -35,7 +35,6 @@ class CEffectorBobbing;
 class CHolderCustom;
 class CUsableScriptObject;
 
-struct SShootingEffector;
 struct SSleepEffector;
 class  CSleepEffectorPP;
 class CInventoryBox;
@@ -48,7 +47,6 @@ struct SActorMotions;
 struct SActorVehicleAnims;
 class  CActorCondition;
 class SndShockEffector;
-class CActorFollowerMngr;
 class CGameTaskManager;
 
 class CCameraShotEffector;
@@ -360,9 +358,6 @@ protected:
 	float					fCurAVelocity;
 	CEffectorBobbing*		pCamBobbing;
 
-//	void					LoadShootingEffector	(LPCSTR section);
-//	SShootingEffector*		m_pShootingEffector;
-
 	void					LoadSleepEffector		(LPCSTR section);
 	SSleepEffector*			m_pSleepEffector;
 	CSleepEffectorPP*		m_pSleepEffectorPP;
@@ -383,13 +378,8 @@ public:
 	CGameObject*			ObjectWeLookingAt			() {return m_pObjectWeLookingAt;}
 	CInventoryOwner*		PersonWeLookingAt			() {return m_pPersonWeLookingAt;}
 	LPCSTR					GetDefaultActionForObject	() {return *m_sDefaultObjAction;}
-//.	void					AddFollower					(u16 id);
-//.	void					RemoveFollower				(u16 id);
-//.	void					SendCmdToFollowers			(int cmd);
+
 protected:
-//.	void					DestroyFollowerInternal();//hack
-//.	CActorFollowerMngr&		Followers	();
-//.	CActorFollowerMngr*		m_followers;
 	CUsableScriptObject*	m_pUsableObject;
 	// Person we're looking at
 	CInventoryOwner*		m_pPersonWeLookingAt;

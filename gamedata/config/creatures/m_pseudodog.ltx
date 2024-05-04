@@ -24,7 +24,7 @@
 	community							= pseudodog
 
 	material							= creatures\medium
-	terrain								= pseudodogs_terrain
+	terrain								= m_pseudodog_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
 
 	Spawn_Inventory_Item_Section		= mutant_psevdodog_tail
@@ -37,8 +37,6 @@
 	;--------------------------------------------------------------------------
 	DayTime_Begin						= 0													;начала дня для монстра
 	DayTime_End							= 21												;конец дня для монстра
-	Min_Satiety							= 0.95												;мин. норма сытости (меньше - уже голодный)
-	Max_Satiety							= 1.0												;макс. норма сытости (больше - очень сытый)
 
 	;--------------------------------------------------------------------------
 	; Offline Alife
@@ -147,7 +145,7 @@
 	distance_to_corpse					= 1.8												;дист. до трупа, при которой он переходит в состояние еды
 
 	;immunities
-	immunities_sect						= pseudodog_immunities
+	immunities_sect						= m_pseudodog_immunities
 
 	;--------------------------------------------------------------------------
 	; Sounds and sound parameters
@@ -239,94 +237,94 @@
 	anger_hunger_threshold				= 0.1
 	anger_loud_threshold				= 0.7
 
+;------------------------------------------------------------------------------
+; Pseudodog Damage
+;------------------------------------------------------------------------------
+[m_pseudodog_damage]
+	;bone_name							= <hit_scale>, -1, <wound_scale>
+	;										<hit_scale>		- коэфф. изменения хита (уменьшения здоровья)
+	;										<wound_scale>	- коэфф. изменения величины открытой раны
 
+	default								= 0.3, -1, 0.1
+	bip01_pelvis						= 1.0, -1, 0.1
+	bip01_spine							= 1.0, -1, 0.1
+	bip01_spine1						= 1.0, -1, 0.1
+	bip01_neck							= 1.0, -1, 1.5
+	bip01_head							= 2.0, -1, 0.3, 10
 
-[m_pseudodog_attack_params]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Bite
-stand_attack_0	=	  	0.35,		0.10,		    100,        0.0, 1.0, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
-;Jump attack
-run_jamp_1		=		0.55,		0.10,		    120,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1.8,								  1.0
-
-;===========================================================================
-; SPECIAL EFFECTORS
-;===========================================================================
+;------------------------------------------------------------------------------
+; Special Effector
+;------------------------------------------------------------------------------
 [m_pseudodog_attack_effector]
+	duality_h							= 0.01
+	duality_v							= 0.01
+	gray								= 0.5
+	blur								= 0.01
+	noise_intensity						= 0.0
+	noise_grain							= 1.0
+	noise_fps							= 30.0
+	color_base							= 0.65, 0.15, 0.1
+	color_gray							= 0.333, 0.333, 0.333
+	color_add							= 0.0, 0.0, 0.0
+	time								= 0.3
+	time_attack							= 0.05												;fade in
+	time_release						= 0.25												;fade out
 
-duality_h		= 0.01
-duality_v		= 0.01
-blur			= 0.01
-gray			= 0.5
-noise_intensity = 0.0
-noise_grain		= 1
-noise_fps		= 30
-color_base		= 0.65,0.15,0.1
-color_gray		= 0.333,0.333,0.333
-color_add		= 0,0,0
-time			= 0.3
-time_attack		= 0.05		; fade in
-time_release	        = 0.25		; fade out
+	; camera effects
+	ce_time								= 0.45												;time
+	ce_amplitude						= -15.0
+	ce_period_number					= 2.0
+	ce_power							= 1.0												;power
 
-; camera effects
-ce_time				= 0.45 ;time 
-ce_amplitude		= -15.0 
-ce_period_number	= 2.0 
-ce_power			= 1.0 ;0.7 ; power 
+;------------------------------------------------------------------------------
+; Attack Animation Parameters
+;------------------------------------------------------------------------------
+[m_pseudodog_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Bite
+	stand_attack_0		=	0.35,		0.1,		100,		0.0, 1.0, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
+	;Jump attack
+	run_jamp_1			=	0.55,		0.1,		120,		0.0, 1.0, 4.0,					-1.8, 1.8, -1.8, 1.8,				1.0
 
-;===========================================================================
+;------------------------------------------------------------------------------
 ; Step Events
-;===========================================================================
-[m_pseudodog_step_params]                ;left             right            right           left
-;------------------------------------------------------------------------------------------------------------------
-;	anim					cycles |	time1 | power1 |	time2 | power2 | time3 | power3 | time4     | power4 |
-;-----------------------------------------------------------------------------------------------------------------
-stand_walk_fwd_0		=   	1,		0.1,      1,	  	0.34,    1,		 0.6,	 1,			0.84,		1
-stand_walk_dmg_0		=   	1,		0.2,      1,	  	0.25,    1,		 0.5,	 1,			0.7,		1
-stand_run_0				=		1,		0.1,      1,	  	0.3,     1,		 0.5,	 1,			0.55,		1
-stand_run_dmg_0			=		1,		0.2,      1,	  	0.25,    1,		 0.7,	 1,			0.75,		1
-stand_drag_0			=		1,		0.2,      1,	  	0.25,    1,		 0.7,	 1,			0.75,		1
+;------------------------------------------------------------------------------
+[m_pseudodog_step_params]
+	; order: left, right, right, left
+	;------------------------------------------------------------------------------------------------
+	;		anim		| cycles | time1 | power1 | time2 | power2 | time3 | power3 | time4 | power4
+	;------------------------------------------------------------------------------------------------
+	stand_walk_fwd_0	=	1,		0.1,	1.0,	0.34,	1.0,	0.6,	1.0,		0.84,	1.0
+	stand_walk_dmg_0	=	1,		0.2,	1.0,	0.25,	1.0,	0.5,	1.0,		0.7,	1.0
+	stand_run_0			=	1,		0.1,	1.0,	0.3,	1.0,	0.5,	1.0,		0.55,	1.0
+	stand_run_dmg_0		=	1,		0.2,	1.0,	0.25,	1.0,	0.7,	1.0,		0.75,	1.0
+	stand_drag_0		=	1,		0.2,	1.0,	0.25,	1.0,	0.7,	1.0,		0.75,	1.0
 
-;===========================================================================
-; IMMUNITIES
-;===========================================================================
-[pseudodog_immunities]
-burn_immunity 		= 1.0				;коэффициенты иммунитета 
-strike_immunity 	= 0.5
-shock_immunity 		= 0.5
-wound_immunity 		= 0.5	;0.75	;1.0		
-radiation_immunity 	= 0.0000001	;1.0
-telepatic_immunity 	= 1.0
-chemical_burn_immunity 	= 0.8
-explosion_immunity 	= 0.4
-fire_wound_immunity  	= 0.5
+;------------------------------------------------------------------------------
+; Immunities
+;------------------------------------------------------------------------------
+[m_pseudodog_immunities]
+	burn_immunity						= 1.0												;коэффициенты иммунитета
+	strike_immunity						= 0.5
+	shock_immunity						= 0.5
+	wound_immunity						= 0.5
+	radiation_immunity					= 0.0000001
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 0.8
+	explosion_immunity					= 0.4
+	fire_wound_immunity					= 0.5
 
-;=================================================================================
-; PSEUDO-DOG Damage
-;=================================================================================
-[m_Pseudodog_damage]
-;bone_name		 = <hit_scale>,-1,<wound_scale>
-;<hit_scale>	- коэфф. изменения хита (уменьшения здоровья) 
-;<wound_scale>	- коэфф. изменения величины открытой раны
-
-default				= 0.3, -1, 0.1
-
-bip01_pelvis 		= 1.0, -1, 0.1
-bip01_spine 		= 1.0, -1, 0.1
-bip01_spine1 		= 1.0, -1, 0.1
-bip01_neck 			= 1.0, -1, 1.5
-bip01_head 			= 2.0, -1, 0.3, 10
-
-;=================================================================================
-; PSEUDO-DOG Terrain
-;=================================================================================
-[pseudodogs_terrain]
+;------------------------------------------------------------------------------
+; Terrain
+;------------------------------------------------------------------------------
+[m_pseudodog_terrain]
 	255,000,255,255
 
-;*********************************************************************************
+;******************************************************************************
 ; WEAK PROFILE
-;*********************************************************************************
+;******************************************************************************
 [pseudodog_weak]:m_pseudodog_e
 	$spawn								= "monsters\pseudodogs\pseudodog_weak"				;option for Level Editor
 
@@ -336,33 +334,32 @@ bip01_head 			= 2.0, -1, 0.3, 10
 
 	panic_threshold						= 0.5
 
-	attack_params						= pseudodog_attack_params_weak
-	immunities_sect						= pseudodog_immunities_weak
+	attack_params						= pseudodog_weak_attack_params
+	immunities_sect						= pseudodog_weak_immunities
 
+[pseudodog_weak_immunities]
+	burn_immunity						= 1.0
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.1
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.5
+	fire_wound_immunity					= 0.5
 
-[pseudodog_immunities_weak]
-burn_immunity			= 1.0
-strike_immunity			= 1.0
-shock_immunity			= 1.0
-wound_immunity			= 0.1
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.5
-fire_wound_immunity		= 0.50
+[pseudodog_weak_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Bite
+	stand_attack_0		=	0.45,		0.3,		100,		0.0, 1.0, 1.0,					-1.0, 1.0, -1.0, 1.0,				1.6
+	;Jump attack
+	run_jamp_1			=	0.55,		0.15,		220,		0.0, 1.0, 4.0,					-1.8, 1.8, -1.8, 1.8,				1.0
 
-[pseudodog_attack_params_weak]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Bite
-stand_attack_0	=	  	0.45,		0.30,		    100,        0.0, 1.0, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  1.6
-;Jump attack
-run_jamp_1		=		0.55,		0.15,		    220,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1.8,								  1.0
-
-;*********************************************************************************
+;******************************************************************************
 ; NORMAL PROFILE
-;*********************************************************************************
+;******************************************************************************
 [pseudodog_normal]:m_pseudodog_e
 	$spawn								= "monsters\pseudodogs\pseudodog_normal"			;option for Level Editor
 
@@ -372,34 +369,32 @@ run_jamp_1		=		0.55,		0.15,		    220,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 
 	panic_threshold						= 0.2
 
-	attack_params						= pseudodog_attack_params_normal
-	immunities_sect						= pseudodog_immunities_normal
+	attack_params						= pseudodog_normal_attack_params
+	immunities_sect						= pseudodog_normal_immunities
 
+[pseudodog_normal_immunities]
+	burn_immunity						= 1.0
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.1
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.5
+	fire_wound_immunity					= 0.4
 
-[pseudodog_immunities_normal]
-burn_immunity			= 1.0
-strike_immunity			= 1.0
-shock_immunity			= 1.0
-wound_immunity			= 0.1
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.5
-fire_wound_immunity		= 0.4
+[pseudodog_normal_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Bite
+	stand_attack_0		=	0.45,		0.4,		100,		0.0, 1.0, 1.0,					-1.0, 1.0, -1.0, 1.0,				1.6
+	;Jump attack
+	run_jamp_1			=	0.55,		0.25,		320,		0.0, 1.0, 4.0,					-1.8, 1.8, -1.8, 1.8,				1.0
 
-[pseudodog_attack_params_normal]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Bite
-stand_attack_0	=	  	0.45,		0.40,		    100,        0.0, 1.0, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  1.6
-;Jump attack
-run_jamp_1		=		0.55,		0.25,		    320,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1.8,								  1.0
-
-
-;*********************************************************************************
+;******************************************************************************
 ; STRONG PROFILE
-;*********************************************************************************
+;******************************************************************************
 [pseudodog_strong]:m_pseudodog_e
 	$spawn								= "monsters\pseudodogs\pseudodog_strong"			;option for Level Editor
 
@@ -413,38 +408,32 @@ run_jamp_1		=		0.55,		0.25,		    320,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 
 	panic_threshold						= 0.05
 
-	attack_params						= pseudodog_attack_params_strong
-	immunities_sect						= pseudodog_immunities_strong
+	attack_params						= pseudodog_strong_attack_params
+	immunities_sect						= pseudodog_strong_immunities
 
+[pseudodog_strong_immunities]
+	burn_immunity						= 1.0
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.07
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.5
+	fire_wound_immunity					= 0.3
 
-[pseudodog_immunities_strong]
-burn_immunity			= 1.0
-strike_immunity			= 1.0
-shock_immunity			= 1.0
-wound_immunity			= 0.07
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.5
-fire_wound_immunity		= 0.3
+[pseudodog_strong_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Bite
+	stand_attack_0		=	0.45,		0.5,		100,		0.0, 1.0, 1.0,					-1.0, 1.0, -1.0, 1.0,				1.6
+	;Jump attack
+	run_jamp_1			=	0.55,		0.35,		420,		0.0, 1.0, 4.0,					-1.8, 1.8, -1.8, 1.8,				1.0
 
-[pseudodog_attack_params_strong]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Bite
-stand_attack_0	=	  	0.45,		0.50,		    100,        0.0, 1.0, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  1.6
-;Jump attack
-run_jamp_1		=		0.55,		0.35,		    420,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1.8,								  1.0
-
-
-
-
-
-;*********************************************************************************
+;******************************************************************************
 ; CUSTOM PROFILES
-;*********************************************************************************
-
+;******************************************************************************
 [pseudodog_arena]:pseudodog_strong
 	$spawn								= "monsters\arena\pseudodog_arena"					;option for Level Editor
 
@@ -452,22 +441,9 @@ run_jamp_1		=		0.55,		0.35,		    420,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1
 
 	panic_threshold						= 0.05
 
-;---------------------------------------------------------------------------------
+;------------------------------------------------------------------------------
 ;-- PSY DOG
-;---------------------------------------------------------------------------------
-[psy_dog_aura_effector]
-duality_h		= 0.00
-duality_v		= 0.00
-blur			= 10
-gray			= 0.0
-noise_intensity = 10.0
-noise_grain		= 1
-noise_fps		= 25
-color_base		= 0.9,0.9,1.0
-color_gray		= 0.33,0.330,0.33
-color_add		= 0.00,0.00,0.015
-
-
+;------------------------------------------------------------------------------
 [psy_dog]:pseudodog_strong
 	$spawn								= "monsters\psy_dogs\psy_dog"						;option for Level Editor
 
@@ -479,38 +455,21 @@ color_add		= 0.00,0.00,0.015
 	Min_Phantoms_Count					= 1
 	Time_Phantom_Appear					= 5000
 
-;---------------------------------------------------------------------------------
+[psy_dog_aura_effector]
+	duality_h							= 0.0
+	duality_v							= 0.0
+	gray								= 0.0
+	blur								= 10.0
+	noise_intensity						= 10.0
+	noise_grain							= 1.0
+	noise_fps							= 25.0
+	color_base							= 0.9, 0.9, 1.0
+	color_gray							= 0.33, 0.33, 0.33
+	color_add							= 0.0, 0.0, 0.015
+
+;------------------------------------------------------------------------------
 ;-- PSY DOG PHANTOM
-;---------------------------------------------------------------------------------
-
-;=========================================================================================
-; Appear Effector
-;=========================================================================================
-[psy_dog_phantom_appear_effector]
-duality_h		= 0.028	;0.31
-duality_v		= 0.028	;0.31
-blur			= 0.00
-gray			= 0	;0.5
-noise_intensity = 1
-noise_grain		= 0.1
-noise_fps		= 50
-color_base		= 0.5,0.5,0.5	;0.1,0.15,0.4
-color_gray		= 0.333,0.333,0.333	;0.333,0.333,0.333
-color_add		= 0.00,0.00,0.00
-time			= 0.5		;1.5
-time_attack		= 0.05	;0.5		; fade in
-time_release	= 0.3		; fade out
-
-; camera effects
-ce_time				= 0.2	;1.5
-ce_amplitude		= 1.0
-ce_period_number	= 2.0
-ce_power			= 0.3 ;0.7
-
-
-;=========================================================================================
-; Base Definition
-;=========================================================================================
+;------------------------------------------------------------------------------
 [psy_dog_phantom]:pseudodog_weak
 	$spawn								= "monsters\psy_dogs\psy_dog_phantom"				;option for Level Editor
 
@@ -519,14 +478,30 @@ ce_power			= 0.3 ;0.7
 
 	class								= SM_DOG_F											;AI идентификатор класса
 
+	appear_effector						= psy_dog_phantom_appear_effector
+	particles_appear					= monsters\pseudo_phantom_birth_00
+	particles_disappear					= monsters\pseudo_phantom_death_00
 
+[psy_dog_phantom_appear_effector]
+	duality_h							= 0.028
+	duality_v							= 0.028
+	gray								= 0.0
+	blur								= 0.0
+	noise_intensity						= 1.0
+	noise_grain							= 0.1
+	noise_fps							= 50.0
+	color_base							= 0.5, 0.5, 0.5
+	color_gray							= 0.333, 0.333, 0.333
+	color_add							= 0.0, 0.0, 0.0
+	time								= 0.5
+	time_attack							= 0.05												;fade in
+	time_release						= 0.3												;fade out
 
-
-appear_effector		= psy_dog_phantom_appear_effector
-particles_appear	= monsters\pseudo_phantom_birth_00
-particles_disappear	= monsters\pseudo_phantom_death_00
-;=========================================================================================
-
+	;camera effects
+	ce_time								= 0.2
+	ce_amplitude						= 1.0
+	ce_period_number					= 2.0
+	ce_power							= 0.3
 
 [psy_dog_radar]:psy_dog
 	$spawn								= "monsters\psy_dogs\psy_dog_radar"					;option for Level Editor
@@ -534,26 +509,3 @@ particles_disappear	= monsters\pseudo_phantom_death_00
 	Max_Phantoms_Count					= 4
 	Min_Phantoms_Count					= 2
 	Time_Phantom_Appear					= 5000
-
-[arena_pseudodog_1]:pseudodog_strong
-	$spawn								= "monsters\arena\pseudodog_arena1"					;option for Level Editor
-
-	species								= arena_monstr
-
-	panic_threshold						= 0.05
-
-custom_data = scripts\arena_mob_1.ltx
-
-[arena_pseudodog_2]:pseudodog_strong
-	$spawn								= "monsters\arena\pseudodog_arena2"					;option for Level Editor
-
-	visual								= monsters\pseudodog\pseudodog
-	icon								= ui_npc_monster_pseudodog
-
-	species								= arena_monstr
-
-	panic_threshold						= 0.05
-
-
-
-custom_data = scripts\arena_mob_2.ltx

@@ -181,94 +181,99 @@ end
 end
 
 
--- Удаление трупов монстров
+--' Удаление трупов монстров
 function remove_corpse(p_id)
-local obj = alife():object(p_id)
-if obj then
-	alife():release(obj, true)
-	list_mob_ids[p_id] = nil
-end
+	local obj=alife():object(p_id)
+	if obj then
+		alife():release(obj,true)
+		list_mob_ids[p_id]=nil
+	end
 end
 
 
--- Парсинг и генерирование custom_data (c) xStream
+--' Парсинг и генерирование custom_data
 function parse_custom_data(str)
- local t={}
- if str then
-  for section, section_data in string.gfind(str,"%s*%[([^%]]*)%]%s*([^%[%z]*)%s*") do
-   section = trim(section)
-   t[section]={}
-   for line in string.gfind(trim(section_data), "([^\n]*)\n*") do
-    if string.find(line,"=")~=nil then
-     for k, v in string.gfind(line, "([^=]-)%s*=%s*(.*)") do
-      k = trim(k)
-      if k~=nil and k~='' and v~=nil then 
-       t[section][k]=trim(v) 
-      end
-     end
-    else
-     for k, v in string.gfind(line, "(.*)") do
-      k = trim(k)
-      if k~=nil and k~='' then
-       t[section][k]="<<no_value>>" 
-      end
-     end
-    end
-   end
-  end
- end
- return t
-end
-function gen_custom_data(tbl)
- local str=''
- for key, value in pairs(tbl) do
-  str = str.."["..key.."]\n"
-  for k, v in pairs(value) do
-   if v~="<<no_value>>" then
-    str=str..k.." = "..v.."\n"
-   else
-    str=str..k.."\n"
-   end
-  end
- end
- return str
-end
-function trim (s)
- return (string.gsub(s, "^%s*(.-)%s*$", "%1"))
-end
-
-
--- Обобщенная процедура спавна
-function proceed_spawn(p_name, p_vector, p_lv, p_gv, p_count, p_port, p_fake)
-local ind
-local cnt = 0
-
-for k,v in pairs(list_mob_ids) do
-	local obj = alife():object(k)
-	local portion = get_monster_portion(k)
-
-	if obj and portion==p_port then
-		if obj:alive() then
-			cnt = cnt+1
-		else
-			remove_corpse(k)
+	local t={}
+	if str then
+		for section,section_data in string.gfind(str,"%s*%[([^%]]*)%]%s*([^%[%z]*)%s*") do
+			section=trim(section)
+			t[section]={}
+			for line in string.gfind(trim(section_data),"([^\n]*)\n*") do
+				if string.find(line,"=")~=nil then
+					for k,v in string.gfind(line,"([^=]-)%s*=%s*(.*)") do
+						k=trim(k)
+						if k~=nil and k~='' and v~=nil then
+							t[section][k]=trim(v)
+						end
+					end
+				else
+					for k,v in string.gfind(line,"(.*)") do
+						k=trim(k)
+						if k~=nil and k~='' then
+							t[section][k]="<<no_value>>"
+						end
+					end
+				end
+			end
 		end
 	end
+
+	return t
 end
 
-local qnt
-
-if cnt == 0 then qnt = p_count else qnt = vars.resp_index*p_count - cnt end
-
-if qnt>=1 then
-	for ind = 1, qnt do
-		local sp_ob = alife():create(p_name, p_vector, p_lv, p_gv)
-		mob_flags(sp_ob, p_port, p_fake)
-		local m_id = sp_ob.id
-		list_mob_ids[m_id] = m_id
+function gen_custom_data(tbl)
+	local str=''
+	for key,value in pairs(tbl) do
+		str=str.."["..key.."]\n"
+		for k,v in pairs(value) do
+			if v~="<<no_value>>" then
+				str=str..k.."="..v.."\n"
+			else
+				str=str..k.."\n"
+			end
+		end
 	end
+
+	return str
 end
 
+function trim(s)
+	return (string.gsub(s,"^%s*(.-)%s*$","%1"))
+end
+
+
+--' Обобщенная процедура спавна
+function proceed_spawn(p_name,p_vector,p_lv,p_gv,p_count,p_port,p_fake)
+	local ind
+	local cnt=0
+
+	for k,v in pairs(list_mob_ids) do
+		local obj=alife():object(k)
+		local portion=get_monster_portion(k)
+		if obj and portion==p_port then
+			if obj:alive() then
+				cnt=cnt+1
+			else
+				remove_corpse(k)
+			end
+		end
+	end
+
+	local qnt
+	if cnt==0 then
+		qnt=p_count
+	else
+		qnt=vars.resp_index*p_count-cnt
+	end
+
+	if qnt>=1 then
+		for ind=1, qnt do
+			local sp_ob=alife():create(p_name,p_vector,p_lv,p_gv)
+			mob_flags(sp_ob,p_port,p_fake)
+			local m_id=sp_ob.id
+			list_mob_ids[m_id]=m_id
+		end
+	end
 end
 
 

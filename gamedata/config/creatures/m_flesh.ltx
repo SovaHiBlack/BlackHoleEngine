@@ -21,7 +21,7 @@
 	species								= flesh
 
 	material							= creatures\hoof
-	terrain								= flesh_terrain
+	terrain								= m_flesh_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_gravi_zone
 
 	Spawn_Inventory_Item_Section		= mutant_flesh_eye
@@ -34,8 +34,6 @@
 	;--------------------------------------------------------------------------
 	DayTime_Begin						= 6													;начала дня для монстра
 	DayTime_End							= 21												;конец дня для монстра
-	Min_Satiety							= 0.4												;мин. норма сытости (меньше - уже голодный)
-	Max_Satiety							= 1.0												;макс. норма сытости (больше - очень сытый)
 
 	;--------------------------------------------------------------------------
 	; Offline Alife
@@ -142,7 +140,7 @@
 	distance_to_corpse					= 0.9												;дист. до трупа, при которой он переходит в состояние еды
 
 	;immunities
-	immunities_sect						= flesh_immunities
+	immunities_sect						= m_flesh_immunities
 
 	;--------------------------------------------------------------------------
 	; Sounds and sound parameters
@@ -208,13 +206,13 @@
 	critical_wound_decrease_quant		= 0.0
 
 	critical_wound_anim_head			= critical_hit_head_0
-	critical_wound_bones_head			= flesh_critical_wound_bones_head
+	critical_wound_bones_head			= m_flesh_critical_wound_bones_head
 
 	critical_wound_anim_torso			= critical_hit_torso_0
-	critical_wound_bones_torso			= flesh_critical_wound_bones_torso
+	critical_wound_bones_torso			= m_flesh_critical_wound_bones_torso
 
 	critical_wound_anim_legs			= critical_hit_torso_0
-	critical_wound_bones_legs			= flesh_critical_wound_bones_legs
+	critical_wound_bones_legs			= m_flesh_critical_wound_bones_legs
 
 	;--------------------------------------------------------------------------
 	; Other
@@ -226,134 +224,131 @@
 	LegsCount							= 4
 	step_params							= m_flesh_step_params
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-selector_approach	=      20.0,            1.0,                1000.0,             0.0,               0.0,						1000.0,				10000.0,      
-
-
-
-
-
-
-
-;=================================================================================
+;------------------------------------------------------------------------------
 ; Flesh Damage
-;=================================================================================
+;------------------------------------------------------------------------------
 [m_flesh_damage]
-;bone_name		 = <hit_scale>,-1,<wound_scale>
-;<hit_scale>	- коэфф. изменения хита (уменьшения здоровья) 
-;<wound_scale>	- коэфф. изменения величины открытой раны
+	;bone_name							= <hit_scale>, -1, <wound_scale>
+	;										<hit_scale>		- коэфф. изменения хита (уменьшения здоровья)
+	;										<wound_scale>	- коэфф. изменения величины открытой раны
 
-default				= 0.25,	-1,	0.10
+	default								= 0.25, -1, 0.1
+	bip01_pelvis						= 1.0, -1, 0.1
+	bip01_spine							= 1.0, -1, 0.1
+	bip01_neck							= 1.0, -1, 0.3
+	bip01_head							= 2.0, -1, 0.1, 10
 
-bip01_pelvis 		= 1.0, -1, 0.1
-bip01_spine 		= 1.0, -1, 0.1
-bip01_neck 			= 1.0, -1, 0.3
-bip01_head 			= 2.0, -1, 0.10, 10
+[m_flesh_critical_wound_bones_head]
+	bip01_neck
+	bip01_head
+	bip01_ponytail1
+	bip01_ponytail2
 
+[m_flesh_critical_wound_bones_torso]
+	bip01_pelvis
+	bip01_l_calf
+	bip01_r_calf
+	bip01_spine
+	bip01_spine1
+	bip01_spine2
+	bip01_l_clavicle
+	bip01_r_clavicle
 
-;=================================================================================
-; Flesh Terrain
-;=================================================================================
-[flesh_terrain]
+[m_flesh_critical_wound_bones_legs]
+	bip01_l_horselink
+	bip01_l_foot
+	bip01_l_toe0
+	bip01_r_thigh
+	bip01_r_horselink
+	bip01_r_foot
+	bip01_r_toe0
+	bip01_l_upperarm
+	bip01_l_forearm
+	bip01_l_hand
+	bip01_l_finger0
+	bip01_l_finger01
+	bip01_r_upperarm
+	bip01_r_forearm
+	bip01_r_hand
+	bip01_r_finger0
+	bip01_r_finger01
+	bip01_l_thigh
+
+;------------------------------------------------------------------------------
+; Special Effector
+;------------------------------------------------------------------------------
+[m_flesh_attack_effector]
+	duality_h							= 0.01
+	duality_v							= 0.01
+	gray								= 0.5
+	blur								= 0.01
+	noise_intensity						= 0.0
+	noise_grain							= 1.0
+	noise_fps							= 30.0
+	color_base							= 0.65, 0.15, 0.1
+	color_gray							= 0.333, 0.333, 0.333
+	color_add							= 0.0, 0.0, 0.0
+	time								= 0.3
+	time_attack							= 0.05												;fade in
+	time_release						= 0.25												;fade out
+
+	;camera effects
+	ce_time								= 0.45												;time
+	ce_amplitude						= -10.0
+	ce_period_number					= 2.0
+	ce_power							= 1.5												;power
+
+;------------------------------------------------------------------------------
+; Attack Animation Parameters
+;------------------------------------------------------------------------------
+[m_flesh_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Left leg strike
+	stand_attack_0		=	0.25,		0.26,		70,			0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
+	;Both leg strike
+	stand_attack_1		=	0.3,		0.4,		150,		0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
+	stand_attack_2		=	0.3,		0.4,		150,		0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
+	stand_attack_3		=	0.4,		0.4,		150,		0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
+
+;------------------------------------------------------------------------------
+; Step Events
+;------------------------------------------------------------------------------
+[m_flesh_step_params]
+	;------------------------------------------------------------------------------------------------
+	;		anim		| cycles | time1 | power1 | time2 | power2 | time3 | power3 | time4 | power4
+	;------------------------------------------------------------------------------------------------
+	stand_walk_fwd_0	=	8,		0.2,	1.0,	0.25,	0.7,	0.5,	1.0,		0.7,	1.0
+	stand_walk_dmg_0	=	7,		0.2,	1.0,	0.25,	0.7,	0.5,	1.0,		0.7,	1.0
+	stand_run_0			=	6,		0.2,	1.0,	0.25,	0.7,	0.5,	1.0,		0.7,	1.0
+	stand_run_dmg_0		=	6,		0.2,	1.0,	0.25,	0.7,	0.7,	1.0,		0.7,	1.0
+	stand_steal_0		=	1,		0.2,	1.0,	0.25,	0.7,	0.7,	1.0,		0.7,	1.0
+	stand_drag_0		=	1,		0.2,	1.0,	0.25,	0.7,	0.7,	1.0,		0.7,	1.0
+
+;------------------------------------------------------------------------------
+; Immunities
+;------------------------------------------------------------------------------
+[m_flesh_immunities]
+	burn_immunity						= 1.0												;коэффициенты иммунитета
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.15
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.55
+	fire_wound_immunity					= 0.15
+
+;------------------------------------------------------------------------------
+; Terrain
+;------------------------------------------------------------------------------
+[m_flesh_terrain]
 	255,000,255,255
 
-
-;===========================================================================
-; Step Events
-;===========================================================================
-[m_flesh_step_params]
-;-------------------------------------------------------------------------------------------------------------
-;	anim			| cycles | time1 | power1 | time2 | power2 | time3 | power3 | time4 | power4 |
-;-------------------------------------------------------------------------------------------------------------
-stand_walk_fwd_0	=	   8,	    0.2,     1,	    0.25,    0.7,    0.5,     1.0,     0.7,    1.0
-stand_walk_dmg_0	=      7,	    0.2,     1,	    0.25,    0.7,    0.5,     1.0,     0.7,    1.0
-stand_run_0			=	   6,	    0.2,     1,	    0.25,    0.7,    0.5,     1.0,     0.7,    1.0
-stand_run_dmg_0		=	   6,	    0.2,     1,	    0.25,    0.7,    0.7,     1.0,     0.7,    1.0
-stand_steal_0		=	   1,	    0.2,     1,	    0.25,    0.7,    0.7,     1.0,     0.7,    1.0
-stand_drag_0		=	   1,	    0.2,     1,	    0.25,    0.7,    0.7,     1.0,     0.7,    1.0
-
-;===========================================================================
-; Immunities
-;===========================================================================
-[flesh_immunities]
-burn_immunity			= 1.0				;ъю¤ЇЇшЎшхэЄv шььєэшЄхЄр 
-strike_immunity			= 1
-shock_immunity			= 1.0
-wound_immunity			= 0.15
-radiation_immunity = 0.0
-telepatic_immunity = 1.0
-chemical_burn_immunity = 1.0
-explosion_immunity = 0.55
-fire_wound_immunity  = 0.15
-
-
-;===========================================================================
-; SPECIAL EFFECTORS
-;===========================================================================
-[m_flesh_attack_effector]
-duality_h		= 0.01
-duality_v		= 0.01
-blur			= 0.01
-gray			= 0.5
-noise_intensity = 0.0
-noise_grain		= 1
-noise_fps		= 30
-color_base		= 0.65,0.15,0.1
-color_gray		= 0.333,0.333,0.333
-color_add		= 0,0,0
-time			= 0.3
-time_attack		= 0.05		; fade in
-time_release	        = 0.25		; fade out
-
-; camera effects
-ce_time				= 0.45 ;time 
-ce_amplitude		= -10.0 
-ce_period_number	= 2.0 
-ce_power			= 1.5 ;0.7 ; power 
-
-
-
-;===========================================================================
-; Attack Animation Parameters
-;===========================================================================
-
-[m_flesh_attack_params]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Left leg strike
-stand_attack_0 =	  	0.25,		0.26,		    70,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
-;Both leg strike
-stand_attack_1 =	  	0.30,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
-stand_attack_2 =	  	0.30,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
-stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
-
-
-
-
-;*********************************************************************************
+;******************************************************************************
 ; WEAK PROFILE
-;*********************************************************************************
-
+;******************************************************************************
 [flesh_weak]:m_flesh_e
 	$spawn								= "monsters\fleshes\flesh_weak"						;option for Level Editor
 
@@ -363,35 +358,34 @@ stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 
 	panic_threshold						= 0.2
 
-	attack_params						= flesh_attack_params_weak
-	immunities_sect						= flesh_immunities_weak
+	attack_params						= flesh_weak_attack_params
+	immunities_sect						= flesh_weak_immunities
 
-[flesh_immunities_weak]
-burn_immunity			= 1.0
-strike_immunity			= 1
-shock_immunity			= 1.0
-wound_immunity			= 0.20
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.5
-fire_wound_immunity		= 0.3
+[flesh_weak_immunities]
+	burn_immunity						= 1.0
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.2
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.5
+	fire_wound_immunity					= 0.3
 
-[flesh_attack_params_weak]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Left leg strike
-stand_attack_0 =	  	0.25,		0.10,		    70,        0.0, 0.5, 1.0,		  -1.0, 1.0, -1.0, 1.0,								  2.0
-;Both leg strike
-stand_attack_1 =	  	0.30,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
-stand_attack_2 =	  	0.30,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
-stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
+[flesh_weak_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Left leg strike
+	stand_attack_0		=	0.25,		0.1,		70,			0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.0
+	;Both leg strike
+	stand_attack_1		=	0.3,		0.4,		150,		0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
+	stand_attack_2		=	0.3,		0.4,		150,		0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
+	stand_attack_3		=	0.4,		0.4,		150,		0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
 
-;*********************************************************************************
+;******************************************************************************
 ; NORMAL PROFILE
-;*********************************************************************************
-
+;******************************************************************************
 [flesh_normal]:m_flesh_e
 	$spawn								= "monsters\fleshes\flesh_normal"					;option for Level Editor
 
@@ -401,36 +395,34 @@ stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 
 	panic_threshold						= 0.2
 
-	attack_params						= flesh_attack_params_normal
-	immunities_sect						= flesh_immunities_normal
+	attack_params						= flesh_normal_attack_params
+	immunities_sect						= flesh_normal_immunities
 
-[flesh_immunities_normal]
-burn_immunity			= 1.0
-strike_immunity			= 1
-shock_immunity			= 1.0
-wound_immunity			= 0.15
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.5
-fire_wound_immunity		= 0.2
+[flesh_normal_immunities]
+	burn_immunity						= 1.0
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.15
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.5
+	fire_wound_immunity					= 0.2
 
-[flesh_attack_params_normal]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Left leg strike
-stand_attack_0 =	  	0.25,		0.20,		    70,        0.0, 0.5, 1.0,		  -1.0, 1.0, -1.0, 1.0,								  2.0
-;Both leg strike
-stand_attack_1 =	  	0.30,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
-stand_attack_2 =	  	0.30,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
-stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
+[flesh_normal_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Left leg strike
+	stand_attack_0		=	0.25,		0.2,		70,			0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.0
+	;Both leg strike
+	stand_attack_1		=	0.3,		0.4,		150,		0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
+	stand_attack_2		=	0.3,		0.4,		150,		0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
+	stand_attack_3		=	0.4,		0.4,		150,		0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
 
-
-;*********************************************************************************
+;******************************************************************************
 ; STRONG PROFILE
-;*********************************************************************************
-
+;******************************************************************************
 [flesh_strong]:m_flesh_e
 	$spawn								= "monsters\fleshes\flesh_strong"					;option for Level Editor
 
@@ -443,72 +435,34 @@ stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1
 
 	panic_threshold						= 0.05
 
-	attack_params						= flesh_attack_params_strong
-	immunities_sect						= flesh_immunities_strong
+	attack_params						= flesh_strong_attack_params
+	immunities_sect						= flesh_strong_immunities
 
+[flesh_strong_immunities]
+	burn_immunity						= 1.0
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.1
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.5
+	fire_wound_immunity					= 0.1
 
-[flesh_immunities_strong]
-burn_immunity			= 1.0
-strike_immunity			= 1
-shock_immunity			= 1.0
-wound_immunity			= 0.10
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.5
-fire_wound_immunity		= 0.1
+[flesh_strong_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Left leg strike
+	stand_attack_0		=	0.25,		0.3,		70,			0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.0
+	;Both leg strike
+	stand_attack_1		=	0.3,		0.4,		150,		0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
+	stand_attack_2		=	0.3,		0.4,		150,		0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
+	stand_attack_3		=	0.4,		0.4,		150,		0.0, 0.5, 1.0,					-1.0, 1.0, -1.0, 1.0,				2.5
 
-[flesh_attack_params_strong]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Left leg strike
-stand_attack_0 =	  	0.25,		0.30,		    70,        0.0, 0.5, 1.0,		  -1.0, 1.0, -1.0, 1.0,								  2.0
-;Both leg strike
-stand_attack_1 =	  	0.30,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
-stand_attack_2 =	  	0.30,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
-stand_attack_3 =	  	0.40,		0.40,		    150,        0.0, 0.5, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  2.5
-
-
-
-
-
-[flesh_critical_wound_bones_head]
-bip01_neck
-bip01_head
-bip01_ponytail1
-bip01_ponytail2
-
-[flesh_critical_wound_bones_torso]
-bip01_pelvis
-bip01_l_calf
-bip01_r_calf
-bip01_spine
-bip01_spine1
-bip01_spine2
-bip01_l_clavicle
-bip01_r_clavicle
-
-[flesh_critical_wound_bones_legs]
-bip01_l_horselink
-bip01_l_foot
-bip01_l_toe0
-bip01_r_thigh
-bip01_r_horselink
-bip01_r_foot
-bip01_r_toe0
-bip01_l_upperarm
-bip01_l_forearm
-bip01_l_hand
-bip01_l_finger0
-bip01_l_finger01
-bip01_r_upperarm
-bip01_r_forearm
-bip01_r_hand
-bip01_r_finger0
-bip01_r_finger01
-bip01_l_thigh
-
+;******************************************************************************
+; GROUP
+;******************************************************************************
 [flesh_group]
 	GroupControlSection					= spawn_group
 ;	$spawn								= "monsters\flesh-group"							;option for Level Editor

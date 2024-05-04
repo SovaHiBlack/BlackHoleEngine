@@ -312,7 +312,7 @@ visual							= actors\hero\stalker_novice	; option for Level Editor
 corpse_visual					= equipments\item_rukzak.ogf	;actors\hero\stalker_novice.ogf; option for Level Editor
 custom_data						= stalker_custom_data.ltx		; option for Level Editor
 character_profile				= default						; option for Level Editor
-use_single_item_rule			= off
+use_single_item_rule			= false
 
 ;---GAME--------------------------------------------------------------
 $prefetch 						= 32							
@@ -416,7 +416,7 @@ step_params						= stalker_step_manager
 foot_bones						= stalker_foot_bones
 
 ;---MOVEMENT----------------------------------------------------------
-movement_speeds					= stalker_movement_speeds;
+movement_speeds					= stalker_movement_speeds
 
 ;---SIGHT-------------------------------------------------------------------------
 max_left_torso_angle			= 45 ; максимальный угол поворота налево без доворота тела
@@ -511,7 +511,7 @@ power_fx_factor					= 50.0
 
 [stalker_trader]:stalker
 $spawn = "stalkers\stalker_trader"			; option for Level Editor
-use_single_item_rule = off
+use_single_item_rule = false
 can_select_items	 = off
 
 [stalker_sakharov]:stalker_trader

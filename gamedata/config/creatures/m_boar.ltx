@@ -21,7 +21,7 @@
 	species								= boar
 
 	material							= creatures\hoof
-	terrain								= boar_terrain
+	terrain								= m_boar_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
 
 	Spawn_Inventory_Item_Section		= mutant_boar_leg
@@ -146,7 +146,7 @@
 	distance_to_corpse					= 2.1												;дист. до трупа, при которой он переходит в состояние еды
 
 	;immunities
-	immunities_sect						= boar_immunities
+	immunities_sect						= m_boar_immunities
 
 	;--------------------------------------------------------------------------
 	; Sounds and sound parameters
@@ -212,13 +212,13 @@
 	critical_wound_decrease_quant		= 0.0
 
 	critical_wound_anim_head			= critical_hit_head_0
-	critical_wound_bones_head			= boar_critical_wound_bones_head
+	critical_wound_bones_head			= m_boar_critical_wound_bones_head
 
 	critical_wound_anim_torso			= critical_hit_torso_0
-	critical_wound_bones_torso			= boar_critical_wound_bones_torso
+	critical_wound_bones_torso			= m_boar_critical_wound_bones_torso
 
 	critical_wound_anim_legs			= critical_hit_torso_0
-	critical_wound_bones_legs			= boar_critical_wound_bones_legs
+	critical_wound_bones_legs			= m_boar_critical_wound_bones_legs
 
 	;--------------------------------------------------------------------------
 	; Other
@@ -230,61 +230,22 @@
 	LegsCount							= 4
 	step_params							= m_boar_step_params
 
-;==============================================================================
-; Attack Animation Parameters
-;==============================================================================
-[m_boar_attack_params]
-	;--------------------------------------------------------------------------------------------------------------------------------------
-	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, bottom, top) | Test Dist
-	;--------------------------------------------------------------------------------------------------------------------------------------
-	;Bite
-	stand_attack_0		=	0.30,		0.25,		150,		0.0, 0.5, 0.5,					-0.6, 0.6, -0.6, 0.6,				3.2
-	;Bite2
-	stand_attack_1		=	0.30,		0.25,		150,		0.0, 0.5, 0.5,					-0.6, 0.6, -0.6, 0.6,				3.2
-	;Right Leg Attack
-	stand_attack_2		=	0.30,		0.35,		200,		0.0, 1.0, 2.0,					-0.6, 0.6, -0.6, 0.6,				3.2
-	stand_attack_run_0	=	0.50,		0.35,		200,		0.0, 1.0, 2.0,					-0.6, 0.6, -0.6, 0.6,				2.2
-
-;==============================================================================
-; SPECIAL EFFECTORS
-;==============================================================================
-[m_boar_attack_effector]
-	duality_h							= 0.05
-	duality_v							= 0.02
-	blur								= 0.01
-	gray								= 0.5
-	noise_intensity						= 0.0
-	noise_grain							= 1
-	noise_fps							= 30
-	color_base							= 0.65,0.15,0.1
-	color_gray							= 0.333,0.333,0.333
-	color_add							= 0,0,0
-	time								= 0.30
-	time_attack							= 0.05											;fade in
-	time_release						= 0.15											;fade out
-
-	;camera effects
-	ce_time								= 0.35											;time
-	ce_amplitude						= 10											;head shake after hit
-	ce_period_number					= 2.0											;camera shake times
-	ce_power							= 2.5											;power
-
-;==============================================================================
+;------------------------------------------------------------------------------
 ; Boar Damage
-;==============================================================================
+;------------------------------------------------------------------------------
 [m_boar_damage]
-	;bone_name							= <hit_scale>,-1,<wound_scale>
+	;bone_name							= <hit_scale>, -1, <wound_scale>
 	;										<hit_scale>		- коэфф. изменения хита (уменьшения здоровья)
 	;										<wound_scale>	- коэфф. изменения величины открытой раны
 
-	default								= 1, -1, 0.3
-	bip01_pelvis						= 1, -1, 0.3
-	bip01_spine							= 1, -1, 0.3
-	bip01_spine1						= 1, -1, 0.3
-	bip01_neck							= 1, -1, 1.5
-	bip01_head							= 2, -1, 0.3, 10
+	default								= 1.0, -1, 0.3
+	bip01_pelvis						= 1.0, -1, 0.3
+	bip01_spine							= 1.0, -1, 0.3
+	bip01_spine1						= 1.0, -1, 0.3
+	bip01_neck							= 1.0, -1, 1.5
+	bip01_head							= 2.0, -1, 0.3, 10
 
-[boar_critical_wound_bones_head]
+[m_boar_critical_wound_bones_head]
 	bip01_pelvis
 	bip01_l_thigh
 	bip01_l_calf
@@ -334,19 +295,52 @@
 	bip01_tail
 	bip01_tail1
 
-[boar_critical_wound_bones_torso]
+[m_boar_critical_wound_bones_torso]
 
-[boar_critical_wound_bones_legs]
+[m_boar_critical_wound_bones_legs]
 
-;==============================================================================
-; Boar Terrain
-;==============================================================================
-[boar_terrain]
-	255,000,255,255
+;------------------------------------------------------------------------------
+; Special Effector
+;------------------------------------------------------------------------------
+[m_boar_attack_effector]
+	duality_h							= 0.05
+	duality_v							= 0.02
+	gray								= 0.5
+	blur								= 0.01
+	noise_intensity						= 0.0
+	noise_grain							= 1.0
+	noise_fps							= 30.0
+	color_base							= 0.65, 0.15, 0.1
+	color_gray							= 0.333, 0.333, 0.333
+	color_add							= 0.0, 0.0, 0.0
+	time								= 0.3
+	time_attack							= 0.05												;fade in
+	time_release						= 0.15												;fade out
 
-;==============================================================================
+	;camera effects
+	ce_time								= 0.35												;time
+	ce_amplitude						= 10.0												;head shake after hit
+	ce_period_number					= 2.0												;camera shake times
+	ce_power							= 2.5												;power
+
+;------------------------------------------------------------------------------
+; Attack Animation Parameters
+;------------------------------------------------------------------------------
+[m_boar_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, bottom, top) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Bite
+	stand_attack_0		=	0.3,		0.25,		150,		0.0, 0.5, 0.5,					-0.6, 0.6, -0.6, 0.6,				3.2
+	;Bite2
+	stand_attack_1		=	0.3,		0.25,		150,		0.0, 0.5, 0.5,					-0.6, 0.6, -0.6, 0.6,				3.2
+	;Right Leg Attack
+	stand_attack_2		=	0.3,		0.35,		200,		0.0, 1.0, 2.0,					-0.6, 0.6, -0.6, 0.6,				3.2
+	stand_attack_run_0	=	0.5,		0.35,		200,		0.0, 1.0, 2.0,					-0.6, 0.6, -0.6, 0.6,				2.2
+
+;------------------------------------------------------------------------------
 ; Step Events
-;==============================================================================
+;------------------------------------------------------------------------------
 [m_boar_step_params]
 	;------------------------------------------------------------------------------------------------
 	;		anim		| Cycles | time1 | power1 | time2 | power2 | time3 | power3 | time4 | power4
@@ -358,11 +352,11 @@
 	stand_steal_0		=	1,		0.2,	1.0,	0.25,	0.7,	0.7,	1.0,		0.7,	1.0
 	stand_drag_0		=	1,		0.2,	1.0,	0.25,	0.7,	0.7,	1.0,		0.7,	1.0
 
-;==============================================================================
-; IMMUNITIES
-;==============================================================================
-[boar_immunities]
-	burn_immunity						= 1.0									;коэффициенты иммунитета
+;------------------------------------------------------------------------------
+; Immunities
+;------------------------------------------------------------------------------
+[m_boar_immunities]
+	burn_immunity						= 1.0												;коэффициенты иммунитета
 	strike_immunity						= 0.5
 	shock_immunity						= 0.5
 	wound_immunity						= 0.3
@@ -371,6 +365,12 @@
 	chemical_burn_immunity				= 0.8
 	explosion_immunity					= 0.15
 	fire_wound_immunity					= 0.15
+
+;------------------------------------------------------------------------------
+; Terrain
+;------------------------------------------------------------------------------
+[m_boar_terrain]
+	255,000,255,255
 
 ;******************************************************************************
 ; WEAK PROFILE
@@ -384,10 +384,10 @@
 
 	panic_threshold						= 0.5
 
-	attack_params						= boar_attack_params_weak
-	immunities_sect						= boar_immunities_weak
+	attack_params						= boar_weak_attack_params
+	immunities_sect						= boar_weak_immunities
 
-[boar_immunities_weak]
+[boar_weak_immunities]
 	burn_immunity						= 1.0
 	strike_immunity						= 1.0
 	shock_immunity						= 1.0
@@ -398,7 +398,7 @@
 	explosion_immunity					= 0.55
 	fire_wound_immunity					= 0.12
 
-[boar_attack_params_weak]
+[boar_weak_attack_params]
 	;--------------------------------------------------------------------------------------------------------------------------------------
 	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, bottom, top) | Test Dist
 	;--------------------------------------------------------------------------------------------------------------------------------------
@@ -410,9 +410,9 @@
 	stand_attack_2		=	0.3,		0.2,		100,		0.0, 1.0, 2.0,					-0.8, 0.8, -1.0, 1.0,				2.5
 	stand_attack_run_0	=	0.5,		0.3,		200,		0.0, 1.0, 2.0,					-1.0, 1.0, -1.0, 1.0,				2.2
 
-;*********************************************************************************
+;******************************************************************************
 ; NORMAL PROFILE
-;*********************************************************************************
+;******************************************************************************
 [boar_normal]:m_boar_e
 	$spawn								= "monsters\boars\boar_normal"						;option for Level Editor
 
@@ -422,10 +422,10 @@
 
 	panic_threshold						= 0.2
 
-	attack_params						= boar_attack_params_normal
-	immunities_sect						= boar_immunities_normal
+	attack_params						= boar_normal_attack_params
+	immunities_sect						= boar_normal_immunities
 
-[boar_immunities_normal]
+[boar_normal_immunities]
 	burn_immunity						= 1.0
 	strike_immunity						= 1.0
 	shock_immunity						= 1.0
@@ -436,7 +436,7 @@
 	explosion_immunity					= 0.55
 	fire_wound_immunity					= 0.1
 
-[boar_attack_params_normal]
+[boar_normal_attack_params]
 	;---------------------------------------------------------------------------------------------------------------------------------------
 	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, bottom, top ) | Test Dist
 	;---------------------------------------------------------------------------------------------------------------------------------------
@@ -463,10 +463,10 @@
 
 	panic_threshold						= 0.05
 
-	attack_params						= boar_attack_params_strong
-	immunities_sect						= boar_immunities_strong
+	attack_params						= boar_strong_attack_params
+	immunities_sect						= boar_strong_immunities
 
-[boar_immunities_strong]
+[boar_strong_immunities]
 	burn_immunity			= 1.0
 	strike_immunity			= 1.0
 	shock_immunity			= 1.0
@@ -477,7 +477,7 @@
 	explosion_immunity		= 0.55
 	fire_wound_immunity		= 0.07
 
-[boar_attack_params_strong]
+[boar_strong_attack_params]
 	;---------------------------------------------------------------------------------------------------------------------------------------
 	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, bottom, top ) | Test Dist
 	;---------------------------------------------------------------------------------------------------------------------------------------

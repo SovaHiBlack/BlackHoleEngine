@@ -334,7 +334,6 @@ void CActor::Load	(LPCSTR section )
 	character_physics_support()->in_Load		(section);
 	
 	//загрузить параметры эффектора
-//	LoadShootingEffector	("shooting_effector");
 	LoadSleepEffector		("sleep_effector");
 
 	//загрузить параметры смещения firepoint

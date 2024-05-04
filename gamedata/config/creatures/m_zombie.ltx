@@ -21,7 +21,7 @@
 	species								= zombie
 
 	material							= creatures\medium
-	terrain								= zombie_terrain
+	terrain								= m_zombie_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
 
 	Spawn_Inventory_Item_Section		= mutant_zombie_hand
@@ -34,8 +34,6 @@
 	;--------------------------------------------------------------------------
 	DayTime_Begin						= 0													;начала дня для монстра
 	DayTime_End							= 21												;конец дня для монстра
-	Min_Satiety							= 0.4												;мин. норма сытости (меньше - уже голодный)
-	Max_Satiety							= 1.0												;макс. норма сытости (больше - очень сытый)
 
 	;--------------------------------------------------------------------------
 	; Offline Alife
@@ -143,7 +141,7 @@
 	distance_to_corpse					= 1.2												;дист. до трупа, при которой он переходит в состояние еды
 
 	;immunities
-	immunities_sect						= zombie_immunities
+	immunities_sect						= m_zombie_immunities
 
 	;--------------------------------------------------------------------------
 	; Sounds and sound parameters
@@ -221,81 +219,96 @@
 	FakeDeathCount						= 4													;max count of fake death
 	StartFakeDeathHealthThreshold		= 0.6
 
-
+;------------------------------------------------------------------------------
+; Zombie Damage
+;------------------------------------------------------------------------------
 [m_zombie_damage]
-;bone_name		 = <hit_scale>,-1,<wound_scale>
-;<hit_scale>	- коэфф. изменения хита (уменьшения здоровья)
-;<wound_scale>	- коэфф. изменения величины открытой раны
+	;bone_name							= <hit_scale>, -1, <wound_scale>
+	;										<hit_scale>		- коэфф. изменения хита (уменьшения здоровья)
+	;										<wound_scale>	- коэфф. изменения величины открытой раны
 
-default				= 1.0, -1, 0.01
+	default								= 1.0, -1, 0.01
+	bip01_pelvis						= 0.1, -1, 0.01
+	bip01_spine							= 0.1, -1, 0.01
+	bip01_spine1						= 0.1, -1, 0.01
+	bip01_neck							= 0.1, -1, 0.01
+	bip01_head							= 2.0, -1, 0.01
 
-bip01_pelvis 		= 0.1, -1, 0.01
-bip01_spine 		= 0.1, -1, 0.01
-bip01_spine1 		= 0.1, -1, 0.01
-bip01_neck 			= 0.1, -1, 0.01
-bip01_head 			= 2.0, -1, 0.01
-
-[zombie_terrain]
-  255,000,255,255
-
-[m_zombie_attack_params]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;right hand strike
-stand_attack_0 =	  	0.30,		0.25,		    100,        0.0, 1.0, 0.0,		 -0.6, 0.6, -0.6, 0.6,							  2.0
-;left hand strike
-stand_attack_1 =	  	0.35,		0.20,		    100,        0.0, 1.0, 0.0,		 -0.6, 0.6, -0.6, 0.6,							  2.0
-;left hand strike2
-stand_attack_2 =	  	0.30,		0.15,		    120,        0.0, 1.0, 0.0,		 -0.6, 0.6, -0.6, 0.6,							  2.0
-;left hand strike3
-stand_attack_3 =	  	0.30,		0.20,		    180,        0.0, 1.0, 0.0,		 -0.6, 0.6, -0.6, 0.6,							  2.0
-
+;------------------------------------------------------------------------------
+; Special Effector
+;------------------------------------------------------------------------------
 [m_zombie_attack_effector]
+	duality_h							= 0.01
+	duality_v							= 0.01
+	gray								= 0.5
+	blur								= 0.01
+	noise_intensity						= 0.0
+	noise_grain							= 1.0
+	noise_fps							= 30.0
+	color_base							= 0.255, 0.0, 0.0
+	color_gray							= 0.333, 0.333, 0.333
+	color_add							= 0.0, 0.0, 0.0
+	time								= 0.4
+	time_attack							= 0.1												;fade in
+	time_release						= 0.35												;fade out
 
-duality_h		= 0.01
-duality_v		= 0.01
-blur			= 0.01
-gray			= 0.5
-noise_intensity = 0.0
-noise_grain		= 1
-noise_fps		= 30
-color_base		= 0.255,0.0,0.0
-color_gray		= 0.333,0.333,0.333
-color_add		= 0,0,0
-time			= 0.4
-time_attack		= 0.10		; fade in
-time_release	= 0.35		; fade out
+	; camera effects
+	ce_time								= 0.5												;time
+	ce_amplitude						= -15.0
+	ce_period_number					= 1.5
+	ce_power							= 1.5												;power
 
-; camera effects
-ce_time				= 0.5 ;time 
-ce_amplitude		= -15.0 
-ce_period_number	= 1.5 ;2.0 
-ce_power			= 1.5 ;0.7 ; power 
+;------------------------------------------------------------------------------
+; Attack Animation Parameters
+;------------------------------------------------------------------------------
+[m_zombie_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, bottom, top) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;right hand strike
+	stand_attack_0		=	0.3,		0.25,		100,		0.0, 1.0, 0.0,					-0.6, 0.6, -0.6, 0.6,				2.0
+	;left hand strike
+	stand_attack_1		=	0.35,		0.2,		100,		0.0, 1.0, 0.0,					-0.6, 0.6, -0.6, 0.6,				2.0
+	;left hand strike2
+	stand_attack_2		=	0.3,		0.15,		120,		0.0, 1.0, 0.0,					-0.6, 0.6, -0.6, 0.6,				2.0
+	;left hand strike3
+	stand_attack_3		=	0.3,		0.20,		180,		0.0, 1.0, 0.0,					-0.6, 0.6, -0.6, 0.6,				2.0
 
+;------------------------------------------------------------------------------
+; Step Events
+;------------------------------------------------------------------------------
 [m_zombie_step_params]
-;---------------------------------------------------------------------------
-;	anim			| Cycles | time1 | power1 | time2 | power2 |
-;---------------------------------------------------------------------------
-stand_walk_fwd_0 	=	    1,	   0.01,     1,     0.25,    0.7,   
-stand_walk_dmg_0 	=	    1,	   0.01,     1,     0.25,    0.7,     
-stand_run_fwd_0	 	=	    1,	   0.01,     1,	    0.25,    0.6,    
-stand_run_dmg_0	 	=	    1,	   0.01,     1,	    0.25,    0.6,    
+	;--------------------------------------------------------------
+	;		anim		| Cycles | time1 | power1 | time2 | power2
+	;--------------------------------------------------------------
+	stand_walk_fwd_0	=	1,		0.01,	1.0,	0.25,	0.7
+	stand_walk_dmg_0	=	1,		0.01,	1.0,	0.25,	0.7
+	stand_run_fwd_0		=	1,		0.01,	1.0,	0.25,	0.6
+	stand_run_dmg_0		=	1,		0.01,	1.0,	0.25,	0.6
 
-;===========================================================================
-; IMMUNITIES
-;===========================================================================
-[zombie_immunities]
-burn_immunity			= 0.3						;коэффициенты иммунитета 
-strike_immunity			= 0.8
-shock_immunity			= 0.8
-wound_immunity			= 0.3;1
-radiation_immunity		= 0.0	;0.5
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 0.3
-explosion_immunity		= 0.3
-fire_wound_immunity		= 0.1
-	
+;------------------------------------------------------------------------------
+; Immunities
+;------------------------------------------------------------------------------
+[m_zombie_immunities]
+	burn_immunity						= 0.3												;коэффициенты иммунитета
+	strike_immunity						= 0.8
+	shock_immunity						= 0.8
+	wound_immunity						= 0.3
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 0.3
+	explosion_immunity					= 0.3
+	fire_wound_immunity					= 0.1
+
+;------------------------------------------------------------------------------
+; Terrain
+;------------------------------------------------------------------------------
+[m_zombie_terrain]
+	255,000,255,255
+
+;******************************************************************************
+; WEAK PROFILE
+;******************************************************************************
 [zombie_weak]:m_zombie_e
 	$spawn								= "monsters\zombies\zombie_weak"					;option for Level Editor
 
@@ -310,16 +323,15 @@ fire_wound_immunity		= 0.1
 
 	panic_threshold						= 0.5
 
-	attack_params						= zombie_attack_params_normal
-	immunities_sect						= zombie_immunities_normal
+	attack_params						= zombie_normal_attack_params
+	immunities_sect						= zombie_normal_immunities
 
+	FakeDeathCount						= 3													;max count of fake death
+	StartFakeDeathHealthThreshold		= 0.4
 
-
-
-
-FakeDeathCount					= 3		; max count of fake death
-StartFakeDeathHealthThreshold	= 0.4
-
+;******************************************************************************
+; NORMAL PROFILE
+;******************************************************************************
 [zombie_normal]:m_zombie_e
 	$spawn								= "monsters\zombies\zombie_normal"					;option for Level Editor
 
@@ -332,39 +344,39 @@ StartFakeDeathHealthThreshold	= 0.4
 
 	panic_threshold						= 0.2
 
-	attack_params						= zombie_attack_params_normal
-	immunities_sect						= zombie_immunities_normal
+	attack_params						= zombie_normal_attack_params
+	immunities_sect						= zombie_normal_immunities
 
+	FakeDeathCount						= 4													;max count of fake death
+	StartFakeDeathHealthThreshold		= 0.6
 
-FakeDeathCount					= 4		; max count of fake death
-StartFakeDeathHealthThreshold	= 0.6
+[zombie_normal_immunities]
+	burn_immunity						= 1.0
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.35
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.35
+	fire_wound_immunity					= 0.2
 
-[zombie_immunities_normal]
-burn_immunity			= 1.0
-strike_immunity			= 1.0
-shock_immunity			= 1.0
-wound_immunity			= 0.35
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.35
-fire_wound_immunity		= 0.2
+[zombie_normal_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, bottom, top) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;right hand strike
+	stand_attack_0		=	0.3,		0.35,		100,		0.0, 1.0, 0.0,					-0.3, 1.0, -0.6, 0.6,				2.0
+	;left hand strike
+	stand_attack_1		=	0.35,		0.35,		100,		0.0, 1.0, 0.0,					-1.8, 0.6, -0.6, 0.6,				2.0
+	;left hand strike2
+	stand_attack_2		=	0.3,		0.35,		120,		0.0, 1.0, 0.0,					-0.6, 0.6, -1.0, 1.0,				2.0
+	;left hand strike3
+	stand_attack_3		=	0.3,		0.35,		180,		0.0, 1.0, 0.0,					-1.0, 0.3, -0.6, 0.6,				2.0
 
-[zombie_attack_params_normal]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;right hand strike
-stand_attack_0 =	  	0.30,		0.35,		    100,        0.0, 1.0, 0.0,		 -0.3, 1.0, -0.6, 0.6,							  2.0
-;left hand strike
-stand_attack_1 =	  	0.35,		0.35,		    100,        0.0, 1.0, 0.0,		 -1.8, 0.6, -0.6, 0.6,							  2.0
-;left hand strike2
-stand_attack_2 =	  	0.30,		0.35,		    120,        0.0, 1.0, 0.0,		 -0.6, 0.6, -1.0, 1.0,							  2.0
-;left hand strike3
-stand_attack_3 =	  	0.30,		0.35,		    180,        0.0, 1.0, 0.0,		 -1.0, 0.3, -0.6, 0.6,							  2.0
-
-
-
+;******************************************************************************
+; STRONG PROFILE
+;******************************************************************************
 [zombie_strong]:m_zombie_e
 	$spawn								= "monsters\zombies\zombie_strong"					;option for Level Editor
 
@@ -379,40 +391,39 @@ stand_attack_3 =	  	0.30,		0.35,		    180,        0.0, 1.0, 0.0,		 -1.0, 0.3, -0
 
 	panic_threshold						= 0.05
 
-	attack_params						= zombie_attack_params_strong
-	immunities_sect						= zombie_immunities_strong
+	attack_params						= zombie_strong_attack_params
+	immunities_sect						= zombie_strong_immunities
 
+	FakeDeathCount						= 6													;max count of fake death
+	StartFakeDeathHealthThreshold		= 0.8
 
-FakeDeathCount					= 6		; max count of fake death
-StartFakeDeathHealthThreshold	= 0.8
+[zombie_strong_immunities]
+	burn_immunity						= 1.0
+	strike_immunity						= 1.0
+	shock_immunity						= 1.0
+	wound_immunity						= 0.35
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 1.0
+	explosion_immunity					= 0.35
+	fire_wound_immunity					= 0.15
 
+[zombie_strong_attack_params]
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, bottom, top) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;right hand strike
+	stand_attack_0		=	0.3,		0.5,		100,		0.0, 1.0, 0.0,					-0.3, 1.0, -0.6, 0.6,				2.0
+	;left hand strike
+	stand_attack_1		=	0.35,		0.5,		100,		0.0, 1.0, 0.0,					-1.8, 0.6, -0.6, 0.6,				2.0
+	;left hand strike2
+	stand_attack_2		=	0.3,		0.5,		120,		0.0, 1.0, 0.0,					-0.6, 0.6, -1.0, 1.0,				2.0
+	;left hand strike3
+	stand_attack_3		=	0.3,		0.5,		180,		0.0, 1.0, 0.0,					-1.0, 0.3, -0.6, 0.6,				2.0
 
-
-[zombie_immunities_strong]
-burn_immunity			= 1.0
-strike_immunity			= 1.0
-shock_immunity			= 1.0
-wound_immunity			= 0.35
-radiation_immunity		= 0.0
-telepatic_immunity		= 1.0
-chemical_burn_immunity	= 1.0
-explosion_immunity		= 0.35
-fire_wound_immunity		= 0.15
-
-[zombie_attack_params_strong]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;right hand strike
-stand_attack_0 =	  	0.30,		0.50,		    100,        0.0, 1.0, 0.0,		 -0.3, 1.0, -0.6, 0.6,							  2.0
-;left hand strike
-stand_attack_1 =	  	0.35,		0.50,		    100,        0.0, 1.0, 0.0,		 -1.8, 0.6, -0.6, 0.6,							  2.0
-;left hand strike2
-stand_attack_2 =	  	0.30,		0.50,		    120,        0.0, 1.0, 0.0,		 -0.6, 0.6, -1.0, 1.0,							  2.0
-;left hand strike3
-stand_attack_3 =	  	0.30,		0.50,		    180,        0.0, 1.0, 0.0,		 -1.0, 0.3, -0.6, 0.6,							  2.0
-
-
+;******************************************************************************
+; CUSTOM PROFILES
+;******************************************************************************
 [zombie_immortal]:zombie_strong
 	$spawn								= "monsters\zombies\zombie_immortal"				;option for Level Editor
 
@@ -464,37 +475,32 @@ stand_attack_3 =	  	0.30,		0.50,		    180,        0.0, 1.0, 0.0,		 -1.0, 0.3, -0
 
 	sound_die							= $no_sound
 
+	bones_particles						= zombie_rusty_particles
 
+	FakeDeathCount						= 1													;max count of fake death
+	StartFakeDeathHealthThreshold		= 0.001
 
-bones_particles			= zombie_rusty_particles
-
-
-
-FakeDeathCount			= 1
-StartFakeDeathHealthThreshold	= 0.001
-
-;custom_data = scripts\zombie_rusty.ltx
-
+;	custom_data							= scripts\zombie_rusty.ltx
 
 [zombie_rusty_immunities]
-burn_immunity			= 0.0
-strike_immunity			= 0.0
-shock_immunity			= 0.0
-wound_immunity			= 0.35
-radiation_immunity		= 0.0
-telepatic_immunity		= 0.0
-chemical_burn_immunity		= 0.0
-explosion_immunity		= 0.4
-fire_wound_immunity		= 0.35
+	burn_immunity						= 0.0
+	strike_immunity						= 0.0
+	shock_immunity						= 0.0
+	wound_immunity						= 0.35
+	radiation_immunity					= 0.0
+	telepatic_immunity					= 0.0
+	chemical_burn_immunity				= 0.0
+	explosion_immunity					= 0.4
+	fire_wound_immunity					= 0.35
 
 [zombie_rusty_particles]
-zombie_rusty_particles_spine = zombie_rusty_particles_spine
+	zombie_rusty_particles_spine		= zombie_rusty_particles_spine
 
 [zombie_rusty_particles_spine]
-particle = ogsm\ogsm_distort
-sound = $no_sound
-bone = bip01_spine
-stop_on_death = true
+	particle							= ogsm\ogsm_distort
+	sound								= $no_sound
+	bone								= bip01_spine
+	stop_on_death						= true
 
 [rad_zombie_rusty]:zombie_rusty
 	Health								= 80												;option for ALife Simulator
@@ -511,72 +517,28 @@ stop_on_death = true
 
 	immunities_sect						= zombie_plague_immunities
 
+	FakeDeathCount						= 1													;max count of fake death
+	StartFakeDeathHealthThreshold		= 0.001
+	bones_particles						= zombie_plague_particles
 
-FakeDeathCount			= 1
-StartFakeDeathHealthThreshold	= 0.001
-bones_particles			= zombie_plague_particles
+	custom_data							= scripts\zombie_plague.ltx
 
-custom_data = scripts\zombie_plague.ltx
-;
 [zombie_plague_particles]
-zombie_plague_particles_spine = zombie_plague_particles_spine
-;
+	zombie_plague_particles_spine		= zombie_plague_particles_spine
+
 [zombie_plague_particles_spine]
-particle = ogsm\ogsm_flies
-sound = anomaly\flies
-bone = bip01_head
-stop_on_death = true
-;
+	particle							= ogsm\ogsm_flies
+	sound								= anomaly\flies
+	bone								= bip01_head
+	stop_on_death						= true
+
 [zombie_plague_immunities]
-burn_immunity			= 0.2
-strike_immunity			= 0.1
-shock_immunity			= 0.1
-wound_immunity			= 0.1
-radiation_immunity		= 0.1
-telepatic_immunity		= 0.1
-chemical_burn_immunity		= 0.1
-explosion_immunity		= 0.3
-fire_wound_immunity		= 0.1
-
-
-[arena_zombie_1]:zombie_weak
-	rank								= 255
-	spec_rank							= normal
-	community							= zombie
-
-	panic_threshold						= 0.2
-
-
-
-custom_data = scripts\arena_mob_3.ltx
-
-[arena_zombie_2]:zombie_normal
-	rank								= 255
-	spec_rank							= normal
-	community							= zombie
-
-	panic_threshold						= 0.2
-
-
-
-
-custom_data = scripts\arena_mob_4.ltx
-
-[arena_zombie_3]:zombie_ghost
-	rank								= 255
-	spec_rank							= normal
-	community							= zombie
-
-	panic_threshold						= 0.2
-
-
-custom_data = scripts\arena_mob_5.ltx
-
-[arena_zombie_4]:zombie_immortal
-	rank								= 255
-	spec_rank							= normal
-	community							= zombie
-
-	panic_threshold						= 0.2
-
-custom_data = scripts\arena_mob_6.ltx
+	burn_immunity						= 0.2
+	strike_immunity						= 0.1
+	shock_immunity						= 0.1
+	wound_immunity						= 0.1
+	radiation_immunity					= 0.1
+	telepatic_immunity					= 0.1
+	chemical_burn_immunity				= 0.1
+	explosion_immunity					= 0.3
+	fire_wound_immunity					= 0.1

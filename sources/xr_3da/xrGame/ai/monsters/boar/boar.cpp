@@ -22,8 +22,6 @@ CAI_Boar::~CAI_Boar()
 	xr_delete(StateMan);
 }
 
-
-
 void CAI_Boar::Load(LPCSTR section)
 {
 	inherited::Load	(section);
@@ -32,7 +30,6 @@ void CAI_Boar::Load(LPCSTR section)
 	anim().AddReplacedAnim(&m_bDamaged,			eAnimWalkFwd,	eAnimWalkDamaged);
 	anim().AddReplacedAnim(&m_bRunTurnLeft,		eAnimRun,		eAnimRunTurnLeft);
 	anim().AddReplacedAnim(&m_bRunTurnRight,	eAnimRun,		eAnimRunTurnRight);
-
 
 	anim().accel_load			(section);
 	anim().accel_chain_add		(eAnimWalkFwd,		eAnimRun);
@@ -77,13 +74,11 @@ void CAI_Boar::Load(LPCSTR section)
 	anim().AddAnim(eAnimRunTurnLeft,	"stand_run_look_left_",	 -1, &velocity_run,	PS_STAND);
 	anim().AddAnim(eAnimRunTurnRight,	"stand_run_look_right_", -1, &velocity_run,	PS_STAND);
 
-
-	// define transitions																											
-	anim().AddTransition(eAnimStandLieDown,	eAnimSleep,		eAnimLieToSleep,		false);										
+	// define transitions
+	anim().AddTransition(eAnimStandLieDown,	eAnimSleep,		eAnimLieToSleep,		false);
 	anim().AddTransition(PS_STAND,			eAnimSleep,		eAnimStandLieDown,		true);
 	anim().AddTransition(PS_STAND,			PS_LIE,			eAnimStandLieDown,		false);
 	anim().AddTransition(PS_LIE,				PS_STAND,		eAnimLieStandUp,		false, SKIP_IF_AGGRESSIVE);
-
 
 	// define links from Action to animations
 	anim().LinkAction(ACT_STAND_IDLE,	eAnimStandIdle);
@@ -100,9 +95,9 @@ void CAI_Boar::Load(LPCSTR section)
 	anim().LinkAction(ACT_STEAL,			eAnimSteal);
 	anim().LinkAction(ACT_LOOK_AROUND,	eAnimLookAround);
 
-#ifdef DEBUG	
+#ifdef DEBUG
 	anim().accel_chain_test		();
-#endif
+#endif // def DEBUG
 
 }
 
@@ -113,8 +108,7 @@ void CAI_Boar::reinit()
 	com_man().add_rotation_jump_data("stand_jump_left_0",0,"stand_jump_right_0",0, PI - PI_DIV_6, SControlRotationJumpData::eStopAtOnce | SControlRotationJumpData::eRotateOnce);
 }
 
-
-void  CAI_Boar::BoneCallback(CBoneInstance *B)
+void CAI_Boar::BoneCallback(CBoneInstance *B)
 {
 	CAI_Boar	*P = static_cast<CAI_Boar*>(B->Callback_Param);
 

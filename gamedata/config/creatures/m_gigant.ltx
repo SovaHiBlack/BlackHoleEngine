@@ -25,7 +25,7 @@
 	monster_type						= outdoor
 
 	material							= creatures\large
-	terrain								= giant_terrain
+	terrain								= m_gigant_terrain
 	SpaceRestrictionSection				= space_restrictor,zone_mosquito_bald
 
 	script_binding						= bind_monster.bind
@@ -35,8 +35,6 @@
 	;--------------------------------------------------------------------------
 	DayTime_Begin						= 0													;начала дня для монстра
 	DayTime_End							= 21												;конец дня для монстра
-	Min_Satiety							= 0.6												;мин. норма сытости (меньше - уже голодный)
-	Max_Satiety							= 0.9												;макс. норма сытости (больше - очень сытый)
 
 	;--------------------------------------------------------------------------
 	; Offline Alife
@@ -107,7 +105,7 @@
 	;--------------------------------------------------------------------------
 	; Attack parameters
 	;--------------------------------------------------------------------------
-	attack_effector						= m_giant_attack_effector
+	attack_effector						= m_gigant_attack_effector
 	attack_params						= m_gigant_attack_params
 
 	MinAttackDist						= 2.5
@@ -148,7 +146,7 @@
 	distance_to_corpse					= 1.2												;дист. до трупа, при которой он переходит в состояние еды
 
 	;immunities
-	immunities_sect						= giant_immunities
+	immunities_sect						= m_gigant_immunities
 
 	;--------------------------------------------------------------------------
 	; Sounds and sound parameters
@@ -210,7 +208,7 @@
 	;--------------------------------------------------------------------------
 	;Здоровье, с которым начинать проигрывать травмированную анимацию
 	DamagedThreshold					= 0.2
-	damage								= m_giant_damage
+	damage								= m_gigant_damage
 
 	critical_wound_threshold			= -1.0
 	critical_wound_decrease_quant		= 0.0
@@ -253,154 +251,123 @@
 	LegsCount							= 2
 	step_params							= m_gigant_step_params
 
+	threaten_effector					= m_gigant_threaten_effector
 
+	Anomaly_Detect_Radius				= 15.0
+	Anomaly_Detect_Time_Remember		= 10000
 
+;------------------------------------------------------------------------------
+; Gigant Damage
+;------------------------------------------------------------------------------
+[m_gigant_damage]
+	;bone_name							= <hit_scale>, -1, <wound_scale>
+	;										<hit_scale>		- коэфф. изменения хита (уменьшения здоровья)
+	;										<wound_scale>	- коэфф. изменения величины открытой раны
 
+	default								= 1.0, -1, 0.1
+	bone01								= 1.0, -1, 0.1
+	bip01_pelvis						= 1.0, -1, 0.1
+	bip01_spine							= 1.0, -1, 0.1
+	bip01_neck							= 1.0, -1, 0.5
+	bip01_head							= 2.0, -1, 0.2, 10
 
+;------------------------------------------------------------------------------
+; Special Effector
+;------------------------------------------------------------------------------
+[m_gigant_attack_effector]
+	duality_h							= 0.05
+	duality_v							= 0.08
+	gray								= 0.5
+	blur								= 0.01
+	noise_intensity						= 0.0
+	noise_grain							= 1.0
+	noise_fps							= 30.0
+	color_base							= 0.65, 0.15, 0.1
+	color_gray							= 0.333, 0.333, 0.333
+	color_add							= 0.0, 0.0, 0.0
+	time								= 1.5
+	time_attack							= 0.05												;fade in
+	time_release						= 0.65												;fade out
 
+	;camera effects
+	ce_time								= 0.85												;time
+	ce_amplitude						= 25.0
+	ce_period_number					= 3.0
+	ce_power							= 3.0												;power
 
+[m_gigant_threaten_effector]
+	duality_h							= 0.1
+	duality_v							= 0.1
+	gray								= 0.3
+	blur								= 0.01
+	noise_intensity						= 1.0
+	noise_grain							= 0.2
+	noise_fps							= 30.0
+	color_base							= 0.3, 0.2, 0.2
+	color_gray							= 0.333, 0.333, 0.333
+	color_add							= 0.0, 0.0, 0.0
+	time								= 2.0
+	time_attack							= 0.1												;fade in
+	time_release						= 0.3												;fade out
 
-selector_approach		= 20.0,1.0,1000.0,0.0,0.0, 1000.0,	10000.0,      
+	;camera effects
+	ce_time								= 1.7
+	ce_amplitude						= 6.0
+	ce_period_number					= 20.0
+	ce_power							= 1.3
 
-
-
-
-
-
-
-
-
-
-threaten_effector		= pseudogigant_threaten_effector
-
-
-
-
-
-
-
-Anomaly_Detect_Radius			= 15.0
-Anomaly_Detect_Time_Remember	= 10000
-
-
-
-
-
-
-;=========================================================================================
-; Damage Params
-;=========================================================================================
-
-[m_giant_damage]
-;bone_name		 = <hit_scale>,-1,<wound_scale>
-;<hit_scale>	- коэфф. изменения хита (уменьшения здоровья) 
-;<wound_scale>	- коэфф. изменения величины открытой раны
-
-default				= 1, -1, 0.1
-bone01				= 1, -1, 0.1
-bip01_pelvis 		= 1, -1, 0.1
-bip01_spine 		= 1, -1, 0.1
-bip01_neck 			= 1, -1, 0.5
-bip01_head 			= 2, -1, 0.2, 10
-
-;=========================================================================================
-; Attack Animation Params
-;=========================================================================================
+;------------------------------------------------------------------------------
+; Attack Animation Parameters
+;------------------------------------------------------------------------------
 [m_gigant_attack_params]
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)   |	Field of hit_test  (left,right, top, bottom) |	Test Dist
-;---------------------------------------------------------------------------------------------------------------------------------------------
-;Bite
-stand_attack_0 =	  	0.25,		0.550,	    150,        0.5, 1.0, 0.5,		 -0.8, 0.8, -1.8, 1.8,					  2.6
-;Left leg Strike
-stand_attack_1 =	  	0.40,		0.550,	    200,        5.0, 2.5, 4.0,		 -0.6, 0.6, -1.8, 1.8,					  3.2
-;Bite2
-stand_attack_2 =	  	0.25,		0.550,	    150,        0.5, 1.0, 5.0,		 -0.8, 0.8, -1.8, 1.8,					  2.6
-stand_attack_run_0=     0.5,		0.70,	    550,        0.5, 1.0, 5.0,		 -0.6, 1.3, -1.8, 1.8,					  3.3
-jump_attack_1	=		0.1,		2.00,		1550,       0.5, 1.0, 5.0,		 -1.0, 1.3, -1.6, 1.6,					  3.5
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;		anim		| time[0..1] | hit_power | impulse | impulse_dir (x,y,z) | Field of hit_test (left,right, top, bottom) | Test Dist
+	;--------------------------------------------------------------------------------------------------------------------------------------
+	;Bite
+	stand_attack_0		=	0.25,		0.55,		150,		0.5, 1.0, 0.5,					-0.8, 0.8, -1.8, 1.8,				2.6
+	;Left leg Strike
+	stand_attack_1		=	0.4,		0.55,		200,		5.0, 2.5, 4.0,					-0.6, 0.6, -1.8, 1.8,				3.2
+	;Bite2
+	stand_attack_2		=	0.25,		0.55,		150,		0.5, 1.0, 5.0,					-0.8, 0.8, -1.8, 1.8,				2.6
+	stand_attack_run_0	=	0.5,		0.7,		550,		0.5, 1.0, 5.0,					-0.6, 1.3, -1.8, 1.8,				3.3
+	jump_attack_1		=	0.1,		2.0,		1550,		0.5, 1.0, 5.0,					-1.0, 1.3, -1.6, 1.6,				3.5
 
-;=========================================================================================
-; Attack Effector
-;=========================================================================================
-[m_giant_attack_effector]
-duality_h		= 0.05;0.01
-duality_v		= 0.08;0.01
-blur			= 0.01
-gray			= 0.5
-noise_intensity = 0.0
-noise_grain		= 1
-noise_fps		= 30
-color_base		= 0.65,0.15,0.1
-color_gray		= 0.333,0.333,0.333
-color_add		= 0,0,0
-time			= 1.5
-time_attack		= 0.05		; fade in
-time_release	= 0.65		; fade out
-
-; camera effects
-ce_time				= 0.85 ;time 
-ce_amplitude		= 25.0;15.0 
-ce_period_number	= 3.0 
-ce_power			= 3.0 ;0.7 ; power 
-
-;=========================================================================================
-; Step Params
-;=========================================================================================
+;------------------------------------------------------------------------------
+; Step Events
+;------------------------------------------------------------------------------
 [m_gigant_step_params]
-;------------------------------------------------------------------------
-;	anim			Cycles| time1 | power1 | time2 | power2 |
-;------------------------------------------------------------------------
-stand_walk_fwd_0	=	1,     0.5,     1,	   0.1,    0.7 
-stand_walk_fwd_dmg_0=  	1,	   0.2,     1,	   0.25,   0.7, 
-stand_run_fwd_0		=	1,     0.1,     1,	   0.60,   0.7
-stand_run_dmg_0		=	1,	   0.2,     1,	   0.6,    0.7,
-stand_steal_0		=	1,	   0.2,     1,	   0.5,   0.7,   
+	;-------------------------------------------------------------
+	;		anim		| Cycles| time1 | power1 | time2 | power2
+	;-------------------------------------------------------------
+	stand_walk_fwd_0	=	1,		0.5,	1.0,	0.1,	0.7
+	stand_walk_fwd_dmg_0=	1,		0.2,	1.0,	0.25,	0.7
+	stand_run_fwd_0		=	1,		0.1,	1.0,	0.6,	0.7
+	stand_run_dmg_0		=	1,		0.2,	1.0,	0.6,	0.7
+	stand_steal_0		=	1,		0.2,	1.0,	0.5,	0.7
 
+;------------------------------------------------------------------------------
+; Immunities
+;------------------------------------------------------------------------------
+[m_gigant_immunities]
+	burn_immunity						= 0.3												;коэффициенты иммунитета
+	strike_immunity						= 0.3
+	shock_immunity						= 0.3
+	wound_immunity						= 0.01
+	radiation_immunity					= 0.01
+	telepatic_immunity					= 1.0
+	chemical_burn_immunity				= 0.05
+	explosion_immunity					= 0.3
+	fire_wound_immunity					= 0.05
 
-;=========================================================================================
-; Threaten Effector
-;=========================================================================================
-[pseudogigant_threaten_effector]
-duality_h		= 0.1	;0.31
-duality_v		= 0.1	;0.31
-blur			= 0.01
-gray			= 0.3	;0.5
-noise_intensity = 1.0
-noise_grain		= 0.2
-noise_fps		= 30
-color_base		= 0.3,0.2,0.2	;0.1,0.15,0.4
-color_gray		= 0.333,0.333,0.333	;0.333,0.333,0.333
-color_add		= 0.0,0.0,0.0
-time			= 2.0		;1.5
-time_attack		= 0.1	;0.5		; fade in
-time_release	= 0.3		; fade out
-
-; camera effects
-ce_time				= 1.7	;1.5
-ce_amplitude		= 6.0
-ce_period_number	= 20.0
-ce_power			= 1.3 ;0.7
-
-;===========================================================================
-; TERRAIN
-;===========================================================================
-[giant_terrain]
+;------------------------------------------------------------------------------
+; Terrain
+;------------------------------------------------------------------------------
+[m_gigant_terrain]
 	255,000,255,255
 
-;===========================================================================
-; IMMUNITIES
-;===========================================================================
-[giant_immunities]
-burn_immunity 			= 0.3			;коэффициенты иммунитета 
-strike_immunity 		= 0.3
-shock_immunity 			= 0.3
-wound_immunity 			= 0.01	;0.1	;0.30	;1.0		
-radiation_immunity 		= 0.01
-telepatic_immunity 		= 1.0
-chemical_burn_immunity	= 0.05
-explosion_immunity 		= 0.3
-fire_wound_immunity  	= 0.05
-
+;******************************************************************************
+; NORMAL PROFILE
+;******************************************************************************
 [gigant_normal]:m_gigant_e
 	$spawn								= "monsters\gigants\gigant_normal"					;option for Level Editor
 
@@ -408,6 +375,9 @@ fire_wound_immunity  	= 0.05
 	spec_rank							= normal
 	community							= pseudo_gigant
 
+;******************************************************************************
+; STRONG PROFILE
+;******************************************************************************
 [gigant_strong]:m_gigant_e
 	$spawn								= "monsters\gigants\gigant_strong"					;option for Level Editor
 
@@ -417,28 +387,3 @@ fire_wound_immunity  	= 0.05
 	rank								= 801
 	spec_rank							= strong
 	community							= pseudo_gigant
-
-[arena_gigant_1]:m_gigant_e
-	$spawn								= "monsters\gigants\gigant_arena1"					;option for Level Editor
-
-	rank								= 401
-	spec_rank							= normal
-	community							= pseudo_gigant
-
-	immunities_sect						= giant_immunities_arena
-
-
-
-
-custom_data = scripts\arena_mob_1.ltx
-
-[giant_immunities_arena]
-burn_immunity       = 0.006     ;коэффициенты иммунитета 
-strike_immunity     = 0.008
-shock_immunity      = 0.008
-wound_immunity      = 0.006   
-radiation_immunity    = 0.0
-telepatic_immunity    = 1.0
-chemical_burn_immunity  = 0.06
-explosion_immunity    = 0.005
-fire_wound_immunity   = 0.005

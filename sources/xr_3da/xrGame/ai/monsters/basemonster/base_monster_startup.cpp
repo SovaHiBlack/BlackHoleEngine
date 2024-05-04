@@ -270,11 +270,10 @@ void CBaseMonster::settings_read(CInifile *ini, LPCSTR section, SMonsterSettings
 	READ_SETTINGS(data.m_legs_number,		"LegsCount",			r_u8,	 ini, section);
 	READ_SETTINGS(data.m_max_hear_dist,		"max_hear_dist",		r_float, ini, section);
 
-	// Load attack postprocess 
-	if (ini->line_exist(section,"attack_effector")) {
-
-		LPCSTR ppi_section = ini->r_string(section, "attack_effector");
-
+	// Load attack postprocess
+	if (ini->line_exist(section,"attack_effector"))
+	{
+		const char* ppi_section = ini->r_string(section, "attack_effector");
 		READ_SETTINGS(data.m_attack_effector.ppi.duality.h,			"duality_h",		r_float, ini, ppi_section);
 		READ_SETTINGS(data.m_attack_effector.ppi.duality.v,			"duality_v",		r_float, ini, ppi_section);
 		READ_SETTINGS(data.m_attack_effector.ppi.gray,				"gray",				r_float, ini, ppi_section);
@@ -282,15 +281,22 @@ void CBaseMonster::settings_read(CInifile *ini, LPCSTR section, SMonsterSettings
 		READ_SETTINGS(data.m_attack_effector.ppi.noise.intensity,	"noise_intensity",	r_float, ini, ppi_section);
 		READ_SETTINGS(data.m_attack_effector.ppi.noise.grain,		"noise_grain",		r_float, ini, ppi_section);
 		READ_SETTINGS(data.m_attack_effector.ppi.noise.fps,			"noise_fps",		r_float, ini, ppi_section);
-
 		VERIFY(!fis_zero(data.m_attack_effector.ppi.noise.fps));
 
-		if (ini->line_exist(ppi_section,"color_base")) 
-			sscanf(ini->r_string(ppi_section,"color_base"),	"%f,%f,%f", &data.m_attack_effector.ppi.color_base.r, &data.m_attack_effector.ppi.color_base.g, &data.m_attack_effector.ppi.color_base.b);		
-		if (ini->line_exist(ppi_section,"color_base")) 
-			sscanf(ini->r_string(ppi_section,"color_gray"),	"%f,%f,%f", &data.m_attack_effector.ppi.color_gray.r, &data.m_attack_effector.ppi.color_gray.g, &data.m_attack_effector.ppi.color_gray.b);
-		if (ini->line_exist(ppi_section,"color_base")) 
-			sscanf(ini->r_string(ppi_section,"color_add"),	"%f,%f,%f", &data.m_attack_effector.ppi.color_add.r,  &data.m_attack_effector.ppi.color_add.g,	&data.m_attack_effector.ppi.color_add.b);
+		if (ini->line_exist(ppi_section, "color_base"))
+		{
+			sscanf(ini->r_string(ppi_section, "color_base"), "%f,%f,%f", &data.m_attack_effector.ppi.color_base.r, &data.m_attack_effector.ppi.color_base.g, &data.m_attack_effector.ppi.color_base.b);
+		}
+
+		if (ini->line_exist(ppi_section, "color_base"))
+		{
+			sscanf(ini->r_string(ppi_section, "color_gray"), "%f,%f,%f", &data.m_attack_effector.ppi.color_gray.r, &data.m_attack_effector.ppi.color_gray.g, &data.m_attack_effector.ppi.color_gray.b);
+		}
+
+		if (ini->line_exist(ppi_section, "color_base"))
+		{
+			sscanf(ini->r_string(ppi_section, "color_add"), "%f,%f,%f", &data.m_attack_effector.ppi.color_add.r, &data.m_attack_effector.ppi.color_add.g, &data.m_attack_effector.ppi.color_add.b);
+		}
 
 		READ_SETTINGS(data.m_attack_effector.time,					"time",				r_float, ini, ppi_section);
 		READ_SETTINGS(data.m_attack_effector.time_attack,			"time_attack",		r_float, ini, ppi_section);

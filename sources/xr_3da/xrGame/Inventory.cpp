@@ -48,7 +48,7 @@ bool CInventorySlot::IsBlocked() const
 	return (m_blockCounter>0);
 }
 
-CInventory::CInventory() 
+CInventory::CInventory()
 {
 	m_fTakeDist									= pSettings->r_float	("inventory","take_dist");
 	m_fMaxWeight								= pSettings->r_float	("inventory","max_weight");
@@ -64,12 +64,14 @@ CInventory::CInventory()
 	m_pTarget									= NULL;
 
 	string256 temp;
-	for(u32 i=0; i<m_slots.size(); ++i ) 
+	for (u32 i = 0; i < m_slots.size( ); ++i)
 	{
-		sprintf_s(temp, "slot_persistent_%d", i+1);
-		if(pSettings->line_exist("inventory",temp)) 
-			m_slots[i].m_bPersistent = !!pSettings->r_bool("inventory",temp);
-	};
+		sprintf_s(temp, "slot_persistent_%d", i + 1);
+		if (pSettings->line_exist("inventory", temp))
+		{
+			m_slots[i].m_bPersistent = !!pSettings->r_bool("inventory", temp);
+		}
+	}
 
 	m_slots[PDA_SLOT].m_bVisible				= false;
 	m_slots[OUTFIT_SLOT].m_bVisible				= false;
@@ -85,10 +87,8 @@ CInventory::CInventory()
 	m_iLoadActiveSlotFrame						= u32(-1);
 }
 
-
-CInventory::~CInventory() 
-{
-}
+CInventory::~CInventory( )
+{ }
 
 void CInventory::Clear()
 {
@@ -100,7 +100,6 @@ void CInventory::Clear()
 	{
 		m_slots[i].m_pIItem				= NULL;
 	}
-	
 
 	m_pOwner							= NULL;
 
@@ -226,7 +225,7 @@ bool CInventory::DropItem(CGameObject *pObj)
 		}break;
 	default:
 		NODEFAULT;
-	};
+	}
 
 	TIItemContainer::iterator	it = std::find(m_all.begin(), m_all.end(), pIItem);
 	if ( it != m_all.end())
@@ -276,12 +275,9 @@ bool CInventory::Slot(PIItem pIItem, bool bNotActivate)
 	it = std::find(m_belt.begin(), m_belt.end(), pIItem);
 	if(m_belt.end() != it) m_belt.erase(it);
 
-
-
 	if (( (m_iActiveSlot==pIItem->GetSlot())||(m_iActiveSlot==NO_ACTIVE_SLOT) && m_iNextActiveSlot==NO_ACTIVE_SLOT) && (!bNotActivate))
 		Activate				(pIItem->GetSlot());
 
-	
 	m_pOwner->OnItemSlot		(pIItem, pIItem->m_eItemPlace);
 	pIItem->m_eItemPlace		= eItemPlaceSlot;
 	pIItem->OnMoveToSlot		();
@@ -362,8 +358,8 @@ bool CInventory::Ruck(PIItem pIItem)
 
 void CInventory::Activate_deffered	(u32 slot, u32 _frame)
 {
-	 m_iLoadActiveSlot			= slot;
-	 m_iLoadActiveSlotFrame		= _frame;
+	m_iLoadActiveSlot			= slot;
+	m_iLoadActiveSlotFrame		= _frame;
 }
 
 void  CInventory::ActivateNextItemInActiveSlot()
@@ -413,7 +409,6 @@ void  CInventory::ActivateNextItemInActiveSlot()
 	new_item->object().u_EventGen		(P, GEG_PLAYER_ACTIVATE_SLOT, new_item->object().H_Parent()->ID());
 	P.w_u32								(new_item->GetSlot());
 	new_item->object().u_EventSend		(P);
-
 
 	Msg("CHANGE");
 }

@@ -186,7 +186,7 @@
     <ClInclude Include="..\xrRender\Blender_Screen_SET.h">
       <Filter>Shading templates\R1</Filter>
     </ClInclude>
-    <ClInclude Include="..\xrRender\Blender_tree.h">
+    <ClInclude Include="..\xrRender\Blender_Tree.h">
       <Filter>Shading templates\R1</Filter>
     </ClInclude>
     <ClInclude Include="..\xrRender\ModelPool.h">
@@ -428,7 +428,7 @@
     <ClCompile Include="..\xrRender\Blender_Screen_SET.cpp">
       <Filter>Shading templates\R1</Filter>
     </ClCompile>
-    <ClCompile Include="..\xrRender\Blender_tree.cpp">
+    <ClCompile Include="..\xrRender\Blender_Tree.cpp">
       <Filter>Shading templates\R1</Filter>
     </ClCompile>
     <ClCompile Include="..\xrRender\ModelPool.cpp">

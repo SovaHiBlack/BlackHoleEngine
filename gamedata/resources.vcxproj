@@ -761,7 +761,6 @@
     <None Include="config\text\map_desc\testers_mp_railroad.ltx" />
     <None Include="config\text\map_desc\testers_mp_rostok.ltx" />
     <None Include="config\text\map_desc\testers_mp_workshop.ltx" />
-    <None Include="Config\weapons\delayed_action_fuse.ltx" />
     <None Include="config\weapons\grenadier.ltx" />
     <None Include="Config\weapons\weapons.ltx" />
     <None Include="Config\weapons\w_abakan.ltx" />

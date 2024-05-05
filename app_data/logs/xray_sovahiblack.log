@@ -1,11 +1,11 @@
-* Detected CPU: GenuineIntel P3 family, F6/M10/S4, 2495.00 mhz, 105-clk 'rdtsc'
+* Detected CPU: GenuineIntel P3 family, F6/M10/S4, 2496.00 mhz, 103-clk 'rdtsc'
 * CPU Features: RDTSC, MMX, SSE, SSE2
 
 Initializing File System...
 using fs-ltx fsgame.ltx
 FS: 30057 files cached, 4886Kb memory used.
-Init FileSystem 23.258377 sec
-'xrCore' build 9218, May  4 2024
+Init FileSystem 25.411644 sec
+'xrCore' build 9219, May  5 2024
 
 Initializing Engine...
 Executing config-script "user.ltx"...
@@ -14,10 +14,10 @@ Starting INPUT device...
 Loading DLL: xrRender_R2.dll
 Loading DLL: xrGame.dll
 ! Unable to find Software\GSC Game World\STALKER-SHOC\ in registry
-* [win32]: free[4057668 K], reserved[43988 K], committed[92584 K]
+* [win32]: free[4056692 K], reserved[44540 K], committed[93008 K]
 * [ D3D ]: textures[0 K]
-* [x-ray]: process heap[8929 K], game lua[0 K], engine lua[0 K], render[0 K]
-* [x-ray]: economy: strings[1796 K], smem[0 K]
+* [x-ray]: process heap[8920 K], game lua[0 K], engine lua[0 K], render[0 K]
+* [x-ray]: economy: strings[1792 K], smem[0 K]
 Executing config-script "c:\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx"...
 ! cant convert dik_name for dik[144], prop=[
 [c:\blackholeengine\release-win32\..\gamedata\config\default_controls.ltx] successfully loaded.
@@ -64,66 +64,65 @@ Starting RENDER device...
 ! Version conflict in shader 'def_shaders\lod_old'
 ! Renderer doesn't support blender 'effects\shadow_world'
 ! Version conflict in shader 'effects\watertest-1'
-count of .thm files=1
-load time=285 ms
+count of .thm files=0
+load time=282 ms
 * HWDST/PCF supported and used
 - r__tf_aniso 16
 - r2_tf_mipbias 0.
 Starting engine...
 Loading DLL: xrGameSpy.dll
-! Missing ogg-comment, file:  c:\blackholeengine\release-win32\..\gamedata\sounds\characters_voice\scenario\video\intro_gsc_wp_r.ogg
 * DVB created: 1536K
 * DIB created: 512K
 - r__tf_aniso 16
 - r2_tf_mipbias 0.
 * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
 * GPU vertex cache: unrecognized, 16
-*** RESET [1363 ms]
+*** RESET [1811 ms]
 "c:\blackholeengine\sources\..\release-win32\binaries\xr_3da.exe" 
 * phase time: 0 ms
-* phase cmem: 100030 K
+* phase cmem: 81625 K
 Кэширование объектов...
 Loading objects...
 Loading models...
-* [prefetch] time:    39453 ms
-* [prefetch] memory:  426853Kb
-* phase time: 39819 ms
-* phase cmem: 513805 K
+* [prefetch] time: 171721 ms
+* [prefetch] memory: 425786K
+* phase time: 171963 ms
+* phase cmem: 494332 K
 Сервер: Старт...
-* phase time: 479 ms
-* phase cmem: 496674 K
+* phase time: 280 ms
+* phase cmem: 494570 K
 Сервер: Загрузка симуляции жизни...
-* phase time: 64 ms
-* phase cmem: 496674 K
+* phase time: 92 ms
+* phase cmem: 494570 K
 Создание новой игры...
 * Creating new game...
 * Loading spawn registry...
 * 8641 spawn points are successfully loaded
 * Saving spawns...
 * Saving objects...
-* 16011 objects are successfully saved
+* 16013 objects are successfully saved
 * Game all.sav is successfully saved to file 'c:\blackholeengine\release-win32\..\app_data\savedgames\all.sav'
 * New game is successfully created!
-* phase time: 19167 ms
-* phase cmem: 526595 K
+* phase time: 25246 ms
+* phase cmem: 524504 K
 Сервер: Соединяемся...
 MaxPlayers = 32
-* phase time: 141 ms
-* phase cmem: 526678 K
+* phase time: 152 ms
+* phase cmem: 524587 K
 Клиент: Соединение с localhost...
 # Player not found. New player created.
 * client : connection accepted - <>
-* phase time: 94 ms
-* phase cmem: 526702 K
+* phase time: 399 ms
+* phase cmem: 524611 K
 Открытие потока...
-* phase time: 91 ms
-* phase cmem: 526702 K
+* phase time: 112 ms
+* phase cmem: 524611 K
 Загрузка формы объектов...
-* phase time: 13132 ms
-* phase cmem: 597823 K
+* phase time: 26526 ms
+* phase cmem: 597280 K
 Загрузка шейдеров...
-* phase time: 1546 ms
-* phase cmem: 598944 K
+* phase time: 1311 ms
+* phase cmem: 598400 K
 Загрузка геометрии...
 * [Loading VB] 65532 verts, 2047 Kb
 * [Loading VB] 65525 verts, 2047 Kb
@@ -166,53 +165,46 @@ MaxPlayers = 32
 * [Loading IB] 1048575 indices, 2047 Kb
 * [Loading IB] 1048575 indices, 2047 Kb
 * [Loading IB] 718302 indices, 1402 Kb
-* phase time: 2786 ms
-* phase cmem: 667740 K
+* phase time: 3598 ms
+* phase cmem: 667196 K
 Загрузка базы пространств...
-* phase time: 7001 ms
-* phase cmem: 672216 K
+* phase time: 8093 ms
+* phase cmem: 672191 K
 Загрузка детальных объектов...
 * [DETAILS] VertexConsts(256), Batch(61)
 * [DETAILS] 40687 v(20), 26352 p
 * [DETAILS] Batch(61), VB(794K), IB(154K)
-* phase time: 349 ms
-* phase cmem: 673200 K
+* phase time: 559 ms
+* phase cmem: 673176 K
 Загрузка секторов и порталов...
 * Loading HOM: c:\blackholeengine\release-win32\..\gamedata\levels\l01_escape\level.hom
-* phase time: 134 ms
-* phase cmem: 673374 K
+* phase time: 296 ms
+* phase cmem: 673349 K
 Загрузка ИИ объектов...
 - Loading music tracks from 'l01_escape_musics'...
-* phase time: 195 ms
-* phase cmem: 673444 K
+* phase time: 467 ms
+* phase cmem: 673420 K
 Клиент: Создание...
 - Game configuring : Started 
 - Game configuring : Finished 
-* phase time: 1095 ms
-* phase cmem: 681180 K
+* phase time: 2556 ms
+* phase cmem: 681157 K
 Загрузка текстур...
 * t-report - base: 1445, 568750 K
 * t-report - lmap: 5, 5120 K
-* phase time: 14924 ms
-* phase cmem: 979653 K
+* phase time: 79462 ms
+* phase cmem: 979622 K
 Клиент: Синхронизация...
-* phase time: 197 ms
-* phase cmem: 979653 K
-* [win32]: free[2129252 K], reserved[107348 K], committed[1957640 K]
+* phase time: 131 ms
+* phase cmem: 979622 K
+* [win32]: free[2126664 K], reserved[108056 K], committed[1959520 K]
 * [ D3D ]: textures[573870 K]
-* [x-ray]: process heap[979653 K], game lua[28756 K], engine lua[144 K], render[0 K]
-* [x-ray]: economy: strings[4397 K], smem[28223 K]
-Intro start 1567
-* MEMORY USAGE: 1004335 K
-~ cannot remove restriction with id [799][esc_zone_radioactive_killing] to the entity with id [1220][esc_dog_weak_0032], because it is not added
-~ cannot remove restriction with id [799][esc_zone_radioactive_killing] to the entity with id [1219][esc_dog_weak_0031], because it is not added
-* Saving spawns...
-* Saving objects...
-* 16868 objects are successfully saved
-* Game all.sav is successfully saved to file 'c:\blackholeengine\release-win32\..\app_data\savedgames\all.sav'
+* [x-ray]: process heap[979622 K], game lua[28776 K], engine lua[129 K], render[0 K]
+* [x-ray]: economy: strings[4393 K], smem[28223 K]
+Intro start 1195
+* MEMORY USAGE: 1003106 K
 - Disconnect
 - Destroying level
-DestroySingleton::RefCounter: 0
 DestroySingleton::RefCounter: 0
 DestroySingleton::RefCounter: 0
 DestroySingleton::RefCounter: 0

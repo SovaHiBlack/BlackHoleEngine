@@ -16,6 +16,9 @@
 #include "script_callback_ex.h"
 #include "object_broker.h"
 #include "weapon.h"
+#include "UI.h"
+#include "HUDManager.h"
+#include "CustomOutfit.h"
 
 #define MAX_SATIETY					1.0f
 #define START_SATIETY				0.5f
@@ -45,12 +48,10 @@ CActorCondition::CActorCondition(CActor *object) :
 	VERIFY						(object);
 	m_object					= object;
 	m_condition_flags.zero		();
-
 }
 
 CActorCondition::~CActorCondition(void)
-{
-}
+{ }
 
 void CActorCondition::LoadCondition(LPCSTR entity_section)
 {
@@ -97,11 +98,7 @@ void CActorCondition::LoadCondition(LPCSTR entity_section)
 	m_MaxWalkWeight					= pSettings->r_float(section,"max_walk_weight");
 }
 
-
 //вычисление параметров с ходом времени
-#include "UI.h"
-#include "HUDManager.h"
-
 void CActorCondition::UpdateCondition()
 {
 	if (GodMode())				return;
@@ -114,7 +111,7 @@ void CActorCondition::UpdateCondition()
 	}
 	else {
 		ConditionStand(object().inventory().TotalWeight()/object().inventory().GetMaxWeight());
-	};
+	}
 	
 	if( IsGameTypeSingle() ){
 
@@ -137,7 +134,6 @@ void CActorCondition::UpdateCondition()
 		
 		SetMaxPower		(GetMaxPower() - m_fPowerLeakSpeed*m_fDeltaTime*k_max_power);
 	}
-
 
 	m_fAlcohol		+= m_fV_Alcohol*m_fDeltaTime;
 	clamp			(m_fAlcohol,			0.0f,		1.0f);
@@ -176,7 +172,7 @@ void CActorCondition::UpdateCondition()
 		}
 		if(fis_zero(GetPsyHealth()))
 			health() =0.0f;
-	};
+	}
 
 	UpdateSatiety				();
 
@@ -185,7 +181,6 @@ void CActorCondition::UpdateCondition()
 	if( IsGameTypeSingle() )
 		UpdateTutorialThresholds();
 }
-
 
 void CActorCondition::UpdateSatiety()
 {
@@ -199,7 +194,6 @@ void CActorCondition::UpdateSatiety()
 						m_fDeltaTime;
 	
 		clamp			(m_fSatiety,		0.0f,		1.0f);
-
 	}
 		
 	//сытость увеличивает здоровье только если нет открытых ран
@@ -220,7 +214,6 @@ void CActorCondition::UpdateSatiety()
 				m_fDeltaTime;
 }
 
-
 CWound* CActorCondition::ConditionHit(SHit* pHDS)
 {
 	if (GodMode()) return NULL;
@@ -234,6 +227,7 @@ void CActorCondition::ConditionJump(float weight)
 	power				+=	m_fJumpWeightPower*weight*(weight>1.f?m_fOverweightJumpK:1.f);
 	m_fPower			-=	HitPowerEffect(power);
 }
+
 void CActorCondition::ConditionWalk(float weight, bool accel, bool sprint)
 {	
 	float power			=	m_fWalkPower;
@@ -249,7 +243,6 @@ void CActorCondition::ConditionStand(float weight)
 	m_fPower			-= power;
 }
 
-
 bool CActorCondition::IsCantWalk() const
 {
 	if(m_fPower< m_fCantWalkPowerBegin)
@@ -258,8 +251,6 @@ bool CActorCondition::IsCantWalk() const
 		m_bCantWalk		= false;
 	return				m_bCantWalk;
 }
-
-#include "CustomOutfit.h"
 
 bool CActorCondition::IsCantWalkWeight()
 {
@@ -298,7 +289,6 @@ bool CActorCondition::IsLimping() const
 		m_bLimping = false;
 	return m_bLimping;
 }
-extern bool g_bShowHudInfo;
 
 void CActorCondition::save(NET_Packet &output_packet)
 {
@@ -344,8 +334,6 @@ void CActorCondition::UpdateTutorialThresholds()
 	static float _cRadiation		= pSettings->r_float("tutorial_conditions_thresholds","radiation");
 	static float _cWpnCondition		= pSettings->r_float("tutorial_conditions_thresholds","weapon_jammed");
 	static float _cPsyHealthThr		= pSettings->r_float("tutorial_conditions_thresholds","psy_health");
-
-
 
 	bool b = true;
 	if(b && !m_condition_flags.test(eCriticalPowerReached) && GetPower()<_cPowerThr){

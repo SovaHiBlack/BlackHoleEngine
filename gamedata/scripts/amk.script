@@ -583,12 +583,10 @@ function is_point_inside_interval(x,p1,p2)
 	end
 end
 
-
--- Получаем инвентарное название объекта
+--' Получаем инвентарное название объекта
 function get_inv_name(section)
 	return system_ini():r_string(section,"inv_name")
 end
-
 
 -- Колбэк на потерю предмета из инвентаря ГГ
 function on_item_drop(obj)

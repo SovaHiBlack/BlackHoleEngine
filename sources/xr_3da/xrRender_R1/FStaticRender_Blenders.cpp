@@ -16,7 +16,7 @@
 #include "blender_model.h"
 #include "..\xrRender\blender_model_ebb.h"
 #include "..\xrRender\blender_detail_still.h"
-#include "..\xrRender\blender_tree.h"
+#include "..\xrRender\Blender_Tree.h"
 #include "..\xrRender\blender_particle.h"
 
 IBlender*	CRender::blender_create	(CLASS_ID cls)

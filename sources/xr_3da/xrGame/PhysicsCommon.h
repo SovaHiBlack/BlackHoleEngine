@@ -1,5 +1,5 @@
-#ifndef PHYSICS_COMMON_H
-#define PHYSICS_COMMON_H
+#ifndef GAME_PHYSICS_COMMON_H
+#define GAME_PHYSICS_COMMON_H
 
 #include "DisablingParams.h"
 #include "ode_include.h"
@@ -42,9 +42,6 @@ struct SGameMtl;
 #define CFM(k_p,k_d)		CFM_S(k_p,k_d,fixed_step)
 #define SPRING(cfm,erp)		SPRING_S(cfm,erp,fixed_step)
 
-
-
-
 IC float Erp(float k_p,float k_d,float	s=fixed_step)		{return ((s*(k_p)) / (((s)*(k_p)) + (k_d)));}
 IC float Cfm(float k_p,float k_d,float	s=fixed_step)		{return (1.f / (((s)*(k_p)) + (k_d)));}
 IC float Spring(float cfm,float erp,float	s=fixed_step)	{return ((erp)/(cfm)/s);}
@@ -57,15 +54,12 @@ IC void	 MulSprDmp(float &cfm,float	&erp,float mul_spring,float mul_damping)
 }
 typedef void 	ContactCallbackFun(CDB::TRI* T,dContactGeom* c);
 typedef	void	ObjectContactCallbackFun(bool& do_colide,bool bo1,dContact& c,SGameMtl* material_1,SGameMtl* material_2);
-
-
 typedef void	BoneCallbackFun(CBoneInstance* B);
-
-
 
 extern ContactCallbackFun *ContactShotMark;
 extern ContactCallbackFun *CharacterContactShotMark;
 
 typedef	void	PhysicsStepTimeCallback		(u32	step_start,u32	step_end);
 extern			PhysicsStepTimeCallback		*physics_step_time_callback;
-#endif  //PHYSICS_COMMON_H
+
+#endif // ndef GAME_PHYSICS_COMMON_H

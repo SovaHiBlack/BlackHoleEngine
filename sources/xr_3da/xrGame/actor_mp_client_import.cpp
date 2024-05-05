@@ -18,16 +18,20 @@ void CActorMP::net_Import	( NET_Packet &P)
 	if (OnClient())
 		SetfRadiation	(m_state_holder.state().radiation*100.0f);
 
-	u8					ActiveSlot = m_state_holder.state().inventory_active_slot;
-	if (OnClient()) 
+	u8 ActiveSlot = m_state_holder.state( ).inventory_active_slot;
+	if (OnClient( ))
 	{
-//.		if (ActiveSlot >= SLOTS_TOTAL) inventory().SetActiveSlot(NO_ACTIVE_SLOT);
-		if (ActiveSlot >= SLOTS_TOTAL) inventory().Activate(NO_ACTIVE_SLOT);
-		else 
+		if (ActiveSlot >= SLOTS_TOTAL)
 		{
-			if (inventory().GetActiveSlot() != u32(ActiveSlot) )
-				inventory().Activate(u32(ActiveSlot), eImportUpdate);
-		};
+			inventory( ).Activate(NO_ACTIVE_SLOT);
+		}
+		else
+		{
+			if (inventory( ).GetActiveSlot( ) != u32(ActiveSlot))
+			{
+				inventory( ).Activate(u32(ActiveSlot), eImportUpdate);
+			}
+		}
 	}
 
 	N.mstate			= m_state_holder.state().body_state_flags;

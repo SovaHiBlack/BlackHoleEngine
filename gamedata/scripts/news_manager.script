@@ -5,7 +5,6 @@ news = {
 	escape_fox_quest				= xr_sound.get_safe_sound_object([[characters_voice\scenario\trader\trader_pda_fox]]),
 	tip_petruha_report				= xr_sound.get_safe_sound_object([[characters_voice\scenario\escape\petruha_raport_p]]),
 
-
 	tips_agr_krot_sos				= xr_sound.get_safe_sound_object([[characters_voice\scenario\agroprom\krot_help_pda_1]]),
 	tips_agr_krot_sos1				= xr_sound.get_safe_sound_object([[characters_voice\scenario\agroprom\krot_help_pda_2]]),
 	tips_agr_krot_sos2				= xr_sound.get_safe_sound_object([[characters_voice\scenario\agroprom\krot_help_pda_2]]),
@@ -15,7 +14,6 @@ news = {
 	tips_agr_trader_documents		= xr_sound.get_safe_sound_object([[characters_voice\scenario\agroprom\trader_pda_1]]),
     pass_to_1st_door                = xr_sound.get_safe_sound_object([[characters_voice\scenario\val\door1_password]]),
     pass_to_2nd_door                = xr_sound.get_safe_sound_object([[characters_voice\scenario\val\door2_password]]),
-
 
 	bar_ecolog_crush_heli_down		= xr_sound.get_safe_sound_object([[characters_voice\scenario\Rostok\Heli_crush\wolfhound_pda_1]]),
 	bar_freedom_attack_attract_actor= xr_sound.get_safe_sound_object([[characters_voice\scenario\Rostok\Heli_crush\wolfhound_pda_2]]),
@@ -61,7 +59,6 @@ news = {
 	general_ecolog_tip_1            = xr_sound.get_safe_sound_object([[characters_voice\scenario\yantar\professor_to_actor_pda_1]]),
     general_ecolog_tip_2            = xr_sound.get_safe_sound_object([[characters_voice\scenario\yantar\professor_to_actor_pda_2]]),
 
-
     tips_gar_hellcar_alarm			= xr_sound.get_safe_sound_object([[characters_voice\scenario\garbage\neutrals_commander_pda_1]]),
 	gar_dolg_blokpost_warning		= xr_sound.get_safe_sound_object([[characters_voice\scenario\duty\duty_warning1]]),
 	gar_dolg_monster_rush			= xr_sound.get_safe_sound_object([[characters_voice\scenario\duty\duty_request1]]),
@@ -71,16 +68,13 @@ news = {
 	gar_actor_normal				= xr_sound.get_safe_sound_object([[characters_voice\scenario\garbage\duty_after_rush_normal]]),
 	gar_actor_winner				= xr_sound.get_safe_sound_object([[characters_voice\scenario\garbage\duty_after_rush_good]]),
 
-
 	esc_direction_fire				= xr_sound.get_safe_sound_object([[characters_voice\scenario\escape\lager_fanat_attack]]),
 	esc_fanat_victory				= xr_sound.get_safe_sound_object([[characters_voice\scenario\escape\lager_fanat_victory]]),
 	
 	rad_barman_spam					= xr_sound.get_safe_sound_object([[characters_voice\scenario\radar\rad_barman_message]]),
 
-
 	val_monolith_trader_pda1		= xr_sound.get_safe_sound_object([[characters_voice\scenario\val\trader_dialog1]]),
 	o_soznanie_text					= xr_sound.get_safe_sound_object([[characters_voice\scenario\sarcofag\o_soznanie_call]]),
-
 
 -- dublicate pda sounds for remark scheme
     val_rob_leader_jeer_1           = xr_sound.get_safe_sound_object([[characters_voice\scenario\val\rob_leader_jeer_1_p]]),
@@ -108,11 +102,10 @@ tips_icons = {
 	wolf	 = { 332, 940},
 	o_soznanie = { 498, 893},
 	monolith = { 0, 658},
-    saharov  = { 332, 470},
-    prizrak  = { 0, 658},
-    killer   = { 0, 658}
+	saharov  = { 332, 470},
+	prizrak  = { 0, 658},
+	killer   = { 0, 658}
 }
-
 
 function send_tip(actor, news_id, timeout, sender, showtime, sender_id)
 	if news_id == nil then return false end
@@ -198,7 +191,7 @@ function send_task(actor, type, task, objective)
 		db.actor:give_talk_message(news_text, task_texture, task_rect,"iconed_answer_item")
 	else
 		db.actor:give_game_news(news_text, task_texture, task_rect, 0, 3000)
-	end	
+	end
 
 	if type == "new" or
 		type == "update"
@@ -214,21 +207,19 @@ function send_task(actor, type, task, objective)
 	hud:AddCustomStatic("main_task", true)
 	hud:GetCustomStatic("main_task"):wnd():SetTextST(news_text)
 	hud:GetCustomStatic("main_task").m_endTime = time_global()/1000 + 5
-
 end
 function send_encyclopedy(type, title)
 	if type == "Diary" then
 		pda_news:play(db.actor, 0, sound_object.s2d)
 
-
 		--' Берем координаты из текстуры таска
 		local task_texture, task_rect = get_texture_info("ui_iconsTotal_locations", "ui_iconsTotal_locations")
 		local news_text = "%c[255,160,160,160]"..game.translate_string("st_found_new_pda").."\\n".."%c[default]"..game.translate_string(title)
-		if db.actor:is_talking() then	
+		if db.actor:is_talking() then
 			db.actor:give_talk_message(news_text, task_texture, task_rect,"iconed_answer_item")
 		else
 			db.actor:give_game_news(news_text, task_texture, task_rect, 0, 3000)
-		end	
+		end
 	end
 end
 function send_treasure(name)
@@ -257,21 +248,25 @@ function send_treasure(name)
 	db.actor:give_game_news(news_text, task_texture, task_rect, 0, 7000)
 end
 
+--' Получаем инвентарное название объекта
 function get_inv_name(section)
 	return system_ini():r_string(section,"inv_name")
 end
 
 function relocate_item(actor, type, item)
-	if db.actor == nil then return false end
+	if db.actor==nil then
+		return false
+	end
+
 	--' Играем дефолтный звук
-	if type == "in" then
+	if type=="in" then
 		local task_texture, task_rect = get_texture_info("ui_iconsTotal_found_thing")
 		local news_text = "%c[255,160,160,160]"..game.translate_string("general_in_item").."\\n".."%c[default]"..game.translate_string(get_inv_name(item))		
 		if db.actor:is_talking() then
 			db.actor:give_talk_message(news_text, task_texture, task_rect,"iconed_answer_item")
 		else
 			db.actor:give_game_news(news_text, task_texture, task_rect, 0, 3000)
-		end		
+		end
 	elseif type == "out" then
 		local task_texture, task_rect = get_texture_info("ui_iconsTotal_lost_thing")
 		local news_text = "%c[255,160,160,160]"..game.translate_string("general_out_item").."\\n".."%c[default]"..game.translate_string(get_inv_name(item))		
@@ -279,10 +274,10 @@ function relocate_item(actor, type, item)
 			db.actor:give_talk_message(news_text, task_texture, task_rect,"iconed_answer_item")
 		else
 			db.actor:give_game_news(news_text, task_texture, task_rect, 0, 3000)
-		end		
+		end
 	end
-	
 end
+
 function relocate_money(actor, type, amount)
 	if db.actor == nil then return false end
 

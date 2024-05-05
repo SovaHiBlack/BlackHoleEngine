@@ -69,7 +69,6 @@ public:
 
 	virtual LPCSTR				Name				();
 	virtual LPCSTR				NameShort			();
-//.	virtual LPCSTR				NameComplex			();
 	shared_str					ItemDescription		() { return m_Description; }
 	virtual void				GetBriefInfo		(xr_string& str_name, xr_string& icon_sect_name, xr_string& str_count) {};
 	

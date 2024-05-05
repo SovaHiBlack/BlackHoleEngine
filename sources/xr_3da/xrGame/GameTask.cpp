@@ -18,48 +18,42 @@
 #include "object_broker.h"
 #include "ui/uitexturemaster.h"
 
-ALife::_STORY_ID	story_id		(LPCSTR story_id);
+ALife::_STORY_ID	story_id		(const char* story_id);
 u16					storyId2GameId	(ALife::_STORY_ID);
-
-
 
 using namespace luabind;
 
-ALife::_STORY_ID	story_id	(LPCSTR story_id)
+ALife::_STORY_ID story_id(const char* story_id)
 {
-	int res=
-							(
-		object_cast<int>(
-			luabind::object(
-				luabind::get_globals(
-					ai().script_engine().lua()
-				)
-				["story_ids"]
-			)
-			[story_id]
-		)
-	);
+	int res = (object_cast<int>(luabind::object(luabind::get_globals(ai( ).script_engine( ).lua( ))["story_ids"])[story_id]));
 	return ALife::_STORY_ID(res);
 }
 
-u16 storyId2GameId	(ALife::_STORY_ID id)
+u16 storyId2GameId(ALife::_STORY_ID id)
 {
-	if(ai().get_alife()){ 
-		CSE_ALifeDynamicObject* so = ai().alife().story_objects().object(id, true);
-		return (so)?so->ID:u16(-1);
-	}else{
-		u32 cnt = Level().Objects.o_count();
-		for(u32 it=0;it<cnt;++it){
-			CObject* O = Level().Objects.o_get_by_iterator(it);
+	if (ai( ).get_alife( ))
+	{
+		CSE_ALifeDynamicObject* so = ai( ).alife( ).story_objects( ).object(id, true);
+		return (so) ? so->ID : u16(-1);
+	}
+	else
+	{
+		u32 cnt = Level( ).Objects.o_count( );
+		for (u32 it = 0; it < cnt; ++it)
+		{
+			CObject* O = Level( ).Objects.o_get_by_iterator(it);
 			CGameObject* GO = smart_cast<CGameObject*>(O);
-			if(GO->story_id()==id)
-				return GO->ID();
+			if (GO->story_id( ) == id)
+			{
+				return GO->ID( );
+			}
 		}
-	return u16(-1);
+
+		return u16(-1);
 	}
 }
 
-CUIXml*	g_gameTaskXml=NULL;
+CUIXml* g_gameTaskXml = NULL;
 
 CGameTask::CGameTask(const TASK_ID& id)
 {
@@ -82,22 +76,26 @@ void CGameTask::Load(const TASK_ID& id)
 {
 	m_ID							= id;
 
-	if(!g_gameTaskXml){
-		g_gameTaskXml				= xr_new<CUIXml>();
+	if (!g_gameTaskXml)
+	{
+		g_gameTaskXml				= xr_new<CUIXml>( );
 		g_gameTaskXml->Init			(CONFIG_PATH, "gameplay", "game_tasks.xml");
 	}
+
 	XML_NODE* task_node				= g_gameTaskXml->NavigateToNodeWithAttribute("game_task","id",*id);
 
 	THROW3							(task_node, "game task id=", *id);
 	g_gameTaskXml->SetLocalRoot		(task_node);
 	m_Title							= g_gameTaskXml->Read(g_gameTaskXml->GetLocalRoot(), "title", 0, NULL);
 	m_priority						= g_gameTaskXml->ReadAttribInt(g_gameTaskXml->GetLocalRoot(), "prio", -1);
+
 #ifdef DEBUG
-	if(m_priority == u32(-1))
+	if (m_priority == u32(-1))
 	{
-		Msg("Game Task [%s] has no priority", *id);
+		Msg							("Game Task [%s] has no priority", *id);
 	}
-#endif // DEBUG
+#endif // def DEBUG
+
 	int tag_num						= g_gameTaskXml->GetNodesNum(g_gameTaskXml->GetLocalRoot(),"objective");
 	m_Objectives.clear		();
 	for(int i=0; i<tag_num; i++)

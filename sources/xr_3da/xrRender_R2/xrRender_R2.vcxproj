@@ -141,7 +141,7 @@
     <ClInclude Include="..\xrRender\Blender_Model_EbB.h" />
     <ClInclude Include="..\xrRender\Blender_Particle.h" />
     <ClInclude Include="..\xrRender\Blender_Screen_SET.h" />
-    <ClInclude Include="..\xrRender\Blender_tree.h" />
+    <ClInclude Include="..\xrRender\Blender_Tree.h" />
     <ClInclude Include="..\xrRender\DetailManager.h" />
     <ClInclude Include="..\xrRender\DetailModel.h" />
     <ClInclude Include="..\xrRender\FLOD.h" />
@@ -206,7 +206,7 @@
     <ClCompile Include="..\xrRender\Blender_Model_EbB.cpp" />
     <ClCompile Include="..\xrRender\Blender_Particle.cpp" />
     <ClCompile Include="..\xrRender\Blender_Screen_SET.cpp" />
-    <ClCompile Include="..\xrRender\Blender_tree.cpp" />
+    <ClCompile Include="..\xrRender\Blender_Tree.cpp" />
     <ClCompile Include="..\xrRender\DetailManager.cpp" />
     <ClCompile Include="..\xrRender\DetailManager_CACHE.cpp" />
     <ClCompile Include="..\xrRender\DetailManager_Decompress.cpp" />

@@ -20,13 +20,7 @@ CALifeInteractionManager::CALifeInteractionManager	(xrServer*server, LPCSTR sect
 	CALifeCombatManager			(server,section),
 	CALifeCommunicationManager	(server,section),
 	CALifeSimulatorBase			(server,section)
-{
-/**
-	m_inventory_slot_count		= pSettings->r_u32("inventory","slots");
-	m_temp_weapons.resize		(m_inventory_slot_count);
-	m_temp_marks.assign			(u16(-1),false);
-/**/
-}
+{ }
 
 /**
 CALifeInteractionManager::~CALifeInteractionManager()

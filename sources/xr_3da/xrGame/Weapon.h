@@ -98,8 +98,6 @@ protected:
 //  Animation 
 //////////////////////////////////////////////////////////////////////////
 public:
-
-//	void					animGet				(MotionSVec& lst, LPCSTR prefix);
 	void					signal_HideComplete	();
 
 //////////////////////////////////////////////////////////////////////////
@@ -231,11 +229,11 @@ protected:
 	//когда режим приближения включен
 	bool			m_bZoomMode;
 	//от 0 до 1, показывает насколько процентов
-	//мы перемещаем HUD  
+	//мы перемещаем HUD
 	float			m_fZoomRotationFactor;
 	bool			m_bHideCrosshairInZoom;
-public:
 
+public:
 	IC bool					IsZoomEnabled		()	const	{return m_bZoomEnabled;}
 	virtual	void			ZoomInc				(){};
 	virtual	void			ZoomDec				(){};
@@ -298,6 +296,7 @@ private:
 			vLastSP.set			(0,0,0);
 		}
 	}						m_firedeps			;
+
 protected:
 	virtual void			UpdateFireDependencies_internal	();
 	virtual void			UpdatePosition			(const Fmatrix& transform);	//.
@@ -306,7 +305,8 @@ protected:
 	IC		void			UpdateFireDependencies	()			{ if (dwFP_Frame==Device.dwFrame) return; UpdateFireDependencies_internal(); };
 
 	virtual void			LoadFireParams		(LPCSTR section, LPCSTR prefix);
-public:	
+
+public:
 	IC		const Fvector&	get_LastFP				()			{ UpdateFireDependencies(); return m_firedeps.vLastFP;	}
 	IC		const Fvector&	get_LastFP2				()			{ UpdateFireDependencies(); return m_firedeps.vLastFP2;	}
 	IC		const Fvector&	get_LastFD				()			{ UpdateFireDependencies(); return m_firedeps.vLastFD;	}
@@ -334,7 +334,6 @@ protected:
 	virtual void			Fire2End			();
 	virtual void			Reload				();
 			void			StopShooting		();
-    
 
 	// обработка визуализации выстрела
 	virtual void			OnShot				(){};
@@ -346,7 +345,6 @@ public:
 	//текущая дисперсия (в радианах) оружия с учетом используемого патрона
 	float					GetFireDispersion	(bool with_cartridge)			;
 	float					GetFireDispersion	(float cartridge_k)				;
-//	const Fvector&			GetRecoilDeltaAngle	();
 	virtual	int				ShotsFired			() { return 0; }
 
 	//параметы оружия в зависимоти от его состояния исправности

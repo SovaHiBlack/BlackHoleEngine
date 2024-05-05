@@ -5,7 +5,7 @@
 //#define TEXTURE_LOADED_LOG
 //#define TEXTURE_UNLOADED_LOG
 
-//#define LOADING_SCRIPT_LOG
+//#define SCRIPT_LOADED_LOG
 
 
 #endif // def DEBUG

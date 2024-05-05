@@ -115,7 +115,7 @@
 #	ifdef	DEBUG
 #		include "PHDebug.h"
 #	endif
-#	include "hit.h"
+#	include "Hit.h"
 #	include "PHDestroyable.h"
 #	include "car.h"
 #	include "script_lanim.h"

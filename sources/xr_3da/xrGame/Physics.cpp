@@ -47,9 +47,7 @@ dReal 			world_erp											=	ERP(SPRING_S(base_cfm,base_erp,base_fixed_step),D
 dReal			world_spring										=	1.0f*SPRING	(world_cfm,world_erp);
 dReal			world_damping										=	1.0f*DAMPING(world_cfm,world_erp);
 
-
 const dReal			default_world_gravity							=	2*9.81f;
-
 
 /////////////////////////////////////////////////////
 

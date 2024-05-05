@@ -18,8 +18,6 @@ class CALifeInteractionManager :
 {
 /**
 	friend class CCheckForInteractionPredicate;
-protected:
-	u32								m_inventory_slot_count;
 
 public:
 	BOOL_VECTOR						m_temp_marks;

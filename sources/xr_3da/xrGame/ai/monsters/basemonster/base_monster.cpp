@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "base_monster.h"
 #include "../../../PhysicsShell.h"
-#include "../../../hit.h"
+#include "../../../Hit.h"
 #include "../../../PHDestroyable.h"
 #include "../../../CharacterPhysicsSupport.h"
 #include "../../../game_level_cross_table.h"

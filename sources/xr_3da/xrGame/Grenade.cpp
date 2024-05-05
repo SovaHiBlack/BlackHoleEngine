@@ -217,26 +217,28 @@ void CGrenade::UpdateCL()
 	if(!IsGameTypeSingle())	make_Interpolation();
 }
 
-
-bool CGrenade::Action(s32 cmd, u32 flags) 
+bool CGrenade::Action(s32 cmd, u32 flags)
 {
-	if(inherited::Action(cmd, flags)) return true;
-
-	switch(cmd) 
+	if (inherited::Action(cmd, flags))
 	{
-	//переключение типа гранаты
-	case kWPN_NEXT:
+		return true;
+	}
+
+	switch (cmd)
+	{
+		//переключение типа гранаты
+		case kWPN_NEXT:
 		{
-            if(flags&CMD_START) 
+			if (flags & CMD_START)
 			{
-				if(m_pCurrentInventory)
+				if (m_pCurrentInventory)
 				{
-					TIItemContainer::iterator it = m_pCurrentInventory->m_ruck.begin();
-					TIItemContainer::iterator it_e = m_pCurrentInventory->m_ruck.end();
-					for(;it!=it_e;++it) 
+					TIItemContainer::iterator it = m_pCurrentInventory->m_ruck.begin( );
+					TIItemContainer::iterator it_e = m_pCurrentInventory->m_ruck.end( );
+					for (; it != it_e; ++it)
 					{
-						CGrenade *pGrenade = smart_cast<CGrenade*>(*it);
-						if(pGrenade && xr_strcmp(pGrenade->cNameSect(), cNameSect())) 
+						CGrenade* pGrenade = smart_cast<CGrenade*>(*it);
+						if (pGrenade && xr_strcmp(pGrenade->cNameSect( ), cNameSect( )))
 						{
 							m_pCurrentInventory->Ruck(this);
 							m_pCurrentInventory->SetActiveSlot(NO_ACTIVE_SLOT);
@@ -244,15 +246,17 @@ bool CGrenade::Action(s32 cmd, u32 flags)
 							return true;
 						}
 					}
+
 					return true;
 				}
 			}
+
 			return true;
-		};
+		}
 	}
+
 	return false;
 }
-
 
 bool CGrenade::NeedToDestroyObject()	const
 {
@@ -303,9 +307,9 @@ void CGrenade::Deactivate()
 					}
 				}				
 				Throw					();
-			};
-		};
-	};
+			}
+		}
+	}
 
 	inherited::Deactivate();
 }

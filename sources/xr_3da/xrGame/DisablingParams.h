@@ -1,5 +1,6 @@
-#ifndef DISABLING_PARAMS_H
-#define DISABLING_PARAMS_H
+#ifndef GAME_DISABLING_PARAMS_H
+#define GAME_DISABLING_PARAMS_H
+
 struct	SOneDDOParams
 {
 	void				Mul					(float v)	;
@@ -22,8 +23,6 @@ struct SAllDDWParams
 	float				reanable_factor					;
 };
 
-
-
 extern SAllDDWParams	worldDisablingParams			;
 
-#endif
+#endif // ndef GAME_DISABLING_PARAMS_H

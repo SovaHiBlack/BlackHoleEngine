@@ -9,7 +9,7 @@
 #include "..\xrRender\blender_screen_set.h"
 #include "..\xrRender\blender_editor_wire.h"
 #include "..\xrRender\blender_editor_selection.h"
-#include "..\xrRender\blender_tree.h"
+#include "..\xrRender\Blender_Tree.h"
 #include "..\xrRender\blender_detail_still.h"
 #include "..\xrRender\blender_particle.h"
 #include "..\xrRender\Blender_Model_EbB.h"

@@ -1,4 +1,3 @@
-#include "delayed_action_fuse.ltx"
 #include "w_ak74.ltx"
 #include "w_ak74u.ltx"
 #include "w_fn2000.ltx"
@@ -1256,6 +1255,10 @@ force_explode_time  = 10000
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Explosive Inventory Items
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[delayed_action_fuse]
+	time_to_explode						= 1.0f
+	condition_to_explode				= 0.0f
+	set_timer_particles					=vehiclefx\exhaust_1
 
 [explosive_fuelcan]:identity_immunities,delayed_action_fuse
 GroupControlSection	= spawn_group
@@ -1660,7 +1663,6 @@ explode_duration		 = 5		;подолжительность взрыва (с)
 ;звуки
 snd_explode = weapons\f1_explode
 immunities_sect			= dinamit_immunities_sect
-;condition_to_explode        =0.f
 ;wallmarks
 wallmark_section		= explosion_marks
 

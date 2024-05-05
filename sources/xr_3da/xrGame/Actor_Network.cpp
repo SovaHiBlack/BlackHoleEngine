@@ -18,7 +18,7 @@
 #include "alife_registry_wrappers.h"
 #include "../skeletonanimated.h"
 #include "client_spawn_manager.h"
-#include "hit.h"
+#include "Hit.h"
 #include "PHDestroyable.h"
 #include "CharacterPhysicsSupport.h"
 #include "Grenade.h"
@@ -351,23 +351,28 @@ void		CActor::net_Import_Base				( NET_Packet& P)
 	{
 //		fArmor = fRArmor;
 		SetfRadiation(fRRadiation);
-	};
+	}
 	//------------------------------------------------
 
 	u8					ActiveSlot;
 	P.r_u8				(ActiveSlot);
 	
 	//----------- for E3 -----------------------------
-	if (OnClient())
-	//------------------------------------------------
+	if (OnClient( ))
 	{
-		if (ActiveSlot == 0xff) inventory().SetActiveSlot(NO_ACTIVE_SLOT);
-		else 
+		if (ActiveSlot == 0xff)
 		{
-			if (inventory().GetActiveSlot() != u32(ActiveSlot))
-				inventory().Activate(u32(ActiveSlot));
-		};
+			inventory( ).SetActiveSlot(NO_ACTIVE_SLOT);
+		}
+		else
+		{
+			if (inventory( ).GetActiveSlot( ) != u32(ActiveSlot))
+			{
+				inventory( ).Activate(u32(ActiveSlot));
+			}
+		}
 	}
+	//------------------------------------------------
 
 	//----------- for E3 -----------------------------
 	if (Local() && OnClient()) return;

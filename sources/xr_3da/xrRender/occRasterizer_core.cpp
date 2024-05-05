@@ -12,11 +12,11 @@ void i_order	(float* A, float* B, float* C)
 	float *min, *max, *mid;
 	if (A[1] <= B[1])
 	{
-        if (B[1] <= C[1]) 
+		if (B[1] <= C[1]) 
 		{  
 			min = A; mid = B; max = C; 
 		}
-        else // C < B
+		else // C < B
 			if   (A[1] <= C[1]) 
 			{
 				min = A; mid = C; max = B; 
@@ -169,35 +169,35 @@ void i_test		( int x, int y)
 
 void i_edge		( int x1, int y1, int x2, int y2)
 {
-    int dx	= _abs(x2 - x1);
-    int dy	= _abs(y2 - y1);
+	int dx	= _abs(x2 - x1);
+	int dy	= _abs(y2 - y1);
 
-    int sx = x2 >= x1 ? 1 : -1;
-    int sy = y2 >= y1 ? 1 : -1;
+	int sx = x2 >= x1 ? 1 : -1;
+	int sy = y2 >= y1 ? 1 : -1;
 	
-    if ( dy <= dx ){
-        int d  = ( dy << 1 ) - dx;
-        int d1 = dy << 1;
-        int d2 = ( dy - dx ) << 1;
+	if ( dy <= dx ){
+		int d  = ( dy << 1 ) - dx;
+		int d1 = dy << 1;
+		int d2 = ( dy - dx ) << 1;
 		
 		i_test(x1,y1);
-        for  (int x = x1 + sx, y = y1, i = 1; i <= dx; i++, x += sx){
-            if ( d > 0) { d += d2; y += sy; }
+		for  (int x = x1 + sx, y = y1, i = 1; i <= dx; i++, x += sx){
+			if ( d > 0) { d += d2; y += sy; }
 			else        d += d1;
 			i_test(x,y);
-        }
-    }else{
-        int d  = ( dx << 1 ) - dy;
-        int d1 = dx << 1;
-        int d2 = ( dx - dy ) << 1;
+		}
+	}else{
+		int d  = ( dx << 1 ) - dy;
+		int d1 = dx << 1;
+		int d2 = ( dx - dy ) << 1;
 		
 		i_test(x1,y1);
-        for  (int x = x1, y = y1 + sy, i = 1; i <= dy; i++, y += sy ){
-            if ( d > 0) { d += d2; x += sx; }
-            else        d += d1;
+		for  (int x = x1, y = y1 + sy, i = 1; i <= dy; i++, y += sy ){
+			if ( d > 0) { d += d2; x += sx; }
+			else        d += d1;
 			i_test(x,y);
-        }
-    }
+		}
+	}
 }
 
 

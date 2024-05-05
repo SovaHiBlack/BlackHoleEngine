@@ -45,14 +45,13 @@ void CPHMesh ::Destroy(){
 dGeomID plane;
 #endif
 
-#ifdef DEBUG 
-
+#ifdef DEBUG
 void CPHWorld::OnRender()
 {
-
 	PH_DBG_Render();
 }
 #endif
+
 CPHWorld::CPHWorld()
 {
 	disable_count=0;
@@ -163,7 +162,6 @@ void CPHWorld::SetGravity(float g)
 	m_gravity				=g;
 	dWorldID phWorld		=0;
 	dWorldSetGravity		(phWorld, 0,-m_gravity, 0);//-2.f*9.81f
-
 }
 
 void CPHWorld::OnFrame()
@@ -184,7 +182,6 @@ void CPHWorld::OnFrame()
 	Device.Statistic->Physics.End		();
 #ifdef DEBUG
 	DBG_DrawStatAfterFrameStep();
-
 #endif
 }
 
@@ -301,15 +298,11 @@ void CPHWorld::Step()
 	ContactFeedBacks.empty();
 	ContactEffectors.empty();
 
-
-
-	if(physics_step_time_callback) 
+	if(physics_step_time_callback)
 	{
 		physics_step_time_callback(start_time,start_time+u32(fixed_step*1000));	
 		start_time += u32(fixed_step*1000);
-	};
-
-
+	}
 }
 
 void CPHWorld::StepTouch()
@@ -329,6 +322,7 @@ void CPHWorld::StepTouch()
 		++i_object;
 		obj->Island().Enable();
 	}
+
 	for(i_object=m_objects.begin();m_objects.end() != i_object;)
 	{
 		CPHObject* obj=(*i_object);
@@ -336,6 +330,7 @@ void CPHWorld::StepTouch()
 		obj->IslandReinit();
 		obj->spatial_move();
 	}
+
 	dJointGroupEmpty(ContactGroup);
 	ContactFeedBacks.empty();
 	ContactEffectors.empty();
@@ -348,7 +343,7 @@ u32 CPHWorld::CalcNumSteps (u32 dTime)
 //	if (dTime < fixed_step*1000) return 0;
 //	u32 res = iFloor((float(dTime) / 1000 / fixed_step)+0.5f);
 	return res;
-};
+}
 
 void CPHWorld::FrameStep(dReal step)
 {
@@ -402,7 +397,7 @@ void CPHWorld::AddObject(CPHObject* object){
 	m_objects.push_back(object);
 	//xr_list <CPHObject*> ::iterator i= m_objects.end();
 	//return (--m_objects.end());
-};
+}
 void CPHWorld::AddRecentlyDisabled(CPHObject* object)
 {
 	m_recently_disabled_objects.push_back(object);
@@ -425,7 +420,7 @@ void CPHWorld::RemoveUpdateObject(PH_UPDATE_OBJECT_I i)
 
 void CPHWorld::RemoveObject(PH_OBJECT_I i){
 	m_objects.erase((i));
-};
+}
 
 void CPHWorld::AddFreezedObject(CPHObject* obj)
 {

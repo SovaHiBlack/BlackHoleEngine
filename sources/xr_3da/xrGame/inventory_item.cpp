@@ -125,14 +125,12 @@ void CInventoryItem::Load(LPCSTR section)
 	m_name				= CStringTable().translate( pSettings->r_string(section, "inv_name") );
 	m_nameShort			= CStringTable().translate( pSettings->r_string(section, "inv_name_short"));
 
-//.	NameComplex			();
 	m_weight			= pSettings->r_float(section, "inv_weight");
 	R_ASSERT			(m_weight>=0.f);
 
 	m_cost				= pSettings->r_u32(section, "cost");
 
 	m_slot				= READ_IF_EXISTS(pSettings,r_u32,section,"slot", NO_ACTIVE_SLOT);
-
 
 	// Description
 	if ( pSettings->line_exist(section, "description") )
@@ -145,24 +143,19 @@ void CInventoryItem::Load(LPCSTR section)
 	m_flags.set(FCanTrade,		READ_IF_EXISTS(pSettings, r_bool, section, "can_trade",			TRUE));
 	m_flags.set(FIsQuestItem,	READ_IF_EXISTS(pSettings, r_bool, section, "quest_item",		FALSE));
 
-
-
 	//время убирания объекта с уровня
 	m_dwItemRemoveTime			= READ_IF_EXISTS(pSettings, r_u32, section,"item_remove_time",			ITEM_REMOVE_TIME);
 
 	m_flags.set					(FAllowSprint,READ_IF_EXISTS	(pSettings, r_bool, section,"sprint_allowed",			TRUE));
 	m_fControlInertionFactor	= READ_IF_EXISTS(pSettings, r_float,section,"control_inertion_factor",	1.0f);
 	m_icon_name					= READ_IF_EXISTS(pSettings, r_string,section,"icon_name",				NULL);
-
 }
 
-
-void  CInventoryItem::ChangeCondition(float fDeltaCondition)
+void CInventoryItem::ChangeCondition(float fDeltaCondition)
 {
-	m_fCondition += fDeltaCondition;
-	clamp(m_fCondition, 0.f, 1.f);
+	m_fCondition				+= fDeltaCondition;
+	clamp						(m_fCondition, 0.0f, 1.0f);
 }
-
 
 void	CInventoryItem::Hit					(SHit* pHDS)
 {
@@ -219,12 +212,14 @@ void CInventoryItem::OnH_A_Chield()
 {
 	inherited::OnH_A_Chield		();
 }
+
 #ifdef DEBUG
 extern	Flags32	dbg_net_Draw_Flags;
 #endif
 
 void CInventoryItem::UpdateCL()
 {
+
 #ifdef DEBUG
 	if(bDebug){
 		if (dbg_net_Draw_Flags.test(1<<4) )
@@ -236,7 +231,6 @@ void CInventoryItem::UpdateCL()
 			Device.seqRender.Remove(this);
 		}
 	}
-
 #endif
 
 }
@@ -289,7 +283,7 @@ void CInventoryItem::OnEvent (NET_Packet& P, u16 type)
 	}
 }
 
-//процесс отсоединения вещи заключается в спауне новой вещи 
+//процесс отсоединения вещи заключается в спауне новой вещи
 //в инвентаре и установке соответствующих флагов в родительском
 //объекте, поэтому функция должна быть переопределена
 bool CInventoryItem::Detach(const char* item_section_name, bool b_spawn_item) 
@@ -447,8 +441,8 @@ void CInventoryItem::net_Import			(NET_Packet& P)
 	while (p->NET_IItem.size() > 2)
 	{
 		p->NET_IItem.pop_front				();
-	};
-};
+	}
+}
 
 void CInventoryItem::net_Export			(NET_Packet& P) 
 {	
@@ -574,7 +568,7 @@ void CInventoryItem::PH_B_CrPr		()
 	{
 		m_flags.set			(FInInterpolation, FALSE);
 //		m_bInInterpolation = false;
-	};
+	}
 	///////////////////////////////////////////////
 };	
 

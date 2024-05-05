@@ -9,14 +9,13 @@
 #include "ExplosiveItem.h"
 
 
-CExplosiveItem::CExplosiveItem(void)
-{
-}
-CExplosiveItem::~CExplosiveItem(void)
-{
-}
+CExplosiveItem::CExplosiveItem( )
+{ }
 
-void CExplosiveItem::Load(LPCSTR section)
+CExplosiveItem::~CExplosiveItem( )
+{ }
+
+void CExplosiveItem::Load(const char* section)
 {
 	inherited::Load							(section);
 	CExplosive::Load						(section);
@@ -31,21 +30,21 @@ void CExplosiveItem::net_Destroy()
 	CExplosive::net_Destroy();
 }
 
-//void CExplosiveItem::Hit(float P, Fvector &dir,	CObject* who, s16 element,
-//						Fvector position_in_object_space, float impulse, 
-//						ALife::EHitType hit_type)
-void	CExplosiveItem::Hit					(SHit* pHDS)
+void CExplosiveItem::Hit(SHit* pHDS)
 {
-//	inherited::Hit(P,dir,who,element,position_in_object_space,impulse,hit_type);
-	if(CDelayedActionFuse::isActive())pHDS->power=0.f;
+	if (CDelayedActionFuse::isActive( ))
+	{
+		pHDS->power = 0.0f;
+	}
+
 	inherited::Hit(pHDS);
-	if(!CDelayedActionFuse::isActive()&&CDelayedActionFuse::CheckCondition(GetCondition())&&CExplosive::Initiator()==u16(-1))
+	if (!CDelayedActionFuse::isActive( ) && CDelayedActionFuse::CheckCondition(GetCondition( )) && CExplosive::Initiator( ) == u16(-1))
 	{
 		//запомнить того, кто взорвал вещь
-		SetInitiator( pHDS->who->ID());
-
+		SetInitiator(pHDS->who->ID( ));
 	}
 }
+
 void	CExplosiveItem::StartTimerEffects	()
 {
 	CParticlesPlayer::StartParticles(pSettings->r_string(*cNameSect(),"set_timer_particles"),Fvector().set(0,1,0),ID());

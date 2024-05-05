@@ -239,6 +239,7 @@ void CScriptEngine::process_file_if_exists	(LPCSTR file_name, bool warn_if_not_e
 	if (m_reload_modules || (*file_name && !namespace_loaded(file_name))) {
 		FS.update_path		(S,"$game_scripts$",strconcat(sizeof(S1),S1,file_name,".script"));
 		if (!warn_if_not_exist && !FS.exist(S)) {
+
 #ifdef DEBUG
 			if (psAI_Flags.test(aiNilObjectAccess))
 			{
@@ -246,14 +247,15 @@ void CScriptEngine::process_file_if_exists	(LPCSTR file_name, bool warn_if_not_e
 				Msg					("* trying to access variable %s, which doesn't exist, or to load script %s, which doesn't exist too",file_name,S1);
 				m_stack_is_ready	= true;
 			}
-#endif
+#endif // def DEBUG
+
 			add_no_file		(file_name,string_length);
 			return;
 		}
 
-#ifdef LOADING_SCRIPT_LOG
-		Msg					("* loading script: [%s]",S1);
-#endif // def LOADING_SCRIPT_LOG
+#ifdef SCRIPT_LOADED_LOG
+		Msg					("* loading script: [%s]", S1);
+#endif // def SCRIPT_LOADED_LOG
 
 		m_reload_modules	= false;
 		load_file_into_namespace(S,*file_name ? file_name : "_G");

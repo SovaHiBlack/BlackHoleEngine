@@ -18,11 +18,11 @@ static const float SOUND_EFFECT_DIST=70.f;
 //////////////////////////////////////////////////////////////////////////////////
 static const float SQUARE_PARTICLE_EFFECT_DIST=PARTICLE_EFFECT_DIST*PARTICLE_EFFECT_DIST;
 static const float SQUARE_SOUND_EFFECT_DIST=SOUND_EFFECT_DIST*SOUND_EFFECT_DIST;
-class CPHParticlesPlayCall :
-		public CPHAction
+class CPHParticlesPlayCall : public CPHAction
 {
-LPCSTR ps_name;
-dContactGeom c;
+	LPCSTR ps_name;
+	dContactGeom c;
+
 public:
 	CPHParticlesPlayCall(const dContactGeom &contact,bool invert_n,LPCSTR psn)
 	{
@@ -45,17 +45,16 @@ public:
 
 		ps->UpdateParent(pos,zero_vel);
 		GamePersistent().ps_needtoplay.push_back(ps);
-	};
+	}
 	virtual bool 			obsolete						()const{return false;}
 };
 
-
-class CPHWallMarksCall :
-	public CPHAction
+class CPHWallMarksCall : public CPHAction
 {
 	ref_shader pWallmarkShader;
 	Fvector pos;
 	CDB::TRI* T;
+
 public:
 	CPHWallMarksCall(const Fvector &p,CDB::TRI* Tri,ref_shader s)
 	{
@@ -69,12 +68,9 @@ public:
 		::Render->add_StaticWallmark(pWallmarkShader,pos, 
 			0.09f, T,
 			Level().ObjectSpace.GetStaticVerts());
-	};
+	}
 	virtual bool 			obsolete						()const{return false;}
 };
-
-
-
 
 template<class Pars>
 void  TContactShotMark(CDB::TRI* T,dContactGeom* c)
@@ -150,6 +146,5 @@ void  TContactShotMark(CDB::TRI* T,dContactGeom* c)
 	}
  }
 
-
-ContactCallbackFun *ContactShotMark = &TContactShotMark<EffectPars>;
-ContactCallbackFun *CharacterContactShotMark = &TContactShotMark<CharacterEffectPars>;
+ContactCallbackFun* ContactShotMark				= &TContactShotMark<SEffectPars>;
+ContactCallbackFun* CharacterContactShotMark	= &TContactShotMark<SCharacterEffectPars>;

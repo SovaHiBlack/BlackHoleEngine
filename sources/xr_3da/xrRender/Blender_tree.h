@@ -2,7 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(AFX_BLENDER_VERTEX_AREF_H__07141B30_A968_407E_86F8_D12702FE0B9B__INCLUDED_3)
+#ifndef RENDER_BLENDER_TREE_H_INCLUDED
 #define AFX_BLENDER_VERTEX_AREF_H__07141B30_A968_407E_86F8_D12702FE0B9B__INCLUDED_3
 #pragma once
 
@@ -11,6 +11,7 @@ class CBlender_Tree : public IBlender
 public:
 	xrP_BOOL	oBlend;
 	xrP_BOOL	oNotAnTree;
+
 public:
 	virtual		LPCSTR		getComment()	{ return "LEVEL: trees/bushes";	}
 	virtual		BOOL		canBeLMAPped()	{ return FALSE; }

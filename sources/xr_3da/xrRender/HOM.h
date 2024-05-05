@@ -1,5 +1,5 @@
 // HOM.h: interface for the CHOM class.
-//
+// Hierarchical Occlusion Mapping (HOM)
 //////////////////////////////////////////////////////////////////////
 #pragma once
 
@@ -32,8 +32,6 @@ public:
 	void					Load		();
 	void					Unload		();
 	void					Render		(CFrustum&	base);
-	void					Render_ZB	();
-//	void					Debug		();
 
 	void					occlude		(Fbox2&		space) { }
 	void					Disable		();

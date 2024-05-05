@@ -777,9 +777,6 @@
     <None Include="Config\mp\SoundMessages\tdm_snd_messages.ltx">
       <Filter>config\mp\soundmessages</Filter>
     </None>
-    <None Include="Config\weapons\delayed_action_fuse.ltx">
-      <Filter>config\weapons</Filter>
-    </None>
     <None Include="Config\weapons\w_abakan.ltx">
       <Filter>config\weapons</Filter>
     </None>

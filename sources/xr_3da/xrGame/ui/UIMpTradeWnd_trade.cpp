@@ -1,11 +1,13 @@
 #include "stdafx.h"
+#include <dinput.h>
 #include "UIMpTradeWnd.h"
 #include "UIMpItemsStoreWnd.h"
 
 #include "UICellItem.h"
 #include "UIDragDropListEx.h"
 #include "UICellCustomItems.h"
-#include <dinput.h>
+
+#include "../string_table.h"
 
 bool CUIMpTradeWnd::TryToSellItem(SBuyItemInfo* sell_itm, bool do_destroy, SBuyItemInfo*& itm_res)
 {
@@ -45,7 +47,6 @@ bool CUIMpTradeWnd::TryToSellItem(SBuyItemInfo* sell_itm, bool do_destroy, SBuyI
 			VERIFY								(accel_idx!=-1);
 			iinfo->m_cell_item->SetAccelerator	( (accel_idx>10) ? 0 : DIK_1+accel_idx );
 			iinfo->m_cell_item->SetCustomDraw	(xr_new<CUICellItemTradeMenuDraw>(this, iinfo));
-
 		}
 	}
 	if(_item_cost!=0)
@@ -164,7 +165,7 @@ bool CUIMpTradeWnd::TryToBuyItem(SBuyItemInfo* buy_itm, u32 buy_flags, SBuyItemI
 	}
 	return						true;
 }
-#include "../string_table.h"
+
 bool CUIMpTradeWnd::CheckBuyPossibility(const shared_str& sect_name, u32 buy_flags, bool b_silent)
 {
 	string256					info_buffer;

@@ -1,12 +1,12 @@
 // HOM.cpp: implementation of the CHOM class.
-//
+// Hierarchical Occlusion Mapping (HOM)
 //////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
 #include "HOM.h"
 #include "occRasterizer.h"
 #include "../GameFont.h"
- 
+
 float	psOSSR		= .001f;
 
 void __stdcall	CHOM::MT_RENDER()

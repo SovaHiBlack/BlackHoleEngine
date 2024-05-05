@@ -1,12 +1,11 @@
 #ifndef PH_DEBUG_H
 #define PH_DEBUG_H
+
 #ifdef DEBUG
 struct dContact;
 //#include "FastDelegate.h"
 #include "../StatGraph.h"
 #define DRAW_CONTACTS
-
-
 
 extern	Flags32			ph_dbg_draw_mask						;
 extern	Flags32			ph_dbg_draw_mask1						;
@@ -123,8 +122,6 @@ void PH_DBG_Render( );
 void PH_DBG_Clear( );
 LPCSTR PH_DBG_ObjectTrack( );
 void PH_DBG_SetTrackObject( LPCSTR obj );
-
-
 
 struct CFunctionGraph
 {

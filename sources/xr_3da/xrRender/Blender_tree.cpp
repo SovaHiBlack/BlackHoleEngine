@@ -5,7 +5,7 @@
 #include "stdafx.h"
 #pragma hdrstop
 
-#include "Blender_tree.h"
+#include "Blender_Tree.h"
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction

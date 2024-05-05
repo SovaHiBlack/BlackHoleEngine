@@ -27,16 +27,18 @@
 ////////////////////////////////////////////////////////////////////////////
 // CSE_ALifeInventoryItem
 ////////////////////////////////////////////////////////////////////////////
-CSE_ALifeInventoryItem::CSE_ALifeInventoryItem(LPCSTR caSection)
+CSE_ALifeInventoryItem::CSE_ALifeInventoryItem(const char* caSection)
 {
 	//текущее состояние вещи
-	m_fCondition				= 1.0f;
+
 
 	m_fMass						= pSettings->r_float(caSection, "inv_weight");
 	m_dwCost					= pSettings->r_u32(caSection, "cost");
 
 	if (pSettings->line_exist(caSection, "condition"))
 		m_fCondition			= pSettings->r_float(caSection, "condition");
+	else
+		m_fCondition			= 1.0f;
 
 	if (pSettings->line_exist(caSection, "health_value"))
 		m_iHealthValue			= pSettings->r_s32(caSection, "health_value");
@@ -179,7 +181,7 @@ void CSE_ALifeInventoryItem::UPDATE_Read	(NET_Packet &tNetPacket)
 
 void CSE_ALifeInventoryItem::FillProps		(LPCSTR pref, PropItemVec& values)
 {
-	PHelper().CreateFloat			(values, PrepareKey(pref, *base()->s_name, "Item condition"), 		&m_fCondition, 			0.f, 1.f);
+	PHelper().CreateFloat			(values, PrepareKey(pref, *base()->s_name, "Item condition"), &m_fCondition, 0.0f, 1.0f);
 	CSE_ALifeObject					*alife_object = smart_cast<CSE_ALifeObject*>(base());
 	R_ASSERT						(alife_object);
 	PHelper().CreateFlag32			(values, PrepareKey(pref, *base()->s_name,"ALife\\Useful for AI"),	&alife_object->m_flags,	CSE_ALifeObject::flUsefulForAI);

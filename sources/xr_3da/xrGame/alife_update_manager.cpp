@@ -524,15 +524,21 @@ void CALifeUpdateManager::remove_all_restrictions	(ALife::_OBJECT_ID id, const R
 		return;
 	}
 
-	switch (restriction_type) {
-		case RestrictionSpace::eRestrictorTypeOut : {
-			creature->m_dynamic_out_restrictions.clear();
+	switch (restriction_type)
+	{
+		case RestrictionSpace::eRestrictorTypeOut:
+		{
+			creature->m_dynamic_out_restrictions.clear( );
 			break;
 		}
-		case RestrictionSpace::eRestrictorTypeIn : {
-			creature->m_dynamic_in_restrictions.clear();
+		case RestrictionSpace::eRestrictorTypeIn:
+		{
+			creature->m_dynamic_in_restrictions.clear( );
 			break;
 		}
-		default : NODEFAULT;
+		default:
+		{
+			NODEFAULT;
+		}
 	}
 }

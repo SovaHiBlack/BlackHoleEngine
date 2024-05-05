@@ -41,7 +41,6 @@ void CHUDCrosshair::Load		()
 
 	cross_color = pSettings->r_fcolor (HUD_CURSOR_SECTION, "cross_color").get();
 
-
 	radius_speed_perc = pSettings->r_float (HUD_CURSOR_SECTION, "radius_lerp_speed");
 }
 
@@ -120,5 +119,5 @@ void CHUDCrosshair::OnRender ()
 			radius -= radius_change;
 		else
 			radius += radius_change;
-	};
+	}
 }
